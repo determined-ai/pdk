@@ -1,0 +1,39 @@
+name: Pipeline-Run-Brain-MRI-1GPU
+workspace: PDK Demos
+project: pipeline-brain-mri
+data:
+  data_dir: "/data"
+  repo: "mateuszbuda/brain-segmentation-pytorch"
+  model: "unet"
+  download_directory: "/tmp"
+  pachyderm:
+    host:
+    port:
+    repo:
+    branch:
+    token:
+hyperparameters:
+  global_batch_size: 32
+  init_features: 32
+  input_channels: 3
+  output_channels: 1
+  learning_rate: 0.001
+  weight_decay: 0.0
+  pretrained: True # starting from pretrained unet model from PyTorch Hub
+  split_seed: 1
+  validation_ratio: 0.2
+records_per_epoch: 3143 # 3143 for seed 1 and 2, we can consider seed 2 as our second 80/20 split
+searcher:
+  name: single
+  metric: val_IoU
+  smaller_is_better: False
+  max_length:
+    epochs: 4
+min_validation_period:
+  epochs: 1
+resources:
+  slots_per_trial: 1
+max_restarts: 0
+entrypoint: model_def:MRIUnetTrial
+profiling:
+  enabled: True

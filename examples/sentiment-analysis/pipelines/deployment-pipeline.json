@@ -1,0 +1,47 @@
+{
+  "pipeline": {
+    "name": "finbert-deploy"
+  },
+  "description": "Deploys a model into production via the KServe Python SDK.",
+  "input": {
+    "pfs": {
+      "name": "data",
+      "repo": "finbert-train",
+      "branch": "master",
+      "glob": "/"
+    }
+  },
+  "transform": {
+    "cmd": [
+      "/bin/sh"
+    ],
+    "stdin": [
+      "python deploy.py --k8s-config-file /determined_shared_fs/k8s.config --deployment-name finbert-deploy --service-account-name pach-deploy --tolerations accelerator=Tesla-T4 --resource-requests cpu=10,memory=8Gi --resource-limits cpu=10,memory=8Gi"
+
+    ],
+    "image": "vmtyler/pdk:deploy_finbert_0.0.4",
+    "secrets": [
+      {
+        "name": "pipeline-secret",
+        "key": "det_master",
+        "env_var": "DET_MASTER"
+      },
+      {
+        "name": "pipeline-secret",
+        "key": "det_user",
+        "env_var": "DET_USER"
+      },
+      {
+        "name": "pipeline-secret",
+        "key": "det_password",
+        "env_var": "DET_PASSWORD"
+      },
+      {
+        "name": "pipeline-secret",
+        "key": "kserve_namespace",
+        "env_var": "KSERVE_NAMESPACE"
+      }
+    ]
+  },
+  "pod_patch": "[{\"op\": \"add\",\"path\": \"/volumes/-\",\"value\": {\"name\": \"det-checkpoints\",\"hostpath\": {\"path\": \"/nvmefs1/determined/checkpoints\",\"type\": \"Directory\"}}}, {\"op\": \"add\",\"path\": \"/containers/0/volumeMounts/-\",\"value\": {\"mountPath\": \"/determined_shared_fs\",\"name\": \"det-checkpoints\"}}]"
+}

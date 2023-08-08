@@ -1,0 +1,4 @@
+*.pyc
+.tool-versions
+.direnv/
+
