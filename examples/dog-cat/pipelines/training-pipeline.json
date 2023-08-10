@@ -1,0 +1,46 @@
+{
+  "pipeline": {
+    "name": "dogs-and-cats-model"
+  },
+  "description": "Detects changed files into a repository and triggers a retraining on that dataset",
+  "input": {
+    "pfs": {
+      "name": "data",
+      "repo": "dogs-and-cats-data",
+      "branch": "master",
+      "glob": "/",
+      "empty_files": true
+    }
+  },
+  "transform": {
+    "cmd": [
+      "/bin/sh"
+    ],
+    "stdin": [
+      "python train.py --git-url https://git@github.com:/tybritten/pdk-use-cases.git --git-ref main --sub-dir dog-cat/experiment --config const.yaml --repo dogs-and-cats-data --model dogs-and-cats --project pipeline-dogs-and-cats"
+    ],
+    "image": "vmtyler/pdk:train_0.1.1",
+    "secrets": [
+      {
+        "name": "pipeline-secret",
+        "key": "det_master",
+        "env_var": "DET_MASTER"
+      },
+      {
+        "name": "pipeline-secret",
+        "key": "det_user",
+        "env_var": "DET_USER"
+      },
+      {
+        "name": "pipeline-secret",
+        "key": "det_password",
+        "env_var": "DET_PASSWORD"
+      },
+      {
+        "name": "pipeline-secret",
+        "key": "pac_token",
+        "env_var": "PAC_TOKEN"
+      }
+    ]
+  }
+}

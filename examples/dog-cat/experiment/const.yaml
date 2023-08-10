@@ -1,0 +1,27 @@
+name: Pipeline-Run-DogCat-1GPU
+workspace: PDK Demos
+project: pipeline-dogs-and-cats
+data:
+    pachyderm:
+        host:
+        port:
+        repo:
+        branch:
+        token:
+        previous_commit:
+labels:
+hyperparameters:
+    learning_rate: .005
+    global_batch_size: 32
+    weight_decay: 1e-4
+    nesterov: True
+searcher:
+    name: single
+    metric: accuracy
+    max_length:
+        batches: 100
+    smaller_is_better: false
+entrypoint: model_def:DogCatModel
+resources:
+    slots_per_trial: 1
+max_restarts: 0

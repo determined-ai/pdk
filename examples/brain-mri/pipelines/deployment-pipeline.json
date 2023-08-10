@@ -1,0 +1,46 @@
+{
+  "pipeline": {
+    "name": "brain-mri-deploy"
+  },
+  "description": "Deploys a model into production via the KServe Python SDK.",
+  "input": {
+    "pfs": {
+      "name": "data",
+      "repo": "brain-mri-train",
+      "branch": "master",
+      "glob": "/"
+    }
+  },
+  "transform": {
+    "cmd": [
+      "/bin/sh"
+    ],
+    "stdin": [
+      "python deploy.py --deployment-name brain-mri-deploy --service-account-name pach-deploy "
+    ],
+    "image": "vmtyler/pdk:brain_deploy_0.0.16",
+    "secrets": [
+      {
+        "name": "pipeline-secret",
+        "key": "det_master",
+        "env_var": "DET_MASTER"
+      },
+      {
+        "name": "pipeline-secret",
+        "key": "det_user",
+        "env_var": "DET_USER"
+      },
+      {
+        "name": "pipeline-secret",
+        "key": "det_password",
+        "env_var": "DET_PASSWORD"
+      },
+      {
+        "name": "pipeline-secret",
+        "key": "kserve_namespace",
+        "env_var": "KSERVE_NAMESPACE"
+      }
+    ]
+  },
+  "pod_patch": "[{\"op\": \"add\",\"path\": \"/volumes/-\",\"value\": {\"name\": \"det-checkpoints\",\"hostpath\": {\"path\": \"/nvmefs1/determined/checkpoints\",\"type\": \"Directory\"}}}, {\"op\": \"add\",\"path\": \"/containers/0/volumeMounts/-\",\"value\": {\"mountPath\": \"/determined_shared_fs\",\"name\": \"det-checkpoints\"}}]"
+}
