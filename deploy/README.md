@@ -458,7 +458,7 @@ Our environment should now be ready to receive and process data.
 ## Step 3: Running the Pipeline
 As mentioned before, the pipelines automatically run if new data is committed to the input repository `dogs-and-cats`.</br>
 
-Some sample images of dogs and cats can be found [here](https://github.hpe.com/denis-abrantes/PDK_Deployment/raw/main/sample-data/dog-cat.zip).
+Some sample images of dogs and cats can be found in the `sample-data` folder. Unzip the `dataset-dog-cat.zip` file to obtain a sample dataset that can be used to train the model.
 
 With the command below you can commit all images in the `dog-cat` directory of your machine to the folder `data1` in the MLDM repository `dogs-and-cats`.
 The folder `data1` will be created as part of the commit process; make sure to increment the number if you need to re-upload this folder. </br></br>

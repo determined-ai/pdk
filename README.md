@@ -8,7 +8,7 @@
 [big_picture]: deploy/images/big_picture.png "Solution Big Picture"
 
 &nbsp;
-PDK is a platform that explores the synergy between 3 technologies, to form an end-to-end MLOps platform.  These technologies are:
+PDK is a platform that explores the synergy between 3 technologies, to provide end-to-end MLOps capabilities.  These technologies are:
 
 ### Pachyderm (now called HPE Machine Learning Data Management - MLDM) 
 is an open-source, enterprise grade data science platform that allows customers to deploy and manage multi-stage, language-agnostic data pipelines, while maintaining complete reproducibility and provenance. It provides virtually unlimited flexibility, as any type of data, from any type of source, can be processed with any type of code logic, developed in any language. All while keeping complete track of everything that happened with the data and the code, from beginning to end.
