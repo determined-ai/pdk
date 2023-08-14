@@ -13,11 +13,12 @@
     }
   },
   "transform": {
+    "user" : "0",
     "cmd": [
       "/bin/sh"
     ],
     "stdin": [
-      "python train.py --git-url https://git@github.com:/denisabrantes/pdk-use-cases.git --git-ref main --sub-dir dog-cat/experiment --config const.yaml --repo dogs-and-cats-data --model dogs-and-cats --project pdk-dogs-and-cats"
+      "python train.py --git-url https://git@github.com:/determined-ai/pdk.git --git-ref main --sub-dir dog-cat/experiment --config const.yaml --repo dogs-and-cats-data --model dogs-and-cats --project pdk-dogs-and-cats"
     ],
     "image": "vmtyler/pdk:train_0.1.1",
     "secrets": [
@@ -42,5 +43,6 @@
         "env_var": "PAC_TOKEN"
       }
     ]
-  }
+  },
+  "pod_patch": "[{\"op\": \"add\",\"path\": \"/volumes/-\",\"value\": {\"name\": \"det-checkpoints\",\"hostpath\": {\"path\": \"/mnt/efs/shared_fs/determined\",\"type\": \"Directory\"}}}, {\"op\": \"add\",\"path\": \"/containers/0/volumeMounts/-\",\"value\": {\"mountPath\": \"/determined_shared_fs\",\"name\": \"det-checkpoints\"}}]"
 }
