@@ -61,8 +61,6 @@ curl -v -H "Host: ${SERVICE_HOSTNAME}" http://${INGRESS_HOST}:${INGRESS_PORT}/v1
 PS: Depending on your load balancer, you may need to use `.status.loadBalancer.ingress[0].hostname` instead of `.status.loadBalancer.ingress[0].ip` for the `INGRESS_HOST` variable.
 
 
-The return response should be JSON block with a very long list of values.
-
 &nbsp;
 
-### In the [sample-data](./sample-data/) folder, you will also find a Jupyter Notebook example showing how to load sample inputs from the sample .json files, or how to create new inputs in the notebook and generate predictions.
+### In the [sample-data](./sample-data/) folder, you will also find a Jupyter Notebook example showing how to load text inputs from the sample .json files, or just create new inputs in the notebook and generate predictions.
