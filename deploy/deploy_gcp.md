@@ -819,6 +819,14 @@ helm install determinedai ./determined
 Because MLDE will be deployed to the default namespace, you can check the status of the deployment with `kubectl get pods` and `kubectl get svc`.<br/> 
 Make sure the pod is running before continuing.
 
+Once the installation is complete, annotate the MLDE service account so it has access to the storage bucket:
+
+```bash
+  kubectl annotate serviceaccount determined-master-determinedai \
+    -n default \
+    iam.gke.io/gcp-service-account=${SERVICE_ACCOUNT}
+```
+
 
 &nbsp;
 <a name="step18">
