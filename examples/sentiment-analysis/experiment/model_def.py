@@ -2,22 +2,17 @@ import logging
 import os
 from typing import Any, Dict, List, Sequence, Tuple, Union, cast
 
+import constants
+import data
 import numpy as np
 import pandas as pd
 import torch
 from determined import InvalidHP
-from determined.pytorch import (
-    DataLoader,
-    LRScheduler,
-    PyTorchTrial,
-    PyTorchTrialContext,
-)
+from determined.pytorch import (DataLoader, LRScheduler, PyTorchTrial,
+                                PyTorchTrialContext)
 from sklearn.metrics import f1_score
 from torch.nn import CrossEntropyLoss
 from transformers.optimization import AdamW, get_linear_schedule_with_warmup
-
-import constants
-import data
 
 TorchData = Union[Dict[str, torch.Tensor], Sequence[torch.Tensor], torch.Tensor]
 
