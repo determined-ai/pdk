@@ -1,13 +1,10 @@
 import os
 import shutil
 
-
 import pachyderm_sdk
-from pachyderm_sdk.api.pfs import File
 import torch
+from pachyderm_sdk.api.pfs import File, FileType
 from PIL import Image
-from python_pachyderm.pfs import Commit
-from python_pachyderm.proto.v2.pfs.pfs_pb2 import FileType
 from skimage import io
 from torch.utils.data import Dataset
 
@@ -80,7 +77,7 @@ def download_pach_repo(
                 if src_path != "":
                     files.append((src_path, des_path))
     else:
-        for file_info in client.walk_file(file=File.from_uri(f"{project}/{repo}@{branch}")):
+        for file_info in client.pfs.walk_file(file=File.from_uri(f"{project}/{repo}@{branch}")):
             src_path = file_info.file.path
             des_path = os.path.join(root, src_path[1:])
             print(f"Got src='{src_path}', des='{des_path}'")
@@ -90,7 +87,7 @@ def download_pach_repo(
                     files.append((src_path, des_path))
 
     for src_path, des_path in files:
-        src_file = client.get_file(file=File.from_uri(f"{project}/{repo}@{branch}:{src_path}"))
+        src_file = client.pfs.pfs_file(file=File.from_uri(f"{project}/{repo}@{branch}:{src_path}"))
         print(f"Downloading {src_path} to {des_path}")
 
         with safe_open_wb(des_path) as dest_file:
