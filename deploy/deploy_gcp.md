@@ -516,10 +516,14 @@ You can also use this command to list allocatable GPUs per node:
 kubectl describe nodes  |  tr -d '\000' | sed -n -e '/^Name/,/Roles/p' -e '/^Capacity/,/Allocatable/p' -e '/^Allocated resources/,/Events/p'  | grep -e Name  -e  nvidia.com  | perl -pe 's/\n//'  |  perl -pe 's/Name:/\n/g' | sed 's/nvidia.com\/gpu:\?//g'  | sed '1s/^/Node Available(GPUs)  Used(GPUs)/' | sed 's/$/ 0 0 0/'  | awk '{print $1, $2, $3}'  | column -t
 ```
 
-For the MLDE installation, we'll configure the GPU nodes to be in a separate Resource Pool. This requires a new namespace for the GPU nodes, as experiments will run as pods in that namespace (that will then be bound to the GPU nodes). Since the new namepace will not use the service account from the main MLDE namespace, we'll need to grant it permissions so the experiments running on GPUs can save checkpoint files to the storage bucket.
+For the MLDE installation, we'll configure the GPU nodes to be in a separate Resource Pool. This requires a new namespace for the GPU nodes, as experiments will run as pods in that namespace (that will then be bound to the GPU nodes). We will need to grant permissions for the service accounts in both *default* and *gpu-pool* namespaces, so experiments, notebooks and other tasks can save and read checkpoint files from the storage bucket. The service account for MLDE is created by the installer, so we will set those permissions once MLDE is deployed. For now, run these commands to grant bucket access permissions:
 
 ```bash
 kubectl create ns gpu-pool
+
+kubectl annotate serviceaccount default \
+  -n default \
+  iam.gke.io/gcp-service-account=${SERVICE_ACCOUNT}
 
 kubectl annotate serviceaccount default \
   -n gpu-pool \
@@ -733,7 +737,148 @@ Make sure the Public IP matches the static IP you've created in the previous ste
 ### Step 16 - Prepare MLDE installation assets
 </a>
 
-First, download and unzip the Helm chart for MLDE:
+First, we need to provision shared storage for MLDE. This will be used to provide a shared folder that can be used by Notebook users in the MLDE UI. This will allow users to save their own code and notebooks in a persistent volume.
+
+For this exercise, we will create a 10GB disk. You can increase this capacity as needed.
+
+First, create the disk:
+
+```bash
+gcloud compute disks create --size=10GB --zone=${GCP_ZONE} pdk-nfs-disk
+```
+
+Next, we'll create a NFS server that uses this disk:
+
+```bash
+kubectl apply -f - <<EOF
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nfs-server
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      role: nfs-server
+  template:
+    metadata:
+      labels:
+        role: nfs-server
+    spec:
+      containers:
+      - name: nfs-server
+        image: gcr.io/google_containers/volume-nfs:0.8
+        ports:
+          - name: nfs
+            containerPort: 2049
+          - name: mountd
+            containerPort: 20048
+          - name: rpcbind
+            containerPort: 111
+        securityContext:
+          privileged: true
+        volumeMounts:
+          - mountPath: /exports
+            name: mypvc
+      volumes:
+        - name: mypvc
+          gcePersistentDisk:
+            pdName: pdk-nfs-disk
+            fsType: ext4
+EOF
+```
+
+Next, create a Service to expose the disk:
+
+```bash
+kubectl apply -f - <<EOF
+apiVersion: v1
+kind: Service
+metadata:
+  name: nfs-server
+spec:
+  ports:
+    - name: nfs
+      port: 2049
+    - name: mountd
+      port: 20048
+    - name: rpcbind
+      port: 111
+  selector:
+    role: nfs-server
+EOF
+```
+
+Because Persistent Volume Claims are namespace-bound objects, and we'll have 2 namespaces (*default*, where CPU jobs will run, and *gpu-pool*, there GPU jobs will run), we'll need to Persistent Volume Claims, tied to 2 Persistent Volumes. We'll create the PVs as *ReadWriteMany* to ensure concurrent access by the different PVCs.
+
+Run this command to create the PV and PVC for the *default* namespace:
+
+```bash
+kubectl apply -f - <<EOF
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: nfs
+spec:
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteMany
+  nfs:
+    server: nfs-server.default.svc.cluster.local
+    path: "/"
+
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: nfs
+spec:
+  accessModes:
+    - ReadWriteMany
+  storageClassName: ""
+  resources:
+    requests:
+      storage: 10Gi
+EOF
+```
+
+Now run this command to create the PV and PVC for the *gpu-pool* namespace:
+
+```bash
+kubectl -n gpu-pool apply -f - <<EOF
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: nfs-gpu
+spec:
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteMany
+  nfs:
+    server: nfs-server.default.svc.cluster.local
+    path: "/"
+
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: nfs
+spec:
+  accessModes:
+    - ReadWriteMany
+  storageClassName: ""
+  resources:
+    requests:
+      storage: 10Gi
+EOF
+```
+
+&nbsp;
+
+The next step is to prepare the configuration file for MLDE installation. Download and unzip the Helm chart for MLDE:
 
 ```bash
 wget https://hpe-mlde.determined.ai/latest/_downloads/389266101877e29ab82805a88a6fc4a6/determined-latest.tgz
@@ -774,9 +919,29 @@ taskContainerDefaults:
   cpuPodSpec:
     apiVersion: v1
     kind: Pod
+    spec:
+      containers:
+        - name: determined-container
+          volumeMounts:
+            - name: pdk-pvc-nfs
+              mountPath: /run/determined/workdir/shared_fs
+      volumes:
+        - name: pdk-pvc-nfs
+          persistentVolumeClaim:
+            claimName: nfs
   gpuPodSpec:
     apiVersion: v1
     kind: Pod
+    spec:
+      containers:
+        - name: determined-container
+          volumeMounts:
+            - name: pdk-pvc-nfs
+              mountPath: /run/determined/workdir/shared_fs
+      volumes:
+        - name: pdk-pvc-nfs
+          persistentVolumeClaim:
+            claimName: nfs
     metadata:
       labels:
         nodegroup-role: gpu-worker
@@ -784,6 +949,20 @@ telemetry:
   enabled: true
 resourcePools:
   - pool_name: default
+    task_container_defaults:
+      cpu_pod_spec:
+        apiVersion: v1
+        kind: Pod
+        spec:
+          containers:
+            - name: determined-container
+              volumeMounts:
+                - name: pdk-pvc-nfs
+                  mountPath: /run/determined/workdir/shared_fs
+          volumes:
+            - name: pdk-pvc-nfs
+              persistentVolumeClaim:
+                claimName: nfs
   - pool_name: gpu-pool
     max_aux_containers_per_agent: 1
     kubernetes_namespace: gpu-pool
@@ -792,6 +971,15 @@ resourcePools:
         apiVersion: v1
         kind: Pod
         spec:
+          containers:
+            - name: determined-container
+              volumeMounts:
+                - name: pdk-pvc-nfs
+                  mountPath: /run/determined/workdir/shared_fs
+          volumes:
+            - name: pdk-pvc-nfs
+              persistentVolumeClaim:
+                claimName: nfs
           tolerations:
             - key: "nvidia.com/gpu"
               operator: "Equal"
