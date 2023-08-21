@@ -7,13 +7,8 @@ from functools import partial
 import yaml
 from determined.common.experimental import ModelVersion
 from google.cloud import storage
-from kserve import (
-    V1beta1InferenceService,
-    V1beta1InferenceServiceSpec,
-    V1beta1PredictorSpec,
-    V1beta1TorchServeSpec,
-    constants,
-)
+from kserve import (V1beta1InferenceService, V1beta1InferenceServiceSpec,
+                    V1beta1PredictorSpec, V1beta1TorchServeSpec, constants)
 from kubernetes import client
 from kubernetes.client import V1ResourceRequirements, V1Toleration
 

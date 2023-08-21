@@ -9,9 +9,10 @@ Link: https://www.researchgate.net/publication/251231364_FinancialPhraseBank-v10
 '''
 
 import argparse
+import os
+
 import pandas as pd
 from sklearn.model_selection import train_test_split
-import os
 
 if not os.path.exists('data/sentiment_data'):
     os.makedirs('data/sentiment_data')
