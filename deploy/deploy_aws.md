@@ -828,7 +828,7 @@ pachd:
   worker:
     serviceAccount:
       additionalAnnotations:
-        iam.gke.io/gcp-service-account: "${SERVICE_ACCOUNT_MLDM_WORKER}"
+        eks.amazonaws.com/role-arn: "${SERVICE_ACCOUNT_MLDM_WORKER}"
       create: false
       name: "pachyderm-worker"
 
