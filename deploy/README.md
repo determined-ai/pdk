@@ -264,7 +264,7 @@ docker buildx build --pull --no-cache --platform linux/amd64 -t ${REGISTRY_URI}/
 ## Execute these commands only for AWS ECR
 export REGISTRY_URL=<the value of REGISTRY_URI without the repository name>
 aws ecr get-login-password --region ${AZ_REGION} | docker login --username AWS --password-stdin ${REGISTRY_URL}
-aws ecr create-repository --repository-name=${NAME}/denisd_cats_dogs_train --region ${AZ_REGION}
+aws ecr create-repository --repository-name=${NAME}/<your_name>_cats_dogs_train --region ${AZ_REGION}
 ##
 
 docker push ${REGISTRY_URI}/<your_name>_cats_dogs_train:1.0
