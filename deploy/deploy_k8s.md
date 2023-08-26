@@ -445,6 +445,11 @@ etcd:
   size: 10Gi
 loki-stack:
   loki:
+    securityContext:
+      fsGroup: 0
+      runAsGroup: 0
+      runAsNonRoot: false
+      runAsUser: 0  
     persistence:
       storageClassName: manual
       size: 10Gi
@@ -491,37 +496,6 @@ helm install pachyderm -f ./mldm_values.yaml pachyderm/pachyderm --namespace ${M
 
 Give it a couple of minutes for all the services to be up and running. You can run `kubectl -n ${MLDM_NAMESPACE} get pods` to see if any pods failed or are stuck. Wait until all pods are running before continuing.
 
-
-PS: if you see this error in the `pachyderm-loki-0` pod, it means the process is not able to write to the shared folder:<br/>
-`mkdir /data/loki: permission denied\nerror creating object client`
-
-In this case, check which PV is being used by this pod, make its user the owner of the folder and restart the pod:
-
-```bash
-ubuntu@ip-100-64-13-46:~$ kubectl -n ${MLDM_NAMESPACE} get pods
-NAME                                         READY   STATUS             RESTARTS      AGE
-pachyderm-promtail-v4tvg                     0/1     Running            0             101s
-pg-bouncer-7bf4f7c585-2x9sl                  1/1     Running            0             101s
-pachyderm-kube-event-tail-5f54959b46-76gbm   1/1     Running            0             101s
-pachd-6fcc4bf875-vzcl4                       0/1     Running            0             101s
-console-5c5c887d6f-zjgtt                     1/1     Running            0             101s
-pachyderm-proxy-7956c766bd-j9tbg             1/1     Running            0             101s
-pachyderm-promtail-5cdm5                     1/1     Running            0             101s
-etcd-0                                       1/1     Running            0             101s
-pachyderm-loki-0                             0/1     CrashLoopBackOff   2 (27s ago)   101s
-
-ubuntu@ip-100-64-13-46:~$ kubectl get pv
-NAME                                       CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS   CLAIM                                STORAGECLASS        REASON   AGE
-pvc-8ecc3107-cbfd-44df-9c6d-1e086fd7d10c   20Gi       RWX            Delete           Bound    container-registry/registry-claim    microk8s-hostpath            65m
-postgres-pv                                5Gi        RWO            Retain           Bound    default/postgres-pv-claim            manual                       61m
-pv2                                        20Gi       RWO            Retain           Bound    pachyderm/storage-pachyderm-loki-0   manual                       6m1s
-pv1                                        20Gi       RWO            Retain           Bound    pachyderm/etcd-storage-etcd-0        manual                       6m9s
-
-ubuntu@ip-100-64-13-46:~$ sudo chown -R 10001:10001 /mnt/efs/shared_fs/pv/pv2
-
-ubuntu@ip-100-64-13-46:~$ kubectl -n ${MLDM_NAMESPACE} delete pod pachyderm-loki-0
-pod "pachyderm-loki-0" deleted
-```
 
 
 &nbsp;

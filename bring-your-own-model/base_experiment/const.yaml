@@ -1,0 +1,20 @@
+name: churn_const_experiment
+data:
+  data_file: "data/data_part1.csv"
+hyperparameters:
+  global_batch_size: 512
+  random_seed: 42
+  test_size: 0.2
+  lr: 1e-4
+  dense1: 32
+records_per_epoch: 24807 # in training set, assuming random_seed=42 and test_size=0.2
+searcher:
+    name: single
+    metric: val_acc 
+    max_length:
+        epochs: 20
+    smaller_is_better: false
+min_validation_period:
+    epochs: 1               # Validation after each epoch
+max_restarts: 0
+entrypoint: model_def:ChurnTrial

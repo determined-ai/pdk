@@ -1,0 +1,2 @@
+determined==0.22.0
+PyYAML==5.4.1

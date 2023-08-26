@@ -66,7 +66,7 @@ In this page, we will execute the following steps:
 
 [06 - Configure the GPU nodes](#step6)
 
-[07 - Configure gp3 Storageclass](#step7)
+[07 - Configure Shared Storage and the Storage Classes](#step7)
 
 [08 - Configure Kubernetes Autoscaler](#step8)
 
@@ -120,6 +120,7 @@ All commands listed throghout this document must be executed in the same termina
 # MODIFY THESE VARIABLES
 export NAME="your-name-pdk"
 export RDS_ADMIN_PASSWORD="your-database-password"
+export AWS_ACCOUNT_ID="555555555555"
 
 # VPC SETTINGS
 export AWS_VPC_ID="vpc-0000000000000000x"
@@ -130,6 +131,7 @@ export AWS_VPC_SECGROUP_ID="sg-0000000000000000a"
 
 # IAM SETTINGS
 export IAM_EBSCSIDRIVERPOLICY="arn:aws:iam::aws:policy/service-role/AmazonEBSCSIDriverPolicy"
+export IAM_EFSCSIDRIVERPOLICY="arn:aws:iam::aws:policy/service-role/AmazonEFSCSIDriverPolicy"
 
 # These can be modified as needed
 export AWS_REGION="us-east-2"
@@ -203,7 +205,6 @@ metadata:
   region: ${AWS_REGION}
   version: "1.24"
 
-
 # Use Existing VPC
 vpc:
   id: "${AWS_VPC_ID}"
@@ -221,46 +222,49 @@ iam:
   withOIDC: true
   serviceAccounts:
   - metadata:
-      name: checkpoint-storage-s3-bucket
-      namespace: default
+      name: "checkpoint-storage-s3-bucket"
+      namespace: "default"
       labels:
         aws-usage: "determined-checkpoint-storage"
+    roleName: "eksctl-${CLUSTER_NAME}-mlde-role"
     attachPolicy:
       Version: "2012-10-17"
       Statement:
       - Effect: Allow
         Action:
         - "s3:ListBucket"
-        Resource: 'arn:aws:s3:::${MLDE_BUCKET_NAME}'
+        Resource: "arn:aws:s3:::${MLDE_BUCKET_NAME}"
       - Effect: Allow
         Action:
         - "s3:GetObject"
         - "s3:PutObject"
         - "s3:DeleteObject"
-        Resource: 'arn:aws:s3:::${MLDE_BUCKET_NAME}/*'
+        Resource: "arn:aws:s3:::${MLDE_BUCKET_NAME}/*"
   - metadata:
-      name: checkpoint-storage-s3-bucket
-      namespace: gpu-pool
+      name: "checkpoint-storage-s3-bucket"
+      namespace: "gpu-pool"
       labels:
         aws-usage: "determined-checkpoint-storage"
+    roleName: "eksctl-${CLUSTER_NAME}-mlde-gpu-role"
     attachPolicy:
       Version: "2012-10-17"
       Statement:
       - Effect: Allow
         Action:
         - "s3:ListBucket"
-        Resource: 'arn:aws:s3:::${MLDE_BUCKET_NAME}'
+        Resource: "arn:aws:s3:::${MLDE_BUCKET_NAME}"
       - Effect: Allow
         Action:
         - "s3:GetObject"
         - "s3:PutObject"
         - "s3:DeleteObject"
-        Resource: 'arn:aws:s3:::${MLDE_BUCKET_NAME}/*'
+        Resource: "arn:aws:s3:::${MLDE_BUCKET_NAME}/*"
   - metadata:
-      name: pachyderm
-      namespace: ${MLDM_NAMESPACE}
+      name: "pachyderm"
+      namespace: "${MLDM_NAMESPACE}"
       labels:
         aws-usage: "pachyderm-bucket-access"
+    roleName: "eksctl-${CLUSTER_NAME}-mldm-role"
     attachPolicy:
       Version: "2012-10-17"
       Statement:
@@ -283,10 +287,11 @@ iam:
           "arn:aws:s3:::${MODEL_ASSETS_BUCKET_NAME}/*"
         ]
   - metadata:
-      name: pachyderm-worker
-      namespace: ${MLDM_NAMESPACE}
+      name: "pachyderm-worker"
+      namespace: "${MLDM_NAMESPACE}"
       labels:
         aws-usage: "pachyderm-bucket-access"
+    roleName: "eksctl-${CLUSTER_NAME}-mldm-worker-role"
     attachPolicy:
       Version: "2012-10-17"
       Statement:
@@ -309,28 +314,30 @@ iam:
           "arn:aws:s3:::${MODEL_ASSETS_BUCKET_NAME}/*"
         ]
   - metadata:
-      name: default
-      namespace: ${KSERVE_MODELS_NAMESPACE}
+      name: "default"
+      namespace: "${KSERVE_MODELS_NAMESPACE}"
       labels:
         aws-usage: "kserve-bucket-access"
+    roleName: "eksctl-${CLUSTER_NAME}-kserve-role"
     attachPolicy:
       Version: "2012-10-17"
       Statement:
       - Effect: Allow
         Action:
         - "s3:ListBucket"
-        Resource: 'arn:aws:s3:::${MODEL_ASSETS_BUCKET_NAME}'
+        Resource: "arn:aws:s3:::${MODEL_ASSETS_BUCKET_NAME}"
       - Effect: Allow
         Action:
         - "s3:GetObject"
         - "s3:PutObject"
         - "s3:DeleteObject"
-        Resource: 'arn:aws:s3:::${MODEL_ASSETS_BUCKET_NAME}/*'
+        Resource: "arn:aws:s3:::${MODEL_ASSETS_BUCKET_NAME}/*"
   - metadata:
-      name: cluster-autoscaler
-      namespace: kube-system
+      name: "cluster-autoscaler"
+      namespace: "kube-system"
       labels:
         aws-usage: "pdk-cluster-autoscaler"
+    roleName: "eksctl-${CLUSTER_NAME}-autoscaler-role"
     wellKnownPolicies:
       autoScaler: true
     attachPolicy:
@@ -369,6 +376,7 @@ managedNodeGroups:
         autoScaler: true
         cloudWatch: true
         ebs: true
+        efs: true
     ssh:
       allow: true
     labels:
@@ -395,6 +403,7 @@ managedNodeGroups:
         autoScaler: true
         cloudWatch: true
         ebs: true
+        efs: true
     ssh:
       allow: true
     labels:
@@ -420,6 +429,10 @@ addons:
   attachPolicyARNs:
     - ${IAM_EBSCSIDRIVERPOLICY}
   resolveConflicts: overwrite
+- name: aws-efs-csi-driver
+  attachPolicyARNs:
+    - ${IAM_EFSCSIDRIVERPOLICY}
+  resolveConflicts: overwrite
 EOF
 ```
 
@@ -431,7 +444,7 @@ Next, create the EKS cluster:
 eksctl create cluster --config-file eks-config.yaml
 ```
 
-This should take several minutes. Once it's completed, go to the AWS Console, open your cluster and check the **Add-ons** tab; make sure the EBS driver is listed as Active (it may show 'Degraded' for a few minutes).
+This should take several minutes. Once it's completed, go to the AWS Console, open your cluster and check the **Add-ons** tab; make sure the EBS and EFS drivers are listed as Active (they may show as 'Degraded' for a few minutes).
 
 ![alt text][aws_eks_01_ebscluster]
 
@@ -503,17 +516,67 @@ For the MLDE installation, we'll configure the GPU nodes to be in a separate Res
 You can check the service account by running `kubectl -n gpu-pool get sa`.
 
 
+
 &nbsp;
 <a name="step7">
-### Step 7 - Configure gp3 Storageclass
+### Step 7 - Configure Shared Storage and the Storage Classes
 </a>
 
-It is recommended to use gp3 storageclass for MLDM when deploying to EKS.
+MLDE offers a hosted Jupyter Lab environment, where users can create and run notebooks. This environment needs persistent storage, in order to save user files. This persistent storage must be mounted as a shared folder. In this step, we will configure the necessary components to enable this capability.
 
-Create a .yaml definition file:
+First, we need to create a security group that allows inbound NFS access to the EFS volume. Execute these commands to collect the necessary data and create the security group.
 
 ```bash
-cat <<EOF > ./gp3.yaml
+export AWS_VPC_ID=$(aws eks describe-cluster --name ${CLUSTER_NAME} --query 'cluster.resourcesVpcConfig.vpcId' --output text)
+
+export AWS_VPC_CIDR=$(aws ec2 describe-vpcs --vpc-ids ${AWS_VPC_ID} --query 'Vpcs[].CidrBlock' --output text)
+
+aws ec2 create-security-group --description ${CLUSTER_NAME}-sg-efs --group-name ${CLUSTER_NAME}-sg-efs --vpc-id ${AWS_VPC_ID}
+
+export SEC_GROUP_ID=$(aws ec2 describe-security-groups \
+  --filters Name=vpc-id,Values=${AWS_VPC_ID} Name=group-name,Values=${CLUSTER_NAME}-sg-efs\
+  --query 'SecurityGroups[0].GroupId' --output text)
+
+
+aws ec2 authorize-security-group-ingress --group-id ${SEC_GROUP_ID} --protocol tcp --port 2049 --cidr ${AWS_VPC_CIDR}
+```
+
+**IMPORTANT**: This Security group will authorize IPs inside the CIDR range for your VPC. If you have multiple CIDR ranges, you will need to run the `aws ec2 authorize-security-group-ingress` command for every CIDR range, or you risk your nodes not being included in this rule, which will cause the volume to fail to provision. You can use this command to list all CIDR ranges used by your VPC:
+```bash
+aws ec2 describe-vpcs --vpc-ids ${AWS_VPC_ID} --query 'Vpcs[].CidrBlockAssociationSet'
+```
+If you see more than one result in this command, run the `authorize-security-group-ingress` for each range in the response.
+
+
+&nbsp;
+
+Next, create the EFS volume:
+```bash
+aws efs create-file-system --creation-token ${CLUSTER_NAME}-efs
+
+export EFS_ID=$(aws efs describe-file-systems --creation-token ${CLUSTER_NAME}-efs \
+  --query 'FileSystems[0].FileSystemId' --output text)
+```
+
+The mount targets need to be created in each Availability Zone. If you are not using a pre-existing VPC, grab the IDs of the Subnets and set the variables before continuing.
+```bash
+aws efs create-mount-target --file-system-id ${EFS_ID} --subnet-id ${AWS_VPC_SUBNET_1_ID} --security-group ${SEC_GROUP_ID}
+
+aws efs create-mount-target --file-system-id ${EFS_ID} --subnet-id ${AWS_VPC_SUBNET_2_ID} --security-group ${SEC_GROUP_ID}
+
+aws efs create-mount-target --file-system-id ${EFS_ID} --subnet-id ${AWS_VPC_SUBNET_3_ID} --security-group ${SEC_GROUP_ID}
+```
+
+This should ensure that the volumes can be mounted by the worker nodes, regardless of the AZ they are running on.
+
+Now let's create the remaining assets.
+
+First, let's setup the gp3 storageclass, which is recommended for MLDM when running on EKS.
+
+Create the storage class:
+
+```bash
+kubectl apply -f  - <<EOF
 kind: StorageClass
 apiVersion: storage.k8s.io/v1
 metadata:
@@ -527,15 +590,111 @@ parameters:
 EOF
 ```
 
-Next, create the storageclass and modify gp2 so it's no longer set as default:
+Next, annotate the gp2 storageclass so it's no longer set as default:
 
 ```bash
-kubectl apply -f gp3.yaml
-
 kubectl annotate sc gp2 --overwrite=true storageclass.kubernetes.io/is-default-class=false
 ```
 
-You can run `kubectl get sc` to make sure gp3 is the only one set as default.
+Run `kubectl get sc` to make sure gp3 is the only one set as default.
+
+Next, create the storage class for EFS:
+```bash
+kubectl apply -f  - <<EOF
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name: efs-sc
+provisioner: efs.csi.aws.com
+EOF
+```
+
+Now create two Persistent Volumes and two Persistent Volume Claims, which will be associated with the file system we just created. We'll create one PV and one PVC in each namespace that can run MLDE notebooks (*default* and *gpu-pool*). The *default* namespace is created with the Kubernetes cluster, and the EKS installer already created the *gpu-pool* namespace as well (since it needed to grant bucket permissions to it). Run `kubectl get ns` to make sure the *gpu-pool* namespace exists. 
+
+PS: We're setting it for 10GB, but you can increase the size as needed.
+
+Run this command to create the first PV and PVC:
+```bash
+kubectl apply -f  - <<EOF
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: efs-pv
+spec:
+  capacity:
+    storage: 10Gi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteMany
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: efs-sc
+  csi:
+    driver: efs.csi.aws.com
+    volumeHandle: ${EFS_ID}
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: efs-pvc
+  namespace: default
+spec:
+  accessModes:
+    - ReadWriteMany
+  storageClassName: efs-sc
+  resources:
+    requests:
+      storage: 10Gi
+EOF
+```
+
+Next, create the second PV and PVC:
+
+```bash
+kubectl apply -f  - <<EOF
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: efs-pv-gpu
+spec:
+  capacity:
+    storage: 10Gi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteMany
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: efs-sc
+  csi:
+    driver: efs.csi.aws.com
+    volumeHandle: ${EFS_ID}
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: efs-pvc
+  namespace: gpu-pool
+spec:
+  accessModes:
+    - ReadWriteMany
+  storageClassName: efs-sc
+  resources:
+    requests:
+      storage: 10Gi
+EOF
+```
+
+You can validate that necessary components were created (and successfuly bound together) with the following commands:
+```bash
+kubectl get sc
+
+kubectl get pv
+
+kubectl get pvc
+
+kubectl -n gpu-pool get pvc
+```
+
+
+
 
 
 &nbsp;
@@ -712,13 +871,16 @@ At this time, if you set the `--publicly-accessible` flag, you can connect using
 The next step is to setup the 3 databases that will be used by PDK. Since the AWS client doesn't have the ability to create databases inside an instance, there are a few options that could be considered:
 - Connect the database to an EC2 instance
 - Use the external client (DBeaver in this case)
-- Use the postgres command line utility (psql)
+- Use the postgres `psql` command line utility (`psql -h ${RDS_CONNECTION_URL} postgres postgres`)
+- Create a pod with psql and connect to the instance
 
-To create the databases using psql, use these commands:
+To create the databases using the psql pod, use these commands:
 
 
 ```bash
-psql -h ${RDS_CONNECTION_URL} postgres postgres
+kubectl run psql -it --rm=true --image=postgres:13 --command -- psql -h ${RDS_CONNECTION_URL} -U postgres postgres
+
+# The prompt will freeze as it waits for the password. Type the password and press enter.
 
 postgres=> CREATE DATABASE pachyderm;
 
@@ -768,38 +930,14 @@ When you're done, use the command `\q` to quit.
 
 Because we're using the AWS buckets, there are 2 service accounts in the MLDM namespace that will need access to S3: the main MLDM service account and the `worker` MLDM service account, which runs the pipeline code.
 
-The EKS installation command created the necessary roles with the right permissions; the challenge here is that those roles were created with the same name and random identifiers, which makes it impossible to dynamically find and assign them using command line. So we will need to take some manual steps.
-
-The easiest way to find this information is through the **AWS Console -> IAM -> Roles** page. Filter the list of roles by your cluster name and look for the ones called `eksctl-<cluster-name>-addon-iamserviceac-...`. Check the **Permissions** tab to see which bucket is included in the policy, and then check the **Trust Relationship** tab to see which service account is able to assume the role. Make sure the namespace and service account names match your configuration for MLDM.
-
-The main service account for MLDM will be called `pachyderm`:
-
-
-![alt text][aws_eks_02_role_permissions]
-
-[aws_eks_02_role_permissions]: images/aws_eks_02_role_permissions.png "IAM Role details"
-
-
-The service account for the MLDM worker is called `pachyderm-worker`:
-
-![alt text][aws_eks_04_workerrole]
-
-[aws_eks_04_workerrole]: images/aws_eks_04_workerrole.png "MLDM Worker Role details"
-
-
-We are looking for the 2 roles that assign permissions to all 3 buckets to these service accounts. The right roles will have a policy name that contains the namespace and service account, and will list all buckets:
-
-![alt text][aws_eks_05_rolepolicy]
-
-[aws_eks_05_rolepolicy]: images/aws_eks_05_rolepolicy.png "Role policy details"
-
-
-
-Copy the ARN of these roles and save them as variables for the MLDM configuration template:
+The EKS installation command created the necessary roles with the right permissions, all we need to do is configure the service account to leverage those roles. Run these commands to set the proper ARNs for the roles:
 
 ```bash
-export SERVICE_ACCOUNT_MLDM="arn:aws:iam::012345678901:role/eksctl-denisd-pdk-cluster-addon-iamserviceac-Role1-KQJMW94J56QA"
-export SERVICE_ACCOUNT_MLDM_WORKER="arn:aws:iam::012345678901:role/eksctl-denisd-pdk-cluster-addon-iamserviceac-Role1-BTW8AD05LAMM"
+export SERVICE_ACCOUNT_MLDM="arn:aws:iam::${AWS_ACCOUNT_ID}:role/eksctl-${CLUSTER_NAME}-mldm-role"
+export SERVICE_ACCOUNT_MLDM_WORKER="arn:aws:iam::${AWS_ACCOUNT_ID}:role/eksctl-${CLUSTER_NAME}-mldm-worker-role"
+
+echo $SERVICE_ACCOUNT_MLDM
+echo $SERVICE_ACCOUNT_MLDM_WORKER
 ```
 
 &nbsp;
@@ -828,7 +966,7 @@ pachd:
   worker:
     serviceAccount:
       additionalAnnotations:
-        iam.gke.io/gcp-service-account: "${SERVICE_ACCOUNT_MLDM_WORKER}"
+        eks.amazonaws.com/role-arn: "${SERVICE_ACCOUNT_MLDM_WORKER}"
       create: false
       name: "pachyderm-worker"
 
@@ -992,7 +1130,16 @@ resourcePools:
         apiVersion: v1
         kind: Pod
         spec:
-          serviceAccountName: checkpoint-storage-s3-bucket  
+          serviceAccountName: checkpoint-storage-s3-bucket
+          containers:
+            - name: determined-container
+              volumeMounts:
+                - name: shared-fs
+                  mountPath: /run/determined/workdir/shared_fs
+          volumes:
+            - name: shared-fs
+              persistentVolumeClaim:
+                claimName: efs-pvc
   - pool_name: gpu-pool
     max_aux_containers_per_agent: 1
     kubernetes_namespace: gpu-pool
@@ -1002,6 +1149,15 @@ resourcePools:
         kind: Pod
         spec:
           serviceAccountName: checkpoint-storage-s3-bucket
+          containers:
+            - name: determined-container
+              volumeMounts:
+                - name: shared-fs
+                  mountPath: /run/determined/workdir/shared_fs
+          volumes:
+            - name: shared-fs
+              persistentVolumeClaim:
+                claimName: efs-pvc
           tolerations:
             - key: "nvidia.com/gpu"
               operator: "Equal"
@@ -1033,10 +1189,10 @@ Make sure the pod is running before continuing.
 
 Because we're using nginx, we'll need to create an ingress for MLDE.
 
-First, create a configuration file for the new ingress:
+Use this command to create the ingress:
 
 ```bash
-cat <<EOF > ./mlde-ingress.yaml
+kubectl apply -f  - <<EOF
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
@@ -1058,13 +1214,7 @@ spec:
 EOF
 ```
 
-Next, create the ingress using the configuration file:
-
-```bash
-kubectl apply -f ./mlde-ingress.yaml
-```
-
-Then run `kubectl get ingress` and make sure the ingress is being listed with a hostname (ADDRESS) before continuing.
+Then run `kubectl get ingress` and make sure the ingress is being listed with a hostname (ADDRESS) before continuing. It might take a minute for the hostname to get assigned.
 
 Similar to the steps taken for MLDM, these commands will retrieve the load balancer address and create a URL we can use to access MLDE:
 
@@ -1258,6 +1408,28 @@ You can also check the MLDE bucket in S3 to see the checkpoints that were saved:
 This confirms that MLDE is able to access the Storage bucket as well.
 
 
+&nbsp;
+
+Finally, go to the MLDE **Home Page** and click the **Launch JupyterLab** button. In the configuration pop-up, select the *Uncategorized* workspace, set the *Resource Pool* to **gpu-pool** (this is important, because the *default* pool has no GPUs available) and set the number of *Slots* (GPUs) to 1. Or set the number of slots to 0 and select the *default* Resource Pool to create a CPU-based notebook environment.
+
+Click **Launch** to start the JupyterLab environment.
+
+The first run should take about one minute to pull and run the image. In the new tab, make sure the *shared_fs* folder is 
+
+
+![alt text][aws_mlde_06_jupyter]
+
+[aws_mlde_06_jupyter]: images/aws_mlde_06_jupyter.png "MLDE Launch JupyterLab"
+
+
+In the new tab, make sure the *shared_fs* folder is listed. In this folder, users will be able to permanently store their model assets, notebooks and other files.
+
+![alt text][aws_mlde_07_shared_folder]
+
+[aws_mlde_07_shared_folder]: images/aws_mlde_07_shared_folder.png "MLDE Notebook Shared Folder"
+
+PS: If the JupyterLab environment fails to load, it might be because the EFS volume failed to mount. Run `kubectl -n gpu-pool describe pod` against the new pod to see why the pod failed to run.
+
 
 &nbsp;
 <a name="step19">
@@ -1320,7 +1492,7 @@ echo $INGRESS_PORT
 echo $SERVICE_HOSTNAME
 ```
 
-Make sure the command output includes a public IP. Fix any issues before continuing.
+Make sure the command output includes a public hostname. Fix any issues before continuing.
 
 
 ![alt text][aws_kserve_01_ingress]
@@ -1397,10 +1569,10 @@ kubectl -n ${MLDM_NAMESPACE} apply -f pipeline-secret.yaml
 
 Next, the MLDM Worker service account (which will be used to run the pods that contain the pipeline code) needs to gain access to the `${KSERVE_MODELS_NAMESPACE}` namespace, or it won't be able to deploy models there.
 
-First, create the configuration file:
+Run this command to create the Cluster Role and Cluster Role Binding:
 
 ```bash
-cat <<EOF > "./mldm-kserve-perms.yaml"
+kubectl apply -f  - <<EOF
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
@@ -1412,9 +1584,7 @@ rules:
 - apiGroups: ["serving.kserve.io"]
   resources: ["inferenceservices"]
   verbs: ["get", "list", "watch", "create", "update", "patch", "delete"]
-
 ---
-
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
@@ -1430,11 +1600,6 @@ subjects:
 EOF
 ```
 
-Then apply it:
-
-```bash
-kubectl apply -f mldm-kserve-perms.yaml
-```
 
 Finally, create dummy credentials to allow access to the MLDM repo through the S3 protocol.
 
@@ -1450,8 +1615,8 @@ metadata:
     serving.kserve.io/s3-usehttps: "0" 
 type: Opaque
 stringData: 
-  AWS_ACCESS_KEY_ID: "blahblahblah"
-  AWS_SECRET_ACCESS_KEY: "blahblahblah" 
+  AWS_ACCESS_KEY_ID: "dummycredentials"
+  AWS_SECRET_ACCESS_KEY: "dummycredentials" 
 ---
 apiVersion: v1
 kind: ServiceAccount
