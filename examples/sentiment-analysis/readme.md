@@ -13,6 +13,15 @@ The [sample-data](./sample-data/) folder contains a pre-processed dataset ([data
 
 To setup this PDK flow, please follow the instructions in the [Deployment](../../deploy/README.md#setup) page. Since that page is referring to the [Dogs vs Cats](../dog-cat/readme.md) example, you should make the following changes:
 
+Create the following folder structure in the storage bucket (can be skipped for vanilla kubernetes deployments):
+
+```bash
+finbert
+finbert/config
+finbert/model-store
+```
+
+
 The project name should be `pdk-finbert`, and the input repository should be called `finbert-data`:
 
 ```bash
@@ -31,9 +40,32 @@ pachctl list repo
 
 &nbsp;
 
+**MLDE Experiment Project:**
+
+By default, the MLDE experiment will use the `pdk-finbert` Project inside the `PDK Demos` workspace. Make sure to create that project before uploading files to the MLDM repo.
+
+&nbsp;
+
+
+**MLDM Pipelines:**
+
+This use case has an additional pipeline to prepare the data. Make sure to create the `prep` pipeline, then the `train` and `deploy`:
+```bash
+pachctl create pipeline -f prep-pipeline.json
+
+pachctl create pipeline -f training-pipeline.json
+
+pachctl create pipeline -f deployment-pipeline.json
+```
+
+&nbsp;
+
+
 When uploading files to MLDM, make sure to use the correct repository name:
 
 ```bash
+find ./finbert/ -name '.DS_Store' -type f -delete
+
 pachctl put file finbert-data@master:/data1 -f ./finbert -r
 ```
 

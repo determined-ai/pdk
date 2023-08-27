@@ -1,0 +1,56 @@
+name: Train Test
+workspace: PDK Demos
+project: pdk-object-detection
+data:
+    pachyderm:
+        host:
+        port:
+        project:
+        repo:
+        branch:
+        token:
+        previous_commit:
+profiling:
+ enabled: true
+ begin_on_batch: 0
+ end_after_batch: null
+hyperparameters:
+    lr: 0.02
+    momentum: 0.9
+    global_batch_size: 16
+    weight_decay: 1.0e-4
+    gamma: 0.1
+    warmup: linear
+    warmup_iters: 200
+    warmup_ratio: 0.001
+    pretrained_model: "https://storage.googleapis.com/ai-at-scale-pdk-assets/sample-data/pdk-object-detection/pretrained-model/frcnn_xview.pth"
+    #finetune_ckpt: "/nvmefs1/andrew.mendez/model_479.pth"
+    step1: 504 # 14 epochs: 14*36 == 504
+    step2: 540 # 15 epochs: 15*36 == 540
+    model: fasterrcnn_resnet50_fpn
+    num_workers: 4
+environment:
+    image: determinedai/environments:cuda-11.3-pytorch-1.10-tf-2.8-gpu-mpi-0.19.10
+    environment_variables:
+        - NCCL_DEBUG=INFO
+        # You may need to modify this to match your network configuration.
+        - NCCL_SOCKET_IFNAME=ens,eth,ib
+
+scheduling_unit: 400
+min_validation_period:
+    batches: 36 # For training
+
+searcher:
+  name: single
+  metric: mAP
+  smaller_is_better: true
+  max_length:
+    batches: 36 # 1*(579/16) = 1*36
+records_per_epoch: 579 # 579 records / 16
+resources:
+    resource_pool: gpu-pool
+    slots_per_trial: 1
+    shm_size: 2000000000
+max_restarts: 0
+
+entrypoint: python3 -m determined.launch.torch_distributed --trial model_def:ObjectDetectionTrial

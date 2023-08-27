@@ -1,6 +1,6 @@
 name: Pipeline-Run-Finbert-1GPU
 workspace: PDK Demos
-project: pipeline-finbert
+project: pdk-finbert
 hyperparameters:
     max_seq_length: 64
     global_batch_size: 64
@@ -38,8 +38,19 @@ data:
 entrypoint: model_def:FinBERTPyTorch
 profiling:
     enabled: true
+max_restarts: 0
+resources:
+  resource_pool: gpu-pool
+  slots_per_trial: 1
 environment:
   force_pull_image: false
   image:
     cpu: determinedai/environments:py-3.8-pytorch-1.12-tf-2.8-cpu-0e4beb5
     cuda: determinedai/environments:cuda-11.3-pytorch-1.12-tf-2.8-gpu-0e4beb5
+  pod_spec:
+    spec:
+      tolerations:
+        - key: "nvidia.com/gpu"
+          operator: "Equal"
+          value: "present"
+          effect: "NoSchedule"
