@@ -3,8 +3,8 @@
 [hpe_logo]: ../../deploy/images/hpe_logo.png "HPE Logo"
 
 # PDK - Pachyderm | Determined | KServe
-## Brain MRI Example
-**Date/Revision:** August 15, 2023
+## Object Detection Example
+**Date/Revision:** August 30, 2023
 
 This example is based on the **Brain MRI Segmentation** Kaggle dataset, which can be found here:<br/>
 https://www.kaggle.com/datasets/mateuszbuda/lgg-mri-segmentation
@@ -16,25 +16,25 @@ To setup this PDK flow, please follow the instructions in the [Deployment](../..
 Create the following folder structure in the storage bucket (can be skipped for vanilla kubernetes deployments):
 
 ```bash
-brain-mri
-brain-mri/config
-brain-mri/model-store
+object-detection
+object-detection/config
+object-detection/model-store
 ```
 
 &nbsp;
 
-The project name should be `pdk-brain-mri`, and the input repository should be called `brain-mri-data`:
+The project name should be `pdk-object-detection`, and the input repository should be called `object-detection-data`:
 
 ```bash
 pachctl connect ${MLDM_URL}
 
 pachctl config set active-context ${MLDM_URL}
 
-pachctl create project pdk-brain-mri
+pachctl create project pdk-object-detection
 
-pachctl config update context --project pdk-brain-mri
+pachctl config update context --project pdk-object-detection
 
-pachctl create repo brain-mri-data
+pachctl create repo object-detection-data
 
 pachctl list repo
 ```
@@ -43,28 +43,28 @@ pachctl list repo
 
 **MLDE Experiment Project:**
 
-By default, the MLDE experiment will use the `pdk-brain-mri` Project inside the `PDK Demos` workspace. Make sure to create that project before uploading files to the MLDM repo.
+By default, the MLDE experiment will use the `pdk-object-detection` Project inside the `PDK Demos` workspace. Make sure to create that project before uploading files to the MLDM repo.
 
 &nbsp;
 
 When uploading files to MLDM, make sure to use the correct repository name:
 
 ```bash
-find ./brain/ -name '.DS_Store' -type f -delete
+find ./data/ -name '.DS_Store' -type f -delete
 
-pachctl put file brain-mri-data@master:/data1 -f ./brain -r
+pachctl put file object-detection-data@master:/data1 -f ./data -r
 ```
 
 &nbsp;
 
-Finally, to test the inference service, look for the `brain-mri-deploy` service hostname, and use the `brain.json` file located in the [sample-data](./sample-data/) folder:
+Finally, to test the inference service, look for the `detection-deploy` service hostname, and use the `object_detection.json` file located in the [sample-data](./sample-data/) folder:
 
 ```bash
 export INGRESS_HOST=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.status.loadBalancer.ingress[0].ip}')
 
 export INGRESS_PORT=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.spec.ports[?(@.name=="http2")].port}')
 
-export SERVICE_HOSTNAME=$(kubectl get inferenceservice brain-mri-deploy -n ${KSERVE_MODELS_NAMESPACE} -o jsonpath='{.status.url}' | cut -d "/" -f 3)
+export SERVICE_HOSTNAME=$(kubectl get inferenceservice detection-deploy -n ${KSERVE_MODELS_NAMESPACE} -o jsonpath='{.status.url}' | cut -d "/" -f 3)
 
 echo $INGRESS_HOST
 
@@ -73,7 +73,7 @@ echo $INGRESS_PORT
 echo $SERVICE_HOSTNAME
 
 
-curl -v -H "Host: ${SERVICE_HOSTNAME}" http://${INGRESS_HOST}:${INGRESS_PORT}/v1/models/brain-mri:predict -d @./brain.json
+curl -v -H "Host: ${SERVICE_HOSTNAME}" http://${INGRESS_HOST}:${INGRESS_PORT}/v1/models/object-detection:predict -d @./object_detection.json
 ```
 
 PS: Depending on your load balancer, you may need to use `.status.loadBalancer.ingress[0].hostname` instead of `.status.loadBalancer.ingress[0].ip` for the `INGRESS_HOST` variable.

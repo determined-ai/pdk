@@ -1238,6 +1238,29 @@ You can also check the MLDE bucket in Google Cloud Storage to see the checkpoint
 This confirms that MLDE is able to access the Storage buckets as well.
 
 
+&nbsp;
+
+Finally, go to the MLDE **Home Page** and click the **Launch JupyterLab** button. In the configuration pop-up, select the *Uncategorized* workspace, set the *Resource Pool* to **gpu-pool** (this is important, because the *default* pool has no GPUs available) and set the number of *Slots* (GPUs) to 1. Or set the number of slots to 0 and select the *default* Resource Pool to create a CPU-based notebook environment.
+
+Click **Launch** to start the JupyterLab environment.
+
+The first run should take about one minute to pull and run the image.
+
+
+![alt text][aws_mlde_06_jupyter]
+
+[aws_mlde_06_jupyter]: images/aws_mlde_06_jupyter.png "MLDE Launch JupyterLab"
+
+
+In the new tab, make sure the *shared_fs* folder is listed. In this folder, users will be able to permanently store their model assets, notebooks and other files.
+
+![alt text][aws_mlde_07_shared_folder]
+
+[aws_mlde_07_shared_folder]: images/aws_mlde_07_shared_folder.png "MLDE Notebook Shared Folder"
+
+PS: If the JupyterLab environment fails to load, it might be because the shared volume failed to mount. Run `kubectl -n gpu-pool describe pod` against the new pod to see why the pod failed to run.
+
+
 
 &nbsp;
 <a name="step21">

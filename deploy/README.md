@@ -177,7 +177,7 @@ A brief description of the Experiment files:
 <br/>
 &nbsp;
 
-The experiment files don't need to be modified, except for the Workspace and Project name in the `const.yaml` file.
+The experiment files don't need to be modified, except for the Workspace and Project name in the `const.yaml` file. Do keep in mind that, at runtime, the pipeline will pull this code from Github. Any changes to any of the files need to be uploaded to your repository.
 
 
 
@@ -245,7 +245,7 @@ You should, of couse, study the entire code. The goal here was to show how data 
 
 ### Build and push the Train image
 
-If you are not planning on building your own images, you can skip this section. The pipelines will be configured by default with public images you can use for testing.
+If you are not planning on building your own images, you can skip this section. The pipelines are configured by default with public images you can use for testing.
 
 Before continuing, make sure Docker Desktop is running.
 
@@ -456,12 +456,12 @@ Our environment should now be ready to receive and process data.
 
 
 ## Step 3: Running the Pipeline
-As mentioned before, the pipelines automatically run if new data is committed to the input repository `dogs-and-cats`.</br>
+As mentioned before, the pipelines automatically run when new data is committed to the input repository `dogs-and-cats`.</br>
 
 Some sample images of dogs and cats can be found in the `sample-data` folder. Unzip the `dataset-dog-cat.zip` file to obtain a sample dataset that can be used to train the model.
 
 With the command below you can commit all images in the `dog-cat` directory of your machine to the folder `data1` in the MLDM repository `dogs-and-cats`.
-The folder `data1` will be created as part of the commit process; make sure to increment the number if you need to re-upload this folder. </br></br>
+The folder `data1` will be created as part of the commit process; make sure to increment the number if you need to re-upload this folder (otherwise it won't be considered as new data by MLDM). </br></br>
 
 >**IMPORTANT:** While the folder `data1` can have any name, **do not** use the words "dog(s)" or "cat(s)" as it will impact the labeling of the images in the data pre-processing code.
 
@@ -485,7 +485,7 @@ The experiment might take a minute to start, as it's preparing the environment.
 
 &nbsp;
 
-Once the training is complete, the deployment pipeline will be executed. You can look at the logs of the pipeline execution by clicking on `Pipeline`, then select `Jobs`, select the newest job (probably in the state of `Running`), then select the pipeline stage (`dogs-and-cats-deploy`), and then `Read Logs`. You should see a message in the logs about the model being deployed to KServe.
+Once the training is complete, the deployment pipeline will be executed. You can look at the logs of the pipeline execution by clicking on `Pipeline`, then select `Jobs`, select the newest job (probably in `Running` state), then select the pipeline stage (`dogs-and-cats-deploy`), and then `Read Logs`. You should see a message in the logs about the model being deployed to KServe.
 
 
 ![alt text][mldm_05_job]
@@ -508,6 +508,7 @@ sklearn-iris    http://sklearn-iris.models.example.com    True           100    
 (base) denis.abrantes@Deniss-MacBook-Pro pipelines %
 ```
 
+It might take a minute for the inference service to go from `Unknown` to `True`.
 
 &nbsp;
 

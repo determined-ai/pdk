@@ -16,7 +16,7 @@
       "/bin/sh"
     ],
     "stdin": [
-      "python deploy.py --deployment-name brain-mri-deploy --cloud-model-host gcp --cloud-model-bucket denisd-pdk-repo-models --resource-requests cpu=2,memory=8Gi --resource-limits cpu=10,memory=8Gi"
+      "python deploy.py --deployment-name brain-mri-deploy --cloud-model-host gcp --cloud-model-bucket pdk-repo-models --resource-requests cpu=2,memory=8Gi --resource-limits cpu=10,memory=8Gi"
     ],
     "image": "vmtyler/pdk:brain_deploy_0.0.16",
     "secrets": [

@@ -227,6 +227,8 @@ iam:
       labels:
         aws-usage: "determined-checkpoint-storage"
     roleName: "eksctl-${CLUSTER_NAME}-mlde-role"
+    attachPolicyARNs:
+    - ${IAM_EFSCSIDRIVERPOLICY}
     attachPolicy:
       Version: "2012-10-17"
       Statement:
@@ -246,6 +248,8 @@ iam:
       labels:
         aws-usage: "determined-checkpoint-storage"
     roleName: "eksctl-${CLUSTER_NAME}-mlde-gpu-role"
+    attachPolicyARNs:
+    - ${IAM_EFSCSIDRIVERPOLICY}
     attachPolicy:
       Version: "2012-10-17"
       Statement:
@@ -552,7 +556,7 @@ If you see more than one result in this command, run the `authorize-security-gro
 
 Next, create the EFS volume:
 ```bash
-aws efs create-file-system --creation-token ${CLUSTER_NAME}-efs
+aws efs create-file-system --creation-token ${CLUSTER_NAME}-efs --tags Key=Name,Value=${CLUSTER_NAME}-efs
 
 export EFS_ID=$(aws efs describe-file-systems --creation-token ${CLUSTER_NAME}-efs \
   --query 'FileSystems[0].FileSystemId' --output text)
@@ -1414,7 +1418,7 @@ Finally, go to the MLDE **Home Page** and click the **Launch JupyterLab** button
 
 Click **Launch** to start the JupyterLab environment.
 
-The first run should take about one minute to pull and run the image. In the new tab, make sure the *shared_fs* folder is 
+The first run should take about one minute to pull and run the image.
 
 
 ![alt text][aws_mlde_06_jupyter]
