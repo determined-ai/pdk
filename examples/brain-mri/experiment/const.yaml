@@ -39,11 +39,3 @@ max_restarts: 0
 entrypoint: model_def:MRIUnetTrial
 profiling:
   enabled: True
-environment:
-  pod_spec:
-    spec:
-      tolerations:
-        - key: "nvidia.com/gpu"
-          operator: "Equal"
-          value: "present"
-          effect: "NoSchedule"
