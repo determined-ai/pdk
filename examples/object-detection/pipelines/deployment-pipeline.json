@@ -1,0 +1,51 @@
+{
+  "pipeline": {
+    "name": "deploy"
+  },
+  "description": "Deploys a model into production via the KServe Python SDK.",
+  "input": {
+    "pfs": {
+      "name": "data",
+      "repo": "training",
+      "branch": "master",
+      "glob": "/"
+    }
+  },
+  "transform": {
+    "cmd": [
+      "/bin/sh"
+    ],
+    "stdin": [
+      "python deploy.py --deployment-name detection-deploy --cloud-model-host gcp --cloud-model-bucket pdk-repo-models --resource-requests cpu=2,memory=4Gi --resource-limits cpu=10,memory=8Gi"
+    ],
+    "image": "mendeza/pdk:deploy_0.0.23",
+    "secrets": [
+      {
+        "name": "pipeline-secret",
+        "key": "det_master",
+        "env_var": "DET_MASTER"
+      },
+      {
+        "name": "pipeline-secret",
+        "key": "det_user",
+        "env_var": "DET_USER"
+      },
+      {
+        "name": "pipeline-secret",
+        "key": "det_password",
+        "env_var": "DET_PASSWORD"
+      },
+      {
+        "name": "pipeline-secret",
+        "key": "kserve_namespace",
+        "env_var": "KSERVE_NAMESPACE"
+      }
+    ]
+  },
+  "resource_limits": {
+    "gpu": {
+      "type": "nvidia.com/gpu",
+      "number": 1
+    }
+  }
+}

@@ -1,6 +1,6 @@
 name: Pipeline-Run-Finbert-1GPU
 workspace: PDK Demos
-project: pipeline-finbert
+project: pdk-finbert
 hyperparameters:
     max_seq_length: 64
     global_batch_size: 64
@@ -38,6 +38,10 @@ data:
 entrypoint: model_def:FinBERTPyTorch
 profiling:
     enabled: true
+max_restarts: 0
+resources:
+  resource_pool: gpu-pool
+  slots_per_trial: 1
 environment:
   force_pull_image: false
   image:

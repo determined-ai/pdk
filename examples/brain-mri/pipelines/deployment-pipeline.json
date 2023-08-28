@@ -16,7 +16,7 @@
       "/bin/sh"
     ],
     "stdin": [
-      "python deploy.py --deployment-name brain-mri-deploy --service-account-name pach-deploy "
+      "python deploy.py --deployment-name brain-mri-deploy --cloud-model-host gcp --cloud-model-bucket pdk-repo-models --resource-requests cpu=2,memory=8Gi --resource-limits cpu=10,memory=8Gi"
     ],
     "image": "vmtyler/pdk:brain_deploy_0.0.16",
     "secrets": [
@@ -41,6 +41,5 @@
         "env_var": "KSERVE_NAMESPACE"
       }
     ]
-  },
-  "pod_patch": "[{\"op\": \"add\",\"path\": \"/volumes/-\",\"value\": {\"name\": \"det-checkpoints\",\"hostpath\": {\"path\": \"/nvmefs1/determined/checkpoints\",\"type\": \"Directory\"}}}, {\"op\": \"add\",\"path\": \"/containers/0/volumeMounts/-\",\"value\": {\"mountPath\": \"/determined_shared_fs\",\"name\": \"det-checkpoints\"}}]"
+  }
 }

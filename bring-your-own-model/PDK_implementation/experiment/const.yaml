@@ -1,0 +1,31 @@
+name: Pipeline-Churn-Training
+workspace: Tanguy # to change depending on your Determined cluster
+project: "PDK Tests" # to change depending on your Determined cluster
+data:
+  #data_file: "data/data_part1.csv"
+  pachyderm:
+    host:
+    port:
+    repo:
+    branch:
+    token:
+    previous_commit:
+hyperparameters:
+  global_batch_size: 512
+  random_seed: 42
+  test_size: 0.2
+  lr: 0.0001
+  dense1: 32
+#records_per_epoch: 24807 # no longer fixed, if we plan several data commits in pachyderm
+searcher:
+    name: single
+    metric: val_acc 
+    max_length:
+        #epochs: 20 # requires records_per_epoch to be known, set bactches instead
+        batches: 1000
+    smaller_is_better: false
+min_validation_period:
+    #epochs: 1 #requires records_per_epoch to be known, set bactches instead
+    batches: 100
+max_restarts: 0
+entrypoint: model_def:ChurnTrial

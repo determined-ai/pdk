@@ -1,6 +1,6 @@
 name: Pipeline-Run-DogCat-1GPU
 workspace: PDK Demos
-project: pipeline-dogs-and-cats
+project: pdk-dogs-and-cats
 data:
     pachyderm:
         host:
@@ -23,5 +23,6 @@ searcher:
     smaller_is_better: false
 entrypoint: model_def:DogCatModel
 resources:
+    resource_pool: gpu-pool
     slots_per_trial: 1
 max_restarts: 0

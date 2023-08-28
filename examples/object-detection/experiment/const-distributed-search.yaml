@@ -1,0 +1,59 @@
+name: xview_frcnn_search
+workspace: PDK Demos
+project: pdk-object-detection
+data:
+    pachyderm:
+        host:
+        port:
+        project:
+        repo:
+        branch:
+        token:
+        previous_commit:
+profiling:
+ enabled: true
+ begin_on_batch: 0
+ end_after_batch: null
+hyperparameters:
+    lr: 0.01
+    momentum: 0.9
+    global_batch_size: 128
+    weight_decay: 1.0e-4
+    gamma: 0.1
+    warmup: linear
+    warmup_iters: 200
+    warmup_ratio: 0.001
+    pretrained_model: "https://storage.googleapis.com/ai-at-scale-pdk-assets/sample-data/pdk-object-detection/pretrained-model/frcnn_xview.pth"
+    step1: 18032 # 14 epochs: 14*1288 == 18,032
+    step2: 19320 # 15 epochs: 15*1288 == 19,320
+    model:
+      type: categorical
+      vals: ['fasterrcnn_resnet50_fpn','fcos_resnet50_fpn', 'ssd300_vgg16','ssdlite320_mobilenet_v3_large','resnet152_fasterrcnn_model','efficientnet_b4_fasterrcnn_model','convnext_large_fasterrcnn_model','convnext_small_fasterrcnn_model']
+    num_workers: 4
+environment:
+    environment_variables:
+        - NCCL_DEBUG=INFO
+        # You may need to modify this to match your network configuration.
+        - NCCL_SOCKET_IFNAME=ens,eth,ib
+bind_mounts:
+    - host_path: /tmp
+      container_path: /data
+      read_only: false
+scheduling_unit: 400
+# scheduling_unit: 40
+min_validation_period:
+    batches: 1288 # For Real training
+searcher:
+  name: grid
+  metric: mAP
+  smaller_is_better: false
+  max_length:
+    batches: 51520 # 50*1288 == 51520# Real Training
+records_per_epoch: 1288
+resources:
+    resource_pool: gpu-pool
+    slots_per_trial: 8
+    shm_size: 2000000000
+max_restarts: 0
+
+entrypoint: python3 -m determined.launch.torch_distributed --trial model_def:ObjectDetectionTrial
