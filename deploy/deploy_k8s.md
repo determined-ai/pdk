@@ -533,7 +533,92 @@ At this time, the MLDM UI will be accessible:
 ### Step 9 - Prepare MLDE installation assets
 </a>
 
-First, download and unzip the Helm chart for MLDE:
+MLDE offers a hosted Jupyter Lab environment, where users can create and run notebooks. This environment needs persistent storage, in order to save user files. This persistent storage must be mounted as a shared folder. In this step, we will configure the necessary components to enable this capability.
+
+First, make sure you have a storage class created. In this example, the storage class is called `manual`.
+
+Run `kubectl get sc` to check the storageclasses available.
+
+Now create two Persistent Volumes and two Persistent Volume Claims, one in each namespace that can run MLDE notebooks (*default* and *gpu-pool*). PS: We're setting it for 10GB, but you can increase the size as needed.
+
+Run this command to create the first PV and PVC:
+```bash
+kubectl apply -f - <<EOF
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: mlde-pv
+spec:
+  storageClassName: manual
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteMany
+  hostPath:
+    path: "/mnt/efs/shared_fs/mlde_shared"
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: mlde-pvc
+spec:
+  storageClassName: manual
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 10Gi
+EOF
+```
+
+Next, create the second PV and PVC:
+
+```bash
+kubectl apply -f - <<EOF
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: mlde-pv-gpu
+spec:
+  storageClassName: manual
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteMany
+  hostPath:
+    path: "/mnt/efs/shared_fs/mlde_shared"
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: mlde-pvc
+  namespace: gpu-pool
+spec:
+  storageClassName: manual
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 10Gi
+EOF
+```
+
+You can validate that necessary components were created (and successfuly bound together) with the following commands:
+```bash
+kubectl get sc
+
+kubectl get pv
+
+kubectl get pvc
+
+kubectl -n gpu-pool get pvc
+```
+
+
+
+
+
+Next, download and unzip the Helm chart for MLDE:
 
 ```bash
 wget https://hpe-mlde.determined.ai/latest/_downloads/389266101877e29ab82805a88a6fc4a6/determined-latest.tgz
@@ -588,6 +673,16 @@ resourcePools:
       cpu_pod_spec:
         apiVersion: v1
         kind: Pod
+        spec:
+          containers:
+            - name: determined-container
+              volumeMounts:
+                - name: shared-fs
+                  mountPath: /run/determined/workdir/shared_fs
+          volumes:
+            - name: shared-fs
+              persistentVolumeClaim:
+                claimName: mlde-pvc        
   - pool_name: gpu-pool
     max_aux_containers_per_agent: 1
     kubernetes_namespace: gpu-pool
@@ -596,6 +691,15 @@ resourcePools:
         apiVersion: v1
         kind: Pod
         spec:
+          containers:
+            - name: determined-container
+              volumeMounts:
+                - name: shared-fs
+                  mountPath: /run/determined/workdir/shared_fs
+          volumes:
+            - name: shared-fs
+              persistentVolumeClaim:
+                claimName: mlde-pvc        
           tolerations:
             - key: "nvidia.com/gpu"
               operator: "Equal"
@@ -1042,8 +1146,8 @@ metadata:
     serving.kserve.io/s3-usehttps: "0" 
 type: Opaque
 stringData: 
-  AWS_ACCESS_KEY_ID: "blahblahblah"
-  AWS_SECRET_ACCESS_KEY: "blahblahblah" 
+  AWS_ACCESS_KEY_ID: "dummycredentials"
+  AWS_SECRET_ACCESS_KEY: "dummycredentials" 
 ---
 apiVersion: v1
 kind: ServiceAccount

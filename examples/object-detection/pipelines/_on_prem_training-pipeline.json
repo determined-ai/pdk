@@ -6,7 +6,7 @@
   "input": {
     "pfs": {
       "name": "data",
-      "repo": "data",
+      "repo": "object-detection-data",
       "branch": "master",
       "glob": "/",
       "empty_files": true
