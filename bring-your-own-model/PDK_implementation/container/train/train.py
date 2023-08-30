@@ -120,8 +120,8 @@ def read_config(conf_file):
 
 def setup_config(config_file, repo, pipeline, job_id, project):
     config = read_config(config_file)
-    config["data"]["pachyderm"]["host"] = os.getenv("PACHD_LB_SERVICE_HOST")
-    config["data"]["pachyderm"]["port"] = os.getenv("PACHD_LB_SERVICE_PORT")
+    config["data"]["pachyderm"]["host"] = os.getenv("PACHD_PEER_SERVICE_HOST")
+    config["data"]["pachyderm"]["port"] = os.getenv("PACHD_PEER_SERVICE_PORT")
     config["data"]["pachyderm"]["repo"] = repo
     config["data"]["pachyderm"]["branch"] = job_id
     config["data"]["pachyderm"]["token"] = os.getenv("PAC_TOKEN")

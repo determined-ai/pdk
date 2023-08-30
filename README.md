@@ -1,6 +1,6 @@
 # PDK - Pachyderm | Determined | KServe
 ## Deployment and Setup Guide
-**Date/Revision:** August 15, 2023
+**Date/Revision:** August 30, 2023
 
 
 ![alt text][big_picture]

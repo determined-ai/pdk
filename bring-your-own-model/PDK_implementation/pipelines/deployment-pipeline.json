@@ -6,7 +6,7 @@
   "input": {
     "pfs": {
       "name": "data",
-      "repo": "customer-churn-model",
+      "repo": "customer-churn-train",
       "branch": "master",
       "glob": "/"
     }
@@ -16,7 +16,7 @@
       "/bin/sh"
     ],
     "stdin": [
-      "python deploy.py --k8s-config-file /determined_shared_fs/k8s.config --deployment-name tp-customer-churn --service-account-name pach-deploy --tolerations accelerator=Tesla-T4 --resource-requests cpu=10,memory=8Gi --resource-limits cpu=10,memory=8Gi"
+      "python deploy.py --deployment-name customer-churn --cloud-model-host gcp --cloud-model-bucket pdk-repo-models --resource-requests cpu=2,memory=4Gi --resource-limits cpu=10,memory=8Gi"
     ],
     "image": "tpomas/pdk:deploy_churn_0.0.7",
     "secrets": [
@@ -41,7 +41,5 @@
         "env_var": "KSERVE_NAMESPACE"
       }
     ]
-  },
-  "pod_patch": "[{\"op\": \"add\",\"path\": \"/volumes/-\",\"value\": {\"name\": \"det-checkpoints\",\"hostpath\": {\"path\": \"/nvmefs1/determined/checkpoints\",\"type\": \"Directory\"}}}, {\"op\": \"add\",\"path\": \"/containers/0/volumeMounts/-\",\"value\": {\"mountPath\": \"/determined_shared_fs\",\"name\": \"det-checkpoints\"}}]"
-
+  }
 }

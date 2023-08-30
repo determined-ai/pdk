@@ -4,7 +4,7 @@
 
 # PDK - Pachyderm | Determined | KServe
 ## Sentiment Analysis - Finbert Example
-**Date/Revision:** August 15, 2023
+**Date/Revision:** August 30, 2023
 
 This example is based on the **Financial PhraseBank from Malo et al. (2014)** example, which can be found here:<br/>
 https://www.researchgate.net/publication/251231364_FinancialPhraseBank-v10
