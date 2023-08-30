@@ -18,7 +18,7 @@
     "stdin": [
       "python deploy.py --deployment-name detection-deploy --cloud-model-host gcp --cloud-model-bucket pdk-repo-models --resource-requests cpu=2,memory=4Gi --resource-limits cpu=10,memory=8Gi"
     ],
-    "image": "mendeza/pdk:deploy_0.0.23",
+    "image": "us-central1-docker.pkg.dev/dai-dev-554/pdk-registry/pdk_object_detection_deploy:1.0",
     "secrets": [
       {
         "name": "pipeline-secret",
