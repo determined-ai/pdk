@@ -34,7 +34,7 @@ The dataset used for this example is an edited and simplified version of this [d
   * **experiment** contains files to run the experiment when the training pipeline is triggered. These are adapted from the files in the **base_experiment** folder.
   * **pipelines** contains the JSON files used to create both the training and the deployment pipelines on MLDM.
 
-**data.zip** contains three files:
+**sample-data** subfolder contains three files:
   * **data_part1.csv** containing 31009 samples, used in the base experiment. This is the first dataset you should commit to your MLDM repository.
   * **data_part2.csv** containing 31000 samples, used to to trigger the training pipeline a second time after commiting to the same MLDM repository. This allows to test model retraining.
   * **customer_churn_sample.csv** containing 10 samples, to test model inference.
@@ -170,3 +170,63 @@ However, several changes to this image are expected to deploy another model:
   * As mentioned before, the *pod_patch* entry is needed for environments that leverage shared folders. In this case, use the *_on_prem_* version of the pipeline files and adjust the *pod_patch* entry according to your environment.
 
 For a detailed walkthrough of the PDK deployment steps, please check the [deployment](../deploy/README.md) page.
+
+
+&nbsp;
+
+## Step 4: Test the Inference Service
+
+To generate a prediction with the `customer_churn_sample.json` file provided in the [sample-data](./sample-data/) folder, run the following code on a Jupyter Notebook:
+
+```python
+import glob
+import json
+import requests
+
+ingress_host="198.162.1.2"
+ingress_port=80
+model_name="customer-churn"
+service_hostname="customer-churn.models.example.com"
+
+sample_file = "./customer_churn_sample.json"
+f = open(sample_file)
+sample_data = json.load(f)
+f.close()
+
+request = {
+  "instances":[
+    {
+      "data": sample_data
+    }
+  ]
+}
+
+url = str("http://") + str(ingress_host) + ":" + str(ingress_port) + "/v1/models/" + str(model_name) + ":predict"
+headers = {'Host': service_hostname}
+payload = json.dumps(request)
+
+response = requests.post(url, data=payload, headers=headers)
+output = response.json()
+print(output)
+
+for i in range(len(output['predictions'])):
+    sample_result = int(output['predictions'][i][0])
+    ground_truth = sample_data['churn'][str(i)]
+    print("Ground truth/Predicted: " + str(ground_truth) + "/" + str(sample_result))
+```
+
+PS: Make sure the value of `ingress_host` matches your environment.
+
+The output should be similar to this:
+```
+Ground truth/Predicted: 1/0
+Ground truth/Predicted: 0/0
+Ground truth/Predicted: 1/0
+Ground truth/Predicted: 0/0
+Ground truth/Predicted: 0/0
+Ground truth/Predicted: 1/0
+Ground truth/Predicted: 1/1
+Ground truth/Predicted: 1/1
+Ground truth/Predicted: 0/0
+Ground truth/Predicted: 1/1
+```

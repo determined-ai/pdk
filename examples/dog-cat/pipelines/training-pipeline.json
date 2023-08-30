@@ -19,7 +19,7 @@
     "stdin": [
       "python train.py --git-url https://git@github.com:/determined-ai/pdk.git --git-ref main --sub-dir examples/dog-cat/experiment --config const.yaml --repo dogs-and-cats-data --model dogs-and-cats --project pdk-dogs-and-cats"
     ],
-    "image": "vmtyler/pdk:train_0.1.1",
+    "image": "us-central1-docker.pkg.dev/dai-dev-554/pdk-registry/pdk_model_training:1.0",
     "secrets": [
       {
         "name": "pipeline-secret",
