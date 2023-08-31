@@ -57,7 +57,7 @@ This repository is divided in 4 parts:
 
 2 - [Prepare the environment](deploy/README.md#setup) for the PDK flow (and deploy a sample model)
 
-3 - [Access other examples](examples/readme.md) of PDK flows
+3 - [Access other examples](examples/) of PDK flows
 
 4 - [Bring your own model](bring-your-own-model/readme.md) to PDK
 

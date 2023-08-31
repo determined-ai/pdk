@@ -113,15 +113,17 @@ By default, we are using the same Workspace that was created in the deployment t
 
 
 &nbsp;
-## Step 2: Create the training pipeline
+## Step 3: Create the training pipeline
 
-### Step 2-1: Select or create an image to define the training pipeline
+As noted in the [deployment](../deploy/README.md) page, the pipeline configuration will be slightly different for environments that use shared folders, when compared to environments that use storage buckets. Read the instructions in the deployment page and inspect the `_on_prem_` version of the pipeline files to understand the differences.
+
+### Step 3-1: Select or create an image to define the training pipeline
 
 The process of automatically starting a MLDE experiment when new data is committed to the MLDM repository will unlikely change much. As such, the image currently in use in **training-pipeline.json** probably fits your needs.
 
 In case this is not the case or if you want to dig deeper into the details, all the files used to create this image are available in the **container/train** folder. These files can be edited and then used to build alternate images for a custom training pipeline.
 	
-### Step 2-2: Define training-pipeline.json
+### Step 3-2: Define training-pipeline.json
 
 * Name this MLDM pipeline by changing the _pipeline.name_.
 * Make sure the input repo matches the MLDM repository where data is expected to be committed.
@@ -136,9 +138,9 @@ In case this is not the case or if you want to dig deeper into the details, all 
   * Assuming the PDK environment has been properly set up, Kubernetes pipeline secrets have already been created and no change should be required under _secrets_.
   * The *pod_patch* entry is needed for environments that leverage shared folders (instead of storage buckets). In this case, use the *_on_prem_* version of the pipeline files and adjust the *pod_patch* entry according to your environment.
 
-## Step 3: Create the deployment pipeline
+## Step 4: Create the deployment pipeline
 
-### Step 3-1: Select or create an image to define the deployment pipeline
+### Step 4-1: Select or create an image to define the deployment pipeline
 
 The image used in the deployment pipeline is entirely defined by the files under **container/deploy**. To run this example as it is, no change is needed to this image, currently referred in **deployment-pipeline.json**.
 
@@ -156,7 +158,7 @@ However, several changes to this image are expected to deploy another model:
   * The name of the python file where the handler is defined has to be changed, as it currently points to **customer_churn_handler.py**
   * If the handler file relies on additional files, those should be listed as _--extra-files_.
 
-### Step 3-2: Define deployment-pipeline.json
+### Step 4-2: Define deployment-pipeline.json
 
 * Similarly to **training-pipeline.json**, name this Pachyderm pipeline by changing _pipeline.name_ and make sure the input repo matches the Pachyderm repo that corresponding to the training pipeline.
 * Under _transform_:
@@ -174,7 +176,7 @@ For a detailed walkthrough of the PDK deployment steps, please check the [deploy
 
 &nbsp;
 
-## Step 4: Test the Inference Service
+## Step 5: Test the Inference Service
 
 To generate a prediction with the `customer_churn_sample.json` file provided in the [sample-data](./sample-data/) folder, run the following code on a Jupyter Notebook:
 

@@ -46,7 +46,7 @@ To follow this documentation you will need:
   - det (the MLDE command line client)
 - Access to a working Kubernetes cluster 
 - GPU nodes configured in the cluster, with allocatable GPUs
-- A shared folder that can be accessed by all nodes in the cluster (this example will use `/mnt/efs/shared_folder`)
+- A shared folder that can be accessed by all nodes in the cluster (this example will use `/mnt/efs/shared_fs`)
 
 &nbsp;
 
