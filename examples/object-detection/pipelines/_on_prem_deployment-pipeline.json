@@ -48,5 +48,5 @@
       "number": 1
     }
   },
-  "pod_patch": "[{\"op\":\"add\",\"path\":\"/tolerations\",\"value\":[{\"key\":\"accelerator\",\"value\":\"Tesla-T4\",\"operator\":\"Equal\"}]},{\"op\":\"add\",\"path\":\"/volumes/-\",\"value\":{\"name\":\"det-checkpoints\",\"hostpath\":{\"path\":\"/mnt/efs/shared_fs/determined\",\"type\":\"Directory\"}}},{\"op\":\"add\",\"path\":\"/containers/0/volumeMounts/-\",\"value\":{\"mountPath\":\"/determined_shared_fs\",\"name\":\"det-checkpoints\"}},{\"op\":\"add\",\"path\":\"/volumes/-\",\"value\":{\"name\":\"andrew\",\"hostpath\":{\"path\":\"/lus/\",\"type\":\"Directory\"}}},{\"op\":\"add\",\"path\":\"/containers/0/volumeMounts/-\",\"value\":{\"mountPath\":\"/lus/\",\"name\":\"andrew\"}}]"
+  "pod_patch": "[{\"op\": \"add\",\"path\": \"/volumes/-\",\"value\": {\"name\": \"det-checkpoints\",\"hostpath\": {\"path\": \"/mnt/efs/shared_fs/determined\",\"type\": \"Directory\"}}}, {\"op\": \"add\",\"path\": \"/containers/0/volumeMounts/-\",\"value\": {\"mountPath\": \"/determined_shared_fs\",\"name\": \"det-checkpoints\"}}]"
 }
