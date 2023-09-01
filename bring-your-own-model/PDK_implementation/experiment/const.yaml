@@ -1,8 +1,7 @@
 name: Pipeline-Churn-Training
-workspace: Tanguy # to change depending on your Determined cluster
-project: "PDK Tests" # to change depending on your Determined cluster
+workspace: PDK Demos
+project: pdk-customer-churn
 data:
-  #data_file: "data/data_part1.csv"
   pachyderm:
     host:
     port:

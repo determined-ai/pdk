@@ -6,10 +6,10 @@
 ## Object Detection Example
 **Date/Revision:** August 30, 2023
 
-This example is based on the **Brain MRI Segmentation** Kaggle dataset, which can be found here:<br/>
-https://www.kaggle.com/datasets/mateuszbuda/lgg-mri-segmentation
+This example is based on the **xVIEW** dataset, which can be found here:<br/>
+http://xviewdataset.org/
 
-The original dataset contains images from 110 patients that can be used for model training. In the [sample-data](./sample-data/) folder, you will find a small subset of that ([dataset-brain.zip](./sample-data/dataset-brain.zip)), which will be used to train the model. Naturally, you can download the full dataset from Kaggle and use it instead.
+It is one of the largest publicly available datasets of overhead imagery, containing images from complex scenes around the world, annotated using bounding boxes. In the [sample-data](./sample-data/) folder, you will find a small subset of that ([dataset-object-detection.zip](./sample-data/dataset-object-detection.zip)), which will be used to train the model. Naturally, you can download the full dataset from the web site listed above and use it instead.
 
 To setup this PDK flow, please follow the instructions in the [Deployment](../../deploy/README.md#setup) page. Since that page is referring to the [Dogs vs Cats](../dog-cat/readme.md) example, you should make the following changes:
 

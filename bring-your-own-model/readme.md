@@ -4,7 +4,7 @@
 
 # PDK - Pachyderm | Determined | KServe
 ## Bringing Your Model to PDK
-**Date/Revision:** August 25, 2023
+**Date/Revision:** August 30, 2023
 
 In this section, we will train and deploy a simple customer churn model on PDK.
 
@@ -34,10 +34,17 @@ The dataset used for this example is an edited and simplified version of this [d
   * **experiment** contains files to run the experiment when the training pipeline is triggered. These are adapted from the files in the **base_experiment** folder.
   * **pipelines** contains the JSON files used to create both the training and the deployment pipelines on MLDM.
 
-**data.zip** contains three files:
+**sample-data** subfolder contains three files:
   * **data_part1.csv** containing 31009 samples, used in the base experiment. This is the first dataset you should commit to your MLDM repository.
   * **data_part2.csv** containing 31000 samples, used to to trigger the training pipeline a second time after commiting to the same MLDM repository. This allows to test model retraining.
   * **customer_churn_sample.csv** containing 10 samples, to test model inference.
+
+&nbsp;
+
+  Keep in mind that the syntax to upload a single file to MLDM is different than the one used in the deployment pages:
+  ```bash
+  pachctl put file customer-churn-data@master:data_part1.csv -f ./data/data_part1.csv
+  ```
 
 &nbsp;
 
@@ -53,7 +60,6 @@ For convenience, most additions to the base experiment files are preceded by "# 
 * Data used to train the model will come from a MLDM repository that may be regularly updated with new data. Therefore, data files or data paths hardcoded in the experiment config file should be removed. Instead, add all the MLDM keys with empty values to the config file, as shown in **const.yaml**:
 ```
 data:
-  #data_file: "data/data_part1.csv"  # Remove this
   pachyderm:
     host:
     port:
@@ -62,7 +68,9 @@ data:
     token:
     previous_commit:
 ```
-* Additionally, if the original experiment had a training length specified in number of epochs, it may be conveninent to **define training length in number of batches instead** (the same applies for **min_validation_period**).
+
+&nbsp;
+* Additionally, if the original experiment had a training length specified in number of epochs, it may be convenient to **define training length in number of batches instead** (the same applies for **min_validation_period**).
   * Indeed, the number of samples in the training set will now vary as new data gets committed to the MLDM repository, and knowing that number of samples is mandatory to define training length in number of epochs.
   * Note that the training pipeline image could be modified to deal with that issue, but specifying the training length in batches is a simple solution.
 * Depending on the organization of the MLDE cluster where these automatically triggered experiments are expected to run, it may also be a good idea to **edit the workspace and project fields accordingly**.
@@ -84,32 +92,55 @@ The original code may not handle a list of files, as output by the _download_dat
 
 In this example, the _get_train_and_validation_datasets_ function from **data.py** has been changed to concatenate a list of csv files into a single pandas DataFrame.
 
-## Step 2: Create the training pipeline
+## Step 2: Preparing MLDM and MLDE
 
-### Step 2-1: Select or create an image to define the training pipeline
+### Step 2-1: Create MLDM Project and Repository
 
-The process of automatically starting a Determined experiment when new data is committed to a Pachyderm repository is unlikely to change much. As such, the image currently in use in **training-pipeline.json** probably fits your needs.
+Run these commands to create the project and repository in your MLDM instance:
+```bash
+pachctl connect ${MLDM_URL}
 
-In case this is not the case or if you want to dig deeper in the details, all the files used to create this image are available in the **container/train** folder. These files can be edited and then used to build alternate images for a custom training pipeline.
+pachctl create project pdk-customer-churn
+
+pachctl config update context --project pdk-customer-churn
+
+pachctl create repo customer-churn-data
+```
+
+### Step 2-2: Create MLDE Project in the PDK Demos Workspace
+
+By default, we are using the same Workspace that was created in the deployment tutorial (PDK Demos) and a new project called `pdk-customer-churn`. Go to the MLDE UI and create this project in the `PDK Demos` workspace.
+
+
+&nbsp;
+## Step 3: Create the training pipeline
+
+As noted in the [deployment](../deploy/README.md) page, the pipeline configuration will be slightly different for environments that use shared folders, when compared to environments that use storage buckets. Read the instructions in the deployment page and inspect the `_on_prem_` version of the pipeline files to understand the differences.
+
+### Step 3-1: Select or create an image to define the training pipeline
+
+The process of automatically starting a MLDE experiment when new data is committed to the MLDM repository will unlikely change much. As such, the image currently in use in **training-pipeline.json** probably fits your needs.
+
+In case this is not the case or if you want to dig deeper into the details, all the files used to create this image are available in the **container/train** folder. These files can be edited and then used to build alternate images for a custom training pipeline.
 	
-### Step 2-2: Define training-pipeline.json
+### Step 3-2: Define training-pipeline.json
 
-* Name this Pachyderm pipeline by changing the _pipeline.name_.
-* Make sure the input repo matches the Pachyderm repository where data is expected to be committed.
+* Name this MLDM pipeline by changing the _pipeline.name_.
+* Make sure the input repo matches the MLDM repository where data is expected to be committed.
 * Under _transform_:
   * Define the image to be used. The current image corresponds to files in the **container/train** folder and should work well as it is.
   * _stdin_ command will be run when the pipeline is triggered. Make sure to change all the relevant options, in particular:
     * _--git-url_ to point to the Git URL containing the model code, since you probably want to change details in the experiment files.
     * _--sub-dir_ if the file structure of your git repository is different to this one.
-    * _--repo_ should match your initial Pachyderm repository.
-    * _--model_ will be the name of the model on the Determined cluster (in the model registry).
-    * _--project_ should match the Pachyderm project containing the repo you are working with.
-  * Assuming the Pachyderm/MLDM + Determined/MLDE + KServe environment has properly been set up, Kubernetes pipeline secrets have already been created and no change should be required under _secrets_.
-  * Under pod_patch? TO COMPLETE
+    * _--repo_ should match your initial MLDM repository.
+    * _--model_ will be the name of the model on the MLDE cluster (in the model registry).
+    * _--project_ should match the MLDM project containing the repo you are working with.
+  * Assuming the PDK environment has been properly set up, Kubernetes pipeline secrets have already been created and no change should be required under _secrets_.
+  * The *pod_patch* entry is needed for environments that leverage shared folders (instead of storage buckets). In this case, use the *_on_prem_* version of the pipeline files and adjust the *pod_patch* entry according to your environment.
 
-## Step 3: Create the deployment pipeline
+## Step 4: Create the deployment pipeline
 
-### Step 3-1: Select or create an image to define the deployment pipeline
+### Step 4-1: Select or create an image to define the deployment pipeline
 
 The image used in the deployment pipeline is entirely defined by the files under **container/deploy**. To run this example as it is, no change is needed to this image, currently referred in **deployment-pipeline.json**.
 
@@ -127,7 +158,7 @@ However, several changes to this image are expected to deploy another model:
   * The name of the python file where the handler is defined has to be changed, as it currently points to **customer_churn_handler.py**
   * If the handler file relies on additional files, those should be listed as _--extra-files_.
 
-### Step 3-2: Define deployment-pipeline.json
+### Step 4-2: Define deployment-pipeline.json
 
 * Similarly to **training-pipeline.json**, name this Pachyderm pipeline by changing _pipeline.name_ and make sure the input repo matches the Pachyderm repo that corresponding to the training pipeline.
 * Under _transform_:
@@ -138,4 +169,66 @@ However, several changes to this image are expected to deploy another model:
     * _--tolerations_, --resource-requests and --resource-limits, to specify resources to be used by the deployment
     * If deploying in the cloud, make sure to check the full list of arguments in **common.py**
   * Assuming the Pachyderm/MLDM + Determined/MLDE + KServe environment has properly been set up, Kubernetes pipeline secrets have already been created and no change should be required under _secrets_.
-* Under pod_patch? TO COMPLETE
+  * As mentioned before, the *pod_patch* entry is needed for environments that leverage shared folders. In this case, use the *_on_prem_* version of the pipeline files and adjust the *pod_patch* entry according to your environment.
+
+For a detailed walkthrough of the PDK deployment steps, please check the [deployment](../deploy/README.md) page.
+
+
+&nbsp;
+
+## Step 5: Test the Inference Service
+
+To generate a prediction with the `customer_churn_sample.json` file provided in the [sample-data](./sample-data/) folder, run the following code on a Jupyter Notebook:
+
+```python
+import glob
+import json
+import requests
+
+ingress_host="198.162.1.2"
+ingress_port=80
+model_name="customer-churn"
+service_hostname="customer-churn.models.example.com"
+
+sample_file = "./customer_churn_sample.json"
+f = open(sample_file)
+sample_data = json.load(f)
+f.close()
+
+request = {
+  "instances":[
+    {
+      "data": sample_data
+    }
+  ]
+}
+
+url = str("http://") + str(ingress_host) + ":" + str(ingress_port) + "/v1/models/" + str(model_name) + ":predict"
+headers = {'Host': service_hostname}
+payload = json.dumps(request)
+
+response = requests.post(url, data=payload, headers=headers)
+output = response.json()
+print(output)
+
+for i in range(len(output['predictions'])):
+    sample_result = int(output['predictions'][i][0])
+    ground_truth = sample_data['churn'][str(i)]
+    print("Ground truth/Predicted: " + str(ground_truth) + "/" + str(sample_result))
+```
+
+PS: Make sure the value of `ingress_host` matches your environment.
+
+The output should be similar to this:
+```
+Ground truth/Predicted: 1/0
+Ground truth/Predicted: 0/0
+Ground truth/Predicted: 1/0
+Ground truth/Predicted: 0/0
+Ground truth/Predicted: 0/0
+Ground truth/Predicted: 1/0
+Ground truth/Predicted: 1/1
+Ground truth/Predicted: 1/1
+Ground truth/Predicted: 0/0
+Ground truth/Predicted: 1/1
+```

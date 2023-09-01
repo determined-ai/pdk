@@ -1,0 +1,47 @@
+{
+  "pipeline": {
+    "name": "customer-churn-train"
+  },
+  "description": "Detects changed files into a repository and triggers a retraining on that dataset",
+  "input": {
+    "pfs": {
+      "name": "data",
+      "repo": "customer-churn-data",
+      "branch": "master",
+      "glob": "/",
+      "empty_files": true
+    }
+  },
+  "transform": {
+    "cmd": [
+      "/bin/sh"
+    ],
+    "stdin": [
+      "python train.py --git-url https://git@github.com:/determined-ai/pdk.git --git-ref main --sub-dir bring-your-own-model/PDK_implementation/experiment --config const.yaml --repo customer-churn-data --model customer-churn --project pdk-customer-churn"
+    ],
+    "image": "us-central1-docker.pkg.dev/dai-dev-554/pdk-registry/pdk_model_training:1.0",
+    "secrets": [
+      {
+        "name": "pipeline-secret",
+        "key": "det_master",
+        "env_var": "DET_MASTER"
+      },
+      {
+        "name": "pipeline-secret",
+        "key": "det_user",
+        "env_var": "DET_USER"
+      },
+      {
+        "name": "pipeline-secret",
+        "key": "det_password",
+        "env_var": "DET_PASSWORD"
+      },
+      {
+        "name": "pipeline-secret",
+        "key": "pac_token",
+        "env_var": "PAC_TOKEN"
+      }
+    ]
+  },
+  "pod_patch": "[{\"op\": \"add\",\"path\": \"/volumes/-\",\"value\": {\"name\": \"det-checkpoints\",\"hostpath\": {\"path\": \"/mnt/efs/shared_fs/determined\",\"type\": \"Directory\"}}}, {\"op\": \"add\",\"path\": \"/containers/0/volumeMounts/-\",\"value\": {\"mountPath\": \"/determined_shared_fs\",\"name\": \"det-checkpoints\"}}]"
+}

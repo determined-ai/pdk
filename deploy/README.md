@@ -4,7 +4,7 @@
 
 # PDK - Pachyderm | Determined | KServe
 ## Deployment and Setup Guide
-**Date/Revision:** August 15, 2023
+**Date/Revision:** August 30, 2023
 
 This page contains step-by-step guides for installing the infrastructure and all necessary components for the PDK environment, covering different Kubernetes plaforms.
 
@@ -58,7 +58,7 @@ The diagram below illustrates how the PDK flow will work:
 
 &nbsp;
 
-This repository includes an [Examples](../examples/readme.md) folder with a number of sample PDK projects. Each PDK example will have 3 main components:
+This repository includes an [Examples](../examples/) folder with a number of sample PDK projects. Each PDK example will have 3 main components:
 - MLDE Experiment: this is the code and other assets that will be needed to train the model inside MLDE. This code will be pushed to Github, where it will be downloaded by the MLDM pipeline.
 
 - Docker Images: the `'Train'` and `'Deploy'` images described above. As part of this document, we will walk through the steps of building and pushing the images to the registry. Optionally, you can use the hosted images from the provided example (if you don't want to build and push your own container images).
@@ -348,7 +348,7 @@ pachctl list repo
 Next, go to the `pipelines` folder.
 
 In this folder, there are 2 sets of pipeline definition files, one for on-prem (shared folders) and another for environments that use cloud buckets. There differences between them are:
-- On-prem environments must mount the shared folder into the containers where the pipelines will run, so the code has access to the files there.
+- On-prem environments must mount the shared folder into the containers where the pipelines will run, so the code has access to the files there. This can be configured through the `pod_patch` parameter, which is applied as a JSON Patch. Within this parameter, set the path to your shared folders (in our deployment example, we use the `/mnt/efs/shared_fs` path). More information about the `pod_patch` configuration can be found in the [Documentation page](https://mldm.pachyderm.com/latest/prepare-data/mount-volume/).
 - In on-prem environments, the pipeline containers must run as root to avoid permission errors in the shared folder.
 - In on-prem environments, a service account parameter must be set, to allow the deployment code to access the MLDM repository through the S3 interface. For environments that use cloud storage, these permissions are granted through service account permission mapping.
 
