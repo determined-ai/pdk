@@ -1,4 +1,4 @@
-name: Train Test
+name: Object Detection FasterCNN Resnet50
 workspace: PDK Demos
 project: pdk-object-detection
 data:

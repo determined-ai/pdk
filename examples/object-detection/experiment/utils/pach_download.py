@@ -2,10 +2,8 @@
 import os
 import shutil
 
-import python_pachyderm
-
-from python_pachyderm.pfs import Commit
-from python_pachyderm.proto.v2.pfs.pfs_pb2 import FileType
+import pachyderm_sdk
+from pachyderm_sdk.api.pfs import File, FileType
 
 
 def safe_open_wb(path):
@@ -26,12 +24,11 @@ def get_pach_repo_folder(
 
     print(f"Starting to download dataset: {repo}@{branch}")
 
-    client = python_pachyderm.Client(
+    client = pachyderm_sdk.Client(
         host=pachyderm_host, port=pachyderm_port, auth_token=token
     )
 
-    for file_info in client.walk_file(
-            Commit(repo=repo, id=branch, project=project), "/"):
+    for file_info in client.pfs.walk_file(file=File.from_uri(f"{project}/{repo}@{branch}")):
             src_path = file_info.file.path
 
             if file_info.file_type != FileType.FILE:
@@ -57,25 +54,19 @@ def download_full_pach_repo(
     if not os.path.exists(root):
         os.makedirs(root)
 
-    client = python_pachyderm.Client(
+    client = pachyderm_sdk.Client(
         host=pachyderm_host, port=pachyderm_port, auth_token=token
     )
 
-    for file_info in client.walk_file(
-            Commit(repo=repo, id=branch, project=project), "/"):
+    for file_info in client.pfs.walk_file(file=File.from_uri(f"{project}/{repo}@{branch}")):
             src_path = file_info.file.path
             des_path = os.path.join(root, src_path[1:])
             print(f"Saving File: '{des_path}'")
 
             if file_info.file_type == FileType.FILE:
                 if src_path != "":
-                    # get file
-                    src_file = client.get_file(
-                        Commit(repo=repo, id=branch, project=project), src_path
-                    )
-                    # copy file to folder
+                    src_file = client.pfs.pfs_file(file=File.from_uri(f"{project}/{repo}@{branch}:{src_path}"))
                     with safe_open_wb(des_path) as dest_file:
                         shutil.copyfileobj(src_file, dest_file)
-                    # files.append((src_path, des_path))
     print("Download operation ended")
     return root

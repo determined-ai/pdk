@@ -1,28 +1,17 @@
 import os
-
-import numpy as np
-import pandas as pd
-
-from PIL import Image
-import cv2
-
-import torch
-from torch.utils.data import Dataset, DataLoader
-from torchvision import transforms
-
-from sklearn.model_selection import train_test_split
-
 import shutil
 
-import python_pachyderm
-from python_pachyderm.proto.v2.pfs.pfs_pb2 import FileType
-from python_pachyderm.pfs import Commit
+import cv2
+import numpy as np
+import pachyderm_sdk
+import pandas as pd
 import torch
+from pachyderm_sdk.api.pfs import File, FileType
 from PIL import Image
-
 from skimage import io
-from torch.utils.data import Dataset
-
+from sklearn.model_selection import train_test_split
+from torch.utils.data import DataLoader, Dataset
+from torchvision import transforms
 
 
 class MRI_Dataset(Dataset):
@@ -123,14 +112,13 @@ def download_pach_repo(
     if not os.path.exists(root):
         os.makedirs(root)
 
-    client = python_pachyderm.Client(
+    client = pachyderm_sdk.Client(
         host=pachyderm_host, port=pachyderm_port, auth_token=token
     )
     files = []
     if previous_commit is not None:
-        for diff in client.diff_file(
-            Commit(repo=repo, id=branch, project=project), "/",
-            Commit(repo=repo, id=previous_commit, project=project),
+        for diff in client.pfs.diff_file(new_file=File.from_uri(f"{project}/{repo}@{branch}"),
+            old_file=File.from_uri(f"{project}/{repo}@{previous_commit}")
         ):
             src_path = diff.new_file.file.path
             des_path = os.path.join(root, src_path[1:])
@@ -140,8 +128,7 @@ def download_pach_repo(
                 if src_path != "":
                     files.append((src_path, des_path))
     else:
-        for file_info in client.walk_file(
-            Commit(repo=repo, id=branch, project=project), "/"):
+        for file_info in client.pfs.walk_file(file=File.from_uri(f"{project}/{repo}@{branch}")):
             src_path = file_info.file.path
             des_path = os.path.join(root, src_path[1:])
             print(f"Got src='{src_path}', des='{des_path}'")
@@ -149,11 +136,9 @@ def download_pach_repo(
             if file_info.file_type == FileType.FILE:
                 if src_path != "":
                     files.append((src_path, des_path))
-    
+
     for src_path, des_path in files:
-        src_file = client.get_file(
-            Commit(repo=repo, id=branch, project=project), src_path
-        )
+        src_file = client.pfs.pfs_file(file=File.from_uri(f"{project}/{repo}@{branch}:{src_path}"))
         print(f"Downloading {src_path} to {des_path}")
 
         with safe_open_wb(des_path) as dest_file:

@@ -183,6 +183,7 @@ export PACH_WI="serviceAccount:${PROJECT_ID}.svc.id.goog[${MLDM_NAMESPACE}/pachy
 export SIDECAR_WI="serviceAccount:${PROJECT_ID}.svc.id.goog[${MLDM_NAMESPACE}/pachyderm-worker]"
 export CLOUDSQLAUTHPROXY_WI="serviceAccount:${PROJECT_ID}.svc.id.goog[${MLDM_NAMESPACE}/k8s-cloudsql-auth-proxy]"
 export MLDE_WI="serviceAccount:${PROJECT_ID}.svc.id.goog[default/determined-master-determinedai]"
+export MLDE_DF_WI="serviceAccount:${PROJECT_ID}.svc.id.goog[default/default]"
 export MLDE_GPU_WI="serviceAccount:${PROJECT_ID}.svc.id.goog[gpu-pool/default]"
 export MLDE_KS_WI="serviceAccount:${PROJECT_ID}.svc.id.goog[${KSERVE_MODELS_NAMESPACE}/default]"
 ```
@@ -493,6 +494,10 @@ gcloud iam service-accounts add-iam-policy-binding ${SERVICE_ACCOUNT} \
 gcloud iam service-accounts add-iam-policy-binding ${SERVICE_ACCOUNT} \
     --role roles/iam.workloadIdentityUser \
     --member "${MLDE_WI}"
+
+gcloud iam service-accounts add-iam-policy-binding ${SERVICE_ACCOUNT} \
+    --role roles/iam.workloadIdentityUser \
+    --member "${MLDE_DF_WI}"
 ```
 
 
@@ -1007,12 +1012,16 @@ helm install determinedai ./determined
 Because MLDE will be deployed to the default namespace, you can check the status of the deployment with `kubectl get pods` and `kubectl get svc`.<br/> 
 Make sure the pod is running before continuing.
 
-Once the installation is complete, annotate the MLDE service account so it has access to the storage bucket:
+Once the installation is complete, annotate the MLDE service accounts so they have access to the storage bucket:
 
 ```bash
-  kubectl annotate serviceaccount determined-master-determinedai \
-    -n default \
-    iam.gke.io/gcp-service-account=${SERVICE_ACCOUNT}
+kubectl annotate serviceaccount default \
+  -n default \
+  iam.gke.io/gcp-service-account=${SERVICE_ACCOUNT}
+
+kubectl annotate serviceaccount determined-master-determinedai \
+  -n default \
+  iam.gke.io/gcp-service-account=${SERVICE_ACCOUNT}
 ```
 
 
