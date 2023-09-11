@@ -3,8 +3,10 @@ import os
 from typing import Any, Dict, List, Sequence, Tuple, Union, cast
 
 import numpy as np
+import pachyderm_sdk
+from pachyderm_sdk.api import pfs
 import torch
-from data import CatDogDataset, download_pach_repo
+from data import CatDogDataset, CatDogDatasetCommitDiff
 from determined import InvalidHP
 from determined.pytorch import DataLoader, PyTorchTrial
 from PIL import Image
@@ -32,11 +34,10 @@ class DogCatModel(PyTorchTrial):
         logging.info(f"Loading weights : {load_weights}")
 
         if load_weights:
-            files = self.download_data()
-            if len(files) == 0:
+            self.train_ds, self.val_ds = self.create_datasets()
+            if len(self.train_ds) == 0:
                 print("No data. Aborting training.")
                 raise InvalidHP("No data")
-            self.create_datasets(files)
 
         model = models.resnet50(pretrained=load_weights)
         model.fc = nn.Linear(2048, 2)
@@ -101,43 +102,56 @@ class DogCatModel(PyTorchTrial):
 
     # -------------------------------------------------------------------------
 
-    def download_data(self):
-        data_config = self.context.get_data_config()
-        data_dir = os.path.join(self.download_directory, "data")
-
-        files = download_pach_repo(
-            data_config["pachyderm"]["host"],
-            data_config["pachyderm"]["port"],
-            data_config["pachyderm"]["repo"],
-            data_config["pachyderm"]["branch"],
-            data_dir,
-            data_config["pachyderm"]["token"],
-            data_config["pachyderm"]["project"],
-            data_config["pachyderm"]["previous_commit"],
-        )
-        print(f"Data dir set to : {data_dir}")
-
-        return [des for src, des in files]
+    # def download_data(self):
+    #     data_config = self.context.get_data_config()
+    #     data_dir = os.path.join(self.download_directory, "data")
+    #
+    #     files = download_pach_repo(
+    #         data_config["pachyderm"]["host"],
+    #         data_config["pachyderm"]["port"],
+    #         data_config["pachyderm"]["repo"],
+    #         data_config["pachyderm"]["branch"],
+    #         data_dir,
+    #         data_config["pachyderm"]["token"],
+    #         data_config["pachyderm"]["project"],
+    #         data_config["pachyderm"]["previous_commit"],
+    #     )
+    #     print(f"Data dir set to : {data_dir}")
+    #
+    #     return [des for src, des in files]
 
     # -------------------------------------------------------------------------
 
-    def create_datasets(self, files):
-        print(f"Creating datasets from {len(files)} input files")
-        train_size = round(0.81 * len(files))
-        val_size = len(files) - train_size
-        train_ds, val_ds = torch.utils.data.random_split(
-            files, [train_size, val_size]
+    def create_datasets(self):
+        data_config = self.context.get_data_config()
+        pach_config = data_config["pachyderm"]
+        client = pachyderm_sdk.Client(
+            host=pach_config["host"],
+            port=pach_config["port"],
+            auth_token=pach_config["token"],
         )
+        project = pach_config['project'] or 'default'
+        repo, branch = pach_config['repo'], pach_config['branch']
+        commit = pfs.Commit.from_uri(f"{project}/{repo}@{branch}")
 
-        self.train_ds = CatDogDataset(
-            train_ds, transform=self.get_train_transforms()
+        if pach_config['previous_commit']:
+            previous_commit = pfs.Commit.from_uri(f"{project}/{repo}@{pach_config['previous_commit']}")
+            dataset = CatDogDatasetCommitDiff(client, commit, previous_commit)
+        else:
+            dataset = CatDogDataset(client, commit)
+
+        print(f"Creating datasets from {len(dataset)} input files")
+        train_size = round(0.81 * len(dataset))
+        val_size = len(dataset) - train_size
+        train_ds, val_ds = torch.utils.data.random_split(
+            dataset, [train_size, val_size]
         )
-        self.val_ds = CatDogDataset(
-            val_ds, transform=self.get_test_transforms()
-        )
+        train_ds.transform = self.get_train_transforms()
+        val_ds.transform = self.get_test_transforms()
         print(
             f"Datasets created: train_size={train_size}, val_size={val_size}"
         )
+        return train_ds, val_ds
 
     # -------------------------------------------------------------------------
 

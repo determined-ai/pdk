@@ -282,7 +282,7 @@ EOF
 
 Finally, create the Service:
 ```bash
-k apply -f  - <<EOF
+kubectl apply -f  - <<EOF
 apiVersion: v1
 kind: Service
 metadata:
