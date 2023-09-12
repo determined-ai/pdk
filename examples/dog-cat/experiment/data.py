@@ -74,7 +74,10 @@ class CatDogDataset(Dataset):
             raise IndexError(f"index {idx} not found.")
 
         with self.client.pfs.pfs_file(info.file) as image_file:
-            image = Image.open(image_file)
+            from tempfile import NamedTemporaryFile
+            with NamedTemporaryFile("wb") as local_file:
+                local_file.write(image_file.readall())
+                image = Image.fromarray(io.imread(local_file.name))
 
         if self.transform:
             image = self.transform(image)
@@ -149,7 +152,10 @@ class CatDogDatasetCommitDiff(Dataset):
             raise IndexError(f"index {idx} not found.")
 
         with self.client.pfs.pfs_file(info.file) as image_file:
-            image = Image.open(image_file)
+            from tempfile import NamedTemporaryFile
+            with NamedTemporaryFile("wb") as local_file:
+                local_file.write(image_file.readall())
+                image = Image.fromarray(io.imread(local_file.name))
 
         if self.transform:
             image = self.transform(image)
