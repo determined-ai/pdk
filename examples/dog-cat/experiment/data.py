@@ -1,6 +1,7 @@
 import os
 import shutil
 from bisect import bisect
+from itertools import chain
 from typing import Dict, List, Tuple
 
 import pachyderm_sdk
@@ -43,12 +44,12 @@ class CatDogDataset(Dataset):
         # in memory, but that solution would not scale well. Instead, we opt to create
         # a mapping of pagination markers to (theoretically) restrain lookup times.
         self.page_size = page_size
-        self.pagination_markers: Dict[int, Tuple[int, pfs.File]] = dict()
+        self.pagination_markers: Dict[int, pfs.FileInfo] = dict()
         count = 0
         for info in self.client.pfs.walk_file(file=self.root_file):
             if info.file_type == pfs.FileType.FILE:
                 if count % self.page_size == 0:
-                    self.pagination_markers[count] = info.file
+                    self.pagination_markers[count] = info
                 count += 1
         self.len = count
 
@@ -64,7 +65,11 @@ class CatDogDataset(Dataset):
 
         file_index = idx - (idx % self.page_size)
         marker = self.pagination_markers[file_index]
-        for info in self.client.pfs.walk_file(file=self.root_file, pagination_marker=marker):
+        file_iterator = chain(
+            iter([marker]),
+            self.client.pfs.walk_file(file=self.root_file, pagination_marker=marker.file)
+        )
+        for info in file_iterator:
             if info.file_type == pfs.FileType.FILE:
                 if file_index == idx:
                     break
