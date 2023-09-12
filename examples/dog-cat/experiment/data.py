@@ -57,8 +57,8 @@ class CatDogDataset(Dataset):
 
     def __getitem__(self, idx) -> Tuple["Image.Image", int]:
         # The pytorch documentation indicates to me that the below code isn't needed.
-        if torch.is_tensor(idx):
-            idx = idx.tolist()
+        # if torch.is_tensor(idx):
+        #     idx = idx.tolist()
         if idx >= self.len:
             raise IndexError(f"{idx} > {self.len - 1}")
 
@@ -129,8 +129,8 @@ class CatDogDatasetCommitDiff(Dataset):
 
     def __getitem__(self, idx) -> Tuple["Image.Image", int]:
         # The pytorch documentation indicates to me that the below code isn't needed.
-        if torch.is_tensor(idx):
-            idx = idx.tolist()
+        # if torch.is_tensor(idx):
+        #     idx = idx.tolist()
         if idx >= self.len:
             raise IndexError(f"{idx} > {self.len - 1}")
 
