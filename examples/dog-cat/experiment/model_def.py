@@ -146,8 +146,9 @@ class DogCatModel(PyTorchTrial):
         train_ds, val_ds = torch.utils.data.random_split(
             dataset, [train_size, val_size]
         )
-        train_ds.transform = self.get_train_transforms()
-        val_ds.transform = self.get_test_transforms()
+        # train_ds and val_ds share the same dataset object.
+        train_ds.dataset.transform = self.get_train_transforms()
+        # val_ds.transform = self.get_test_transforms()
         print(
             f"Datasets created: train_size={train_size}, val_size={val_size}"
         )
