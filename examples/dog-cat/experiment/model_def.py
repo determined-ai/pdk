@@ -147,6 +147,7 @@ class DogCatModel(PyTorchTrial):
             dataset, [train_size, val_size]
         )
         # train_ds and val_ds share the same dataset object.
+        print("setting transform for training dataset")
         train_ds.dataset.transform = self.get_train_transforms()
         # val_ds.transform = self.get_test_transforms()
         print(
