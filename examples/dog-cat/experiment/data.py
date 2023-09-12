@@ -74,6 +74,7 @@ class CatDogDataset(Dataset):
             raise IndexError(f"index {idx} not found.")
 
         with self.client.pfs.pfs_file(info.file) as image_file:
+            print("reading file using sklearn")
             from tempfile import NamedTemporaryFile
             with NamedTemporaryFile("wb") as local_file:
                 local_file.write(image_file.readall())
@@ -152,6 +153,7 @@ class CatDogDatasetCommitDiff(Dataset):
             raise IndexError(f"index {idx} not found.")
 
         with self.client.pfs.pfs_file(info.file) as image_file:
+            print("reading file using sklearn")
             from tempfile import NamedTemporaryFile
             with NamedTemporaryFile("wb") as local_file:
                 local_file.write(image_file.readall())
