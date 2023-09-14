@@ -28,6 +28,7 @@ jobs:
               images: pachyderm/pdk
               flavor: |
                 prefix=${{ matrix.prefix }}-
+              tags: |
                 type=sha
         -
           name: Login to Docker Hub
