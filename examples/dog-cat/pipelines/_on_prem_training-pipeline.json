@@ -12,6 +12,7 @@
       "empty_files": true
     }
   },
+  "autoscaling": "true",
   "transform": {
     "user" : "0",
     "cmd": [
@@ -44,5 +45,5 @@
       }
     ]
   },
-  "pod_patch": "[{\"op\": \"add\",\"path\": \"/volumes/-\",\"value\": {\"name\": \"det-checkpoints\",\"hostpath\": {\"path\": \"/mnt/efs/shared_fs/determined\",\"type\": \"Directory\"}}}, {\"op\": \"add\",\"path\": \"/containers/0/volumeMounts/-\",\"value\": {\"mountPath\": \"/determined_shared_fs\",\"name\": \"det-checkpoints\"}}]"
+  "pod_patch": "[{\"op\": \"add\",\"path\": \"/volumes/-\",\"value\": {\"name\": \"det-checkpoints\",\"hostpath\": {\"path\": \"/lus/aiholus1/disk/determined/checkpoints\",\"type\": \"Directory\"}}}, {\"op\": \"add\",\"path\": \"/containers/0/volumeMounts/-\",\"value\": {\"mountPath\": \"/determined_shared_fs\",\"name\": \"det-checkpoints\"}}]"
 }

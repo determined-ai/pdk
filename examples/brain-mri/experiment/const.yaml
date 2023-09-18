@@ -33,7 +33,7 @@ searcher:
 min_validation_period:
   epochs: 1
 resources:
-  resource_pool: gpu-pool
+  resource_pool: T4
   slots_per_trial: 1
 max_restarts: 0
 entrypoint: model_def:MRIUnetTrial
