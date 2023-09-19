@@ -18,9 +18,9 @@
       "/bin/sh"
     ],
     "stdin": [
-      "python train.py --git-url https://git@github.com:/determined-ai/pdk.git --git-ref main --sub-dir examples/brain-mri/experiment --config const.yaml --repo brain-mri-data --model brain-mri  --project pdk-brain-mri"
+      "python train.py --git-url https://git@github.com:/determined-ai/pdk.git --git-ref houston-branch --sub-dir examples/brain-mri/experiment --config const.yaml --repo brain-mri-data --model pdk-brain-mri  --project pdk-brain-mri"
     ],
-    "image": "us-central1-docker.pkg.dev/dai-dev-554/pdk-registry/pdk_model_training:1.0",
+    "image": "pachyderm/pdk:brain-train-tyler-update-to-pach-sdk",
     "secrets": [
       {
         "name": "pipeline-secret",
@@ -44,5 +44,5 @@
       }
     ]
   },
-  "pod_patch": "[{\"op\": \"add\",\"path\": \"/volumes/-\",\"value\": {\"name\": \"det-checkpoints\",\"hostpath\": {\"path\": \"/mnt/efs/shared_fs/determined\",\"type\": \"Directory\"}}}, {\"op\": \"add\",\"path\": \"/containers/0/volumeMounts/-\",\"value\": {\"mountPath\": \"/determined_shared_fs\",\"name\": \"det-checkpoints\"}}]"
+  "pod_patch": "[{\"op\": \"add\",\"path\": \"/volumes/-\",\"value\": {\"name\": \"det-checkpoints\",\"hostpath\": {\"path\": \"/lus/aiholus1/disk/determined/checkpoints\",\"type\": \"Directory\"}}}, {\"op\": \"add\",\"path\": \"/containers/0/volumeMounts/-\",\"value\": {\"mountPath\": \"/determined_shared_fs\",\"name\": \"det-checkpoints\"}}]"
 }

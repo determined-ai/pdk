@@ -11,16 +11,16 @@
       "glob": "/"
     }
   },
-  "autoscaling": "true",
+  "autoscaling": true,
   "transform": {
     "user" : "0",
     "cmd": [
       "/bin/sh"
     ],
     "stdin": [
-      "python deploy.py --deployment-name dogcat-deploy --service-account-name pach-deploy --resource-requests cpu=2,memory=4Gi --resource-limits cpu=4,memory=4Gi"
+      "python deploy.py --deployment-name dogcat-deploy --service-account-name pach-deploy  --tolerations accelerator=Tesla-T4 --resource-requests cpu=10,memory=8Gi --resource-limits cpu=10,memory=8Gi"
     ],
-    "image": "vmtyler/pdk:deploy_0.0.10",
+    "image": "pachyderm/pdk@sha256:844542ad93ec231407e76bad4d22f332c6dc18829c56247c0e3a25be3071271e",
     "secrets": [
       {
         "name": "pipeline-secret",

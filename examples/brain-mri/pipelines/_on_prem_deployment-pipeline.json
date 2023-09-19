@@ -17,9 +17,9 @@
       "/bin/sh"
     ],
     "stdin": [
-      "python deploy.py --deployment-name brain-mri-deploy --service-account-name pach-deploy --resource-requests cpu=2,memory=4Gi --resource-limits cpu=4,memory=4Gi"
+      "python deploy.py --deployment-name brain-mri-deploy --service-account-name pach-deploy  --tolerations accelerator=Tesla-T4 --resource-requests cpu=10,memory=8Gi --resource-limits cpu=10,memory=8Gi"
     ],
-    "image": "vmtyler/pdk:brain_deploy_0.0.16",
+    "image": "pachyderm/pdk:brain-deploy-tyler-update-to-pach-sdk",
     "secrets": [
       {
         "name": "pipeline-secret",
@@ -43,5 +43,5 @@
       }
     ]
   },
-  "pod_patch": "[{\"op\": \"add\",\"path\": \"/volumes/-\",\"value\": {\"name\": \"det-checkpoints\",\"hostpath\": {\"path\": \"/mnt/efs/shared_fs/determined\",\"type\": \"Directory\"}}}, {\"op\": \"add\",\"path\": \"/containers/0/volumeMounts/-\",\"value\": {\"mountPath\": \"/determined_shared_fs\",\"name\": \"det-checkpoints\"}}]"
+  "pod_patch": "[{\"op\": \"add\",\"path\": \"/volumes/-\",\"value\": {\"name\": \"det-checkpoints\",\"hostpath\": {\"path\": \"/lus/aiholus1/disk/determined/checkpoints\",\"type\": \"Directory\"}}}, {\"op\": \"add\",\"path\": \"/containers/0/volumeMounts/-\",\"value\": {\"mountPath\": \"/determined_shared_fs\",\"name\": \"det-checkpoints\"}}]"
 }
