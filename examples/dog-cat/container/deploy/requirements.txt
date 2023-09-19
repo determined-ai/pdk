@@ -7,3 +7,4 @@ kserve==0.9.0
 determined==0.22.0
 torch==1.13.1
 torchvision==0.14.1
+pachyderm-sdk==2.7.2
