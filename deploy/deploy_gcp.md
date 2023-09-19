@@ -40,7 +40,7 @@ To follow this documentation you will need:
   - jq
   - patchctl (the MLDM command line client)
   - det (the MLDE command line client)
-- Access to a Google Cloud account 
+- Access to a Google Cloud account
 - A Project in Google Cloud, where your user has the following roles:
   - Cloud SQL Admin
   - Compute Network Admin
@@ -280,7 +280,7 @@ gcloud container clusters create ${CLUSTER_NAME} \
  	--machine-type ${CLUSTER_MACHINE_TYPE} \
  	--image-type "COS_CONTAINERD" \
  	--disk-type="pd-ssd" \
-  --disk-size "100" \
+  --disk-size "1000" \
  	--metadata disable-legacy-endpoints=true \
  	--service-account ${SERVICE_ACCOUNT} \
  	--num-nodes "3" \
@@ -331,7 +331,7 @@ gcloud container node-pools create "gpu-pool" \
 	--accelerator type=nvidia-tesla-t4,count=4 \
 	--image-type "COS_CONTAINERD" \
 	--disk-type="pd-ssd" \
-  --disk-size "100" \
+  --disk-size "1000" \
 	--node-labels nodegroup-role=gpu-worker \
 	--metadata disable-legacy-endpoints=true \
   --node-taints nvidia.com/gpu=present:NoSchedule \
@@ -952,6 +952,9 @@ taskContainerDefaults:
         nodegroup-role: gpu-worker
 telemetry:
   enabled: true
+resource_manager:
+  default_aux_resource_pool: default
+  default_compute_resource_pool: gpu-pool
 resourcePools:
   - pool_name: default
     task_container_defaults:
@@ -1009,7 +1012,7 @@ helm install determinedai ./determined
 
 ```
 
-Because MLDE will be deployed to the default namespace, you can check the status of the deployment with `kubectl get pods` and `kubectl get svc`.<br/> 
+Because MLDE will be deployed to the default namespace, you can check the status of the deployment with `kubectl get pods` and `kubectl get svc`.<br/>
 Make sure the pod is running before continuing.
 
 Once the installation is complete, annotate the MLDE service accounts so they have access to the storage bucket:
@@ -1370,7 +1373,7 @@ Make sure you get a valid response before continuing, as the deployment will fai
 
 The last part of this step is basically some housekeeping tasks to set the stage for the PDK flow.
 
-First, we create a secret that will store variables that will be used by both MLDM pipelines and MLDE experiments. 
+First, we create a secret that will store variables that will be used by both MLDM pipelines and MLDE experiments.
 
 ```bash
 cat <<EOF > "./pipeline-secret.yaml"
@@ -1474,11 +1477,11 @@ metadata:
   namespace: ${KSERVE_MODELS_NAMESPACE}
   annotations:
     serving.kserve.io/s3-endpoint: pachd.${MLDM_NAMESPACE}:30600
-    serving.kserve.io/s3-usehttps: "0" 
+    serving.kserve.io/s3-usehttps: "0"
 type: Opaque
-stringData: 
+stringData:
   AWS_ACCESS_KEY_ID: "blahblahblah"
-  AWS_SECRET_ACCESS_KEY: "blahblahblah" 
+  AWS_SECRET_ACCESS_KEY: "blahblahblah"
 ---
 apiVersion: v1
 kind: ServiceAccount
@@ -1487,7 +1490,7 @@ metadata:
   namespace: ${KSERVE_MODELS_NAMESPACE}
   annotations:
     serving.kserve.io/s3-endpoint: pachd.${MLDM_NAMESPACE}:30600
-    serving.kserve.io/s3-usehttps: "0" 
+    serving.kserve.io/s3-usehttps: "0"
 secrets:
 - name: pach-kserve-creds
 EOF
@@ -1539,7 +1542,7 @@ export REGISTRY_URL=${GCP_REGION}-docker.pkg.dev/${PROJECT_ID}/pdk-registry
 
 docker pull busybox:latest
 
-docker tag busybox:latest ${REGISTRY_URL}/busybox 
+docker tag busybox:latest ${REGISTRY_URL}/busybox
 
 docker push ${REGISTRY_URL}/busybox
 ```
@@ -1637,7 +1640,7 @@ gsutil cp helloworld.txt gs://${MODEL_ASSETS_BUCKET_NAME}/dogs-and-cats/model-st
 
 &nbsp;
 
-The installation steps are now completed. At this time, you have a working cluster, with MLDM, MLDE and KServe deployed. 
+The installation steps are now completed. At this time, you have a working cluster, with MLDM, MLDE and KServe deployed.
 
 Next, return to [the main page](README.md) to go through the steps to prepare and deploy the PDK flow for the dogs-and-cats demo.
 

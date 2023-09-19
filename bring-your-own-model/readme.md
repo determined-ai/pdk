@@ -111,6 +111,10 @@ pachctl create repo customer-churn-data
 
 By default, we are using the same Workspace that was created in the deployment tutorial (PDK Demos) and a new project called `pdk-customer-churn`. Go to the MLDE UI and create this project in the `PDK Demos` workspace.
 
+```bash
+det p create "PDK Demos" pdk-customer-churn
+```
+
 
 &nbsp;
 ## Step 3: Create the training pipeline

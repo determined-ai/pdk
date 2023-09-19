@@ -160,6 +160,16 @@ Also, don't forget to create a Workspace and a Project in MLDE with the same nam
 
 &nbsp;
 
+The workspace and project can also be created through the command line:
+
+```bash
+det w create "PDK Demos"
+
+det p create "PDK Demos" pdk-dogs-and-cats
+```
+
+&nbsp;
+
 A brief description of the Experiment files:
 
 `data.py` : this file contains logic to retrieve and structure the training images from the MLDM repository. Study the `download_pach_repo` to understand how the client is pulling the files. The unique ID of each commit is sent through the environment variables (and can be seen in the logs). 
