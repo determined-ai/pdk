@@ -1,20 +1,19 @@
 from __future__ import absolute_import, division, print_function
 
+import logging
 import random
 
+import numpy as np
 import pandas as pd
-from torch.nn import MSELoss, CrossEntropyLoss
+from nltk.tokenize import sent_tokenize
+from torch.nn import CrossEntropyLoss, MSELoss
 from torch.utils.data import (DataLoader, RandomSampler, SequentialSampler,
-    TensorDataset)
+                              TensorDataset)
 from tqdm import tqdm_notebook as tqdm
 from tqdm import trange
-from nltk.tokenize import sent_tokenize
-from utils import *
-import numpy as np
-import logging
-
-from transformers.optimization import AdamW, get_linear_schedule_with_warmup
 from transformers import AutoTokenizer
+from transformers.optimization import AdamW, get_linear_schedule_with_warmup
+from utils import *
 
 logger = logging.getLogger(__name__)
 

@@ -4,13 +4,12 @@ from typing import Any, Dict, List, Sequence, Tuple, Union, cast
 
 import numpy as np
 import torch
+from data import CatDogDataset, download_pach_repo
 from determined import InvalidHP
 from determined.pytorch import DataLoader, PyTorchTrial
 from PIL import Image
 from torch import nn
 from torchvision import models, transforms
-
-from data import CatDogDataset, download_pach_repo
 
 TorchData = Union[
     Dict[str, torch.Tensor], Sequence[torch.Tensor], torch.Tensor

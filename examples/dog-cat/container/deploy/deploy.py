@@ -2,21 +2,12 @@ import os
 import time
 
 import torch
+from common import (DeterminedInfo, KServeInfo, ModelInfo, check_existence,
+                    create_inference_service, get_version, parse_args,
+                    upload_model, wait_for_deployment)
 from determined.experimental import Determined
 from determined.pytorch import load_trial_from_checkpoint_path
-
 from kserve import KServeClient
-from common import (
-    upload_model,
-    get_version,
-    DeterminedInfo,
-    KServeInfo,
-    ModelInfo,
-    check_existence,
-    create_inference_service,
-    wait_for_deployment,
-    parse_args,
-)
 
 # =====================================================================================
 

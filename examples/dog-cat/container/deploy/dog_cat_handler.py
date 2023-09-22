@@ -1,6 +1,6 @@
+from torch.profiler import ProfilerActivity
 from torchvision import transforms
 from ts.torch_handler.image_classifier import ImageClassifier
-from torch.profiler import ProfilerActivity
 
 
 class DogCatClassifier(ImageClassifier):

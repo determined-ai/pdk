@@ -7,3 +7,4 @@ numpy==1.22.2
 torchvision==0.11.3
 python_pachyderm==7.4.0
 scikit-image==0.19.2
+pachyderm-sdk==2.7.0
