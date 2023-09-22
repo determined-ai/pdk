@@ -114,6 +114,8 @@ In this section, we will execute the following steps:
 
 [21 - Prepare for PDK Setup](#step21)
 
+[21b - [Optional] Configure KServe UI](#step21b)
+
 [22 - Prepare Docker and the Container Registry](#step22)
 
 [23 - Save data to Config Map](#step23)
@@ -1499,8 +1501,8 @@ EOF
 
 
 &nbsp;
-<a name="step19b">
-### Step 19b - [Optional] Configure KServe UI
+<a name="step21b">
+### Step 21b - [Optional] Configure KServe UI
 </a>
 
 The quick installer we used for KServe does not include a UI to see the deployments. We can optionally deploy one, using the instructions described in this step.
