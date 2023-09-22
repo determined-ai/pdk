@@ -44,6 +44,10 @@ pachctl list repo
 
 By default, the MLDE experiment will use the `pdk-finbert` Project inside the `PDK Demos` workspace. Make sure to create that project before uploading files to the MLDM repo.
 
+```bash
+det p create "PDK Demos" pdk-finbert
+```
+
 &nbsp;
 
 
@@ -61,9 +65,11 @@ pachctl create pipeline -f deployment-pipeline.json
 &nbsp;
 
 
-When uploading files to MLDM, make sure to use the correct repository name:
+To upload files to MLDM, go to the `sample-data` folder, unzip the dataset and use the `put file` command to upload:
 
 ```bash
+unzip dataset-finbert.zip
+
 find ./finbert/ -name '.DS_Store' -type f -delete
 
 pachctl put file finbert-data@master:/data1 -f ./finbert -r

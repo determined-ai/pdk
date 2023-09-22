@@ -1,4 +1,4 @@
-name: Pipeline-Churn-Training
+name: Customer-Churn-Training
 workspace: PDK Demos
 project: pdk-customer-churn
 data:
@@ -27,4 +27,7 @@ min_validation_period:
     #epochs: 1 #requires records_per_epoch to be known, set bactches instead
     batches: 100
 max_restarts: 0
+resources:
+    resource_pool: gpu-pool
+    slots_per_trial: 1
 entrypoint: model_def:ChurnTrial

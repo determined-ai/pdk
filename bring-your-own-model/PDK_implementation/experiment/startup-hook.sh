@@ -1,2 +1,2 @@
 pip install scikit-learn
-pip install python_pachyderm==7.4.0
+pip install pachyderm-sdk==2.7.2

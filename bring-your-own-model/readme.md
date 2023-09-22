@@ -111,6 +111,10 @@ pachctl create repo customer-churn-data
 
 By default, we are using the same Workspace that was created in the deployment tutorial (PDK Demos) and a new project called `pdk-customer-churn`. Go to the MLDE UI and create this project in the `PDK Demos` workspace.
 
+```bash
+det p create "PDK Demos" pdk-customer-churn
+```
+
 
 &nbsp;
 ## Step 3: Create the training pipeline
@@ -232,3 +236,23 @@ Ground truth/Predicted: 1/1
 Ground truth/Predicted: 0/0
 Ground truth/Predicted: 1/1
 ```
+Optionally, you can access the model directly from the command line, using the `sample.json` file provided as the payload:
+```bash
+export INGRESS_HOST=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.status.loadBalancer.ingress[0].ip}')
+
+export INGRESS_PORT=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.spec.ports[?(@.name=="http2")].port}')
+
+export SERVICE_HOSTNAME=$(kubectl get inferenceservice customer-churn -n ${KSERVE_MODELS_NAMESPACE} -o jsonpath='{.status.url}' | cut -d "/" -f 3)
+
+echo $INGRESS_HOST
+
+echo $INGRESS_PORT
+
+echo $SERVICE_HOSTNAME
+
+curl -v -H "Host: ${SERVICE_HOSTNAME}" http://${INGRESS_HOST}:${INGRESS_PORT}/v1/models/customer-churn:predict -d @./sample.json
+```
+PS: Depending on your load balancer, you may need to use .status.loadBalancer.ingress[0].hostname instead of .status.loadBalancer.ingress[0].ip for the INGRESS_HOST variable.
+
+The return response should be JSON block with a list of values.
+
