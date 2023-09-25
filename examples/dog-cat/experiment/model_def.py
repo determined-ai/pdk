@@ -6,11 +6,12 @@ import numpy as np
 import pachyderm_sdk
 from pachyderm_sdk.api import pfs
 import torch
-from data import CatDogDataset, CatDogDatasetCommitDiff
+from data import PfsFileLister
 from determined import InvalidHP
 from determined.pytorch import DataLoader, PyTorchTrial
 from PIL import Image
 from torch import nn
+from torch.utils.data import DataLoader as TorchDataLoader
 from torchvision import models, transforms
 
 TorchData = Union[
@@ -19,6 +20,7 @@ TorchData = Union[
 
 logging.basicConfig()
 logging.getLogger().setLevel(logging.INFO)
+
 
 # =============================================================================
 
@@ -89,16 +91,22 @@ class DogCatModel(PyTorchTrial):
     # -------------------------------------------------------------------------
 
     def build_training_data_loader(self) -> DataLoader:
-        return DataLoader(
+        return TorchDataLoader(
             self.train_ds, batch_size=self.context.get_per_slot_batch_size()
         )
+        # return DataLoader(
+        #     self.train_ds, batch_size=self.context.get_per_slot_batch_size()
+        # )
 
     # -------------------------------------------------------------------------
 
     def build_validation_data_loader(self) -> DataLoader:
-        return DataLoader(
+        return TorchDataLoader(
             self.val_ds, batch_size=self.context.get_per_slot_batch_size()
         )
+        # return DataLoader(
+        #     self.val_ds, batch_size=self.context.get_per_slot_batch_size()
+        # )
 
     # -------------------------------------------------------------------------
 
@@ -133,27 +141,28 @@ class DogCatModel(PyTorchTrial):
         project = pach_config['project'] or 'default'
         repo, branch = pach_config['repo'], pach_config['branch']
         commit = pfs.Commit.from_uri(f"{project}/{repo}@{branch}")
-
+        previous_commit = None
         if pach_config['previous_commit']:
             previous_commit = pfs.Commit.from_uri(f"{project}/{repo}@{pach_config['previous_commit']}")
-            dataset = CatDogDatasetCommitDiff(client, commit, previous_commit)
-        else:
-            dataset = CatDogDataset(client, commit)
+        datapipe = PfsFileLister(client, commit, previous_commit=previous_commit)
 
-        print(f"Creating datasets from {len(dataset)} input files")
-        train_size = round(0.81 * len(dataset))
-        val_size = len(dataset) - train_size
-        train_ds, val_ds = torch.utils.data.random_split(
-            dataset, [train_size, val_size]
-        )
-        # train_ds and val_ds share the same dataset object.
+        train, validate = datapipe.random_split({'train': 0.81, 'validate': 0.19}, seed=0)
+
         print("setting transform for training dataset")
-        train_ds.dataset.transform = self.get_train_transforms()
-        # val_ds.transform = self.get_test_transforms()
-        print(
-            f"Datasets created: train_size={train_size}, val_size={val_size}"
+        train = (
+            train
+            .open_pfs_files(client)
+            .map(lambda info, file: (Image.open(file), 0 if "dog" in info.file.path else 1))
+            .map(self.get_test_transforms(), input_col=0, output_col=0)
         )
-        return train_ds, val_ds
+
+        validate = (
+            validate
+            .open_pfs_files(client)
+            .map(lambda info, file: (Image.open(file), 0 if "dog" in info.file.path else 1))
+            .map(self.get_train_transforms(), input_col=0, output_col=0)
+        )
+        return train, validate
 
     # -------------------------------------------------------------------------
 
@@ -183,7 +192,7 @@ class DogCatModel(PyTorchTrial):
     # -------------------------------------------------------------------------
 
     def predict(
-        self, X: np.ndarray, names, meta
+            self, X: np.ndarray, names, meta
     ) -> Union[np.ndarray, List, str, bytes, Dict]:
         image = Image.fromarray(X.astype(np.uint8))
         logging.info(f"Image size : {image.size}")
@@ -197,6 +206,5 @@ class DogCatModel(PyTorchTrial):
             logging.info(f"Prediction is : {pred}")
 
         return [self.labels[pred]]
-
 
 # =============================================================================
