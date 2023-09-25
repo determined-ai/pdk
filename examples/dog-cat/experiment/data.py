@@ -46,6 +46,8 @@ class PfsFileLister(IterDataPipe[pfs.FileInfo]):
                 if info.file_type == pfs.FileType.FILE:
                     yield info
 
+    def __len__(self):
+        return 1
 
 @functional_datapipe("open_pfs_files")
 class PfsFileOpener(IterDataPipe[Tuple[pfs.FileInfo, StreamWrapper]]):
@@ -59,6 +61,8 @@ class PfsFileOpener(IterDataPipe[Tuple[pfs.FileInfo, StreamWrapper]]):
             file = self.client.pfs.pfs_file(file=file_info.file)
             yield file_info, file
 
+    def __len__(self):
+        return super().__len__()
 
 # class CatDogDataset(Dataset):
 #     def __init__(
