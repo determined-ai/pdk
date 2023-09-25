@@ -29,7 +29,7 @@ PS: some of the commands used here are sensitive to the version of the product(s
 
 ## ***Attention: if are you planning to set this environment up in a cloud provider, please use the correspondent Kubernetes service instead (EKS for Amazon, GKE for Google, AKS for Azure). Using a VM-based kubernetes cluster in these cloud providers will cause unpredictable networking issues between the nodes, which will impact the PDK components.
 
-If you are using AWS or GCP to deploy the cluster, please follow the [EKS](deploy_aws.md) or [GKE](deploy_gcp.md) guides instead. 
+If you are using AWS or GCP to deploy the cluster, please follow the [EKS](deploy_aws.md) or [GKE](deploy_gcp.md) guides instead.
 
 #### The environment used for this guide was deployed with MicroK8S (https://microk8s.io/docs), which is not a requirement for deploying PDK. Do keep in mind that some configurations might be different, depending on the Kubernetes distribution you are using.
 
@@ -44,7 +44,7 @@ To follow this documentation you will need:
   - jq
   - patchctl (the MLDM command line client)
   - det (the MLDE command line client)
-- Access to a working Kubernetes cluster 
+- Access to a working Kubernetes cluster
 - GPU nodes configured in the cluster, with allocatable GPUs
 - A shared folder that can be accessed by all nodes in the cluster (this example will use `/mnt/efs/shared_fs`)
 
@@ -293,7 +293,7 @@ spec:
   ports:
   - port: 5432
     name: postgres
-  type: NodePort 
+  type: NodePort
   selector:
     app: postgres
 EOF
@@ -667,6 +667,9 @@ taskContainerDefaults:
         nodegroup-role: gpu-worker
 telemetry:
   enabled: true
+resource_manager:
+  default_aux_resource_pool: default
+  default_compute_resource_pool: gpu-pool
 resourcePools:
   - pool_name: default
     task_container_defaults:
@@ -738,7 +741,7 @@ To deploy MLDE, run this command:
 helm install determinedai ./determined
 ```
 
-Because MLDE will be deployed to the default namespace, you can check the status of the deployment with `kubectl get pods` and `kubectl get svc`.<br/> 
+Because MLDE will be deployed to the default namespace, you can check the status of the deployment with `kubectl get pods` and `kubectl get svc`.<br/>
 
 Make sure the pod is running before continuing.
 
@@ -1143,11 +1146,11 @@ metadata:
   namespace: ${KSERVE_MODELS_NAMESPACE}
   annotations:
     serving.kserve.io/s3-endpoint: pachd.${MLDM_NAMESPACE}:30600
-    serving.kserve.io/s3-usehttps: "0" 
+    serving.kserve.io/s3-usehttps: "0"
 type: Opaque
-stringData: 
+stringData:
   AWS_ACCESS_KEY_ID: "dummycredentials"
-  AWS_SECRET_ACCESS_KEY: "dummycredentials" 
+  AWS_SECRET_ACCESS_KEY: "dummycredentials"
 ---
 apiVersion: v1
 kind: ServiceAccount
@@ -1156,7 +1159,7 @@ metadata:
   namespace: ${KSERVE_MODELS_NAMESPACE}
   annotations:
     serving.kserve.io/s3-endpoint: pachd.${MLDM_NAMESPACE}:30600
-    serving.kserve.io/s3-usehttps: "0" 
+    serving.kserve.io/s3-usehttps: "0"
 secrets:
 - name: pach-kserve-creds
 EOF
@@ -1330,11 +1333,11 @@ Depending on your cluster setup, you might need to port forward. If your cluster
 
 ```bash
 MLDE:
-ssh -L 8080:127.0.0.1:8080 -i "key.pem" ubuntu@kube-node-host 
+ssh -L 8080:127.0.0.1:8080 -i "key.pem" ubuntu@kube-node-host
 kubectl -n default port-forward svc/determined-master-service-determinedai 8080:8080
 
 MLDM:
-ssh -L 9090:127.0.0.1:9090 -i "key.pem" ubuntu@kube-node-host 
+ssh -L 9090:127.0.0.1:9090 -i "key.pem" ubuntu@kube-node-host
 kubectl -n ${MLDM_NAMESPACE} port-forward svc/pachyderm-proxy 9090:9090
 
 ```
@@ -1350,7 +1353,7 @@ You will then be able to access these services through a `http://localhost:<port
 
 &nbsp;
 
-The installation steps are now completed. At this time, you have a working cluster, with MLDM, MLDE and KServe deployed. 
+The installation steps are now completed. At this time, you have a working cluster, with MLDM, MLDE and KServe deployed.
 
 Next, return to [the main page](README.md) to go through the steps to prepare and deploy the PDK flow for the dogs-and-cats demo.
 

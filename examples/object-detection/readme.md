@@ -45,11 +45,26 @@ pachctl list repo
 
 By default, the MLDE experiment will use the `pdk-object-detection` Project inside the `PDK Demos` workspace. Make sure to create that project before uploading files to the MLDM repo.
 
+```bash
+det p create "PDK Demos" pdk-object-detection
+```
+
+**Creating Pipelines**
+Review the pipeline files to make sure the input arguments are correct, especially the bucket name and platform (aws/gcs).
+```bash
+pachctl create pipeline -f training-pipeline.json
+
+pachctl create pipeline -f deployment-pipeline.json
+```
+
+&nbsp;
 &nbsp;
 
-When uploading files to MLDM, make sure to use the correct repository name:
+To upload files to MLDM, go to the `sample-data` folder, unzip the dataset and use the `put file` command to upload:
 
 ```bash
+unzip dataset-object-detection.zip
+
 find ./data/ -name '.DS_Store' -type f -delete
 
 pachctl put file object-detection-data@master:/data1 -f ./data -r

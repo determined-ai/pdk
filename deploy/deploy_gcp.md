@@ -11,8 +11,8 @@ This guide will walk you through the steps of deploying the PDK components to Go
 ## Reference Architecture
 The installation will be performed on the following hardware:
 
-- 3x e2-standard-16 CPU-based nodes (16 vCPUs, 64GB RAM, 100GB SSD)
-- 2x n1-standard-8 GPU-based nodes (4 NVIDIA-T4, 8 vCPUs, 30GB RAM, 100GB SSD)
+- 3x e2-standard-16 CPU-based nodes (16 vCPUs, 64GB RAM, 1000GB SSD)
+- 2x n1-standard-8 GPU-based nodes (4 NVIDIA-T4, 8 vCPUs, 30GB RAM, 1000GB SSD)
 
 The 3 CPU-based nodes will be used to run the services for all 3 products, and the MLDM pipelines. The GPU-based nodes will be used to run MLDE experiments.
 
@@ -21,8 +21,8 @@ The following software versions will be used for this installation:
 - Python: 3.8 and 3.9
 - Kubernetes (K8s): 1.24.14-gke.2700
 - Postgres: 13
-- Determined.AI: 0.23.3
-- Pachyderm: 2.6.5
+- Determined.AI: 0.25.0
+- Pachyderm: 2.7.3
 - KServe: 0.11.0rc1 (Quickstart Environment)
 
 PS: some of the commands used here are sensitive to the version of the product(s) listed above.
@@ -40,7 +40,7 @@ To follow this documentation you will need:
   - jq
   - patchctl (the MLDM command line client)
   - det (the MLDE command line client)
-- Access to a Google Cloud account 
+- Access to a Google Cloud account
 - A Project in Google Cloud, where your user has the following roles:
   - Cloud SQL Admin
   - Compute Network Admin
@@ -114,6 +114,8 @@ In this section, we will execute the following steps:
 
 [21 - Prepare for PDK Setup](#step21)
 
+[21b - [Optional] Configure KServe UI](#step21b)
+
 [22 - Prepare Docker and the Container Registry](#step22)
 
 [23 - Save data to Config Map](#step23)
@@ -170,6 +172,7 @@ export GSA_NAME="${NAME}-gsa"
 export LOKI_GSA_NAME="${NAME}-loki-gsa"
 export STATIC_IP_NAME="${NAME}-ip"
 export MLDE_STATIC_IP_NAME="${NAME}-mlde-ip"
+export KSERVE_STATIC_IP_NAME="${NAME}-kserve-ip"
 
 export ROLE1="roles/cloudsql.client"
 export ROLE2="roles/storage.admin"
@@ -183,6 +186,7 @@ export PACH_WI="serviceAccount:${PROJECT_ID}.svc.id.goog[${MLDM_NAMESPACE}/pachy
 export SIDECAR_WI="serviceAccount:${PROJECT_ID}.svc.id.goog[${MLDM_NAMESPACE}/pachyderm-worker]"
 export CLOUDSQLAUTHPROXY_WI="serviceAccount:${PROJECT_ID}.svc.id.goog[${MLDM_NAMESPACE}/k8s-cloudsql-auth-proxy]"
 export MLDE_WI="serviceAccount:${PROJECT_ID}.svc.id.goog[default/determined-master-determinedai]"
+export MLDE_DF_WI="serviceAccount:${PROJECT_ID}.svc.id.goog[default/default]"
 export MLDE_GPU_WI="serviceAccount:${PROJECT_ID}.svc.id.goog[gpu-pool/default]"
 export MLDE_KS_WI="serviceAccount:${PROJECT_ID}.svc.id.goog[${KSERVE_MODELS_NAMESPACE}/default]"
 ```
@@ -279,7 +283,7 @@ gcloud container clusters create ${CLUSTER_NAME} \
  	--machine-type ${CLUSTER_MACHINE_TYPE} \
  	--image-type "COS_CONTAINERD" \
  	--disk-type="pd-ssd" \
-  --disk-size "100" \
+  --disk-size "1000" \
  	--metadata disable-legacy-endpoints=true \
  	--service-account ${SERVICE_ACCOUNT} \
  	--num-nodes "3" \
@@ -330,7 +334,7 @@ gcloud container node-pools create "gpu-pool" \
 	--accelerator type=nvidia-tesla-t4,count=4 \
 	--image-type "COS_CONTAINERD" \
 	--disk-type="pd-ssd" \
-  --disk-size "100" \
+  --disk-size "1000" \
 	--node-labels nodegroup-role=gpu-worker \
 	--metadata disable-legacy-endpoints=true \
   --node-taints nvidia.com/gpu=present:NoSchedule \
@@ -493,6 +497,10 @@ gcloud iam service-accounts add-iam-policy-binding ${SERVICE_ACCOUNT} \
 gcloud iam service-accounts add-iam-policy-binding ${SERVICE_ACCOUNT} \
     --role roles/iam.workloadIdentityUser \
     --member "${MLDE_WI}"
+
+gcloud iam service-accounts add-iam-policy-binding ${SERVICE_ACCOUNT} \
+    --role roles/iam.workloadIdentityUser \
+    --member "${MLDE_DF_WI}"
 ```
 
 
@@ -552,7 +560,7 @@ pachd:
   externalService:
     enabled: false
   image:
-    tag: "2.6.5"
+    tag: "2.7.3"
   lokiDeploy: true
   lokiLogging: true
   storage:
@@ -739,12 +747,12 @@ Make sure the Public IP matches the static IP you've created in the previous ste
 
 First, we need to provision shared storage for MLDE. This will be used to provide a shared folder that can be used by Notebook users in the MLDE UI. This will allow users to save their own code and notebooks in a persistent volume.
 
-For this exercise, we will create a 10GB disk. You can increase this capacity as needed.
+For this exercise, we will create a 20GB disk. You can increase this capacity as needed.
 
 First, create the disk:
 
 ```bash
-gcloud compute disks create --size=10GB --zone=${GCP_ZONE} pdk-nfs-disk
+gcloud compute disks create --size=20GB --zone=${GCP_ZONE} pdk-nfs-disk
 ```
 
 Next, we'll create a NFS server that uses this disk:
@@ -822,7 +830,7 @@ metadata:
   name: nfs
 spec:
   capacity:
-    storage: 10Gi
+    storage: 20Gi
   accessModes:
     - ReadWriteMany
   nfs:
@@ -840,7 +848,7 @@ spec:
   storageClassName: ""
   resources:
     requests:
-      storage: 10Gi
+      storage: 20Gi
 EOF
 ```
 
@@ -854,7 +862,7 @@ metadata:
   name: nfs-gpu
 spec:
   capacity:
-    storage: 10Gi
+    storage: 20Gi
   accessModes:
     - ReadWriteMany
   nfs:
@@ -872,7 +880,7 @@ spec:
   storageClassName: ""
   resources:
     requests:
-      storage: 10Gi
+      storage: 20Gi
 EOF
 ```
 
@@ -947,6 +955,9 @@ taskContainerDefaults:
         nodegroup-role: gpu-worker
 telemetry:
   enabled: true
+resource_manager:
+  default_aux_resource_pool: default
+  default_compute_resource_pool: gpu-pool
 resourcePools:
   - pool_name: default
     task_container_defaults:
@@ -1004,15 +1015,19 @@ helm install determinedai ./determined
 
 ```
 
-Because MLDE will be deployed to the default namespace, you can check the status of the deployment with `kubectl get pods` and `kubectl get svc`.<br/> 
+Because MLDE will be deployed to the default namespace, you can check the status of the deployment with `kubectl get pods` and `kubectl get svc`.<br/>
 Make sure the pod is running before continuing.
 
-Once the installation is complete, annotate the MLDE service account so it has access to the storage bucket:
+Once the installation is complete, annotate the MLDE service accounts so they have access to the storage bucket:
 
 ```bash
-  kubectl annotate serviceaccount determined-master-determinedai \
-    -n default \
-    iam.gke.io/gcp-service-account=${SERVICE_ACCOUNT}
+kubectl annotate serviceaccount default \
+  -n default \
+  iam.gke.io/gcp-service-account=${SERVICE_ACCOUNT}
+
+kubectl annotate serviceaccount determined-master-determinedai \
+  -n default \
+  iam.gke.io/gcp-service-account=${SERVICE_ACCOUNT}
 ```
 
 
@@ -1361,7 +1376,7 @@ Make sure you get a valid response before continuing, as the deployment will fai
 
 The last part of this step is basically some housekeeping tasks to set the stage for the PDK flow.
 
-First, we create a secret that will store variables that will be used by both MLDM pipelines and MLDE experiments. 
+First, we create a secret that will store variables that will be used by both MLDM pipelines and MLDE experiments.
 
 ```bash
 cat <<EOF > "./pipeline-secret.yaml"
@@ -1465,11 +1480,11 @@ metadata:
   namespace: ${KSERVE_MODELS_NAMESPACE}
   annotations:
     serving.kserve.io/s3-endpoint: pachd.${MLDM_NAMESPACE}:30600
-    serving.kserve.io/s3-usehttps: "0" 
+    serving.kserve.io/s3-usehttps: "0"
 type: Opaque
-stringData: 
+stringData:
   AWS_ACCESS_KEY_ID: "blahblahblah"
-  AWS_SECRET_ACCESS_KEY: "blahblahblah" 
+  AWS_SECRET_ACCESS_KEY: "blahblahblah"
 ---
 apiVersion: v1
 kind: ServiceAccount
@@ -1478,11 +1493,215 @@ metadata:
   namespace: ${KSERVE_MODELS_NAMESPACE}
   annotations:
     serving.kserve.io/s3-endpoint: pachd.${MLDM_NAMESPACE}:30600
-    serving.kserve.io/s3-usehttps: "0" 
+    serving.kserve.io/s3-usehttps: "0"
 secrets:
 - name: pach-kserve-creds
 EOF
 ```
+
+
+&nbsp;
+<a name="step21b">
+### Step 21b - [Optional] Configure KServe UI
+</a>
+
+The quick installer we used for KServe does not include a UI to see the deployments. We can optionally deploy one, using the instructions described in this step.
+
+We'll deploy the UI to the same namespace that is used to deploy the models (`${KSERVE_MODELS_NAMESPACE}`)
+
+First, we need to create the necessary roles, service accounts, etc. Run this command to setup the necessary permissions:
+
+```bash
+kubectl apply -f - <<EOF
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: models-webapp-sa
+  namespace: ${KSERVE_MODELS_NAMESPACE}
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: models-webapp-limited
+  namespace: ${KSERVE_MODELS_NAMESPACE}
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: models-controller
+rules:
+- apiGroups: ["*"]
+  resources: ["namespaces"]
+  verbs: ["get", "watch", "list"]
+- apiGroups: ["serving.kserve.io"]
+  resources: ["*"]
+  verbs: ["*"]
+- apiGroups: ["serving.knative.dev"]
+  resources: ["*"]
+  verbs: ["get", "list", "watch"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: namespace-viewer
+rules:
+- apiGroups: ["*"]
+  resources: ["namespaces"]
+  verbs: ["get", "watch", "list"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: models-viewer
+  namespace: ${KSERVE_MODELS_NAMESPACE}
+rules:
+- apiGroups: ["serving.kserve.io", "serving.knative.dev"]
+  resources: ["*"]
+  verbs: ["get", "watch", "list"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: control-models
+subjects:
+- kind: ServiceAccount
+  name: models-webapp-sa
+  namespace: ${KSERVE_MODELS_NAMESPACE}
+roleRef:
+  kind: ClusterRole
+  name: models-controller
+  apiGroup: rbac.authorization.k8s.io
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: view-models
+  namespace: ${KSERVE_MODELS_NAMESPACE}
+subjects:
+- kind: ServiceAccount
+  name: models-webapp-limited
+  namespace: ${KSERVE_MODELS_NAMESPACE}
+roleRef:
+  kind: Role
+  name: models-viewer
+  apiGroup: rbac.authorization.k8s.io
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: view-namespaces
+  namespace: ${KSERVE_MODELS_NAMESPACE}
+subjects:
+- kind: ServiceAccount
+  name: models-webapp-limited
+  namespace: ${KSERVE_MODELS_NAMESPACE}
+roleRef:
+  kind: ClusterRole
+  name: namespace-viewer
+  apiGroup: rbac.authorization.k8s.io
+EOF
+```
+
+Then, create a static IP for the KServe UI:
+
+```bash
+gcloud compute addresses create ${KSERVE_STATIC_IP_NAME} --region=${GCP_REGION}
+
+export KSERVE_STATIC_IP_ADDR=$(gcloud compute addresses describe ${KSERVE_STATIC_IP_NAME} --region=${GCP_REGION} --format=json --flatten=address | jq '.[]' )
+
+echo $KSERVE_STATIC_IP_ADDR
+```
+
+
+
+Next, create the deployment and the service using this command:
+
+```bash
+kubectl apply -f - <<EOF
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: models-webapp
+  namespace: ${KSERVE_MODELS_NAMESPACE}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: models-webapp
+  template:
+    metadata:
+      labels:
+        app: models-webapp
+    spec:
+      serviceAccountName: models-webapp-sa
+      containers:
+      - name: models-webapp
+        image: us-central1-docker.pkg.dev/dai-dev-554/pdk-registry/pdk_kserve_webapp:1.0
+        env:
+        - name: APP_SECURE_COOKIES
+          value: "False"
+        - name: APP_DISABLE_AUTH
+          value: "True"
+        - name: APP_PREFIX
+          value: "/"
+        command: ["gunicorn"]
+        args:
+        - -w
+        - "3"
+        - --bind
+        - "0.0.0.0:8080"
+        - "--access-logfile"
+        - "-"
+        - "entrypoint:app"
+        resources:
+          limits:
+            memory: "1Gi"
+            cpu: "500m"
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: model-webapp-service
+  namespace: ${KSERVE_MODELS_NAMESPACE}
+  labels:
+    app: kserve-webapp
+spec:
+  type: LoadBalancer
+  externalTrafficPolicy: Local
+  loadBalancerIP: ${KSERVE_STATIC_IP_ADDR}
+  selector:
+    app: models-webapp
+  ports:
+  - port: 8080
+    targetPort: 8080
+EOF
+```
+
+PS: If you would like to build your own image, this Github page contains the source:<br/>
+https://github.com/kserve/models-web-app/tree/master
+
+Next, get the URL for the KServe UI:
+
+```bash
+export KSERVE_UI_IP=$(kubectl -n ${KSERVE_MODELS_NAMESPACE} get svc model-webapp-service -o jsonpath='{.status.loadBalancer.ingress[0].ip}')
+
+export KSERVE_UI_URL="http://${KSERVE_UI_IP}:8080/"
+
+echo $KSERVE_UI_URL
+```
+
+You can access the URL to see the deployed model (make sure to select the correct namespace).
+
+
+![alt text][gcp_kserve_03_ui]
+
+[gcp_kserve_03_ui]: images/gcp_kserve_03_ui.png "KServe UI"
+
+
+
+
 
 
 
@@ -1530,7 +1749,7 @@ export REGISTRY_URL=${GCP_REGION}-docker.pkg.dev/${PROJECT_ID}/pdk-registry
 
 docker pull busybox:latest
 
-docker tag busybox:latest ${REGISTRY_URL}/busybox 
+docker tag busybox:latest ${REGISTRY_URL}/busybox
 
 docker push ${REGISTRY_URL}/busybox
 ```
@@ -1581,6 +1800,7 @@ data:
   mlde_host: "${MLDE_STATIC_IP_ADDR_NO_QUOTES}"
   mlde_port: "80"
   mlde_url: "http://${MLDE_STATIC_IP_ADDR_NO_QUOTES}:80"
+  kserve_ui_url: "${KSERVE_UI_URL}"
   kserve_model_bucket_name: "${MODEL_ASSETS_BUCKET_NAME}"
   kserve_model_namespace: "${KSERVE_MODELS_NAMESPACE}"
   kserve_ingress_host: "${INGRESS_HOST}"
@@ -1628,7 +1848,7 @@ gsutil cp helloworld.txt gs://${MODEL_ASSETS_BUCKET_NAME}/dogs-and-cats/model-st
 
 &nbsp;
 
-The installation steps are now completed. At this time, you have a working cluster, with MLDM, MLDE and KServe deployed. 
+The installation steps are now completed. At this time, you have a working cluster, with MLDM, MLDE and KServe deployed.
 
 Next, return to [the main page](README.md) to go through the steps to prepare and deploy the PDK flow for the dogs-and-cats demo.
 

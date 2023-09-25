@@ -18,7 +18,7 @@
     "stdin": [
       "python deploy.py --deployment-name brain-mri-deploy --cloud-model-host gcp --cloud-model-bucket pdk-repo-models --resource-requests cpu=2,memory=8Gi --resource-limits cpu=10,memory=8Gi"
     ],
-    "image": "vmtyler/pdk:brain_deploy_0.0.16",
+    "image": "us-central1-docker.pkg.dev/dai-dev-554/pdk-registry/pdk_brain_mri_deploy:2.1",
     "secrets": [
       {
         "name": "pipeline-secret",

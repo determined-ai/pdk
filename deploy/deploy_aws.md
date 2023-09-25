@@ -13,8 +13,8 @@ This guide will walk you through the steps of deploying the PDK components to AW
 ## Reference Architecture
 The installation will be performed on the following hardware:
 
-- 3x m5.2xlarge CPU-based nodes (8 vCPUs, 32GB RAM, 200GB HDD)
-- 1x g4dn.metal GPU-based nodes (8 NVIDIA-T4, 96 vCPUs, 384GB RAM, 200GB HDD)
+- 3x m5.2xlarge CPU-based nodes (8 vCPUs, 32GB RAM, 1000GB HDD)
+- 1x g4dn.metal GPU-based nodes (8 NVIDIA-T4, 96 vCPUs, 384GB RAM, 1000GB HDD)
 
 The 3 CPU-based nodes will be used to run the services for all 3 products, and the MLDM pipelines. The GPU-based node will be used to run MLDE experiments.
 
@@ -43,7 +43,7 @@ To follow this documentation you will need:
   - jq
   - patchctl (the MLDM command line client)
   - det (the MLDE command line client)
-- Access to an AWS account 
+- Access to an AWS account
 - A user with enough permissions to provision all the necessary components
 
 &nbsp;
@@ -91,6 +91,8 @@ In this page, we will execute the following steps:
 [18 - (Optional) Test Components](#step18)
 
 [19 - Prepare for PDK Setup](#step19)
+
+[19b - [Optional] Configure KServe UI](#step19b)
 
 [20 - Prepare Docker and ECR to manage images](#step20)
 
@@ -373,7 +375,7 @@ managedNodeGroups:
       - ${AWS_AVAILABILITY_ZONE_3}
     minSize: 3
     maxSize: 4
-    volumeSize: 200
+    volumeSize: 1000
     volumeType: gp3
     iam:
       withAddonPolicies:
@@ -400,7 +402,7 @@ managedNodeGroups:
       - ${AWS_AVAILABILITY_ZONE_1}
     minSize: 1
     maxSize: 2
-    volumeSize: 200
+    volumeSize: 1000
     volumeType: gp3
     iam:
       withAddonPolicies:
@@ -613,9 +615,9 @@ provisioner: efs.csi.aws.com
 EOF
 ```
 
-Now create two Persistent Volumes and two Persistent Volume Claims, which will be associated with the file system we just created. We'll create one PV and one PVC in each namespace that can run MLDE notebooks (*default* and *gpu-pool*). The *default* namespace is created with the Kubernetes cluster, and the EKS installer already created the *gpu-pool* namespace as well (since it needed to grant bucket permissions to it). Run `kubectl get ns` to make sure the *gpu-pool* namespace exists. 
+Now create two Persistent Volumes and two Persistent Volume Claims, which will be associated with the file system we just created. We'll create one PV and one PVC in each namespace that can run MLDE notebooks (*default* and *gpu-pool*). The *default* namespace is created with the Kubernetes cluster, and the EKS installer already created the *gpu-pool* namespace as well (since it needed to grant bucket permissions to it). Run `kubectl get ns` to make sure the *gpu-pool* namespace exists.
 
-PS: We're setting it for 10GB, but you can increase the size as needed.
+PS: We're setting it for 20GB, but you can increase the size as needed.
 
 Run this command to create the first PV and PVC:
 ```bash
@@ -626,7 +628,7 @@ metadata:
   name: efs-pv
 spec:
   capacity:
-    storage: 10Gi
+    storage: 20Gi
   volumeMode: Filesystem
   accessModes:
     - ReadWriteMany
@@ -647,7 +649,7 @@ spec:
   storageClassName: efs-sc
   resources:
     requests:
-      storage: 10Gi
+      storage: 20Gi
 EOF
 ```
 
@@ -661,7 +663,7 @@ metadata:
   name: efs-pv-gpu
 spec:
   capacity:
-    storage: 10Gi
+    storage: 20Gi
   volumeMode: Filesystem
   accessModes:
     - ReadWriteMany
@@ -682,7 +684,7 @@ spec:
   storageClassName: efs-sc
   resources:
     requests:
-      storage: 10Gi
+      storage: 20Gi
 EOF
 ```
 
@@ -1037,7 +1039,7 @@ pachctl connect ${MLDM_URL}
 pachctl config set active-context ${MLDM_URL}
 ```
 
-PS: You need a working URL to continue. 
+PS: You need a working URL to continue.
 
 At this time, you should be able to access the MLDM UI using the URL that was printed in the terminal:
 
@@ -1127,6 +1129,9 @@ taskContainerDefaults:
       serviceAccountName: checkpoint-storage-s3-bucket
 telemetry:
   enabled: true
+resource_manager:
+  default_aux_resource_pool: default
+  default_compute_resource_pool: gpu-pool
 resourcePools:
   - pool_name: default
     task_container_defaults:
@@ -1182,7 +1187,7 @@ To deploy MLDE, run this command:
 helm install determinedai ./determined
 ```
 
-Because MLDE will be deployed to the default namespace, you can check the status of the deployment with `kubectl get pods` and `kubectl get svc`.<br/> 
+Because MLDE will be deployed to the default namespace, you can check the status of the deployment with `kubectl get pods` and `kubectl get svc`.<br/>
 Make sure the pod is running before continuing.
 
 
@@ -1348,15 +1353,6 @@ Once the command completes, run this command to modify the `./examples/computer_
 ```bash
 cat <<EOF > ./examples/computer_vision/cifar10_pytorch/const.yaml
 name: cifar10_pytorch_const
-environment:
-  pod_spec:
-    spec:
-      serviceAccountName: checkpoint-storage-s3-bucket
-      tolerations:
-        - key: "nvidia.com/gpu"
-          operator: "Equal"
-          value: "present"
-          effect: "NoSchedule"
 hyperparameters:
   learning_rate: 1.0e-4
   learning_rate_decay: 1.0e-6
@@ -1536,7 +1532,7 @@ Make sure you get a valid response before continuing, as the deployment will fai
 
 The last part of this step is basically some housekeeping tasks to set the stage for the PDK flow.
 
-First, we create a secret that will store variables that will be used by both MLDM pipelines and MLDE experiments. 
+First, we create a secret that will store variables that will be used by both MLDM pipelines and MLDE experiments.
 
 ```bash
 cat <<EOF > "./pipeline-secret.yaml"
@@ -1616,11 +1612,11 @@ metadata:
   namespace: ${KSERVE_MODELS_NAMESPACE}
   annotations:
     serving.kserve.io/s3-endpoint: pachd.${MLDM_NAMESPACE}:30600
-    serving.kserve.io/s3-usehttps: "0" 
+    serving.kserve.io/s3-usehttps: "0"
 type: Opaque
-stringData: 
+stringData:
   AWS_ACCESS_KEY_ID: "dummycredentials"
-  AWS_SECRET_ACCESS_KEY: "dummycredentials" 
+  AWS_SECRET_ACCESS_KEY: "dummycredentials"
 ---
 apiVersion: v1
 kind: ServiceAccount
@@ -1629,11 +1625,202 @@ metadata:
   namespace: ${KSERVE_MODELS_NAMESPACE}
   annotations:
     serving.kserve.io/s3-endpoint: pachd.${MLDM_NAMESPACE}:30600
-    serving.kserve.io/s3-usehttps: "0" 
+    serving.kserve.io/s3-usehttps: "0"
 secrets:
 - name: pach-kserve-creds
 EOF
 ```
+
+
+&nbsp;
+<a name="step19b">
+### Step 19b - [Optional] Configure KServe UI
+</a>
+
+The quick installer we used for KServe does not include a UI to see the deployments. We can optionally deploy one, using the instructions described in this step.
+
+We'll deploy the UI to the same namespace that is used to deploy the models (`${KSERVE_MODELS_NAMESPACE}`)
+
+First, we need to create the necessary roles, service accounts, etc. Run this command to setup the necessary permissions:
+
+```bash
+kubectl apply -f - <<EOF
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: models-webapp-sa
+  namespace: ${KSERVE_MODELS_NAMESPACE}
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: models-webapp-limited
+  namespace: ${KSERVE_MODELS_NAMESPACE}
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: models-controller
+rules:
+- apiGroups: ["*"]
+  resources: ["namespaces"]
+  verbs: ["get", "watch", "list"]
+- apiGroups: ["serving.kserve.io"]
+  resources: ["*"]
+  verbs: ["*"]
+- apiGroups: ["serving.knative.dev"]
+  resources: ["*"]
+  verbs: ["get", "list", "watch"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: namespace-viewer
+rules:
+- apiGroups: ["*"]
+  resources: ["namespaces"]
+  verbs: ["get", "watch", "list"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: models-viewer
+  namespace: ${KSERVE_MODELS_NAMESPACE}
+rules:
+- apiGroups: ["serving.kserve.io", "serving.knative.dev"]
+  resources: ["*"]
+  verbs: ["get", "watch", "list"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: control-models
+subjects:
+- kind: ServiceAccount
+  name: models-webapp-sa
+  namespace: ${KSERVE_MODELS_NAMESPACE}
+roleRef:
+  kind: ClusterRole
+  name: models-controller
+  apiGroup: rbac.authorization.k8s.io
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: view-models
+  namespace: ${KSERVE_MODELS_NAMESPACE}
+subjects:
+- kind: ServiceAccount
+  name: models-webapp-limited
+  namespace: ${KSERVE_MODELS_NAMESPACE}
+roleRef:
+  kind: Role
+  name: models-viewer
+  apiGroup: rbac.authorization.k8s.io
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: view-namespaces
+  namespace: ${KSERVE_MODELS_NAMESPACE}
+subjects:
+- kind: ServiceAccount
+  name: models-webapp-limited
+  namespace: ${KSERVE_MODELS_NAMESPACE}
+roleRef:
+  kind: ClusterRole
+  name: namespace-viewer
+  apiGroup: rbac.authorization.k8s.io
+EOF
+```
+
+Next, create the deployment and the service using this command:
+
+```bash
+kubectl apply -f - <<EOF
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: models-webapp
+  namespace: ${KSERVE_MODELS_NAMESPACE}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: models-webapp
+  template:
+    metadata:
+      labels:
+        app: models-webapp
+    spec:
+      serviceAccountName: models-webapp-sa
+      containers:
+      - name: models-webapp
+        image: us-central1-docker.pkg.dev/dai-dev-554/pdk-registry/pdk_kserve_webapp:1.0
+        env:
+        - name: APP_SECURE_COOKIES
+          value: "False"
+        - name: APP_DISABLE_AUTH
+          value: "True"
+        - name: APP_PREFIX
+          value: "/"
+        command: ["gunicorn"]
+        args:
+        - -w
+        - "3"
+        - --bind
+        - "0.0.0.0:8080"
+        - "--access-logfile"
+        - "-"
+        - "entrypoint:app"
+        resources:
+          limits:
+            memory: "1Gi"
+            cpu: "500m"
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: model-webapp-service
+  namespace: ${KSERVE_MODELS_NAMESPACE}
+  labels:
+    app: kserve-webapp
+spec:
+  type: LoadBalancer
+  externalTrafficPolicy: Local
+  selector:
+    app: models-webapp
+  ports:
+  - port: 8080
+    targetPort: 8080
+EOF
+```
+
+PS: If you would like to build your own image, this Github page contains the source:<br/>
+https://github.com/kserve/models-web-app/tree/master
+
+Next, get the URL for the KServe UI:
+
+```bash
+export KSERVE_UI_HOST=$(kubectl -n ${KSERVE_MODELS_NAMESPACE} get svc model-webapp-service --output jsonpath='{.status.loadBalancer.ingress[0].hostname}')
+
+export KSERVE_UI_URL="http://${KSERVE_UI_HOST}:8080"
+
+echo $KSERVE_UI_URL
+```
+
+You can access the URL to see the deployed model (make sure to select the correct namespace).
+
+
+![alt text][aws_kserve_03_ui]
+
+[aws_kserve_03_ui]: images/aws_kserve_03_ui.png "KServe UI"
+
+
+
+
 
 
 &nbsp;
@@ -1715,6 +1902,7 @@ data:
   mlde_host: "${MLDE_HOST}"
   mlde_port: "80"
   mlde_url: "${MLDE_URL}"
+  kserve_ui_url: "${KSERVE_UI_URL}"
   kserve_model_bucket_name: "${MODEL_ASSETS_BUCKET_NAME}"
   kserve_model_namespace: "${KSERVE_MODELS_NAMESPACE}"
   kserve_ingress_host: "${INGRESS_HOST}"
@@ -1762,7 +1950,7 @@ aws s3api put-object --bucket ${MODEL_ASSETS_BUCKET_NAME} --key dogs-and-cats/mo
 
 &nbsp;
 
-The installation steps are now completed. At this time, you have a working cluster, with MLDM, MLDE and KServe deployed. 
+The installation steps are now completed. At this time, you have a working cluster, with MLDM, MLDE and KServe deployed.
 
 Next, return to [the main page](README.md) to go through the steps to prepare and deploy the PDK flow for the dogs-and-cats demo.
 
