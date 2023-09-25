@@ -1,22 +1,23 @@
 import logging
 import os
-from typing import Any, Dict, List, Sequence, Tuple, Union, cast
+from typing import Any, Callable, Dict, List, Sequence, Tuple, Union, cast
 
 import numpy as np
 import pachyderm_sdk
-from pachyderm_sdk.api import pfs
 import torch
-from data import PfsFileLister
+from pachyderm_sdk.api import pfs
 from determined import InvalidHP
 from determined.pytorch import DataLoader, PyTorchTrial
 from PIL import Image
-from torch import nn
-from torch.utils.data import DataLoader as TorchDataLoader
+from torch import Tensor
+from torch.utils.data import random_split, Dataset
+from torch.utils.data.datapipes.map import Mapper
 from torchvision import models, transforms
 
-TorchData = Union[
-    Dict[str, torch.Tensor], Sequence[torch.Tensor], torch.Tensor
-]
+from data import PfsFileDataPipe
+
+DogCatItem = Tuple['Image.Image', int]
+TorchData = Union[Dict[str, Tensor], Sequence[Tensor], Tensor]
 
 logging.basicConfig()
 logging.getLogger().setLevel(logging.INFO)
@@ -37,12 +38,12 @@ class DogCatModel(PyTorchTrial):
 
         if load_weights:
             self.train_ds, self.val_ds = self.create_datasets()
-            # if len(self.train_ds) == 0:
-            #     print("No data. Aborting training.")
-            #     raise InvalidHP("No data")
+            if len(self.train_ds) == 0:
+                print("No data. Aborting training.")
+                raise InvalidHP("No data")
 
         model = models.resnet50(pretrained=load_weights)
-        model.fc = nn.Linear(2048, 2)
+        model.fc = torch.nn.Linear(2048, 2)
         optimizer = torch.optim.SGD(
             model.parameters(),
             lr=float(self.context.get_hparam("learning_rate")),
@@ -59,8 +60,8 @@ class DogCatModel(PyTorchTrial):
 
     def train_batch(
         self, batch: TorchData, epoch_idx: int, batch_idx: int
-    ) -> Union[torch.Tensor, Dict[str, Any]]:
-        batch = cast(Tuple[torch.Tensor, torch.Tensor], batch)
+    ) -> Union[Tensor, Dict[str, Any]]:
+        batch = cast(Tuple[Tensor, Tensor], batch)
         data, labels = batch
 
         output = self.model(data)
@@ -80,7 +81,7 @@ class DogCatModel(PyTorchTrial):
         Calculate validation metrics for a batch and return them as a dictionary.
         This method is not necessary if the user overwrites evaluate_full_dataset().
         """
-        batch = cast(Tuple[torch.Tensor, torch.Tensor], batch)
+        batch = cast(Tuple[Tensor, Tensor], batch)
         data, labels = batch
         output = self.model(data)
 
@@ -91,46 +92,21 @@ class DogCatModel(PyTorchTrial):
     # -------------------------------------------------------------------------
 
     def build_training_data_loader(self) -> DataLoader:
-        return TorchDataLoader(
+        return DataLoader(
             self.train_ds, batch_size=self.context.get_per_slot_batch_size()
         )
-        # return DataLoader(
-        #     self.train_ds, batch_size=self.context.get_per_slot_batch_size()
-        # )
 
     # -------------------------------------------------------------------------
 
     def build_validation_data_loader(self) -> DataLoader:
-        return TorchDataLoader(
+        return DataLoader(
             self.val_ds, batch_size=self.context.get_per_slot_batch_size()
         )
-        # return DataLoader(
-        #     self.val_ds, batch_size=self.context.get_per_slot_batch_size()
-        # )
 
     # -------------------------------------------------------------------------
 
-    # def download_data(self):
-    #     data_config = self.context.get_data_config()
-    #     data_dir = os.path.join(self.download_directory, "data")
-    #
-    #     files = download_pach_repo(
-    #         data_config["pachyderm"]["host"],
-    #         data_config["pachyderm"]["port"],
-    #         data_config["pachyderm"]["repo"],
-    #         data_config["pachyderm"]["branch"],
-    #         data_dir,
-    #         data_config["pachyderm"]["token"],
-    #         data_config["pachyderm"]["project"],
-    #         data_config["pachyderm"]["previous_commit"],
-    #     )
-    #     print(f"Data dir set to : {data_dir}")
-    #
-    #     return [des for src, des in files]
-
-    # -------------------------------------------------------------------------
-
-    def create_datasets(self):
+    def create_datasets(self) -> Tuple[Dataset, Dataset]:
+        self.context.experimental.disable_dataset_reproducibility_checks()
         data_config = self.context.get_data_config()
         pach_config = data_config["pachyderm"]
         client = pachyderm_sdk.Client(
@@ -144,30 +120,28 @@ class DogCatModel(PyTorchTrial):
         previous_commit = None
         if pach_config['previous_commit']:
             previous_commit = pfs.Commit.from_uri(f"{project}/{repo}@{pach_config['previous_commit']}")
-        datapipe = PfsFileLister(client, commit, previous_commit=previous_commit)
 
-        train, validate = datapipe.random_split({'train': 0.81, 'validate': 0.19}, seed=0)
+        # Create the DataPipe and convert the output to (Image, Label).
+        datapipe = PfsFileDataPipe(client, commit, previous_commit=previous_commit).map(
+            lambda item: (Image.open(item['file']), 0 if "dog" in item['info'].file.path else 1)
+        )
+
+        print(f"Creating datasets from {len(datapipe)} input files")
+        train_size = round(0.81 * len(datapipe))
+        val_size = len(datapipe) - train_size
+        train, validate = random_split(datapipe, [train_size, val_size])
 
         print("setting transform for training dataset")
-        train = (
-            train
-            .open_pfs_files(client)
-            .map(lambda info, file: (Image.open(file), 0 if "dog" in info.file.path else 1))
-            .map(self.get_test_transforms(), input_col=0, output_col=0)
-        )
+        train = Mapper(train, self.get_test_transforms())
+        validate = Mapper(validate, self.get_train_transforms())
 
-        validate = (
-            validate
-            .open_pfs_files(client)
-            .map(lambda info, file: (Image.open(file), 0 if "dog" in info.file.path else 1))
-            .map(self.get_train_transforms(), input_col=0, output_col=0)
-        )
+        print(f"Datasets created: train_size={train_size}, val_size={val_size}")
         return train, validate
 
     # -------------------------------------------------------------------------
 
-    def get_train_transforms(self):
-        return transforms.Compose(
+    def get_train_transforms(self) -> Callable[[DogCatItem], DogCatItem]:
+        transform = transforms.Compose(
             [
                 transforms.Resize(240),
                 transforms.RandomCrop(224),
@@ -177,10 +151,15 @@ class DogCatModel(PyTorchTrial):
             ]
         )
 
+        def wrapper(image_label: DogCatItem) -> DogCatItem:
+            image, label = image_label
+            return transform(image), label
+        return wrapper
+
     # -------------------------------------------------------------------------
 
-    def get_test_transforms(self):
-        return transforms.Compose(
+    def get_test_transforms(self) -> Callable[[DogCatItem], DogCatItem]:
+        transform = transforms.Compose(
             [
                 transforms.Resize(240),
                 transforms.CenterCrop(224),
@@ -188,6 +167,11 @@ class DogCatModel(PyTorchTrial):
                 transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5)),
             ]
         )
+
+        def wrapper(image_label: DogCatItem) -> DogCatItem:
+            image, label = image_label
+            return transform(image), label
+        return wrapper
 
     # -------------------------------------------------------------------------
 
