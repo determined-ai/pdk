@@ -37,9 +37,9 @@ class DogCatModel(PyTorchTrial):
 
         if load_weights:
             self.train_ds, self.val_ds = self.create_datasets()
-            if len(self.train_ds) == 0:
-                print("No data. Aborting training.")
-                raise InvalidHP("No data")
+            # if len(self.train_ds) == 0:
+            #     print("No data. Aborting training.")
+            #     raise InvalidHP("No data")
 
         model = models.resnet50(pretrained=load_weights)
         model.fc = nn.Linear(2048, 2)
