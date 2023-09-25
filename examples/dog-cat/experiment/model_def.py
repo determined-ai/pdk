@@ -106,7 +106,6 @@ class DogCatModel(PyTorchTrial):
     # -------------------------------------------------------------------------
 
     def create_datasets(self) -> Tuple[Dataset, Dataset]:
-        self.context.experimental.disable_dataset_reproducibility_checks()
         data_config = self.context.get_data_config()
         pach_config = data_config["pachyderm"]
         client = pachyderm_sdk.Client(
@@ -176,7 +175,7 @@ class DogCatModel(PyTorchTrial):
     # -------------------------------------------------------------------------
 
     def predict(
-            self, X: np.ndarray, names, meta
+        self, X: np.ndarray, names, meta
     ) -> Union[np.ndarray, List, str, bytes, Dict]:
         image = Image.fromarray(X.astype(np.uint8))
         logging.info(f"Image size : {image.size}")
