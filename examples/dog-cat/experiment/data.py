@@ -28,7 +28,6 @@ class PfsFileDataPipe(MapDataPipe[PfsData]):
         path="/",
         previous_commit: Optional[pfs.Commit] = None
     ):
-        """"""
         self.client = client
         self.root_file = pfs.File(commit=commit, path=path)
         self.previous_commit = previous_commit
@@ -46,19 +45,37 @@ class PfsFileDataPipe(MapDataPipe[PfsData]):
         self._file_infos = []
         if previous_commit is not None:
             previous_root_file = pfs.File(commit=self.previous_commit, path=path)
-            for diff in self.client.pfs.diff_file(
+            for diff in client.pfs.diff_file(
                     new_file=self.root_file, old_file=previous_root_file
             ):
                 if diff.new_file.file_type == pfs.FileType.FILE:
                     self._file_infos.append(diff.new_file)
         else:
-            for info in self.client.pfs.walk_file(file=self.root_file):
+            for info in client.pfs.walk_file(file=self.root_file):
                 if info.file_type == pfs.FileType.FILE:
                     self._file_infos.append(info)
 
+        # If this DataPipe is loaded using a DataLoader with `num_workers` > 0, then
+        #   the __getitem__ calls will occur within a multiprocessing worker. This is
+        #   problematic since gRPC clients do not interact well with multiprocessing.
+        # The workaround is:
+        #   1. The following environment variables _must_ be set if `num_workers` > 0:
+        #        - GRPC_ENABLE_FORK_SUPPORT=true
+        #        - GRPC_POLL_STRATEGY=poll
+        #   2. The client must be recreated within the worker process, since gRPC will
+        #      close the grpc.Channel when `fork()` is called.
+        #      ref: github.com/grpc/grpc/blob/master/doc/fork_support.md
+        self.worker_client: Optional[Client] = None
+
     def __getitem__(self, idx) -> PfsData:
+        if self.worker_client is None:
+            self.worker_client = Client.from_pachd_address(
+                pachd_address=self.client.address,
+                auth_token=self.client.auth_token,
+            )
+
         info = self._file_infos[idx]
-        file = self.client.pfs.pfs_file(file=info.file)
+        file = self.worker_client.pfs.pfs_file(file=info.file)
         return PfsData(info=info, file=StreamWrapper(file))
 
     def __len__(self):
