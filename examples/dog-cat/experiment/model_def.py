@@ -123,7 +123,7 @@ class DogCatModel(PyTorchTrial):
         # Create the DataPipe and convert the output to (Image, Label).
         datapipe = PfsFileDataPipe(client, commit, previous_commit=previous_commit).map(
             lambda item: (Image.open(item['file']), 0 if "dog" in item['info'].file.path else 1)
-        )
+        ).with_cache()
 
         print(f"Creating datasets from {len(datapipe)} input files")
         train_size = round(0.81 * len(datapipe))

@@ -1,9 +1,12 @@
-from typing import Optional, TypedDict
+from functools import lru_cache
+from typing import Optional, TypedDict, TypeVar
 
 from pachyderm_sdk import Client
 from pachyderm_sdk.api import pfs
-from torch.utils.data import MapDataPipe
+from torch.utils.data import MapDataPipe, functional_datapipe
 from torch.utils.data.datapipes.utils.common import StreamWrapper
+
+T_co = TypeVar('T_co', covariant=True)
 
 
 class PfsData(TypedDict):
@@ -80,3 +83,21 @@ class PfsFileDataPipe(MapDataPipe[PfsData]):
 
     def __len__(self):
         return len(self._file_infos)
+
+
+@functional_datapipe(name="with_cache")
+class CacheDataPipe(MapDataPipe[T_co]):
+
+    def __init__(self, source: MapDataPipe[T_co], cache_size: Optional[int] = None):
+        self._source = source
+
+        @lru_cache(cache_size)
+        def __cached_getitem__(idx):
+            return source[idx]
+        self.__cached_getitem__ = __cached_getitem__
+
+    def __getitem__(self, idx) -> T_co:
+        return self.__cached_getitem__(idx)
+
+    def __len__(self):
+        return len(self._source)
