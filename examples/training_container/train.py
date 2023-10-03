@@ -79,7 +79,12 @@ def parse_args():
         type=str,
         help="Name of the model on DeterminedAI to create/update",
     )
-
+    parser.add_argument(
+        "--incremental",
+        type=bool,
+        default=True,
+        help="Send previous commit to download only the diff",
+    )
     return parser.parse_args()
 
 
@@ -182,8 +187,10 @@ def execute_experiment(
 # =====================================================================================
 
 
-def run_experiment(client, configfile, code_path, model):
-    version = model.get_version()
+def run_experiment(client, configfile, code_path, model, incremental):
+    version = None
+    if incremental:
+        version = model.get_version()
 
     if version is None:
         print("Creating a new experiment on DeterminedAI...")
