@@ -1,6 +1,5 @@
 name: Build & publish PDK images
 on:
-  push:
   pull_request:
 
 
