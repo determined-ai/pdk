@@ -24,10 +24,17 @@ jobs:
 
     steps:
         - name: Checkout repository
-          uses: actions/checkout@v2
+          uses: actions/checkout@v3
+        - uses: dorny/paths-filter@v2
+          id: filter
+          with:
+            filters: |
+              dockerchange:
+                - '{{ matrix.dockerfolder }}/**'
         - 
             name: Docker meta
             id: meta
+            if: steps.filter.outputs.dockerchange == 'true'
             uses: docker/metadata-action@v5
             with:
               images: pachyderm/pdk
@@ -36,19 +43,19 @@ jobs:
                 type=sha,prefix=${{ matrix.prefix }}-,event=branch
                 # tag event
                 type=ref,prefix=${{ matrix.prefix }}-,event=tag
-                # pull request event
-                type=ref,prefix=${{ matrix.prefix }}-,event=pr
               flavor: |
                 
         -
           name: Login to Docker Hub
           uses: docker/login-action@v3
+          if: steps.filter.outputs.dockerchange == 'true'
           with:
             username: ${{ secrets.DOCKER_HUB_USERNAME }}
             password: ${{ secrets.DOCKERHUB_TOKEN }}
         -
           name: Build and push
           uses: docker/build-push-action@v5
+          if: steps.filter.outputs.dockerchange == 'true'
           with:
             context:  ${{ matrix.dockerfolder }}
             push: true
