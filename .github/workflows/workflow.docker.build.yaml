@@ -11,15 +11,15 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - dockerfolder: ./examples/training_container/
+          - dockerfolder: examples/training_container/
             prefix: train
-          - dockerfolder: ./examples/brain-mri/container/deploy/
+          - dockerfolder: examples/brain-mri/container/deploy/
             prefix: brain-deploy
-          - dockerfolder: ./examples/dog-cat/container/deploy/
+          - dockerfolder: examples/dog-cat/container/deploy/
             prefix: dog-cat-deploy
-          - dockerfolder: ./examples/object-detection/container/deploy/
+          - dockerfolder: examples/object-detection/container/deploy/
             prefix: object-detection-deploy
-          - dockerfolder: ./examples/sentiment-analysis/container/deploy/
+          - dockerfolder: examples/sentiment-analysis/container/deploy/
             prefix: sentiment-analysis-deploy
 
     steps:
@@ -28,9 +28,10 @@ jobs:
         - uses: dorny/paths-filter@v2
           id: filter
           with:
+            base: main
             filters: |
               dockerchange:
-                - '{{ matrix.dockerfolder }}/**'
+                - '${{ matrix.dockerfolder }}**'
         - 
             name: Docker meta
             id: meta
