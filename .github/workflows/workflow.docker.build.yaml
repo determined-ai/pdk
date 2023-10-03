@@ -15,8 +15,8 @@ jobs:
             prefix: train
           - dockerfolder: ./examples/brain-mri/container/deploy/
             prefix: brain-deploy
-          - dockerfolder: ./examples/cat-dog/container/deploy/
-            prefix: cat-dog-deploy
+          - dockerfolder: ./examples/dog-cat/container/deploy/
+            prefix: dog-cat-deploy
           - dockerfolder: ./examples/object-detection/container/deploy/
             prefix: object-detection-deploy
           - dockerfolder: ./examples/sentiment-analysis/container/deploy/
