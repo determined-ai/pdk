@@ -12,12 +12,16 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - dockerfolder: ./examples/brain-mri/container/train/
-            prefix: brain-train
+          - dockerfolder: ./examples/training_container/
+            prefix: train
           - dockerfolder: ./examples/brain-mri/container/deploy/
             prefix: brain-deploy
           - dockerfolder: ./examples/cat-dog/container/deploy/
             prefix: cat-dog-deploy
+          - dockerfolder: ./examples/object-detection/container/deploy/
+            prefix: object-detection-deploy
+          - dockerfolder: ./examples/sentiment-analysis/container/deploy/
+            prefix: sentiment-analysis-deploy
 
     steps:
         - name: Checkout repository
