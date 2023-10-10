@@ -432,8 +432,6 @@ pachd:
   enabled: true
   externalService:
     enabled: true
-  image:
-    tag: "2.6.5"
   storage:
     backend: LOCAL
     local:
@@ -637,6 +635,7 @@ imageRegistry: determinedai
 enterpriseEdition: false
 imagePullSecretName:
 masterPort: 8080
+createNonNamespacedObjects: true
 useNodePortForMaster: false
 db:
   hostAddress: "${DB_CONNECTION_STRING}"
@@ -682,10 +681,16 @@ resourcePools:
               volumeMounts:
                 - name: shared-fs
                   mountPath: /run/determined/workdir/shared_fs
+                - name: shared-chk
+                  mountPath: /mnt/efs/shared_fs/determined                  
           volumes:
             - name: shared-fs
               persistentVolumeClaim:
-                claimName: mlde-pvc        
+                claimName: mlde-pvc
+            - name: shared-chk
+              hostPath:
+                path: /mnt/efs/shared_fs/determined
+                type: Directory                
   - pool_name: gpu-pool
     max_aux_containers_per_agent: 1
     kubernetes_namespace: gpu-pool
@@ -699,10 +704,16 @@ resourcePools:
               volumeMounts:
                 - name: shared-fs
                   mountPath: /run/determined/workdir/shared_fs
+                - name: shared-chk
+                  mountPath: /mnt/efs/shared_fs/determined                  
           volumes:
             - name: shared-fs
               persistentVolumeClaim:
-                claimName: mlde-pvc        
+                claimName: mlde-pvc
+            - name: shared-chk
+              hostPath:
+                path: /mnt/efs/shared_fs/determined
+                type: Directory                
           tolerations:
             - key: "nvidia.com/gpu"
               operator: "Equal"
@@ -881,14 +892,6 @@ Once the command completes, run this command to modify the `./examples/computer_
 ```bash
 cat <<EOF > ./examples/computer_vision/cifar10_pytorch/const.yaml
 name: cifar10_pytorch_const
-environment:
-  pod_spec:
-    spec:
-      tolerations:
-        - key: "nvidia.com/gpu"
-          operator: "Equal"
-          value: "present"
-          effect: "NoSchedule"
 hyperparameters:
   learning_rate: 1.0e-4
   learning_rate_decay: 1.0e-6
@@ -908,7 +911,7 @@ min_validation_period:
 max_restarts: 0
 resources:
   resource_pool: gpu-pool
-  slots_per_trial: 2  
+  slots_per_trial: 1
 EOF
 ```
 
