@@ -752,7 +752,7 @@ For this exercise, we will create a 20GB disk. You can increase this capacity as
 First, create the disk:
 
 ```bash
-gcloud compute disks create --size=20GB --zone=${GCP_ZONE} pdk-nfs-disk
+gcloud compute disks create --size=20GB --zone=${GCP_ZONE} ${NAME}-pdk-nfs-disk
 ```
 
 Next, we'll create a NFS server that uses this disk:
@@ -792,7 +792,7 @@ spec:
       volumes:
         - name: mypvc
           gcePersistentDisk:
-            pdName: pdk-nfs-disk
+            pdName: ${NAME}-pdk-nfs-disk
             fsType: ext4
 EOF
 ```
@@ -905,6 +905,7 @@ imageRegistry: determinedai
 enterpriseEdition: false
 imagePullSecretName:
 masterPort: 8080
+createNonNamespacedObjects: true
 useNodePortForMaster: true
 db:
   hostAddress: "cloudsql-auth-proxy.${MLDM_NAMESPACE}.svc.cluster.local."
@@ -1193,14 +1194,6 @@ Once the command completes, run this command to modify the `./examples/computer_
 ```bash
 cat <<EOF > ./examples/computer_vision/cifar10_pytorch/const.yaml
 name: cifar10_pytorch_const
-environment:
-  pod_spec:
-    spec:
-      tolerations:
-        - key: "nvidia.com/gpu"
-          operator: "Equal"
-          value: "present"
-          effect: "NoSchedule"
 hyperparameters:
   learning_rate: 1.0e-4
   learning_rate_decay: 1.0e-6
@@ -1220,10 +1213,10 @@ min_validation_period:
 max_restarts: 0
 resources:
   resource_pool: gpu-pool
-  slots_per_trial: 4
+  slots_per_trial: 2
 EOF
 ```
-PS: We need to modify this file because our GPU node pool is configured with taints that will reject workloads. In this case, we're setting a toleration for this taint. We're also configuring the experiment to use 4 GPUs. And we're reducing the number of epochs to keep the training time short.
+PS: We need to modify this file because our GPU node pool is configured with taints that will reject workloads. In this case, we're setting a toleration for this taint. We're also configuring the experiment to use 2 GPUs. And we're reducing the number of epochs to keep the training time short.
 
 Use this command to run the experiment:
 

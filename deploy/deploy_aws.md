@@ -23,8 +23,8 @@ The following software versions will be used for this installation:
 - Python: 3.8 and 3.9
 - Kubernetes (K8s): 1.24.0
 - Postgres: 13
-- Determined.AI: 0.23.3
-- Pachyderm: 2.6.5
+- Determined.AI: latest (currently 0.25.1)
+- Pachyderm: latest (currently 2.7.3)
 - KServe: 0.11.0rc1 (Quickstart Environment)
 
 PS: some of the commands used here are sensitive to the version of the product(s) listed above.
@@ -617,7 +617,7 @@ EOF
 
 Now create two Persistent Volumes and two Persistent Volume Claims, which will be associated with the file system we just created. We'll create one PV and one PVC in each namespace that can run MLDE notebooks (*default* and *gpu-pool*). The *default* namespace is created with the Kubernetes cluster, and the EKS installer already created the *gpu-pool* namespace as well (since it needed to grant bucket permissions to it). Run `kubectl get ns` to make sure the *gpu-pool* namespace exists.
 
-PS: We're setting it for 20GB, but you can increase the size as needed.
+PS: We're setting it for 200GB, but you can modify the size as needed.
 
 Run this command to create the first PV and PVC:
 ```bash
@@ -628,7 +628,7 @@ metadata:
   name: efs-pv
 spec:
   capacity:
-    storage: 20Gi
+    storage: 200Gi
   volumeMode: Filesystem
   accessModes:
     - ReadWriteMany
@@ -649,7 +649,7 @@ spec:
   storageClassName: efs-sc
   resources:
     requests:
-      storage: 20Gi
+      storage: 200Gi
 EOF
 ```
 
@@ -663,7 +663,7 @@ metadata:
   name: efs-pv-gpu
 spec:
   capacity:
-    storage: 20Gi
+    storage: 200Gi
   volumeMode: Filesystem
   accessModes:
     - ReadWriteMany
@@ -684,7 +684,7 @@ spec:
   storageClassName: efs-sc
   resources:
     requests:
-      storage: 20Gi
+      storage: 200Gi
 EOF
 ```
 
@@ -958,8 +958,6 @@ pachd:
   enabled: true
   externalService:
     enabled: true
-  image:
-    tag: "2.6.5"
   storage:
     amazon:
       bucket: "${MLDM_BUCKET_NAME}"
@@ -1094,6 +1092,7 @@ cat <<EOF > ./determined/values.yaml
 imageRegistry: determinedai
 enterpriseEdition: false
 imagePullSecretName:
+createNonNamespacedObjects: true
 masterPort: 8080
 useNodePortForMaster: true
 db:
