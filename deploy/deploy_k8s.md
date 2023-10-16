@@ -565,8 +565,6 @@ cat <<EOF > mldm_values.yaml
 deployTarget: "MINIO"
 pachd:
   enabled: true
-  externalService:
-    enabled: true
   storage:
     backend: MINIO
     minio:

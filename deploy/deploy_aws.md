@@ -956,8 +956,6 @@ deployTarget: "AMAZON"
 
 pachd:
   enabled: true
-  externalService:
-    enabled: true
   storage:
     amazon:
       bucket: "${MLDM_BUCKET_NAME}"

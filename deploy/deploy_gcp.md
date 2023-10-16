@@ -557,8 +557,6 @@ deployTarget: "GOOGLE"
 
 pachd:
   enabled: true
-  externalService:
-    enabled: false
   lokiDeploy: true
   lokiLogging: true
   storage:
