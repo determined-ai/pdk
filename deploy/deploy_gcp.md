@@ -22,7 +22,7 @@ The following software versions will be used for this installation:
 - Kubernetes (K8s): 1.24.14-gke.2700
 - Postgres: 13
 - MLDE (Determined.AI): latest *(currently 0.26.0)*
-- MLDM (Pachyderm): latest *(currently 0.27.3)*
+- MLDM (Pachyderm): latest *(currently 2.7.4)*
 - KServe: 0.11.0rc1 (Quickstart Environment)
 
 PS: some of the commands used here are sensitive to the version of the product(s) listed above.
