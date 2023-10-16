@@ -13,16 +13,16 @@ This guide will walk you through the steps of deploying the PDK components to a 
 ## Reference Architecture
 The installation will be performed on the following hardware:
 
-- 1x Control Plane - 8 CPU, 16GB RAM
-- 1x worker node with 4 NVIDIA-T4 GPUs
+- 1x Control Plane - 8 CPU, 16GB RAM, 1000GB storage
+- 1x worker node with 4 NVIDIA-T4 GPUs, 1000GB storage
 
 The following software versions will be used for this installation:
 
 - Ubuntu 20.04
 - Kubernetes (K8s): 1.27.0
 - Postgres: 13
-- Determined.AI: 0.23.3
-- Pachyderm: 2.6.5
+- MLDE (Determined.AI): latest *(currently 0.26.0)*
+- MLDM (Pachyderm): latest *(currently 0.27.3)*
 - KServe: 0.10.0 (Quickstart Environment)
 
 PS: some of the commands used here are sensitive to the version of the product(s) listed above.
@@ -66,33 +66,37 @@ In this page, we will execute the following steps:
 
 [02 - Install and test the pre-req client applications](#step2)
 
-[03 - Deploy Postgres to the cluster](#step3)
+[03 - Configure Node Labels and Taints](#step3)
 
-[04 - Create Postgres Databases](#step4)
+[04 - Deploy Postgres to the cluster](#step4)
 
-[05 - Create Persistent Volumes for MLDM](#step5)
+[05 - Create Postgres Databases](#step5)
 
-[06 - Create configuration .yaml file for MLDM](#step6)
+[06 - Create Persistent Volumes for MLDM & Deploying MinIO](#step6)
 
-[07 - Install MLDM using Helm](#step7)
+[07 - Create configuration .yaml file for MLDM](#step7)
 
-[08 - Retrieve MLDM IP address and configure pachctl command line](#step8)
+[08 - Install MLDM using Helm](#step8)
 
-[09 - Prepare MLDE installation assets](#step9)
+[09 - Retrieve MLDM IP address and configure pachctl command line](#step9)
 
-[10 - Deploy MLDE using Helm chart](#step10)
+[10 - Prepare MLDE installation assets](#step10)
 
-[11 - Retrieve MLDE IP address and configure det command line](#step11)
+[11 - Deploy MLDE using Helm chart](#step11)
 
-[12 - Deploy KServe](#step12)
+[12 - Retrieve MLDE IP address and configure det command line](#step12)
 
-[13 - (Optional) Test Components](#step13)
+[13 - Deploy KServe](#step13)
 
-[14 - Prepare for PDK Setup](#step14)
+[14 - (Optional) Test Components](#step14)
 
-[15 - Prepare Docker and the Registry to manage images](#step15)
+[15 - Prepare for PDK Setup](#step15)
 
-[16 - Save data to Config Map](#step14)
+[16 - [Optional] Configure KServe UI](#step16)
+
+[17 - Prepare Docker and the Registry to manage images](#step17)
+
+[18 - Save data to Config Map](#step18)
 
 <br/>
 
@@ -128,7 +132,7 @@ export KSERVE_MODELS_NAMESPACE="models"
 Install `pachctl` (the command line utility for MLDM):
 
 ```bash
-curl -o /tmp/pachctl.deb -L https://github.com/pachyderm/pachyderm/releases/download/v2.6.8/pachctl_2.6.8_amd64.deb && sudo dpkg -i /tmp/pachctl.deb
+curl -o /tmp/pachctl.deb -L https://github.com/pachyderm/pachyderm/releases/download/v2.7.3/pachctl_2.7.3_amd64.deb && sudo dpkg -i /tmp/pachctl.deb
 ```
 
 
@@ -156,36 +160,45 @@ jq --version
 
 
 
+
 &nbsp;
 <a name="step3">
-### Step 3 - Deploy Postgres to the cluster
+### Step 3 - Configure Node Labels and Taints
+</a>
+
+This might be a good time to validate that your cluster has the proper labels in place, along with the Taint that will prevent non-model training workloads to run on the GPU node. Check the list of nodes and configure each according to its role:
+
+```bash
+kubectl get nodes -o wide
+
+kubectl label nodes admin-node-name nodegroup-role=control-plane
+
+kubectl label nodes --overwrite admin-node-name node-role.kubernetes.io/control-plane=admin
+
+kubectl label nodes gpu-node-name nodegroup-role=gpu-worker
+
+kubectl label nodes --overwrite gpu-node-name node-role.kubernetes.io/gpu-worker=worker
+
+kubectl taint nodes gpu-node-name nvidia.com/gpu=present:NoSchedule
+```
+PS: make sure to replace `gpu-node-name` and `admin-node-name` with the names of your nodes.
+
+PS: if you have control plane nodes, along with CPU and GPU nodes, make sure to taint the control plane nodes so no pod are allocated there. That way, all products will be deployed to the CPU nodes and the GPU nodes will be reserved to run MLDE workloads.
+
+
+
+
+&nbsp;
+<a name="step4">
+### Step 4 - Deploy Postgres to the cluster
 </a>
 
 If you are planning on using an external Postgres instance, you can skip this step.
 
 For this exercise, Postgres will be deployed to the `default` namespace.
 
-Create a Storage Class for Postgres:
-```bash
-kubectl apply -f  - <<EOF
-kind: StorageClass
-apiVersion: storage.k8s.io/v1
-metadata:
-  name: manual
-  annotations:
-    storageclass.kubernetes.io/is-default-class: "true"
-provisioner: microk8s.io/hostpath
-reclaimPolicy: Delete
-parameters:
-  pvDir: /mnt/efs/shared_fs
-volumeBindingMode: WaitForFirstConsumer
-EOF
-```
 
-PS: if you are not using MicroK8s, change the `provisioner` value to match your distribution.
-
-
-Next, create the Persistent Volume:
+First, create the Persistent Volume:
 ```bash
 kubectl apply -f  - <<EOF
 kind: PersistentVolume
@@ -196,7 +209,6 @@ metadata:
     app: postgres
     type: local
 spec:
-  storageClassName: manual
   capacity:
     storage: 5Gi
   accessModes:
@@ -216,7 +228,6 @@ metadata:
   labels:
     app: postgres
 spec:
-  storageClassName: manual
   accessModes:
     - ReadWriteOnce
   resources:
@@ -282,7 +293,7 @@ EOF
 
 Finally, create the Service:
 ```bash
-k apply -f  - <<EOF
+kubectl apply -f  - <<EOF
 apiVersion: v1
 kind: Service
 metadata:
@@ -314,8 +325,8 @@ Make a note of the IP address for the Postgres service, as it will be used to co
 
 
 &nbsp;
-<a name="step4">
-### Step 4 - Create Postgres Databases
+<a name="step5">
+### Step 5 - Create Postgres Databases
 </a>
 
 Setup the 3 databases that will be used by PDK.  
@@ -372,8 +383,8 @@ When you're done, use the command `\q` to quit.
 
 
 &nbsp;
-<a name="step5">
-### Step 5 - Create Persistent Volumes for MLDM
+<a name="step6">
+### Step 6 - Create Persistent Volumes for MLDM & Deploy MinIO
 </a>
 
 Make sure to have a working storage class. MLDM needs 2 persistent volumes to create the PVCs. They can have any names, as they will be dynamically bound to the PVCs during the MLDM deployment.
@@ -387,9 +398,8 @@ metadata:
   labels:
     type: local
 spec:
-  storageClassName: manual
   capacity:
-    storage: 20Gi
+    storage: 10Gi
   accessModes:
     - ReadWriteOnce
   hostPath:
@@ -407,9 +417,8 @@ metadata:
   labels:
     type: local
 spec:
-  storageClassName: manual
   capacity:
-    storage: 20Gi
+    storage: 10Gi
   accessModes:
     - ReadWriteOnce
   hostPath:
@@ -417,29 +426,156 @@ spec:
 EOF
 ```
 
+&nbsp;
+
+MLDM requires an object storage. For on-prem environments, we can use MinIO. Use the commands below to deploy MinIO.
+
+**Important**: We're limiting this storage to 50GB, since this is a test/POC environment. You can change this setting as needed.
+
+Create the Persistent Volume:
+```bash
+kubectl apply -f  - <<EOF
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: minio-pv
+  labels:
+    app: minio
+    type: local
+spec:
+  capacity:
+    storage: 50Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/mnt/efs/shared_fs/minio"
+EOF
+```
+
+Create the Persistent Volume Claim:
+```bash
+kubectl apply -f  - <<EOF
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: minio-pvc
+  labels:
+    app: minio
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 50Gi
+EOF
+```
+
+Create the StatefulSet:
+```bash
+k apply -f  - <<EOF
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: minio
+  labels:
+    app: minio
+spec:
+  selector:
+    matchLabels:
+      app: minio
+  serviceName: "minio"
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: minio
+    spec:
+      terminationGracePeriodSeconds: 10
+      containers:
+      - name: minio
+        image: docker.io/minio/minio:latest
+        command: ["/bin/bash"]
+        # this will create a bucket called "mldm-bucket" and then launch minio
+        args: ["-c", "mkdir -p /data/mldm-bucket && minio server /data --console-address=0.0.0.0:9001" ]
+        securityContext:
+          runAsUser: 1000
+          runAsGroup: 1000
+        ports:
+        - containerPort: 9000
+          name: s3
+        - containerPort: 9001
+          name: console
+        volumeMounts:
+        - name: minio-data
+          mountPath: /data
+      volumes:
+        - name: minio-data
+          persistentVolumeClaim:
+            claimName: minio-pvc
+EOF
+```
+
+Create the Service:
+```bash
+k apply -f  - <<EOF
+apiVersion: v1
+kind: Service
+metadata:
+  name: minio
+  labels:
+    app: minio
+spec:
+  ports:
+  - port: 9000
+    name: s3
+  - port: 9001
+    name: console
+  type: NodePort
+  selector:
+    app: minio
+EOF
+```
+
+You can check the MinIO log with this command:
+```bash
+kubectl logs -f minio-0
+```
 
 &nbsp;
-<a name="step6">
-### Step 6 - Create configuration .yaml file for MLDM
+
+Because we're also running the MinIO console, the user interface will be accessible through port 9001:
+
+
+![alt text][k8s_minio_01_ui]
+
+[k8s_minio_01_ui]: images/k8s_minio_01_ui.png "MinIO Main UI"
+
+Login as `minioadmin/minioadmin`. You will also see the buckets created by the StatefulSet. We'll use this bucket to store the MLDM objects, along with MLDE checkpoints and models for KServe.
+
+
+&nbsp;
+<a name="step7">
+### Step 7 - Create configuration .yaml file for MLDM
 </a>
 
 This command will create a .yaml file that you can review in a text editor.
 
 ```bash
 cat <<EOF > mldm_values.yaml
-deployTarget: "CUSTOM"
+deployTarget: "MINIO"
 pachd:
   enabled: true
   externalService:
     enabled: true
   storage:
-    backend: LOCAL
-    local:
-      hostPath: /mnt/efs/shared_fs/pachyderm
-      requireRoot: true
+    backend: MINIO
+    minio:
+      bucket: "mldm-bucket"
+      endpoint: "minio.default.svc.cluster.local:9000"
+      id: "minioadmin"
+      secret: "minioadmin"
+      secure: "false"
 etcd:
-  storageClass: manual
-  storageClassName: manual
   size: 10Gi
 loki-stack:
   loki:
@@ -447,9 +583,8 @@ loki-stack:
       fsGroup: 0
       runAsGroup: 0
       runAsNonRoot: false
-      runAsUser: 0  
+      runAsUser: 0
     persistence:
-      storageClassName: manual
       size: 10Gi
 postgresql:
   enabled: false
@@ -472,8 +607,8 @@ EOF
 
 
 &nbsp;
-<a name="step7">
-### Step 7 - Install MLDM using Helm
+<a name="step8">
+### Step 8 - Install MLDM using Helm
 </a>
 
 First, download the charts for MLDM:
@@ -497,8 +632,8 @@ Give it a couple of minutes for all the services to be up and running. You can r
 
 
 &nbsp;
-<a name="step8">
-### Step 8 - Retrieve MLDM IP address and configure pachctl command line
+<a name="step9">
+### Step 9 - Retrieve MLDM IP address and configure pachctl command line
 </a>
 
 In this step, we'll configure the pachctl client. This will be important later, as we create the project, repo and pipeline for the PDK environment.
@@ -527,17 +662,13 @@ At this time, the MLDM UI will be accessible:
 
 
 &nbsp;
-<a name="step9">
-### Step 9 - Prepare MLDE installation assets
+<a name="step10">
+### Step 10 - Prepare MLDE installation assets
 </a>
 
 MLDE offers a hosted Jupyter Lab environment, where users can create and run notebooks. This environment needs persistent storage, in order to save user files. This persistent storage must be mounted as a shared folder. In this step, we will configure the necessary components to enable this capability.
 
-First, make sure you have a storage class created. In this example, the storage class is called `manual`.
-
-Run `kubectl get sc` to check the storageclasses available.
-
-Now create two Persistent Volumes and two Persistent Volume Claims, one in each namespace that can run MLDE notebooks (*default* and *gpu-pool*). PS: We're setting it for 10GB, but you can increase the size as needed.
+Create two Persistent Volumes and two Persistent Volume Claims, one in each namespace that can run MLDE notebooks (*default* and *gpu-pool*). PS: We're setting it for 20GB, but you can increase the size as needed.
 
 Run this command to create the first PV and PVC:
 ```bash
@@ -547,9 +678,8 @@ kind: PersistentVolume
 metadata:
   name: mlde-pv
 spec:
-  storageClassName: manual
   capacity:
-    storage: 10Gi
+    storage: 20Gi
   accessModes:
     - ReadWriteMany
   hostPath:
@@ -560,12 +690,11 @@ apiVersion: v1
 metadata:
   name: mlde-pvc
 spec:
-  storageClassName: manual
   accessModes:
     - ReadWriteMany
   resources:
     requests:
-      storage: 10Gi
+      storage: 20Gi
 EOF
 ```
 
@@ -578,9 +707,8 @@ kind: PersistentVolume
 metadata:
   name: mlde-pv-gpu
 spec:
-  storageClassName: manual
   capacity:
-    storage: 10Gi
+    storage: 20Gi
   accessModes:
     - ReadWriteMany
   hostPath:
@@ -592,12 +720,11 @@ metadata:
   name: mlde-pvc
   namespace: gpu-pool
 spec:
-  storageClassName: manual
   accessModes:
     - ReadWriteMany
   resources:
     requests:
-      storage: 10Gi
+      storage: 20Gi
 EOF
 ```
 
@@ -613,24 +740,10 @@ kubectl -n gpu-pool get pvc
 ```
 
 
-
-
-
-Next, download and unzip the Helm chart for MLDE:
+Next, create a new values.yaml file for the MLDE Helm chart:
 
 ```bash
-wget https://hpe-mlde.determined.ai/latest/_downloads/389266101877e29ab82805a88a6fc4a6/determined-latest.tgz
-
-tar xvf determined-latest.tgz
-```
-
-PS: If this link doesn't work, you can download the latest Helm chart from this page:<br/>
-https://hpe-mlde.determined.ai/latest/setup-cluster/deploy-cluster/k8s/install-on-kubernetes.html
-
-Next, create a new values.yaml file for the Helm chart:
-
-```bash
-cat <<EOF > ./determined/values.yaml
+cat <<EOF > mlde_values.yaml
 imageRegistry: determinedai
 enterpriseEdition: false
 imagePullSecretName:
@@ -647,8 +760,11 @@ checkpointStorage:
   saveExperimentBest: 0
   saveTrialBest: 1
   saveTrialLatest: 1
-  type: shared_fs
-  hostPath: /mnt/efs/shared_fs/determined
+  type: s3
+  bucket: mlde-bucket
+  accessKey: minioadmin
+  secretKey: minioadmin
+  endpointUrl: http://minio.default.svc.cluster.local:9000
 maxSlotsPerPod: 4
 masterCpuRequest: 4
 masterMemRequest: 8Gi
@@ -681,16 +797,10 @@ resourcePools:
               volumeMounts:
                 - name: shared-fs
                   mountPath: /run/determined/workdir/shared_fs
-                - name: shared-chk
-                  mountPath: /mnt/efs/shared_fs/determined                  
           volumes:
             - name: shared-fs
               persistentVolumeClaim:
                 claimName: mlde-pvc
-            - name: shared-chk
-              hostPath:
-                path: /mnt/efs/shared_fs/determined
-                type: Directory                
   - pool_name: gpu-pool
     max_aux_containers_per_agent: 1
     kubernetes_namespace: gpu-pool
@@ -704,16 +814,10 @@ resourcePools:
               volumeMounts:
                 - name: shared-fs
                   mountPath: /run/determined/workdir/shared_fs
-                - name: shared-chk
-                  mountPath: /mnt/efs/shared_fs/determined                  
           volumes:
             - name: shared-fs
               persistentVolumeClaim:
                 claimName: mlde-pvc
-            - name: shared-chk
-              hostPath:
-                path: /mnt/efs/shared_fs/determined
-                type: Directory                
           tolerations:
             - key: "nvidia.com/gpu"
               operator: "Equal"
@@ -722,15 +826,6 @@ resourcePools:
 EOF
 ```
 
-
-If your GPU node is not labeled, make sure to apply ther label before deploying MLDE:
-
-
-```bash
-kubectl label nodes <gpu-worker-node-name> node-role.kubernetes.io/gpu-worker=worker
-
-kubectl label nodes <gpu-worker-node-name> nodegroup-role=gpu-worker
-```
 
 
 Create the gpu-pool namespace
@@ -742,14 +837,18 @@ kubectl create ns gpu-pool
 
 
 &nbsp;
-<a name="step10">
-### Step 10 - Deploy MLDE using Helm chart
+<a name="step11">
+### Step 11 - Deploy MLDE using Helm chart
 </a>
 
-To deploy MLDE, run this command:
+To deploy MLDE, run these commands:
 
 ```bash
-helm install determinedai ./determined
+helm repo add determined-ai https://helm.determined.ai/
+
+helm repo update
+
+helm install determinedai -f ./mlde_values.yaml determined-ai/determined
 ```
 
 Because MLDE will be deployed to the default namespace, you can check the status of the deployment with `kubectl get pods` and `kubectl get svc`.<br/>
@@ -758,8 +857,8 @@ Make sure the pod is running before continuing.
 
 
 &nbsp;
-<a name="step11">
-### Step 11 - Retrieve MLDE IP address and configure det command line
+<a name="step12">
+### Step 12 - Retrieve MLDE IP address and configure det command line
 </a>
 
 Similar to the steps taken for MLDM, these commands will retrieve the load balancer address and create a URL we can use to access MLDE:
@@ -788,8 +887,8 @@ You should also be able to access the MLDE UI. Login as user **admin** (leave pa
 
 
 &nbsp;
-<a name="step12">
-### Step 12 - Deploy KServe
+<a name="step13">
+### Step 13 - Deploy KServe
 </a>
 
 KServe is a standard Model Inference Platform on Kubernetes, built for highly scalable use cases. It provides performant, standardized inference protocol across ML frameworks, including PyTorch, TensorFlow and Keras.
@@ -808,8 +907,8 @@ After running this command, wait about 10 minutes for all the services to be pro
 
 
 &nbsp;
-<a name="step13">
-### Step 13 - (Optional) Test Components
+<a name="step14">
+### Step 14 - (Optional) Test Components
 </a>
 
 In this optional step, we can test MLDM (by creating a pipeline) and MLDE (by creating an experiment)
@@ -862,12 +961,12 @@ At this time, you should see the OpenCV project and pipeline in the MLDM UI:
 
 &nbsp;
 
-You should also be able to see the *chunks* in the shared folder. This confirms that MLDM is able to write to the storage location.
+You should also be able to see the *chunks* in MinIO. This confirms that MLDM is able to write to the storage bucket.
 
 
-![alt text][k8s_mldm_03_chunks]
+![alt text][k8s_minio_03_chunks]
 
-[k8s_mldm_03_chunks]: images/k8s_mldm_03_chunks.png "MLDM Storage Bucket"
+[k8s_minio_03_chunks]: images/k8s_minio_03_chunks.png "MLDM Storage Bucket"
 
 
 PS: Do not modify or delete chunks, as it will break integrity.
@@ -937,20 +1036,43 @@ Your experiment will appear under Uncategorized (we will change that for the PDK
 
 &nbsp;
 
-You can also check the MLDE files in the shared folder, to see the checkpoints that were saved:
+You can also check the MLDE files in the MinIO UI, to see the checkpoints that were saved:
 
 
 ![alt text][k8s_mlde_05_storage]
 
 [k8s_mlde_05_storage]: images/k8s_mlde_05_storage.png "MLDE Storage Bucket"
 
-This confirms that MLDE is able to access the shared storage folder as well.
+This confirms that MLDE is able to access the storage bucket as well.
+
+
+&nbsp;
+
+Finally, go to the MLDE **Home Page** and click the **Launch JupyterLab** button. In the configuration pop-up, select the *Uncategorized* workspace, set the *Resource Pool* to **gpu-pool** (this is important, because the *default* pool has no GPUs available) and set the number of *Slots* (GPUs) to 1. Or set the number of slots to 0 and select the *default* Resource Pool to create a CPU-based notebook environment.
+
+Click **Launch** to start the JupyterLab environment.
+
+The first run should take about one minute to pull and run the image.
+
+
+![alt text][aws_mlde_06_jupyter]
+
+[aws_mlde_06_jupyter]: images/aws_mlde_06_jupyter.png "MLDE Launch JupyterLab"
+
+
+In the new tab, make sure the *shared_fs* folder is listed. In this folder, users will be able to permanently store their model assets, notebooks and other files.
+
+![alt text][aws_mlde_07_shared_folder]
+
+[aws_mlde_07_shared_folder]: images/aws_mlde_07_shared_folder.png "MLDE Notebook Shared Folder"
+
+PS: If the JupyterLab environment fails to load, it might be because of an issue with the shared folder. Run `kubectl -n gpu-pool describe pod` against the new pod to see why the pod failed to run.
 
 
 
 &nbsp;
-<a name="step14">
-### Step 14 - Prepare for PDK Setup
+<a name="step15">
+### Step 15 - Prepare for PDK Setup
 </a>
 
 These next steps will help us verify that KServe is working properly, and they will also setup some pre-requisites for the PDK flow (specifically, the step where models are deployed to KServe).
@@ -1169,11 +1291,200 @@ EOF
 ```
 
 
+&nbsp;
+<a name="step16">
+### Step 16 - [Optional] Configure KServe UI
+</a>
+
+The quick installer we used for KServe does not include a UI to see the deployments. We can optionally deploy one, using the instructions described in this step.
+
+We'll deploy the UI to the same namespace that is used to deploy the models (`${KSERVE_MODELS_NAMESPACE}`)
+
+First, we need to create the necessary roles, service accounts, etc. Run this command to setup the necessary permissions:
+
+```bash
+kubectl apply -f - <<EOF
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: models-webapp-sa
+  namespace: ${KSERVE_MODELS_NAMESPACE}
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: models-webapp-limited
+  namespace: ${KSERVE_MODELS_NAMESPACE}
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: models-controller
+rules:
+- apiGroups: ["*"]
+  resources: ["namespaces"]
+  verbs: ["get", "watch", "list"]
+- apiGroups: ["serving.kserve.io"]
+  resources: ["*"]
+  verbs: ["*"]
+- apiGroups: ["serving.knative.dev"]
+  resources: ["*"]
+  verbs: ["get", "list", "watch"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: namespace-viewer
+rules:
+- apiGroups: ["*"]
+  resources: ["namespaces"]
+  verbs: ["get", "watch", "list"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: models-viewer
+  namespace: ${KSERVE_MODELS_NAMESPACE}
+rules:
+- apiGroups: ["serving.kserve.io", "serving.knative.dev"]
+  resources: ["*"]
+  verbs: ["get", "watch", "list"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: control-models
+subjects:
+- kind: ServiceAccount
+  name: models-webapp-sa
+  namespace: ${KSERVE_MODELS_NAMESPACE}
+roleRef:
+  kind: ClusterRole
+  name: models-controller
+  apiGroup: rbac.authorization.k8s.io
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: view-models
+  namespace: ${KSERVE_MODELS_NAMESPACE}
+subjects:
+- kind: ServiceAccount
+  name: models-webapp-limited
+  namespace: ${KSERVE_MODELS_NAMESPACE}
+roleRef:
+  kind: Role
+  name: models-viewer
+  apiGroup: rbac.authorization.k8s.io
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: view-namespaces
+  namespace: ${KSERVE_MODELS_NAMESPACE}
+subjects:
+- kind: ServiceAccount
+  name: models-webapp-limited
+  namespace: ${KSERVE_MODELS_NAMESPACE}
+roleRef:
+  kind: ClusterRole
+  name: namespace-viewer
+  apiGroup: rbac.authorization.k8s.io
+EOF
+```
+
+Next, create the deployment and the service using this command:
+
+```bash
+kubectl apply -f - <<EOF
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: models-webapp
+  namespace: ${KSERVE_MODELS_NAMESPACE}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: models-webapp
+  template:
+    metadata:
+      labels:
+        app: models-webapp
+    spec:
+      serviceAccountName: models-webapp-sa
+      containers:
+      - name: models-webapp
+        image: us-central1-docker.pkg.dev/dai-dev-554/pdk-registry/pdk_kserve_webapp:1.0
+        env:
+        - name: APP_SECURE_COOKIES
+          value: "False"
+        - name: APP_DISABLE_AUTH
+          value: "True"
+        - name: APP_PREFIX
+          value: "/"
+        command: ["gunicorn"]
+        args:
+        - -w
+        - "3"
+        - --bind
+        - "0.0.0.0:8081"
+        - "--access-logfile"
+        - "-"
+        - "entrypoint:app"
+        resources:
+          limits:
+            memory: "1Gi"
+            cpu: "500m"
+        ports:
+        - containerPort: 8081
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: model-webapp-service
+  namespace: ${KSERVE_MODELS_NAMESPACE}
+  labels:
+    app: kserve-webapp
+spec:
+  type: LoadBalancer
+  externalTrafficPolicy: Local
+  selector:
+    app: models-webapp
+  ports:
+  - port: 8081
+    targetPort: 8081
+EOF
+```
+
+PS: If you would like to build your own image, this Github page contains the source:<br/>
+https://github.com/kserve/models-web-app/tree/master
+
+Next, get the URL for the KServe UI:
+
+```bash
+export KSERVE_UI_HOST=$(kubectl -n ${KSERVE_MODELS_NAMESPACE} get svc model-webapp-service --output jsonpath='{.status.loadBalancer.ingress[0].ip}')
+
+export KSERVE_UI_URL="http://${KSERVE_UI_HOST}:8081"
+
+echo $KSERVE_UI_URL
+```
+
+You can access the URL to see the deployed model (make sure to select the correct namespace).
+
+
+![alt text][k8s_kserve_03_ui]
+
+[k8s_kserve_03_ui]: images/k8s_kserve_03_ui.png "KServe UI"
+
+
+
+
 
 
 &nbsp;
-<a name="step15">
-### Step 15 - Prepare Docker and the Registry to manage images
+<a name="step17">
+### Step 17 - Prepare Docker and the Registry to manage images
 </a>
 
 For this step, make sure Docker Desktop is running.
@@ -1210,8 +1521,8 @@ You can check the Registry to make sure the new image is there.
 
 
 &nbsp;
-<a name="step16">
-### Step 16 - Save data to Config Map
+<a name="step18">
+### Step 18 - Save data to Config Map
 </a>
 
 Now that all components are installed, we need a location to place some of the variables we've been using for the deployment. This config map can be used when configuring the PDK flows.
@@ -1228,16 +1539,18 @@ metadata:
 data:
   region: "US"
   mldm_namespace: "${MLDM_NAMESPACE}"
-  mldm_bucket_name: "/mnt/efs/shared_fs/pachyderm"
-  mldm_host: "${MLDM_HOST}"
-  mldm_port: "80"
+  mldm_bucket_name: "mldm-bucket"
+  mldm_host: "pachyderm-proxy.pachyderm.svc.cluster.local"
+  mldm_port: "9090"
   mldm_url: "${MLDM_URL}"
   mldm_pipeline_secret: "pipeline-secret"
-  mlde_bucket_name: "/mnt/efs/shared_fs/determined"
-  mlde_host: "${MLDE_HOST}"
+  mlde_bucket_name: "mlde-bucket"
+  mlde_host: "determined-master-service-determinedai.default.svc.cluster.local"
   mlde_port: "8080"
   mlde_url: "${MLDE_URL}"
-  kserve_model_bucket_name: "N/A"
+  minio_url: "http://minio.default.svc.cluster.local:9000"
+  kserve_ui_url: "${KSERVE_UI_URL}"
+  kserve_model_bucket_name: "kserve-bucket"
   kserve_model_namespace: "${KSERVE_MODELS_NAMESPACE}"
   kserve_ingress_host: "${INGRESS_HOST}"
   kserve_ingress_port: "${INGRESS_PORT}"

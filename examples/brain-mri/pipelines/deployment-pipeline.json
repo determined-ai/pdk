@@ -41,5 +41,6 @@
         "env_var": "KSERVE_NAMESPACE"
       }
     ]
-  }
+  },
+  "autoscaling": true
 }

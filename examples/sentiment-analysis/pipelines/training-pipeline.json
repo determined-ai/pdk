@@ -42,5 +42,6 @@
         "env_var": "PAC_TOKEN"
       }
     ]
-  }
+  },
+  "autoscaling": true
 }

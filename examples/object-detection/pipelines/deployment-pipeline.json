@@ -42,10 +42,5 @@
       }
     ]
   },
-  "resource_limits": {
-    "gpu": {
-      "type": "nvidia.com/gpu",
-      "number": 1
-    }
-  }
+  "autoscaling": true
 }
