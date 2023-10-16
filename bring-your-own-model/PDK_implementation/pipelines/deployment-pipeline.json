@@ -18,7 +18,7 @@
     "stdin": [
       "python deploy.py --deployment-name customer-churn --cloud-model-host gcp --cloud-model-bucket pdk-repo-models --resource-requests cpu=2,memory=4Gi --resource-limits cpu=10,memory=8Gi"
     ],
-    "image": "tpomas/pdk:deploy_churn_0.0.7",
+    "image": "us-central1-docker.pkg.dev/dai-dev-554/pdk-registry/pdk_customer_churn_deploy:2.2",
     "secrets": [
       {
         "name": "pipeline-secret",
