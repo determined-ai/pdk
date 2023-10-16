@@ -23,8 +23,8 @@ The following software versions will be used for this installation:
 - Python: 3.8 and 3.9
 - Kubernetes (K8s): 1.24.0
 - Postgres: 13
-- Determined.AI: latest (currently 0.25.1)
-- Pachyderm: latest (currently 2.7.3)
+- MLDE (Determined.AI): latest *(currently 0.26.0)*
+- MLDM (Pachyderm): latest *(currently 0.27.3)*
 - KServe: 0.11.0rc1 (Quickstart Environment)
 
 PS: some of the commands used here are sensitive to the version of the product(s) listed above.
@@ -1074,21 +1074,10 @@ PS: This could take a couple of minutes. Run `kubectl -n ingress-system get svc`
 ### Step 14 - Prepare MLDE installation assets
 </a>
 
-First, download and unzip the Helm chart for MLDE:
+First, create a new values.yaml file for the Helm chart:
 
 ```bash
-wget https://hpe-mlde.determined.ai/latest/_downloads/389266101877e29ab82805a88a6fc4a6/determined-latest.tgz
-
-tar xvf determined-latest.tgz
-```
-
-PS: If this link doesn't work, you can download the latest Helm chart from this page:<br/>
-https://hpe-mlde.determined.ai/latest/setup-cluster/deploy-cluster/k8s/install-on-kubernetes.html
-
-Next, create a new values.yaml file for the Helm chart:
-
-```bash
-cat <<EOF > ./determined/values.yaml
+cat <<EOF > ${NAME}.mlde.values.yaml
 imageRegistry: determinedai
 enterpriseEdition: false
 imagePullSecretName:
@@ -1180,10 +1169,16 @@ EOF
 ### Step 15 - Deploy MLDE using Helm chart
 </a>
 
-To deploy MLDE, run this command:
+To deploy MLDE, run these commands:
 
 ```bash
-helm install determinedai ./determined
+
+helm repo add determined-ai https://helm.determined.ai/
+
+helm repo update
+
+helm install determinedai -f ${NAME}.mlde.values.yaml determined-ai/determined
+
 ```
 
 Because MLDE will be deployed to the default namespace, you can check the status of the deployment with `kubectl get pods` and `kubectl get svc`.<br/>
