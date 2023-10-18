@@ -26,3 +26,9 @@ resources:
     resource_pool: T4
     slots_per_trial: 1
 max_restarts: 0
+profiling:
+    enabled: true
+environment:
+    environment_variables:
+        - GRPC_ENABLE_FORK_SUPPORT=true
+        - GRPC_POLL_STRATEGY=poll
