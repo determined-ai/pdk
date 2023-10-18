@@ -1,0 +1,50 @@
+name: Build & publish PDK images
+on:
+    release:
+      types: [published]
+
+
+
+jobs:
+  build-and-push-image:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - dockerfolder: examples/training_container/
+            prefix: train
+          - dockerfolder: examples/brain-mri/container/deploy/
+            prefix: brain-deploy
+          - dockerfolder: examples/dog-cat/container/deploy/
+            prefix: dog-cat-deploy
+          - dockerfolder: examples/object-detection/container/deploy/
+            prefix: object-detection-deploy
+          - dockerfolder: examples/sentiment-analysis/container/deploy/
+            prefix: sentiment-analysis-deploy
+
+    steps:
+        - name: Checkout repository
+          uses: actions/checkout@v2
+        - 
+            name: Docker meta
+            id: meta
+            uses: docker/metadata-action@v5
+            with:
+              images: pachyderm/pdk
+              flavor: |
+                prefix=${{ matrix.prefix }}-
+        -
+          name: Login to Docker Hub
+          uses: docker/login-action@v3
+          with:
+            username: ${{ secrets.DOCKER_HUB_USERNAME }}
+            password: ${{ secrets.DOCKERHUB_TOKEN }}
+        -
+          name: Build and push
+          uses: docker/build-push-action@v5
+          with:
+            context:  ${{ matrix.dockerfolder }}
+            push: true
+            tags: ${{ steps.meta.outputs.tags }}
+            labels: ${{ steps.meta.outputs.labels }}
