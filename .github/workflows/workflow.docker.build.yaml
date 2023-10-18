@@ -20,6 +20,10 @@ jobs:
             prefix: object-detection-deploy
           - dockerfolder: examples/sentiment-analysis/container/deploy/
             prefix: sentiment-analysis-deploy
+          - dockerfolder: examples/sentiment-analysis/container/prep/
+            prefix: sentiment-analysis-prep
+          - dockerfolder: bring-your-own-model/PDK_implementation/container/deploy/
+            prefix: byom-deploy
 
     steps:
         - name: Checkout repository
@@ -27,7 +31,6 @@ jobs:
         - uses: dorny/paths-filter@v2
           id: filter
           with:
-            base: main
             filters: |
               dockerchange:
                 - '${{ matrix.dockerfolder }}**'

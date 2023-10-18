@@ -19,7 +19,7 @@
       "python deploy.py --deployment-name finbert-deploy --cloud-model-host gcp --cloud-model-bucket pdk-repo-models --resource-requests cpu=2,memory=8Gi --resource-limits cpu=10,memory=8Gi"
 
     ],
-    "image": "us-central1-docker.pkg.dev/dai-dev-554/pdk-registry/pdk_finbert_deploy:2.4",
+    "image": "pachyderm/pdk:sentiment-analysis-deploy-v0.0.1",
     "secrets": [
       {
         "name": "pipeline-secret",
