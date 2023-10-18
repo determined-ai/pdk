@@ -21,8 +21,8 @@ The following software versions will be used for this installation:
 - Python: 3.8 and 3.9
 - Kubernetes (K8s): 1.24.14-gke.2700
 - Postgres: 13
-- Determined.AI: 0.25.0
-- Pachyderm: 2.7.3
+- MLDE (Determined.AI): latest *(currently 0.26.0)*
+- MLDM (Pachyderm): latest *(currently 2.7.4)*
 - KServe: 0.11.0rc1 (Quickstart Environment)
 
 PS: some of the commands used here are sensitive to the version of the product(s) listed above.
@@ -557,10 +557,6 @@ deployTarget: "GOOGLE"
 
 pachd:
   enabled: true
-  externalService:
-    enabled: false
-  image:
-    tag: "2.7.3"
   lokiDeploy: true
   lokiLogging: true
   storage:
@@ -752,7 +748,7 @@ For this exercise, we will create a 20GB disk. You can increase this capacity as
 First, create the disk:
 
 ```bash
-gcloud compute disks create --size=20GB --zone=${GCP_ZONE} pdk-nfs-disk
+gcloud compute disks create --size=20GB --zone=${GCP_ZONE} ${NAME}-pdk-nfs-disk
 ```
 
 Next, we'll create a NFS server that uses this disk:
@@ -792,7 +788,7 @@ spec:
       volumes:
         - name: mypvc
           gcePersistentDisk:
-            pdName: pdk-nfs-disk
+            pdName: ${NAME}-pdk-nfs-disk
             fsType: ext4
 EOF
 ```
@@ -886,25 +882,15 @@ EOF
 
 &nbsp;
 
-The next step is to prepare the configuration file for MLDE installation. Download and unzip the Helm chart for MLDE:
+The next step is to prepare the configuration file for MLDE installation:
 
 ```bash
-wget https://hpe-mlde.determined.ai/latest/_downloads/389266101877e29ab82805a88a6fc4a6/determined-latest.tgz
-
-tar xvf determined-latest.tgz
-```
-
-PS: If this link doesn't work, you can download the latest Helm chart from this page:<br/>
-https://hpe-mlde.determined.ai/latest/setup-cluster/deploy-cluster/k8s/install-on-kubernetes.html
-
-Next, create a new values.yaml file for the Helm chart:
-
-```bash
-cat <<EOF > ./determined/values.yaml
+cat <<EOF > ${NAME}.mlde.values.yaml
 imageRegistry: determinedai
 enterpriseEdition: false
 imagePullSecretName:
 masterPort: 8080
+createNonNamespacedObjects: true
 useNodePortForMaster: true
 db:
   hostAddress: "cloudsql-auth-proxy.${MLDM_NAMESPACE}.svc.cluster.local."
@@ -1007,11 +993,15 @@ PS: To connect to the database, MLDE will use the same proxy that was created fo
 ### Step 17 - Deploy MLDE using Helm chart
 </a>
 
-To deploy MLDE, run this command:
+To deploy MLDE, run these commands:
 
 ```bash
 
-helm install determinedai ./determined
+helm repo add determined-ai https://helm.determined.ai/
+
+helm repo update
+
+helm install determinedai -f ${NAME}.mlde.values.yaml determined-ai/determined
 
 ```
 
@@ -1193,14 +1183,6 @@ Once the command completes, run this command to modify the `./examples/computer_
 ```bash
 cat <<EOF > ./examples/computer_vision/cifar10_pytorch/const.yaml
 name: cifar10_pytorch_const
-environment:
-  pod_spec:
-    spec:
-      tolerations:
-        - key: "nvidia.com/gpu"
-          operator: "Equal"
-          value: "present"
-          effect: "NoSchedule"
 hyperparameters:
   learning_rate: 1.0e-4
   learning_rate_decay: 1.0e-6
@@ -1220,10 +1202,10 @@ min_validation_period:
 max_restarts: 0
 resources:
   resource_pool: gpu-pool
-  slots_per_trial: 4
+  slots_per_trial: 2
 EOF
 ```
-PS: We need to modify this file because our GPU node pool is configured with taints that will reject workloads. In this case, we're setting a toleration for this taint. We're also configuring the experiment to use 4 GPUs. And we're reducing the number of epochs to keep the training time short.
+PS: We need to modify this file because our GPU node pool is configured with taints that will reject workloads. In this case, we're setting a toleration for this taint. We're also configuring the experiment to use 2 GPUs. And we're reducing the number of epochs to keep the training time short.
 
 Use this command to run the experiment:
 

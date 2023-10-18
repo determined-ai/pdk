@@ -19,4 +19,6 @@
       "python datasets.py --input_dir /pfs/data --output_dir /pfs/out"
     ],
     "image": "vmtyler/pdk:finbert_prep_0.0.4"
-  }}
+  },
+  "autoscaling": true
+}
