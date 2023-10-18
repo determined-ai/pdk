@@ -24,6 +24,8 @@ jobs:
             prefix: sentiment-analysis-deploy
           - dockerfolder: examples/sentiment-analysis/container/prep/
             prefix: sentiment-analysis-prep
+          - dockerfolder: bring-your-own-model/PDK_implementation/container/deploy
+            prefix: byom-deploy
     steps:
         - name: Checkout repository
           uses: actions/checkout@v2

@@ -17,7 +17,7 @@
       "/bin/sh"
     ],
     "stdin": [
-      "python train.py --git-url https://git@github.com:/determined-ai/pdk.git --git-ref main --sub-dir examples/object-detection/experiment --config const.yaml --repo object-detection-data --model sat-detection --project pdk-object-detection"
+      "python train.py --git-url https://git@github.com:/determined-ai/pdk.git --git-ref main --sub-dir examples/object-detection/experiment --config const.yaml --repo object-detection-data --model sat-detection --project pdk-object-detectio --incremental false"
     ],
     "image": "pachyderm/pdk:train-v0.0.1",
     "secrets": [
