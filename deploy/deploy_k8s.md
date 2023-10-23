@@ -121,8 +121,9 @@ export DB_ADMIN_PASSWORD="your-database-password"
 
 export MLDM_NAMESPACE="pachyderm"
 export KSERVE_MODELS_NAMESPACE="models"
-```
 
+export KUBERNETES_MASTER=https://localhost:16443
+```
 
 &nbsp;
 <a name="step2">
