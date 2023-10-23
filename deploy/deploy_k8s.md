@@ -154,7 +154,7 @@ Make sure all these commands return successfully. If one of them fails, fix the 
 kubectl version --client=true
 helm version
 pachctl version
-det version
+det --version
 jq --version
 ```
 
