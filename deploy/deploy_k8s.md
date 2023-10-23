@@ -181,9 +181,9 @@ kubectl label nodes --overwrite gpu-node-name node-role.kubernetes.io/gpu-worker
 
 kubectl taint nodes gpu-node-name nvidia.com/gpu=present:NoSchedule
 ```
-PS: make sure to replace `gpu-node-name` and `admin-node-name` with the names of your nodes.
+Make sure to replace `gpu-node-name` and `admin-node-name` with the names of your nodes.
 
-PS: if you have control plane nodes, along with CPU and GPU nodes, make sure to taint the control plane nodes so no pod are allocated there. That way, all products will be deployed to the CPU nodes and the GPU nodes will be reserved to run MLDE workloads.
+If you have control plane nodes, along with CPU and GPU nodes, make sure to taint the control plane nodes so no pod are allocated there. That way, all products will be deployed to the CPU nodes and the GPU nodes will be reserved to run MLDE workloads.
 
 
 
