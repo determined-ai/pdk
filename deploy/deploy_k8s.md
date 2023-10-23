@@ -132,7 +132,7 @@ export KSERVE_MODELS_NAMESPACE="models"
 Install `pachctl` (the command line utility for MLDM):
 
 ```bash
-curl -o /tmp/pachctl.deb -L https://github.com/pachyderm/pachyderm/releases/download/v2.7.3/pachctl_2.7.3_amd64.deb && sudo dpkg -i /tmp/pachctl.deb
+curl -o /tmp/pachctl.deb -L https://github.com/pachyderm/pachyderm/releases/download/v2.7.5/pachctl_2.7.5_amd64.deb && sudo dpkg -i /tmp/pachctl.deb
 ```
 
 
