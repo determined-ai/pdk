@@ -335,6 +335,7 @@ Use the service's IP address to run a container with the `psql` utility, which w
 ```bash
 kubectl run psql -it --rm=true --image=postgres:13 --command -- psql -h 10.152.183.67 -U postgres postgres
 ```
+Make sure to update the above with the IP address of `postgres-service` from `kubectl get svc`.
 
 After running this command, you will see a message saying `If you don't see a command prompt, try pressing enter`. At this time, the psql utility is waiting for the password before connecting to the instance. Type in the postgres admin password and hit enter. If the command worked, you will see the `postgres#` prompt. Otherwise, delete the pod, check the IP address and try again.
 
