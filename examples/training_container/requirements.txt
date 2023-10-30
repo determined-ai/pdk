@@ -1,2 +1,2 @@
-determined==0.22.0
-PyYAML==5.4.1
+determined==0.26.2
+ruamel.yaml<0.18.0
