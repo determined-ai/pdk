@@ -2,7 +2,7 @@ import argparse
 import os
 
 import git
-import yaml
+from ruamel.yaml import YAML
 from determined.common.experimental import experiment
 from determined.common.experimental.experiment import ExperimentState
 from determined.experimental import Determined
@@ -16,12 +16,12 @@ class DeterminedClient(Determined):
 
     def continue_experiment(self, config, parent_id, checkpoint_uuid):
         config["searcher"]["source_checkpoint_uuid"] = checkpoint_uuid
-
+        yaml = YAML(typ="safe")
         resp = self._session.post(
             "/api/v1/experiments",
             json={
                 "activate": True,
-                "config": yaml.safe_dump(config),
+                "config": yaml.dump(config),
                 "parentId": parent_id,
             },
         )
@@ -114,7 +114,8 @@ def read_config(conf_file):
     config = {}
     with open(conf_file, "r") as stream:
         try:
-            config = yaml.safe_load(stream)
+            yaml = YAML(typ="safe")
+            config = yaml.load(stream)
         except yaml.YAMLError as exc:
             print(exc)
     return config
@@ -259,7 +260,8 @@ def write_model_info(file, model_name, model_version, pipeline, repo):
 
     with open(file, "w") as stream:
         try:
-            yaml.safe_dump(model, stream)
+            yaml = YAML(typ="safe")
+            yaml.dump(model, stream)
         except yaml.YAMLError as exc:
             print(exc)
 
