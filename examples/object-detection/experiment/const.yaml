@@ -15,20 +15,21 @@ profiling:
  begin_on_batch: 0
  end_after_batch: null
 hyperparameters:
-    lr: 0.02
+    lr: .0004261457
     momentum: 0.9
     global_batch_size: 16
     weight_decay: 1.0e-4
     gamma: 0.1
     warmup: linear
     warmup_iters: 200
-    warmup_ratio: 0.001
+    warmup_ratio: 0.724677 # The fraction between 0-1 that defines the percentage of lr you want to start the lr at
     pretrained_model: "https://storage.googleapis.com/ai-at-scale-pdk-assets/sample-data/pdk-object-detection/pretrained-model/frcnn_xview.pth"
     #finetune_ckpt: "/lus/aiholus1/disk/andrew.mendez/model_479.pth"
     step1: 504 # 14 epochs: 14*36 == 504
     step2: 540 # 15 epochs: 15*36 == 540
     model: fasterrcnn_resnet50_fpn
     num_workers: 4
+    #device: cuda
 environment:
     image: mendeza/obj-det-pdk-train-env:0.0.2
     environment_variables:
@@ -38,15 +39,15 @@ environment:
 
 scheduling_unit: 400
 min_validation_period:
-    batches: 36 # For training
+    batches: 5 # For training
 
 searcher:
   name: single
   metric: mAP
   smaller_is_better: true
   max_length:
-    batches: 2 # 1*(579/16) = 1*36
-records_per_epoch: 32 # 32 records / 16
+    batches: 10 # 1*(9/16) = 1*1
+records_per_epoch: 9 # 9 records / 16
 resources:
     slots_per_trial: 1
     resource_pool: gpu-pool
