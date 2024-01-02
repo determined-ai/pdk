@@ -4,7 +4,7 @@
 
 # PDK - Pachyderm | Determined | KServe
 ## Deployment and Setup Guide
-**Date/Revision:** August 30, 2023
+**Date/Revision:** January 02, 2024
 
 This page contains step-by-step guides for installing the infrastructure and all necessary components for the PDK environment, covering different Kubernetes plaforms.
 
@@ -46,7 +46,7 @@ The diagram below illustrates how the PDK flow will work:
 [pdk_flow]: images/pdk_flow.png "PDK Flow"
 
 - A new project with 2 pipelines will be created in MLDM
-  - Data (one or more files) will be uploaded to the MLDM repository
+  - Data (a collection of files) will be uploaded to the MLDM repository
   - This repository will be the input for the the 'Train' pipeline, which will start automatically, to create a new Experiment in MLDE
   - To generate a new Experiment, the pipeline will need to download the assets (configuration + code) from github
     - Technically speaking, these assets can be stored anywhere, but github is the easiest way to maintain the code
@@ -59,17 +59,23 @@ The diagram below illustrates how the PDK flow will work:
 &nbsp;
 
 This repository includes an [Examples](../examples/) folder with a number of sample PDK projects. Each PDK example will have 3 main components:
-- MLDE Experiment: this is the code and other assets that will be needed to train the model inside MLDE. This code will be pushed to Github, where it will be downloaded by the MLDM pipeline.
+- MLDE Experiment: includes the code and other assets that will be needed to train the model inside MLDE. This code will be pushed to Github, where it will be downloaded by the MLDM pipeline.
 
-- Docker Images: the `'Train'` and `'Deploy'` images described above. As part of this document, we will walk through the steps of building and pushing the images to the registry. Optionally, you can use the hosted images from the provided example (if you don't want to build and push your own container images).
+- Docker Images: the `'Train'` and `'Deploy'` images described above. Since the same training image can be used with all models, it will be located in a separated folder. As part of this document, we will walk through the steps of building and pushing the images to the registry. Optionally, you can use the hosted images from the provided example (if you don't want to build and push your own container images).
 
 - Pipeline definitions: these are JSON files that will create the `Train` and `Deploy` pipelines, assigning the docker images that will be used by each.
 
 In this guide, we will deploy one of the example projects (Dogs and Cats), to ensure that all PDK components are working properly. For each example, you will find a brief description of how to set it up and run the PDK flow, as well as sample data to test the inference service. 
 
-If you are planning on creating your own images, or change the experiment settings, the easiest way is to fork the repository, [clone](https://github.com/determined-ai/pdk.git) it locally and make the changes.
+If you are planning on creating your own images, or change the experiment settings, the easiest way is to fork the repository, [clone](https://github.com/determined-ai/pdk.git) it locally and make the changes:
 
-Once you download the repository, go to the `examples/dog-cat` folder, which contains all the necessary assets:
+```bash
+git clone https://github.com/determined-ai/pdk.git .
+```
+
+&nbsp;
+
+Once you clone the repository, go to the `examples/dog-cat` folder, which contains all the necessary assets:
 
 ![alt text][github_01_dogcat_folder]
 
@@ -84,8 +90,6 @@ If you've followed the setup instructions provided in this repository, you now h
 ```bash
 export AZ_REGION=$(kubectl get cm pdk-config -o=jsonpath='{.data.region}') && echo $AZ_REGION
 
-export MLDM_NAMESPACE=$(kubectl get cm pdk-config -o=jsonpath='{.data.mldm_namespace}') && echo $MLDM_NAMESPACE
-
 export MLDM_BUCKET_NAME=$(kubectl get cm pdk-config -o=jsonpath='{.data.mldm_bucket_name}') && echo $MLDM_BUCKET_NAME
 
 export MLDM_HOST=$(kubectl get cm pdk-config -o=jsonpath='{.data.mldm_host}') && echo $MLDM_HOST
@@ -93,8 +97,6 @@ export MLDM_HOST=$(kubectl get cm pdk-config -o=jsonpath='{.data.mldm_host}') &&
 export MLDM_PORT=$(kubectl get cm pdk-config -o=jsonpath='{.data.mldm_port}') && echo $MLDM_PORT
 
 export MLDM_URL=$(kubectl get cm pdk-config -o=jsonpath='{.data.mldm_url}') && echo $MLDM_URL
-
-export MLDM_PIPELINE_SECRET=$(kubectl get cm pdk-config -o=jsonpath='{.data.mldm_pipeline_secret}') && echo $MLDM_PIPELINE_SECRET
 
 export MLDE_BUCKET_NAME=$(kubectl get cm pdk-config -o=jsonpath='{.data.mlde_bucket_name}') && echo $MLDE_BUCKET_NAME
 
@@ -104,7 +106,7 @@ export MLDE_PORT=$(kubectl get cm pdk-config -o=jsonpath='{.data.mlde_port}') &&
 
 export MLDE_URL=$(kubectl get cm pdk-config -o=jsonpath='{.data.mlde_url}') && echo $MLDE_URL
 
-export MODEL_ASSETS_BUCKET_NAME=$(kubectl get cm pdk-config -o=jsonpath='{.data.kserve_model_bucket_name}') && echo $MODEL_ASSETS_BUCKET_NAME
+export MODEL_ASSETS_BUCKET_NAME=$(kubectl get cm pdk-config -o=jsonpath='{.data.model_assets_bucket_name}') && echo $MODEL_ASSETS_BUCKET_NAME
 
 export KSERVE_MODELS_NAMESPACE=$(kubectl get cm pdk-config -o=jsonpath='{.data.kserve_model_namespace}') && echo $KSERVE_MODELS_NAMESPACE
 
@@ -163,6 +165,10 @@ Also, don't forget to create a Workspace and a Project in MLDE with the same nam
 The workspace and project can also be created through the command line:
 
 ```bash
+export DET_MASTER=${MLDE_HOST}:${MLDE_PORT}
+
+det u login admin
+
 det w create "PDK Demos"
 
 det p create "PDK Demos" pdk-dogs-and-cats
@@ -180,9 +186,6 @@ A brief description of the Experiment files:
 &nbsp;
 `startup_hook.sh`: this file will be executed for every experiment, before the python script. It's a good place to run any routines required to prepare the container for the execution of the python code.
 
-&nbsp;
-`requirements.txt`: list of packages needed to run the experiment. Executed after the container is created.
-
 
 <br/>
 &nbsp;
@@ -197,7 +200,7 @@ The experiment files don't need to be modified, except for the Workspace and Pro
 
 In this step, we'll setup the Train and Deploy images. There's no need to change any of the code, though we will review some key parts of it.
 
-In the `container/train` folder, you will find the files for the Train image. If you wish to test this flow as-is, there will be no need to rebuild or push new images to the repository. However, assuming that you want to make changes to it (or adapt this code to a different type of model), we'll review the necessary steps.
+In the `examples/training_container` folder, you will find the files for the Train image. If you wish to test this flow as-is, there will be no need to rebuild or push new images to the repository. However, assuming that you want to make changes to it (or adapt this code to a different type of model), we'll review the necessary steps.
 
 Taking a closer look at the `train.py` file, we can see that a number of input arguments are being parsed:
 
@@ -263,7 +266,7 @@ The first step will be to build and push the Train image. There's no need to mak
 
 PS: If you're running this on a MacOS, there are additional settings needed to set the image for linux (otherwise it will fail to run). They are included below.
 
-Go to the `/container/train` folder and run the commands below to build, tag and push the `Train` image. Don't forget to rename the images. 
+Go to the `/examples/training_container` folder and run the commands below to build, tag and push the `Train` image. Don't forget to rename the images. 
 
 ```bash
 export DOCKER_DEFAULT_PLATFORM=linux/amd64
@@ -292,7 +295,7 @@ Check your registry to make sure the image was pushed successfully. Review the c
 
 ### Build and push the Deploy image
 
-Go to the `/container/deploy` folder. The code for deploy is more complicated, since it involves KServe as well. Study the code to understand how the process is being handled (the `common.py` file contains utility functions).
+Go to the `examples/dog-cat/container/deploy` folder. The code for deploy is more complicated, since it involves KServe as well. Study the code to understand how the process is being handled (the `common.py` file contains utility functions).
 
 Run these commands to build, tag and push the Deploy image:
 
@@ -318,7 +321,7 @@ This can take a long time, because of the dependencies needed to build the image
 
 If you made any changes to any of the files, make sure to push them to your Github repo.
 
-PS: if you're using a Mac, delete the .DS_store files before committing.
+PS: if you're using a Mac, delete the .DS_store files before committing (or add it to `.gitignore`).
 
 ```bash
 find . -name '.DS_Store' -type f -delete
@@ -369,10 +372,10 @@ If you have an on-prem environment with shared folders, use the `_onprem_trainin
 In the Training pipeline file, change the command line to point to your github repo (if you want to run your own code), and the image name to match the image you just pushed. You can leave the default values, if you did not create an image or made any changes to the experiment code.
 
 ```bash
-    "stdin": [
-      "python train.py --git-url https://git@github.com:/determined-ai/pdk.git --git-ref main --sub-dir dog-cat/experiment --config const.yaml --repo dogs-and-cats-data --model dogs-and-cats --project pdk-dogs-and-cats"
+"stdin": [
+      "python train.py --git-url https://git@github.com:/determined-ai/pdk.git --git-ref main --sub-dir examples/dog-cat/experiment --config const.yaml --repo dogs-and-cats-data --model dogs-and-cats --project pdk-dogs-and-cats"
     ],
-    "image": "vmtyler/pdk:train_0.1.1",
+    "image": "pachyderm/pdk:train-v0.0.1",
 ```
 
 
@@ -403,7 +406,7 @@ The MLDM UI will show the new Project, the repository and the pipeline:
 
 &nbsp;
 
-Each new pipeline will create a pod in the `${MLDM_NAMESPACE}` namespace. Check the status of the Pod before continuing. `imgPullBackError` means the cluster was unable to pull the image from your registry. Other errors might indicate lack of permissions, etc.
+Each new pipeline will create a pod in the `${MLDM_NAMESPACE}` namespace. With the cluster defaults in place, the pod will be deleted if there are no active workloads to process. Check the status of the Pod before continuing. `imgPullBackError` means the cluster was unable to pull the image from your registry. Other errors might indicate lack of permissions, etc.
 
 
 Next, create the deployment pipeline:
@@ -432,10 +435,10 @@ For on-prem, these attributes are not necessary, and the service account configu
 Also, replace the path to your image, or use the default value.
 
 ```bash
-    "stdin": [
-      "python deploy.py --deployment-name dog-cat --cloud-model-host gcp --cloud-model-bucket <NAME>-repo-models --resource-requests cpu=2,memory=8Gi --resource-limits cpu=10,memory=8Gi"
+ "stdin": [
+      "python deploy.py --deployment-name dog-cat --cloud-model-host gcp --cloud-model-bucket pdk-repo-models --resource-requests cpu=2,memory=8Gi --resource-limits cpu=10,memory=8Gi"
     ],
-    "image": "vmtyler/pdk:deploy_0.0.10",
+    "image": "pachyderm/pdk:dog-cat-deploy-v0.0.1",
 ```
 &nbsp;
 
@@ -491,11 +494,11 @@ The new experiment will appear in the project inside your Workspace:
 
 [mlde_03_training]: images/mlde_03_training.png "MLDE Experiment list"
 
-The experiment might take a minute to start, as it's preparing the environment.
+The experiment might take a minute to start, as it's preparing the environment. IF there are no GPUs available, a new node will be provisioned automatically.
 
 &nbsp;
 
-Once the training is complete, the deployment pipeline will be executed. You can look at the logs of the pipeline execution by clicking on `Pipeline`, then select `Jobs`, select the newest job (probably in `Running` state), then select the pipeline stage (`dogs-and-cats-deploy`), and then `Read Logs`. You should see a message in the logs about the model being deployed to KServe.
+Once the training is complete, the deployment pipeline will be executed. You can look at the logs of the pipeline execution by clicking on `Pipeline`, then click on `Subjob - Running`. You should see a message in the logs about the model being deployed to KServe.
 
 
 ![alt text][mldm_05_job]
@@ -511,11 +514,10 @@ kubectl -n ${KSERVE_MODELS_NAMESPACE} get inferenceservices
 This is the expected output of this command:
 
 ```bash
-(base) denis.abrantes@Deniss-MacBook-Pro pipelines % kubectl -n ${KSERVE_MODELS_NAMESPACE} get inferenceservices
-NAME            URL                                       READY   PREV   LATEST   PREVROLLEDOUTREVISION   LATESTREADYREVISION                     AGE
-dogcat-deploy   http://dogcat-deploy.models.example.com   True           100                              dogcat-deploy-predictor-default-00001   2m21s
-sklearn-iris    http://sklearn-iris.models.example.com    True           100                              sklearn-iris-predictor-default-00001    6h50m
-(base) denis.abrantes@Deniss-MacBook-Pro pipelines %
+kubectl -n ${KSERVE_MODELS_NAMESPACE} get inferenceservices
+NAME           URL                                      READY   PREV   LATEST   PREVROLLEDOUTREVISION   LATESTREADYREVISION            AGE
+dog-cat        http://dog-cat.models.example.com        True           100                              dog-cat-predictor-00001        2m5s
+sklearn-iris   http://sklearn-iris.models.example.com   True           100                              sklearn-iris-predictor-00001   120m
 ```
 
 It might take a minute for the inference service to go from `Unknown` to `True`.
@@ -537,13 +539,21 @@ Once the `JSON` files are ready, we can make a call to the inference service.
 To make a prediction, you can use the curl command below. First, let's submit the `cat.json` file. Replace the IP with your `istio-ingressgateway` external IP Address and execute the command.
 
 ```bash
-curl -v -H "Host: dog-cat.models.example.com" http://${INGRESS_HOST}:${INGRESS_PORT}/v1/models/dogs-and-cats:predict -d @./cat.json
+curl -v \
+-H "Content-Type: application/json" \
+-H "Host: dog-cat.models.example.com" \
+http://${INGRESS_HOST}:${INGRESS_PORT}/v1/models/dogs-and-cats:predict \
+-d @./cat.json
 ```
 
 Then, make a prediction for `dog.json` by replacing the IP with your `istio-ingressgateway` external IP Address and executing the command.
 
 ```bash
-curl -v -H "Host: dog-cat.models.example.com" http://${INGRESS_HOST}:${INGRESS_PORT}/v1/models/dogs-and-cats:predict -d @./dog.json
+curl -v \
+-H "Content-Type: application/json" \
+-H "Host: dog-cat.models.example.com" \
+http://${INGRESS_HOST}:${INGRESS_PORT}/v1/models/dogs-and-cats:predict \
+-d @./dog.json
 ```
 
 If all goes well, you should get the predictions returned for both the `cat.json` and the `dog.json` examples with the HTTP status 200 (OK).</br></br>

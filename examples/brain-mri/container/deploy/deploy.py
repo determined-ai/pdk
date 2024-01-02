@@ -63,7 +63,7 @@ def create_mar_file(model_name, model_version):
 
 def create_properties_file(model_name, model_version):
     config_properties = """inference_address=http://0.0.0.0:8085
-management_address=http://0.0.0.0:8081
+management_address=http://0.0.0.0:8083
 metrics_address=http://0.0.0.0:8082
 grpc_inference_port=7070
 grpc_management_port=7071
