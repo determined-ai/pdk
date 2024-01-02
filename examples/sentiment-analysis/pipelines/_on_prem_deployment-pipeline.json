@@ -19,7 +19,7 @@
       "python deploy.py --deployment-name finbert-deploy --service-account-name pach-deploy --resource-requests cpu=2,memory=4Gi --resource-limits cpu=10,memory=8Gi"
 
     ],
-    "image": "pachyderm/pdk:sentiment-analysis-deploy-v0.0.1",
+    "image": "us-central1-docker.pkg.dev/dai-dev-554/pdk-registry/pdk_finbert_deploy:2.4",
     "secrets": [
       {
         "name": "pipeline-secret",

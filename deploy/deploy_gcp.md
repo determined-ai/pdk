@@ -4,7 +4,7 @@
 
 # PDK - Pachyderm | Determined | KServe
 ## Deployment Guide for Google Cloud
-<b>Date/Revision:</b> July 30, 2023
+<b>Date/Revision:</b> January 02, 2024
 
 This guide will walk you through the steps of deploying the PDK components to Google Cloud.
 
@@ -19,11 +19,11 @@ The 3 CPU-based nodes will be used to run the services for all 3 products, and t
 The following software versions will be used for this installation:
 
 - Python: 3.8 and 3.9
-- Kubernetes (K8s): 1.24.14-gke.2700
+- Kubernetes (K8s): latest supported *(currently 1.27)*
 - Postgres: 13
-- MLDE (Determined.AI): latest *(currently 0.26.0)*
-- MLDM (Pachyderm): latest *(currently 2.7.4)*
-- KServe: 0.11.0rc1 (Quickstart Environment)
+- MLDE (Determined.AI): latest *(currently 0.26.7)*
+- MLDM (Pachyderm): latest *(currently 2.8.2)*
+- KServe: 0.12.0-rc0 (Quickstart Environment)
 
 PS: some of the commands used here are sensitive to the version of the product(s) listed above.
 
@@ -34,7 +34,7 @@ To follow this documentation you will need:
 - The following applications, installed and configured in your computer:
   - kubectl
   - docker (you'll need docker desktop or similar to create and push images)
-  - git (you'll need to be logged in to your github account to pull code for the MLDM pipelines)
+  - git (to clone the repository with the examples)
   - gcloud (make sure it's initialized and logged in; basic client configuration is out of scope for this doc)
   - helm
   - jq
@@ -92,34 +92,33 @@ In this section, we will execute the following steps:
 
 [10 - Configure security settings for the MLDE GPU Node Pool](#step10)
 
-[11 - Create configuration .yaml file for MLDM](#step11)
+[11 - Deploy KServe](#step11)
 
-[12 - Install MLDM using Helm](#step12)
+[12 - Create static IP for MLDE](#step12)
 
-[13 - Retrieve MLDM IP address and configure pachctl command line](#step13)
+[13 - Deploy nginx, configured to use the static IP](#step13)
 
-[14 - Create static IP for MLDE](#step14)
+[14 - Prepare MLDE installation assets](#step14)
 
-[15 - Deploy nginx, configured to use the static IP](#step15)
+[15 - Create configuration .yaml file for MLDM and MLDE](#step15)
 
-[16 - Prepare MLDE installation assets](#step16)
+[16 - Install MLDM and MLDE using Helm](#step16)
 
-[17 - Deploy MLDE using Helm chart](#step17)
+[17 - Create new Ingress for MLDE](#step17)
 
-[18 - Create new Ingress for MLDE](#step18)
+[18 - Retrieve MLDM and MLDE IP addresses and configure command line clients](#step18)
 
-[19 - Deploy KServe](#step19)
+[19 - (Optional) Test Components](#step19)
 
-[20 - (Optional) Test Components](#step20)
+[20 - Prepare for PDK Setup](#step20)
 
-[21 - Prepare for PDK Setup](#step21)
+[21 - [Optional] Configure KServe UI](#step21)
 
-[21b - [Optional] Configure KServe UI](#step21b)
-
-[22 - Prepare Docker and the Container Registry](#step22)
+[22 - [Optional] Prepare Docker and the Container Registry](#step22)
 
 [23 - Save data to Config Map](#step23)
 
+[24 - Create Cleanup Script](#step24)
 
 
 There is also a list of GCP-specific [Useful Commands](#commands) at the bottom of the page.
@@ -140,21 +139,25 @@ You should only need to change the first block of variables.
 
 All commands listed throghout this document must be executed in the same terminal window.
 
-PS: Keep in mind that custom roles in Google Cloud will take 7 days to be deleted, so if you need to reinstall this environment in the same project, change the value of the GSA_ROLE_NAME variable to something unique.
+PS: Keep in mind that custom roles in Google Cloud will take 7 days to be deleted, and they cannot be named after an existing role, even if that role is deleted. Effectively, you cannot reuse the same role name for 7 days after deleting it. Because of that, we are adding a dynamic suffix to the GSA_ROLE_NAME variable. That way, you can reinstall the cluster immediately without running into errors when creating the role.
 
 ```bash
 # MODIFY THESE VARIABLES
 export PROJECT_ID="your-google-cloud-project-id"
 export NAME="your-name-pdk"
 export SQL_ADMIN_PASSWORD="your-database-password"
-# GSA Role name cannot have dashes or spaces (plus it needs to be unique)
-export GSA_ROLE_NAME="your_unique_gsa_role_name"
+# Role names cannot have spaces, special characters or dashes.
+export GSA_ROLE="your_gsa_role_name"
+
+# Create dynamic appendix for role name
+export ROLE_SUFFIX=$(openssl rand -base64 12 | tr -dc A-Za-z0-9 | head -c5)
+export GSA_ROLE_NAME="${GSA_ROLE}_${ROLE_SUFFIX}"
+
 
 # These can be modified as needed
 export GCP_REGION="us-central1"
 export GCP_ZONE="us-central1-c"
-export K8S_VERSION="1.24.14-gke.2700"
-export MLDM_NAMESPACE="pachyderm"
+export K8S_VERSION="1.27.3-gke.100"
 export KSERVE_MODELS_NAMESPACE="models"
 export CLUSTER_MACHINE_TYPE="e2-standard-16"
 export GPU_MACHINE_TYPE="n1-standard-8"
@@ -182,9 +185,9 @@ export ROLE5="roles/containerregistry.ServiceAgent"
 
 export SERVICE_ACCOUNT="${GSA_NAME}@${PROJECT_ID}.iam.gserviceaccount.com"
 export LOKI_SERVICE_ACCOUNT="${LOKI_GSA_NAME}@${PROJECT_ID}.iam.gserviceaccount.com"
-export PACH_WI="serviceAccount:${PROJECT_ID}.svc.id.goog[${MLDM_NAMESPACE}/pachyderm]"
-export SIDECAR_WI="serviceAccount:${PROJECT_ID}.svc.id.goog[${MLDM_NAMESPACE}/pachyderm-worker]"
-export CLOUDSQLAUTHPROXY_WI="serviceAccount:${PROJECT_ID}.svc.id.goog[${MLDM_NAMESPACE}/k8s-cloudsql-auth-proxy]"
+export PACH_WI="serviceAccount:${PROJECT_ID}.svc.id.goog[default/pachyderm]"
+export SIDECAR_WI="serviceAccount:${PROJECT_ID}.svc.id.goog[default/pachyderm-worker]"
+export CLOUDSQLAUTHPROXY_WI="serviceAccount:${PROJECT_ID}.svc.id.goog[default/k8s-cloudsql-auth-proxy]"
 export MLDE_WI="serviceAccount:${PROJECT_ID}.svc.id.goog[default/determined-master-determinedai]"
 export MLDE_DF_WI="serviceAccount:${PROJECT_ID}.svc.id.goog[default/default]"
 export MLDE_GPU_WI="serviceAccount:${PROJECT_ID}.svc.id.goog[gpu-pool/default]"
@@ -338,9 +341,9 @@ gcloud container node-pools create "gpu-pool" \
 	--node-labels nodegroup-role=gpu-worker \
 	--metadata disable-legacy-endpoints=true \
   --node-taints nvidia.com/gpu=present:NoSchedule \
-	--num-nodes "2" \
+	--num-nodes "1" \
 	--enable-autoscaling \
-	--min-nodes "2" \
+	--min-nodes "1" \
 	--max-nodes "4" \
 	--location-policy "BALANCED" \
 	--enable-autoupgrade \
@@ -462,7 +465,7 @@ echo $STATIC_IP_ADDR
 </a>
 
 In this step, we create a service account for the MLDM - Loki service.
-We'll also create the namespace for MLDM (in this case, called pachyderm). Finally, we'll bind some MLDE and MLDM services to the main service account (so they can access the DB and the storage bucket).
+Also, we'll bind some MLDE and MLDM services to the main service account (so they can access the DB and the storage bucket).
 
 
 ```bash
@@ -478,9 +481,7 @@ gcloud projects add-iam-policy-binding ${PROJECT_ID} \
     --member="serviceAccount:${LOKI_SERVICE_ACCOUNT}" \
     --role="${ROLE3}"
 
-kubectl create ns ${MLDM_NAMESPACE}
-
-kubectl -n ${MLDM_NAMESPACE} create secret generic loki-service-account --from-file="${LOKI_GSA_NAME}-key.json"
+kubectl -n default create secret generic loki-service-account --from-file="${LOKI_GSA_NAME}-key.json"
 
 gcloud iam service-accounts add-iam-policy-binding ${SERVICE_ACCOUNT} \
     --role roles/iam.workloadIdentityUser \
@@ -524,7 +525,7 @@ You can also use this command to list allocatable GPUs per node:
 kubectl describe nodes  |  tr -d '\000' | sed -n -e '/^Name/,/Roles/p' -e '/^Capacity/,/Allocatable/p' -e '/^Allocated resources/,/Events/p'  | grep -e Name  -e  nvidia.com  | perl -pe 's/\n//'  |  perl -pe 's/Name:/\n/g' | sed 's/nvidia.com\/gpu:\?//g'  | sed '1s/^/Node Available(GPUs)  Used(GPUs)/' | sed 's/$/ 0 0 0/'  | awk '{print $1, $2, $3}'  | column -t
 ```
 
-For the MLDE installation, we'll configure the GPU nodes to be in a separate Resource Pool. This requires a new namespace for the GPU nodes, as experiments will run as pods in that namespace (that will then be bound to the GPU nodes). We will need to grant permissions for the service accounts in both *default* and *gpu-pool* namespaces, so experiments, notebooks and other tasks can save and read checkpoint files from the storage bucket. The service account for MLDE is created by the installer, so we will set those permissions once MLDE is deployed. For now, run these commands to grant bucket access permissions:
+For the MLDE setup, we'll configure the GPU nodes to be in a separate Resource Pool. This requires a new namespace for the GPU nodes, as experiments will run as pods in that namespace (that will then be bound to the GPU nodes). We will need to grant permissions for the service accounts in both *default* and *gpu-pool* namespaces, so experiments, notebooks and other tasks can save and read checkpoint files from the storage bucket. The service account for MLDE is created by the installer, so we will set those permissions once MLDE is deployed. For now, run these commands to grant bucket access permissions:
 
 ```bash
 kubectl create ns gpu-pool
@@ -546,156 +547,27 @@ gcloud iam service-accounts add-iam-policy-binding ${SERVICE_ACCOUNT} \
 
 &nbsp;
 <a name="step11">
-### Step 11 - Create configuration .yaml file for MLDM
+### Step 11 - Deploy KServe
 </a>
 
-This command will create a .yaml file that you can review in a text editor.
+KServe is a standard Model Inference Platform on Kubernetes, built for highly scalable use cases. It provides performant, standardized inference protocol across ML frameworks, including PyTorch, TensorFlow and Keras.
+Additionally, KServe provides features such as automatic scaling, monitoring, and logging, making it easy to manage deployed models in production. Advanced features, such as canary rollouts, experiments, ensembles and transformers are also available.
+For more information on KServe, please visit <a href="https://kserve.github.io/website/0.9/">the official KServe documentation</a>.
+
+
+Installation of KServe is very straightforward, because we are using the Quick Start. This is naturally only an option for test or demo environments;
 
 ```bash
-cat <<EOF > ${NAME}.mldm.values.yaml
-deployTarget: "GOOGLE"
-
-pachd:
-  enabled: true
-  lokiDeploy: true
-  lokiLogging: true
-  storage:
-    google:
-      bucket: "${MLDM_BUCKET_NAME}"
-  serviceAccount:
-    additionalAnnotations:
-      iam.gke.io/gcp-service-account: "${SERVICE_ACCOUNT}"
-    create: true
-    name:   "pachyderm"
-  worker:
-    serviceAccount:
-      additionalAnnotations:
-        iam.gke.io/gcp-service-account: "${SERVICE_ACCOUNT}"
-      create: true
-      name:   "pachyderm-worker"
-
-cloudsqlAuthProxy:
-  enabled: true
-  connectionName: ${CLOUDSQL_CONNECTION_NAME}
-  serviceAccount: "${SERVICE_ACCOUNT}"
-  resources:
-    requests:
-      memory: "500Mi"
-      cpu:    "250m"
-
-postgresql:
-  enabled: false
-
-global:
-  postgresql:
-    postgresqlHost: "cloudsql-auth-proxy.${MLDM_NAMESPACE}.svc.cluster.local."
-    postgresqlPort: "5432"
-    postgresqlSSL: "disable"
-    postgresqlUsername: "postgres"
-    postgresqlPassword: "${SQL_ADMIN_PASSWORD}"
-
-loki-stack:
-  loki:
-    env:
-    - name: GOOGLE_APPLICATION_CREDENTIALS
-      value: /etc/secrets/${LOKI_GSA_NAME}-key.json
-    extraVolumes:
-      - name: loki-service-account
-        secret:
-          secretName: loki-service-account
-    extraVolumeMounts:
-      - name: loki-service-account
-        mountPath: /etc/secrets
-    config:
-      schema_config:
-        configs:
-        - from: 1989-11-09
-          object_store: gcs
-          store: boltdb
-          schema: v11
-          index:
-            prefix: loki_index_
-          chunks:
-            prefix: loki_chunks_
-      storage_config:
-        gcs:
-          bucket_name: "${LOKI_BUCKET_NAME}"
-        # https://github.com/grafana/loki/issues/256
-        bigtable:
-          project: project
-          instance: instance
-        boltdb:
-          directory: /data/loki/indices
-  grafana:
-    enabled: true
-
-proxy:
-  enabled: true
-  service:
-    type: LoadBalancer
-    loadBalancerIP: ${STATIC_IP_ADDR}
-    httpPort: 80
-    httpsPort: 443
-  tls:
-    enabled: false
-EOF
+curl -s "https://raw.githubusercontent.com/kserve/kserve/master/hack/quick_install.sh" | bash
 ```
+
+After running this command, wait about 10 minutes for all the services to be properly initialized.
 
 
 
 &nbsp;
 <a name="step12">
-### Step 12 - Install MLDM using Helm
-</a>
-
-First, download the charts for MLDM:
-
-```bash
-helm repo add pachyderm https://helm.pachyderm.com
-
-helm repo update
-```
-
-Then run the installer, referencing the .yaml file you just created:
-
-```bash
-helm install pachyderm -f ./${NAME}.mldm.values.yaml pachyderm/pachyderm --namespace ${MLDM_NAMESPACE}
-```
-
-Give it a couple of minutes for all the services to be up and running. You can run `kubectl -n ${MLDM_NAMESPACE} get pods` to see if any pods failed or are stuck. Wait until all pods are running before continuing.
-
-
-
-&nbsp;
-<a name="step13">
-### Step 13 - Retrieve MLDM IP address and configure pachctl command line
-</a>
-
-In this step, we'll configure your pachctl. This will be important later, as we create the project, repo and pipeline for the PDK environment.
-
-```bash
-export STATIC_IP_ADDR_NO_QUOTES=$(echo "$STATIC_IP_ADDR" | tr -d '"')
-
-export PACH_URL="http://${STATIC_IP_ADDR_NO_QUOTES}:80"
-
-echo "MLDM Address: http://${STATIC_IP_ADDR_NO_QUOTES}:80"
-
-pachctl connect ${PACH_URL}
-
-pachctl config set active-context ${PACH_URL}
-```
-
-At this time, you should be able to access the MLDM UI using the URL that was printed in the terminal:
-
-![alt text][gcp_mldm_01_dashboard]
-
-[gcp_mldm_01_dashboard]: images/gcp_mldm_01_dashboard.png "MLDM Dashboard"
-
-
-
-&nbsp;
-<a name="step14">
-### Step 14 - Create static IP for MLDE
+### Step 12 - Create static IP for MLDE
 </a>
 
 ```bash
@@ -709,8 +581,8 @@ echo $MLDE_STATIC_IP_ADDR
 
 
 &nbsp;
-<a name="step15">
-### Step 15 - Deploy nginx, configured to use the static IP
+<a name="step13">
+### Step 13 - Deploy nginx, configured to use the static IP
 </a>
 
 Nginx will be configured to listen on port 80 (instead of the default 8080 used by MLDE).
@@ -737,18 +609,18 @@ Make sure the Public IP matches the static IP you've created in the previous ste
 
 
 &nbsp;
-<a name="step16">
-### Step 16 - Prepare MLDE installation assets
+<a name="step14">
+### Step 14 - Prepare MLDE installation assets
 </a>
 
 First, we need to provision shared storage for MLDE. This will be used to provide a shared folder that can be used by Notebook users in the MLDE UI. This will allow users to save their own code and notebooks in a persistent volume.
 
-For this exercise, we will create a 20GB disk. You can increase this capacity as needed.
+For this exercise, we will create a 200GB disk. You can increase this capacity as needed.
 
 First, create the disk:
 
 ```bash
-gcloud compute disks create --size=20GB --zone=${GCP_ZONE} ${NAME}-pdk-nfs-disk
+gcloud compute disks create --size=200GB --zone=${GCP_ZONE} ${NAME}-pdk-nfs-disk
 ```
 
 Next, we'll create a NFS server that uses this disk:
@@ -814,7 +686,7 @@ spec:
 EOF
 ```
 
-Because Persistent Volume Claims are namespace-bound objects, and we'll have 2 namespaces (*default*, where CPU jobs will run, and *gpu-pool*, there GPU jobs will run), we'll need to Persistent Volume Claims, tied to 2 Persistent Volumes. We'll create the PVs as *ReadWriteMany* to ensure concurrent access by the different PVCs.
+Because Persistent Volume Claims are namespace-bound objects, and we'll have 2 namespaces (*default*, where CPU jobs will run, and *gpu-pool*, there GPU jobs will run), we'll need two Persistent Volume Claims, tied to 2 Persistent Volumes. We'll create the PVs as *ReadWriteMany* to ensure concurrent access by the different PVCs.
 
 Run this command to create the PV and PVC for the *default* namespace:
 
@@ -826,7 +698,7 @@ metadata:
   name: nfs
 spec:
   capacity:
-    storage: 20Gi
+    storage: 200Gi
   accessModes:
     - ReadWriteMany
   nfs:
@@ -844,7 +716,7 @@ spec:
   storageClassName: ""
   resources:
     requests:
-      storage: 20Gi
+      storage: 200Gi
 EOF
 ```
 
@@ -858,7 +730,7 @@ metadata:
   name: nfs-gpu
 spec:
   capacity:
-    storage: 20Gi
+    storage: 200Gi
   accessModes:
     - ReadWriteMany
   nfs:
@@ -876,137 +748,227 @@ spec:
   storageClassName: ""
   resources:
     requests:
-      storage: 20Gi
+      storage: 200Gi
 EOF
 ```
 
-&nbsp;
-
-The next step is to prepare the configuration file for MLDE installation:
-
-```bash
-cat <<EOF > ${NAME}.mlde.values.yaml
-imageRegistry: determinedai
-enterpriseEdition: false
-imagePullSecretName:
-masterPort: 8080
-createNonNamespacedObjects: true
-useNodePortForMaster: true
-db:
-  hostAddress: "cloudsql-auth-proxy.${MLDM_NAMESPACE}.svc.cluster.local."
-  name: determined
-  user: postgres
-  password: ${SQL_ADMIN_PASSWORD}
-  port: 5432
-checkpointStorage:
-  saveExperimentBest: 0
-  saveTrialBest: 1
-  saveTrialLatest: 1
-  type: gcs
-  bucket: ${MLDE_BUCKET_NAME}
-maxSlotsPerPod: 4
-masterCpuRequest: 2
-masterMemRequest: 8Gi
-taskContainerDefaults:
-  cpuImage: determinedai/environments:py-3.8-pytorch-1.12-tf-2.11-cpu-6eceaca
-  gpuImage: determinedai/environments:cuda-11.3-pytorch-1.12-tf-2.11-gpu-6eceaca
-  cpuPodSpec:
-    apiVersion: v1
-    kind: Pod
-    spec:
-      containers:
-        - name: determined-container
-          volumeMounts:
-            - name: pdk-pvc-nfs
-              mountPath: /run/determined/workdir/shared_fs
-      volumes:
-        - name: pdk-pvc-nfs
-          persistentVolumeClaim:
-            claimName: nfs
-  gpuPodSpec:
-    apiVersion: v1
-    kind: Pod
-    spec:
-      containers:
-        - name: determined-container
-          volumeMounts:
-            - name: pdk-pvc-nfs
-              mountPath: /run/determined/workdir/shared_fs
-      volumes:
-        - name: pdk-pvc-nfs
-          persistentVolumeClaim:
-            claimName: nfs
-    metadata:
-      labels:
-        nodegroup-role: gpu-worker
-telemetry:
-  enabled: true
-resource_manager:
-  default_aux_resource_pool: default
-  default_compute_resource_pool: gpu-pool
-resourcePools:
-  - pool_name: default
-    task_container_defaults:
-      cpu_pod_spec:
-        apiVersion: v1
-        kind: Pod
-        spec:
-          containers:
-            - name: determined-container
-              volumeMounts:
-                - name: pdk-pvc-nfs
-                  mountPath: /run/determined/workdir/shared_fs
-          volumes:
-            - name: pdk-pvc-nfs
-              persistentVolumeClaim:
-                claimName: nfs
-  - pool_name: gpu-pool
-    max_aux_containers_per_agent: 1
-    kubernetes_namespace: gpu-pool
-    task_container_defaults:
-      gpu_pod_spec:
-        apiVersion: v1
-        kind: Pod
-        spec:
-          containers:
-            - name: determined-container
-              volumeMounts:
-                - name: pdk-pvc-nfs
-                  mountPath: /run/determined/workdir/shared_fs
-          volumes:
-            - name: pdk-pvc-nfs
-              persistentVolumeClaim:
-                claimName: nfs
-          tolerations:
-            - key: "nvidia.com/gpu"
-              operator: "Equal"
-              value: "present"
-              effect: "NoSchedule"
-EOF
-```
-
-PS: To connect to the database, MLDE will use the same proxy that was created for MLDM.
-
 
 &nbsp;
-<a name="step17">
-### Step 17 - Deploy MLDE using Helm chart
+<a name="step15">
+### Step 15 - Create configuration .yaml file for MLDM and MLDE
 </a>
 
-To deploy MLDE, run these commands:
+This command will create a .yaml file that you can review in a text editor.
 
 ```bash
+cat <<EOF > helm_values.yaml
+deployTarget: "GOOGLE"
 
-helm repo add determined-ai https://helm.determined.ai/
+pachd:
+  enabled: true
+  lokiDeploy: true
+  lokiLogging: true
+  storage:
+    google:
+      bucket: "${MLDM_BUCKET_NAME}"
+  serviceAccount:
+    additionalAnnotations:
+      iam.gke.io/gcp-service-account: "${SERVICE_ACCOUNT}"
+    create: true
+    name: "pachyderm"
+  worker:
+    serviceAccount:
+      additionalAnnotations:
+        iam.gke.io/gcp-service-account: "${SERVICE_ACCOUNT}"
+      create: true
+      name: "pachyderm-worker"
 
-helm repo update
+cloudsqlAuthProxy:
+  enabled: true
+  connectionName: ${CLOUDSQL_CONNECTION_NAME}
+  serviceAccount: "${SERVICE_ACCOUNT}"
+  resources:
+    requests:
+      memory: "500Mi"
+      cpu:    "250m"
 
-helm install determinedai -f ${NAME}.mlde.values.yaml determined-ai/determined
+postgresql:
+  enabled: false
 
+global:
+  postgresql:
+    postgresqlHost: "cloudsql-auth-proxy.default.svc.cluster.local."
+    postgresqlPort: "5432"
+    postgresqlSSL: "disable"
+    postgresqlUsername: "postgres"
+    postgresqlPassword: "${SQL_ADMIN_PASSWORD}"
+
+loki-stack:
+  loki:
+    env:
+    - name: GOOGLE_APPLICATION_CREDENTIALS
+      value: /etc/secrets/${LOKI_GSA_NAME}-key.json
+    extraVolumes:
+      - name: loki-service-account
+        secret:
+          secretName: loki-service-account
+    extraVolumeMounts:
+      - name: loki-service-account
+        mountPath: /etc/secrets
+    config:
+      schema_config:
+        configs:
+        - from: 1989-11-09
+          object_store: gcs
+          store: boltdb
+          schema: v11
+          index:
+            prefix: loki_index_
+          chunks:
+            prefix: loki_chunks_
+      storage_config:
+        gcs:
+          bucket_name: "${LOKI_BUCKET_NAME}"
+        # https://github.com/grafana/loki/issues/256
+        bigtable:
+          project: project
+          instance: instance
+        boltdb:
+          directory: /data/loki/indices
+  grafana:
+    enabled: false
+
+proxy:
+  enabled: true
+  service:
+    type: LoadBalancer
+    loadBalancerIP: ${STATIC_IP_ADDR}
+    httpPort: 80
+    httpsPort: 443
+  tls:
+    enabled: false
+  
+determined:
+  enabled: true
+  detVersion: "0.26.7"
+  imageRegistry: determinedai
+  enterpriseEdition: false
+  imagePullSecretName:
+  masterPort: 8080
+  createNonNamespacedObjects: true
+  useNodePortForMaster: true
+  db:
+    hostAddress: "cloudsql-auth-proxy.default.svc.cluster.local."
+    name: determined
+    user: postgres
+    password: ${SQL_ADMIN_PASSWORD}
+    port: 5432
+  checkpointStorage:
+    saveExperimentBest: 0
+    saveTrialBest: 1
+    saveTrialLatest: 1
+    type: gcs
+    bucket: ${MLDE_BUCKET_NAME}
+  maxSlotsPerPod: 4
+  masterCpuRequest: "2"
+  masterMemRequest: 8Gi
+  taskContainerDefaults:
+    cpuImage: determinedai/environments:py-3.8-pytorch-1.12-tf-2.11-cpu-6eceaca
+    gpuImage: determinedai/environments:cuda-11.3-pytorch-1.12-tf-2.11-gpu-6eceaca
+    cpuPodSpec:
+      apiVersion: v1
+      kind: Pod
+      spec:
+        containers:
+          - name: determined-container
+            volumeMounts:
+              - name: pdk-pvc-nfs
+                mountPath: /run/determined/workdir/shared_fs
+        volumes:
+          - name: pdk-pvc-nfs
+            persistentVolumeClaim:
+              claimName: nfs
+    gpuPodSpec:
+      apiVersion: v1
+      kind: Pod
+      spec:
+        containers:
+          - name: determined-container
+            volumeMounts:
+              - name: pdk-pvc-nfs
+                mountPath: /run/determined/workdir/shared_fs
+        volumes:
+          - name: pdk-pvc-nfs
+            persistentVolumeClaim:
+              claimName: nfs
+      metadata:
+        labels:
+          nodegroup-role: gpu-worker
+  telemetry:
+    enabled: true
+  defaultAuxResourcePool: default
+  defaultComputeResourcePool: gpu-pool    
+  resourcePools:
+    - pool_name: default
+      task_container_defaults:
+        cpu_pod_spec:
+          apiVersion: v1
+          kind: Pod
+          spec:
+            containers:
+              - name: determined-container
+                volumeMounts:
+                  - name: pdk-pvc-nfs
+                    mountPath: /run/determined/workdir/shared_fs
+            volumes:
+              - name: pdk-pvc-nfs
+                persistentVolumeClaim:
+                  claimName: nfs
+    - pool_name: gpu-pool
+      max_aux_containers_per_agent: 1
+      kubernetes_namespace: gpu-pool
+      task_container_defaults:
+        gpu_pod_spec:
+          apiVersion: v1
+          kind: Pod
+          spec:
+            containers:
+              - name: determined-container
+                volumeMounts:
+                  - name: pdk-pvc-nfs
+                    mountPath: /run/determined/workdir/shared_fs
+            volumes:
+              - name: pdk-pvc-nfs
+                persistentVolumeClaim:
+                  claimName: nfs
+            tolerations:
+              - key: "nvidia.com/gpu"
+                operator: "Equal"
+                value: "present"
+                effect: "NoSchedule"
+EOF
 ```
 
-Because MLDE will be deployed to the default namespace, you can check the status of the deployment with `kubectl get pods` and `kubectl get svc`.<br/>
-Make sure the pod is running before continuing.
+
+
+&nbsp;
+<a name="step16">
+### Step 16 - Install MLDM and MLDE using Helm
+</a>
+
+First, download the charts for MLDM:
+
+```bash
+helm repo add pachyderm https://helm.pachyderm.com
+
+helm repo update
+```
+
+Then run the installer, referencing the .yaml file you just created:
+
+```bash
+helm install pachyderm -f ./helm_values.yaml pachyderm/pachyderm --namespace default
+```
 
 Once the installation is complete, annotate the MLDE service accounts so they have access to the storage bucket:
 
@@ -1015,27 +977,30 @@ kubectl annotate serviceaccount default \
   -n default \
   iam.gke.io/gcp-service-account=${SERVICE_ACCOUNT}
 
-kubectl annotate serviceaccount determined-master-determinedai \
+kubectl annotate serviceaccount determined-master-pachyderm \
   -n default \
   iam.gke.io/gcp-service-account=${SERVICE_ACCOUNT}
 ```
 
+Give it a couple of minutes for all the services to be up and running. You can run `kubectl get pods` to see if any pods failed or are stuck. Wait until all pods are running before continuing.
+
 
 &nbsp;
-<a name="step18">
-### Step 18 - Create new Ingress for MLDE
+<a name="step17">
+### Step 17 - Create new Ingress for MLDE
 </a>
 
 Because we're using a static IP, we'll need to create an ingress for MLDE.
 
-First, create a configuration file for the new ingress:
+Use this command to create the new ingress:
 
 ```bash
-cat <<EOF > ./mlde-ingress.yaml
+kubectl apply -f - <<EOF
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: mlde-ingress
+  namespace: default
   annotations:
     nginx.ingress.kubernetes.io/proxy-body-size: "160m"  
 spec:
@@ -1047,19 +1012,71 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: determined-master-service-determinedai
+            name: determined-master-service-pachyderm
             port:
               number: 8080
 EOF
 ```
 
-Next, create the ingress using the configuration file:
+&nbsp;
+<a name="step18">
+### Step 18 - Retrieve MLDM and MLDE IP addresses and configure command line clients
+</a>
+
+In this step, we'll configure the `pachctl` and `det` clients. This will be important later, as we create the project, repo and pipeline for the PDK environment.
 
 ```bash
-kubectl apply -f ./mlde-ingress.yaml
+export STATIC_IP_ADDR_NO_QUOTES=$(echo "$STATIC_IP_ADDR" | tr -d '"')
+
+export PACH_URL="http://${STATIC_IP_ADDR_NO_QUOTES}:80"
+
+echo "MLDM Address: http://${STATIC_IP_ADDR_NO_QUOTES}:80"
+
+pachctl connect ${PACH_URL}
+
+pachctl config set active-context ${PACH_URL}
 ```
 
-Finally, save the static IP for MLDE in an environment variable:
+At this time, you should be able to access the MLDM UI using the URL that was printed in the terminal:
+
+![alt text][gcp_mldm_01_dashboard]
+
+[gcp_mldm_01_dashboard]: images/gcp_mldm_01_dashboard.png "MLDM Dashboard"
+
+A new capabiity of MLDM 2.8.1 is **Cluster Defaults**, which allows admins to set configurations that will be automatically applied to all pipelines (unless explicitly overwritten by the pipeline definition). Click the **Cluster Defaults** button and replace the existing configuration with the following:
+
+```json
+{
+  "createPipelineRequest": {
+    "resourceRequests": {
+      "cpu": 1,
+      "memory": "256Mi",
+      "disk": "1Gi"
+    },
+    "datumTries" : 1,
+    "parallelismSpec": {"constant": 1},
+    "autoscaling" : true,
+    "sidecarResourceRequests": {
+      "cpu": 1,
+      "memory": "256Mi",
+      "disk": "1Gi"
+    }
+  }
+}
+```
+
+The configuration changes we are applying will:
+- Disable retries in case of failed jobs (`datumTries: 1`)
+- Run each pipeline in a single pod (`parallelismSpec - constant: 1`)
+- Automatically delete the pod once the pipeline is completed to release the CPU (`autoscaling: true`)
+
+Do keep in mind that these settings are not recommended for all environments, especially Production.
+
+Click **Continue** and **Save** to apply the changes.
+
+&nbsp;
+
+Similar to the steps taken for MLDM, save the static IP for MLDE in an environment variable:
 
 ```bash
 export MLDE_STATIC_IP_ADDR_NO_QUOTES=$(echo "$MLDE_STATIC_IP_ADDR" | tr -d '"')
@@ -1067,9 +1084,12 @@ export MLDE_STATIC_IP_ADDR_NO_QUOTES=$(echo "$MLDE_STATIC_IP_ADDR" | tr -d '"')
 echo "MLDE Address: http://${MLDE_STATIC_IP_ADDR_NO_QUOTES}:80"
 
 export DET_MASTER=${MLDE_STATIC_IP_ADDR_NO_QUOTES}:80
-```
 
-With the `DET_MASTER` environment variable set, you can run `det e list`, which should return an empty list. If you get an error message, check the MLDE pod and service for errors.
+det u login admin
+```
+(leave the password empty and press enter to login as admin)
+
+Once logged in, you can run `det e list`, which should return an empty list. If you get an error message, check the MLDE pod and service for errors.
 
 You should also be able to access the MLDE UI using the URL printed on the terminal. Login as user <b>admin</b> (leave password field empty). Once logged in, check the <b>Cluster</b> page and make sure the GPU resources are showing up:
 
@@ -1079,29 +1099,10 @@ You should also be able to access the MLDE UI using the URL printed on the termi
 
 
 
+
 &nbsp;
 <a name="step19">
-### Step 19 - Deploy KServe
-</a>
-
-KServe is a standard Model Inference Platform on Kubernetes, built for highly scalable use cases. It provides performant, standardized inference protocol across ML frameworks, including PyTorch, TensorFlow and Keras.
-Additionally, KServe provides features such as automatic scaling, monitoring, and logging, making it easy to manage deployed models in production. Advanced features, such as canary rollouts, experiments, ensembles and transformers are also available.
-For more information on KServe, please visit <a href="https://kserve.github.io/website/0.9/">the official KServe documentation</a>.
-
-
-Installation of KServe is very straightforward, because we are using the Quick Start. This is naturally only an option for test or demo environments;
-
-```bash
-curl -s "https://raw.githubusercontent.com/kserve/kserve/release-0.10/hack/quick_install.sh" | bash
-```
-
-After running this command, wait about 10 minutes for all the services to be properly initialized.
-
-
-
-&nbsp;
-<a name="step20">
-### Step 20 - (Optional) Test Components
+### Step 19 - (Optional) Test Components
 </a>
 
 In this optional step, we can test MLDM (by creating a pipeline) and MLDE (by creating an experiment)
@@ -1178,41 +1179,41 @@ git clone https://github.com/determined-ai/determined.git .
 
 ```
 &nbsp;
-Once the command completes, run this command to modify the `./examples/computer_vision/cifar10_pytorch/const.yaml` file that will be used to run the experiment:
+
+Once the command completes, run this command to modify the `./examples/computer_vision/iris_tf_keras/const.yaml` file that will be used to run the experiment:
 
 ```bash
-cat <<EOF > ./examples/computer_vision/cifar10_pytorch/const.yaml
-name: cifar10_pytorch_const
+cat <<EOF > ./examples/computer_vision/iris_tf_keras/const.yaml
+name: iris_tf_keras_const
+data:
+  train_url: http://download.tensorflow.org/data/iris_training.csv
+  test_url: http://download.tensorflow.org/data/iris_test.csv
 hyperparameters:
   learning_rate: 1.0e-4
   learning_rate_decay: 1.0e-6
-  layer1_dropout: 0.25
-  layer2_dropout: 0.25
-  layer3_dropout: 0.5
-  global_batch_size: 32
-records_per_epoch: 500
+  layer1_dense_size: 16
+  global_batch_size: 16
 searcher:
   name: single
-  metric: validation_error
+  metric: val_categorical_accuracy
+  smaller_is_better: false
   max_length:
-    epochs: 3
-entrypoint: model_def:CIFARTrial
-min_validation_period:
-  epochs: 1
-max_restarts: 0
-resources:
-  resource_pool: gpu-pool
-  slots_per_trial: 2
+    batches: 500
+entrypoint: model_def:IrisTrial
 EOF
 ```
-PS: We need to modify this file because our GPU node pool is configured with taints that will reject workloads. In this case, we're setting a toleration for this taint. We're also configuring the experiment to use 2 GPUs. And we're reducing the number of epochs to keep the training time short.
 
-Use this command to run the experiment:
+The changes we're making will reduce the global batch size and max batch lenght, to speed up training.
+
+Then run this command to create the experiment:
 
 ```bash
-det experiment create -f ./examples/computer_vision/cifar10_pytorch/const.yaml ./examples/computer_vision/cifar10_pytorch
+det experiment create -f ./examples/computer_vision/iris_tf_keras/const.yaml ./examples/computer_vision/iris_tf_keras
+
+cd ..
 ```
- If this command fails, make sure the `DET_MASTER` environment variable is set. For the first execution, the client might time out while it's waiting for the image to be pulled from docker hub. It does not mean the experiment has failed; you can still check the UI or use `det e list` to see the current status of this experiment.
+ If this command fails, make sure the `DET_MASTER` environment variable is set. Keep in mind that the client can timeout while it's waiting for the experiment image to be pulled. It does not mean the experiment has failed; you can still check the UI or use `det e list` to see the current status of this experiment.
+
 
 &nbsp;
 
@@ -1251,17 +1252,17 @@ The first run should take about one minute to pull and run the image.
 
 In the new tab, make sure the *shared_fs* folder is listed. In this folder, users will be able to permanently store their model assets, notebooks and other files.
 
-![alt text][aws_mlde_07_shared_folder]
+![alt text][gcp_mlde_07_shared_folder]
 
-[aws_mlde_07_shared_folder]: images/aws_mlde_07_shared_folder.png "MLDE Notebook Shared Folder"
+[gcp_mlde_07_shared_folder]: images/gcp_mlde_07_shared_folder.png "MLDE Notebook Shared Folder"
 
 PS: If the JupyterLab environment fails to load, it might be because the shared volume failed to mount. Run `kubectl -n gpu-pool describe pod` against the new pod to see why the pod failed to run.
 
 
 
 &nbsp;
-<a name="step21">
-### Step 21 - Prepare for PDK Setup
+<a name="step20">
+### Step 20 - Prepare for PDK Setup
 </a>
 
 These next steps will help us verify that KServe is working properly, and they will also setup some pre-requisites for the PDK flow (specifically, the step where models are deployed to KServe).
@@ -1284,7 +1285,9 @@ metadata:
   name: "sklearn-iris"
 spec:
   predictor:
-    sklearn:
+    model:
+      modelFormat:
+        name: sklearn
       storageUri: "gs://kfserving-examples/models/sklearn/1.0/model"
 EOF
 ```
@@ -1344,7 +1347,11 @@ EOF
 Then, use this command to generate the prediction:
 
 ```bash
-curl -v -H "Host: ${SERVICE_HOSTNAME}" http://${INGRESS_HOST}:${INGRESS_PORT}/v1/models/sklearn-iris:predict -d @./iris-input.json
+curl -v \
+-H "Content-Type: application/json" \
+-H "Host: ${SERVICE_HOSTNAME}" \
+http://${INGRESS_HOST}:${INGRESS_PORT}/v1/models/sklearn-iris:predict \
+-d @./iris-input.json
 ```
 
 What we're looking for in the ouput is a status code of 200 (success) and a JSON payload with a list of values:
@@ -1387,10 +1394,10 @@ A more detailed explanation of these attributes:
 
 &nbsp;
 
-This secret needs to be created in the MLDM namespace, as it will be used by the pipelines (that will then map the variables to the MLDE experiment):
+This will be used by the MLDM pipelines (that will then map the variables to the MLDE experiment):
 
 ```bash
-kubectl -n ${MLDM_NAMESPACE} apply -f pipeline-secret.yaml
+kubectl apply -f pipeline-secret.yaml
 ```
 
 &nbsp;
@@ -1400,7 +1407,7 @@ Next, the MLDM Worker service account (which will be used to run the pods that c
 First, create the configuration file:
 
 ```bash
-cat <<EOF > "./pachyderm-kserve-perms.yaml"
+kubectl apply -f - <<EOF
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
@@ -1412,9 +1419,7 @@ rules:
 - apiGroups: ["serving.kserve.io"]
   resources: ["inferenceservices"]
   verbs: ["get", "list", "watch", "create", "update", "patch", "delete"]
-
 ---
-
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
@@ -1426,16 +1431,9 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: pachyderm-worker
-  namespace: ${MLDM_NAMESPACE}
+  namespace: default
 EOF
 ```
-
-Then apply it:
-
-```bash
-kubectl apply -f pachyderm-kserve-perms.yaml
-```
-
 
 For the next step, the model deployments will need to download from the storage buckets. Since these models will run in the new 'models' namespace, the default service account in this namespace needs to be granted permissions to the bucket:
 
@@ -1461,7 +1459,7 @@ metadata:
   name: pach-kserve-creds
   namespace: ${KSERVE_MODELS_NAMESPACE}
   annotations:
-    serving.kserve.io/s3-endpoint: pachd.${MLDM_NAMESPACE}:30600
+    serving.kserve.io/s3-endpoint: pachd.default:30600
     serving.kserve.io/s3-usehttps: "0"
 type: Opaque
 stringData:
@@ -1474,7 +1472,7 @@ metadata:
   name: pach-deploy
   namespace: ${KSERVE_MODELS_NAMESPACE}
   annotations:
-    serving.kserve.io/s3-endpoint: pachd.${MLDM_NAMESPACE}:30600
+    serving.kserve.io/s3-endpoint: pachd.default:30600
     serving.kserve.io/s3-usehttps: "0"
 secrets:
 - name: pach-kserve-creds
@@ -1483,8 +1481,8 @@ EOF
 
 
 &nbsp;
-<a name="step21b">
-### Step 21b - [Optional] Configure KServe UI
+<a name="step21">
+### Step 21 - [Optional] Configure KServe UI
 </a>
 
 The quick installer we used for KServe does not include a UI to see the deployments. We can optionally deploy one, using the instructions described in this step.
@@ -1690,8 +1688,10 @@ You can access the URL to see the deployed model (make sure to select the correc
 
 &nbsp;
 <a name="step22">
-### Step 22 - Prepare Docker and the Container Registry
+### Step 22 - [Optional] Prepare Docker and the Container Registry
 </a>
+
+The samples provided here already contain images you can use for training and deployment. This step is only necessary if you want to build your own images. In this case, you will find the Dockerfiles for each example in this repository.
 
 First, make sure Docker Desktop is running.
 
@@ -1772,7 +1772,6 @@ metadata:
   namespace: default
 data:
   region: "${GCP_REGION}"
-  mldm_namespace: "${MLDM_NAMESPACE}"
   mldm_bucket_name: "${MLDM_BUCKET_NAME}"
   mldm_host: "${STATIC_IP_ADDR_NO_QUOTES}"
   mldm_port: "80"
@@ -1783,7 +1782,7 @@ data:
   mlde_port: "80"
   mlde_url: "http://${MLDE_STATIC_IP_ADDR_NO_QUOTES}:80"
   kserve_ui_url: "${KSERVE_UI_URL}"
-  kserve_model_bucket_name: "${MODEL_ASSETS_BUCKET_NAME}"
+  model_assets_bucket_name: "${MODEL_ASSETS_BUCKET_NAME}"
   kserve_model_namespace: "${KSERVE_MODELS_NAMESPACE}"
   kserve_ingress_host: "${INGRESS_HOST}"
   kserve_ingress_port: "${INGRESS_PORT}"
@@ -1801,8 +1800,54 @@ kubectl apply -f ./pdk-config.yaml
 
 Once the config map is created, you can run `kubectl get cm pdk-config -o yaml` to verify the data.
 
-
 &nbsp;
+<a name="step24">
+### Step 24 - Create Cleanup Script
+</a>
+
+In this ste, we create a script that will delete all components created as part of this installation.
+
+```bash
+cat <<EOF > ./_cleanup.sh
+# DELETE CLUSTER
+printf 'yes' | gcloud container clusters delete ${CLUSTER_NAME}
+
+# Delete DB
+printf 'yes' | gcloud sql instances delete ${CLOUDSQL_INSTANCE_NAME}
+
+# Delete buckets
+printf 'yes' | gcloud storage rm --recursive gs://${MLDM_BUCKET_NAME}
+printf 'yes' | gcloud storage rm --recursive gs://${MLDE_BUCKET_NAME}
+printf 'yes' | gcloud storage rm --recursive gs://${LOKI_BUCKET_NAME}
+printf 'yes' | gcloud storage rm --recursive gs://${MODEL_ASSETS_BUCKET_NAME}
+
+# Delete Static IPs
+printf 'yes' | gcloud compute addresses delete ${STATIC_IP_NAME}
+printf 'yes' | gcloud compute addresses delete ${MLDE_STATIC_IP_NAME}
+printf 'yes' | gcloud compute addresses delete ${KSERVE_STATIC_IP_NAME}
+
+# Delete Role
+printf 'yes' | gcloud iam roles delete ${GSA_ROLE_NAME} --project ${PROJECT_ID}
+
+# Delete Shared Disk
+printf 'yes' | gcloud compute disks delete --zone=${GCP_ZONE} ${NAME}-pdk-nfs-disk
+
+# Delete Service Accounts
+printf 'yes' | gcloud iam service-accounts delete ${GSA_NAME}@${PROJECT_ID}.iam.gserviceaccount.com
+printf 'yes' | gcloud iam service-accounts delete ${LOKI_GSA_NAME}@${PROJECT_ID}.iam.gserviceaccount.com
+
+EOF
+
+chmod +x _cleanup.sh
+```
+
+When it's time to cleanup your environment, just run:
+```bash
+./_cleanup.sh
+```
+
+
+</a>
 
 
 &nbsp;

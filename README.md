@@ -1,6 +1,6 @@
 # PDK - Pachyderm | Determined | KServe
 ## Deployment and Setup Guide
-**Date/Revision:** August 30, 2023
+**Date/Revision:** January 02, 2024
 
 
 ![alt text][big_picture]
@@ -45,7 +45,7 @@ The PDK environment provides end-to-end support for processing data that will be
 
 This repository includes step-by-step guides for installing the infrastructure and all necessary components for the PDK environment, covering different Kubernetes environments. This is an update to the original guide available [here](https://github.hpe.com/cyrill-hug/KServe-Addendum-for-PDS).
 
-PS: Throughout the documents in this repository, Pachyderm will be referred to as **MLDM** (Machine Learning Data Management) and Determined.AI as **MLDE** (Machine Learning Development Environment).
+PS: Throughout the documents in this repository, Pachyderm will be referred to as **MLDM** (Machine Learning Data Management) and Determined.AI as **MLDE** (Machine Learning Development Environment). However, we will be installing the open source versions of these products, seeing as the Enterprise versions require license keys that are not publicly available.
 
 The reference environment described here should not be seen as a suggestion for production and might need to be adjusted depending on use cases and performance requirements. 
 

@@ -63,7 +63,7 @@ class FinbertHandler(TextClassifier):
 
         logger.debug("Model has been defined successfully")
 
-        self.model.load_state_dict(torch.load(model_pt_path))
+        self.model.load_state_dict(torch.load(model_pt_path), strict=False)
 
         self.model.to(self.device)
         self.model.eval()

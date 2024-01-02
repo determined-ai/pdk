@@ -5,6 +5,7 @@
 
 # PDK - Pachyderm | Determined | KServe
 ## Deployment Guide for Kubernetes
+<b>Date/Revision:</b> January 02, 2024
 
 
 This guide will walk you through the steps of deploying the PDK components to a vanilla Kubernetes environment.
@@ -13,17 +14,18 @@ This guide will walk you through the steps of deploying the PDK components to a 
 ## Reference Architecture
 The installation will be performed on the following hardware:
 
-- 1x Control Plane - 8 CPU, 16GB RAM, 1000GB storage
+- 1x Control Plane - 32 CPU, 64GB RAM, 1000GB storage
 - 1x worker node with 4 NVIDIA-T4 GPUs, 1000GB storage
 
 The following software versions will be used for this installation:
 
 - Ubuntu 20.04
-- Kubernetes (K8s): 1.27.0
+- Python: 3.8 and 3.9
+- Kubernetes (K8s): latest supported *(currently 1.27)*
 - Postgres: 13
-- MLDE (Determined.AI): latest *(currently 0.26.0)*
-- MLDM (Pachyderm): latest *(currently 2.7.4)*
-- KServe: 0.10.0 (Quickstart Environment)
+- MLDE (Determined.AI): latest *(currently 0.26.7)*
+- MLDM (Pachyderm): latest *(currently 2.8.2)*
+- KServe: 0.12.0-rc0 (Quickstart Environment)
 
 PS: some of the commands used here are sensitive to the version of the product(s) listed above.
 
@@ -39,7 +41,7 @@ To follow this documentation you will need:
 - The following applications, installed and configured in your computer:
   - kubectl
   - docker (if you want to create and push images)
-  - git (you'll need to be logged in to your github account to push code for the MLDM pipelines)
+  - git (to clone the repository with the examples)
   - helm
   - jq
   - patchctl (the MLDM command line client)
@@ -118,8 +120,6 @@ All commands listed throghout this document must be executed in the same termina
 export NAME="your-name-pdk"
 export DB_CONNECTION_STRING="postgres-service.default.svc.cluster.local."
 export DB_ADMIN_PASSWORD="your-database-password"
-
-export MLDM_NAMESPACE="pachyderm"
 export KSERVE_MODELS_NAMESPACE="models"
 ```
 
@@ -132,7 +132,7 @@ export KSERVE_MODELS_NAMESPACE="models"
 Install `pachctl` (the command line utility for MLDM):
 
 ```bash
-curl -o /tmp/pachctl.deb -L https://github.com/pachyderm/pachyderm/releases/download/v2.7.3/pachctl_2.7.3_amd64.deb && sudo dpkg -i /tmp/pachctl.deb
+curl -L https://github.com/pachyderm/pachyderm/releases/download/v2.8.1/pachctl_2.8.1_linux_amd64.tar.gz | sudo tar -xzv --strip-components=1 -C /usr/local/bin
 ```
 
 
@@ -316,7 +316,6 @@ List the services and get the IP assigned to the Postgres service:
 ubuntu@ip-100-64-13-46:~$ kubectl get svc
 NAME               TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)                     AGE
 kubernetes         ClusterIP   10.152.183.1     <none>        443/TCP                     59m
-operator-webhook   ClusterIP   10.152.183.171   <none>        9090/TCP,8008/TCP,443/TCP   44m
 postgres-service   NodePort    10.152.183.67    <none>        5432:30955/TCP              23m
 ```
 
@@ -472,7 +471,7 @@ EOF
 
 Create the StatefulSet:
 ```bash
-k apply -f  - <<EOF
+kubectl apply -f  - <<EOF
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
@@ -496,7 +495,7 @@ spec:
         image: docker.io/minio/minio:latest
         command: ["/bin/bash"]
         # this will create a bucket called "mldm-bucket" and then launch minio
-        args: ["-c", "mkdir -p /data/mldm-bucket && minio server /data --console-address=0.0.0.0:9001" ]
+        args: ["-c", "mkdir -p /data/mldm-bucket && mkdir -p /data/mlde-bucket && mkdir -p /data/kserve-bucket && minio server /data --console-address=0.0.0.0:9001" ]
         securityContext:
           runAsUser: 1000
           runAsGroup: 1000
@@ -517,7 +516,7 @@ EOF
 
 Create the Service:
 ```bash
-k apply -f  - <<EOF
+kubectl apply -f  - <<EOF
 apiVersion: v1
 kind: Service
 metadata:
@@ -550,21 +549,132 @@ Because we're also running the MinIO console, the user interface will be accessi
 
 [k8s_minio_01_ui]: images/k8s_minio_01_ui.png "MinIO Main UI"
 
-Login as `minioadmin/minioadmin`. You will also see the buckets created by the StatefulSet. We'll use this bucket to store the MLDM objects, along with MLDE checkpoints and models for KServe.
+Login as `minioadmin/minioadmin`. You will also see the buckets created by the StatefulSet. We'll use these buckets to store the MLDM objects, along with MLDE checkpoints and models for KServe.
+
 
 
 &nbsp;
 <a name="step7">
-### Step 7 - Create configuration .yaml file for MLDM
+### Step 7 - Deploy KServe
+</a>
+
+KServe is a standard Model Inference Platform on Kubernetes, built for highly scalable use cases. It provides performant, standardized inference protocol across ML frameworks, including PyTorch, TensorFlow and Keras.
+Additionally, KServe provides features such as automatic scaling, monitoring, and logging, making it easy to manage deployed models in production. Advanced features, such as canary rollouts, experiments, ensembles and transformers are also available.
+For more information on KServe, please visit [the official KServe documentation](https://kserve.github.io/website/0.9/).
+
+
+Installation of KServe is very straightforward, because we are using the Quick Start. This is naturally only an option for test or demo environments;
+
+```bash
+curl -s "https://raw.githubusercontent.com/kserve/kserve/release-0.10/hack/quick_install.sh" | bash
+```
+
+After running this command, wait about 10 minutes for all the services to be properly initialized.
+
+
+
+
+&nbsp;
+<a name="step8">
+### Step 8 - Prepare MLDE installation assets
+</a>
+
+MLDE offers a hosted Jupyter Lab environment, where users can create and run notebooks. This environment needs persistent storage, in order to save user files. This persistent storage must be mounted as a shared folder. In this step, we will configure the necessary components to enable this capability.
+
+Create two Persistent Volumes and two Persistent Volume Claims, one in each namespace that can run MLDE notebooks (*default* and *gpu-pool*). PS: We're setting it for 200GB, but you can increase the size as needed.
+
+Run this command to create the first PV and PVC:
+```bash
+kubectl apply -f - <<EOF
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: mlde-pv
+spec:
+  capacity:
+    storage: 200Gi
+  accessModes:
+    - ReadWriteMany
+  hostPath:
+    path: "/mnt/efs/shared_fs/mlde_shared"
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: mlde-pvc
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 200Gi
+EOF
+```
+
+Next, create the second PV and PVC:
+
+```bash
+kubectl apply -f - <<EOF
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: mlde-pv-gpu
+spec:
+  capacity:
+    storage: 200Gi
+  accessModes:
+    - ReadWriteMany
+  hostPath:
+    path: "/mnt/efs/shared_fs/mlde_shared"
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: mlde-pvc
+  namespace: gpu-pool
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 200Gi
+EOF
+```
+
+You can validate that necessary components were created (and successfuly bound together) with the following commands:
+```bash
+kubectl get sc
+
+kubectl get pv
+
+kubectl get pvc
+
+kubectl -n gpu-pool get pvc
+```
+
+
+
+Create the gpu-pool namespace
+
+```bash
+kubectl create ns gpu-pool
+```
+
+
+&nbsp;
+<a name="step9">
+### Step 9 - Create configuration .yaml file for MLDM and MLDE
 </a>
 
 This command will create a .yaml file that you can review in a text editor.
 
 ```bash
-cat <<EOF > mldm_values.yaml
+cat <<EOF > helm_values.yaml
 deployTarget: "MINIO"
 pachd:
   enabled: true
+  externalService:
+    enabled: true
   storage:
     backend: MINIO
     minio:
@@ -600,16 +710,98 @@ proxy:
     httpPort: 9090
   tls:
     enabled: false
+
+determined:
+  enabled: true
+  detVersion: "0.26.7"
+  imageRegistry: determinedai
+  enterpriseEdition: false
+  imagePullSecretName:
+  createNonNamespacedObjects: true
+  masterPort: 8080
+  useNodePortForMaster: false
+  db:
+    hostAddress: "${DB_CONNECTION_STRING}"
+    name: determined
+    user: postgres
+    password: ${DB_ADMIN_PASSWORD}
+    port: 5432
+  checkpointStorage:
+    saveExperimentBest: 0
+    saveTrialBest: 1
+    saveTrialLatest: 1
+    type: s3
+    bucket: mlde-bucket
+    accessKey: minioadmin
+    secretKey: minioadmin
+    endpointUrl: http://minio.default.svc.cluster.local:9000
+  maxSlotsPerPod: 4
+  masterCpuRequest: "4"
+  masterMemRequest: 8Gi
+  taskContainerDefaults:
+    cpuImage: determinedai/environments:py-3.8-pytorch-1.12-tf-2.11-cpu-6eceaca
+    gpuImage: determinedai/environments:cuda-11.3-pytorch-1.12-tf-2.11-gpu-6eceaca
+    cpuPodSpec:
+      apiVersion: v1
+      kind: Pod
+    gpuPodSpec:
+      apiVersion: v1
+      kind: Pod
+      metadata:
+        labels:
+          nodegroup-role: gpu-worker
+  telemetry:
+    enabled: true
+  defaultAuxResourcePool: default
+  defaultComputeResourcePool: gpu-pool
+  resourcePools:
+    - pool_name: default
+      task_container_defaults:
+        cpu_pod_spec:
+          apiVersion: v1
+          kind: Pod
+          spec:
+            containers:
+              - name: determined-container
+                volumeMounts:
+                  - name: shared-fs
+                    mountPath: /run/determined/workdir/shared_fs
+            volumes:
+              - name: shared-fs
+                persistentVolumeClaim:
+                  claimName: mlde-pvc
+    - pool_name: gpu-pool
+      max_aux_containers_per_agent: 1
+      kubernetes_namespace: gpu-pool
+      task_container_defaults:
+        gpu_pod_spec:
+          apiVersion: v1
+          kind: Pod
+          spec:
+            containers:
+              - name: determined-container
+                volumeMounts:
+                  - name: shared-fs
+                    mountPath: /run/determined/workdir/shared_fs
+            volumes:
+              - name: shared-fs
+                persistentVolumeClaim:
+                  claimName: mlde-pvc
+            tolerations:
+              - key: "nvidia.com/gpu"
+                operator: "Equal"
+                value: "present"
+                effect: "NoSchedule"
 EOF
 ```
 
 
 &nbsp;
-<a name="step8">
-### Step 8 - Install MLDM using Helm
+<a name="step10">
+### Step 10 - Install MLDM and MLDE using Helm
 </a>
 
-First, download the charts for MLDM:
+First, download the helm chart:
 
 ```bash
 helm repo add pachyderm https://helm.pachyderm.com
@@ -617,27 +809,24 @@ helm repo add pachyderm https://helm.pachyderm.com
 helm repo update
 ```
 
-Then create the namespace and run the installer, referencing the .yaml file you just created:
+Then run the installer, referencing the .yaml file you just created:
 
 ```bash
-kubectl create ns ${MLDM_NAMESPACE}
-
-helm install pachyderm -f ./mldm_values.yaml pachyderm/pachyderm --namespace ${MLDM_NAMESPACE}
+helm install pachyderm -f ./helm_values.yaml pachyderm/pachyderm --namespace default
 ```
 
-Give it a couple of minutes for all the services to be up and running. You can run `kubectl -n ${MLDM_NAMESPACE} get pods` to see if any pods failed or are stuck. Wait until all pods are running before continuing.
-
+Give it a couple of minutes for all the services to be up and running. You can run `kubectl get pods` to see if any pods failed or are stuck. Wait until all pods are running before continuing.
 
 
 &nbsp;
-<a name="step9">
-### Step 9 - Retrieve MLDM IP address and configure pachctl command line
+<a name="step11">
+### Step 11 - Retrieve MLDM and MLDE IP addresses and configure command line clients
 </a>
 
-In this step, we'll configure the pachctl client. This will be important later, as we create the project, repo and pipeline for the PDK environment.
+In this step, we'll configure the `pachctl` and `det` clients. This will be important later, as we create the project, repo and pipeline for the PDK environment.
 
 ```bash
-export MLDM_HOST=$(kubectl get svc --namespace ${MLDM_NAMESPACE} pachyderm-proxy --output jsonpath='{.status.loadBalancer.ingress[0].hostname}')
+export MLDM_HOST=$(kubectl get svc pachyderm-proxy --output jsonpath='{.status.loadBalancer.ingress[0].ip}')
 
 export MLDM_URL="http://${MLDM_HOST}:80"
 
@@ -647,6 +836,7 @@ pachctl connect ${MLDM_URL}
 
 pachctl config set active-context ${MLDM_URL}
 ```
+PS: Depending on how your load balancer is setup, you may need to use `hostname` instead of `ip` to get the service address.
 
 PS: You need a working URL to continue. Depending on how your cluster's networking is setup, you might need to run port forwarding in order to access the service.
 
@@ -657,209 +847,41 @@ At this time, the MLDM UI will be accessible:
 
 [k8s_mldm_01_dashboard]: images/k8s_mldm_01_dashboard.png "MLDM Dashboard"
 
+A new capabiity of MLDM 2.8.1 is **Cluster Defaults**, which allows admins to set configurations that will be automatically applied to all pipelines (unless explicitly overwritten by the pipeline definition). Click the **Cluster Defaults** button and replace the existing configuration with the following:
 
+```json
+{
+  "createPipelineRequest": {
+    "resourceRequests": {
+      "cpu": 1,
+      "memory": "256Mi",
+      "disk": "1Gi"
+    },
+    "datumTries" : 1,
+    "parallelismSpec": {"constant": 1},
+    "autoscaling" : true,
+    "sidecarResourceRequests": {
+      "cpu": 1,
+      "memory": "256Mi",
+      "disk": "1Gi"
+    }
+  }
+}
+```
+
+The configuration changes we are applying will:
+- Disable retries in case of failed jobs (`datumTries: 1`)
+- Run each pipeline in a single pod (`parallelismSpec - constant: 1`)
+- Automatically delete the pod once the pipeline is completed to release the CPU (`autoscaling: true`)
+
+Do keep in mind that these settings are not recommended for all environments, especially Production.
+
+Click **Continue** and **Save** to apply the changes.
 
 &nbsp;
-<a name="step10">
-### Step 10 - Prepare MLDE installation assets
-</a>
 
-MLDE offers a hosted Jupyter Lab environment, where users can create and run notebooks. This environment needs persistent storage, in order to save user files. This persistent storage must be mounted as a shared folder. In this step, we will configure the necessary components to enable this capability.
+Similar to the steps taken for MLDM, save the static IP for MLDE in an environment variable:
 
-Create two Persistent Volumes and two Persistent Volume Claims, one in each namespace that can run MLDE notebooks (*default* and *gpu-pool*). PS: We're setting it for 20GB, but you can increase the size as needed.
-
-Run this command to create the first PV and PVC:
-```bash
-kubectl apply -f - <<EOF
-apiVersion: v1
-kind: PersistentVolume
-metadata:
-  name: mlde-pv
-spec:
-  capacity:
-    storage: 20Gi
-  accessModes:
-    - ReadWriteMany
-  hostPath:
-    path: "/mnt/efs/shared_fs/mlde_shared"
----
-kind: PersistentVolumeClaim
-apiVersion: v1
-metadata:
-  name: mlde-pvc
-spec:
-  accessModes:
-    - ReadWriteMany
-  resources:
-    requests:
-      storage: 20Gi
-EOF
-```
-
-Next, create the second PV and PVC:
-
-```bash
-kubectl apply -f - <<EOF
-apiVersion: v1
-kind: PersistentVolume
-metadata:
-  name: mlde-pv-gpu
-spec:
-  capacity:
-    storage: 20Gi
-  accessModes:
-    - ReadWriteMany
-  hostPath:
-    path: "/mnt/efs/shared_fs/mlde_shared"
----
-kind: PersistentVolumeClaim
-apiVersion: v1
-metadata:
-  name: mlde-pvc
-  namespace: gpu-pool
-spec:
-  accessModes:
-    - ReadWriteMany
-  resources:
-    requests:
-      storage: 20Gi
-EOF
-```
-
-You can validate that necessary components were created (and successfuly bound together) with the following commands:
-```bash
-kubectl get sc
-
-kubectl get pv
-
-kubectl get pvc
-
-kubectl -n gpu-pool get pvc
-```
-
-
-Next, create a new values.yaml file for the MLDE Helm chart:
-
-```bash
-cat <<EOF > mlde_values.yaml
-imageRegistry: determinedai
-enterpriseEdition: false
-imagePullSecretName:
-masterPort: 8080
-createNonNamespacedObjects: true
-useNodePortForMaster: false
-db:
-  hostAddress: "${DB_CONNECTION_STRING}"
-  name: determined
-  user: postgres
-  password: ${DB_ADMIN_PASSWORD}
-  port: 5432
-checkpointStorage:
-  saveExperimentBest: 0
-  saveTrialBest: 1
-  saveTrialLatest: 1
-  type: s3
-  bucket: mlde-bucket
-  accessKey: minioadmin
-  secretKey: minioadmin
-  endpointUrl: http://minio.default.svc.cluster.local:9000
-maxSlotsPerPod: 4
-masterCpuRequest: 4
-masterMemRequest: 8Gi
-taskContainerDefaults:
-  cpuImage: determinedai/environments:py-3.8-pytorch-1.12-tf-2.11-cpu-6eceaca
-  gpuImage: determinedai/environments:cuda-11.3-pytorch-1.12-tf-2.11-gpu-6eceaca
-  cpuPodSpec:
-    apiVersion: v1
-    kind: Pod
-  gpuPodSpec:
-    apiVersion: v1
-    kind: Pod
-    metadata:
-      labels:
-        nodegroup-role: gpu-worker
-telemetry:
-  enabled: true
-resource_manager:
-  default_aux_resource_pool: default
-  default_compute_resource_pool: gpu-pool
-resourcePools:
-  - pool_name: default
-    task_container_defaults:
-      cpu_pod_spec:
-        apiVersion: v1
-        kind: Pod
-        spec:
-          containers:
-            - name: determined-container
-              volumeMounts:
-                - name: shared-fs
-                  mountPath: /run/determined/workdir/shared_fs
-          volumes:
-            - name: shared-fs
-              persistentVolumeClaim:
-                claimName: mlde-pvc
-  - pool_name: gpu-pool
-    max_aux_containers_per_agent: 1
-    kubernetes_namespace: gpu-pool
-    task_container_defaults:
-      gpu_pod_spec:
-        apiVersion: v1
-        kind: Pod
-        spec:
-          containers:
-            - name: determined-container
-              volumeMounts:
-                - name: shared-fs
-                  mountPath: /run/determined/workdir/shared_fs
-          volumes:
-            - name: shared-fs
-              persistentVolumeClaim:
-                claimName: mlde-pvc
-          tolerations:
-            - key: "nvidia.com/gpu"
-              operator: "Equal"
-              value: "present"
-              effect: "NoSchedule"
-EOF
-```
-
-
-
-Create the gpu-pool namespace
-
-```bash
-kubectl create ns gpu-pool
-```
-
-
-
-&nbsp;
-<a name="step11">
-### Step 11 - Deploy MLDE using Helm chart
-</a>
-
-To deploy MLDE, run these commands:
-
-```bash
-helm repo add determined-ai https://helm.determined.ai/
-
-helm repo update
-
-helm install determinedai -f ./mlde_values.yaml determined-ai/determined
-```
-
-Because MLDE will be deployed to the default namespace, you can check the status of the deployment with `kubectl get pods` and `kubectl get svc`.<br/>
-
-Make sure the pod is running before continuing.
-
-
-&nbsp;
-<a name="step12">
-### Step 12 - Retrieve MLDE IP address and configure det command line
-</a>
-
-Similar to the steps taken for MLDM, these commands will retrieve the load balancer address and create a URL we can use to access MLDE:
 
 ```bash
 export MLDE_HOST=$(kubectl get svc determined-master-service-determinedai --output jsonpath='{.status.loadBalancer.ingress[0].ip}')
@@ -869,11 +891,14 @@ export MLDE_URL="http://${MLDE_HOST}:8080"
 echo $MLDE_URL
 
 export DET_MASTER=${MLDE_HOST}:8080
+
+det u login admin
 ```
+(leave the password empty and press enter to login as admin)
+
 PS: As with MLDM, you may need to use port forwarding, depending on how your cluster's network is setup.
 
-
-With the `DET_MASTER` environment variable set, you can run `det e list`, which should return an empty list. If you get an error message, check the MLDE pod and service for errors.
+Once logged in, you can run `det e list`, which should return an empty list. If you get an error message, check the MLDE pod and service for errors.
 
 You should also be able to access the MLDE UI. Login as user **admin** (leave password field empty). Once logged in, check the **Cluster** page and make sure the GPU resources are showing up:
 
@@ -884,29 +909,10 @@ You should also be able to access the MLDE UI. Login as user **admin** (leave pa
 
 
 
-&nbsp;
-<a name="step13">
-### Step 13 - Deploy KServe
-</a>
-
-KServe is a standard Model Inference Platform on Kubernetes, built for highly scalable use cases. It provides performant, standardized inference protocol across ML frameworks, including PyTorch, TensorFlow and Keras.
-Additionally, KServe provides features such as automatic scaling, monitoring, and logging, making it easy to manage deployed models in production. Advanced features, such as canary rollouts, experiments, ensembles and transformers are also available.
-For more information on KServe, please visit [the official KServe documentation](https://kserve.github.io/website/0.9/).
-
-
-Installation of KServe is very straightforward, because we are using the Quick Start. This is naturally only an option for test or demo environments;
-
-```bash
-curl -s "https://raw.githubusercontent.com/kserve/kserve/release-0.10/hack/quick_install.sh" | bash
-```
-
-After running this command, wait about 10 minutes for all the services to be properly initialized.
-
-
 
 &nbsp;
-<a name="step14">
-### Step 14 - (Optional) Test Components
+<a name="step12">
+### Step 12 - (Optional) Test Components
 </a>
 
 In this optional step, we can test MLDM (by creating a pipeline) and MLDE (by creating an experiment)
@@ -929,8 +935,6 @@ pachctl put file images@master:liberty.png -f 46Q8nDz.png
 pachctl list commit images
 
 pachctl create pipeline -f https://raw.githubusercontent.com/pachyderm/pachyderm/2.6.x/examples/opencv/edges.json
-
-
 
 wget http://imgur.com/8MN9Kg0.png
 
@@ -984,42 +988,39 @@ git clone https://github.com/determined-ai/determined.git .
 
 ```
 &nbsp;
-Once the command completes, run this command to modify the `./examples/computer_vision/cifar10_pytorch/const.yaml` file that will be used to run the experiment:
+Once the command completes, run this command to modify the `./examples/computer_vision/iris_tf_keras/const.yaml` file that will be used to run the experiment:
 
 ```bash
-cat <<EOF > ./examples/computer_vision/cifar10_pytorch/const.yaml
-name: cifar10_pytorch_const
+cat <<EOF > ./examples/computer_vision/iris_tf_keras/const.yaml
+name: iris_tf_keras_const
+data:
+  train_url: http://download.tensorflow.org/data/iris_training.csv
+  test_url: http://download.tensorflow.org/data/iris_test.csv
 hyperparameters:
   learning_rate: 1.0e-4
   learning_rate_decay: 1.0e-6
-  layer1_dropout: 0.25
-  layer2_dropout: 0.25
-  layer3_dropout: 0.5
-  global_batch_size: 32
-records_per_epoch: 500
+  layer1_dense_size: 16
+  global_batch_size: 16
 searcher:
   name: single
-  metric: validation_error
+  metric: val_categorical_accuracy
+  smaller_is_better: false
   max_length:
-    epochs: 3
-entrypoint: model_def:CIFARTrial
-min_validation_period:
-  epochs: 1
-max_restarts: 0
-resources:
-  resource_pool: gpu-pool
-  slots_per_trial: 1
+    batches: 500
+entrypoint: model_def:IrisTrial
 EOF
 ```
 
-PS: We need to modify this file to ensure that this experiment will run in the GPU node pool. You can configure the node with taints that will reject workloads. In this case, you can set a toleration for this taint. We're also configuring the experiment to use 2 GPUs. And we're reducing the number of epochs to keep the training time short.
+The changes we're making will reduce the global batch size and max batch lenght, to speed up training.
 
-Use this command to run the experiment:
+Then run this command to create the experiment:
 
 ```bash
-det experiment create -f ./examples/computer_vision/cifar10_pytorch/const.yaml ./examples/computer_vision/cifar10_pytorch
+det experiment create -f ./examples/computer_vision/iris_tf_keras/const.yaml ./examples/computer_vision/iris_tf_keras
+
+cd ..
 ```
- If this command fails, make sure the `DET_MASTER` environment variable is set. For the first execution, the client might time out while it's waiting for the image to be pulled from docker hub. It does not mean the experiment has failed; you can still check the UI or use `det e list` to see the current status of this experiment.
+ If this command fails, make sure the `DET_MASTER` environment variable is set. Keep in mind that the client can timeout while it's waiting for the experiment image to be pulled. It does not mean the experiment has failed; you can still check the UI or use `det e list` to see the current status of this experiment.
 
 
 &nbsp;
@@ -1069,8 +1070,8 @@ PS: If the JupyterLab environment fails to load, it might be because of an issue
 
 
 &nbsp;
-<a name="step15">
-### Step 15 - Prepare for PDK Setup
+<a name="step13">
+### Step 13 - Prepare for PDK Setup
 </a>
 
 These next steps will help us verify that KServe is working properly, and they will also setup some pre-requisites for the PDK flow (specifically, the step where models are deployed to KServe).
@@ -1093,7 +1094,9 @@ metadata:
   name: "sklearn-iris"
 spec:
   predictor:
-    sklearn:
+    model:
+      modelFormat:
+        name: sklearn
       storageUri: "gs://kfserving-examples/models/sklearn/1.0/model"
 EOF
 ```
@@ -1162,7 +1165,11 @@ EOF
 Then, use this command to generate the prediction:
 
 ```bash
-curl -v -H "Host: ${SERVICE_HOSTNAME}" http://${INGRESS_HOST}:${INGRESS_PORT}/v1/models/sklearn-iris:predict -d @./iris-input.json
+curl -v \
+-H "Content-Type: application/json" \
+-H "Host: ${SERVICE_HOSTNAME}" \
+http://${INGRESS_HOST}:${INGRESS_PORT}/v1/models/sklearn-iris:predict \
+-d @./iris-input.json
 ```
 
 What we're looking for in the ouput is a status code of 200 (success) and a JSON payload with a list of values:
@@ -1181,8 +1188,8 @@ The last part of this step is basically some housekeeping tasks to set the stage
 First, we create a secret that will store variables that will be used by both MLDM pipelines and MLDE experiments. In this case, we'll use internal hostnames, as all these components are running in the same cluster:
 
 ```bash
-export MLDE_SVC=determined-master-service-determinedai.default.svc.cluster.local
-export MLDM_SVC=pachyderm-proxy.${MLDM_NAMESPACE}.svc.cluster.local
+export MLDE_SVC=determined-master-service-pachyderm.default.svc.cluster.local
+export MLDM_SVC=pachyderm-proxy.default.svc.cluster.local
 
 cat <<EOF > "./pipeline-secret.yaml"
 apiVersion: v1
@@ -1215,7 +1222,7 @@ A more detailed explanation of these attributes:
 This secret needs to be created in the MLDM namespace, as it will be used by the pipelines (that will then map the variables to the MLDE experiment):
 
 ```bash
-kubectl -n ${MLDM_NAMESPACE} apply -f pipeline-secret.yaml
+kubectl apply -f pipeline-secret.yaml
 ```
 
 Next, the MLDM Worker service account (which will be used to run the pods that contain the pipeline code) needs to gain access to the `${KSERVE_MODELS_NAMESPACE}` namespace, or it won't be able to deploy models there.
@@ -1247,7 +1254,7 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: pachyderm-worker
-  namespace: ${MLDM_NAMESPACE}
+  namespace: default
 EOF
 ```
 
@@ -1268,12 +1275,12 @@ metadata:
   name: pach-kserve-creds
   namespace: ${KSERVE_MODELS_NAMESPACE}
   annotations:
-    serving.kserve.io/s3-endpoint: pachd.${MLDM_NAMESPACE}:30600
+    serving.kserve.io/s3-endpoint: pachd.default:30600
     serving.kserve.io/s3-usehttps: "0"
 type: Opaque
 stringData:
-  AWS_ACCESS_KEY_ID: "dummycredentials"
-  AWS_SECRET_ACCESS_KEY: "dummycredentials"
+  AWS_ACCESS_KEY_ID: "blahblahblah"
+  AWS_SECRET_ACCESS_KEY: "blahblahblah"
 ---
 apiVersion: v1
 kind: ServiceAccount
@@ -1281,7 +1288,7 @@ metadata:
   name: pach-deploy
   namespace: ${KSERVE_MODELS_NAMESPACE}
   annotations:
-    serving.kserve.io/s3-endpoint: pachd.${MLDM_NAMESPACE}:30600
+    serving.kserve.io/s3-endpoint: pachd.default:30600
     serving.kserve.io/s3-usehttps: "0"
 secrets:
 - name: pach-kserve-creds
@@ -1290,8 +1297,8 @@ EOF
 
 
 &nbsp;
-<a name="step16">
-### Step 16 - [Optional] Configure KServe UI
+<a name="step14">
+### Step 14 - [Optional] Configure KServe UI
 </a>
 
 The quick installer we used for KServe does not include a UI to see the deployments. We can optionally deploy one, using the instructions described in this step.
@@ -1481,9 +1488,11 @@ You can access the URL to see the deployed model (make sure to select the correc
 
 
 &nbsp;
-<a name="step17">
-### Step 17 - Prepare Docker and the Registry to manage images
+<a name="step15">
+### Step 15 - [Optional] Prepare Docker and the Registry to manage images
 </a>
+
+The samples provided here already contain images you can use for training and deployment. This step is only necessary if you want to build your own images. In this case, you will find the Dockerfiles for each example in this repository.
 
 For this step, make sure Docker Desktop is running.
 
@@ -1519,8 +1528,8 @@ You can check the Registry to make sure the new image is there.
 
 
 &nbsp;
-<a name="step18">
-### Step 18 - Save data to Config Map
+<a name="step16">
+### Step 16 - Save data to Config Map
 </a>
 
 Now that all components are installed, we need a location to place some of the variables we've been using for the deployment. This config map can be used when configuring the PDK flows.
@@ -1536,14 +1545,13 @@ metadata:
   namespace: default
 data:
   region: "US"
-  mldm_namespace: "${MLDM_NAMESPACE}"
   mldm_bucket_name: "mldm-bucket"
-  mldm_host: "pachyderm-proxy.pachyderm.svc.cluster.local"
+  mldm_host: "${MLDM_SVC}"
   mldm_port: "9090"
   mldm_url: "${MLDM_URL}"
   mldm_pipeline_secret: "pipeline-secret"
   mlde_bucket_name: "mlde-bucket"
-  mlde_host: "determined-master-service-determinedai.default.svc.cluster.local"
+  mlde_host: "${MLDE_SVC}"
   mlde_port: "8080"
   mlde_url: "${MLDE_URL}"
   minio_url: "http://minio.default.svc.cluster.local:9000"
@@ -1615,11 +1623,11 @@ kubectl exec -i -t dnsutils -- nslookup <service>.<namespace>.svc.cluster.local
 Example:
 
 ```bash
-ubuntu@ip-100-64-13-46:~$ kubectl exec -i -t dnsutils -- nslookup pg-bouncer.pachyderm.svc.cluster.local
+ubuntu@ip-100-64-13-46:~$ kubectl exec -i -t dnsutils -- nslookup pg-bouncer.default.svc.cluster.local
 Server:		10.152.183.10
 Address:	10.152.183.10#53
 
-Name:	pg-bouncer.pachyderm.svc.cluster.local
+Name:	pg-bouncer.default.svc.cluster.local
 Address: 10.152.183.104
 ```
 
@@ -1652,7 +1660,7 @@ kubectl -n default port-forward svc/determined-master-service-determinedai 8080:
 
 MLDM:
 ssh -L 9090:127.0.0.1:9090 -i "key.pem" ubuntu@kube-node-host
-kubectl -n ${MLDM_NAMESPACE} port-forward svc/pachyderm-proxy 9090:9090
+kubectl port-forward svc/pachyderm-proxy 9090:9090
 
 ```
 

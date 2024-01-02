@@ -4,7 +4,7 @@
 
 # PDK - Pachyderm | Determined | KServe
 ## Sentiment Analysis - Finbert Example
-**Date/Revision:** August 30, 2023
+**Date/Revision:** January 02, 2024
 
 This example is based on the **Financial PhraseBank from Malo et al. (2014)** example, which can be found here:<br/>
 https://www.researchgate.net/publication/251231364_FinancialPhraseBank-v10
@@ -93,7 +93,11 @@ echo $INGRESS_PORT
 echo $SERVICE_HOSTNAME
 
 
-curl -v -H "Host: ${SERVICE_HOSTNAME}" http://${INGRESS_HOST}:${INGRESS_PORT}/v1/models/finbert:predict -d @./finbert_0.json
+curl -v \
+-H "Content-Type: application/json" \
+-H "Host: ${SERVICE_HOSTNAME}" \
+http://${INGRESS_HOST}:${INGRESS_PORT}/v1/models/finbert:predict \
+-d @./finbert_0.json
 ```
 
 PS: Depending on your load balancer, you may need to use `.status.loadBalancer.ingress[0].hostname` instead of `.status.loadBalancer.ingress[0].ip` for the `INGRESS_HOST` variable.

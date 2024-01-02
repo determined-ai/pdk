@@ -4,7 +4,7 @@
 
 # PDK - Pachyderm | Determined | KServe
 ## Brain MRI Example
-**Date/Revision:** August 30, 2023
+**Date/Revision:** January 02, 2024
 
 This example is based on the **Brain MRI Segmentation** Kaggle dataset, which can be found here:<br/>
 https://www.kaggle.com/datasets/mateuszbuda/lgg-mri-segmentation
@@ -89,7 +89,11 @@ echo $INGRESS_PORT
 echo $SERVICE_HOSTNAME
 
 
-curl -v -H "Host: ${SERVICE_HOSTNAME}" http://${INGRESS_HOST}:${INGRESS_PORT}/v1/models/brain-mri:predict -d @./brain.json
+curl -v \
+-H "Content-Type: application/json" \
+-H "Host: ${SERVICE_HOSTNAME}" \
+http://${INGRESS_HOST}:${INGRESS_PORT}/v1/models/brain-mri:predict \
+-d @./brain.json
 ```
 
 PS: Depending on your load balancer, you may need to use `.status.loadBalancer.ingress[0].hostname` instead of `.status.loadBalancer.ingress[0].ip` for the `INGRESS_HOST` variable.

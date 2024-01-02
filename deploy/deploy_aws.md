@@ -21,11 +21,11 @@ The 3 CPU-based nodes will be used to run the services for all 3 products, and t
 The following software versions will be used for this installation:
 
 - Python: 3.8 and 3.9
-- Kubernetes (K8s): 1.24.0
+- Kubernetes (K8s): latest supported *(currently 1.27)*
 - Postgres: 13
-- MLDE (Determined.AI): latest *(currently 0.26.0)*
-- MLDM (Pachyderm): latest *(currently 2.7.4)*
-- KServe: 0.11.0rc1 (Quickstart Environment)
+- MLDE (Determined.AI): latest *(currently 0.26.7)*
+- MLDM (Pachyderm): latest *(currently 2.8.2)*
+- KServe: 0.12.0-rc0 (Quickstart Environment)
 
 PS: some of the commands used here are sensitive to the version of the product(s) listed above.
 
@@ -36,7 +36,7 @@ To follow this documentation you will need:
 - The following applications, installed and configured in your computer:
   - kubectl
   - docker (you'll need docker desktop or similar to create and push images)
-  - git (you'll need to be logged in to your github account to pull code for the MLDM pipelines)
+  - git (to clone the repository with the examples)
   - aws cli (make sure it's initialized and logged in; basic client configuration is out of scope for this doc)
   - eksctl (to create the EKS cluster)
   - helm
@@ -72,31 +72,29 @@ In this page, we will execute the following steps:
 
 [09 - Create Postgres Database](#step9)
 
-[10 - Create configuration .yaml file for MLDM](#step10)
+[10 - Deploy nginx for MLDE](#step10)
 
-[11 - Install MLDM using Helm](#step11)
+[11 - Deploy KServe](#step11)
 
-[12 - Retrieve MLDM IP address and configure pachctl command line](#step12)
+[12 - Create configuration .yaml file for MLDM and MLDE](#step12)
 
-[13 - Deploy nginx for MLDE](#step13)
+[13 - Install MLDM and MLDE using Helm](#step13)
 
-[14 - Prepare MLDE installation assets](#step14)
+[14 - Create new Ingress for MLDE](#step14)
 
-[15 - Deploy MLDE using Helm chart](#step15)
+[15 - Retrieve MLDM and MLDE hostnames and configure command line clients](#step15)
 
-[16 - Create new Ingress for MLDE](#step16)
+[16 - (Optional) Test Components](#step16)
 
-[17 - Deploy KServe](#step17)
+[17 - Prepare for PDK Setup](#step17)
 
-[18 - (Optional) Test Components](#step18)
+[18 - [Optional] Configure KServe UI](#step18)
 
-[19 - Prepare for PDK Setup](#step19)
+[19 - [Optional] Prepare Docker and ECR to manage images](#step19)
 
-[19b - [Optional] Configure KServe UI](#step19b)
+[20 - Save data to Config Map](#step20)
 
-[20 - Prepare Docker and ECR to manage images](#step20)
-
-[21 - Save data to Config Map](#step21)
+[99 - Cleanup Commands](#step99)
 
 <br/>
 
@@ -140,7 +138,6 @@ export AWS_REGION="us-east-2"
 export AWS_AVAILABILITY_ZONE_1="us-east-2a"
 export AWS_AVAILABILITY_ZONE_2="us-east-2b"
 export AWS_AVAILABILITY_ZONE_3="us-east-2c"
-export MLDM_NAMESPACE="pachyderm"
 export KSERVE_MODELS_NAMESPACE="models"
 export CLUSTER_MACHINE_TYPE="m5.2xlarge"
 export GPU_MACHINE_TYPE="g4dn.metal"
@@ -164,6 +161,17 @@ export RDS_SUBNET_NAME="${NAME}-rds-subnet"
 
 Make sure all these commands return successfully. If one of them fails, fix the issue before continuing.
 
+Install MLDE client:
+```bash
+pip install determined
+```
+
+Install MLDM client (MacOS):
+```bash
+brew tap pachyderm/tap && brew install pachyderm/tap/pachctl@2.8  
+```
+
+Check versions:
 ```bash
 kubectl version --client=true
 aws --version
@@ -205,7 +213,7 @@ kind: ClusterConfig
 metadata:
   name: ${CLUSTER_NAME}
   region: ${AWS_REGION}
-  version: "1.24"
+  version: "1.27"
 
 # Use Existing VPC
 vpc:
@@ -267,7 +275,7 @@ iam:
         Resource: "arn:aws:s3:::${MLDE_BUCKET_NAME}/*"
   - metadata:
       name: "pachyderm"
-      namespace: "${MLDM_NAMESPACE}"
+      namespace: "default"
       labels:
         aws-usage: "pachyderm-bucket-access"
     roleName: "eksctl-${CLUSTER_NAME}-mldm-role"
@@ -294,7 +302,7 @@ iam:
         ]
   - metadata:
       name: "pachyderm-worker"
-      namespace: "${MLDM_NAMESPACE}"
+      namespace: "default"
       labels:
         aws-usage: "pachyderm-bucket-access"
     roleName: "eksctl-${CLUSTER_NAME}-mldm-worker-role"
@@ -373,7 +381,7 @@ managedNodeGroups:
       - ${AWS_AVAILABILITY_ZONE_1}
       - ${AWS_AVAILABILITY_ZONE_2}
       - ${AWS_AVAILABILITY_ZONE_3}
-    minSize: 3
+    minSize: 1
     maxSize: 4
     volumeSize: 1000
     volumeType: gp3
@@ -465,7 +473,7 @@ You can also go to the **IAM -> Roles** page, to see that a number of roles was 
 
 These roles will grant permissions to the cluster Autoscaler, and will allow the PDK components to access the S3 buckets.
 
-You can inspect these new roles to see the permissions that are being granted. The Trust relationship tab will show which Kubernetes service accounts are allowed to assume this role at runtime. In this case, we can see that the **pachyderm** service account, in the **$MLDM_NAMESPACE** namespace (also pachyderm in this case) is able to assume this role, which grants permissions on the S3 bucket:
+You can inspect these new roles to see the permissions that are being granted. The Trust relationship tab will show which Kubernetes service accounts are allowed to assume this role at runtime. In this case, we can see that the **pachyderm** service account in the default namespace is able to assume this role, which grants permissions on the S3 bucket:
 
 ![alt text][aws_eks_03_trust]
 
@@ -508,7 +516,7 @@ Run this command to deploy the GPU daemonset. Without it, your nodes will show 0
 kubectl apply -f https://raw.githubusercontent.com/NVIDIA/k8s-device-plugin/v0.14.0/nvidia-device-plugin.yml
 ```
 
-This will take a couple of minutes to take effect. Run a `kubectl get nodes` and then a `kubectl describe node <node_name>` in one of the GPU nodes. Look for the Allocatable section; if you don't see a `nvidia.com/gpu: 8` entry in that list, wait a few seconds and check again. Do not continue until the GPUs are being listed as allocatable.
+This will take a couple of minutes to take effect. Run a `kubectl get nodes` and then a `kubectl describe node <node_name>` in the GPU node. Look for the Allocatable section; if you don't see a `nvidia.com/gpu: 8` entry in that list, wait a few seconds and check again. Do not continue until the GPUs are being listed as allocatable.
 
 You can also use this command to list allocatable GPUs per node:
 
@@ -521,6 +529,25 @@ For the MLDE installation, we'll configure the GPU nodes to be in a separate Res
 
 You can check the service account by running `kubectl -n gpu-pool get sa`.
 
+&nbsp;
+
+**Important**: Now that the GPUs are being listed, you can downscale the GPU node group to a minimum of zero nodes; this will ensure that you are not paying for the GPUs unless there are active workloads using them.
+
+To reconfigure the cluster, go to the EKS page for your cluster on the AWS UI, click on the **Compute** tab, select the **managed-gpu-nodes** node group and click on the Edit button.
+
+![alt text][aws_eks_06_gpunodegroup]
+
+[aws_eks_06_gpunodegroup]: images/aws_eks_06_gpunodegroup.png "EKS - Compute - Node Groups"
+
+
+In the next screen, set the **Desired** and **Minimum** to zero. Scroll down and click **Save changes**.
+
+
+![alt text][aws_eks_07_nodegroupsize]
+
+[aws_eks_07_nodegroupsize]: images/aws_eks_07_nodegroupsize.png "Node Group - Desired and Minimum size"
+
+It should take a few minutes for the cluster to scale down. Nodes will be added automatically when the cluster requires GPU for a task (MLDE experiments, notebooks, etc).
 
 
 &nbsp;
@@ -534,6 +561,7 @@ First, we need to create a security group that allows inbound NFS access to the 
 
 ```bash
 export AWS_VPC_ID=$(aws eks describe-cluster --name ${CLUSTER_NAME} --query 'cluster.resourcesVpcConfig.vpcId' --output text)
+echo ${AWS_VPC_ID}
 
 export AWS_VPC_CIDR=$(aws ec2 describe-vpcs --vpc-ids ${AWS_VPC_ID} --query 'Vpcs[].CidrBlock' --output text)
 
@@ -542,7 +570,7 @@ aws ec2 create-security-group --description ${CLUSTER_NAME}-sg-efs --group-name 
 export SEC_GROUP_ID=$(aws ec2 describe-security-groups \
   --filters Name=vpc-id,Values=${AWS_VPC_ID} Name=group-name,Values=${CLUSTER_NAME}-sg-efs\
   --query 'SecurityGroups[0].GroupId' --output text)
-
+echo ${SEC_GROUP_ID}
 
 aws ec2 authorize-security-group-ingress --group-id ${SEC_GROUP_ID} --protocol tcp --port 2049 --cidr ${AWS_VPC_CIDR}
 ```
@@ -553,6 +581,37 @@ aws ec2 describe-vpcs --vpc-ids ${AWS_VPC_ID} --query 'Vpcs[].CidrBlockAssociati
 ```
 If you see more than one result in this command, run the `authorize-security-group-ingress` for each range in the response.
 
+Example:
+
+```bash
+aws ec2 describe-vpcs --vpc-ids ${AWS_VPC_ID} --query 'Vpcs[].CidrBlockAssociationSet'
+[
+    [
+        {
+            "AssociationId": "vpc-cidr-assoc-0afb113a774eb5cbc",
+            "CidrBlock": "10.0.0.0/24",
+            "CidrBlockState": {
+                "State": "associated"
+            }
+        },
+        {
+            "AssociationId": "vpc-cidr-assoc-023247e7eed42e6ed",
+            "CidrBlock": "100.64.0.0/16",
+            "CidrBlockState": {
+                "State": "associated"
+            }
+        }
+    ]
+]
+
+# 10.0.0.0/24 was already authorized by the previous command
+
+export AWS_VPC_CIDR="100.64.0.0/16"
+
+aws ec2 authorize-security-group-ingress --group-id ${SEC_GROUP_ID} --protocol tcp --port 2049 --cidr ${AWS_VPC_CIDR}
+
+
+```
 
 &nbsp;
 
@@ -562,6 +621,8 @@ aws efs create-file-system --creation-token ${CLUSTER_NAME}-efs --tags Key=Name,
 
 export EFS_ID=$(aws efs describe-file-systems --creation-token ${CLUSTER_NAME}-efs \
   --query 'FileSystems[0].FileSystemId' --output text)
+
+echo ${EFS_ID}
 ```
 
 The mount targets need to be created in each Availability Zone. If you are not using a pre-existing VPC, grab the IDs of the Subnets and set the variables before continuing.
@@ -615,7 +676,7 @@ provisioner: efs.csi.aws.com
 EOF
 ```
 
-Now create two Persistent Volumes and two Persistent Volume Claims, which will be associated with the file system we just created. We'll create one PV and one PVC in each namespace that can run MLDE notebooks (*default* and *gpu-pool*). The *default* namespace is created with the Kubernetes cluster, and the EKS installer already created the *gpu-pool* namespace as well (since it needed to grant bucket permissions to it). Run `kubectl get ns` to make sure the *gpu-pool* namespace exists.
+Now, create two Persistent Volumes and two Persistent Volume Claims, which will be associated with the file system we just created. We'll create one PV and one PVC in each namespace that can run MLDE notebooks (*default* and *gpu-pool*). The *default* namespace is created with the Kubernetes cluster, and the EKS installer already created the *gpu-pool* namespace as well (since it needed to grant bucket permissions to it). Run `kubectl get ns` to confirm that the *gpu-pool* namespace exists.
 
 PS: We're setting it for 200GB, but you can modify the size as needed.
 
@@ -747,7 +808,7 @@ spec:
           value: "true"
           effect: NoSchedule
       containers:
-        - image: k8s.gcr.io/autoscaling/cluster-autoscaler:v1.24.0
+        - image: k8s.gcr.io/autoscaling/cluster-autoscaler:v1.26.2
           name: cluster-autoscaler
           resources:
             limits:
@@ -816,13 +877,11 @@ Create a subnet for the new database (or set the **${RDS_SUBNET_NAME}** variable
 aws rds create-db-subnet-group \
     --db-subnet-group-name ${RDS_SUBNET_NAME} \
     --db-subnet-group-description "Subnet group for database ${RDS_INSTANCE_NAME}" \
-    --subnet-ids "${AWS_VPC_SUBNET_1_ID}" "${AWS_VPC_SUBNET_2_ID}" "${AWS_VPC_SUBNET_3_ID}"
+    --subnet-ids "${AWS_VPC_SUBNET_1_ID}" "${AWS_VPC_SUBNET_2_ID}" "${AWS_VPC_SUBNET_3_ID}" \
+    --output text
 ```
 
-PS: type `q` to close the output and return to your terminal.
-
-
-Use the following command to provision a cloud Postgres database. Leave the `--publicly-accessible` flag if you want to access the database from an external client (like DBeaver).
+Use the following command to provision a cloud Postgres database. Leave the `--publicly-accessible` flag if you want to access the database from an external client (like DBeaver, or a custom app).
 
 ```bash
 aws rds create-db-cluster \
@@ -842,7 +901,8 @@ aws rds create-db-cluster \
     --network-type IPV4 \
     --no-auto-minor-version-upgrade \
     --no-enable-performance-insights \
-    --publicly-accessible
+    --publicly-accessible \
+    --output text
 ```
 
 PS: If you want to use Postgres 14, additional configuration steps will be needed, because the default password encryption was changed between versions. Make sure to check the documentation for additional steps.
@@ -866,7 +926,7 @@ export RDS_CONNECTION_URL=$(aws rds describe-db-cluster-endpoints --db-cluster-i
 echo $RDS_CONNECTION_URL
 ```
 
-At this time, if you set the `--publicly-accessible` flag, you can connect using your external client:
+At this time, if you've set the `--publicly-accessible` flag, you can connect using your external client:
 
 
 ![alt text][aws_rds_01_dbeaver]
@@ -931,8 +991,55 @@ When you're done, use the command `\q` to quit.
 
 &nbsp;
 <a name="step10">
-### Step 10 - Create configuration .yaml file for MLDM
+### Step 10 - Deploy nginx for MLDE
 </a>
+
+Nginx will be configured to listen on port 80 (instead of the default 8080 used by MLDE).
+
+```bash
+
+helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
+
+helm repo update
+
+helm install -n ingress-system --create-namespace ingress-nginx ingress-nginx/ingress-nginx
+
+```
+
+PS: This could take a couple of minutes. Run `kubectl -n ingress-system get svc` and make sure that the External IP column is showing a value. If the field is empty (or showing Pending), investigate and fix it before continuing.
+
+
+
+
+&nbsp;
+<a name="step11">
+### Step 11 - Deploy KServe
+</a>
+
+KServe is a standard Model Inference Platform on Kubernetes, built for highly scalable use cases. It provides performant, standardized inference protocol across ML frameworks, including PyTorch, TensorFlow and Keras.
+Additionally, KServe provides features such as automatic scaling, monitoring, and logging, making it easy to manage deployed models in production. Advanced features, such as canary rollouts, experiments, ensembles and transformers are also available.
+For more information on KServe, please visit [the official KServe documentation](https://kserve.github.io/website/0.9/).
+
+
+Installation of KServe is very straightforward, because we are using the Quick Start. This is naturally only an option for test or demo environments;
+
+```bash
+curl -s "https://raw.githubusercontent.com/kserve/kserve/master/hack/quick_install.sh" | bash
+```
+
+After running this command, wait about 10 minutes for all the services to be properly initialized.
+
+
+
+
+
+
+&nbsp;
+<a name="step12">
+### Step 12 - Create configuration .yaml file for MLDM and MLDE
+</a>
+
+As of MLDM version 2.8.1, a single Helm chart can be used to deploy both MLDM and MDLE.
 
 Because we're using the AWS buckets, there are 2 service accounts in the MLDM namespace that will need access to S3: the main MLDM service account and the `worker` MLDM service account, which runs the pipeline code.
 
@@ -951,7 +1058,7 @@ echo $SERVICE_ACCOUNT_MLDM_WORKER
 This command will create a .yaml file that you can review in a text editor.
 
 ```bash
-cat <<EOF > ${NAME}.mldm.values.yaml
+cat <<EOF > helm_values.yaml
 deployTarget: "AMAZON"
 
 pachd:
@@ -989,13 +1096,98 @@ proxy:
     type: LoadBalancer
   tls:
     enabled: false
+
+determined:
+  enabled: true
+  detVersion: "0.26.7"
+  imageRegistry: determinedai
+  enterpriseEdition: false
+  imagePullSecretName:
+  createNonNamespacedObjects: true
+  masterPort: 8080
+  useNodePortForMaster: true
+  db:
+    hostAddress: "${RDS_CONNECTION_URL}"
+    name: determined
+    user: postgres
+    password: ${RDS_ADMIN_PASSWORD}
+    port: 5432
+  checkpointStorage:
+    saveExperimentBest: 0
+    saveTrialBest: 1
+    saveTrialLatest: 1
+    type: s3
+    bucket: ${MLDE_BUCKET_NAME}
+  maxSlotsPerPod: 8
+  masterCpuRequest: "4"
+  masterMemRequest: 8Gi
+  taskContainerDefaults:
+    cpuImage: determinedai/environments:py-3.8-pytorch-1.12-tf-2.11-cpu-6eceaca
+    gpuImage: determinedai/environments:cuda-11.3-pytorch-1.12-tf-2.11-gpu-6eceaca
+    cpuPodSpec:
+      apiVersion: v1
+      kind: Pod
+      spec:
+        serviceAccountName: checkpoint-storage-s3-bucket
+    gpuPodSpec:
+      apiVersion: v1
+      kind: Pod
+      metadata:
+        labels:
+          nodegroup-role: gpu-worker
+      spec:
+        serviceAccountName: checkpoint-storage-s3-bucket
+  telemetry:
+    enabled: true
+  defaultAuxResourcePool: default
+  defaultComputeResourcePool: gpu-pool
+  resourcePools:
+    - pool_name: default
+      task_container_defaults:
+        cpu_pod_spec:
+          apiVersion: v1
+          kind: Pod
+          spec:
+            serviceAccountName: checkpoint-storage-s3-bucket
+            containers:
+              - name: determined-container
+                volumeMounts:
+                  - name: shared-fs
+                    mountPath: /run/determined/workdir/shared_fs
+            volumes:
+              - name: shared-fs
+                persistentVolumeClaim:
+                  claimName: efs-pvc
+    - pool_name: gpu-pool
+      max_aux_containers_per_agent: 1
+      kubernetes_namespace: gpu-pool
+      task_container_defaults:
+        gpu_pod_spec:
+          apiVersion: v1
+          kind: Pod
+          spec:
+            serviceAccountName: checkpoint-storage-s3-bucket
+            containers:
+              - name: determined-container
+                volumeMounts:
+                  - name: shared-fs
+                    mountPath: /run/determined/workdir/shared_fs
+            volumes:
+              - name: shared-fs
+                persistentVolumeClaim:
+                  claimName: efs-pvc
+            tolerations:
+              - key: "nvidia.com/gpu"
+                operator: "Equal"
+                value: "present"
+                effect: "NoSchedule"
 EOF
 ```
 
 
 &nbsp;
-<a name="step11">
-### Step 11 - Install MLDM using Helm
+<a name="step13">
+### Step 13 - Install MLDM and MLDE using Helm
 </a>
 
 First, download the charts for MLDM:
@@ -1009,22 +1201,57 @@ helm repo update
 Then run the installer, referencing the .yaml file you just created:
 
 ```bash
-helm install pachyderm -f ./${NAME}.mldm.values.yaml pachyderm/pachyderm --namespace ${MLDM_NAMESPACE}
+helm install pachyderm -f ./helm_values.yaml pachyderm/pachyderm
 ```
 
-Give it a couple of minutes for all the services to be up and running. You can run `kubectl -n ${MLDM_NAMESPACE} get pods` to see if any pods failed or are stuck. Wait until all pods are running before continuing.
-
+Give it a couple of minutes for all the services to be up and running. Both products will be deployed to the `default` namespace. You can run `kubectl get pods` to see if any pods failed or are stuck. Wait until all pods are running before continuing.
 
 
 &nbsp;
-<a name="step12">
-### Step 12 - Retrieve MLDM IP address and configure pachctl command line
+<a name="step14">
+### Step 14 - Create new Ingress for MLDE
 </a>
 
-In this step, we'll configure the pachctl client. This will be important later, as we create the project, repo and pipeline for the PDK environment.
+Because we're using nginx, we'll need to create an ingress for MLDE.
+
+Use this command to create the ingress:
 
 ```bash
-export MLDM_HOST=$(kubectl get svc --namespace ${MLDM_NAMESPACE} pachyderm-proxy --output jsonpath='{.status.loadBalancer.ingress[0].hostname}')
+kubectl apply -f  - <<EOF
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: mlde-ingress
+  namespace: default
+  annotations:
+    nginx.ingress.kubernetes.io/proxy-body-size: "160m"
+spec:
+  ingressClassName: nginx
+  rules:
+  - http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: determined-master-service-pachyderm
+            port:
+              number: 8080
+EOF
+```
+
+Then run `kubectl get ingress` and make sure the ingress is being listed with a hostname (ADDRESS) before continuing. It might take a minute for the hostname (load balancer) to get assigned.
+
+
+&nbsp;
+<a name="step15">
+### Step 15 - Retrieve MLDM and MLDE hostnames and configure command line clients
+</a>
+
+In this step, we'll configure the `pachctl` and `det` clients. This will be important later, as we create the project, repo and pipeline for the PDK environment.
+
+```bash
+export MLDM_HOST=$(kubectl get svc pachyderm-proxy --output jsonpath='{.status.loadBalancer.ingress[0].hostname}')
 
 export MLDM_URL="http://${MLDM_HOST}:80"
 
@@ -1044,178 +1271,38 @@ At this time, you should be able to access the MLDM UI using the URL that was pr
 
 [aws_mldm_01_ui]: images/aws_mldm_01_ui.png "MLDM Dashboard"
 
+A new capabiity of MLDM 2.8.1 is **Cluster Defaults**, which allows admins to set configurations that will be automatically applied to all pipelines (unless explicitly overwritten by the pipeline definition). Click the **Cluster Defaults** button and replace the existing configuration with the following:
 
-
-&nbsp;
-<a name="step13">
-### Step 13 - Deploy nginx for MLDE
-</a>
-
-Nginx will be configured to listen on port 80 (instead of the default 8080 used by MLDE).
-
-```bash
-
-helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
-
-helm repo update
-
-helm upgrade --install -n ingress-system --create-namespace ingress-nginx ingress-nginx/ingress-nginx
-
+```json
+{
+  "createPipelineRequest": {
+    "resourceRequests": {
+      "cpu": 1,
+      "memory": "256Mi",
+      "disk": "1Gi"
+    },
+    "datumTries" : 1,
+    "parallelismSpec": {"constant": 1},
+    "autoscaling" : true,
+    "sidecarResourceRequests": {
+      "cpu": 1,
+      "memory": "256Mi",
+      "disk": "1Gi"
+    }
+  }
+}
 ```
 
-PS: This could take a couple of minutes. Run `kubectl -n ingress-system get svc` and make sure that the External IP column is showing a value. If the field is empty (or showing Pending), investigate and fix it before continuing.
+The configuration changes we are applying will:
+- Disable retries in case of failed jobs (`datumTries: 1`)
+- Run each pipeline in a single pod (`parallelismSpec - constant: 1`)
+- Automatically delete the pod once the pipeline is completed to release the CPU (`autoscaling: true`)
 
+Do keep in mind that these settings are not recommended for all environments, especially Production.
 
-
-&nbsp;
-<a name="step14">
-### Step 14 - Prepare MLDE installation assets
-</a>
-
-First, create a new values.yaml file for the Helm chart:
-
-```bash
-cat <<EOF > ${NAME}.mlde.values.yaml
-imageRegistry: determinedai
-enterpriseEdition: false
-imagePullSecretName:
-createNonNamespacedObjects: true
-masterPort: 8080
-useNodePortForMaster: true
-db:
-  hostAddress: "${RDS_CONNECTION_URL}"
-  name: determined
-  user: postgres
-  password: ${RDS_ADMIN_PASSWORD}
-  port: 5432
-checkpointStorage:
-  saveExperimentBest: 0
-  saveTrialBest: 1
-  saveTrialLatest: 1
-  type: s3
-  bucket: ${MLDE_BUCKET_NAME}
-maxSlotsPerPod: 4
-masterCpuRequest: 4
-masterMemRequest: 8Gi
-taskContainerDefaults:
-  cpuImage: determinedai/environments:py-3.8-pytorch-1.12-tf-2.11-cpu-6eceaca
-  gpuImage: determinedai/environments:cuda-11.3-pytorch-1.12-tf-2.11-gpu-6eceaca
-  cpuPodSpec:
-    apiVersion: v1
-    kind: Pod
-    spec:
-      serviceAccountName: checkpoint-storage-s3-bucket
-  gpuPodSpec:
-    apiVersion: v1
-    kind: Pod
-    metadata:
-      labels:
-        nodegroup-role: gpu-worker
-    spec:
-      serviceAccountName: checkpoint-storage-s3-bucket
-telemetry:
-  enabled: true
-resource_manager:
-  default_aux_resource_pool: default
-  default_compute_resource_pool: gpu-pool
-resourcePools:
-  - pool_name: default
-    task_container_defaults:
-      cpu_pod_spec:
-        apiVersion: v1
-        kind: Pod
-        spec:
-          serviceAccountName: checkpoint-storage-s3-bucket
-          containers:
-            - name: determined-container
-              volumeMounts:
-                - name: shared-fs
-                  mountPath: /run/determined/workdir/shared_fs
-          volumes:
-            - name: shared-fs
-              persistentVolumeClaim:
-                claimName: efs-pvc
-  - pool_name: gpu-pool
-    max_aux_containers_per_agent: 1
-    kubernetes_namespace: gpu-pool
-    task_container_defaults:
-      gpu_pod_spec:
-        apiVersion: v1
-        kind: Pod
-        spec:
-          serviceAccountName: checkpoint-storage-s3-bucket
-          containers:
-            - name: determined-container
-              volumeMounts:
-                - name: shared-fs
-                  mountPath: /run/determined/workdir/shared_fs
-          volumes:
-            - name: shared-fs
-              persistentVolumeClaim:
-                claimName: efs-pvc
-          tolerations:
-            - key: "nvidia.com/gpu"
-              operator: "Equal"
-              value: "present"
-              effect: "NoSchedule"
-EOF
-```
-
+Click **Continue** and **Save** to apply the changes.
 
 &nbsp;
-<a name="step15">
-### Step 15 - Deploy MLDE using Helm chart
-</a>
-
-To deploy MLDE, run these commands:
-
-```bash
-
-helm repo add determined-ai https://helm.determined.ai/
-
-helm repo update
-
-helm install determinedai -f ${NAME}.mlde.values.yaml determined-ai/determined
-
-```
-
-Because MLDE will be deployed to the default namespace, you can check the status of the deployment with `kubectl get pods` and `kubectl get svc`.<br/>
-Make sure the pod is running before continuing.
-
-
-&nbsp;
-<a name="step16">
-### Step 16 - Create new Ingress for MLDE
-</a>
-
-Because we're using nginx, we'll need to create an ingress for MLDE.
-
-Use this command to create the ingress:
-
-```bash
-kubectl apply -f  - <<EOF
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: mlde-ingress
-  annotations:
-    nginx.ingress.kubernetes.io/proxy-body-size: "160m"
-spec:
-  ingressClassName: nginx
-  rules:
-  - http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: determined-master-service-determinedai
-            port:
-              number: 8080
-EOF
-```
-
-Then run `kubectl get ingress` and make sure the ingress is being listed with a hostname (ADDRESS) before continuing. It might take a minute for the hostname to get assigned.
 
 Similar to the steps taken for MLDM, these commands will retrieve the load balancer address and create a URL we can use to access MLDE:
 
@@ -1227,11 +1314,14 @@ export MLDE_URL="http://${MLDE_HOST}:80"
 echo $MLDE_URL
 
 export DET_MASTER=${MLDE_HOST}:80
+
+det u login admin
 ```
+(leave the password empty and press enter to login as admin)
 
-With the `DET_MASTER` environment variable set, you can run `det e list`, which should return an empty list. If you get an error message, check the MLDE pod and service for errors.
+Once logged in, you can run `det e list`, which should return an empty list. If you get an error message, check the MLDE pod and service for errors.
 
-You should also be able to access the MLDE UI using the URL printed on the terminal. Login as user **admin** (leave password field empty). Once logged in, check the **Cluster** page and make sure the GPU resources are showing up:
+You should also be able to access the MLDE UI using the URL printed on the terminal. Login as user **admin** (leave password field empty). Once logged in, check the **Cluster** page. The 'No connected agents' message means that the cluster was downscaled to 0 GPU nodes:
 
 
 ![alt text][aws_mlde_01_ui]
@@ -1239,30 +1329,29 @@ You should also be able to access the MLDE UI using the URL printed on the termi
 [aws_mlde_01_ui]: images/aws_mlde_01_ui.png "MLDE UI - Clusters"
 
 
+As mentioned before, a new GPU node will be automatically provisioned when MLDE receives a workload to process.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 &nbsp;
-<a name="step17">
-### Step 17 - Deploy KServe
-</a>
-
-KServe is a standard Model Inference Platform on Kubernetes, built for highly scalable use cases. It provides performant, standardized inference protocol across ML frameworks, including PyTorch, TensorFlow and Keras.
-Additionally, KServe provides features such as automatic scaling, monitoring, and logging, making it easy to manage deployed models in production. Advanced features, such as canary rollouts, experiments, ensembles and transformers are also available.
-For more information on KServe, please visit [the official KServe documentation](https://kserve.github.io/website/0.9/).
-
-
-Installation of KServe is very straightforward, because we are using the Quick Start. This is naturally only an option for test or demo environments;
-
-```bash
-curl -s "https://raw.githubusercontent.com/kserve/kserve/release-0.10/hack/quick_install.sh" | bash
-```
-
-After running this command, wait about 10 minutes for all the services to be properly initialized.
-
-
-
-&nbsp;
-<a name="step18">
-### Step 18 - (Optional) Test Components
+<a name="step16">
+### Step 16 - (Optional) Test Components
 </a>
 
 In this optional step, we can test MLDM (by creating a pipeline) and MLDE (by creating an experiment)
@@ -1312,7 +1401,7 @@ At this time, you should see the OpenCV project and pipeline in the MLDM UI:
 
 [aws_mldm_02_test_pipeline]: images/aws_mldm_02_test_pipeline.png "MLDM Test Pipeline"
 
-
+You can also run `kubectl get pods` to confirm that none of the `opencv` pods are running (since the pipelines are not running).
 &nbsp;
 
 You should also be able to see the *chunks* in the storage bucket. This confirms that MLDM is able to connect to the bucket.
@@ -1321,6 +1410,7 @@ You should also be able to see the *chunks* in the storage bucket. This confirms
 ![alt text][aws_mldm_03_chunks]
 
 [aws_mldm_03_chunks]: images/aws_mldm_03_chunks.png "MLDM Storage Bucket"
+
 
 
 PS: Do not modify or delete chunks, as it will break integrity.
@@ -1340,42 +1430,39 @@ git clone https://github.com/determined-ai/determined.git .
 
 ```
 &nbsp;
-Once the command completes, run this command to modify the `./examples/computer_vision/cifar10_pytorch/const.yaml` file that will be used to run the experiment:
+Once the command completes, run this command to modify the `./examples/computer_vision/iris_tf_keras/const.yaml` file that will be used to run the experiment:
 
 ```bash
-cat <<EOF > ./examples/computer_vision/cifar10_pytorch/const.yaml
-name: cifar10_pytorch_const
+cat <<EOF > ./examples/computer_vision/iris_tf_keras/const.yaml
+name: iris_tf_keras_const
+data:
+  train_url: http://download.tensorflow.org/data/iris_training.csv
+  test_url: http://download.tensorflow.org/data/iris_test.csv
 hyperparameters:
   learning_rate: 1.0e-4
   learning_rate_decay: 1.0e-6
-  layer1_dropout: 0.25
-  layer2_dropout: 0.25
-  layer3_dropout: 0.5
-  global_batch_size: 32
-records_per_epoch: 500
+  layer1_dense_size: 16
+  global_batch_size: 16
 searcher:
   name: single
-  metric: validation_error
+  metric: val_categorical_accuracy
+  smaller_is_better: false
   max_length:
-    epochs: 3
-entrypoint: model_def:CIFARTrial
-min_validation_period:
-  epochs: 1
-max_restarts: 0
-resources:
-  resource_pool: gpu-pool
-  slots_per_trial: 4
+    batches: 500
+entrypoint: model_def:IrisTrial
 EOF
 ```
 
-PS: We need to modify this file because our GPU node pool is configured with taints that will reject workloads. In this case, we're setting a toleration for this taint. We're also configuring the experiment to use 4 GPUs. And we're reducing the number of epochs to keep the training time short.
+The changes we're making will reduce the global batch size and max batch lenght, to speed up training.
 
-Use this command to run the experiment:
+Then run this command to create the experiment:
 
 ```bash
-det experiment create -f ./examples/computer_vision/cifar10_pytorch/const.yaml ./examples/computer_vision/cifar10_pytorch
+det experiment create -f ./examples/computer_vision/iris_tf_keras/const.yaml ./examples/computer_vision/iris_tf_keras
+
+cd ..
 ```
- If this command fails, make sure the `DET_MASTER` environment variable is set. For the first execution, the client might time out while it's waiting for the image to be pulled from docker hub. It does not mean the experiment has failed; you can still check the UI or use `det e list` to see the current status of this experiment.
+ If this command fails, make sure the `DET_MASTER` environment variable is set. For the first execution, we must wait for the autoscaler to provision a GPU node in the cluster. The client will time out while it's waiting for the GPU (if there is an active GPU, the client can timeout while it's waiting for the experiment image to be pulled). It does not mean the experiment has failed; you can still check the UI or use `det e list` to see the current status of this experiment.
 
 
 &nbsp;
@@ -1390,7 +1477,7 @@ Your experiment will appear under Uncategorized (we will change that for the PDK
 
 &nbsp;
 
-You can also check the MLDE bucket in S3 to see the checkpoints that were saved:
+You can also check the MLDE bucket in S3 to see the checkpoint that was saved:
 
 
 ![alt text][aws_mlde_05_bucket]
@@ -1422,10 +1509,12 @@ In the new tab, make sure the *shared_fs* folder is listed. In this folder, user
 
 PS: If the JupyterLab environment fails to load, it might be because the EFS volume failed to mount. Run `kubectl -n gpu-pool describe pod` against the new pod to see why the pod failed to run.
 
+When you are done testing the notebook, kill the task (in the Tasks page) to release the GPU.
+
 
 &nbsp;
-<a name="step19">
-### Step 19 - Prepare for PDK Setup
+<a name="step17">
+### Step 17 - Prepare for PDK Setup
 </a>
 
 These next steps will help us verify that KServe is working properly, and they will also setup some pre-requisites for the PDK flow (specifically, the step where models are deployed to KServe).
@@ -1448,7 +1537,9 @@ metadata:
   name: "sklearn-iris"
 spec:
   predictor:
-    sklearn:
+    model:
+      modelFormat:
+        name: sklearn
       storageUri: "gs://kfserving-examples/models/sklearn/1.0/model"
 EOF
 ```
@@ -1508,7 +1599,11 @@ EOF
 Then, use this command to generate the prediction:
 
 ```bash
-curl -v -H "Host: ${SERVICE_HOSTNAME}" http://${INGRESS_HOST}:${INGRESS_PORT}/v1/models/sklearn-iris:predict -d @./iris-input.json
+curl -v \
+-H "Content-Type: application/json" \
+-H "Host: ${SERVICE_HOSTNAME}" \
+http://${INGRESS_HOST}:${INGRESS_PORT}/v1/models/sklearn-iris:predict \
+-d @./iris-input.json
 ```
 
 What we're looking for in the ouput is a status code of 200 (success) and a JSON payload with a list of values:
@@ -1532,6 +1627,7 @@ apiVersion: v1
 kind: Secret
 metadata:
   name: pipeline-secret
+  namespace: default
 stringData:
   det_master: "${MLDE_HOST}:80"
   det_user: "admin"
@@ -1539,7 +1635,7 @@ stringData:
   pac_token: ""
   pachd_lb_service_host: "${MLDM_HOST}"
   pachd_lb_service_port: "80"
-  kserve_namespace: "models"
+  kserve_namespace: "${KSERVE_MODELS_NAMESPACE}"
 EOF
 ```
 
@@ -1547,7 +1643,7 @@ A more detailed explanation of these attributes:
 
 - `det_master`: The address to the MLDE instance. Instead of using a URL, you can also point it to the service running in the default namespace (`determined-master-service-determinedai`).
 - `det_user`: MLDE user that will create experiments and pull models.
-- `det_password`: Password to the user specified above
+- `det_password`: Password to the user specified above. If you're planning on changing the password, make sure to update the secret.
 - `pac_token`: For the Enterprise version of Pachyderm, create an authentication token for a user. Otherwise, if you use the community edition, leave it blank.
 - `kserve_namespace`: Namespace where MLDM will deploy models to
 
@@ -1556,7 +1652,7 @@ A more detailed explanation of these attributes:
 This secret needs to be created in the MLDM namespace, as it will be used by the pipelines (that will then map the variables to the MLDE experiment):
 
 ```bash
-kubectl -n ${MLDM_NAMESPACE} apply -f pipeline-secret.yaml
+kubectl apply -f pipeline-secret.yaml
 ```
 
 Next, the MLDM Worker service account (which will be used to run the pods that contain the pipeline code) needs to gain access to the `${KSERVE_MODELS_NAMESPACE}` namespace, or it won't be able to deploy models there.
@@ -1588,7 +1684,7 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: pachyderm-worker
-  namespace: ${MLDM_NAMESPACE}
+  namespace: default
 EOF
 ```
 
@@ -1603,7 +1699,7 @@ metadata:
   name: pach-kserve-creds
   namespace: ${KSERVE_MODELS_NAMESPACE}
   annotations:
-    serving.kserve.io/s3-endpoint: pachd.${MLDM_NAMESPACE}:30600
+    serving.kserve.io/s3-endpoint: pachd.default:30600
     serving.kserve.io/s3-usehttps: "0"
 type: Opaque
 stringData:
@@ -1616,7 +1712,7 @@ metadata:
   name: pach-deploy
   namespace: ${KSERVE_MODELS_NAMESPACE}
   annotations:
-    serving.kserve.io/s3-endpoint: pachd.${MLDM_NAMESPACE}:30600
+    serving.kserve.io/s3-endpoint: pachd.default:30600
     serving.kserve.io/s3-usehttps: "0"
 secrets:
 - name: pach-kserve-creds
@@ -1625,8 +1721,8 @@ EOF
 
 
 &nbsp;
-<a name="step19b">
-### Step 19b - [Optional] Configure KServe UI
+<a name="step18">
+### Step 18 - [Optional] Configure KServe UI
 </a>
 
 The quick installer we used for KServe does not include a UI to see the deployments. We can optionally deploy one, using the instructions described in this step.
@@ -1810,17 +1906,17 @@ You can access the URL to see the deployed model (make sure to select the correc
 
 [aws_kserve_03_ui]: images/aws_kserve_03_ui.png "KServe UI"
 
-
+It could take a few minutes for the application to be up and running.
 
 
 
 
 &nbsp;
-<a name="step20">
-### Step 20 - Prepare Docker and ECR to manage images
+<a name="step19">
+### Step 19 - [Optional] Prepare Docker and ECR to manage images
 </a>
 
-For this step, make sure Docker Desktop is running.
+This step is only required if you are planning to create and use your own images. In this case, make sure Docker Desktop is running.
 
 Since each PDK use case will likely need to use specific images, we'll setup ECR as the registry for these images.
 
@@ -1867,8 +1963,8 @@ You can check the ECR UI to make sure the new image is there:
 
 
 &nbsp;
-<a name="step21">
-### Step 21 - Save data to Config Map
+<a name="step20">
+### Step 20 - Save data to Config Map
 </a>
 
 Now that all components are installed, we need a location to place some of the variables we've been using for the deployment. This config map can be used when configuring the PDK flows.
@@ -1884,18 +1980,21 @@ metadata:
   namespace: default
 data:
   region: "${AWS_REGION}"
-  mldm_namespace: "${MLDM_NAMESPACE}"
+  cluster_name: "${CLUSTER_NAME}"
+  rds_instance_name: "${RDS_INSTANCE_NAME}"
+  rds_subnet_name: "${RDS_SUBNET_NAME}"
   mldm_bucket_name: "${MLDM_BUCKET_NAME}"
+  mlde_bucket_name: "${MLDE_BUCKET_NAME}"
+  model_assets_bucket_name: "${MODEL_ASSETS_BUCKET_NAME}"
+  efs_id: "${EFS_ID}"
+  sec_group_id: "${SEC_GROUP_ID}"
   mldm_host: "${MLDM_HOST}"
   mldm_port: "80"
   mldm_url: "${MLDM_URL}"
-  mldm_pipeline_secret: "pipeline-secret"
-  mlde_bucket_name: "${MLDE_BUCKET_NAME}"
   mlde_host: "${MLDE_HOST}"
   mlde_port: "80"
   mlde_url: "${MLDE_URL}"
   kserve_ui_url: "${KSERVE_UI_URL}"
-  kserve_model_bucket_name: "${MODEL_ASSETS_BUCKET_NAME}"
   kserve_model_namespace: "${KSERVE_MODELS_NAMESPACE}"
   kserve_ingress_host: "${INGRESS_HOST}"
   kserve_ingress_port: "${INGRESS_PORT}"
@@ -1912,6 +2011,84 @@ kubectl apply -f ./pdk-config.yaml
 ```
 
 Once the config map is created, you can run `kubectl get cm pdk-config -o yaml` to verify the data.
+
+
+&nbsp;
+<a name="step99">
+### Step 99 - Cleanup Commands
+</a>
+
+To completely delete the cluster, you can use the AWS command line utility to remove the different components that were deployed. 
+
+To do that, we need to retrieve the variables we will need from the Config Map created in the previous step:
+
+```bash
+export AWS_REGION=$(kubectl get cm pdk-config -o=jsonpath='{.data.region}') && echo $AWS_REGION
+export CLUSTER_NAME=$(kubectl get cm pdk-config -o=jsonpath='{.data.cluster_name}') && echo $CLUSTER_NAME
+export RDS_INSTANCE_NAME=$(kubectl get cm pdk-config -o=jsonpath='{.data.rds_instance_name}') && echo $RDS_INSTANCE_NAME
+export RDS_SUBNET_NAME=$(kubectl get cm pdk-config -o=jsonpath='{.data.rds_subnet_name}') && echo $RDS_SUBNET_NAME
+export MLDM_BUCKET_NAME=$(kubectl get cm pdk-config -o=jsonpath='{.data.mldm_bucket_name}') && echo $MLDM_BUCKET_NAME
+export MLDE_BUCKET_NAME=$(kubectl get cm pdk-config -o=jsonpath='{.data.mlde_bucket_name}') && echo $MLDE_BUCKET_NAME
+export MODEL_ASSETS_BUCKET_NAME=$(kubectl get cm pdk-config -o=jsonpath='{.data.model_assets_bucket_name}') && echo $MODEL_ASSETS_BUCKET_NAME
+export EFS_ID=$(kubectl get cm pdk-config -o=jsonpath='{.data.efs_id}') && echo $EFS_ID
+export SEC_GROUP_ID=$(kubectl get cm pdk-config -o=jsonpath='{.data.sec_group_id}') && echo $SEC_GROUP_ID
+```
+
+First, delete the cluster:
+```bash
+eksctl delete cluster --region=${AWS_REGION} --name=${CLUSTER_NAME}
+```
+
+This should take several minutes. This command will also delete: load balancers, roles, policies, OIDC provider, etc.
+
+Next, delete the database:
+
+```bash
+aws rds delete-db-cluster --db-cluster-identifier ${RDS_INSTANCE_NAME}-cluster --skip-final-snapshot --output text
+```
+
+This should also take several minutes, as the read-only duplicates also need to be deleted. You can use the following commands to check the status of deletion (or just track through the AWS UI):
+
+```bash
+aws rds describe-db-clusters --db-cluster-identifier ${RDS_INSTANCE_NAME}-cluster --query 'DBClusters[0].Status' --output text
+```
+Once the state changes from `deleting` to an error message, the Subnet group can be deleted:
+
+```bash
+aws rds delete-db-subnet-group --db-subnet-group-name ${RDS_SUBNET_NAME}
+```
+
+Next, the buckets can be deleted. The `--force` parameter will instruct AWS to delete all bucket contents first.
+
+```bash
+aws s3 rb s3://${MLDM_BUCKET_NAME} --force
+
+aws s3 rb s3://${MLDE_BUCKET_NAME} --force
+
+aws s3 rb s3://${MODEL_ASSETS_BUCKET_NAME} --force
+```
+
+Before we can delete the EFS volume, we must delete the mount targets. There will be 3 of them. Use this command to get a list of IDs and delete all mount targets:
+
+```bash
+array=($(aws efs describe-mount-targets --file-system-id ${EFS_ID} --region ${AWS_REGION} --query 'MountTargets[].MountTargetId' --output text))
+for i in "${array[@]}"; do
+    aws efs delete-mount-target --mount-target-id $i --region ${AWS_REGION}
+done
+```
+
+With the mount targets deleted, the EFS volume can now be removed:
+
+```bash
+aws efs delete-file-system --file-system-id ${EFS_ID} --region ${AWS_REGION}
+```
+
+Finally, delete the security group created for EFS:
+
+```bash
+aws ec2 delete-security-group --group-id ${SEC_GROUP_ID}
+```
+
 
 
 &nbsp;
