@@ -19,7 +19,7 @@
     "stdin": [
       "python deploy.py --deployment-name dogcat-deploy --service-account-name pach-deploy --resource-requests cpu=2,memory=4Gi --resource-limits cpu=4,memory=4Gi"
     ],
-    "image": "us-central1-docker.pkg.dev/dai-dev-554/pdk-registry/pdk_cats_dogs_deploy:2.1",
+    "image": "pachyderm/pdk:dog-cat-deploy-v0.0.4",
     "secrets": [
       {
         "name": "pipeline-secret",

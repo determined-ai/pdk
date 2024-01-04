@@ -10,3 +10,4 @@ pandas==1.5.2
 transformers==4.11.3
 sentencepiece==0.1.91
 scikit-learn==1.0.1
+pandas

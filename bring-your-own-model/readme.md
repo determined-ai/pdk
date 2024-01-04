@@ -4,7 +4,7 @@
 
 # PDK - Pachyderm | Determined | KServe
 ## Bringing Your Model to PDK
-**Date/Revision:** August 30, 2023
+**Date/Revision:** January 02, 2024
 
 In this section, we will train and deploy a simple customer churn model on PDK.
 
@@ -72,25 +72,25 @@ data:
 &nbsp;
 * Additionally, if the original experiment had a training length specified in number of epochs, it may be convenient to **define training length in number of batches instead** (the same applies for **min_validation_period**).
   * Indeed, the number of samples in the training set will now vary as new data gets committed to the MLDM repository, and knowing that number of samples is mandatory to define training length in number of epochs.
-  * Note that the training pipeline image could be modified to deal with that issue, but specifying the training length in batches is a simple solution.
+  * Note that the training pipeline image could be modified to deal with that issue, but specifying the training length in batches is a simpler solution.
 * Depending on the organization of the MLDE cluster where these automatically triggered experiments are expected to run, it may also be a good idea to **edit the workspace and project fields accordingly**.
 
 &nbsp;
 
 ### Step 1-2: Add code to download data from MLDM
-* In **startup-hook.sh**, install python-pachyderm.
-* In **data.py**, add the imports (_os_, _shutil_, _python-pachyderm_) that are required to define the two new functions to add: _safe_open_wb_, and _download_pach_repo_. The later one being used to download data from the MLDM repository.
-  * **Note:** In this example, _download_pach_repo_ will only download files corresponding to the difference between current and last commit on the MLDM repository. It won't redownload and retrain on the initial *data_part1* if *data_part2* has been committed afterwards. You can change that behaviour by editing the _download_pach_repo_ function.
+* In **startup-hook.sh**, install `pachyderm-sdk`.
+* In **data.py**, add the imports (`os`, `shutil`, `python-pachyderm`) that are required to define the two new functions to add: `safe_open_wb`, and `download_pach_repo`. The later one being used to download data from the MLDM repository.
+  * **Note:** In this example, `download_pach_repo` will only download files corresponding to the difference between current and last commit on the MLDM repository. It won't redownload and retrain on the initial *data_part1* if *data_part2* has been committed afterwards. You can change that behaviour by editing the `download_pach_repo` function.
 * In **model_def.py**:
-  * Add _os_, _logging_ and _download_pach_repo_ as imports
+  * Add `os`, `logging` and `download_pach_repo` as imports
   * In \_\__init___, check if the model is expected to be trained (which would require downloading data from the MLDM repository, building the training set and building the validation sets) or not.
-  * Add the _download_data_ function, that will call the _download_pach_repo_ function to download files from the MLDM repository and return the list of those files.
+  * Add the `download_data` function, that will call the `download_pach_repo` function to download files from the MLDM repository and return the list of those files.
 		
 ### Step 1-3: Make sure the code handles the output of the _download_data_ function
 
-The original code may not handle a list of files, as output by the _download_data_ function. In this example, in the base experiment, a single csv data file was expected, while a list of files can be expected with the PDK experiment. Depending on your original code, and how you expect your data to be committed to MLDM, this may or may not require changes.
+The original code may not handle a list of files, as output by the `download_data` function. In this example, in the base experiment, a single csv data file was expected, while a list of files can be expected with the PDK experiment. Depending on your original code, and how you expect your data to be committed to MLDM, this may or may not require changes.
 
-In this example, the _get_train_and_validation_datasets_ function from **data.py** has been changed to concatenate a list of csv files into a single pandas DataFrame.
+In this example, the `get_train_and_validation_datasets` function from **data.py** has been changed to concatenate a list of csv files into a single pandas DataFrame.
 
 ## Step 2: Preparing MLDM and MLDE
 
@@ -115,6 +115,18 @@ By default, we are using the same Workspace that was created in the deployment t
 det p create "PDK Demos" pdk-customer-churn
 ```
 
+### Step 2-3: Create the storage bucket folders
+
+Create the following folder structure in the storage bucket (can be skipped for vanilla kubernetes deployments):
+
+```bash
+customer-churn
+customer-churn/config
+customer-churn/model-store
+```
+
+&nbsp;
+
 
 &nbsp;
 ## Step 3: Create the training pipeline
@@ -132,7 +144,7 @@ In case this is not the case or if you want to dig deeper into the details, all 
 * Name this MLDM pipeline by changing the _pipeline.name_.
 * Make sure the input repo matches the MLDM repository where data is expected to be committed.
 * Under _transform_:
-  * Define the image to be used. The current image corresponds to files in the **container/train** folder and should work well as it is.
+  * Define the image to be used. The current image configured in the pipeline should work well as it is.
   * _stdin_ command will be run when the pipeline is triggered. Make sure to change all the relevant options, in particular:
     * _--git-url_ to point to the Git URL containing the model code, since you probably want to change details in the experiment files.
     * _--sub-dir_ if the file structure of your git repository is different to this one.

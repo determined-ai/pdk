@@ -51,7 +51,6 @@ searcher:
     batches: 51520 # 50*1288 == 51520# Real Training
 records_per_epoch: 1288
 resources:
-    resource_pool: gpu-pool
     slots_per_trial: 8
     shm_size: 2000000000
 max_restarts: 0

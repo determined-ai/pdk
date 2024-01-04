@@ -19,7 +19,7 @@
     "stdin": [
       "python deploy.py --deployment-name brain-mri-deploy --service-account-name pach-deploy --resource-requests cpu=2,memory=4Gi --resource-limits cpu=4,memory=4Gi"
     ],
-    "image": "us-central1-docker.pkg.dev/dai-dev-554/pdk-registry/pdk_brain_mri_deploy:3.2",
+    "image": "pachyderm/pdk:brain-deploy-v0.0.4",
     "secrets": [
       {
         "name": "pipeline-secret",

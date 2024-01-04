@@ -24,7 +24,7 @@ class CustomerChurnHandler(BaseHandler):
 
     def __init__(self):
         super(CustomerChurnHandler, self).__init__()
-        
+
         f = open("numscale.json")
         self.scale_dict = json.load(f)
         f.close()
@@ -32,9 +32,9 @@ class CustomerChurnHandler(BaseHandler):
     def scale_data(self, df):
         for col in self.scale_dict:
             df[col] = (df[col] - self.scale_dict[col]["mean"]) / self.scale_dict[col]["std"]
-        
+
         return df
-    
+
     def encode_categories(self, df):
         expected_categories = {}
         expected_categories["new_cell"] = ['U','Y','N']
@@ -56,16 +56,16 @@ class CustomerChurnHandler(BaseHandler):
         expected_categories["kid11_15"] = ['U','Y']
         expected_categories["kid16_17"] = ['U','Y']
         expected_categories["creditcd"] = ['Y','N']
-        
+
         for col in expected_categories:
             categorical_col = pd.Categorical(df[col], categories=expected_categories[col], ordered=False)
             one_hot_cols = pd.get_dummies(categorical_col, prefix=col)
             df.drop(col, axis=1, inplace=True)
             df = pd.concat([df, one_hot_cols], axis=1)
-        
+
         return df
 
-    def preprocess(self, requests):
+    def preprocess(self, data):
         """
         Get the data from the JSON request in a dictionary, convert it to a pandas DataFrame.
         Then scale its numerical features using values from numscale.json, encode its categorical features,
@@ -77,25 +77,28 @@ class CustomerChurnHandler(BaseHandler):
         """
 
         # unpack the data
-        data = requests[0].get('body')
-        if data is None:
-            data = requests[0].get('data')
-            
-        df = pd.DataFrame.from_dict(data).reset_index(drop=True)
-        logger.info('Successfully converted json/dict back to pandas DataFrame')                             
-        
+        df_data = data[0]['data']
+        df = pd.DataFrame.from_dict(df_data).reset_index(drop=True)
+        logger.info('Successfully converted json/dict back to pandas DataFrame')
+
         df = self.scale_data(df)
         logger.info('Numerical features successfully scaled')
-        
+
         df = self.encode_categories(df)
         logger.info('Categorical features successfully encoded')
-        
+
         feature_cols = list(df.columns)
         label_col = "churn"
         if label_col in feature_cols:
             feature_cols.remove(label_col)
-        
-        input_tensor = torch.Tensor(df[feature_cols].values)
+
+        feature_values = df[feature_cols].values
+        x = []
+        for feature in feature_values:
+            x.append(feature)
+
+        input_tensor = torch.Tensor(x)
+        #input_tensor = torch.Tensor(df[feature_cols].values)
         logger.info('Dataframe successfully converted to tensor')
 
         return input_tensor

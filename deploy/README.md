@@ -152,9 +152,7 @@ Also, a Worspace and Project were configured for this experiment. You can change
 
 &nbsp;
 
-**Important**: The default setting for the examples included here is to run on the *gpu-pool* resource pool. If your MLDE instance does not have a resource pool called *gpu-pool*, the experiments will fail to run. Make sure to modify the experiment files as needed.
-
-Also, don't forget to create a Workspace and a Project in MLDE with the same name as configured in the file; otherwise, the experiment will fail to run. This can be done in the Workspaces page in the UI.
+Don't forget to create a Workspace and a Project in MLDE with the same name as configured in the file; otherwise, the experiment will fail to run. This can be done in the Workspaces page in the UI.
 
 ![alt text][github_03_workspaces]
 
@@ -191,8 +189,6 @@ A brief description of the Experiment files:
 &nbsp;
 
 The experiment files don't need to be modified, except for the Workspace and Project name in the `const.yaml` file. Do keep in mind that, at runtime, the pipeline will pull this code from Github. Any changes to any of the files need to be uploaded to your repository.
-
-
 
 &nbsp;
 
@@ -375,7 +371,7 @@ In the Training pipeline file, change the command line to point to your github r
 "stdin": [
       "python train.py --git-url https://git@github.com:/determined-ai/pdk.git --git-ref main --sub-dir examples/dog-cat/experiment --config const.yaml --repo dogs-and-cats-data --model dogs-and-cats --project pdk-dogs-and-cats"
     ],
-    "image": "pachyderm/pdk:train-v0.0.1",
+    "image": "pachyderm/pdk:train-v0.0.3",
 ```
 
 
@@ -438,7 +434,7 @@ Also, replace the path to your image, or use the default value.
  "stdin": [
       "python deploy.py --deployment-name dog-cat --cloud-model-host gcp --cloud-model-bucket pdk-repo-models --resource-requests cpu=2,memory=8Gi --resource-limits cpu=10,memory=8Gi"
     ],
-    "image": "pachyderm/pdk:dog-cat-deploy-v0.0.1",
+    "image": "pachyderm/pdk:dog-cat-deploy-v0.0.3",
 ```
 &nbsp;
 

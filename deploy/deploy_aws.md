@@ -654,6 +654,14 @@ provisioner: kubernetes.io/aws-ebs
 parameters:
   type: gp3
   fsType: ext4
+volumeBindingMode: WaitForFirstConsumer
+allowedTopologies:
+- matchLabelExpressions:
+  - key: failure-domain.beta.kubernetes.io/zone
+    values:
+    - ${AWS_AVAILABILITY_ZONE_1}
+    - ${AWS_AVAILABILITY_ZONE_2}
+    - ${AWS_AVAILABILITY_ZONE_3}    
 EOF
 ```
 
@@ -946,7 +954,8 @@ To create the databases using the psql pod, use these commands:
 ```bash
 kubectl run psql -it --rm=true --image=postgres:13 --command -- psql -h ${RDS_CONNECTION_URL} -U postgres postgres
 
-# The prompt will freeze as it waits for the password. Type the password and press enter.
+# The prompt will freeze as it loads the pod. Wait for the message "If you don't see a command prompt, try pressing enter".
+# Then, type the password and press enter.
 
 postgres=> CREATE DATABASE pachyderm;
 
@@ -1041,7 +1050,7 @@ After running this command, wait about 10 minutes for all the services to be pro
 
 As of MLDM version 2.8.1, a single Helm chart can be used to deploy both MLDM and MDLE.
 
-Because we're using the AWS buckets, there are 2 service accounts in the MLDM namespace that will need access to S3: the main MLDM service account and the `worker` MLDM service account, which runs the pipeline code.
+Because we're using the AWS buckets, there are 2 service accounts that will need access to S3: the main MLDM service account and the `worker` MLDM service account, which runs the pipeline code.
 
 The EKS installation command created the necessary roles with the right permissions, all we need to do is configure the service account to leverage those roles. Run these commands to set the proper ARNs for the roles:
 
@@ -1375,8 +1384,6 @@ pachctl list commit images
 
 pachctl create pipeline -f https://raw.githubusercontent.com/pachyderm/pachyderm/2.6.x/examples/opencv/edges.json
 
-
-
 wget http://imgur.com/8MN9Kg0.png
 
 pachctl put file images@master:AT-AT.png -f 8MN9Kg0.png
@@ -1393,6 +1400,8 @@ pachctl list job
 ```
 
 &nbsp;
+
+PS: If you used the default image size for the CPU nodes, the new pipelines may fail at first due to lack of available CPUs. In this case, the autoscaler should automatically add a new node to the CPU node group. Once the new CPUs are available, the pipeline should start automatically.
 
 At this time, you should see the OpenCV project and pipeline in the MLDM UI:
 
@@ -1649,7 +1658,7 @@ A more detailed explanation of these attributes:
 
 &nbsp;
 
-This secret needs to be created in the MLDM namespace, as it will be used by the pipelines (that will then map the variables to the MLDE experiment):
+This secret will be used by the pipelines, to map the variables for the MLDE experiments:
 
 ```bash
 kubectl apply -f pipeline-secret.yaml

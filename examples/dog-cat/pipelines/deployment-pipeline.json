@@ -18,7 +18,7 @@
     "stdin": [
       "python deploy.py --deployment-name dog-cat --cloud-model-host gcp --cloud-model-bucket pdk-repo-models --resource-requests cpu=2,memory=8Gi --resource-limits cpu=10,memory=8Gi"
     ],
-    "image": "us-central1-docker.pkg.dev/dai-dev-554/pdk-registry/pdk_cats_dogs_deploy:2.1",
+    "image": "pachyderm/pdk:dog-cat-deploy-v0.0.4",
     "secrets": [
       {
         "name": "pipeline-secret",
