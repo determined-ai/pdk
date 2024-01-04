@@ -48,8 +48,6 @@ searcher:
     batches: 36 # 1*(579/16) = 1*36
 records_per_epoch: 579 # 579 records / 16
 resources:
-    resource_pool: gpu-pool
-    slots_per_trial: 1
     shm_size: 2000000000
 max_restarts: 0
 

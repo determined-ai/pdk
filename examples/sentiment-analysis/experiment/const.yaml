@@ -39,9 +39,6 @@ entrypoint: model_def:FinBERTPyTorch
 profiling:
     enabled: true
 max_restarts: 0
-resources:
-  resource_pool: gpu-pool
-  slots_per_trial: 1
 environment:
   force_pull_image: false
   image:
