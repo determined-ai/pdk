@@ -41,6 +41,7 @@ To follow this documentation you will need:
   - eksctl (to create the EKS cluster)
   - helm
   - jq
+  - openssl (to generate a random password for the MLDE admin)
   - patchctl (the MLDM command line client)
   - det (the MLDE command line client)
 - Access to an AWS account
@@ -115,11 +116,12 @@ These steps will require an existing VPC with 3 Subnets and at least 1 Security 
 
 All commands listed throghout this document must be executed in the same terminal window.
 
+**Important:** The script will generate a default password for the MLDE Admin. You can replace it with a password of your choice. The admin password will be stored in a secret and can be retrieved through the `kubectl` command line.
+
 
 ```bash
 # MODIFY THESE VARIABLES
 export NAME="your-name-pdk"
-export RDS_ADMIN_PASSWORD="your-database-password"
 export AWS_ACCOUNT_ID="555555555555"
 
 # VPC SETTINGS
@@ -150,6 +152,12 @@ export MLDE_BUCKET_NAME="${NAME}-repo-mlde"
 export MODEL_ASSETS_BUCKET_NAME="${NAME}-repo-models"
 export RDS_INSTANCE_NAME="${NAME}-rds"
 export RDS_SUBNET_NAME="${NAME}-rds-subnet"
+
+# Generate admin password for MLDE (or set your own password)
+export ADMIN_PASSWORD=$(openssl rand -base64 32 | tr -dc A-Za-z0-9 | head -c16)
+
+# Optionally, set a different password for the database:
+export RDS_ADMIN_PASSWORD="${ADMIN_PASSWORD}"
 ```
 
 
@@ -1048,7 +1056,7 @@ After running this command, wait about 10 minutes for all the services to be pro
 ### Step 12 - Create configuration .yaml file for MLDM and MLDE
 </a>
 
-As of MLDM version 2.8.1, a single Helm chart can be used to deploy both MLDM and MDLE.
+As of MLDM version 2.8.2, a single Helm chart can be used to deploy both MLDM and MDLE.
 
 Because we're using the AWS buckets, there are 2 service accounts that will need access to S3: the main MLDM service account and the `worker` MLDM service account, which runs the pipeline code.
 
@@ -1115,6 +1123,7 @@ determined:
   createNonNamespacedObjects: true
   masterPort: 8080
   useNodePortForMaster: true
+  defaultPassword: ${ADMIN_PASSWORD}
   db:
     hostAddress: "${RDS_CONNECTION_URL}"
     name: determined
@@ -1324,9 +1333,11 @@ echo $MLDE_URL
 
 export DET_MASTER=${MLDE_HOST}:80
 
+echo ${ADMIN_PASSWORD}
+
 det u login admin
 ```
-(leave the password empty and press enter to login as admin)
+(use the password that was displayed in the previous command)
 
 Once logged in, you can run `det e list`, which should return an empty list. If you get an error message, check the MLDE pod and service for errors.
 
@@ -1341,23 +1352,6 @@ You should also be able to access the MLDE UI using the URL printed on the termi
 As mentioned before, a new GPU node will be automatically provisioned when MLDE receives a workload to process.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 &nbsp;
 <a name="step16">
 ### Step 16 - (Optional) Test Components
@@ -1368,6 +1362,10 @@ In this optional step, we can test MLDM (by creating a pipeline) and MLDE (by cr
 To test MLDM, run the following commands. They will create a new project, repo and pipeline, which will run for a few images we'll download.
 
 ```bash
+mkdir opencv
+
+cd opencv
+
 pachctl create project openCV
 
 pachctl config update context --project openCV
@@ -1397,11 +1395,13 @@ pachctl list commit images
 pachctl create pipeline -f https://raw.githubusercontent.com/pachyderm/pachyderm/2.6.x/examples/opencv/montage.json
 
 pachctl list job
+
+cd ..
 ```
 
 &nbsp;
 
-PS: If you used the default image size for the CPU nodes, the new pipelines may fail at first due to lack of available CPUs. In this case, the autoscaler should automatically add a new node to the CPU node group. Once the new CPUs are available, the pipeline should start automatically.
+PS: If you used the default image size for the CPU nodes (in the _eks-config.yaml_ file), the new pipelines may fail at first due to lack of available CPUs. In this case, the autoscaler should automatically add a new node to the CPU node group. Once the new CPUs are available, the pipeline will start automatically.
 
 At this time, you should see the OpenCV project and pipeline in the MLDM UI:
 
@@ -1410,7 +1410,7 @@ At this time, you should see the OpenCV project and pipeline in the MLDM UI:
 
 [aws_mldm_02_test_pipeline]: images/aws_mldm_02_test_pipeline.png "MLDM Test Pipeline"
 
-You can also run `kubectl get pods` to confirm that none of the `opencv` pods are running (since the pipelines are not running).
+You can also run `kubectl get pods` to confirm that none of the `opencv` pods are running (since the pipelines have finished running).
 &nbsp;
 
 You should also be able to see the *chunks* in the storage bucket. This confirms that MLDM is able to connect to the bucket.
@@ -1640,7 +1640,7 @@ metadata:
 stringData:
   det_master: "${MLDE_HOST}:80"
   det_user: "admin"
-  det_password: ""
+  det_password: "${ADMIN_PASSWORD}"
   pac_token: ""
   pachd_lb_service_host: "${MLDM_HOST}"
   pachd_lb_service_port: "80"
@@ -2119,6 +2119,15 @@ aws s3api put-object --bucket ${MODEL_ASSETS_BUCKET_NAME} --key dogs-and-cats/co
 aws s3api put-object --bucket ${MODEL_ASSETS_BUCKET_NAME} --key dogs-and-cats/model-store/
 ```
 
+&nbsp;
+
+### Retrieve MLDE Admin Password
+
+The MLDE admin password is stored in a secret, with base64 encoding. Use this command to retrieve the decoded password value:
+
+```bash
+kubectl get secret pipeline-secret -o jsonpath="{.data.det_password}" | base64 --decode
+```
 
 
 

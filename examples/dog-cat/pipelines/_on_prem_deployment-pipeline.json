@@ -12,7 +12,6 @@
     }
   },
   "transform": {
-    "user" : "0",
     "cmd": [
       "/bin/sh"
     ],

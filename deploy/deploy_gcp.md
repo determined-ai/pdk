@@ -38,6 +38,7 @@ To follow this documentation you will need:
   - gcloud (make sure it's initialized and logged in; basic client configuration is out of scope for this doc)
   - helm
   - jq
+  - openssl (to generate a random password for the MLDE admin)  
   - patchctl (the MLDM command line client)
   - det (the MLDE command line client)
 - Access to a Google Cloud account
@@ -145,7 +146,6 @@ PS: Keep in mind that custom roles in Google Cloud will take 7 days to be delete
 # MODIFY THESE VARIABLES
 export PROJECT_ID="your-google-cloud-project-id"
 export NAME="your-name-pdk"
-export SQL_ADMIN_PASSWORD="your-database-password"
 # Role names cannot have spaces, special characters or dashes.
 export GSA_ROLE="your_gsa_role_name"
 
@@ -192,6 +192,12 @@ export MLDE_WI="serviceAccount:${PROJECT_ID}.svc.id.goog[default/determined-mast
 export MLDE_DF_WI="serviceAccount:${PROJECT_ID}.svc.id.goog[default/default]"
 export MLDE_GPU_WI="serviceAccount:${PROJECT_ID}.svc.id.goog[gpu-pool/default]"
 export MLDE_KS_WI="serviceAccount:${PROJECT_ID}.svc.id.goog[${KSERVE_MODELS_NAMESPACE}/default]"
+
+# Generate admin password for MLDE (or set your own password)
+export ADMIN_PASSWORD=$(openssl rand -base64 32 | tr -dc A-Za-z0-9 | head -c16)
+
+# Optionally, set a different password for the database:
+export SQL_ADMIN_PASSWORD="${ADMIN_PASSWORD}"
 ```
 
 
@@ -857,6 +863,7 @@ determined:
   masterPort: 8080
   createNonNamespacedObjects: true
   useNodePortForMaster: true
+  defaultPassword: ${ADMIN_PASSWORD}
   db:
     hostAddress: "cloudsql-auth-proxy.default.svc.cluster.local."
     name: determined
@@ -1085,9 +1092,11 @@ echo "MLDE Address: http://${MLDE_STATIC_IP_ADDR_NO_QUOTES}:80"
 
 export DET_MASTER=${MLDE_STATIC_IP_ADDR_NO_QUOTES}:80
 
+echo ${ADMIN_PASSWORD}
+
 det u login admin
 ```
-(leave the password empty and press enter to login as admin)
+(use the password that was displayed in the previous command)
 
 Once logged in, you can run `det e list`, which should return an empty list. If you get an error message, check the MLDE pod and service for errors.
 
@@ -1110,6 +1119,10 @@ In this optional step, we can test MLDM (by creating a pipeline) and MLDE (by cr
 To test MLDM, run the following commands. They will create a new project, repo and pipeline, which will run for a few images we'll download.
 
 ```bash
+mkdir opencv
+
+cd opencv
+
 pachctl create project openCV
 
 pachctl config update context --project openCV
@@ -1126,8 +1139,6 @@ pachctl list commit images
 
 pachctl create pipeline -f https://raw.githubusercontent.com/pachyderm/pachyderm/2.6.x/examples/opencv/edges.json
 
-
-
 wget http://imgur.com/8MN9Kg0.png
 
 pachctl put file images@master:AT-AT.png -f 8MN9Kg0.png
@@ -1141,6 +1152,8 @@ pachctl list commit images
 pachctl create pipeline -f https://raw.githubusercontent.com/pachyderm/pachyderm/2.6.x/examples/opencv/montage.json
 
 pachctl list job
+
+cd ..
 ```
 
 &nbsp;
@@ -1376,7 +1389,7 @@ metadata:
 stringData:
   det_master: "${MLDE_STATIC_IP_ADDR_NO_QUOTES}:80"
   det_user: "admin"
-  det_password: ""
+  det_password: "${ADMIN_PASSWORD}"
   pac_token: ""
   pachd_lb_service_host: "${STATIC_IP_ADDR_NO_QUOTES}"
   pachd_lb_service_port: "80"
@@ -1855,7 +1868,9 @@ When it's time to cleanup your environment, just run:
 ## GCP - Useful Commands
 </a>
 
-Creating folders on the GCP bucket: GCP doesn't allow empty folders on buckets, and the MLDM pipeline will fail if the folder doesn't exist, so we'll create the folders with dummy files, to make sure the bucket is ready for the pipelines:
+### Creating folders in the GCP bucket
+
+GCP doesn't allow empty folders on buckets, and the MLDM pipeline will fail if the folder doesn't exist, so we'll create the folders with dummy files, to make sure the bucket is ready for the pipelines:
 
 ```bash
 echo "hello world" > helloworld.txt
@@ -1865,8 +1880,15 @@ gsutil cp helloworld.txt gs://${MODEL_ASSETS_BUCKET_NAME}/dogs-and-cats/config/h
 gsutil cp helloworld.txt gs://${MODEL_ASSETS_BUCKET_NAME}/dogs-and-cats/model-store/hello.txt
 ```
 
+&nbsp;
 
+### Retrieve MLDE Admin Password
 
+The MLDE admin password is stored in a secret, with base64 encoding. Use this command to retrieve the decoded password value:
+
+```bash
+kubectl get secret pipeline-secret -o jsonpath="{.data.det_password}" | base64 --decode
+```
 
 
 &nbsp;
