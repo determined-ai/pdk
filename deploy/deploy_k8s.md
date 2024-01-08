@@ -116,11 +116,20 @@ There is also a list of Kubernetes-specific [Useful Commands](#commands) at the 
 All commands listed throghout this document must be executed in the same terminal window.
 
 ```bash
-# MODIFY THESE VARIABLES
+# Set the name of your cluster
 export NAME="your-name-pdk"
-export DB_CONNECTION_STRING="postgres-service.default.svc.cluster.local."
-export DB_ADMIN_PASSWORD="your-database-password"
+
+# Generate admin password for MLDE (or set your own password)
+export ADMIN_PASSWORD=$(openssl rand -base64 32 | tr -dc A-Za-z0-9 | head -c16)
+
+# Default name for namespace where models will be deployed to
 export KSERVE_MODELS_NAMESPACE="models"
+
+# Modify if using external Postgres DB
+export DB_CONNECTION_STRING="postgres-service.default.svc.cluster.local."
+
+# Optionally, set a different password for the database:
+export DB_ADMIN_PASSWORD="${ADMIN_PASSWORD}"
 ```
 
 
@@ -132,7 +141,7 @@ export KSERVE_MODELS_NAMESPACE="models"
 Install `pachctl` (the command line utility for MLDM):
 
 ```bash
-curl -L https://github.com/pachyderm/pachyderm/releases/download/v2.8.1/pachctl_2.8.1_linux_amd64.tar.gz | sudo tar -xzv --strip-components=1 -C /usr/local/bin
+curl -L https://github.com/pachyderm/pachyderm/releases/download/v2.8.2/pachctl_2.8.2_linux_amd64.tar.gz | sudo tar -xzv --strip-components=1 -C /usr/local/bin
 ```
 
 
@@ -720,6 +729,7 @@ determined:
   createNonNamespacedObjects: true
   masterPort: 8080
   useNodePortForMaster: false
+  defaultPassword: ${ADMIN_PASSWORD}
   db:
     hostAddress: "${DB_CONNECTION_STRING}"
     name: determined
@@ -892,6 +902,8 @@ echo $MLDE_URL
 
 export DET_MASTER=${MLDE_HOST}:8080
 
+echo ${ADMIN_PASSWORD}
+
 det u login admin
 ```
 (leave the password empty and press enter to login as admin)
@@ -920,6 +932,10 @@ In this optional step, we can test MLDM (by creating a pipeline) and MLDE (by cr
 To test MLDM, run the following commands. They will create a new project, repo and pipeline, which will run for a few images we'll download.
 
 ```bash
+mkdir opencv
+
+cd opencv
+
 pachctl create project openCV
 
 pachctl config update context --project openCV
@@ -949,6 +965,8 @@ pachctl list commit images
 pachctl create pipeline -f https://raw.githubusercontent.com/pachyderm/pachyderm/2.6.x/examples/opencv/montage.json
 
 pachctl list job
+
+cd ..
 ```
 
 &nbsp;
