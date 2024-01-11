@@ -1,0 +1,75 @@
+name: starcoder-ft
+workspace: Tyler
+project: starcoder
+debug: true
+data:
+  pachyderm:
+    host: 
+    port: 
+    repo: 
+    project: 
+    branch: 
+    token:
+    previous_commit: 
+environment:
+  environment_variables:
+    - HF_HOME=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
+    - https_proxy=
+    - http_proxy=
+    - TRANSFORMERS_CACHE=/nvmefs1/anoop/cache/hf
+    - HF_MODULES_CACHE=/nvmefs1/anoop/cache/hf
+    - HF_HOME=/nvmefs1/anoop/cache/hf
+    - HUGGINGFACE_HUB_CACHE=/nvmefs1/anoop/cache/hf
+    - HF_DATASETS_CACHE=/nvmefs1/anoop/cache/hf
+    - NCCL_DEBUG=WARN
+  image:
+    cuda: anoophpe/llm-codegen-ft:1.0
+resources:
+  slots_per_trial: 4
+  resource_pool: A100
+searcher:
+  name: single
+  max_length:
+    batches: 100
+  metric: eval_loss
+hyperparameters:
+  training_arguments:
+    learning_rate: 1e-4
+entrypoint: >-
+  python -m determined.launch.torch_distributed
+  python finetune-mlde.py
+  --model_path "bigcode/starcoder"
+  --dataset_name
+  "/tmp/data/data"
+  --split
+  "train"
+  --size_valid_set
+  "10000"
+  --streaming
+  --seq_length
+  "2048"
+  --max_steps
+  "1000"
+  --batch_size
+  "1"
+  --input_column_name
+  "question"
+  --output_column_name
+  "response"
+  --gradient_accumulation_steps
+  "16"
+  --lr_scheduler_type
+  "cosine"
+  --num_warmup_steps
+  100
+  --weight_decay
+  0.05
+  --output_dir
+  "./outputdir"
+  --log_freq
+  20
+  --save_freq
+  20
+  --eval_freq
+  20
+max_restarts: 3

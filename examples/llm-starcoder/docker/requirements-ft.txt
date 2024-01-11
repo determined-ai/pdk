@@ -1,0 +1,11 @@
+tqdm==4.65.0
+transformers==4.28.1
+datasets==2.11.0
+huggingface-hub==0.13.4
+accelerate==0.18.0
+torch==1.13.1
+torchvision==0.14.1
+torchaudio==0.13.1
+triton>=v1.1.1
+bitsandbytes
+git+https://github.com/huggingface/peft.git
