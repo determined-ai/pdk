@@ -1,5 +1,5 @@
 name: starcoder-ft
-workspace: Tyler
+workspace: PDK Demos
 project: starcoder
 debug: true
 data:
@@ -11,6 +11,10 @@ data:
     branch: 
     token:
     previous_commit: 
+bind_mounts:
+    - host_path: /nvmefs1/anoop
+      container_path: /nvmefs1/anoop
+      read_only: false
 environment:
   environment_variables:
     - HF_HOME=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
@@ -30,7 +34,7 @@ resources:
 searcher:
   name: single
   max_length:
-    batches: 100
+    batches: 1000
   metric: eval_loss
 hyperparameters:
   training_arguments:
