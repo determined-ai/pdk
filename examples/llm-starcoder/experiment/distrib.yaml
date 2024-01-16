@@ -15,6 +15,9 @@ bind_mounts:
     - host_path: /nvmefs1/anoop
       container_path: /nvmefs1/anoop
       read_only: false
+    - host_path: /nvmefs1/anoop/scratch
+      container_path: /tmp/data
+      read_only: false
 environment:
   environment_variables:
     - HF_HOME=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
