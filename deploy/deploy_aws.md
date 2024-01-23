@@ -42,7 +42,7 @@ To follow this documentation you will need:
   - helm
   - jq
   - openssl (to generate a random password for the MLDE admin)
-  - patchctl (the MLDM command line client)
+  - pachctl (the MLDM command line client)
   - det (the MLDE command line client)
 - Access to an AWS account
 - A user with enough permissions to provision all the necessary components
