@@ -278,7 +278,7 @@ def main():
     print(
         f"Starting pipeline: name='{pipeline}', repo='{args.repo}', job_id='{job_id}'"
     )
-
+    print(f"Incremental Training: {args.incremental}")
     # --- Download code repository
 
     local_repo = os.path.join(os.getcwd(), "code-repository")
