@@ -83,6 +83,7 @@ def parse_args():
         "--incremental",
         type=bool,
         default=True,
+        action=argparse.BooleanOptionalAction,
         help="Send previous commit to download only the diff",
     )
     return parser.parse_args()
@@ -278,7 +279,6 @@ def main():
     print(
         f"Starting pipeline: name='{pipeline}', repo='{args.repo}', job_id='{job_id}'"
     )
-    print(f"Incremental Training: {args.incremental}")
     # --- Download code repository
 
     local_repo = os.path.join(os.getcwd(), "code-repository")
