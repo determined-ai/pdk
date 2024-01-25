@@ -83,6 +83,7 @@ def parse_args():
         "--incremental",
         type=bool,
         default=True,
+        action=argparse.BooleanOptionalAction,
         help="Send previous commit to download only the diff",
     )
     return parser.parse_args()
@@ -191,6 +192,7 @@ def run_experiment(client, configfile, code_path, model, incremental):
     version = None
     if incremental:
         version = model.get_version()
+        print("Incremental Training enabled")
 
     if version is None:
         print("Creating a new experiment on DeterminedAI...")
@@ -207,7 +209,7 @@ def run_experiment(client, configfile, code_path, model, incremental):
 
 def get_checkpoint(exp):
     try:
-        return exp.top_checkpoint()
+        return exp.list_checkpoints(max_results=1)[0]
     except AssertionError:
         return None
 
@@ -216,11 +218,11 @@ def get_checkpoint(exp):
 
 
 def get_or_create_model(client, model_name, pipeline, repo):
-    models = client.get_models(name=model_name)
+    models = client.list_models(name=model_name)
 
     if len(models) > 0:
         print(f"Model already present. Updating it : {model_name}")
-        model = client.get_models(name=model_name)[0]
+        model = client.list_models(name=model_name)[0]
     else:
         print(f"Creating a new model : {model_name}")
         model = client.create_model(
@@ -277,7 +279,6 @@ def main():
     print(
         f"Starting pipeline: name='{pipeline}', repo='{args.repo}', job_id='{job_id}'"
     )
-
     # --- Download code repository
 
     local_repo = os.path.join(os.getcwd(), "code-repository")

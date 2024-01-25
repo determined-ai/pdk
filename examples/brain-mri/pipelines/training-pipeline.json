@@ -19,7 +19,7 @@
     "stdin": [
       "python train.py --git-url https://git@github.com:/determined-ai/pdk.git --git-ref main --sub-dir examples/brain-mri/experiment --config const.yaml --repo brain-mri-data --model brain-mri --project pdk-brain-mri"
     ],
-    "image": "pachyderm/pdk:train-v0.0.4",
+    "image": "pachyderm/pdk:train-v0.0.5",
     "secrets": [
       {
         "name": "pipeline-secret",
