@@ -127,6 +127,20 @@ def print_trainable_parameters(model):
         f"trainable params: {trainable_params} || all params: {all_param} || trainable%: {100 * trainable_params / all_param}"
     )
 
+def download_data( data_config, data_dir):
+
+    files = download_pach_repo(
+        data_config["pachyderm"]["host"],
+        data_config["pachyderm"]["port"],
+        data_config["pachyderm"]["repo"],
+        data_config["pachyderm"]["branch"],
+        data_dir,
+        data_config["pachyderm"]["token"],
+        data_config["pachyderm"]["project"],
+        data_config["pachyderm"]["previous_commit"],
+    )
+    print(f"Data dir set to : {data_dir}")
+    return [des for src, des in files]
 
 def prepare_sample_text(example, input_column_name="prompt", output_column_name="completion"):
     """Prepare the text from a sample of the dataset."""
@@ -306,20 +320,6 @@ def run_training(det_callback, args, train_data, val_data):
     trainer.train(resume_from_checkpoint=latest_checkpoint)
 
 
-def download_data( data_config, data_dir):
-
-    files = download_pach_repo(
-        data_config["pachyderm"]["host"],
-        data_config["pachyderm"]["port"],
-        data_config["pachyderm"]["repo"],
-        data_config["pachyderm"]["branch"],
-        data_dir,
-        data_config["pachyderm"]["token"],
-        data_config["pachyderm"]["project"],
-        data_config["pachyderm"]["previous_commit"],
-    )
-    print(f"Data dir set to : {data_dir}")
-    return [des for src, des in files]
 
 def main(det_callback, args):
     tokenizer = AutoTokenizer.from_pretrained(args.model_path, use_auth_token=True)
@@ -344,9 +344,16 @@ if __name__ == "__main__":
     
     # download from pachyderm
     if data_config["pachyderm"]["host"] is not None:
+        if "," not in data_config["pachyderm"]["repo"]:
+            raise ValueError("need two comma separated repos for model and dataset (mnodelrepo,datasetrepo)")
+        os.makedirs(args.model_path, exist_ok=True)
         os.makedirs(args.dataset_name, exist_ok=True)
-        files = download_data(data_config, args.dataset_name)
+        model_repo, data_repo = data_config["pachyderm"]["repo"].split(",")
+        data_config["pachyderm"]["repo"] = model_repo
+        model = download_data(data_config, args.model_path)
+        data_config["pachyderm"]["repo"] = data_repo
 
+        model = download_data(data_config, args.dataset_name)
     # dbg- tmp logging
     log_level = logging.INFO
     logger.setLevel(log_level)

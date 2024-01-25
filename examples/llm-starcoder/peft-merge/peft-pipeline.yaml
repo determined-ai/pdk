@@ -1,0 +1,42 @@
+pipeline:
+  name: peft_merge
+transform:
+  image: 'vmtyler/pdk:peft-0.5'
+  cmd:
+    - python
+    - peft_merge.py
+    - '--input_path_peft'
+    - /pfs/peft
+    - '--model'
+    - /pfs/model
+    - '--output-dir'
+    - /pfs/out
+parallelismSpec:
+  constant: '1'
+outputBranch: master
+input:
+  cross:
+    - pfs:
+        project: starcoder
+        name: model
+        repo: hf-download-starcoder-model
+        repoType: user
+        branch: master
+        glob: /
+    - pfs:
+        project: starcoder
+        name: peft
+        repo: training
+        repoType: user
+        branch: master
+        glob: /
+salt: 2f19be1bef854d958ff7349279ec4f29
+datumTries: '3'
+podPatch: >-
+  [{"op": "add","path": "/volumes/-","value": {"name":
+  "det-checkpoints","hostpath": {"path":
+  "/nvmefs1/determined/checkpoints","type": "Directory"}}}, {"op": "add","path":
+  "/containers/0/volumeMounts/-","value": {"mountPath":
+  "/determined_shared_fs","name":
+  "det-checkpoints"}},{"op":"add","path":"/tolerations","value":[{"key":"accelerator","value":"NVIDIA-A100-SXM4-80GB","operator":"Equal"}]}]
+reprocessSpec: until_success

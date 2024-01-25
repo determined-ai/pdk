@@ -1,0 +1,35 @@
+{
+    "pipeline": {
+      "name": "titan_serving"
+    },
+    "description": "",
+    "input": {
+      "pfs": {
+        "glob": "/",
+        "repo": "peft_merge",
+        "name": "model",
+        "branch": "master"
+      }
+    },
+    "transform": {
+      "env": {
+        "TAKEOFF_MODEL_NAME": "/pfs/model",
+        "TAKEOFF_DEVICE": "cuda",
+        "TAKEOFF_QUANT_TYPE": "float16"
+      },
+      "cmd": [
+        "sh",
+        "run.sh"
+      ],
+      "image": "tytn/fabulinus:latest"
+    },
+    "service": {
+      "external_port": 8080,
+      "internal_port": 80,
+      "type": "LoadBalancer"
+    },
+    "parallelism_spec": {
+      "constant": 1
+    },
+    "pod_patch": "[{\"op\":\"add\",\"path\":\"/tolerations\",\"value\":[{\"key\":\"accelerator\",\"value\":\"A100-MLDM\",\"operator\":\"Equal\"}]}]"
+  }

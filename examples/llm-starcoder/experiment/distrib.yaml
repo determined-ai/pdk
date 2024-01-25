@@ -4,50 +4,37 @@ project: starcoder
 debug: true
 data:
   pachyderm:
+    branch: 
     host: 
     port: 
-    repo: 
-    project: 
-    branch: 
-    token:
     previous_commit: 
-bind_mounts:
-    - host_path: /nvmefs1/anoop
-      container_path: /nvmefs1/anoop
-      read_only: false
-    - host_path: /nvmefs1/anoop/scratch
-      container_path: /tmp/data
-      read_only: false
+    project: 
+    repo: 
+    token: null
 environment:
   environment_variables:
-    - HF_HOME=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
+    - NCCL_DEBUG=WARN
     - https_proxy=
     - http_proxy=
-    - TRANSFORMERS_CACHE=/nvmefs1/anoop/cache/hf
-    - HF_MODULES_CACHE=/nvmefs1/anoop/cache/hf
-    - HF_HOME=/nvmefs1/anoop/cache/hf
-    - HUGGINGFACE_HUB_CACHE=/nvmefs1/anoop/cache/hf
-    - HF_DATASETS_CACHE=/nvmefs1/anoop/cache/hf
-    - NCCL_DEBUG=WARN
   image:
-    cuda: anoophpe/llm-codegen-ft:1.0
+    cuda: vmtyler/llm-codegen-ft:1.0
 resources:
-  slots_per_trial: 4
+  slots_per_trial: 8
   resource_pool: A100
 searcher:
   name: single
   max_length:
-    batches: 1000
+    batches: 400
   metric: eval_loss
 hyperparameters:
   training_arguments:
-    learning_rate: 1e-4
+    learning_rate: .00001
 entrypoint: >-
   python -m determined.launch.torch_distributed
   python finetune-mlde.py
-  --model_path "bigcode/starcoder"
+  --model_path "/tmp/model"
   --dataset_name
-  "/tmp/data/data"
+  "/tmp"
   --split
   "train"
   --size_valid_set
@@ -56,7 +43,7 @@ entrypoint: >-
   --seq_length
   "2048"
   --max_steps
-  "1000"
+  "400"
   --batch_size
   "1"
   --input_column_name
@@ -68,7 +55,7 @@ entrypoint: >-
   --lr_scheduler_type
   "cosine"
   --num_warmup_steps
-  100
+  1
   --weight_decay
   0.05
   --output_dir
@@ -76,7 +63,7 @@ entrypoint: >-
   --log_freq
   20
   --save_freq
-  20
+  50
   --eval_freq
-  20
+  50
 max_restarts: 3
