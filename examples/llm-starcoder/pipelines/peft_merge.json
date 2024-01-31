@@ -46,9 +46,6 @@
       }
     ]
   },
-  "salt": "2f19be1bef854d958ff7349279ec4f29",
   "datumTries": "3",
-  "autoscaling": false,
-  "podPatch": "[{\"op\":\"add\",\"path\":\"/tolerations\",\"value\":[{\"key\":\"accelerator\",\"value\":\"NVIDIA-A100-SXM4-80GB\",\"operator\":\"Equal\"}]}]",
   "reprocessSpec": "until_success"
 }

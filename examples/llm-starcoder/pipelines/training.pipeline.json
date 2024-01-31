@@ -1,0 +1,51 @@
+{
+  "pipeline": {
+    "name": "training",
+    "project": {
+      "name": "starcoder"
+    }
+  },
+  "description": "Detects changed files into a repository and triggers a retraining on that dataset",
+  "input": {
+    "pfs": {
+      "name": "data",
+      "repo": "hf-download-stack-exchange",
+      "branch": "master",
+      "project": "starcoder",
+      "glob": "/",
+      "empty_files": true
+    }
+  },
+  "transform": {
+    "cmd": [
+      "/bin/sh"
+    ],
+    "stdin": [
+      "python train.py --git-url https://git@github.com:/determined-ai/pdk.git --git-ref starcoder --sub-dir examples/llm-starcoder/experiment --config distrib.yaml --repo hf-download-stack-exchange --model starcoder --project starcoder"
+    ],
+    "image": "pachyderm/pdk:train-v0.0.4",
+    "secrets": [
+      {
+        "name": "pipeline-secret",
+        "key": "det_master",
+        "env_var": "DET_MASTER"
+      },
+      {
+        "name": "pipeline-secret",
+        "key": "det_user",
+        "env_var": "DET_USER"
+      },
+      {
+        "name": "pipeline-secret",
+        "key": "det_password",
+        "env_var": "DET_PASSWORD"
+      },
+      {
+        "name": "pipeline-secret",
+        "key": "pac_token",
+        "env_var": "PAC_TOKEN"
+      }
+    ]
+  },
+  "autoscaling": true
+}

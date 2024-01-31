@@ -1,0 +1,52 @@
+{
+  "pipeline": {
+    "project": {
+      "name": "starcoder"
+    },
+    "name": "peft_merge"
+  },
+  "transform": {
+    "image": "vmtyler/pdk:peft-0.5b",
+    "cmd": [
+      "python",
+      "peft_merge.py",
+      "--input_path_peft",
+      "/pfs/peft",
+      "--model",
+      "/pfs/model",
+      "--output-dir",
+      "/pfs/out"
+    ]
+  },
+  "parallelismSpec": {
+    "constant": "1"
+  },
+  "outputBranch": "master",
+  "input": {
+    "cross": [
+      {
+        "pfs": {
+          "project": "starcoder",
+          "name": "model",
+          "repo": "hf-download-starcoder-model",
+          "repoType": "user",
+          "branch": "master",
+          "glob": "/"
+        }
+      },
+      {
+        "pfs": {
+          "project": "starcoder",
+          "name": "peft",
+          "repo": "training",
+          "repoType": "user",
+          "branch": "master",
+          "glob": "/"
+        }
+      }
+    ]
+  },
+  "datumTries": "3",
+  "podPatch": "[{\"op\":\"add\",\"path\":\"/tolerations\",\"value\":[{\"key\":\"accelerator\",\"value\":\"NVIDIA-A100-SXM4-80GB\",\"operator\":\"Equal\"}]}]",
+  "reprocessSpec": "until_success"
+}
