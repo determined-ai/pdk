@@ -59,3 +59,12 @@ This example allows you to fine tune the [StarCoder](https://huggingface.co/bigc
     ```
     pachctl create pipeline -f pipelines/serving.pipeline.json
     ```
+
+### Use
+Now we're ready to trigger these pipelines to fine tune this model.
+1) Make sure you have the workspaces and projects that are in the experiment created in determined.
+1) Run the two downloading pipelines either via the Pachyderm UI, or via `pachctl run cron hf-download-starcoder-model` and `pachctl run cron hf-download-stack-exchange`
+
+The dataset and model will be downloaded, which will trigger the rest of the pipeline. Depending on your hardware configuration the fine tuning will take several hours.
+
+

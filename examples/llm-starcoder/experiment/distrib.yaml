@@ -1,4 +1,4 @@
-name: starcoder-ft
+name: starcoder-fine-tune
 workspace: PDK Demos
 project: starcoder
 debug: true
