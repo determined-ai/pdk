@@ -46,7 +46,14 @@
       }
     ]
   },
-  "datumTries": "3",
-  "podPatch": "[{\"op\":\"add\",\"path\":\"/tolerations\",\"value\":[{\"key\":\"accelerator\",\"value\":\"NVIDIA-A100-SXM4-80GB\",\"operator\":\"Equal\"}]}]",
+  "datumTries": 3,
+  "tolerations": [
+    {
+      "key": "accelerator",
+      "operator": "EQUAL",
+      "value": "NVIDIA-A100-SXM4-80GB",
+      "effect": "NO_SCHEDULE"
+    }
+  ],
   "reprocessSpec": "until_success"
 }

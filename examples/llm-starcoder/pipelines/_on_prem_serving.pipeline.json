@@ -31,5 +31,12 @@
     "parallelism_spec": {
       "constant": 1
     },
-    "pod_patch": "[{\"op\":\"add\",\"path\":\"/tolerations\",\"value\":[{\"key\":\"accelerator\",\"value\":\"A100-MLDM\",\"operator\":\"Equal\"}]}]"
+    "tolerations": [
+      {
+        "key": "accelerator",
+        "operator": "EQUAL",
+        "value": "A100-MLDM",
+        "effect": "NO_SCHEDULE"
+      }
+    ]
   }
