@@ -14,11 +14,13 @@ def create_client():
         password=os.getenv("DET_PASSWORD"),
     )
 
+
 def find_file(start_dir='.',file='config.json'):
     for root, dirs, files in os.walk(start_dir):
         if file in files:
             return os.path.abspath(root)
     return None
+
 
 def merge_peft_adapters(peft_chk_path, output_model_merged_path, model):
 
@@ -27,7 +29,7 @@ def merge_peft_adapters(peft_chk_path, output_model_merged_path, model):
         token=os.environ["HF_HOME"],
         return_dict=True,
         device_map="auto",
-        torch_dtype=torch.float16
+        torch_dtype=bfloat16
     )
     tokenizer = AutoTokenizer.from_pretrained(model)
 
@@ -78,7 +80,13 @@ def main():
         required=True,
     )
     args = parser.parse_args()
-    client = create_client()
+    if args.experiment_num and ("HF_HOME" not in os.environ or not os.environ):
+        print(
+            "Please set your Hugging Face API key in the HF_HOME environment variable."
+        )
+        sys.exit(1)
+    if args.experiment_num:
+        client = create_client()
     if args.input_path_peft is not None:
         chk_path = find_file(args.input_path_peft, 'adapter_config.json')
     else:
@@ -91,9 +99,4 @@ def main():
 
 
 if __name__ == "__main__":
-    if "HF_HOME" not in os.environ or not os.environ:
-        print(
-            "Please set your Hugging Face API key in the HF_HOME environment variable."
-        )
-        sys.exit(1)
     main()

@@ -1,7 +1,6 @@
-FROM python:3.9
+FROM python:3.10
 
-RUN pip install transformers torch==1.13.1 determined git+https://github.com/huggingface/peft.git huggingface-hub==0.17.3
-
+RUN pip install transformers torch peft
 ENV PYTHONUNBUFFERED=1
 
 WORKDIR /app
