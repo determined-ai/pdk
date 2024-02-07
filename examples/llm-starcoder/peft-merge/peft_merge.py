@@ -23,13 +23,13 @@ def find_file(start_dir='.',file='config.json'):
 
 
 def merge_peft_adapters(peft_chk_path, output_model_merged_path, model):
-
+    token = os.getenv("HF_HOME", None)
     base_model = AutoModelForCausalLM.from_pretrained(
         model,
-        token=os.environ["HF_HOME"],
+        token=token,
         return_dict=True,
         device_map="auto",
-        torch_dtype=bfloat16
+        torch_dtype=torch.bfloat16
     )
     tokenizer = AutoTokenizer.from_pretrained(model)
 
