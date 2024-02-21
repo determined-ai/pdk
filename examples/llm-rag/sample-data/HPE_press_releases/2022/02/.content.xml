@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/apps/settings/wcm/designs/hpeweb"
+        cq:lastModified="{Date}2022-01-12T16:32:55.471Z"
+        cq:lastModifiedBy="christine.seales@hpe.com"
+        cq:template="/apps/hpeweb/templates/page-generic-template"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="02"
+        sling:resourceType="hpeweb/components/pages/page-generic-template"/>
+    <hewlett-packard-enterprise-to-present-live-audio-webcast-of-first-quarter-2022-earnings-conference-call/>
+    <hewlett-packard-enterprise-extends-leadership-in-enterprise-connectivity-with-private-5g-offering/>
+    <hewlett-packard-enterprise-and-ayar-labs-announce-strategic-collaboration-and-investment-to-develop-next-generation-data-center-architectures-and-networking-with-optical-io/>
+</jcr:root>

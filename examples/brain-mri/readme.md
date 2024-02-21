@@ -4,7 +4,7 @@
 
 # PDK - Pachyderm | Determined | KServe
 ## Brain MRI Example
-**Date/Revision:** January 02, 2024
+**Date/Revision:** February 23, 2024
 
 This example is based on the **Brain MRI Segmentation** Kaggle dataset, which can be found here:<br/>
 https://www.kaggle.com/datasets/mateuszbuda/lgg-mri-segmentation

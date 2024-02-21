@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/apps/settings/wcm/designs/hpeweb"
+        cq:lastModified="{Date}2022-04-05T02:41:38.164Z"
+        cq:lastModifiedBy="christine.seales@hpe.com"
+        cq:tags="[hpe-newsroom:categories/networking]"
+        cq:template="/apps/hpeweb/templates/page-text-heavy"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="City University of Hong Kong advances scientific research with up to 10X faster high performance computing cluster from Hewlett Packard Enterprise"
+        jcr:uuid="0b22aaf8-5a63-4b83-b6d9-0b3c63860c8d"
+        sling:resourceType="hpeweb/components/pages/page-text-heavy"
+        browserTitle="City University of Hong Kong advances scientific research with up to 10X faster high performance computing cluster from Hewlett Packard Enterprise"
+        changefreq="daily"
+        contentType="Press Release"
+        displayDate="{Date}2022-04-06T00:01:00.000-04:00"
+        metaDescription="New cluster provides centralized high performance computing (HPC) and AI capabilities to advance research and make breakthroughs in areas such as biomedicine, quantum chemistry and social and behavioral science"
+        metaKeywords="HPE, HPE Hong Kong, City U, HPC, Scientific research, High Performance Computing, AI, Artificial Intelligence, Hong Kong University,"
+        metaOgImage="/content/dam/hpe/newsroom/2022/04/image-norend/city-university-of-hong-kong-advances-scientific-research-with-up-to-10x-faster-high-performance-computing-cluster-from-hpe.JPG"
+        metaTwitterCardType="summary_large_image"
+        msmcomponent="/content/hpe/base/blueprint/newsroom/press-release/2022/04/city-university-of-hong-kong-advances-scientific-research-with-up-to-10x-faster-high-performance-computing-cluster-from-hewlett-packard-enterprise/jcr:content/main-par/body-par/textonlycomponent"
+        navTitle="City University of Hong Kong advances scientific research with up to 10X faster high performance computing cluster from Hewlett Packard Enterprise"
+        pageTitle="City University of Hong Kong advances scientific research with up to 10X faster high performance computing cluster from Hewlett Packard Enterprise"
+        priority="(None)"
+        socialDescription="New cluster provides centralized high performance computing (HPC) and AI capabilities to advance research and make breakthroughs in areas such as biomedicine, quantum chemistry and social and behavioral science"
+        subtitle="New cluster provides centralized high performance computing (HPC) and AI capabilities to advance research and make breakthroughs in areas such as biomedicine, quantum chemistry and social and behavioral science"
+        theme="dark"
+        UAID="1c2282d1-faa2-47aa-8329-f374bc4bc51f"
+        UCID="b42087cf-b765-4874-afed-7fd54475a947">
+        <main-par
+            jcr:lastModified="{Date}2018-06-28T13:09:39.402-07:00"
+            jcr:lastModifiedBy="velazquez@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="hpeweb/components/content/textHeavyComponent"
+            siderail="none">
+            <subtitle
+                jcr:lastModified="{Date}2022-04-04T13:00:56.590Z"
+                jcr:lastModifiedBy="christine.seales@hpe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="hpeweb/components/content/newsroom/newsroomSubtitleComponent"
+                textOnly="APRIL 6, 2022 • PRESS RELEASE"/>
+            <body-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <imageonlycomponent_c
+                    jcr:created="{Date}2018-06-18T09:06:27.827-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-04-04T13:02:50.470Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/imageOnlyComponent"
+                    fileReference="/content/dam/hpe/newsroom/2022/04/image-norend/city-university-of-hong-kong-advances-scientific-research-with-up-to-10x-faster-high-performance-computing-cluster-from-hpe.JPG"
+                    imageAlignment="hpe-image-center"
+                    imageAltText="HPE Guarantees"
+                    topMargin="60"
+                    videoSource="video"
+                    videoType="youtube"/>
+                <textonlycomponent_cd
+                    jcr:created="{Date}2018-06-18T09:12:49.742-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-04-05T02:37:47.447Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    leftPadding="30"
+                    rightPadding="30"
+                    textIsRich="true"
+                    textOnly="&lt;h3>IN THIS ARTICLE&lt;/h3>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>CityU’s HPC resources are used by Hong Kong’s academic and government researchers to accelerate scientific discovery in many areas.&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>Dramatically faster HPC cluster provides a centralized resource for CityU’s stakeholders and research community&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>CityU has simultaneously increased compute capacity and utilization, and significantly reduced data center space and carbon footprint&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli
+                    jcr:created="{Date}2018-06-18T09:16:54.243-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-18T09:18:45.987-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <textonlycomponent
+                    jcr:created="{Date}2022-04-04T13:02:59.263Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2022-04-05T02:41:00.745Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;h2>New cluster provides centralized high performance computing (HPC) and AI capabilities to advance research and make breakthroughs in areas such as biomedicine, quantum chemistry and social and behavioral science&lt;/h2>&#xd;&#xa;"/>
+                <textonlycomponent_e9
+                    jcr:created="{Date}2018-06-22T11:24:07.263-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-04-04T13:15:18.714Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>HONG KONG – April 6, 2022 –&lt;/b> &lt;a href=&quot;http://www.hpe.com/&quot; target=&quot;_blank&quot;>Hewlett Packard Enterprise&lt;/a> (NYSE: HPE) today announced that it has built a new high performance computing (HPC) cluster for the &lt;a href=&quot;https://www.cityu.edu.hk/&quot; target=&quot;_blank&quot;>City University of Hong Kong (CityU)&lt;/a>, one of the world’s leading universities, to bolster scientific research and accelerate innovation. The new HPC cluster is a significant performance upgrade to CityU’s previous HPC resources, delivering nearly 10 times faster speed&lt;sup>1&lt;/sup> in HPC and AI applications to improve modeling and simulation across biomedicine, quantum chemistry, and social and behavioral science.&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <pullquote
+                    jcr:created="{Date}2022-04-04T13:07:29.332Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2022-04-04T13:07:57.919Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution="Dr. Dominic Chien, Senior Scientific Officer (HPC) at CityU"
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>“The new HPC cluster brings us one step closer to building Hong Kong’s most powerful HPC platform for academia.” &lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2022-04-04T13:07:57.919Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote>
+                <textonlycomponent_5d
+                    jcr:created="{Date}2018-06-18T09:21:51.280-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-04-04T13:07:18.884Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>“At CityU, HPC plays a critical role in helping us build and support a world-class research team to continue making scientific breakthroughs for humankind,” said Dr. Dominic Chien, Senior Scientific Officer (HPC) at CityU. “The new HPC cluster brings us one step closer to building Hong&amp;nbsp;Kong’s most powerful HPC platform for academia while achieving operational efficiency and reduced costs. It is particularly encouraging to see an early signal of success as the HPC platform has helped reduce the turnaround time of computations by three to seven times in a quantum chemistry research project.”&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;CityU’s HPC resources are used by Hong Kong’s academic and government researchers to accelerate scientific discovery in many areas. It is also CityU’s mission to deliver on its “Inclusive Strategy,” where stakeholders from various disciplines can collaborate effectively using its technologies. Previously, CityU’s resources were comprised of siloed clusters that used older generations of computing solutions, which could not scale and support demand for higher computational performance. The disparate system created a challenge for a growing set of users to efficiently access the technology and reach their research goals.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;To address the challenge, CityU turned to HPE to design a dramatically faster central HPC cluster to serve as an energy-efficient, centralized system for its research community. Additional advancements include lower-latency networking, and advanced compute and accelerated compute to tackle data-intensive projects across modeling, simulation, AI and machine learning.&amp;nbsp;&lt;/span>&lt;/p>&#xd;&#xa;"/>
+                <pullquote_349b
+                    jcr:created="{Date}2018-06-18T09:23:47.197-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-04-04T13:08:29.110Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution=" "
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>CityU turned to HPE to design a faster central HPC cluster to serve as an energy-efficient, centralized system for its research community&lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2022-04-04T13:08:29.110Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote_349b>
+                <textonlycomponent_97
+                    jcr:created="{Date}2018-06-22T11:22:31.557-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-04-05T02:40:23.091Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>The new CityU HPC cluster, which CityU named “CityU Burgundy,” is built using the &lt;a href=&quot;https://buy.hpe.com/hk/en/servers/apollo-systems/apollo-2000-system/apollo-2000-system/hpe-apollo-2000-gen10-plus-system/p/1012684166&quot; target=&quot;_blank&quot;>HPE Apollo 2000&lt;/a> and &lt;a href=&quot;https://buy.hpe.com/us/en/servers/apollo-systems/apollo-6500-system/apollo-6500-system/hpe-apollo-6500-gen10-plus-system/p/1013092236&quot; target=&quot;_blank&quot;>HPE Apollo 6500 Gen10 Plus systems&lt;/a>,&lt;u> &lt;/u>which are purpose-built, density optimized platforms that target demanding HPC and AI applications. HPE also designed CityU Burgundy with &lt;a href=&quot;https://www.amd.com/en/products/cpu/amd-epyc-7742&quot; target=&quot;_blank&quot;>328 AMD EPYC™ 7742 processors&lt;/a> to provide a performance boost to core modeling and simulation workloads, and &lt;a href=&quot;https://www.nvidia.com/en-us/data-center/v100/&quot; target=&quot;_blank&quot;>56 NVIDIA V100 Tensor Core GPUs&lt;/a> and &lt;a href=&quot;https://www.nvidia.com/en-us/data-center/a100/&quot; target=&quot;_blank&quot;>8 NVID&lt;/a>&lt;a href=&quot;https://www.nvidia.com/en-us/data-center/a100/&quot; target=&quot;_blank&quot;>I&lt;/a>&lt;a href=&quot;https://www.nvidia.com/en-us/data-center/a100/&quot; target=&quot;_blank&quot;>A A100 80GB Tensor Core GPUs&lt;/a>&lt;u> &lt;/u>to support a range of image analysis, machine learning and AI capabilities.&lt;br>&#xd;&#xa; &lt;b>&lt;br>&#xd;&#xa;Expanded project areas with CityU Burgundy – the new central HPC cluster&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/b>The overall advanced system and boost to computational performance has enabled CityU’s researchers to power the following initiatives:&lt;br>&#xd;&#xa; &amp;nbsp;&lt;/span>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Advancing biomedicine to accelerate insights in chronic diseases and treatment&lt;/b> – Researchers specializing in genetic and molecular epidemiology have used the new HPC cluster to study the complexity of chronic diseases and explore novel preventative&amp;nbsp;approaches. These include diagnosis and treatment by integrating and analyzing variants in multiomics, biomarkers and environmental data from diverse populations.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Expanding the use of HPC in other disciplines&lt;/b> – The cluster’s GPU capabilities have unlocked new approaches to analyzing data, and have supported projects that traditionally have not been typical use cases for high performance computing.&amp;nbsp; These research projects include generating data visualization and analytics on data related to marketing, public policy, and finance.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Research such as consumer behavior science and algorithmic trading&lt;/b> – Researchers were previously unable to support these projects due to limited GPU capacity and high latency issues. These research efforts are now running at full steam.&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>&amp;nbsp;&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>“High performance computing continues to play a critical role in delivering new capabilities for harnessing large amounts of data to process and generate meaningful insights in almost any field of study,” said Bill Mannel, vice president and general manager, HPC, at HPE. “We are honored to have delivered advanced HPC resources for City University of Hong Kong by designing a significantly faster HPC cluster with energy-efficient, end-to-end solutions that has inspired other uses of supercomputing in various disciplines, from traditional forms of science, such as physical, biological and chemical science, to behavioral and social studies.”&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; By consolidating the compute capacity in a single location with the new centralized HPC, CityU has simultaneously increased compute capacity and utilization, and significantly reduced data center space and carbon footprint. The consolidated location also allows CityU’s IT team to easily and effectively measure energy requirements and save additional electricity by turning off more chiller plants in various buildings.&lt;br>&#xd;&#xa; &lt;b>&lt;br>&#xd;&#xa;About City University of Hong Kong&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/b>Led and supported by internationally renowned faculties, City University of Hong Kong (CityU) delivers professional education and problem-driven research to improve people’s quality of life in the fast-changing 21st century.&amp;nbsp; As a growing university, CityU now operates 10 schools and 30 departments with approximately 10,000 students, 1,500 faculty staff and 39 research centers, running a few thousand research projects.&lt;/span>&lt;/p>&#xd;&#xa;"/>
+                <textonlycomponent_fe
+                    jcr:created="{Date}2018-06-18T09:28:54.456-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-04-04T13:13:28.068Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>About Hewlett Packard Enterprise&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>Hewlett Packard Enterprise (NYSE: HPE) is the global edge-to-cloud company that helps organizations accelerate outcomes by unlocking&amp;nbsp;value from all of their data, everywhere. Built on decades of reimagining the future and innovating to advance the way people live and work, HPE delivers unique, open and intelligent technology solutions as a service.  With offerings spanning Cloud Services, Compute, High Performance Computing &amp;amp; AI, Intelligent Edge, Software, and Storage, HPE provides a consistent experience across all clouds and edges, helping customers&amp;nbsp;develop&amp;nbsp;new business models, engage in new ways, and increase operational performance. For more information, visit:&amp;nbsp;&lt;a href=&quot;http://www.hpe.com/&quot; target=&quot;_blank&quot;>www.hpe.com&lt;/a>&lt;br>&#xd;&#xa; &lt;b>&lt;br>&#xd;&#xa;Media Contact:&lt;br>&#xd;&#xa; &lt;/b>Teljya Oka-Pregel&lt;br>&#xd;&#xa; &lt;a href=&quot;mailto:Clare.Loxley@hpe.com&quot; target=&quot;_blank&quot;>teljya.oka-pregel@hpe.com&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-small&quot;>&lt;sup>1&lt;/sup> The new system at City Hong Kong University is nearly 10 times more powerful than its previous HPC resources. Source: &lt;a href=&quot;https://www.cityu.edu.hk/csc/deptweb/services/hpc_research.htm&quot; target=&quot;_blank&quot;>https://www.cityu.edu.hk/csc/deptweb/services/hpc_research.htm&lt;/a>&lt;/span>&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <textonlycomponent_bf
+                    jcr:created="{Date}2018-07-02T13:12:59.755-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-10-12T16:10:50.633Z"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    textOnly="&lt;h2>RELATED NEWS&lt;/h2>&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli_540225213
+                    jcr:created="{Date}2018-06-18T10:12:48.909-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:22:53.902-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <columncontainercompo
+                    jcr:created="{Date}2018-07-02T13:14:23.594-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:15:08.106-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/columnContainerComponent"
+                    columns="column-content-3">
+                    <column_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_7c25
+                            jcr:created="{Date}2018-07-02T13:15:28.984-07:00"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-04-04T13:16:52.958Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="arrow-link"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2021/11/rmit-turns-to-hpe-greenlake-to-increase-agility-and-adapt-to-dynamic-education-and-research-opportunities"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            header="RMIT turns to HPE GreenLake to increase agility and adapt to dynamic education and research opportunities"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="RMIT turns to HPE GreenLake to increase agility and adapt to dynamic education and research opportunities"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-04-04T13:16:52.958Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2021/11/image-norend/rmit-turns-to-hpe-greenlake-to-increase-agility-and-adapt-to-dynamic-education-and-research-opportunities.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-04-04T13:16:52.958Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_7c25>
+                    </column_0>
+                    <column_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_4dff
+                            jcr:created="{Date}2018-09-21T21:01:47.387Z"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-04-04T13:18:33.322Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="arrow-link"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/news-advisory/2021/11/hewlett-packard-enterprise-honored-with-six-hpcwire-awards-for-leadership-in-high-performance-computing"
+                            description="&lt;p>News Advisory&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            header="Hewlett Packard Enterprise honored with six HPCwire Awards for leadership in High Performance Computing"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Hewlett Packard Enterprise honored with six HPCwire Awards for leadership in High Performance Computing"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-04-04T13:18:33.322Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2021/11/image-norend/hewlett-packard-enterprise-honored-with-six-hpcwire-awards-for-leadership-in-high-performance-computing.png"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-04-04T13:18:33.322Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_4dff>
+                    </column_1>
+                    <column_2
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_50f2
+                            jcr:created="{Date}2018-09-05T17:41:27.359Z"
+                            jcr:createdBy="nagle@hpe.com"
+                            jcr:lastModified="{Date}2022-04-04T13:20:33.174Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="arrow-link"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2021/11/hewlett-packard-enterprise-builds-new-supercomputer-for-frances-genci-cines-to-advance-nations-open-science-and-rd"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            header="Hewlett Packard Enterprise builds new supercomputer for France’s GENCI-CINES to advance nation’s open science and R&amp;D"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Hewlett Packard Enterprise builds new supercomputer for France’s GENCI-CINES to advance nation’s open science and R&amp;D"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-04-04T13:20:33.174Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                fileReference="/content/dam/hpe/newsroom/2021/11/image-norend/hpe-builds-new-supercomputer-for-frances-genci-cines-to-advance-nations-open-science-and-rd.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-04-04T13:20:33.174Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"/>
+                        </contentblock_50f2>
+                    </column_2>
+                </columncontainercompo>
+            </body-par>
+            <side-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <buttonctaitemcompone
+                    jcr:created="{Date}2018-06-28T13:06:31.075-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:06:46.099-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 1"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_661124859
+                    jcr:created="{Date}2018-06-28T13:06:51.115-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:11.079-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 2"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_606970408
+                    jcr:created="{Date}2018-06-28T13:06:53.400-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:02.336-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 3"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+            </side-par>
+        </main-par>
+        <image
+            jcr:lastModified="{Date}2018-09-05T17:38:02.066Z"
+            jcr:lastModifiedBy="nagle@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+    </jcr:content>
+</jcr:root>

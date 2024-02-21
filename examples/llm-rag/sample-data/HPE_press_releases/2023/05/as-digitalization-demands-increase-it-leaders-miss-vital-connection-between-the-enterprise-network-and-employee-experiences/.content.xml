@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/apps/settings/wcm/designs/hpeweb"
+        cq:lastModified="{Date}2023-05-11T12:18:33.105Z"
+        cq:lastModifiedBy="christine.seales@hpe.com"
+        cq:lastReplicated="{Date}2023-05-11T11:19:27.966Z"
+        cq:lastReplicatedBy="krystyna.mioduszewska@hpe.com"
+        cq:lastReplicationAction="Deactivate"
+        cq:tags="[hpe-newsroom:categories/servers]"
+        cq:template="/apps/hpeweb/templates/page-text-heavy"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="As digitalization demands increase, IT leaders miss vital connection between the enterprise network and employee experiences"
+        jcr:uuid="c83b4e67-c018-4dc0-b92d-fec7a714cdbd"
+        sling:resourceType="hpeweb/components/pages/page-text-heavy"
+        browserTitle="As digitalization demands increase, IT leaders miss vital connection between the enterprise network and employee experiences"
+        changefreq="daily"
+        contentType="Press Release"
+        displayDate="{Date}2023-05-11T08:00:00.000-04:00"
+        metaDescription="Research suggests more organizations realize the network’s impact on broader business objectives but opportunity remains to unlock full potential"
+        metaKeywords="HPE Aruba Networking, networks, connectivity, digital transformation, enterprise network, hybrid working, organizations, businesses, cybersecurity, IT efficiency, operational efficiency"
+        metaOgImage="/content/dam/hpe/newsroom/2023/05/image-norend/as-digitalization-demands-increase-it-leaders-miss-vital-connection-between-the-enterprise-network-and-employee-experiences.jpg"
+        metaTwitterCardType="summary_large_image"
+        msmcomponent="/content/hpe/base/blueprint/newsroom/press-release/2023/05/as-digitalization-demands-increase-it-leaders-miss-vital-connection-between-the-enterprise-network-and-employee-experiences/jcr:content/main-par/body-par/textonlycomponent_97"
+        navTitle="As digitalization demands increase, IT leaders miss vital connection between the enterprise network and employee experiences"
+        pageTitle="As digitalization demands increase, IT leaders miss vital connection between the enterprise network and employee experiences"
+        priority="(None)"
+        socialDescription="Research suggests more organizations realize the network’s impact on broader business objectives but opportunity remains to unlock full potential"
+        subtitle="Research suggests more organizations realize the network’s impact on broader business objectives but opportunity remains to unlock full potential"
+        theme="dark">
+        <main-par
+            jcr:lastModified="{Date}2018-06-28T13:09:39.402-07:00"
+            jcr:lastModifiedBy="velazquez@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="hpeweb/components/content/textHeavyComponent"
+            siderail="none">
+            <subtitle
+                jcr:lastModified="{Date}2023-05-10T23:18:51.723Z"
+                jcr:lastModifiedBy="christine.seales@hpe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="hpeweb/components/content/newsroom/newsroomSubtitleComponent"
+                textOnly="MAY 11, 2023 • PRESS RELEASE"/>
+            <body-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <imageonlycomponent_c
+                    jcr:created="{Date}2018-06-18T09:06:27.827-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-05-10T23:25:51.064Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/imageOnlyComponent"
+                    fileReference="/content/dam/hpe/newsroom/2023/05/image-norend/as-digitalization-demands-increase-it-leaders-miss-vital-connection-between-the-enterprise-network-and-employee-experiences.jpg"
+                    imageAlignment="hpe-image-center"
+                    imageAltText="HPE Guarantees"
+                    topMargin="60"
+                    videoSource="video"
+                    videoType="youtube"/>
+                <textonlycomponent_cd
+                    jcr:created="{Date}2018-06-18T09:12:49.742-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-05-10T23:19:57.547Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    leftPadding="30"
+                    rightPadding="30"
+                    textIsRich="true"
+                    textOnly="&lt;h3>IN THIS ARTICLE&lt;/h3>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>Research features responses from 2,100 IT leaders across 21 countries and examines how IT leaders are currently approaching the enterprise network&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>There is a growing recognition from IT and business leaders of the breadth and scope of the network’s impact&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>Despite the continued demand for hybrid working, global IT leaders are failing to recognize the full extent of the connection between their enterprise network and employee experiences&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli
+                    jcr:created="{Date}2018-06-18T09:16:54.243-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-18T09:18:45.987-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <textonlycomponent
+                    jcr:created="{Date}2023-05-10T23:20:16.146Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2023-05-10T23:20:38.836Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;h2>Research suggests more organizations realize the network’s impact on broader business objectives but opportunity remains to unlock full potential&lt;/h2>&#xd;&#xa;"/>
+                <textonlycomponent_e9
+                    jcr:created="{Date}2018-06-22T11:24:07.263-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-05-10T23:22:32.725Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>SAN JOSE – May 11, 2023&lt;/b> – Despite the continued demand for hybrid working, global IT leaders are failing to recognize the full extent of the connection between their enterprise network and employee experiences. That's according to the latest research released by HPE Aruba Networking, which found that while three quarters of respondents believe digitization is fundamental both to employees being able to do their jobs and for talent attraction and retention, just 55% see the strong relevance of the network to these areas.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;The research, which features responses from 2,100 IT leaders across 21 countries, examined how IT leaders are currently approaching the enterprise network, and assessed the extent to which they and the organization understand its role as a business-boosting asset and the impact they are seeing as a result.&lt;br>&#xd;&#xa;&lt;b>&lt;br>&#xd;&#xa;The role of the network&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;/b>On a positive note, there is a growing recognition from IT and business leaders of the breadth and scope of the network’s impact. According to 44% of IT leaders the network is primarily viewed by their business and its leadership as a tool for digital transformation, while a further 33% say their organization sees it playing a role in broader business transformation. In contrast, only 23% say their organization recognizes the network merely for its functional connectivity.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;However, the results also pointed to missed connections in where this transformation might come from – particularly with regards to delivering employee experiences.&lt;br>&#xd;&#xa;&lt;b>&lt;br>&#xd;&#xa;Connecting employee experiences with the network&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;/b>Three quarters of IT leaders believe digitization is fundamental both for talent attraction and to employees being able to do their jobs. However, with recognition of the network’s relevance to employee attraction and retention the lowest of all the business areas listed, it is perhaps unsurprising that this was also the area where IT leaders estimate that the network is currently having the least impact. Or the least &lt;u>positive&lt;/u> impact.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;This impact becomes apparent when considering what today’s networks seem capable of delivering – only 43% of IT leaders say their network enables staff to work from anywhere, and just 34% agree that their network can deliver seamless connectivity. Meanwhile, with digital personalization in mind, even fewer (29%) note that their network enables them to offer employees a Bring-Your-Own-Device (BYOD) service.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;“Given the prevalence and demand for flexible working, the lack of understanding around how the network can enhance employee experiences seems a particularly dangerous miss,” said Sylvia Hooks, CMO, HPE Aruba Networking. “The simple fact is that no one can do their job nowadays without the network. But, while organizations are recognizing the network as a business-critical resource in enhancing their digital transformation journey, in today’s working environment this requirement goes way beyond offering connectivity – a more seamless, efficient, intelligent and securely connected experience is essential.” &lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <pullquote
+                    jcr:created="{Date}2023-05-10T23:26:38.317Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2023-05-10T23:29:16.313Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution="Sylvia Hooks, CMO, HPE Aruba Networking"
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>“While organizations are recognizing the network as a business-critical resource in enhancing their digital transformation journey, in today’s working environment this requirement goes way beyond offering connectivity – a more seamless, efficient, intelligent and securely connected experience is essential.”&lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2023-05-10T23:29:16.313Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote>
+                <textonlycomponent_b4
+                    jcr:created="{Date}2018-06-18T09:18:06.257-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-05-10T23:28:51.775Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Where is the network currently delivering return on investment?&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;/b>The top three strongest connections IT leaders made between the network and various parts of the business were IT efficiency, operational efficiency, and cybersecurity (core elements of most digital transformation projects).&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;These were also the areas where respondents are seeing the biggest impact of the network, and, perhaps more crucially, where those who’ve invested in the network within the last two years are seeing the greatest business outcomes. Comparatively, those who haven’t been able to invest in the network reported 21 percentage points less positive impact on average across all business areas.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;While investment is critical for deepening the network’s returns, it is clear that there is still untapped potential for the network to deliver across additional business-boosting areas. To unlock the network’s true potential budget should be channeled into the right infrastructure – one that modernizes all aspects of network operations.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;“A modern network can not only strengthen employee experiences and attract the right talent pool but it also has the potential to deliver impact across all areas of the business,” concluded Larry Lunetta, vice president portfolio solutions marketing, HPE Aruba Networking. “However, to realize this broader transformation, IT leaders need to reframe network discussions and start talking in terms of business outcomes versus technical specs. Only by doing this can they show the C-suite that investment correlates to positive impact and drives business value.” &lt;/span>&lt;/p>&#xd;&#xa;"/>
+                <pullquote_349b
+                    jcr:created="{Date}2018-06-18T09:23:47.197-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-05-10T23:30:49.958Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution="Larry Lunetta, vice president portfolio solutions marketing, HPE Aruba Networking"
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>“IT leaders need to reframe network discussions and start talking in terms of business outcomes versus technical specs.” &lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2023-05-10T23:30:49.958Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote_349b>
+                <textonlycomponent_97
+                    jcr:created="{Date}2018-06-22T11:22:31.557-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-05-11T12:18:33.091Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Additional resources&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/b>Read more in the full report: &lt;a href=&quot;https://www.arubanetworks.com/resource/tap-into-the-network-advantage/&quot; target=&quot;_blank&quot;>'Harnessing the network advantage for what comes next'&lt;/a>&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; To learn more, visit the &lt;a href=&quot;https://www.arubanetworks.com/&quot; target=&quot;_blank&quot;>HPE Aruba Networking&lt;/a> website. For real-time news updates, follow HPE Aruba Networking on &lt;a href=&quot;https://twitter.com/ArubaNetworks&quot; target=&quot;_blank&quot;>Twitter&lt;/a> and &lt;a href=&quot;https://www.facebook.com/arubanetworks/&quot; target=&quot;_blank&quot;>Facebook&lt;/a>, and for the latest technical discussions on mobility and products, visit the Airheads Community at &lt;a href=&quot;https://community.arubanetworks.com/home&quot; target=&quot;_blank&quot;>community.arubanetworks.com&lt;/a>.&lt;/span>&lt;/p>&#xd;&#xa;"/>
+                <textonlycomponent_fe
+                    jcr:created="{Date}2018-06-18T09:28:54.456-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-05-10T23:33:24.633Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>About Hewlett Packard Enterprise&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>Hewlett Packard Enterprise (NYSE: HPE) is the global edge-to-cloud company that helps organizations accelerate outcomes by unlocking value from all of their data, everywhere. Built on decades of reimagining the future and innovating to advance the way people live and work, HPE delivers unique, open, and intelligent technology solutions as a service.&amp;nbsp; With offerings spanning Cloud Services, Compute, High Performance Computing &amp;amp; AI, Intelligent Edge, Software, and Storage, HPE provides a consistent experience across all clouds and edges, helping customers develop new business models, engage in new ways, and increase operational performance. For more information, visit: &lt;a href=&quot;http://www.hpe.com&quot; target=&quot;_blank&quot;>www.hpe.com&lt;/a>&lt;u>.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;/u>&lt;b>Media Contact:&lt;br>&#xd;&#xa;&lt;/b>Ben Stricker&lt;br>&#xd;&#xa;&lt;a href=&quot;mailto:Ben.Stricker@hpe.com&quot; target=&quot;_blank&quot;>Ben.Stricker@hpe.com&lt;/a>&lt;br>&#xd;&#xa;&lt;b>&lt;br>&#xd;&#xa;NOTE TO EDITORS:&lt;/b> In February 2023, HPE Aruba Networking commissioned Sapio Research to conduct a survey of over 2,100 IT decision makers (ITDMs) across 21 markets [Canada, Mexico, Saudi Arabia / UAE, Singapore, Sweden, Australia, Indonesia, Italy, Netherlands, Taiwan, Brazil, China, France, Germany, India, UK / Ireland, Japan, South Korea, Spain, Switzerland, USA]. These ITDMs work at companies of 500+ employees, with operations in three or more markets, and spanning industries from healthcare to education, manufacturing, and hospitality. &lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <textonlycomponent_bf
+                    jcr:created="{Date}2018-07-02T13:12:59.755-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-10-12T16:10:50.633Z"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    textOnly="&lt;h2>RELATED NEWS&lt;/h2>&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli_540225213
+                    jcr:created="{Date}2018-06-18T10:12:48.909-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:22:53.902-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <columncontainercompo
+                    jcr:created="{Date}2018-07-02T13:14:23.594-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:15:08.106-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/columnContainerComponent"
+                    columns="column-content-3">
+                    <column_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_7c25
+                            jcr:created="{Date}2018-07-02T13:15:28.984-07:00"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2023-05-10T23:36:30.116Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2023/04/hpe-aruba-networking-simplifies-it-operations-with-aiops-driven-cloud-management-and-new-network-as-a-service-capabilities-available-on-hpe-greenlake"
+                            description="&lt;p>Press Release&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="HPE Aruba Networking simplifies IT operations with AIOps-driven cloud management and new network-as-a-service capabilities available on HPE GreenLake"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="HPE Aruba Networking simplifies IT operations with AIOps-driven cloud management and new network-as-a-service capabilities available on HPE GreenLake"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2023-05-10T23:36:30.116Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2023/04/image-norend/hpe-aruba-networking-simplifies-it-operations-with-aiops-driven-cloud-management-and-new-network-as-a-service-capabilities.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2023-05-10T23:36:30.116Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_7c25>
+                    </column_0>
+                    <column_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_7c25_co
+                            jcr:created="{Date}2018-07-02T13:15:28.984-07:00"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2023-05-10T23:39:31.305Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2023/03/hewlett-packard-enterprise-fortifies-network-security-with-acquisition-of-security-service-edge-provider-axis-security"
+                            description="&lt;p>Press Release&lt;br />&#xd;&#xa;&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="Hewlett Packard Enterprise fortifies network security with acquisition of Security Service Edge provider Axis Security"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Hewlett Packard Enterprise fortifies network security with acquisition of Security Service Edge provider Axis Security"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2023-05-10T23:39:31.305Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2023/03/image-norend/hpe-fortifies-network-security-with-acquisition-of-security-service-edge-provider-axis-security.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2023-05-10T23:39:31.305Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_7c25_co>
+                    </column_1>
+                    <column_2
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_7c25_co
+                            jcr:created="{Date}2018-07-02T13:15:28.984-07:00"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2023-05-10T23:42:32.981Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="https://news.arubanetworks.com/news-release-details/2023/Aruba-Collaborates-with-Microsoft-and-reelyActive-to-Speed-the-Migration-of-IoT-Workloads-to-Microsoft-Azure-without-Custom-Engineering/default.aspx"
+                            description="&lt;p>Press Release&lt;br />&#xd;&#xa;&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="Aruba Collaborates with Microsoft and reelyActive to Speed the Migration of IoT Workloads to Microsoft Azure without Custom Engineering"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Aruba Collaborates with Microsoft and reelyActive to Speed the Migration of IoT Workloads to Microsoft Azure without Custom Engineering"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2023-05-10T23:42:32.981Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2023/04/image-norend/aruba-collaborates-with-microsoft.JPG"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2023-05-10T23:42:32.981Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_7c25_co>
+                    </column_2>
+                </columncontainercompo>
+            </body-par>
+            <side-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <buttonctaitemcompone
+                    jcr:created="{Date}2018-06-28T13:06:31.075-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:06:46.099-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 1"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_661124859
+                    jcr:created="{Date}2018-06-28T13:06:51.115-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:11.079-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 2"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_606970408
+                    jcr:created="{Date}2018-06-28T13:06:53.400-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:02.336-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 3"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+            </side-par>
+        </main-par>
+        <image
+            jcr:lastModified="{Date}2018-09-05T17:38:02.066Z"
+            jcr:lastModifiedBy="nagle@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+    </jcr:content>
+</jcr:root>

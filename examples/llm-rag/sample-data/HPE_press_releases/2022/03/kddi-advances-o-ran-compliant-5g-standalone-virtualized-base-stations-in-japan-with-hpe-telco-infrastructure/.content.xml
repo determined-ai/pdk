@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/apps/settings/wcm/designs/hpeweb"
+        cq:lastModified="{Date}2022-03-02T02:22:14.117Z"
+        cq:lastModifiedBy="christine.seales@hpe.com"
+        cq:tags="[hpe-newsroom:categories/mergers-and-acquisitions,hpe-newsroom:categories/company---customers,hpe-newsroom:categories/industry---telcom-&amp;-5g]"
+        cq:template="/apps/hpeweb/templates/page-text-heavy"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="KDDI advances O-RAN compliant 5G standalone virtualized base stations in Japan with HPE telco infrastructure"
+        jcr:uuid="884119c4-c53d-4e84-a619-b1ed758fe8e2"
+        sling:resourceType="hpeweb/components/pages/page-text-heavy"
+        browserTitle="KDDI advances O-RAN compliant 5G standalone virtualized base stations in Japan with HPE telco infrastructure"
+        changefreq="daily"
+        contentType="Press Release"
+        displayDate="{Date}2022-03-02T00:00:00.000-05:00"
+        metaDescription="Open RAN and vRAN workload-optimized HPE server accelerates large-scale 5G deployment and delivers reduced footprint and resilience to accommodate 5G base station requirements"
+        metaKeywords="HPE, HPE Japan, 5G, Telecoms, HPE ProLiant DL110 Gen10 Plus, O-RAN, KDDI, Telco, CTG, Open RAN, vRAN, HPE 5G Core Stack, digital transformation"
+        metaOgImage="/content/dam/hpe/newsroom/2022/03/image-norend/kddi-advances-o-ran-compliant-5g-standalone-virtualized-base-stations-in-japan-with-hpe-telco-infrastructure.jpg"
+        metaTwitterCardType="summary_large_image"
+        msmcomponent="/content/hpe/base/blueprint/newsroom/press-release/2022/03/kddi-advances-o-ran-compliant-5g-standalone-virtualized-base-stations-in-japan-with-hpe-telco-infrastructure/jcr:content/main-par/body-par/textonlycomponent_97"
+        navTitle="KDDI advances O-RAN compliant 5G standalone virtualized base stations in Japan with HPE telco infrastructure"
+        pageTitle="KDDI advances O-RAN compliant 5G standalone virtualized base stations in Japan with HPE telco infrastructure"
+        priority="(None)"
+        socialDescription="Open RAN and vRAN workload-optimized HPE server accelerates large-scale 5G deployment and delivers reduced footprint and resilience to accommodate 5G base station requirements"
+        subtitle="Open RAN and vRAN workload-optimized HPE server accelerates large-scale 5G deployment and delivers reduced footprint and resilience to accommodate 5G base station requirements"
+        theme="dark"
+        UAID="292a79cf-c9af-4ef2-9e2b-a20d4d0fac83"
+        UCID="1bcebdc2-f3e3-41dc-9faa-fe33714a16d4">
+        <main-par
+            jcr:lastModified="{Date}2018-06-28T13:09:39.402-07:00"
+            jcr:lastModifiedBy="velazquez@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="hpeweb/components/content/textHeavyComponent"
+            siderail="none">
+            <subtitle
+                jcr:lastModified="{Date}2022-02-28T18:16:52.711Z"
+                jcr:lastModifiedBy="christine.seales@hpe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="hpeweb/components/content/newsroom/newsroomSubtitleComponent"
+                textOnly="MARCH 2, 2022 • PRESS RELEASE"/>
+            <body-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <imageonlycomponent_c
+                    jcr:created="{Date}2018-06-18T09:06:27.827-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-02-28T18:27:30.630Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/imageOnlyComponent"
+                    fileReference="/content/dam/hpe/newsroom/2022/03/image-norend/kddi-advances-o-ran-compliant-5g-standalone-virtualized-base-stations-in-japan-with-hpe-telco-infrastructure.jpg"
+                    imageAlignment="hpe-image-center"
+                    imageAltText="HPE Guarantees"
+                    topMargin="60"
+                    videoSource="video"
+                    videoType="youtube"/>
+                <textonlycomponent_cd
+                    jcr:created="{Date}2018-06-18T09:12:49.742-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-02-28T18:28:25.492Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    leftPadding="30"
+                    rightPadding="30"
+                    textIsRich="true"
+                    textOnly="&lt;h3>IN THIS ARTICLE&lt;/h3>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>HPE is collaborating with telecoms operators to provide a consistent near zero-touch operational experience for the deployment of its disaggregated RAN infrastructure and workloads&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>KDDI is accelerating construction of 5G base stations across Japan in efforts to expedite 5G availability&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli
+                    jcr:created="{Date}2018-06-18T09:16:54.243-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-18T09:18:45.987-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <textonlycomponent
+                    jcr:created="{Date}2022-02-28T18:28:32.273Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2022-02-28T18:28:59.564Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;h2>Open RAN and vRAN workload-optimized HPE server accelerates large-scale 5G deployment and delivers reduced footprint and resilience to accommodate 5G base station requirements&lt;/h2>&#xd;&#xa;"/>
+                <textonlycomponent_e9
+                    jcr:created="{Date}2018-06-22T11:24:07.263-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-02-28T18:30:38.254Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Tokyo, Japan – Mar. 2, 2022 &lt;/b>– &lt;a href=&quot;http://www.hpe.com&quot; target=&quot;_blank&quot;>Hewlett Packard Enterprise&lt;/a> (NYSE: HPE) today announced that KDDI, a leading Japanese telecommunications provider, is using the &lt;a href=&quot;https://www.hpe.com/psnow/doc/a50002566enw&quot; target=&quot;_blank&quot;>HPE ProLiant DL110 Gen10 Plus - Telco server&lt;/a> for the commercial network operation of O-RAN compliant 5G standalone base stations.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; KDDI is accelerating construction of 5G base stations across Japan in efforts to expedite 5G availability. The HPE ProLiant DL110 Gen10 Plus - Telco server used for the virtualized base station is designed for Open RAN (radio access network) and vRAN workloads, and is optimized for edge applications that require high bandwidth and low latency.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; “The O-RAN compliant 5G virtualized base stations we developed are now commercially operational,” said Kazuyuki Yoshimura, Chief Technology Officer, KDDI Corporation. “With open and virtualized base stations, KDDI aims to provide customers with advanced communication services which flexibly and quickly support their use cases. KDDI will continue to take the lead in developing innovative network technologies, while providing customers with safe and secure communications in addition to new value-added experiences.”&amp;nbsp;&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <pullquote
+                    jcr:created="{Date}2022-02-28T18:30:45.556Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2022-02-28T18:31:13.147Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution=" "
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>KDDI aims to provide customers with advanced communication services which flexibly and quickly support their use cases&lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2022-02-28T18:31:13.147Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote>
+                <textonlycomponent_b4
+                    jcr:created="{Date}2018-06-18T09:18:06.257-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-03-01T11:48:27.644Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>HPE is collaborating with telecoms operators to provide a consistent near zero-touch operational experience for the deployment of its disaggregated RAN infrastructure and workloads, bringing infrastructure automation and management, as well as network and service management to a single, centralized and cloud-based platform.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; “It is a great honor to support KDDI’s initiative with HPE telco infrastructure amidst heightened expectations for 5G as digital transformation accelerates in Japan,&lt;i>”&lt;/i> said Hirokazu Mochizuki, managing director, HPE Japan. &lt;i>“&lt;/i>With more than 30 years of expertise and innovation working with the telco industry, we look forward to joining forces with KDDI in propelling the 5G economy and contributing to a sustainable society.”&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;The HPE ProLiant DL110 Gen10 Plus - Telco server includes built-in security, intelligent management automation, is based on an open, standards-based architecture, and supports software-based RAN solutions from a variety of vendors. Security is implemented at the silicon level. Operational management efficiency is achieved through automation and software defined control to help reduce time for provisioning, maintenance, and deployment.&amp;nbsp; The server is carrier-grade and integrates multiple functions (baseband unit, relay gateway, and cell site gateway router) to reduce the footprint needed in 5G base stations.&lt;/span>&lt;/p>&#xd;&#xa;"/>
+                <pullquote_349b
+                    jcr:created="{Date}2018-06-18T09:23:47.197-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-02-28T18:32:18.235Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution=" "
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>HPE looks forward to joining forces with KDDI in propelling the 5G economy and contributing to a sustainable society&lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2022-02-28T18:32:18.235Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote_349b>
+                <textonlycomponent_97
+                    jcr:created="{Date}2018-06-22T11:22:31.557-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-03-01T11:48:40.037Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>The exponential data growth driven by advances with new digital experiences is accelerating the need for a commercial roll out of 5G, which enables higher speed, higher capacity, and lower latency communications. 5G has been developed with open standards to unlock greater innovation, reduce costs, and boost innovation. HPE is contributing to the O-RAN Alliance and the Telecom Infra Project (TIP) who are both driving this major industry shift.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; The HPE ProLiant DL110 Gen10 Plus - Telco server is an integral component of the &lt;a href=&quot;https://www.hpe.com/us/en/newsroom/press-release/2021/02/hewlett-packard-enterprise-paves-way-for-mass-deployment-of-open-ran-in-5g-networks-with-industry-first-open-ran-solution-stack.html&quot; target=&quot;_blank&quot;>HPE Open RAN Solution Stack&lt;/a> which complements the &lt;a href=&quot;https://www.hpe.com/us/en/newsroom/press-release/2020/03/hpe-speeds-up-5g-adoption-with-cloud-native-5g-core-software-stack-available-as-a-service.html&quot; target=&quot;_blank&quot;>HPE 5G Core Stack&lt;/a>. HPE Open RAN Solution Stack helps operators to design, deploy and manage resources and applications together from a common and centralized platform. Both solutions are developed by&amp;nbsp;&lt;a href=&quot;https://www.hpe.com/us/en/newsroom/blog-post/2021/02/introducing-the-hewlett-packard-enterprise-communications-technology-group.html&quot; target=&quot;_blank&quot;>HPE Communications Technology Group&lt;/a>&amp;nbsp;(CTG), which offers one of the broadest telco portfolios in the market, and helps telcos and enterprises take advantage of the huge 5G market opportunity with a family of open, interoperable solution stacks.&lt;br>&#xd;&#xa; &lt;b>&lt;br>&#xd;&#xa;About KDDI&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/b>KDDI is telecommunication service provider in Japan, offering both mobile and fixed-line communications. With its well-established base of over 60 million customers, and through mobile services and shops offering its “au” ,”UQ mobile”,”povo” brand, KDDI is expanding its services into the &amp;quot;Life Design&amp;quot; business, which includes e-commerce, fintech, nationwide electric power utility services, entertainment and education. With a 60-year history, KDDI is now focusing on creating smart infrastructure through IoT technologies and open innovation with partners and start-up companies in diverse industries. KDDI is accelerating the global growth of its telecommunications consumer business, with operations in Myanmar and Mongolia, and in the global ICT business with the &amp;quot;TELEHOUSE&amp;quot; brand. KDDI (TYO:9433) is listed on the Tokyo stock exchange. For more information, visit:&amp;nbsp;&lt;a href=&quot;https://www.kddi.com/english/&quot; target=&quot;_blank&quot;>https://www.kddi.com/english/&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;"/>
+                <textonlycomponent_fe
+                    jcr:created="{Date}2018-06-18T09:28:54.456-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-02-28T18:36:55.652Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>About Hewlett Packard Enterprise&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>Hewlett Packard Enterprise (NYSE: HPE) is the global edge-to-cloud company that helps organizations accelerate outcomes by unlocking value from all of their data, everywhere. Built on decades of reimagining the future and innovating to advance the way people live and work, HPE delivers unique, open and intelligent technology solutions as a service.  With offerings spanning Cloud Services, Compute, High Performance Computing &amp;amp; AI, Intelligent Edge, Software, and Storage, HPE provides a consistent experience across all clouds and edges, helping customers&amp;nbsp;develop&amp;nbsp;new business models, engage in new ways, and increase operational performance. For more information, visit:&amp;nbsp;&lt;a href=&quot;http://www.hpe.com/&quot; target=&quot;_blank&quot;>www.hpe.com&lt;/a>&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; Editorial Contact:&lt;br>&#xd;&#xa; &lt;b>Alastair McCormick&lt;br>&#xd;&#xa; &lt;/b>&lt;u>&lt;a href=&quot;mailto:alastair.mccormick@hpe.com&quot; target=&quot;_blank&quot;>alastair.mccormick@hpe.com&lt;/a>&lt;/u>&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <textonlycomponent_bf
+                    jcr:created="{Date}2018-07-02T13:12:59.755-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-10-12T16:10:50.633Z"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    textOnly="&lt;h2>RELATED NEWS&lt;/h2>&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli_540225213
+                    jcr:created="{Date}2018-06-18T10:12:48.909-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:22:53.902-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <columncontainercompo
+                    jcr:created="{Date}2018-07-02T13:14:23.594-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:15:08.106-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/columnContainerComponent"
+                    columns="column-content-3">
+                    <column_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_7c25
+                            jcr:created="{Date}2018-07-02T13:15:28.984-07:00"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-02-28T18:40:14.668Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="arrow-link"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/02/hewlett-packard-enterprise-extends-leadership-in-enterprise-connectivity-with-private-5g-offering"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            header="Hewlett Packard Enterprise extends leadership in enterprise connectivity with private 5G offering"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Gartner Names HPE a Leader in Magic Quadrant for Operations Support Systems"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-02-28T18:40:14.668Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2022/02/image-norend/hewlett-packard-enterprise-extends-leadership-in-enterprise-connectivity-with-private-5g-offering2.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-02-28T18:40:14.668Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_7c25>
+                    </column_0>
+                    <column_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_4dff
+                            jcr:created="{Date}2018-09-21T21:01:47.387Z"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-02-28T18:41:50.713Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="arrow-link"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/01/leading-japanese-telecommunications-provider-optage-trialling-local-5g-services-powered-by-hpe-5g-core-stack"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            header="Leading Japanese telecommunications provider OPTAGE trialling local 5G services powered by HPE 5G Core Stack"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="test"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-02-28T18:41:50.713Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2022/01/image-norend/leading-japanese-telecommunications-provider-optage-trialling-local-5g-services-powered-by-hpe-5g-core-stack.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-02-28T18:41:50.713Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_4dff>
+                    </column_1>
+                    <column_2
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_50f2
+                            jcr:created="{Date}2018-09-05T17:41:27.359Z"
+                            jcr:createdBy="nagle@hpe.com"
+                            jcr:lastModified="{Date}2022-02-28T18:43:26.919Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="arrow-link"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2021/06/hewlett-packard-enterprise-expands-5g-portfolio-with-automated-5g-management-solution"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            header="Hewlett Packard Enterprise expands 5G portfolio with automated 5G management solution"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-02-28T18:43:26.919Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                fileReference="/content/dam/hpe/newsroom/2021/06/image-norend/hewlett-packard-enterprise-expands-5g-portfolio-with-automated-5g-management-solution.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-02-28T18:43:26.919Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"/>
+                        </contentblock_50f2>
+                    </column_2>
+                </columncontainercompo>
+            </body-par>
+            <side-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <buttonctaitemcompone
+                    jcr:created="{Date}2018-06-28T13:06:31.075-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:06:46.099-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 1"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_661124859
+                    jcr:created="{Date}2018-06-28T13:06:51.115-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:11.079-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 2"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_606970408
+                    jcr:created="{Date}2018-06-28T13:06:53.400-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:02.336-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 3"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+            </side-par>
+        </main-par>
+        <image
+            jcr:lastModified="{Date}2018-09-05T17:38:02.066Z"
+            jcr:lastModifiedBy="nagle@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+    </jcr:content>
+</jcr:root>

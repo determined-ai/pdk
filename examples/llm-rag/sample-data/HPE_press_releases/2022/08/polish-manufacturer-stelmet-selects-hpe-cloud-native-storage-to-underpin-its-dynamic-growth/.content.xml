@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/apps/settings/wcm/designs/hpeweb"
+        cq:lastModified="{Date}2022-08-05T14:56:11.786Z"
+        cq:lastModifiedBy="christine.seales@hpe.com"
+        cq:tags="[hpe-newsroom:categories/big-data,hpe-newsroom:categories/infrastructure,hpe-newsroom:categories/company---customers]"
+        cq:template="/apps/hpeweb/templates/page-text-heavy"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Polish manufacturer Stelmet selects HPE cloud-native storage to underpin its dynamic growth"
+        jcr:uuid="70c436d2-e7b9-4af4-af0b-b49ded83eeee"
+        sling:resourceType="hpeweb/components/pages/page-text-heavy"
+        browserTitle="Polish manufacturer Stelmet selects HPE cloud-native storage to underpin its dynamic growth"
+        changefreq="daily"
+        contentType="Press Release"
+        displayDate="{Date}2022-08-03T07:45:00.000-04:00"
+        metaDescription="Leading manufacturer of garden architecture in Europe chooses HPE data services solution to support business growth with greater agility and simplicity  "
+        metaKeywords="HPE, HPE Alletra, HPE GreenLake, HPE Timeless Storage, HPE Poland, Stelmet Group, Garden Architecture, Data Storage, AI-driven data storage"
+        metaOgImage="/content/dam/hpe/newsroom/2022/08/image-norend/polish-manufacturer-stelmet-selects-hpe-cloud-native-storage-to-underpin-its-dynamic-growth.jpg"
+        metaTwitterCardType="summary_large_image"
+        msmcomponent="/content/hpe/base/blueprint/newsroom/press-release/2022/08/polish-manufacturer-stelmet-selects-hpe-cloud-native-storage-to-underpin-its-dynamic-growth/jcr:content/main-par/body-par/textonlycomponent_e9"
+        navTitle="Polish manufacturer Stelmet selects HPE cloud-native storage to underpin its dynamic growth"
+        pageTitle="Polish manufacturer Stelmet selects HPE cloud-native storage to underpin its dynamic growth"
+        priority="(None)"
+        socialDescription="Leading manufacturer of garden architecture in Europe chooses HPE data services solution to support business growth with greater agility and simplicity  "
+        subtitle="Leading manufacturer of garden architecture in Europe chooses HPE data services solution to support business growth with greater agility and simplicity "
+        theme="dark"
+        UAID="e55b06fb-30f7-4bbd-b2fd-618fdd2f4d54"
+        UCID="824de644-3661-43d8-9463-b5835efbf1da">
+        <main-par
+            jcr:lastModified="{Date}2018-06-28T13:09:39.402-07:00"
+            jcr:lastModifiedBy="velazquez@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="hpeweb/components/content/textHeavyComponent"
+            siderail="none">
+            <subtitle
+                jcr:lastModified="{Date}2022-08-01T20:02:34.524Z"
+                jcr:lastModifiedBy="christine.seales@hpe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="hpeweb/components/content/newsroom/newsroomSubtitleComponent"
+                textOnly="AUGUST 3, 2022 • PRESS RELEASE"/>
+            <body-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <imageonlycomponent_c
+                    jcr:created="{Date}2018-06-18T09:06:27.827-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-08-01T20:02:41.011Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/imageOnlyComponent"
+                    fileReference="/content/dam/hpe/newsroom/2022/08/image-norend/polish-manufacturer-stelmet-selects-hpe-cloud-native-storage-to-underpin-its-dynamic-growth.jpg"
+                    imageAlignment="hpe-image-center"
+                    imageAltText="HPE Guarantees"
+                    topMargin="60"
+                    videoSource="video"
+                    videoType="youtube"/>
+                <textonlycomponent_cd
+                    jcr:created="{Date}2018-06-18T09:12:49.742-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-08-01T20:03:13.230Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    leftPadding="30"
+                    rightPadding="30"
+                    textIsRich="true"
+                    textOnly="&lt;h3>IN THIS ARTICLE&lt;/h3>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>To maintain its leadership position, drive further growth, and seamlessly introduce new products, Stelmet required a new data infrastructure system&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>Stelmet chose HPE Alletra as it removes the complexity of infrastructure management and enables staff to focus on accessing and utilizing data in the most efficient way&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli
+                    jcr:created="{Date}2018-06-18T09:16:54.243-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-18T09:18:45.987-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <textonlycomponent
+                    jcr:created="{Date}2022-08-01T20:03:20.569Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2022-08-01T20:03:32.672Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;h2>Leading manufacturer of garden architecture in Europe chooses HPE data services solution to support business growth with greater agility and simplicity&amp;nbsp;&amp;nbsp;&lt;/h2>&#xd;&#xa;"/>
+                <textonlycomponent_e9
+                    jcr:created="{Date}2018-06-22T11:24:07.263-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-08-05T14:56:11.772Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Warsaw, Poland – August 3, 2022 &lt;/b>– &lt;a href=&quot;http://www.hpe.com&quot; target=&quot;_blank&quot;>Hewlett Packard Enterprise&lt;/a> (NYSE: HPE) today announced that Stelmet Group, a leading producer of wooden garden architecture in Europe headquartered in Poland, has selected &lt;a href=&quot;https://www.hpe.com/uk/en/storage/alletra.html&quot; target=&quot;_blank&quot;>HPE Alletra&lt;/a> cloud-native data infrastructure to host all its production and administrative data in a simplified, easy-to-manage and future-proof environment. The new data services solution enables Stelmet to scale as the company continues to grow and innovate, while delivering intelligent and AI-driven data storage, processing, and protection.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; Stelmet manufactures and distributes various wooden products designed for fencing, furnishing, and decorating gardens and all kinds of recreational spaces. The company also produces pellet fuel, using the sawdust and woodchips which are generated in the process of wood treatment. Stelmet has been in business for 25 years and sells 2,600 designs of products in over 25 countries. With the capacity to deliver large-scale orders, with broad geographical range, and short completion deadlines, Stelmet has become the leading distributor for the largest retailers of wooden garden architecture in Europe. To maintain its leadership position, drive further growth, and seamlessly introduce new products to its portfolio, Stelmet required a new data infrastructure&amp;nbsp;system that harnesses maximum data efficiency and empowers growth without data roadblocks.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; “As a dynamic business, we must invest in technology that serves our needs today, tomorrow and in several years’ time,&amp;quot;&amp;nbsp; said Rafał Ciepliński, IT Director at Stelmet. “With a heavy production schedule and a large distribution network, we produce a vast amount of data each day and therefore need smart and scalable data infrastructure, that can speedily and effectively store, manage, and process our data.”&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <pullquote
+                    jcr:created="{Date}2022-08-01T20:04:36.389Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2022-08-01T20:04:52.808Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution=" "
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>The new data services solution enables Stelmet to scale as the company continues to grow and innovate&lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2022-08-01T20:04:52.808Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote>
+                <textonlycomponent_b4
+                    jcr:created="{Date}2018-06-18T09:18:06.257-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-08-01T20:05:35.771Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>Stelmet chose HPE Alletra, a cloud-native storage solution, as it removes the complexity of infrastructure management and enables staff to focus on accessing and utilizing data in the most efficient way. Built for every app, from traditional to modern, the HPE Alletra platform delivers architectural flexibility and cloud operating experience wherever data lives; on-premises, at the edge or in the cloud. With unified and intelligent management across all workloads, Stelmet can instantly respond to any workload demand and break down complex data silos. As a result, the company can significantly speed up IT driven services and free up resources that were previously required to maintain, upgrade, and tune storage in isolated locations.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;Additionally, HPE Alletra’s AI-driven operations framework prevents issues before they happen and sends recommendations to improve performance and optimize resource utilization and planning. With the support of the &lt;a href=&quot;https://www.hpe.com/us/en/services/timeless-storage.html&quot; target=&quot;_blank&quot;>HPE Timeless Storage&lt;/a> program, the project will avoid costly rip-and-replace cycles and keep the storage continuously up to date with the technology upgrades every three years, or sooner, if required.&amp;nbsp;&lt;/span>&lt;/p>&#xd;&#xa;"/>
+                <pullquote_349b
+                    jcr:created="{Date}2018-06-18T09:23:47.197-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-08-01T20:06:10.188Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution="Marek Kwiatkowski, Business Development Manager at HPE, Poland"
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>“Stelmet went from owning and maintaining data infrastructure to simply accessing and utilizing it. This approach makes a tremendous difference for a growing company.”&amp;nbsp;&lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2022-08-01T20:06:10.188Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote_349b>
+                <textonlycomponent_97
+                    jcr:created="{Date}2018-06-22T11:22:31.557-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-08-05T14:55:29.271Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>“With self-managing and self-improving HPE Alletra platform, our customers move beyond complex and time-consuming data management, and shift their focus to innovation,” said Marek Kwiatkowski, Business Development Manager at HPE, Poland. “Stelmet went from owning and maintaining data infrastructure to simply accessing and utilizing it. This approach makes a tremendous difference for a growing company. Now, they have more time, more resources at hand, and more capacity on demand.”&lt;br>&#xd;&#xa;&lt;b>&lt;br>&#xd;&#xa;About Stelmet Group&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/b>Stelmet Group is engaged in the production and distribution of the so-called wooden garden architecture. Stelmet Group manufactures goods made of pine and spruce wood, which include products of various types: fences, grids, boards, platforms, pergolas, flowerbeds, gazebos and tool sheds. These products are designed for fencing, furnishing and decoration of gardens, parks, terraces and all kinds of recreational spaces. Stelmet Group's assortment includes over 2600 designs of products, that are sold in over 25 countries, including the largest European markets. For more information, visit: &lt;a href=&quot;https://www.stelmet.com/en/&quot; target=&quot;_blank&quot;>https://www.stelmet.com/en/&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;"/>
+                <textonlycomponent_fe
+                    jcr:created="{Date}2018-06-18T09:28:54.456-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-08-01T20:09:39.055Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>About Hewlett Packard Enterprise&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>Hewlett Packard Enterprise (NYSE: HPE) is the global edge-to-cloud company that helps organizations accelerate outcomes by unlocking value from all of their data, everywhere. Built on decades of reimagining the future and innovating to advance the way people live and work, HPE delivers unique, open and intelligent technology solutions as a service.&amp;nbsp; With offerings spanning Cloud Services, Compute, High Performance Computing &amp;amp; AI, Intelligent Edge, Software, and Storage, HPE provides a consistent experience across all clouds and edges, helping customers develop new business models, engage in new ways, and increase operational performance. For more information, visit: &lt;a href=&quot;http://www.hpe.com/&quot; target=&quot;_blank&quot;>www.hpe.com&lt;/a>&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; Editorial Contact:&lt;br>&#xd;&#xa; &lt;b>Tyler Smith&lt;br>&#xd;&#xa; &lt;/b>&lt;a href=&quot;mailto:tyler.smith@hpe.com&quot; target=&quot;_blank&quot;>tyler.smith@hpe.com&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <textonlycomponent_bf
+                    jcr:created="{Date}2018-07-02T13:12:59.755-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-10-12T16:10:50.633Z"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    textOnly="&lt;h2>RELATED NEWS&lt;/h2>&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli_540225213
+                    jcr:created="{Date}2018-06-18T10:12:48.909-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:22:53.902-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <columncontainercompo
+                    jcr:created="{Date}2018-07-02T13:14:23.594-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:15:08.106-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/columnContainerComponent"
+                    columns="column-content-3">
+                    <column_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_7c25
+                            jcr:created="{Date}2018-07-02T13:15:28.984-07:00"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-08-01T20:11:28.499Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/04/leading-telematics-company-ituran-selects-hpe-cloud-native-storage-to-improve-real-time-data-access-for-clients"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            header="Leading telematics company, Ituran, selects HPE cloud native storage to improve real-time data access for clients"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Leading telematics company, Ituran, selects HPE cloud native storage to improve real-time data access for clients"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-08-01T20:11:28.499Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2022/04/image-norend/leading-telematics-company-ituran-selects-hpe-cloud-native-storage-to-improve-real-time-data-access-for-clients.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-08-01T20:11:28.499Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_7c25>
+                    </column_0>
+                    <column_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_4dff
+                            jcr:created="{Date}2018-09-21T21:01:47.387Z"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-08-01T20:12:56.024Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/06/swedish-cloud-service-provider-datarewind-boosts-hybrid-office-productivity-with-hpe-cloud-native-storage-and-enhanced-compute-capacities"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            header="Swedish cloud service provider, Datarewind, boosts hybrid office productivity with HPE cloud-native storage and enhanced compute capacities"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Swedish cloud service provider, Datarewind, boosts hybrid office productivity with HPE cloud-native storage and enhanced compute capacities"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-08-01T20:12:56.024Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2022/06/image-norend/swedish-cloud-service-provider-datarewind-boosts-hybrid-office-productivity-with-hpe-cloud-native-storage-and-enhanced-compute-capacities.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-08-01T20:12:56.024Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_4dff>
+                    </column_1>
+                    <column_2
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_50f2
+                            jcr:created="{Date}2018-09-05T17:41:27.359Z"
+                            jcr:createdBy="nagle@hpe.com"
+                            jcr:lastModified="{Date}2022-08-01T20:19:13.571Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2021/06/hewlett-packard-enterprise-to-power-polands-first-digital-collection-of-preserved-plants"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            header="Hewlett Packard Enterprise to power Poland’s first digital collection of preserved plants"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Hewlett Packard Enterprise to power Poland’s first digital collection of preserved plants"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-08-01T20:19:13.571Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                fileReference="/content/dam/hpe/newsroom/2021/06/image-norend/hewlett-packard-enterprise-to-power-polands-first-digital-collection-of-preserved-plants.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-08-01T20:19:13.571Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"/>
+                        </contentblock_50f2>
+                    </column_2>
+                </columncontainercompo>
+            </body-par>
+            <side-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <buttonctaitemcompone
+                    jcr:created="{Date}2018-06-28T13:06:31.075-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:06:46.099-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 1"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_661124859
+                    jcr:created="{Date}2018-06-28T13:06:51.115-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:11.079-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 2"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_606970408
+                    jcr:created="{Date}2018-06-28T13:06:53.400-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:02.336-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 3"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+            </side-par>
+        </main-par>
+        <image
+            jcr:lastModified="{Date}2018-09-05T17:38:02.066Z"
+            jcr:lastModifiedBy="nagle@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+    </jcr:content>
+</jcr:root>

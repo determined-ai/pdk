@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/apps/settings/wcm/designs/hpeweb"
+        cq:lastModified="{Date}2022-07-08T15:24:07.202Z"
+        cq:lastModifiedBy="christine.seales@hpe.com"
+        cq:tags="[hpe-newsroom:categories/big-data,hpe-newsroom:categories/company---customers]"
+        cq:template="/apps/hpeweb/templates/page-text-heavy"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="French cloud service provider AntemetA selects HPE GreenLake to introduce new automated disaster recovery service"
+        jcr:uuid="1f475c91-fbac-4b5f-808d-f1fbb8e5c80f"
+        sling:resourceType="hpeweb/components/pages/page-text-heavy"
+        browserTitle="French cloud service provider AntemetA selects HPE GreenLake to introduce new automated disaster recovery service"
+        changefreq="daily"
+        contentType="Press Release"
+        displayDate="{Date}2022-07-12T04:00:00.000-04:00"
+        metaDescription="Cloud service provider offers customers a cloud service with cloud-native disaster recovery infrastructure for SMBs, enterprise customers and the healthcare sector"
+        metaKeywords="HPE, HPE GreenLake, Edge to cloud,AntemetA, HPE France, HPE service provider, Disaster recovery"
+        metaOgImage="/content/dam/hpe/newsroom/2022/07/image-norend/french-cloud-service-provider-antemeta-selects-hpe-greenlake-to-introduce-new-automated-disaster-recovery-service.jpg"
+        metaTwitterCardType="summary_large_image"
+        msmcomponent="/content/hpe/base/blueprint/newsroom/press-release/2022/07/french-cloud-service-provider-antemeta-selects-hpe-greenlake-to-introduce-new-automated-disaster-recovery-service/jcr:content/main-par/body-par/columncontainercompo/column_2/contentblock_50f2"
+        navTitle="French cloud service provider AntemetA selects HPE GreenLake to introduce new automated disaster recovery service"
+        pageTitle="French cloud service provider AntemetA selects HPE GreenLake to introduce new automated disaster recovery service"
+        priority="(None)"
+        socialDescription="Cloud service provider offers customers a cloud service with cloud-native disaster recovery infrastructure for SMBs, enterprise customers and the healthcare sector"
+        subtitle="Cloud service provider offers customers a cloud service with cloud-native disaster recovery infrastructure for SMBs, enterprise customers and the healthcare sector"
+        theme="dark"
+        UAID="65012c4a-3e16-43a6-b9c4-72d2095ac753"
+        UCID="41d1af75-af63-4100-a5a4-aff6c0dd14d5">
+        <main-par
+            jcr:lastModified="{Date}2018-06-28T13:09:39.402-07:00"
+            jcr:lastModifiedBy="velazquez@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="hpeweb/components/content/textHeavyComponent"
+            siderail="none">
+            <subtitle
+                jcr:lastModified="{Date}2022-07-08T15:09:26.183Z"
+                jcr:lastModifiedBy="christine.seales@hpe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="hpeweb/components/content/newsroom/newsroomSubtitleComponent"
+                textOnly="JULY 12, 2022 • PRESS RELEASE"/>
+            <body-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <imageonlycomponent_c
+                    jcr:created="{Date}2018-06-18T09:06:27.827-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-07-08T15:09:50.232Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/imageOnlyComponent"
+                    fileReference="/content/dam/hpe/newsroom/2022/07/image-norend/french-cloud-service-provider-antemeta-selects-hpe-greenlake-to-introduce-new-automated-disaster-recovery-service.jpg"
+                    imageAlignment="hpe-image-center"
+                    imageAltText="HPE Guarantees"
+                    topMargin="60"
+                    videoSource="video"
+                    videoType="youtube"/>
+                <textonlycomponent_cd
+                    jcr:created="{Date}2018-06-18T09:12:49.742-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-07-08T15:10:15.793Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    leftPadding="30"
+                    rightPadding="30"
+                    textIsRich="true"
+                    textOnly="&lt;h3>IN THIS ARTICLE&lt;/h3>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>The ransomware security guaranteed by HPE expands AntemetA’s data management and disaster recovery capabilities&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>The new solution is delivered through HPE GreenLake and offers the most robust disaster recovery solution in the industry for always-on applications and ransomware protection&amp;nbsp;&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli
+                    jcr:created="{Date}2018-06-18T09:16:54.243-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-18T09:18:45.987-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <textonlycomponent
+                    jcr:created="{Date}2022-07-08T15:10:21.653Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2022-07-08T15:10:35.657Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;h2>Cloud service provider offers customers a cloud service with cloud-native disaster recovery infrastructure for SMBs, enterprise customers and the healthcare sector&lt;/h2>&#xd;&#xa;"/>
+                <textonlycomponent_e9
+                    jcr:created="{Date}2018-06-22T11:24:07.263-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-07-08T15:11:41.495Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>PARIS, France – July 12, 2022 –&lt;/b> &lt;a href=&quot;http://www.hpe.com&quot; target=&quot;_blank&quot;>Hewlett Packard Enterprise&lt;/a> (NYSE: HPE) today announced that AntemetA, one of the leading cloud service providers in France, has selected &lt;a href=&quot;https://www.hpe.com/us/en/storage/data-protection-solutions/disaster-recovery-zerto.html&quot; target=&quot;_blank&quot;>HPE GreenLake for Disaster Recovery&lt;/a>, a new cloud-native data solution that protects data from the edge to the cloud, to build a manageable, flexible and highly secure private hosting infrastructure to support strategic workloads and drive new business growth.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;AntemetA is a private managed cloud services provider in France, providing a one-stop service to businesses for IT infrastructure solutions, private and public cloud services. With data centers in France and ISO 27001, HDS, ISAE 3402 certifications, the leading IT solutions provider is expanding its sovereign cloud service portfolio to provide advanced ransomware protection and offer the best solution to customers looking for on-premises cloud experience and demands for proximity, sovereignty and security.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&amp;quot;The concepts of security, safety and sovereignty have never been more crucial,” commented Stéphane BLANC CEO of AntemetA. “Protecting company's data can only be achieved through round-the-clock AI-augmented monitoring to prevent, identify and circle any cyber-attack or infection.&amp;nbsp; The ransomware security guaranteed by HPE expands AntemetA’s data management and disaster recovery capabilities, giving customers the ability to protect their data and recover in minutes after a ransomware attack.”&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <pullquote
+                    jcr:created="{Date}2022-07-08T15:11:47.902Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2022-07-08T15:12:11.024Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution=" "
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>The ransomware security guaranteed by HPE gives customers the ability to protect their data and recover in minutes after a ransomware attack&lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2022-07-08T15:12:11.024Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote>
+                <textonlycomponent_b4
+                    jcr:created="{Date}2018-06-18T09:18:06.257-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-07-08T15:13:54.859Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>The new scalable and flexible solution is delivered in an as-a-service model through the HPE GreenLake platform to offer the most robust disaster recovery solution in the industry for always-on applications, ransomware protection from increasing cyber threats, and seamless hybrid cloud application and data mobility. The solution combines capabilities acquired through HPE's acquisition of &lt;a href=&quot;https://www.hpe.com/us/en/storage/data-protection-solutions/disaster-recovery-zerto.html&quot; target=&quot;_blank&quot;>Zerto&lt;/a> with HPE technologies. Furthermore, HPE GreenLake addresses extreme flexibility requirements and fast recovery solution deployments by making capacity available on demand.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;“Data is the most critical asset and is essential to operate in this new digital economy”, said Alain Melon, Managing Director, HPE France. “We are excited to accelerate innovation and deliver best-in-class data management and disaster recovery capabilities with AntemetA to give customers the ability to protect their data and recover in minutes after a ransomware attack.”&lt;/span>&lt;/p>&#xd;&#xa;"/>
+                <pullquote_349b
+                    jcr:created="{Date}2018-06-18T09:23:47.197-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-07-08T15:14:31.057Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution="Alain Melon, Managing Director, HPE France"
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>“We are excited to accelerate innovation and deliver best-in-class data management and disaster recovery capabilities with AntemetA”&amp;nbsp;&lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2022-07-08T15:14:31.057Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote_349b>
+                <textonlycomponent_97
+                    jcr:created="{Date}2018-06-22T11:22:31.557-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-07-08T15:16:15.455Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>Beyond replacing the storage system in a pay-per-use model, HPE, as a technology and cloud service provider, helped AntemetA cloud division implement a cloud-native data infrastructure using the &lt;a href=&quot;https://www.hpe.com/us/en/storage/alletra.html&quot; target=&quot;_blank&quot;>HPE Alletra 6000&lt;/a> to provide efficient and resilient storage, delivered in a cloud experience. &lt;a href=&quot;https://www.hpe.com/us/en/storage/data-services-cloud-console.html&quot; target=&quot;_blank&quot;>Data Services on HPE GreenLake&lt;/a>, HPE GreenLake Central and HPE GreenLake Consumption Analytics Portal enable AntemetA to manage their environment successfully with a cloud-native approach.&lt;br />&#xd;&#xa;&lt;b style=&quot;&quot;>&lt;br />&#xd;&#xa;About HPE GreenLake&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;&lt;/b>The HPE GreenLake edge-to-cloud platform enables customers to accelerate data-first modernization and provides over 70 cloud services that can run on-premises, at the edge, in a colocation facility, and in the public cloud. In Q2 2022, HPE reported Annualized Revenue Run-Rate (ARR) of $829 million and triple digit as-a-service orders growth for the third consecutive quarter. Today, HPE GreenLake has 65,000 customers and over one exabyte of data under management with customers worldwide. These organizations benefit from one control plane from which to automate, orchestrate, and run their hybrid cloud strategy. The scalable, pay-as-you go HPE GreenLake platform also delivers robust security, compliance, and control, and supports a broad partner ecosystem – including channel partners, distributors, independent software vendors, public cloud providers, service providers, and system integrators. For more information on HPE GreenLake, please visit: &lt;a href=&quot;https://www.hpe.com/us/en/greenlake.html&quot; target=&quot;_blank&quot;>https://www.hpe.com/us/en/greenlake.html&lt;/a>&lt;br />&#xd;&#xa;&lt;b style=&quot;&quot;>&lt;br />&#xd;&#xa;About AntemetA&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;&lt;/b>A French company created in 1995, AntemetA is today one of the leaders in hybrid cloud and data protection. The company supports more than 1,000 customers in the evolution of their information systems, through the implementation of infrastructure solutions (VAR), the provision of Cloud services (CSP) and expertise in managed services (MSP). A human-sized company with nearly 300 employees, the group has 7 agencies located in France as well as a subsidiary in Morocco. All AntemetA cloud and customer service are ISO 27001 certified, guaranteeing the security and confidentiality of hosted information. In 2022, the company obtained Health Data Hosting (HDS) certification and ISAE type 1 certification. Committed to a global approach to Corporate Social and Environmental Responsabilities, the company has notably launched a reforestation project labeled “Low carbon” intended to reduce its energy footprint. The AntemetA group is a member of the &lt;a href=&quot;https://www.hexatrust.com/&quot; target=&quot;_blank&quot;>Hexatrust&lt;/a> association, the group of French cybersecurity and trusted cloud solutions. For more information: &lt;a href=&quot;https://www.antemeta.fr/&quot; target=&quot;_blank&quot;>www.antemeta.fr&lt;/a>, &lt;a href=&quot;https://twitter.com/AntemetA&quot; target=&quot;_blank&quot;>Twitter&lt;/a>, &lt;a href=&quot;https://www.linkedin.com/company/antemeta&quot; target=&quot;_blank&quot;>LinkedIn&lt;/a>, &lt;a href=&quot;https://www.youtube.com/user/antemeta&quot; target=&quot;_blank&quot;>YouTube&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;"/>
+                <textonlycomponent_fe
+                    jcr:created="{Date}2018-06-18T09:28:54.456-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-07-08T15:17:32.215Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>About Hewlett Packard Enterprise&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>Hewlett Packard Enterprise (NYSE: HPE) is the global edge-to-cloud company that helps organizations accelerate outcomes by unlocking value from all of their data, everywhere. Built on decades of reimagining the future and innovating to advance the way people live and work, HPE delivers unique, open and intelligent technology solutions as a service.  With offerings spanning Cloud Services, Compute, High Performance Computing &amp;amp; AI, Intelligent Edge, Software, and Storage, HPE provides a consistent experience across all clouds and edges, helping customers develop new business models, engage in new ways, and increase operational performance. For more information, visit: &lt;a href=&quot;http://www.hpe.com/&quot; target=&quot;_blank&quot;>www.hpe.com&lt;/a>&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;Editorial Contact:&lt;br />&#xd;&#xa;&lt;b style=&quot;&quot;>Benjamin Lesueur&lt;br />&#xd;&#xa;&lt;/b>&lt;u style=&quot;&quot;>&lt;a href=&quot;mailto:benjamin.lesueur@hpe.com&quot; target=&quot;_blank&quot;>benjamin.lesueur@hpe.com&lt;/a>&lt;/u>&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <textonlycomponent_bf
+                    jcr:created="{Date}2018-07-02T13:12:59.755-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-10-12T16:10:50.633Z"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    textOnly="&lt;h2>RELATED NEWS&lt;/h2>&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli_540225213
+                    jcr:created="{Date}2018-06-18T10:12:48.909-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:22:53.902-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <columncontainercompo
+                    jcr:created="{Date}2018-07-02T13:14:23.594-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:15:08.106-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/columnContainerComponent"
+                    columns="column-content-3">
+                    <column_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_7c25
+                            jcr:created="{Date}2018-07-02T13:15:28.984-07:00"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-07-08T15:19:01.547Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="arrow-link"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/06/iliane-selects-hpe-greenlake-for-expansion-of-high-performing-cloud-offerings"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            header="Iliane selects HPE GreenLake for expansion of high performing cloud offerings"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Iliane selects HPE GreenLake for expansion of high performing cloud offerings"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-07-08T15:19:01.547Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2022/06/image-norend/iliane-selects-hpe-greenlake-for-expansion-of-high-performing-cloud-offerings.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-07-08T15:19:01.547Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_7c25>
+                    </column_0>
+                    <column_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_4dff
+                            jcr:created="{Date}2018-09-21T21:01:47.387Z"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-07-08T15:20:37.129Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="arrow-link"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/06/swedish-cloud-service-provider-datarewind-boosts-hybrid-office-productivity-with-hpe-cloud-native-storage-and-enhanced-compute-capacities"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            header="Swedish cloud service provider, Datarewind, boosts hybrid office productivity with HPE cloud-native storage and enhanced compute capacities"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Swedish cloud service provider, Datarewind, boosts hybrid office productivity with HPE cloud-native storage and enhanced compute capacities"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-07-08T15:20:37.129Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2022/06/image-norend/swedish-cloud-service-provider-datarewind-boosts-hybrid-office-productivity-with-hpe-cloud-native-storage-and-enhanced-compute-capacities.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-07-08T15:20:37.129Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_4dff>
+                    </column_1>
+                    <column_2
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_50f2
+                            jcr:created="{Date}2018-09-05T17:41:27.359Z"
+                            jcr:createdBy="nagle@hpe.com"
+                            jcr:lastModified="{Date}2022-07-08T15:22:04.199Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="arrow-link"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/06/eclit-chooses-hpe-greenlake-to-launch-a-new-cloud-offering-and-expand-its-managed-services-portfolio"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            header="Eclit chooses HPE GreenLake to launch a new cloud offering and expand its managed services portfolio"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Eclit chooses HPE GreenLake to launch a new cloud offering and expand its managed services portfolio"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-07-08T15:22:04.199Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                fileReference="/content/dam/hpe/newsroom/2022/06/image-norend/eclit-chooses-hpe-greenlake-to-launch-a-new-cloud-offering-and-expand-its-managed-services-portfolio.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-07-08T15:22:04.199Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"/>
+                        </contentblock_50f2>
+                    </column_2>
+                </columncontainercompo>
+            </body-par>
+            <side-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <buttonctaitemcompone
+                    jcr:created="{Date}2018-06-28T13:06:31.075-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:06:46.099-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 1"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_661124859
+                    jcr:created="{Date}2018-06-28T13:06:51.115-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:11.079-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 2"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_606970408
+                    jcr:created="{Date}2018-06-28T13:06:53.400-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:02.336-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 3"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+            </side-par>
+        </main-par>
+        <image
+            jcr:lastModified="{Date}2018-09-05T17:38:02.066Z"
+            jcr:lastModifiedBy="nagle@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,31 @@
+{
+    "pipeline": { "name": "process_xml"},
+    "description": "Extract content in xml files to a csv file",
+    "input": {
+        "cross": [
+          {
+            "pfs": {
+              "repo": "data",
+              "branch" : "master",
+              "glob": "/"
+            }
+          },
+          {
+            "pfs": {
+              "repo": "code",
+              "branch" : "master",
+              "glob": "/"
+            }
+          }
+        ]
+    },
+    "transform": {
+      "cmd": [
+        "/bin/sh"
+      ],
+      "image": "mendeza/python38_process:0.2",
+      "stdin": [
+        "python /pfs/code/src/py/process_xmls.py --xml-directory /pfs/data/HPE_press_releases/ --pdf-directory /pfs/data/ --custom-csv-input /pfs/data/HPE_2023_Press_Releases.csv --out-dir /pfs/out/hpe_press_releases.csv"
+      ]
+    }
+}

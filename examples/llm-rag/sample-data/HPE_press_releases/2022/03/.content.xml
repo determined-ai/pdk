@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/apps/settings/wcm/designs/hpeweb"
+        cq:lastModified="{Date}2022-01-12T16:33:12.165Z"
+        cq:lastModifiedBy="christine.seales@hpe.com"
+        cq:template="/apps/hpeweb/templates/page-generic-template"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="03"
+        sling:resourceType="hpeweb/components/pages/page-generic-template"/>
+    <kddi-advances-o-ran-compliant-5g-standalone-virtualized-base-stations-in-japan-with-hpe-telco-infrastructure/>
+    <hewlett-packard-enterprise-reports-fiscal-2022-first-quarter-results/>
+    <hpe-greenlake-edge-to-cloud-platform-delivers-greater-choice-and-simplicity-with-unified-experience-new-cloud-services-and-expanded-partner-ecosystem/>
+    <hpe-greenlake-selected-by-worldline-to-modernize-mission-critical-payments/>
+    <hpe-greenlake-selected-by-bmw-group-to-unify-data-management-across-global-locations-and-the-cloud/>
+    <jcb-chooses-hpe-greenlake-to-enhance-customer-experience-and-modernize-its-next-generation-myjcb-platform/>
+    <auckland-transport-adopts-hpe-greenlake-for-advanced-analytics-to-promote-public-safety/>
+    <napa-valleys-trinchero-family-estates-supports-online-business-growth-with-hpe-greenlake/>
+    <hewlett-packard-enterprise-expands-hpe-greenlake-cloud-services-portfolio-for-hybrid-cloud-and-data-with-availability-of-microsoft-azure-stack-hci-integrated-system/>
+    <cheops-technology-selects-hpe-greenlake-to-expand-and-enhance-cloud-services-portfolio-for-its-customers/>
+</jcr:root>

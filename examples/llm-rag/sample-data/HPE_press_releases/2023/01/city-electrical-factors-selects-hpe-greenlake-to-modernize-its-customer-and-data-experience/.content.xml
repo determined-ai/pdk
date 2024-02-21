@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/apps/settings/wcm/designs/hpeweb"
+        cq:lastModified="{Date}2023-01-25T18:34:55.673Z"
+        cq:lastModifiedBy="christine.seales@hpe.com"
+        cq:tags="[hpe-newsroom:categories/big-data,hpe-newsroom:categories/industry--retail,hpe-newsroom:categories/company---customers]"
+        cq:template="/apps/hpeweb/templates/page-text-heavy"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="City Electrical Factors selects HPE GreenLake to modernize its customer and data experience"
+        jcr:uuid="4ef55f72-d6cf-4baa-b774-c4dc334f0730"
+        sling:resourceType="hpeweb/components/pages/page-text-heavy"
+        browserTitle="City Electrical Factors selects HPE GreenLake to modernize its customer and data experience"
+        changefreq="daily"
+        contentType="Press Release"
+        displayDate="{Date}2023-01-26T04:00:00.000-05:00"
+        metaDescription="Leading UK electrical wholesaler aims to future-proof its disaster recovery and business continuity with HPE GreenLake and Zerto, preventing downtime and improving customer experience"
+        metaKeywords="HPE, HPE GreenLake, as-a-service, HPE UK, CEF, disaster recovery, Zerto, electric wholesaler"
+        metaOgImage="/content/dam/hpe/newsroom/2023/01/image-norend/city-electrical-factors-selects-hpe-greenlake-to-modernize-its-customer-and-data-experience.jpg"
+        metaTwitterCardType="summary_large_image"
+        msmcomponent="/content/hpe/base/blueprint/newsroom/press-release/2023/01/city-electrical-factors-selects-hpe-greenlake-to-modernize-its-customer-and-data-experience/jcr:content/main-par/body-par/columncontainercompo/column_2/contentblock_50f2"
+        navTitle="City Electrical Factors selects HPE GreenLake to modernize its customer and data experience"
+        pageTitle="City Electrical Factors selects HPE GreenLake to modernize its customer and data experience"
+        priority="(None)"
+        socialDescription="Leading UK electrical wholesaler aims to future-proof its disaster recovery and business continuity with HPE GreenLake and Zerto, preventing downtime and improving customer experience"
+        subtitle="Leading UK electrical wholesaler aims to future-proof its disaster recovery and business continuity with HPE GreenLake and Zerto, preventing downtime and improving customer experience"
+        theme="dark">
+        <main-par
+            jcr:lastModified="{Date}2018-06-28T13:09:39.402-07:00"
+            jcr:lastModifiedBy="velazquez@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="hpeweb/components/content/textHeavyComponent"
+            siderail="none">
+            <subtitle
+                jcr:lastModified="{Date}2023-01-25T18:06:54.590Z"
+                jcr:lastModifiedBy="christine.seales@hpe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="hpeweb/components/content/newsroom/newsroomSubtitleComponent"
+                textOnly="JANUARY 26, 2023 • PRESS RELEASE"/>
+            <body-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <imageonlycomponent_c
+                    jcr:created="{Date}2018-06-18T09:06:27.827-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-01-25T18:07:23.319Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/imageOnlyComponent"
+                    fileReference="/content/dam/hpe/newsroom/2023/01/image-norend/city-electrical-factors-selects-hpe-greenlake-to-modernize-its-customer-and-data-experience.jpg"
+                    imageAlignment="hpe-image-center"
+                    imageAltText="HPE Guarantees"
+                    topMargin="60"
+                    videoSource="video"
+                    videoType="youtube"/>
+                <textonlycomponent_cd
+                    jcr:created="{Date}2018-06-18T09:12:49.742-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-01-25T18:09:22.517Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    leftPadding="30"
+                    rightPadding="30"
+                    textIsRich="true"
+                    textOnly="&lt;h3>IN THIS ARTICLE&lt;/h3>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>The HPE GreenLake platform will enable CEF to optimize their infrastructure management and improve security using the disaster recovery capabilities of Zerto&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>With the implementation of the HPE GreenLake platform in the UK, CEF now has a global platform that can easily be deployed and replicated with a single user experience throughout all their regions, including North America, Ireland, Spain and Australia&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli
+                    jcr:created="{Date}2018-06-18T09:16:54.243-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-18T09:18:45.987-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <textonlycomponent
+                    jcr:created="{Date}2023-01-25T18:09:28.575Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2023-01-25T18:09:42.671Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;h2>Leading UK electrical wholesaler aims to future-proof its disaster recovery and business continuity with HPE GreenLake and Zerto, preventing downtime and improving customer experience&lt;/h2>&#xd;&#xa;"/>
+                <textonlycomponent_e9
+                    jcr:created="{Date}2018-06-22T11:24:07.263-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-01-25T18:14:34.450Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>London, UK – January 26, 2023&amp;nbsp;&lt;/b>– &lt;a href=&quot;http://www.hpe.com/&quot; target=&quot;_blank&quot;>Hewlett Packard Enterprise&lt;/a> (NYSE: HPE) today announced that &lt;a href=&quot;https://www.cef.co.uk/&quot; target=&quot;_blank&quot;>City Electrical Factors&lt;/a> (CEF), the United Kingdom’s leading electrical wholesale network, has selected the &lt;a href=&quot;https://www.hpe.com/us/en/greenlake.html&quot; target=&quot;_blank&quot;>HPE GreenLake edge-to-cloud platform&lt;/a> as the first step in its digital transformation journey. The HPE GreenLake platform will enable CEF to optimize their infrastructure management and improve security using the disaster recovery capabilities of Zerto.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;Established in 1951, CEF prides itself on delivering optimal customer service and satisfaction. CEF’s customer platform, which enables them to respond to and track orders of all sizes, was based on legacy technology and had become outdated. To improve the customer experience, CEF decided to move to a cloud experience with the HPE GreenLake platform. As part of the solution the wholesaler will move into global International Business Exchangeä (IBX&lt;sup>â&lt;/sup>) data centers operated by HPE partner Equinix, benefitting from HPE Datacenter Technology Services to plan, design and deploy the solution.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;This move will provide the company with a cloud experience that allows them to scale on demand and pay as they use. CEF will also simplify their infrastructure management experience using HPE GreenLake Management Services and ensure their business continuity with Zerto for Disaster Recovery. With the implementation of the HPE GreenLake platform in the UK, CEF now has a global platform that can easily be deployed and replicated with a single user experience throughout all their regions, including North America, Ireland, Spain and Australia.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;“We’ve enjoyed a long-standing partnership with HPE for the past 15 years, and we are delighted to continue this journey utilizing the HPE GreenLake platform,” said Jon Higginson, IT EMEA Director at CEF. “We were looking to improve our service offering to our customers through the adoption of cloud technologies and we found the HPE GreenLake platform to be the most compelling offer available. As we operate over 400 stores globally, we need to ensure that we have a consistent platform that delivers an ongoing positive customer experience, scales as we grow and provides the flexibility to be tailored to potential future requirements. The disaster recovery and business continuity capabilities of Zerto in particular will deliver the enhanced stability and reliability we seek for our operations.”&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <pullquote
+                    jcr:created="{Date}2023-01-25T18:15:59.343Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2023-01-25T18:20:23.385Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution="Jon Higginson, IT EMEA Director at CEF"
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>“We were looking to improve our service offering to our customers through the adoption of cloud technologies and we found the HPE&amp;nbsp;GreenLake platform to be the most compelling offer available.”&amp;nbsp;&lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2023-01-25T18:20:23.385Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote>
+                <textonlycomponent_b4
+                    jcr:created="{Date}2018-06-18T09:18:06.257-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-01-25T18:21:23.678Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>When researching a new solution to drive their transformation, CEF focused on systems that would enable them in their journey to the cloud, enhance their security and strengthen their customer relationships. Key requirements were to increase the company’s protection against cyber threats and external disruptions, ensure the continuity of high quality of customer service, and the reduction of energy consumption and thereby of the group’s carbon footprint. At the same time, it was important for the services to be deployable and replicable throughout the different regions CEF operates in.&amp;nbsp;&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;“Running the HPE GreenLake platform in a colocation is the ideal solution for customers like CEF, who are looking for a cloud experience while staying in full control of their IT,” said Matt Harris, managing director UK, HPE. “As a partner first organization, we’re delighted to work with Equinix, the HPE GreenLake Momentum Partner of the Year 2022, to enable CEF to access the hybrid cloud services they require, wherever and whenever they need them. Not only does this give CEF the control over their usage and cost, but it also allows them to free up more of their time that can be further invested into their transformation efforts.”&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;With the deployment of HPE GreenLake Management Services, CEF will entrust the managing of its infrastructure stack to HPE. By reducing the time spent on management, about 20% of the CEF IT team’s time will be freed up. This additional time will allow the group to enhance their offerings and address their customer’s needs and requirements and accelerate their cloud journey in additional regions. HPE GreenLake also allows them to migrate their bespoke applications to a hybrid cloud platform designed for both cloud-native and legacy workloads.&lt;/span>&lt;/p>&#xd;&#xa;"/>
+                <pullquote_349b
+                    jcr:created="{Date}2018-06-18T09:23:47.197-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-01-25T18:21:45.484Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution=" "
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>By reducing the time spent on management, about 20% of the CEF IT team’s time will be freed up&lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2023-01-25T18:21:45.484Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote_349b>
+                <textonlycomponent_97
+                    jcr:created="{Date}2018-06-22T11:22:31.557-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-01-25T18:24:35.689Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>HPE GreenLake and Zerto will give CEF peace of mind, as it ensures close to zero downtime and allows them to move production workloads quickly into the disaster recovery environment. As part of the disaster recovery environment, the group will reduce the recovery time objectives (RTO) and recovery point objectives (RPO) from 24 hours down to minutes. This ensures internal and external end users stay unaffected and allows their business to continue trading. After the initial roll-out of HPE GreenLake with Zerto at their DR site in the UK, CEF is planning to deploy HPE GreenLake in Australia as well as their production site in the UK.&lt;br />&#xd;&#xa;&lt;b style=&quot;&quot;>&lt;br />&#xd;&#xa;About HPE GreenLake&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;&lt;/b>The HPE GreenLake edge-to-cloud platform enables customers to accelerate data-first modernization and provides cloud services that can run on-premises, at the edge, in a colocation facility, and in the public cloud. In &lt;a href=&quot;https://www.hpe.com/us/en/newsroom/press-release/2022/11/hewlett-packard-enterprise-reports-fiscal-2022-results-with-record-q4-performance.html&quot; target=&quot;_blank&quot;>its final fiscal quarter of 2022&lt;/a>, HPE reported Annualized Revenue Run-Rate (ARR) of $936 million with total as-a-service orders growth of 33% compared to the prior-year period. HPE GreenLake has 65,000 customers, powers more than two million connected devices and manages more than one exabyte of data under management with customers worldwide. These organizations benefit from one control plane from which to automate, orchestrate, and run their hybrid cloud strategy. The scalable, pay-as-you go HPE GreenLake platform also delivers robust security, compliance, and control, and supports a broad partner ecosystem – including channel partners, distributors, independent software vendors, public cloud providers, service providers, and system integrators. For more information on HPE GreenLake, please visit: &lt;a href=&quot;https://www.hpe.com/us/en/greenlake.html&quot; target=&quot;_blank&quot;>https://www.hpe.com/us/en/greenlake.html&lt;/a>&lt;br />&#xd;&#xa;&lt;b style=&quot;&quot;>&lt;br />&#xd;&#xa;About CEF&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;&lt;/b>CEF is the expert supplier of electrical products and services for professional buyers and installers all over the UK. CEF offer the largest range of products including leading brands and value alternatives, alongside specialist knowhow, friendly advice and support that’s the best in the industry.&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;Established in 1951, privately owned CEF has a UK national network of 390 stores and the business now extends to the USA, Canada, Ireland, Spain and Australia. Customers can place online orders up until 8pm for next day delivery at &lt;a href=&quot;https://www.cef.co.uk/&quot; target=&quot;_blank&quot;>cef.co.uk&lt;/a>&lt;b style=&quot;&quot;> &lt;/b>with access to more than 35,000 products from over 300 leading suppliers.&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;To find out more about CEF go to: &lt;a href=&quot;https://www.cef.co.uk/&quot; target=&quot;_blank&quot;>cef.co.uk/&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;"/>
+                <textonlycomponent_fe
+                    jcr:created="{Date}2018-06-18T09:28:54.456-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-01-25T18:25:40.521Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>About Hewlett Packard Enterprise&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>Hewlett Packard Enterprise (NYSE: HPE) is the global edge-to-cloud company that helps organizations accelerate outcomes by unlocking value from all their data, everywhere. Built on decades of reimagining the future and innovating to advance the way people live and work, HPE delivers unique, open and intelligent technology solutions as a service. With offerings spanning Cloud Services, Compute, High Performance Computing &amp;amp; AI, Intelligent Edge, Software, and Storage, HPE provides a consistent experience across all clouds and edges, helping customers develop new business models, engage in new ways, and increase operational performance. For more information, visit: &lt;a href=&quot;http://www.hpe.com/&quot; target=&quot;_blank&quot;>www.hpe.com&lt;/a>&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;Editorial Contact:&lt;br />&#xd;&#xa;&lt;b style=&quot;&quot;>Alastair McCormick&lt;br />&#xd;&#xa;&lt;/b>&lt;a href=&quot;mailto:Alastair.mccormick@hpe.com&quot; target=&quot;_blank&quot;>Alastair.mccormick@hpe.com&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <textonlycomponent_bf
+                    jcr:created="{Date}2018-07-02T13:12:59.755-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-10-12T16:10:50.633Z"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    textOnly="&lt;h2>RELATED NEWS&lt;/h2>&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli_540225213
+                    jcr:created="{Date}2018-06-18T10:12:48.909-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:22:53.902-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <columncontainercompo
+                    jcr:created="{Date}2018-07-02T13:14:23.594-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:15:08.106-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/columnContainerComponent"
+                    columns="column-content-3">
+                    <column_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_7c25
+                            jcr:created="{Date}2018-07-02T13:15:28.984-07:00"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2023-01-25T18:28:24.210Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/12/hpe-greenlake-adds-application-analytics-and-developer-services-to-modernize-workloads-across-the-hybrid-cloud"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="HPE GreenLake adds application, analytics, and developer services to modernize workloads across the hybrid cloud"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="HPE GreenLake adds application, analytics, and developer services to modernize workloads across the hybrid cloud"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2023-01-25T18:28:24.210Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2022/12/image-norend/hpe-greenlake-adds-application-analytics-and-developer-services-to-modernize-workloads-across-the-hybrid-cloud.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2023-01-25T18:28:24.210Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_7c25>
+                    </column_0>
+                    <column_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_4dff
+                            jcr:created="{Date}2018-09-21T21:01:47.387Z"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2023-01-25T18:29:45.580Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/07/french-cloud-service-provider-antemeta-selects-hpe-greenlake-to-introduce-new-automated-disaster-recovery-service"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="French cloud service provider AntemetA selects HPE GreenLake to introduce new automated disaster recovery service"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="French cloud service provider AntemetA selects HPE GreenLake to introduce new automated disaster recovery service"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2023-01-25T18:29:45.580Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2022/07/image-norend/french-cloud-service-provider-antemeta-selects-hpe-greenlake-to-introduce-new-automated-disaster-recovery-service.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2023-01-25T18:29:45.580Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_4dff>
+                    </column_1>
+                    <column_2
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_50f2
+                            jcr:created="{Date}2018-09-05T17:41:27.359Z"
+                            jcr:createdBy="nagle@hpe.com"
+                            jcr:lastModified="{Date}2023-01-25T18:31:51.900Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/06/taeknizon-selects-hpe-greenlake-to-expand-their-fully-managed-cloud-offering-in-the-uae"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="Taeknizon selects HPE GreenLake to expand their fully managed cloud offering in the UAE"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Taeknizon selects HPE GreenLake to expand their fully managed cloud offering in the UAE"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2023-01-25T18:31:51.900Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                fileReference="/content/dam/hpe/newsroom/2022/06/image-norend/taeknizon-selects-hpe-greenlake-to-expand-their-fully-managed-cloud-offering-in-the-uae.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2023-01-25T18:31:51.900Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"/>
+                        </contentblock_50f2>
+                    </column_2>
+                </columncontainercompo>
+            </body-par>
+            <side-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <buttonctaitemcompone
+                    jcr:created="{Date}2018-06-28T13:06:31.075-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:06:46.099-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 1"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_661124859
+                    jcr:created="{Date}2018-06-28T13:06:51.115-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:11.079-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 2"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_606970408
+                    jcr:created="{Date}2018-06-28T13:06:53.400-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:02.336-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 3"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+            </side-par>
+        </main-par>
+        <image
+            jcr:lastModified="{Date}2018-09-05T17:38:02.066Z"
+            jcr:lastModifiedBy="nagle@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+    </jcr:content>
+</jcr:root>

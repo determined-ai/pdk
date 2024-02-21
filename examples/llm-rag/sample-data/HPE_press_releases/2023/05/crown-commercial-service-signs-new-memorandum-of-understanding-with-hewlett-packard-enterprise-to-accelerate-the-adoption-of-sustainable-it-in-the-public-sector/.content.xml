@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/apps/settings/wcm/designs/hpeweb"
+        cq:lastModified="{Date}2023-05-18T08:11:37.270Z"
+        cq:lastModifiedBy="christine.seales@hpe.com"
+        cq:tags="[hpe-newsroom:categories/big-data,hpe-newsroom:categories/infrastructure,hpe-newsroom:categories/company---esg]"
+        cq:template="/apps/hpeweb/templates/page-text-heavy"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Crown Commercial Service signs new Memorandum of Understanding with Hewlett Packard Enterprise to accelerate the adoption of sustainable IT in the public sector"
+        jcr:uuid="a2241ece-9424-4075-bbf9-3929add77869"
+        sling:resourceType="hpeweb/components/pages/page-text-heavy"
+        browserTitle="Crown Commercial Service signs new Memorandum of Understanding with Hewlett Packard Enterprise to accelerate the adoption of sustainable IT in the public sector"
+        changefreq="daily"
+        contentType="Press Release"
+        displayDate="{Date}2023-05-18T04:00:00.000-04:00"
+        metaDescription="The agreement enables public sector organizations to accelerate their cloud journey with new HPE GreenLake cloud services and access unique sustainability reporting and assessment offerings"
+        metaKeywords="HPE, HPE UK, UK, Crown Commercial Service, CCS, public sector, public sector organisations, technology, sustainability, sustainability strategy, net-zero, Memorandum of Understanding, MoU, HPE GreenLake, HPE GreenLake for Private Cloud Enterprise, HPE Alletra, HPE Alletra Storage, compute, storage, networking, cloud "
+        metaOgImage="/content/dam/hpe/newsroom/2023/05/image-norend/crown-commercial-service-signs-new-memorandum-of-understanding-with-hpe-to-accelerate-the-adoption-of-sustainable-it-in-the-public-sector.jpg"
+        metaTwitterCardType="summary_large_image"
+        msmcomponent="/content/hpe/base/blueprint/newsroom/press-release/2023/05/crown-commercial-service-signs-new-memorandum-of-understanding-with-hewlett-packard-enterprise-to-accelerate-the-adoption-of-sustainable-it-in-the-public-sector/jcr:content/main-par/body-par/textonlycomponent_e9"
+        navTitle="Crown Commercial Service signs new Memorandum of Understanding with Hewlett Packard Enterprise to accelerate the adoption of sustainable IT in the public sector"
+        pageTitle="Crown Commercial Service signs new Memorandum of Understanding with Hewlett Packard Enterprise to accelerate the adoption of sustainable IT in the public sector"
+        priority="(None)"
+        socialDescription="The agreement enables public sector organizations to accelerate their cloud journey with new HPE GreenLake cloud services and access unique sustainability reporting and assessment offerings"
+        subtitle="The agreement enables public sector organizations to accelerate their cloud journey with new HPE GreenLake cloud services and access unique sustainability reporting and assessment offerings"
+        theme="dark">
+        <main-par
+            jcr:lastModified="{Date}2018-06-28T13:09:39.402-07:00"
+            jcr:lastModifiedBy="velazquez@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="hpeweb/components/content/textHeavyComponent"
+            siderail="none">
+            <subtitle
+                jcr:lastModified="{Date}2023-05-17T17:41:16.223Z"
+                jcr:lastModifiedBy="christine.seales@hpe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="hpeweb/components/content/newsroom/newsroomSubtitleComponent"
+                textOnly="MAY 18, 2023 • PRESS RELEASE"/>
+            <body-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <imageonlycomponent_c
+                    jcr:created="{Date}2018-06-18T09:06:27.827-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-05-17T17:41:53.593Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/imageOnlyComponent"
+                    fileReference="/content/dam/hpe/newsroom/2023/05/image-norend/crown-commercial-service-signs-new-memorandum-of-understanding-with-hpe-to-accelerate-the-adoption-of-sustainable-it-in-the-public-sector.jpg"
+                    imageAlignment="hpe-image-center"
+                    imageAltText="HPE Guarantees"
+                    topMargin="60"
+                    videoSource="video"
+                    videoType="youtube"/>
+                <textonlycomponent_cd
+                    jcr:created="{Date}2018-06-18T09:12:49.742-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-05-17T17:42:37.154Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    leftPadding="30"
+                    rightPadding="30"
+                    textIsRich="true"
+                    textOnly="&lt;h3>IN THIS ARTICLE&lt;/h3>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>CCS customers can benefit from HPE’s environmental and sustainability services, including a sustainability assessment that will help them create a sustainability strategy&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>The new MoU adds key systems like composable,&amp;nbsp;software-defined infrastructure for hybrid cloud environments, high performance compute for AI applications and highly resilient storage solutions for mission-critical applications&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli
+                    jcr:created="{Date}2018-06-18T09:16:54.243-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-18T09:18:45.987-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <textonlycomponent
+                    jcr:created="{Date}2023-05-17T17:42:44.780Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2023-05-17T17:43:00.929Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;h2>The agreement enables public sector organizations to accelerate their cloud journey with new HPE GreenLake cloud services and access unique sustainability reporting and assessment offerings&lt;/h2>&#xd;&#xa;"/>
+                <textonlycomponent_e9
+                    jcr:created="{Date}2018-06-22T11:24:07.263-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-05-17T18:54:22.497Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>London, UK – May 18, 2023 &lt;/b>– &lt;a href=&quot;http://www.hpe.com/&quot; target=&quot;_blank&quot;>Hewlett Packard Enterprise&lt;/a> (NYSE: HPE) today announced that it has signed a new Memorandum of Understanding (MoU) with Crown Commercial Service (CCS) to provide UK public sector organizations with HPE GreenLake edge-to-cloud solutions that support the UK government’s net zero commitment. In addition to HPE’s full range of compute, storage, networking and cloud solutions, public sector organizations will have access to value-added sustainability services at no additional cost.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; CCS – the UK’s largest public procurement organization – supports the public sector to achieve maximum commercial value when procuring common goods and services. In 2021/22, CCS helped the public sector to achieve commercial benefits equal to £2.8 billion – supporting world-class public services that offer the best value for taxpayers. With the new MoU with HPE, CCS can support public sector organizations on their cloud journey with the latest hybrid cloud solutions, whilst driving more cost and energy efficiency. Furthermore, for the first time the agreement also includes services, expanding the scope and the practical use of the MoU across the wider public sector.&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <pullquote
+                    jcr:created="{Date}2023-05-17T17:44:49.232Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2023-05-17T17:45:46.947Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution="Philip Orumwense CBE, Commercial Director and Chief Technology Procurement Officer at Crown Commercial Service (CCS)"
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>“This MoU extends to cover all areas of HPE's portfolio including new key areas such as HPE's pay-as-you go GreenLake platform - making it easier for all public sector bodies, no matter how big or small, to get value for money.”&lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2023-05-17T17:45:46.947Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote>
+                <textonlycomponent_5d
+                    jcr:created="{Date}2018-06-18T09:21:51.280-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-05-17T18:01:26.642Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>“CCS has renewed and extended our relationship with HPE through this updated Memorandum of Understanding which will help our customers accelerate their IT modernization, achieve sustainability and utilize systems that harness the power of data to improve services for citizens,” said Philip Orumwense CBE, Commercial Director and Chief Technology Procurement Officer at Crown Commercial Service (CCS). “This MoU extends to cover all areas of HPE's portfolio including new key areas such as HPE's pay-as-you go GreenLake platform - making it easier for all public sector bodies, no matter how big or small, to get value for money.”&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;Since the introduction of the Cloud First Policy in 2013, the UK public sector organizations are facing the challenge of advancing on their cloud journey while having critical services still running on legacy technology. Organizations are pressed to put the right strategy and tools in place to manage their workloads and resources efficiently throughout their inevitably hybrid infrastructure, not just to reduce costs, but also their environmental footprint. The HPE GreenLake edge-to-cloud platform will enable them to flexibly scale and actively manage infrastructure utilization at a granular level, eliminating overprovisioning and optimizing energy consumption.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;Additionally, as part of the new MoU with HPE, CCS customers can benefit from HPE’s environmental and sustainability services, including a free &lt;a href=&quot;https://www.hpe.com/us/en/living-progress/sustainable-it.html&quot; target=&quot;_blank&quot;>sustainability assessment&lt;/a> for the first 100 customers to help them create a sustainability strategy. The assessment provides an analysis of energy efficiency, providing guidance on IT transformation considerations, data center optimization, as well as engineering and transformation project services to drive sustainability. Additionally, public sector organization will have access to annual reports detailing factors like sustainability savings, IT asset up- and recycling, and the value of resold upcycled assets. These will help to quantify the environmental impact and savings achieved through&amp;nbsp;IT asset lifecycle solutions and can be leveraged by the organizations for their sustainability reporting.&amp;nbsp;&amp;nbsp;&lt;/span>&lt;/p>&#xd;&#xa;"/>
+                <pullquote_349b
+                    jcr:created="{Date}2018-06-18T09:23:47.197-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-05-18T02:49:43.254Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution="Andrew Young, vice president of UK &amp; Ireland Sales, HPE"
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>“At HPE we are delighted that with the new MoU we can support public sector organizations on their journey to the cloud with highly efficient solutions designed with sustainability in mind and an edge-to-cloud platform that allows them to closely monitor their consumption.”&lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2023-05-18T02:49:43.254Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote_349b>
+                <textonlycomponent_97
+                    jcr:created="{Date}2018-06-22T11:22:31.557-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-05-17T18:04:38.042Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>“With the revisions to the government’s 2050 net-zero emissions strategy the pressure on the UK public sector is increasing to deploy sustainable solutions while balancing their IT needs and cost between legacy technology and the government’s cloud strategy,” said Andrew Young, vice president of UK &amp;amp; Ireland Sales, HPE. “At HPE we are delighted that with the new MoU we can support public sector organizations on their journey to the cloud with highly efficient solutions designed with sustainability in mind and an edge-to-cloud platform that allows them to closely monitor their consumption. HPE GreenLake can help organizations that are struggling to modernize their systems or with public cloud pricing, providing an alternative, cost-efficient solution that allows them to optimally manage their workloads and data.”&lt;br />&#xd;&#xa; &lt;br />&#xd;&#xa; With the new MoU, CCS and HPE are expanding the portfolio of compute products available, adding key systems like the composable, software-defined infrastructure for hybrid cloud environments and high performance compute (HPC) for artificial intelligence applications. It now also includes crucial storage capabilities, ranging from the full breadth of intelligent HPE Alletra Storage systems, covering everything from general purpose to business-critical workloads, to highly resilient storage solutions for mission-critical applications.&lt;br />&#xd;&#xa; &lt;br />&#xd;&#xa; Through the latest application, analytics, and developer services recently added to the HPE GreenLake portfolio, CCS customers will be able to modernize their workloads and data across their hybrid cloud infrastructure. With HPE GreenLake for Private Cloud Enterprise, for example, a new offering providing an automated, flexible, scalable, and fully managed enterprise-grade private cloud, they will have access to an out-of-the-box modern cloud experience with optimized performance, open choice and low and predictable TCO.&lt;br />&#xd;&#xa; &lt;b>&lt;br />&#xd;&#xa;About HPE GreenLake&lt;br />&#xd;&#xa; &lt;br />&#xd;&#xa; &lt;/b>The HPE GreenLake edge-to-cloud platform enables customers to accelerate data-first modernization and provides cloud services that can run on-premises, at the edge, in a colocation facility, and in the public cloud. In its &lt;a href=&quot;https://www.hpe.com/us/en/newsroom/press-release/2023/03/hewlett-packard-enterprise-reports-fiscal-2023-first-quarter-results.html&quot; target=&quot;_blank&quot;>first fiscal quarter of 2023&lt;/a>, HPE reported Annualized Revenue Run-Rate (ARR) of over $1 billion, a growth of 31% from the prior-year period in constant currency.  HPE GreenLake has 65,000 customers, powers more than two million connected devices and manages more than one exabyte of data under management with customers worldwide. These organizations benefit from one control plane from which to automate, orchestrate, and run their hybrid cloud strategy. The scalable, pay-as-you go HPE GreenLake platform also delivers robust security, compliance, and control, and supports a broad partner ecosystem – including channel partners, distributors, independent software vendors, public cloud providers, service providers, and system integrators. For more information on HPE GreenLake, please visit: &lt;a href=&quot;https://www.hpe.com/us/en/greenlake.html&quot; target=&quot;_blank&quot;>https://www.hpe.com/us/en/greenlake.html&lt;/a>&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;&lt;b style=&quot;&quot;>About Crown Commercial Service&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;&lt;/b>Crown Commercial Service (CCS) is an Executive Agency of the Cabinet Office, supporting the public sector to achieve maximum commercial value when procuring common goods and services.&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;To find out more about CCS, visit: &lt;a href=&quot;http://www.crowncommercial.gov.uk/&quot; target=&quot;_blank&quot;>www.crowncommercial.gov.uk&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;"/>
+                <textonlycomponent_fe
+                    jcr:created="{Date}2018-06-18T09:28:54.456-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-05-17T18:05:43.079Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>About Hewlett Packard Enterprise&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>Hewlett Packard Enterprise (NYSE: HPE) is the global edge-to-cloud company that helps organizations accelerate outcomes by unlocking value from all their data, everywhere. Built on decades of reimagining the future and innovating to advance the way people live and work, HPE delivers unique, open and intelligent technology solutions as a service. With offerings spanning Cloud Services, Compute, High Performance Computing &amp;amp; AI, Intelligent Edge, Software, and Storage, HPE provides a consistent experience across all clouds and edges, helping customers develop new business models, engage in new ways, and increase operational performance. For more information, visit: &lt;a href=&quot;http://www.hpe.com/&quot; target=&quot;_blank&quot;>www.hpe.com&lt;/a>&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;Editorial Contact:&lt;br />&#xd;&#xa;&lt;b style=&quot;&quot;>Laura von Pentz&lt;br />&#xd;&#xa;&lt;/b>&lt;a href=&quot;mailto:laura.von-pentz@hpe.com&quot; target=&quot;_blank&quot;>laura.von-pentz@hpe.com&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <textonlycomponent_bf
+                    jcr:created="{Date}2018-07-02T13:12:59.755-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-10-12T16:10:50.633Z"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    textOnly="&lt;h2>RELATED NEWS&lt;/h2>&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli_540225213
+                    jcr:created="{Date}2018-06-18T10:12:48.909-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:22:53.902-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <columncontainercompo
+                    jcr:created="{Date}2018-07-02T13:14:23.594-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:15:08.106-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/columnContainerComponent"
+                    columns="column-content-3">
+                    <column_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_7c25
+                            jcr:created="{Date}2018-07-02T13:15:28.984-07:00"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2023-05-17T18:07:46.229Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/12/hpe-greenlake-adds-application-analytics-and-developer-services-to-modernize-workloads-across-the-hybrid-cloud"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="HPE GreenLake adds application, analytics, and developer services to modernize workloads across the hybrid cloud"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="HPE GreenLake adds application, analytics, and developer services to modernize workloads across the hybrid cloud"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2023-05-17T18:07:46.229Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2022/12/image-norend/hpe-greenlake-adds-application-analytics-and-developer-services-to-modernize-workloads-across-the-hybrid-cloud.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2023-05-17T18:07:46.229Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_7c25>
+                    </column_0>
+                    <column_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_7c25_co
+                            jcr:created="{Date}2018-07-02T13:15:28.984-07:00"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2023-05-17T18:08:57.976Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2023/04/hpe-transforms-data-lifecycle-management-with-expanded-hpe-alletra-portfolio-with-new-file-block-and-data-protection-services"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="HPE transforms data lifecycle management with expanded HPE Alletra portfolio with new file, block and data protection services"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="HPE transforms data lifecycle management with expanded HPE Alletra portfolio with new file, block and data protection services"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2023-05-17T18:08:57.976Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2023/04/image-norend/hpe-transforms-data-lifecycle-management-with-expanded-hpe-alletra-portfolio-with-new-file-block-and-data-protection-services.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2023-05-17T18:08:57.976Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_7c25_co>
+                    </column_1>
+                    <column_2
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_7c25_co
+                            jcr:created="{Date}2018-07-02T13:15:28.984-07:00"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2023-05-17T18:09:58.132Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2020/08/uk-government-signs-agreement-with-hewlett-packard-enterprise-to-cut-the-complexity-of-cloud-adoption"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="UK Government signs agreement with Hewlett Packard Enterprise to cut the complexity of cloud adoption"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="UK Government signs agreement with Hewlett Packard Enterprise to cut the complexity of cloud adoption"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2023-05-17T18:09:58.132Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2020/08/image-norend/uk-government-signs-agreement-with-hewlett-packard-enterprise-to-cut-the-complexity-of-cloud-adoption.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2023-05-17T18:09:58.132Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_7c25_co>
+                    </column_2>
+                </columncontainercompo>
+            </body-par>
+            <side-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <buttonctaitemcompone
+                    jcr:created="{Date}2018-06-28T13:06:31.075-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:06:46.099-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 1"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_661124859
+                    jcr:created="{Date}2018-06-28T13:06:51.115-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:11.079-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 2"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_606970408
+                    jcr:created="{Date}2018-06-28T13:06:53.400-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:02.336-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 3"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+            </side-par>
+        </main-par>
+        <image
+            jcr:lastModified="{Date}2018-09-05T17:38:02.066Z"
+            jcr:lastModifiedBy="nagle@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/apps/settings/wcm/designs/hpeweb"
+        cq:lastModified="{Date}2022-01-12T16:33:44.494Z"
+        cq:lastModifiedBy="christine.seales@hpe.com"
+        cq:template="/apps/hpeweb/templates/page-generic-template"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="05"
+        sling:resourceType="hpeweb/components/pages/page-generic-template"/>
+    <hewlett-packard-enterprise-opens-new-head-office-in-canada-to-realize-a-new-workplace-experience-for-team-members/>
+    <lupin-goes-live-with-sap-s4-hana-on-hpe-greenlake-to-drive-digital-transformation/>
+    <hewlett-packard-enterprise-to-present-live-audio-webcast-of-fiscal-2022-second-quarter-earnings-conference-call/>
+    <hpe-statement-on-uk-high-court-decision-in-autonomy-proceedings-may-2022/>
+    <hewlett-packard-enterprise-strengthens-europes-supercomputer-supply-chain-with-new-factory-in-czech-republic/>
+    <leibniz-supercomputing-centre-accelerates-ai-innovation-in-bavaria-with-next-generation-ai-system-from-cerebras-systems-and-hewlett-packard-enterprise/>
+    <hewlett-packard-enterprise-and-sipearl-partner-to-develop-hpc-solutions-with-european-processors-and-accelerate-europes-adoption-of-exascale-supercomputers/>
+    <hewlett-packard-enterprise-ushers-in-new-era-with-worlds-first-and-fastest-exascale-supercomputer-frontier-for-the-us-department-of-energys-oak-ridge-national-laboratory/>
+</jcr:root>

@@ -4,7 +4,7 @@
 
 # PDK - Pachyderm | Determined | KServe
 ## Object Detection Example
-**Date/Revision:** January 02, 2024
+**Date/Revision:** February 23, 2024
 
 This example is based on the **xVIEW** dataset, which can be found here:<br/>
 http://xviewdataset.org/

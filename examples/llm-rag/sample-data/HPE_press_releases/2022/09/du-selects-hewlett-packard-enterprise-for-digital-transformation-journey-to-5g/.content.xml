@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/apps/settings/wcm/designs/hpeweb"
+        cq:lastModified="{Date}2022-09-28T16:20:53.394Z"
+        cq:lastModifiedBy="christine.seales@hpe.com"
+        cq:tags="[hpe-newsroom:categories/company---customers,hpe-newsroom:categories/industry---telcom-&amp;-5g]"
+        cq:template="/apps/hpeweb/templates/page-text-heavy"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="du selects Hewlett Packard Enterprise for digital transformation journey to 5G"
+        jcr:uuid="b3eeceee-0095-4e2c-9756-cee7ba43e07f"
+        sling:resourceType="hpeweb/components/pages/page-text-heavy"
+        browserTitle="du selects Hewlett Packard Enterprise for digital transformation journey to 5G"
+        changefreq="daily"
+        contentType="Press Release"
+        displayDate="{Date}2022-09-29T04:00:00.000-04:00"
+        metaDescription="Next-generation OSS solution from HPE provides a single orchestration platform enabling services from traditional mobile and fixed line connectivity to 5G slice management and Edge orchestration"
+        metaKeywords="HPE, United Arab Emirates, du, du telecom, Telecommunications, 5G, OSS, orchestration, automation, service orchestration, network, HPE Serivce Order Manager, HPE Service Director"
+        metaOgImage="/content/dam/hpe/newsroom/2022/09/image-norend/du-selects-hewlett-packard-enterprise-for-digital-transformation-journey-to-5g.jpg"
+        metaTwitterCardType="summary_large_image"
+        msmcomponent="/content/hpe/base/blueprint/newsroom/press-release/2022/09/du-selects-hewlett-packard-enterprise-for-digital-transformation-journey-to-5g/jcr:content/main-par/body-par/textonlycomponent_cd"
+        navTitle="du selects Hewlett Packard Enterprise for digital transformation journey to 5G"
+        pageTitle="du selects Hewlett Packard Enterprise for digital transformation journey to 5G"
+        priority="(None)"
+        socialDescription="Next-generation OSS solution from HPE provides a single orchestration platform enabling services from traditional mobile and fixed line connectivity to 5G slice management and Edge orchestration"
+        subtitle="Next-generation OSS solution from HPE provides a single orchestration platform enabling services from traditional mobile and fixed line connectivity to 5G slice management and Edge orchestration"
+        theme="dark"
+        UAID="31dd3526-fe80-4b34-bf0a-a466279fb5c6"
+        UCID="82093fe6-774f-4dc5-872a-1ddba9086283">
+        <main-par
+            jcr:lastModified="{Date}2018-06-28T13:09:39.402-07:00"
+            jcr:lastModifiedBy="velazquez@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="hpeweb/components/content/textHeavyComponent"
+            siderail="none">
+            <subtitle
+                jcr:lastModified="{Date}2022-09-28T14:08:08.948Z"
+                jcr:lastModifiedBy="christine.seales@hpe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="hpeweb/components/content/newsroom/newsroomSubtitleComponent"
+                textOnly="SEPTEMBER 29, 2022 • PRESS RELEASE"/>
+            <body-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <imageonlycomponent_c
+                    jcr:created="{Date}2018-06-18T09:06:27.827-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-09-28T14:10:20.382Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/imageOnlyComponent"
+                    fileReference="/content/dam/hpe/newsroom/2022/09/image-norend/du-selects-hewlett-packard-enterprise-for-digital-transformation-journey-to-5g.jpg"
+                    imageAlignment="hpe-image-center"
+                    imageAltText="HPE Guarantees"
+                    topMargin="60"
+                    videoSource="video"
+                    videoType="youtube"/>
+                <textonlycomponent_cd
+                    jcr:created="{Date}2018-06-18T09:12:49.742-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-09-28T16:20:53.385Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    leftPadding="30"
+                    rightPadding="30"
+                    textIsRich="true"
+                    textOnly="&lt;h3>IN THIS ARTICLE&lt;/h3>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>HPE’s end-to-end service orchestration software will drive new revenue streams from du’s growing 5G network&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>HPE Service Order Manager and HPE Service Director provide du with agility, elasticity and time to market advantage while supporting next generation services&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli
+                    jcr:created="{Date}2018-06-18T09:16:54.243-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-18T09:18:45.987-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <textonlycomponent
+                    jcr:created="{Date}2022-09-28T14:11:00.966Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2022-09-28T14:11:15.372Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;h2>Next-generation OSS solution from HPE provides a single orchestration platform enabling services from traditional mobile and fixed line connectivity to 5G slice management and Edge orchestration&lt;/h2>&#xd;&#xa;"/>
+                <textonlycomponent_e9
+                    jcr:created="{Date}2018-06-22T11:24:07.263-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-09-28T14:12:13.772Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>DUBAI, United Arab Emirates – September 29, 2022 &lt;/b>– &lt;a href=&quot;http://www.hpe.com/&quot; target=&quot;_blank&quot;>Hewlett Packard Enterprise&lt;/a> (NYSE: HPE) today announced that du, from Emirates Integrated Telecommunications Company (EITC), is deploying &lt;a href=&quot;https://www.hpe.com/us/en/solutions/telecom-network-automation.html&quot; target=&quot;_blank&quot;>HPE’s end-to-end service orchestration software&lt;/a> to accelerate their digital transformation and drive new revenue streams from their growing 5G network.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;du is&amp;nbsp;migrating from a legacy system to a next-generation Operations Support System (OSS) to support new services&amp;nbsp;and enhance its customers’ experience. This digital&amp;nbsp;transformation, powered by HPE, will&amp;nbsp;enable du to expand its offerings, improve time to market, and monetize its 5G investment. As a leader in OSS service fulfillment and orchestration, HPE brings proven domain expertise and openness to du’s new OSS stack and delivers a broad range of the orchestration use cases now required by the market. du’s strategic Data Factory is the key enabler of its next-generation OSS with advanced analytics capabilities. Now with the simple integration into this existing single data layer and du’s transformation program Business Support System (BSS), du’s new orchestration stack is future-proofed by HPE’s open standards-based approach and is ready for all 5G network functions (NFs) that du chooses in the coming years.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;“The right OSS solution is a competitive advantage for us to provide our customers with the seamless digital lifestyle experience they deserve,” said&lt;b style=&quot;font-size: 0.8125rem;&quot;> &lt;/b>Peter Larnholt, Chief Information Officer at du. “HPE will deliver a huge leap in our technology capabilities in a very short space of time, giving us a stable and secure architecture that will support our leadership position in 5G. Our new technology estate will cement our reputation as one of the region’s most advanced telcos offering some of the most advanced Edge orchestration and 5G services in the market.”&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <pullquote_349b
+                    jcr:created="{Date}2018-06-18T09:23:47.197-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-09-28T14:12:47.242Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution="Peter Larnholt, Chief Information Officer at du"
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>“Our new technology estate will cement our reputation as one of the region’s most advanced telcos offering some of the most advanced Edge orchestration and 5G services in the market”&amp;nbsp;&lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2022-09-28T14:12:47.242Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote_349b>
+                <textonlycomponent_97
+                    jcr:created="{Date}2018-06-22T11:22:31.557-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-09-28T14:13:34.247Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>“HPE OSS and orchestration software has been developed to reduce the risk of deploying 5G networks and help operators like du maximise their return on investment,” said Ahmad AlKhallafi, managing director, UAE, Hewlett Packard Enterprise. “We’re pleased to be supporting du with their next-generation OSS system that will help them seize the opportunity presented by 5G and network slicing and embrace open, cloud-native principles, as well as transforming their fixed line and business services.”&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;du’s new end-to-end orchestration solution is based on HPE’s leading orchestration stack, including &lt;a href=&quot;https://www.hpe.com/psnow/doc/a50004254enw?jumpId=in_psnow_c9cbdfa2-7a42-4650-aa55-21b8b89c840d_gaiw&quot; target=&quot;_blank&quot;>HPE Service Order Manager&lt;/a> and &lt;a href=&quot;https://www.hpe.com/us/en/newsroom/press-release/2021/06/hewlett-packard-enterprise-expands-5g-portfolio-with-automated-5g-management-solution.html#:~:text=A%20new%205G%20capability%20for%20HPE%20Service%20Director,-HPE%20Service%20Director&amp;amp;text=HPE%20Service%20Director%27s%20new%205G,network%20slices%20across%20all%20domains.&quot; target=&quot;_blank&quot;>HPE Service Director&lt;/a>. Both products provide du with agility, elasticity and time to market advantage while supporting next generation services. The new stack provides a single orchestration platform enabling traditional fixed voice services, mobile services, SD-WAN services, physical and virtual NF management, Mobile Edge and 5G slice management. The new platform will support the end-to-end needs of du for order management, service provisioning and activation.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;Discover more on HPE’s Telco Automation solutions at &lt;a href=&quot;https://www.hpe.com/telco/automate&quot; target=&quot;_blank&quot;>https://www.hpe.com/telco/automate&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;"/>
+                <textonlycomponent_fe
+                    jcr:created="{Date}2018-06-18T09:28:54.456-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-09-28T14:14:38.024Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>About Hewlett Packard Enterprise&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>Hewlett Packard Enterprise (NYSE: HPE) is the global edge-to-cloud company that helps organizations accelerate outcomes by unlocking value from all of their data, everywhere. Built on decades of reimagining the future and innovating to advance the way people live and work, HPE delivers unique, open and intelligent technology solutions as a service.  With offerings spanning Cloud Services, Compute, High Performance Computing &amp;amp; AI, Intelligent Edge, Software, and Storage, HPE provides a consistent experience across all clouds and edges, helping customers develop new business models, engage in new ways, and increase operational performance. For more information, visit: &lt;a href=&quot;http://www.hpe.com/&quot; target=&quot;_blank&quot;>www.hpe.com&lt;/a>.&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;Editorial Contact:&lt;br />&#xd;&#xa;&lt;b style=&quot;&quot;>Alastair McCormick&lt;br />&#xd;&#xa;&lt;/b>&lt;a href=&quot;mailto:Alastair.mccormick@hpe.com&quot; target=&quot;_blank&quot;>Alastair.mccormick@hpe.com&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <textonlycomponent_bf
+                    jcr:created="{Date}2018-07-02T13:12:59.755-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-10-12T16:10:50.633Z"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    textOnly="&lt;h2>RELATED NEWS&lt;/h2>&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli_540225213
+                    jcr:created="{Date}2018-06-18T10:12:48.909-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:22:53.902-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <columncontainercompo
+                    jcr:created="{Date}2018-07-02T13:14:23.594-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:15:08.106-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/columnContainerComponent"
+                    columns="column-content-3">
+                    <column_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_7c25
+                            jcr:created="{Date}2018-07-02T13:15:28.984-07:00"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-09-28T14:16:41.647Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2021/06/hewlett-packard-enterprise-expands-5g-portfolio-with-automated-5g-management-solution"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="Hewlett Packard Enterprise expands 5G portfolio with automated 5G management solution"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Hewlett Packard Enterprise expands 5G portfolio with automated 5G management solution"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-09-28T14:16:41.647Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2021/06/image-norend/hewlett-packard-enterprise-expands-5g-portfolio-with-automated-5g-management-solution.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-09-28T14:16:41.647Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_7c25>
+                    </column_0>
+                    <column_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_4dff
+                            jcr:created="{Date}2018-09-21T21:01:47.387Z"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-09-28T14:18:24.341Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/04/hewlett-packard-enterprise-accelerates-ran-deployments-with-automation-and-simplified-management-for-both-open-and-traditional-networks"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="Hewlett Packard Enterprise accelerates RAN deployments with automation and simplified management for both open and traditional networks"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Hewlett Packard Enterprise accelerates RAN deployments with automation and simplified management for both open and traditional networks"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-09-28T14:18:24.341Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2022/04/image-norend/hpe-accelerates-ran-deployments-with-automation-and-simplified-management-for-both-open-and-traditional-networks.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-09-28T14:18:24.341Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_4dff>
+                    </column_1>
+                    <column_2
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_50f2
+                            jcr:created="{Date}2018-09-05T17:41:27.359Z"
+                            jcr:createdBy="nagle@hpe.com"
+                            jcr:lastModified="{Date}2022-09-28T14:20:08.521Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/02/hewlett-packard-enterprise-extends-leadership-in-enterprise-connectivity-with-private-5g-offering"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="Hewlett Packard Enterprise extends leadership in enterprise connectivity with private 5G offering"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Hewlett Packard Enterprise extends leadership in enterprise connectivity with private 5G offering"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-09-28T14:20:08.521Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                fileReference="/content/dam/hpe/newsroom/2022/02/image-norend/hewlett-packard-enterprise-extends-leadership-in-enterprise-connectivity-with-private-5g-offering2.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-09-28T14:20:08.521Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"/>
+                        </contentblock_50f2>
+                    </column_2>
+                </columncontainercompo>
+            </body-par>
+            <side-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <buttonctaitemcompone
+                    jcr:created="{Date}2018-06-28T13:06:31.075-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:06:46.099-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 1"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_661124859
+                    jcr:created="{Date}2018-06-28T13:06:51.115-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:11.079-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 2"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_606970408
+                    jcr:created="{Date}2018-06-28T13:06:53.400-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:02.336-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 3"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+            </side-par>
+        </main-par>
+        <image
+            jcr:lastModified="{Date}2018-09-05T17:38:02.066Z"
+            jcr:lastModifiedBy="nagle@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+    </jcr:content>
+</jcr:root>

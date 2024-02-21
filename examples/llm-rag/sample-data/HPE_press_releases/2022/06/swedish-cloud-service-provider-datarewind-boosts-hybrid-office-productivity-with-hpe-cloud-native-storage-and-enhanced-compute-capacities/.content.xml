@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/apps/settings/wcm/designs/hpeweb"
+        cq:lastModified="{Date}2022-06-13T15:25:00.409Z"
+        cq:lastModifiedBy="christine.seales@hpe.com"
+        cq:tags="[hpe-newsroom:categories/big-data,hpe-newsroom:categories/company---customers]"
+        cq:template="/apps/hpeweb/templates/page-text-heavy"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Swedish cloud service provider, Datarewind, boosts hybrid office productivity with HPE cloud-native storage and enhanced compute capacities"
+        jcr:uuid="91542d56-f5e8-4c28-a459-bb28645aefee"
+        sling:resourceType="hpeweb/components/pages/page-text-heavy"
+        browserTitle="Swedish cloud service provider, Datarewind, boosts hybrid office productivity with HPE cloud-native storage and enhanced compute capacities"
+        changefreq="daily"
+        contentType="Press Release"
+        displayDate="{Date}2022-06-14T09:00:00.000-04:00"
+        metaDescription="VDI solution specialist chooses the new HPE Alletra 6000 and HPE ProLiant servers to support growing hybrid office demands"
+        metaKeywords="HPE, HPE Sweden, Data Rewind, VDI, HPE GreenLake, Edge to Cloud, Data first modernization, HPE Alletra,"
+        metaOgImage="/content/dam/hpe/newsroom/2022/06/image-norend/swedish-cloud-service-provider-datarewind-boosts-hybrid-office-productivity-with-hpe-cloud-native-storage-and-enhanced-compute-capacities.jpg"
+        metaTwitterCardType="summary_large_image"
+        msmcomponent="/content/hpe/base/blueprint/newsroom/press-release/2022/06/swedish-cloud-service-provider-datarewind-boosts-hybrid-office-productivity-with-hpe-cloud-native-storage-and-enhanced-compute-capacities/jcr:content/main-par/body-par/columncontainercompo/column_2/contentblock_50f2"
+        navTitle="Swedish cloud service provider, Datarewind, boosts hybrid office productivity with HPE cloud-native storage and enhanced compute capacities"
+        pageTitle="Swedish cloud service provider, Datarewind, boosts hybrid office productivity with HPE cloud-native storage and enhanced compute capacities"
+        priority="(None)"
+        socialDescription="VDI solution specialist chooses the new HPE Alletra 6000 and HPE ProLiant servers to support growing hybrid office demands"
+        subtitle="VDI solution specialist chooses the new HPE Alletra 6000 and HPE ProLiant servers to support growing hybrid office demands"
+        theme="dark"
+        UAID="fe5ed10b-4067-45e3-b924-427e200b9cbd"
+        UCID="ddf1319d-e2ec-4c16-bb5b-e67946dfaf25">
+        <main-par
+            jcr:lastModified="{Date}2018-06-28T13:09:39.402-07:00"
+            jcr:lastModifiedBy="velazquez@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="hpeweb/components/content/textHeavyComponent"
+            siderail="none">
+            <subtitle
+                jcr:lastModified="{Date}2022-06-13T15:10:32.839Z"
+                jcr:lastModifiedBy="christine.seales@hpe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="hpeweb/components/content/newsroom/newsroomSubtitleComponent"
+                textOnly="JUNE 14, 2022 • PRESS RELEASE"/>
+            <body-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <imageonlycomponent_c
+                    jcr:created="{Date}2018-06-18T09:06:27.827-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-06-13T15:10:40.700Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/imageOnlyComponent"
+                    fileReference="/content/dam/hpe/newsroom/2022/06/image-norend/swedish-cloud-service-provider-datarewind-boosts-hybrid-office-productivity-with-hpe-cloud-native-storage-and-enhanced-compute-capacities.jpg"
+                    imageAlignment="hpe-image-center"
+                    imageAltText="HPE Guarantees"
+                    topMargin="60"
+                    videoSource="video"
+                    videoType="youtube"/>
+                <textonlycomponent_cd
+                    jcr:created="{Date}2018-06-18T09:12:49.742-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-06-13T15:11:14.278Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    leftPadding="30"
+                    rightPadding="30"
+                    textIsRich="true"
+                    textOnly="&lt;h3>IN THIS ARTICLE&lt;/h3>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>Thanks to its performance and scalability, HPE&amp;nbsp;Alletra was chosen to meet Datarewind’s increased demands for VDI&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>The new solution allows Datarewind to offer higher performance and quicker access to the work environment for its clients&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli
+                    jcr:created="{Date}2018-06-18T09:16:54.243-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-18T09:18:45.987-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <textonlycomponent
+                    jcr:created="{Date}2022-06-13T15:11:20.127Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2022-06-13T15:11:32.917Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;h2>VDI solution specialist chooses the new HPE Alletra 6000 and HPE ProLiant servers to support growing hybrid office demands&lt;/h2>&#xd;&#xa;"/>
+                <textonlycomponent_e9
+                    jcr:created="{Date}2018-06-22T11:24:07.263-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-06-13T15:13:16.446Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>STOCKHOLM, Sweden – June 14, 2022&lt;/b> – &lt;a href=&quot;http://www.hpe.com/&quot; target=&quot;_blank&quot;>Hewlett Packard Enterprise&lt;/a> (NYSE: HPE) today announced that &lt;a href=&quot;https://www.datarewind.se/&quot; target=&quot;_blank&quot;>Datarewind&lt;/a>, a Swedish IT service provider, has selected &lt;a href=&quot;https://www.hpe.com/uk/en/storage/alletra.html&quot; target=&quot;_blank&quot;>HPE Alletra&lt;/a> cloud-native data infrastructure and high-performing, versatile &lt;a href=&quot;https://www.hpe.com/us/en/servers/proliant-servers.html&quot; target=&quot;_blank&quot;>HPE ProLiant servers&lt;/a> to host virtual machines on behalf of its clients. The new compute and data services solution allows Datarewind to offer higher performance and quicker access to the work environment for its clients, meeting the hybrid office demands of today while providing a strong foundation to easily adapt to future requirements.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;Datarewind offers its services to clients across Sweden, allowing users to run VDI solutions during work hours and automate backup during the night. Due to the pandemic, demand for VDI solutions increased, and HPE&amp;nbsp;Alletra was chosen to meet these increased demands thanks to its performance, scalability – and HPE’s existing track record as a supplier to Datarewind.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;“The timing was right for an upgrade, with the added remote work demands that the pandemic created,” says Rickard&amp;nbsp;Johansson, CEO of Datarewind. “We can now support about 100 concurrent customers working with graphically intense workloads from home. The new solution also enabled clients to run storage-heavy workloads, where HPE Alletra alleviated bottlenecks.”&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;With Datarewind also securing their clients’ data by way of backups, performance was of utmost importance in the choice of solution, as was modularity. With storage performance high enough to be limited by network bandwidth rather than storage throughput, the possibility to expand the storage pool was kept in mind when signing the deal.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;“We were able to go from 10 on-site servers to two or three larger centralized ones. Both storage and automated tasks are running flawlessly. Tasks that previously took 40 minutes to execute now take five minutes,” says Johansson. “The future includes working from home, which Datarewind’s solutions are prepared for. Clients don’t require as many offices and can consolidate their workforce.”&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <pullquote
+                    jcr:created="{Date}2022-06-13T15:13:22.895Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2022-06-13T15:13:51.519Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution="Rickard Johansson, CEO of Datarewind"
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>“Tasks that previously took 40 minutes to execute now take five minutes”&amp;nbsp;&lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2022-06-13T15:13:51.519Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote>
+                <textonlycomponent_b4
+                    jcr:created="{Date}2018-06-18T09:18:06.257-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-06-13T15:14:19.543Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>HPE Sweden is also delighted to help Datarewind serve its clients better. The new HPE&amp;nbsp;Alletra platform in use will allow Datarewind meet client SLAs and host more concurrent users than ever before. It also alleviates worries regarding VDI performance and minimizes downtime.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;HPE Alletra is the cloud-native data infrastructure that powers data from edge-to-cloud. It features a portfolio of workload-optimized systems to deliver architectural flexibility to run any application without compromise.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;“The HPE Alletra solution has enabled Datarewind to develop its new cloud offering and position itself better on the service provider market, with superior performance, high availability and scalability” comments Toni Drk Channel and Service Provider Sales Manager, HPE Sweden. “The HPE Alletra 6000 cloud native storage technology allows them to create a strong and attractive as-a-service offering for their clients.”&lt;/span>&lt;/p>&#xd;&#xa;"/>
+                <pullquote_349b
+                    jcr:created="{Date}2018-06-18T09:23:47.197-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-06-13T15:15:00.160Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution="Rickard Johansson, CEO of Datarewind"
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>“The best part is when clients contact us about how happy they are with the new solution”&amp;nbsp;&lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2022-06-13T15:15:00.160Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote_349b>
+                <textonlycomponent_97
+                    jcr:created="{Date}2018-06-22T11:22:31.557-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-06-13T15:15:37.508Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>With the new solution in place, client satisfaction at Datarewind is reportedly at an all-time high. “The best part is when clients contact us&amp;nbsp;about how happy they are with the new solution,” concludes Rickard&amp;nbsp;Johansson.&lt;/span>&lt;/p>&#xd;&#xa;"/>
+                <textonlycomponent_fe
+                    jcr:created="{Date}2018-06-18T09:28:54.456-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-06-13T15:16:37.104Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>About Hewlett Packard Enterprise&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>Hewlett Packard Enterprise (NYSE: HPE) is the global edge-to-cloud company that helps organizations accelerate outcomes by unlocking value from all of their data, everywhere. Built on decades of reimagining the future and innovating to advance the way people live and work, HPE delivers unique, open and intelligent technology solutions as a service.  With offerings spanning Cloud Services, Compute, High Performance Computing &amp;amp; AI, Intelligent Edge, Software, and Storage, HPE provides a consistent experience across all clouds and edges, helping customers develop new business models, engage in new ways, and increase operational performance. For more information, visit: &lt;a href=&quot;http://www.hpe.com/&quot; target=&quot;_blank&quot;>www.hpe.com&lt;/a>&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;Editorial Contact:&lt;br />&#xd;&#xa;&lt;b style=&quot;&quot;>Benjamin Lesueur&lt;br />&#xd;&#xa;&lt;/b>&lt;a href=&quot;mailto:benjamin.lesueur@hpe.com&quot; target=&quot;_blank&quot;>benjamin.lesueur@hpe.com&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <textonlycomponent_bf
+                    jcr:created="{Date}2018-07-02T13:12:59.755-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-10-12T16:10:50.633Z"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    textOnly="&lt;h2>RELATED NEWS&lt;/h2>&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli_540225213
+                    jcr:created="{Date}2018-06-18T10:12:48.909-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:22:53.902-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <columncontainercompo
+                    jcr:created="{Date}2018-07-02T13:14:23.594-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:15:08.106-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/columnContainerComponent"
+                    columns="column-content-3">
+                    <column_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_7c25
+                            jcr:created="{Date}2018-07-02T13:15:28.984-07:00"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-06-13T15:17:57.459Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="arrow-link"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/01/hpe-greenlake-selected-to-expand-core-cloud-offering-and-enhance-desktop-as-a-service-for-cdw-serviceworks"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            header="HPE GreenLake selected to expand core cloud offering and enhance Desktop-as-a-Service for CDW ServiceWorks"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="HPE GreenLake selected to expand core cloud offering and enhance Desktop-as-a-Service for CDW ServiceWorks"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-06-13T15:17:57.459Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2022/01/image-norend/hpe-greenlake-selected-to-expand-core-cloud-offering-and-enhance-desktop-as-a-service-for-cdw-serviceworks.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-06-13T15:17:57.459Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_7c25>
+                    </column_0>
+                    <column_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_4dff
+                            jcr:created="{Date}2018-09-21T21:01:47.387Z"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-06-13T15:20:55.726Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="arrow-link"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2021/09/sk-inc-cc-part-of-south-koreas-largest-conglomerate-sk-group-selects-hpe-greenlake-to-power-vdi-initiative-for-improved-employee-experience"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            header="SK Inc. C&amp;C, part of South Korea’s largest conglomerate SK Group, selects HPE GreenLake to power VDI initiative for improved employee experience"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="SK Inc. C&amp;C, part of South Korea’s largest conglomerate SK Group, selects HPE GreenLake to power VDI initiative for improved employee experience"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-06-13T15:20:55.726Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2021/09/image-norend/sk-inc-cc-part-of-south-koreas-largest-conglomerate-sk-group-selects-hpe-greenlake-to-power-vdi-initiative.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-06-13T15:20:55.726Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_4dff>
+                    </column_1>
+                    <column_2
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_50f2
+                            jcr:created="{Date}2018-09-05T17:41:27.359Z"
+                            jcr:createdBy="nagle@hpe.com"
+                            jcr:lastModified="{Date}2022-06-13T15:22:53.558Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="arrow-link"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2021/09/chemist-warehouse-turns-to-hewlett-packard-enterprise-to-transform-its-data-center-with-new-hyperconverged-and-vdi-solutions"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            header="Chemist Warehouse turns to Hewlett Packard Enterprise to transform its data center with new hyperconverged and VDI solutions"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Chemist Warehouse turns to Hewlett Packard Enterprise to transform its data center with new hyperconverged and VDI solutions"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-06-13T15:22:53.558Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                fileReference="/content/dam/hpe/newsroom/2021/09/image-norend/chemist-warehouse-turns-to-hpe-to-transform-its-data-center-with-new-hyperconverged-and-vdi-solutions.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-06-13T15:22:53.558Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"/>
+                        </contentblock_50f2>
+                    </column_2>
+                </columncontainercompo>
+            </body-par>
+            <side-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <buttonctaitemcompone
+                    jcr:created="{Date}2018-06-28T13:06:31.075-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:06:46.099-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 1"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_661124859
+                    jcr:created="{Date}2018-06-28T13:06:51.115-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:11.079-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 2"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_606970408
+                    jcr:created="{Date}2018-06-28T13:06:53.400-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:02.336-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 3"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+            </side-par>
+        </main-par>
+        <image
+            jcr:lastModified="{Date}2018-09-05T17:38:02.066Z"
+            jcr:lastModifiedBy="nagle@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+    </jcr:content>
+</jcr:root>

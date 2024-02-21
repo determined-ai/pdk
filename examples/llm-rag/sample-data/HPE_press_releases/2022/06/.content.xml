@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/apps/settings/wcm/designs/hpeweb"
+        cq:lastModified="{Date}2022-01-12T16:33:59.074Z"
+        cq:lastModifiedBy="christine.seales@hpe.com"
+        cq:template="/apps/hpeweb/templates/page-generic-template"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="06"
+        sling:resourceType="hpeweb/components/pages/page-generic-template"/>
+    <hewlett-packard-enterprise-reports-fiscal-2022-second-quarter-results/>
+    <channel-news-2022/>
+    <taeknizon-selects-hpe-greenlake-to-expand-their-fully-managed-cloud-offering-in-the-uae/>
+    <swedish-cloud-service-provider-datarewind-boosts-hybrid-office-productivity-with-hpe-cloud-native-storage-and-enhanced-compute-capacities/>
+    <iliane-selects-hpe-greenlake-for-expansion-of-high-performing-cloud-offerings/>
+    <eclit-chooses-hpe-greenlake-to-launch-a-new-cloud-offering-and-expand-its-managed-services-portfolio/>
+    <hewlett-packard-enterprise-releases-2021-living-progress-report-accelerates-net-zero-climate-target-by-10-years/>
+    <hewlett-packard-enterprise-to-present-live-webcast-of-investor-relations-summit-at-discover/>
+    <turk-nippon-insurance-embarks-on-technology-modernization-with-hpe-greenlake-to-boost-performance/>
+    <hpe-greenlake-adds-open-source-leader-red-hat-to-expanding-ecosystem/>
+    <hpe-greenlake-advances-hybrid-cloud-experience-with-modern-private-cloud-and-new-cloud-services/>
+    <hewlett-packard-enterprise-adds-even-more-genius-to-evil-geniuses-industry-leading-data-and-analytics-program/>
+    <hewlett-packard-enterprise-expands-compute-portfolio-with-new-servers-based-on-cloud-native-silicon/>
+</jcr:root>

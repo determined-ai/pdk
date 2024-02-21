@@ -5,6 +5,7 @@
 
 # PDK - Pachyderm | Determined | KServe
 ## Deployment Guide for AWS
+<b>Date/Revision:</b> February 23, 2024
 
 
 This guide will walk you through the steps of deploying the PDK components to AWS.
@@ -23,8 +24,8 @@ The following software versions will be used for this installation:
 - Python: 3.8 and 3.9
 - Kubernetes (K8s): latest supported *(currently 1.27)*
 - Postgres: 13
-- MLDE (Determined.AI): latest *(currently 0.26.7)*
-- MLDM (Pachyderm): latest *(currently 2.8.2)*
+- MLDE (Determined.AI): latest *(currently 0.28.1)*
+- MLDM (Pachyderm): latest *(currently 2.8.4)*
 - KServe: 0.12.0-rc0 (Quickstart Environment)
 
 PS: some of the commands used here are sensitive to the version of the product(s) listed above.
@@ -702,7 +703,7 @@ kubectl apply -f  - <<EOF
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: efs-pv
+  name: pdk-pv
 spec:
   capacity:
     storage: 200Gi
@@ -718,7 +719,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: efs-pvc
+  name: pdk-pvc
   namespace: default
 spec:
   accessModes:
@@ -737,7 +738,7 @@ kubectl apply -f  - <<EOF
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: efs-pv-gpu
+  name: pdk-pv-gpu
 spec:
   capacity:
     storage: 200Gi
@@ -753,7 +754,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: efs-pvc
+  name: pdk-pvc
   namespace: gpu-pool
 spec:
   accessModes:
@@ -956,6 +957,12 @@ The next step is to setup the 3 databases that will be used by PDK. Since the AW
 - Use the postgres `psql` command line utility (`psql -h ${RDS_CONNECTION_URL} postgres postgres`)
 - Create a pod with psql and connect to the instance
 
+You will also need the password, which can be obtained by running this command:
+
+```bash
+echo $RDS_ADMIN_PASSWORD
+```
+
 To create the databases using the psql pod, use these commands:
 
 
@@ -963,7 +970,7 @@ To create the databases using the psql pod, use these commands:
 kubectl run psql -it --rm=true --image=postgres:13 --command -- psql -h ${RDS_CONNECTION_URL} -U postgres postgres
 
 # The prompt will freeze as it loads the pod. Wait for the message "If you don't see a command prompt, try pressing enter".
-# Then, type the password and press enter.
+# Then, type (or paste) the password and press enter.
 
 postgres=> CREATE DATABASE pachyderm;
 
@@ -1116,7 +1123,7 @@ proxy:
 
 determined:
   enabled: true
-  detVersion: "0.26.7"
+  detVersion: "0.28.1"
   imageRegistry: determinedai
   enterpriseEdition: false
   imagePullSecretName:
@@ -1175,7 +1182,7 @@ determined:
             volumes:
               - name: shared-fs
                 persistentVolumeClaim:
-                  claimName: efs-pvc
+                  claimName: pdk-pvc
     - pool_name: gpu-pool
       max_aux_containers_per_agent: 1
       kubernetes_namespace: gpu-pool
@@ -1193,7 +1200,7 @@ determined:
             volumes:
               - name: shared-fs
                 persistentVolumeClaim:
-                  claimName: efs-pvc
+                  claimName: pdk-pvc
             tolerations:
               - key: "nvidia.com/gpu"
                 operator: "Equal"

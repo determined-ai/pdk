@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/apps/settings/wcm/designs/hpeweb"
+        cq:lastModified="{Date}2022-01-12T16:33:30.373Z"
+        cq:lastModifiedBy="christine.seales@hpe.com"
+        cq:template="/apps/hpeweb/templates/page-generic-template"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="04"
+        sling:resourceType="hpeweb/components/pages/page-generic-template"/>
+    <city-university-of-hong-kong-advances-scientific-research-with-up-to-10x-faster-high-performance-computing-cluster-from-hewlett-packard-enterprise/>
+    <hewlett-packard-enterprise-drives-innovation-at-the-extreme-edge-on-the-international-space-station-with-24-completed-experiments/>
+    <hpe-opens-global-center-of-excellence-in-artificial-intelligence-and-data-in-spain-to-help-customers-harness-the-power-of-their-data/>
+    <leading-telematics-company-ituran-selects-hpe-cloud-native-storage-to-improve-real-time-data-access-for-clients/>
+    <hewlett-packard-enterprise-accelerates-ran-deployments-with-automation-and-simplified-management-for-both-open-and-traditional-networks/>
+    <hewlett-packard-enterprise-accelerates-ai-journey-from-poc-to-production-with-new-solution-for-ai-development-and-training-at-scale/>
+    <hewlett-packard-enterprise-ushers-in-next-era-in-ai-innovation-with-swarm-learning-solution-built-for-the-edge-and-distributed-sites/>
+    <korea-customs-service-selects-hpe-ezmeral-to-advance-smuggler-crackdown-and-inform-policy-decisions/>
+</jcr:root>

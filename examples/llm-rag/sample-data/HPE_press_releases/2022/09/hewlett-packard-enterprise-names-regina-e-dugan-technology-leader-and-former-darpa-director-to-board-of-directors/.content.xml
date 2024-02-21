@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/apps/settings/wcm/designs/hpeweb"
+        cq:lastModified="{Date}2022-09-22T22:30:11.072Z"
+        cq:lastModifiedBy="christine.seales@hpe.com"
+        cq:tags="[hpe-newsroom:categories/storage]"
+        cq:template="/apps/hpeweb/templates/page-text-heavy"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Hewlett Packard Enterprise names Regina E. Dugan, technology leader and former DARPA director, to Board of Directors "
+        jcr:uuid="6e2c6a8c-71ca-40fe-be6a-4ca56f53d36d"
+        sling:resourceType="hpeweb/components/pages/page-text-heavy"
+        browserTitle="Hewlett Packard Enterprise names Regina E. Dugan, technology leader and former DARPA director, to Board of Directors "
+        changefreq="daily"
+        contentType="Press Release"
+        displayDate="{Date}2022-09-22T18:27:00.000-04:00"
+        metaDescription="Dugan joins HPE Board with 30 years of advanced technology development, engineering and business leadership experience "
+        metaKeywords="HPE, Hewlett Packard Enterprise, Board of Directors, Technology Committee, edge-to-cloud"
+        metaOgImage="/content/dam/hpe/newsroom/2022/09/image-norend/hpe-names-regina-e-dugan-technology-leader-and-former-darpa-director-to-board-of-directors .jpg"
+        metaTwitterCardType="summary_large_image"
+        msmcomponent="/content/hpe/base/blueprint/newsroom/press-release/2022/09/hewlett-packard-enterprise-names-regina-e-dugan-technology-leader-and-former-darpa-director-to-board-of-directors/jcr:content/main-par/body-par/textonlycomponent_e9"
+        navTitle="Hewlett Packard Enterprise names Regina E. Dugan, technology leader and former DARPA director, to Board of Directors "
+        pageTitle="Hewlett Packard Enterprise names Regina E. Dugan, technology leader and former DARPA director, to Board of Directors "
+        priority="(None)"
+        socialDescription="Dugan joins HPE Board with 30 years of advanced technology development, engineering and business leadership experience "
+        subtitle="Dugan joins HPE Board with 30 years of advanced technology development, engineering and business leadership experience "
+        theme="dark"
+        UAID="ffe1b127-ba67-4483-b25f-9fd0a336800f"
+        UCID="e52359ff-b58a-4b96-abe0-b796236c0a30">
+        <main-par
+            jcr:lastModified="{Date}2018-06-28T13:09:39.402-07:00"
+            jcr:lastModifiedBy="velazquez@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="hpeweb/components/content/textHeavyComponent"
+            siderail="none">
+            <subtitle
+                jcr:lastModified="{Date}2022-09-22T22:16:28.046Z"
+                jcr:lastModifiedBy="christine.seales@hpe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="hpeweb/components/content/newsroom/newsroomSubtitleComponent"
+                textOnly="SEPTEMBER 22, 2022 • PRESS RELEASE"/>
+            <body-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <imageonlycomponent_c
+                    jcr:created="{Date}2018-06-18T09:06:27.827-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-09-22T22:16:34.703Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/imageOnlyComponent"
+                    fileReference="/content/dam/hpe/newsroom/2022/09/image-norend/hpe-names-regina-e-dugan-technology-leader-and-former-darpa-director-to-board-of-directors .jpg"
+                    imageAlignment="hpe-image-center"
+                    imageAltText="HPE Guarantees"
+                    topMargin="60"
+                    videoSource="video"
+                    videoType="youtube"/>
+                <textonlycomponent_cd
+                    jcr:created="{Date}2018-06-18T09:12:49.742-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-09-22T22:17:27.347Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    leftPadding="30"
+                    rightPadding="30"
+                    textIsRich="true"
+                    textOnly="&lt;h3>IN THIS ARTICLE&lt;/h3>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>Regina E. Dugan has been appointed to HPE’s Board of Directors, and will serve on its Technology Committee&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>Dugan is a globally recognized executive and technology developer&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli
+                    jcr:created="{Date}2018-06-18T09:16:54.243-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-18T09:18:45.987-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <textonlycomponent
+                    jcr:created="{Date}2022-09-22T22:17:33.052Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2022-09-22T22:17:48.973Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;h2>Dugan joins HPE Board with 30 years of advanced technology development, engineering and business leadership experience&amp;nbsp;&lt;/h2>&#xd;&#xa;"/>
+                <textonlycomponent_e9
+                    jcr:created="{Date}2018-06-22T11:24:07.263-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-09-22T22:30:11.063Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>HOUSTON, Texas – Sept. 22, 2022 &lt;/b>– H&lt;a href=&quot;http://www.hpe.com&quot; target=&quot;_blank&quot;>ewlett Packard Enterprise&lt;/a> (NYSE: HPE) today announced that Regina E. Dugan, president and CEO of Wellcome Leap, a U.S. non-profit organization that accelerates discovery and innovation for the benefit of human health, has been appointed to HPE’s Board of Directors, effective today. Dugan will also serve as a member of the Board’s Technology Committee.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; Dugan, a former director of the U.S. Defense Advanced Research Projects Agency (DARPA), brings to the Board extensive experience in developing innovative technology. She has led efforts to deliver breakthrough solutions during her career, working in the public and private sectors, including for technology companies such as Facebook (now Meta), Google, and Motorola.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; “Regina is an impressive technologist who oversaw the innovation engine for U.S. national security before turning to product development at leading technology companies,” said Patricia Russo, chair of the Board of Directors, Hewlett Packard Enterprise. “Our Board and our company will benefit from her developer mindset and deep engineering experience in increasingly important technology disciplines such as cybersecurity, cloud, and artificial intelligence.”&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; Dugan is a globally recognized executive and technology developer with nearly 30 years of experience. She became CEO of Wellcome Leap in 2020 to build the first-ever global version of DARPA to address the global challenges we face, starting with human health. Wellcome Leap builds and funds bold, unconventional programs that aim to increase the number and speed of breakthroughs in human health.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; Dugan was previously Vice President of Engineering at Facebook (prior to it becoming Meta), a Vice President of Engineering, Advanced Technology and Products at Google, as well as a Senior Vice President of Advanced Technology and Projects for Motorola. She was the director of DARPA from 2009 to 2012, and was the first woman to lead the agency.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; “Regina will be an asset to HPE as we accelerate the next-generation innovations that position our customers for the future and help us transform to be the edge-to-cloud company,” said Antonio Neri, president and CEO of Hewlett Packard Enterprise. “Regina’s emerging technologies experience will enhance our ability to deliver relevant solutions to our customers, allowing us to innovate even more advanced ways to unlock the value in their data.”&amp;nbsp;&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <pullquote_349b
+                    jcr:created="{Date}2018-06-18T09:23:47.197-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-09-22T22:19:53.897Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution=" "
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>“Edge-to-cloud architectures are essential to competitiveness for so many companies, and HPE’s products and services are laser-focused on this future,” Dugan said. “It’s an exciting time to join the Board.”&amp;nbsp; &lt;br>&#xa; &lt;br>&#xa; &lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2022-09-22T22:19:53.897Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote_349b>
+                <textonlycomponent_97
+                    jcr:created="{Date}2018-06-22T11:22:31.557-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-09-22T22:20:22.042Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>“Edge-to-cloud architectures are essential to competitiveness for so many companies, and HPE’s products and services are laser-focused on this future,” Dugan said. “It’s an exciting time to join the Board.”&amp;nbsp;&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;Dugan previously served as a board director for Zynga, Inc., Varian Medical Systems, Inc, and Cruise LLC, a privately held company.&amp;nbsp;&lt;/span>&lt;/p>&#xd;&#xa;"/>
+                <textonlycomponent_fe
+                    jcr:created="{Date}2018-06-18T09:28:54.456-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-09-22T22:21:20.057Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>About Hewlett Packard Enterprise&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>Hewlett Packard Enterprise (NYSE: HPE) is the global edge-to-cloud company that helps organizations accelerate outcomes by unlocking value from all of their data, everywhere. Built on decades of reimagining the future and innovating to advance the way people live and work, HPE delivers unique, open and intelligent technology solutions as a service.  With offerings spanning Cloud Services, Compute, High Performance Computing &amp;amp; AI, Intelligent Edge, Software, and Storage, HPE provides a consistent experience across all clouds and edges, helping customers develop new business models, engage in new ways, and increase operational performance. For more information, visit: &lt;a href=&quot;http://www.hpe.com/&quot; target=&quot;_blank&quot;>www.hpe.com&lt;/a>.&lt;br />&#xd;&#xa;&lt;b style=&quot;&quot;>&lt;br />&#xd;&#xa;Forward-looking Statement&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;&lt;/b>This press release contains forward-looking statements within the meaning of the safe harbor provisions of the Private Securities Litigation Reform Act of 1995. Such statements involve risks, uncertainties, and assumptions. If the risks or uncertainties ever materialize or the assumptions prove incorrect, the results of Hewlett Packard Enterprise Company and its consolidated subsidiaries (&amp;quot;Hewlett Packard Enterprise&amp;quot;) may differ materially from those expressed or implied by such forward-looking statements and assumptions. The words “believe,” “expect,” “anticipate,” “intend,” “will,” &amp;quot;may,&amp;quot; and similar expressions are intended to identify such forward-looking statements. If the risks or uncertainties ever materialize or the assumptions prove incorrect, the results of HPE may differ materially from those expressed or implied by such forward-looking statements and assumptions. All statements other than statements of historical fact are statements that could be deemed forward-looking statements, including but not limited to any projections of financial performance, plans, strategies and objectives of management for future operations or performance. Risks, uncertainties and assumptions include those that are described in HPE’s Annual Report on Form 10-K for the fiscal year ended October 31, 2021, Quarterly Reports on Form 10-Q, Current Reports on Form 8-K, and that are otherwise described or updated from time to time in Hewlett Packard Enterprise’s Securities and Exchange Commission reports. Hewlett Packard Enterprise assumes no obligation and does not intend to update these forward-looking statements, except as required by applicable law.&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;Editorial Contact:&lt;br />&#xd;&#xa;&lt;b style=&quot;&quot;>Laura Keller&lt;br />&#xd;&#xa;&lt;/b>&lt;a href=&quot;mailto:Laura.Keller@hpe.com&quot; target=&quot;_blank&quot;>Laura.Keller@hpe.com&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <textonlycomponent_bf
+                    jcr:created="{Date}2018-07-02T13:12:59.755-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-10-12T16:10:50.633Z"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    textOnly="&lt;h2>RELATED NEWS&lt;/h2>&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli_540225213
+                    jcr:created="{Date}2018-06-18T10:12:48.909-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:22:53.902-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <columncontainercompo
+                    jcr:created="{Date}2018-07-02T13:14:23.594-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:15:08.106-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/columnContainerComponent"
+                    columns="column-content-3">
+                    <column_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_7c25
+                            jcr:created="{Date}2018-07-02T13:15:28.984-07:00"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-09-22T22:23:46.335Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/06/hewlett-packard-enterprise-expands-compute-portfolio-with-new-servers-based-on-cloud-native-silicon"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="Hewlett Packard Enterprise expands Compute portfolio with new servers based on cloud-native silicon"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Hewlett Packard Enterprise expands Compute portfolio with new servers based on cloud-native silicon"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-09-22T22:23:46.335Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2022/06/image-norend/hewlett-packard-enterprise-expands-compute-portfolio-with-new-servers-based-on-cloud-native-silicon.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-09-22T22:23:46.335Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_7c25>
+                    </column_0>
+                    <column_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_4dff
+                            jcr:created="{Date}2018-09-21T21:01:47.387Z"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-09-22T22:26:42.115Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/06/hpe-greenlake-advances-hybrid-cloud-experience-with-modern-private-cloud-and-new-cloud-services"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="HPE GreenLake advances hybrid cloud experience with modern private cloud and new cloud services"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="HPE GreenLake advances hybrid cloud experience with modern private cloud and new cloud services"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-09-22T22:26:42.115Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2022/06/image-norend/hpe-greenlake-advances-hybrid-cloud-experience-with-modern-private-cloud-and-new-cloud-services.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-09-22T22:26:42.115Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_4dff>
+                    </column_1>
+                    <column_2
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_50f2
+                            jcr:created="{Date}2018-09-05T17:41:27.359Z"
+                            jcr:createdBy="nagle@hpe.com"
+                            jcr:lastModified="{Date}2022-09-22T22:26:34.786Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/06/hpe-greenlake-adds-open-source-leader-red-hat-to-expanding-ecosystem"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="HPE GreenLake adds open source leader Red Hat to expanding ecosystem"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="HPE GreenLake adds open source leader Red Hat to expanding ecosystem"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-09-22T22:26:34.786Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                fileReference="/content/dam/hpe/newsroom/2022/06/image-norend/hpe-greenlake-adds-open-source-leader-red-hat-to-expanding-ecosystem.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-09-22T22:26:34.786Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"/>
+                        </contentblock_50f2>
+                    </column_2>
+                </columncontainercompo>
+            </body-par>
+            <side-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <buttonctaitemcompone
+                    jcr:created="{Date}2018-06-28T13:06:31.075-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:06:46.099-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 1"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_661124859
+                    jcr:created="{Date}2018-06-28T13:06:51.115-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:11.079-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 2"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_606970408
+                    jcr:created="{Date}2018-06-28T13:06:53.400-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:02.336-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 3"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+            </side-par>
+        </main-par>
+        <image
+            jcr:lastModified="{Date}2018-09-05T17:38:02.066Z"
+            jcr:lastModifiedBy="nagle@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+    </jcr:content>
+</jcr:root>

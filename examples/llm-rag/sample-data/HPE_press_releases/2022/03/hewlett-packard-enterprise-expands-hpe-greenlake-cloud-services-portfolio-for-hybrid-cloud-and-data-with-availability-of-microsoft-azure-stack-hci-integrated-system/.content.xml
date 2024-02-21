@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/apps/settings/wcm/designs/hpeweb"
+        cq:lastModified="{Date}2022-03-22T16:45:46.029Z"
+        cq:lastModifiedBy="christine.seales@hpe.com"
+        cq:tags="[hpe-newsroom:categories/big-data]"
+        cq:template="/apps/hpeweb/templates/page-text-heavy"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Hewlett Packard Enterprise expands HPE GreenLake Cloud Services portfolio for hybrid cloud and data with availability of Microsoft Azure Stack HCI integrated system"
+        jcr:uuid="cddeecb8-2f62-4a7e-8784-d2be4809264d"
+        sling:resourceType="hpeweb/components/pages/page-text-heavy"
+        browserTitle="Hewlett Packard Enterprise expands HPE GreenLake Cloud Services portfolio for hybrid cloud and data with availability of Microsoft Azure Stack HCI integrated system"
+        changefreq="daily"
+        contentType="Press Release"
+        displayDate="{Date}2022-03-22T11:00:00.000-04:00"
+        metaDescription="New, optimized offering provides customers more choice and flexibility for their hybrid IT environments through the HPE GreenLake edge-to-cloud platform"
+        metaKeywords="HPE, HPE GreenLake, Microsoft Azure Stack HCI, HPE GreenLake Lighthouse. cloud service, cloud, digital transformation"
+        metaOgImage="/content/dam/hpe/newsroom/2022/03/image-norend/hewlett-packard-enterprise-expands-hpe-greenlake-cloud-services-portfolio-for-hybrid-cloud-and-data.jpg"
+        metaTwitterCardType="summary_large_image"
+        msmcomponent="/content/hpe/base/blueprint/newsroom/press-release/2022/03/hewlett-packard-enterprise-expands-hpe-greenlake-cloud-services-portfolio-for-hybrid-cloud-and-data-with-availability-of-microsoft-azure-stack-hci-integrated-system/jcr:content/main-par/body-par/textonlycomponent_97"
+        navTitle="Hewlett Packard Enterprise expands HPE GreenLake Cloud Services portfolio for hybrid cloud and data with availability of Microsoft Azure Stack HCI integrated system"
+        pageTitle="Hewlett Packard Enterprise expands HPE GreenLake Cloud Services portfolio for hybrid cloud and data with availability of Microsoft Azure Stack HCI integrated system"
+        priority="(None)"
+        socialDescription="New, optimized offering provides customers more choice and flexibility for their hybrid IT environments through the HPE GreenLake edge-to-cloud platform"
+        subtitle="New, optimized offering provides customers more choice and flexibility for their hybrid IT environments through the HPE GreenLake edge-to-cloud platform"
+        theme="dark"
+        UAID="e366b659-c9a3-4107-bbc4-4d1725b01ec9"
+        UCID="7146ad48-bda9-4395-bb62-91b60fdcfcb4">
+        <main-par
+            jcr:lastModified="{Date}2018-06-28T13:09:39.402-07:00"
+            jcr:lastModifiedBy="velazquez@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="hpeweb/components/content/textHeavyComponent"
+            siderail="none">
+            <subtitle
+                jcr:lastModified="{Date}2022-03-21T20:49:34.301Z"
+                jcr:lastModifiedBy="christine.seales@hpe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="hpeweb/components/content/newsroom/newsroomSubtitleComponent"
+                textOnly="MARCH 22, 2022 • PRESS RELEASE"/>
+            <body-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <imageonlycomponent_c
+                    jcr:created="{Date}2018-06-18T09:06:27.827-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-03-21T20:57:37.654Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/imageOnlyComponent"
+                    fileReference="/content/dam/hpe/newsroom/2022/03/image-norend/hewlett-packard-enterprise-expands-hpe-greenlake-cloud-services-portfolio-for-hybrid-cloud-and-data.jpg"
+                    imageAlignment="hpe-image-center"
+                    imageAltText="HPE Guarantees"
+                    topMargin="60"
+                    videoSource="video"
+                    videoType="youtube"/>
+                <textonlycomponent_cd
+                    jcr:created="{Date}2018-06-18T09:12:49.742-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-03-21T20:58:00.824Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    leftPadding="30"
+                    rightPadding="30"
+                    textIsRich="true"
+                    textOnly="&lt;h3>IN THIS ARTICLE&lt;/h3>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>HPE GreenLake for Microsoft Azure Stack HCI &amp;nbsp;now available as an integrated solution, delivered as a service from HPE GreenLake&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>Scalable HCI infrastructure, software, and services, delivered in a customers’ datacenter or in a colocation facility&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli
+                    jcr:created="{Date}2018-06-18T09:16:54.243-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-18T09:18:45.987-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <textonlycomponent
+                    jcr:created="{Date}2022-03-21T20:58:11.995Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2022-03-21T20:58:28.560Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;h2>New, optimized offering provides customers more choice and flexibility for their hybrid IT environments through the HPE GreenLake edge-to-cloud platform&lt;/h2>&#xd;&#xa;"/>
+                <textonlycomponent_e9
+                    jcr:created="{Date}2018-06-22T11:24:07.263-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-03-21T20:59:33.003Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>HOUSTON, Texas – March 22, 2022 &lt;/b>– &lt;a href=&quot;http://www.hpe.com&quot; target=&quot;_blank&quot;>Hewlett Packard Enterprise&lt;/a> (NYSE: HPE) today announced the availability of HPE GreenLake for Microsoft Azure Stack HCI as an integrated system, pre-built and configured for faster deployment and easier integration. HPE GreenLake for Microsoft Azure Stack HCI is a cloud service that allows users to run Windows and Linux virtual machines in a hybrid cloud environment, on-premises and at the edge, and leverages Microsoft Azure tools and services with a preconfigured, pay-per-use service from HPE GreenLake.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;“The next wave of digital transformation will be fueled by apps and data everywhere, especially at the edge,” said Keith White, General Manager, HPE GreenLake Cloud Services. “With 70%&lt;sup>1&lt;/sup> of apps and data remaining outside the public cloud, HPE GreenLake and Microsoft Azure offer enterprises a hybrid solution that provides the cloud experience wherever the customer needs it, while reducing costs and accommodating business growth so customers can fuel digital transformation.”&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;Microsoft Azure Stack HCI is a software-defined, unified system that combines all of the disparate and siloed elements of a traditional datacenter, decreasing datacenter complexity. The integrated solution is built on HPE GreenLake Lighthouse cloud-native infrastructure that incorporates compute, storage, and networking, to run Azure services on-premises. Delivered as a service from HPE GreenLake, Azure Stack HCI&amp;nbsp;enables businesses to transform their on-premises workloads by providing customers with a cloud experience and operating model for applications and workloads close to where the data lives, helping customers reduce costs, increase scalability and simplify management.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;“This integrated and validated offering, delivered through HPE GreenLake, is important for our customers who require a cloud-like experience on-premises, and who want to be able to act on their data -- edge to cloud,” said Roanne Sones, Corporate Vice President, Microsoft Azure Edge + Platform. “HPE GreenLake and Microsoft Azure allow users to innovate anywhere with more flexibility and control over their on-premises workloads with a hybrid experience.”&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;The HCI market is expected to reach $14.7B by 2024&lt;sup>2&lt;/sup>. Combined with the continued growth of data at the edge, the need for a hybrid cloud environment is essential to meet compliance, data sovereignty, economics, customization and performance needs not available through the public cloud. HPE GreenLake for Microsoft Azure Stack HCI offers a complete solution, including scalable HCI infrastructure, software, and services, delivered in a customers’ datacenter or in a colocation facility. Customers can leverage extensive HPE expertise in Windows and Azure, and with the option of HPE as the Azure CSP, customers get one invoice, one accountable partner to support hybrid IT.&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <pullquote_349b
+                    jcr:created="{Date}2018-06-18T09:23:47.197-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-03-21T21:00:25.348Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution=" "
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>HPE offers market-leading HCI solutions available as a service through the HPE GreenLake edge-to-cloud platform&lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2022-03-21T21:00:25.348Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote_349b>
+                <textonlycomponent_97
+                    jcr:created="{Date}2018-06-22T11:22:31.557-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-03-22T16:45:46.011Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>Hyperconverged infrastructure is a fast-growing industry category founded on the principles of software-defined infrastructure to drive agility with a cloud-like experience. Together with HPE’s ecosystem of partners, HPE offers market-leading HCI solutions available as a service through the HPE GreenLake edge-to-cloud platform. These offerings are optimized to provide customers with choice in selecting the right solution for the right workload, including general purpose and business critical applications, virtualized and containerized applications, and small and large scale environments. This announcement complements HPE’s broad portfolio of hyperconverged infrastructure offerings, including HPE SimpliVity and HPE Nimble Storage dHCI.&lt;br>&#xd;&#xa; &lt;b>&lt;br>&#xd;&#xa;About HPE GreenLake&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/b>The HPE GreenLake edge-to-cloud platform enables customers to accelerate data-first modernization and provides over 50 cloud services that can run on-premises, at the edge, in a colocation facility, and in the public cloud. In Q1 2022, HPE reported Annual Recurring Revenue of $798 million and as-a-service orders growth of 136 percent year-over-year. In April 2022, with the onboarding of Aruba customers, HPE will add over 120,000 customers to the HPE GreenLake platform. The scalable, pay-as-you go HPE GreenLake platform also delivers robust security, compliance, and control, and supports a broad partner ecosystem – including channel partners, distributors, independent software vendors, service providers, system integrators, and public cloud providers. For more information on HPE GreenLake, please visit: &lt;a href=&quot;https://www.hpe.com/us/en/greenlake.html&quot; target=&quot;_blank&quot;>https://www.hpe.com/us/en/greenlake.html&lt;/a>.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/span>&lt;b data-rte-class=&quot;rte-temp&quot;>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Availability&lt;/b>&lt;/span>&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>&lt;b data-rte-class=&quot;rte-temp&quot;>&lt;b data-rte-class=&quot;rte-temp&quot;>&lt;span class=&quot;body-copy-large&quot;>&lt;b>&lt;br>&#xd;&#xa; &lt;/b>&lt;/span>&lt;/b>&lt;/b>&lt;span class=&quot;body-copy-large&quot;>HPE GreenLake for Microsoft Azure Stack HCI as an integrated system will be available globally in May 2022.&lt;/span>&lt;b data-rte-class=&quot;rte-temp&quot;>&lt;b data-rte-class=&quot;rte-temp&quot;>&lt;span class=&quot;body-copy-large&quot;>&lt;br>&#xd;&#xa; &lt;b>&lt;br>&#xd;&#xa;Additional Resources&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/b>&lt;/span>&lt;/b>&lt;/b>&lt;span class=&quot;body-copy-large&quot;>For more information on HPE solutions for Microsoft Azure Stack HCI, please visit: &lt;a href=&quot;https://www.hpe.com/us/en/alliance/microsoft/azurestackhci.html&quot; target=&quot;_blank&quot;>https://www.hpe.com/us/en/alliance/microsoft/azurestackhci.html&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;"/>
+                <textonlycomponent_fe
+                    jcr:created="{Date}2018-06-18T09:28:54.456-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-03-21T21:04:01.647Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>About Hewlett Packard Enterprise&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>Hewlett Packard Enterprise (NYSE: HPE) is the global edge-to-cloud company that helps organizations accelerate outcomes by unlocking value from all of their data, everywhere. Built on decades of reimagining the future and innovating to advance the way people live and work, HPE delivers unique, open and intelligent technology solutions as a service.&amp;nbsp; With offerings spanning Cloud Services, Compute, High Performance Computing &amp;amp; AI, Intelligent Edge, Software, and Storage, HPE provides a consistent experience across all clouds and edges, helping customers develop new business models, engage in new ways, and increase operational performance. For more information, visit: &lt;a href=&quot;http://www.hpe.com/&quot; target=&quot;_blank&quot;>www.hpe.com&lt;/a>&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; Editorial Contact:&lt;br>&#xd;&#xa; &lt;b>Natassia Culp&lt;br>&#xd;&#xa; &lt;/b>&lt;a href=&quot;mailto:Natassia.culp@hpe.com&quot; target=&quot;_blank&quot;>Natassia.culp@hpe.com&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-small&quot;>&lt;sup>1&lt;/sup> IDC Cloud Pulse Survey, Q4 2021&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-small&quot;>&lt;sup>2 &lt;/sup>IDC Cloud Pulse, Q1 20&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <textonlycomponent_bf
+                    jcr:created="{Date}2018-07-02T13:12:59.755-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-10-12T16:10:50.633Z"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    textOnly="&lt;h2>RELATED NEWS&lt;/h2>&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli_540225213
+                    jcr:created="{Date}2018-06-18T10:12:48.909-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:22:53.902-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <columncontainercompo
+                    jcr:created="{Date}2018-07-02T13:14:23.594-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:15:08.106-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/columnContainerComponent"
+                    columns="column-content-3">
+                    <column_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_7c25
+                            jcr:created="{Date}2018-07-02T13:15:28.984-07:00"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-03-21T21:05:51.999Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="arrow-link"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/03/hpe-greenlake-edge-to-cloud-platform-delivers-greater-choice-and-simplicity-with-unified-experience-new-cloud-services-and-expanded-partner-ecosystem"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            header="HPE GreenLake edge-to-cloud platform delivers greater choice and simplicity with unified experience, new cloud services, and expanded partner ecosystem"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="HPE GreenLake edge-to-cloud platform delivers greater choice and simplicity with unified experience, new cloud services, and expanded partner ecosystem"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-03-21T21:05:51.999Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2022/03/image-norend/hpe-greenlake-edge-to-cloud-platform-delivers-greater-choice-and-simplicity-with-unified-experience-new-cloud-services.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-03-21T21:05:51.999Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_7c25>
+                    </column_0>
+                    <column_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_4dff
+                            jcr:created="{Date}2018-09-21T21:01:47.387Z"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-03-21T21:07:32.400Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="arrow-link"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2021/06/hewlett-packard-enterprise-fuels-hpe-greenlake-expansion-with-cloud-services-support-for-microsoft-azure-stack-hci-and-microsoft-sql-server"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            header="Hewlett Packard Enterprise fuels HPE GreenLake expansion with cloud services support for Microsoft Azure Stack HCI and Microsoft SQL Server"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Hewlett Packard Enterprise fuels HPE GreenLake expansion with cloud services support for Microsoft Azure Stack HCI and Microsoft SQL Server"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-03-21T21:07:32.400Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2021/06/image-norend/hpe-fuels-hpe-greenlake-expansion-with-cloud-services-support-for-microsoft-azure-stack-hci-and-microsoft-sql-server.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-03-21T21:07:32.400Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_4dff>
+                    </column_1>
+                    <column_2
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_50f2
+                            jcr:created="{Date}2018-09-05T17:41:27.359Z"
+                            jcr:createdBy="nagle@hpe.com"
+                            jcr:lastModified="{Date}2022-03-21T21:10:00.145Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="arrow-link"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2021/12/ntt-west-group-selects-hpe-greenlake-to-launch-new-portfolio-of-hybrid-cloud-services"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            header="NTT WEST Group selects HPE GreenLake to launch new portfolio of hybrid cloud services"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="NTT WEST Group selects HPE GreenLake to launch new portfolio of hybrid cloud services"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-03-21T21:10:00.145Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                fileReference="/content/dam/hpe/newsroom/2021/12/image-norend/ntt-west-group-selects-hpe-greenlake-to-launch-new-portfolio-of-hybrid-cloud-services.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-03-21T21:10:00.145Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"/>
+                        </contentblock_50f2>
+                    </column_2>
+                </columncontainercompo>
+            </body-par>
+            <side-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <buttonctaitemcompone
+                    jcr:created="{Date}2018-06-28T13:06:31.075-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:06:46.099-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 1"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_661124859
+                    jcr:created="{Date}2018-06-28T13:06:51.115-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:11.079-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 2"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_606970408
+                    jcr:created="{Date}2018-06-28T13:06:53.400-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:02.336-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 3"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+            </side-par>
+        </main-par>
+        <image
+            jcr:lastModified="{Date}2018-09-05T17:38:02.066Z"
+            jcr:lastModifiedBy="nagle@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+    </jcr:content>
+</jcr:root>

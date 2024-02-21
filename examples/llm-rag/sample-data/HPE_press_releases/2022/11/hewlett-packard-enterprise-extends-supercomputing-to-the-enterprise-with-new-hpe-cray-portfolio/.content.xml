@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/apps/settings/wcm/designs/hpeweb"
+        cq:lastModified="{Date}2022-11-09T17:40:56.009Z"
+        cq:lastModifiedBy="christine.seales@hpe.com"
+        cq:tags="[hpe-newsroom:categories/networking]"
+        cq:template="/apps/hpeweb/templates/page-text-heavy"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Hewlett Packard Enterprise extends supercomputing to the enterprise with new HPE Cray portfolio"
+        jcr:uuid="62777283-d2d2-4d09-bd8c-2e369a460be6"
+        sling:resourceType="hpeweb/components/pages/page-text-heavy"
+        browserTitle="Hewlett Packard Enterprise extends supercomputing to the enterprise with new HPE Cray portfolio"
+        changefreq="daily"
+        contentType="Press Release"
+        displayDate="{Date}2022-11-08T08:00:00.000-05:00"
+        metaDescription="New HPE Cray EX and HPE Cray XD supercomputers speed time-to-insight with massive performance and AI-at-scale benefits, delivered in a smaller data center footprint and lower price point"
+        metaKeywords="HPE, Hewlett Packard Enterprise, hpc, supercomputing, high performance computing, AI, machine learning, model development, training, AI, ai infrastructure, accelerators, artificial intelligence, networking, natural language processing, computer vision, exascale, doe, department of energy, cancer, science, physics, energy efficiency, manufacturing, government, enterprise, retail, small form factor, data center "
+        metaOgImage="/content/dam/hpe/newsroom/2022/11/image-norend/hewlett-packard-enterprise-extends-supercomputing-to-the-enterprise-with-new-hpe-cray-portfolio.jpg"
+        metaTwitterCardType="summary_large_image"
+        msmcomponent="/content/hpe/base/blueprint/newsroom/press-release/2022/11/hewlett-packard-enterprise-extends-supercomputing-to-the-enterprise-with-new-hpe-cray-portfolio/jcr:content/main-par/body-par/textonlycomponent_97"
+        navTitle="Hewlett Packard Enterprise extends supercomputing to the enterprise with new HPE Cray portfolio"
+        pageTitle="Hewlett Packard Enterprise extends supercomputing to the enterprise with new HPE Cray portfolio"
+        priority="(None)"
+        socialDescription="New HPE Cray EX and HPE Cray XD supercomputers speed time-to-insight with massive performance and AI-at-scale benefits, delivered in a smaller data center footprint and lower price point"
+        subtitle="New HPE Cray EX and HPE Cray XD supercomputers speed time-to-insight with massive performance and AI-at-scale benefits, delivered in a smaller data center footprint and lower price point"
+        theme="dark"
+        UAID="243feb6d-f5e6-4fd3-ac90-916098bb3e54"
+        UCID="5985fc34-5099-4075-9f0c-cf00e4d480aa">
+        <main-par
+            jcr:lastModified="{Date}2018-06-28T13:09:39.402-07:00"
+            jcr:lastModifiedBy="velazquez@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="hpeweb/components/content/textHeavyComponent"
+            siderail="none">
+            <subtitle
+                jcr:lastModified="{Date}2022-11-07T23:07:00.906Z"
+                jcr:lastModifiedBy="christine.seales@hpe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="hpeweb/components/content/newsroom/newsroomSubtitleComponent"
+                textOnly="NOVEMBER 8, 2022 • PRESS RELEASE"/>
+            <body-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <imageonlycomponent_c
+                    jcr:created="{Date}2018-06-18T09:06:27.827-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-11-08T01:55:27.290Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/imageOnlyComponent"
+                    fileReference="/content/dam/hpe/newsroom/2022/11/image-norend/hewlett-packard-enterprise-extends-supercomputing-to-the-enterprise-with-new-hpe-cray-portfolio.jpg"
+                    imageAlignment="hpe-image-center"
+                    imageAltText="HPE Guarantees"
+                    topMargin="60"
+                    videoSource="video"
+                    videoType="youtube"/>
+                <textonlycomponent_cd
+                    jcr:created="{Date}2018-06-18T09:12:49.742-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-11-08T01:28:50.355Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    leftPadding="30"
+                    rightPadding="30"
+                    textIsRich="true"
+                    textOnly="&lt;h3>IN THIS ARTICLE&lt;/h3>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>Expanded portfolio unlocks new value and accelerates innovation for government and enterprises in energy, financial services, health and life sciences, and manufacturing&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli
+                    jcr:created="{Date}2018-06-18T09:16:54.243-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-18T09:18:45.987-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <textonlycomponent
+                    jcr:created="{Date}2022-11-08T01:28:55.802Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2022-11-08T01:29:18.905Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;h2>New HPE Cray EX and HPE Cray XD supercomputers speed time-to-insight with massive performance and AI-at-scale benefits, delivered in a smaller data center footprint and lower price point&lt;/h2>&#xd;&#xa;"/>
+                <textonlycomponent_e9
+                    jcr:created="{Date}2018-06-22T11:24:07.263-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-11-08T01:30:25.326Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>HOUSTON – November 8, 2022 &lt;/b>– &lt;a href=&quot;http://www.hpe.com/&quot; target=&quot;_blank&quot;>Hewlett Packard Enterprise&lt;/a> (NYSE: HPE) today announced it is making supercomputing accessible for more enterprises to harness insights, solve problems and innovate faster by delivering its &lt;a href=&quot;https://www.hpe.com/us/en/compute/hpc/supercomputing.html&quot; target=&quot;_blank&quot;>world-leading, energy-efficient supercomputers&lt;/a> in a smaller form factor and at a lower price point.&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;The expanded portfolio includes new HPE Cray EX and HPE Cray XD supercomputers, which are based on HPE’s exascale innovation that delivers end-to-end, purpose-built technologies in compute, accelerated compute, interconnect, storage, software, and flexible power and cooling options. The supercomputers provide significant performance and AI-at-scale capabilities to tackle demanding, data-intensive workloads, speed up AI and machine learning initiatives, and accelerate innovation to deliver products and services to market faster. &lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;“We have entered a new frontier with the exascale era, which is represented by massive data growth that requires advanced modeling, simulation, analytics, and AI-at-scale capabilities to realize outcomes and accelerate innovation,” said Trish Damkroger, chief product officer and senior vice president, HPC, AI &amp;amp; Labs, HPE. “With the expanded portfolio of HPE Cray supercomputers, that leverage our world-leading exascale technologies, we are empowering broader commercial and public sector organizations to seize a growing opportunity by making supercomputing accessible to meet their scale and data center needs.”&lt;br />&#xd;&#xa;&lt;b style=&quot;&quot;>&lt;br />&#xd;&#xa;Speeding time-to-market and strengthening industry competitiveness with supercomputing&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;&lt;/b>Supercomputing continues to demonstrate significant value to advance R&amp;amp;D and strengthen competitiveness.&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;By extending the power of supercomputing to the enterprise, organizations can take advantage of modeling and simulation capabilities to create digital representations that help them understand how something will look and perform in the physical world before productizing it. Additionally, as many products and services are incorporating AI and machine learning, enterprises can leverage supercomputing to build and train larger, robust AI models on useful applications, such as natural language processing and computer vision, to predict outcomes faster. &lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <textonlycomponent_b4
+                    jcr:created="{Date}2018-06-18T09:18:06.257-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-11-08T01:32:17.567Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>Enterprises in energy, such as oil and gas, financial services, health and life sciences, and manufacturing, can now benefit from powerful technologies by adopting supercomputing solutions from HPE that fit within their data center size, scale and budget needs. Examples of use case benefits, across industries, include:&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>&amp;nbsp;&lt;/span>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Speeding up time-to-market with safer and high-performing cars&lt;/b>: Car makers need to first meet crash-testing requirements, to ensure the safety and performance of new vehicles, to meet product launch timeline goals. By digitally simulating vehicle safety and performance using supercomputing, automotive manufacturers can better model and test vehicle design improvements and simulate accidents to make advancements to protect passengers. Additionally, car makers can save money and resources on having to conduct physical testing and car crash simulations.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Improving manufacturing with sustainable materials: &lt;/b>Having capabilities to simulate physical and chemical components to advance the discovery of alternative materials, can help the manufacturing space improve sustainable packaging options for personal and consumer care products and lead to reducing operating costs for businesses.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Accelerating drug discovery to treat diseases faster&lt;/b>: Research scientists and pharmaceutical labs will be able to better understand chemical interactions that can lead to breakthrough new drug therapies for challenging and even yet-to-be-discovered diseases.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Making critical millisecond decisions in finance markets&lt;/b>: Financial analysts can leverage supercomputing performance and AI capabilities to create detailed analytics and advanced algorithms to predict critical stock trends and trade, and even improve fraud detection and risk management.&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                    topPadding="20"/>
+                <pullquote_349b
+                    jcr:created="{Date}2018-06-18T09:23:47.197-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-11-08T01:33:23.263Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution=" "
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>Now, more enterprises can access supercomputing to speed time-to-market and strengthen competitiveness&lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2022-11-08T01:33:23.263Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote_349b>
+                <textonlycomponent_97
+                    jcr:created="{Date}2018-06-22T11:22:31.557-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-11-09T17:40:56.000Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Extending exascale innovation to accessible supercomputing for the enterprise&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/b>Today, HPE is introducing the following new supercomputers that government and enterprises can benefit from:&lt;br>&#xd;&#xa; &amp;nbsp;&lt;/span>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;b>HPE Cray EX2500 supercomputers – &lt;/b>Offer the same architecture as the &lt;a href=&quot;https://www.hpe.com/psnow/doc/a00094635enw&quot; target=&quot;_blank&quot;>HPE Cray EX4000 supercomputer&lt;/a>, which enables &lt;a href=&quot;https://www.hpe.com/us/en/newsroom/press-release/2022/05/hewlett-packard-enterprise-ushers-in-new-era-with-worlds-first-and-fastest-exascale-supercomputer-frontier-for-the-us-department-of-energys-oak-ridge-national-laboratory.html&quot; target=&quot;_blank&quot;>the world’s first and fastest exascale-class system&lt;/a>, but 24% smaller to fit inside an enterprise data center. This new form factor approach features 100% direct-liquid cooling to improve energy efficiency, and enables a cost-effective solution for larger enterprises that want greater performance at-scale but in a smaller implementation and lower carbon footprint.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;b>HPE Cray XD2000 and XD6500 supercomputers&lt;/b> – Offer highly dense, purpose-built servers that were created by integrating the HPE and Cray portfolios to provide maximum performance for advanced workloads including modeling, simulation and AI. The new HPE Cray XD supercomputers are compatible with traditional enterprise data centers as they provide customers with the flexibility and broad range of options to customize technologies across CPUs, accelerators, storage, interconnect, and power and cooling options, depending on workload needs.&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>&amp;nbsp;&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>The new supercomputers will also feature the following technologies built for exascale-class systems to support demanding compute-intensive and data-intensive workloads, such as AI and machine learning:&amp;nbsp;&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>&amp;nbsp;&lt;/span>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;b>HPE Slingshot&lt;/b>, an Ethernet interconnect to address demands for high speed and better congestion control, helping complex applications run more smoothly.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Cray Clusterstor E1000&lt;/b> to provide expanded storage with intelligent tiering to support data-intensive workloads, such as AI model training, to make storing and accessing data easy and efficient.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;b>HPE Cray Programming Environment&lt;/b> that brings a fully integrated software suite with compliers and developer tools to enable code portability, allowing developers to run the code when and where they need it to optimize modeling, simulation, analytics and AI applications.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Sophisticated direct liquid-cooling capabilities&lt;/b> that efficiently remove heat from high power devices such as processors, GPUs and switches.&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>&amp;nbsp;&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Enabling AI-at-scale with dedicated machine learning software&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/b>The new supercomputers are also ideal for enabling AI-at-scale and can be equipped with the &lt;a href=&quot;https://www.hpe.com/us/en/solutions/artificial-intelligence/machine-learning-development-environment.html&quot; target=&quot;_blank&quot;>HPE Machine Learning Development Environment&lt;/a>, an optimized machine learning software platform to build and train bigger AI models, faster.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; By combining HPE’s world-leading supercomputing technology with the HPE Machine Learning Development Environment, users can speed up the typical time-to-value to start realizing results from building and training machine models, from weeks and months, to days.&lt;br>&#xd;&#xa; &lt;b>&lt;br>&#xd;&#xa;HPE delivers a robust ecosystem of heterogenous compute and accelerated solutions&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;/b>The new HPE Cray EX2500 and HPE Cray XD2000 and XD6500 supercomputers will support the latest CPUs, GPUs and accelerators to provide advanced compute and accelerated compute capabilities to support demanding workloads.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;The HPE Cray EX2500 supercomputer will support the 4&lt;sup>th&lt;/sup> Generation AMD EPYC™ processors and 4&lt;sup>th&lt;/sup> Generation Xeon® Scalable® processors.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;The HPE Cray EX2500 supercomputer will also support the AMD ® Instinct™ MI250X GPU.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;HPE is also the first to deploy a customer system using 4&lt;sup>th&lt;/sup> Gen Xeon® Scalable® processors for the U.S. Department of Energy’s Los Alamos National Laboratory. The new system, “&lt;a href=&quot;https://www.hpe.com/us/en/newsroom/press-release/2020/09/us-department-of-energy-advances-nuclear-stockpile-research-and-simulations-with-4x-more-powerful-supercomputer-built-by-hewlett-packard-enterprise.html&quot; target=&quot;_blank&quot;>Crossroads&lt;/a>”, will support R&amp;amp;D for the National Nuclear Security Administration (NNSA) to tackle critical modeling and simulation of nuclear weapons at high 3D resolutions to ensure the reliability and security of the nuclear stockpile.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;The HPE Cray XD6500 supercomputers will support 4&lt;sup>th&lt;/sup> Gen Xeon® Scalable® processors and NVIDIA H100 Tensor Core GPUs.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;The HPE Cray XD2000 supercomputers will support the AMD Instinct™ MI210 GPU.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;/span>&lt;b data-rte-class=&quot;rte-temp&quot; style=&quot;font-size: 0.8125rem;&quot;>&lt;b data-rte-class=&quot;rte-temp&quot;>&lt;span class=&quot;body-copy-large&quot;>&lt;b>HPE to showcase world-leading supercomputing portfolio and solutions at SC22&lt;/b>&lt;/span>&lt;/b>&lt;/b>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>&lt;/b>&lt;br>&#xd;&#xa;HPE will showcase some of its leading supercomputing and AI solutions at this year’s &lt;a href=&quot;https://sc21.supercomputing.org/&quot; target=&quot;_blank&quot;>SC&lt;/a>, an annual international conference for high performance computing, networking, storage, and analysis, that celebrates achievements and inspires new opportunities fueled by supercomputing.&amp;nbsp;&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; To learn more and see HPE’s supercomputing portfolio in action with real-life outcomes, please visit HPE’s booth #2413 at SC22 in Dallas, Texas (November 13-17).&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;b>Availability&lt;/b>&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; The HPE Cray EX2500 supercomputers, featuring 4&lt;sup>th&lt;/sup> Gen Xeon® Scalable® processors, are available to order now for select customers, and will be broadly available in calendar year Q1 2023.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; The HPE Cray EX2500 supercomputers, featuring 4&lt;sup>th&lt;/sup> Generation AMD EPYC™ processors, are available to order now for select customers, and will be broadly available in calendar year Q2 2023.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; The HPE Cray XD2000 supercomputers, featuring 4&lt;sup>th&lt;/sup> Generation AMD EPYC™ processors with air-cooled capabilities, will be available to order on November 10. The HPE Cray XD2000, featuring 4&lt;sup>th&lt;/sup> Generation AMD EPYC™ processors with direct liquid-cooling capabilities, will be available to order on December 5.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; The HPE Cray XD2000 supercomputers, featuring the AMD Instinct™ MI210 Accelerator, will be available in Q1 2023.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; The HPE Cray XD2000 supercomputers, featuring 4&lt;sup>th&lt;/sup> Gen Intel Xeon® Scalable® processors will be available to order in calendar year Q2 2023.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; The HPE Cray XD6500 supercomputers, featuring 4&lt;sup>th&lt;/sup> Gen Xeon® Scalable® processors, will be available to order in calendar year Q1 2023.&lt;/span>&lt;br>&#xd;&#xa;&lt;span class=&quot;body-copy-large&quot;>&lt;br>&#xd;&#xa; The HPE Cray XD6500 supercomputers, featuring NVIDIA H100 Tensor Core GPUs, will be available to order, starting in calendar year Q1 2023.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; To learn more about HPE’s supercomputing and AI solutions, please visit: &lt;a href=&quot;https://www.hpe.com/us/en/compute/hpc/supercomputing/cray-exascale-supercomputer.html&quot; target=&quot;_blank&quot;>https://www.hpe.com/us/en/compute/hpc/supercomputing/cray-exascale-supercomputer.html&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-small&quot;>Intel, the Intel logo, and other Intel marks are trademarks of Intel Corporation or its subsidiaries.&lt;/span>&lt;/p>&#xd;&#xa;"/>
+                <textonlycomponent_fe
+                    jcr:created="{Date}2018-06-18T09:28:54.456-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-11-08T01:39:25.032Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>About Hewlett Packard Enterprise&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>Hewlett Packard Enterprise (NYSE: HPE) is the global edge-to-cloud company that helps organizations accelerate outcomes by unlocking value from all of their data, everywhere. Built on decades of reimagining the future and innovating to advance the way people live and work, HPE delivers unique, open and intelligent technology solutions as a service.  With offerings spanning Cloud Services, Compute, High Performance Computing &amp;amp; AI, Intelligent Edge, Software, and Storage, HPE provides a consistent experience across all clouds and edges, helping customers develop new business models, engage in new ways, and increase operational performance. For more information, visit: &lt;a href=&quot;http://www.hpe.com/&quot; target=&quot;_blank&quot;>www.hpe.com&lt;/a>&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;Media Contact&lt;br />&#xd;&#xa;&lt;b style=&quot;&quot;>Nahren Khizeran&lt;br />&#xd;&#xa;&lt;/b>&lt;a href=&quot;mailto:Nahren.Khizeran@hpe.com&quot; target=&quot;_blank&quot;>Nahren.Khizeran@hpe.com&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <textonlycomponent_bf
+                    jcr:created="{Date}2018-07-02T13:12:59.755-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-10-12T16:10:50.633Z"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    textOnly="&lt;h2>RELATED NEWS&lt;/h2>&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli_540225213
+                    jcr:created="{Date}2018-06-18T10:12:48.909-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:22:53.902-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <columncontainercompo
+                    jcr:created="{Date}2018-07-02T13:14:23.594-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:15:08.106-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/columnContainerComponent"
+                    columns="column-content-3">
+                    <column_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_7c25
+                            jcr:created="{Date}2018-07-02T13:15:28.984-07:00"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-11-08T01:41:20.697Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/blog-post/2022/10/exascale-supercomputing-is-here-and-it-will-change-the-world"
+                            description="&lt;p>Blog Post&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="Exascale supercomputing is here and it will change the world"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Exascale supercomputing is here and it will change the world"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-11-08T01:41:20.697Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2022/10/image-norend/exascale-supercomputing-is-here-and-it-will-change-the-world.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-11-08T01:41:20.697Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_7c25>
+                    </column_0>
+                    <column_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_4dff
+                            jcr:created="{Date}2018-09-21T21:01:47.387Z"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-11-08T01:42:55.295Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/05/hewlett-packard-enterprise-ushers-in-new-era-with-worlds-first-and-fastest-exascale-supercomputer-frontier-for-the-us-department-of-energys-oak-ridge-national-laboratory"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="Hewlett Packard Enterprise ushers in new era with world’s first and fastest exascale supercomputer “Frontier” for the U.S. Department of Energy’s Oak Ridge National Laboratory"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Hewlett Packard Enterprise ushers in new era with world’s first and fastest exascale supercomputer “Frontier” for the U.S. Department of Energy’s Oak Ridge National Laboratory"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-11-08T01:42:55.295Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2022/05/image-norend/hpe-ushers-in-new-era-with-worlds-first-and-fastest-exascale-supercomputer-frontier-for-the-us-doe-oak-ridge-national-laboratory.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-11-08T01:42:55.295Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_4dff>
+                    </column_1>
+                    <column_2
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_50f2
+                            jcr:created="{Date}2018-09-05T17:41:27.359Z"
+                            jcr:createdBy="nagle@hpe.com"
+                            jcr:lastModified="{Date}2022-11-08T01:44:48.486Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/04/hewlett-packard-enterprise-accelerates-ai-journey-from-poc-to-production-with-new-solution-for-ai-development-and-training-at-scale"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="Hewlett Packard Enterprise accelerates AI journey from POC to production with new solution for AI development and training at scale"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Hewlett Packard Enterprise accelerates AI journey from POC to production with new solution for AI development and training at scale"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-11-08T01:44:48.486Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                fileReference="/content/dam/hpe/newsroom/2022/04/image-norend/hpe-accelerates-ai-journey-from-poc-to-production-with-new-solution-for-ai-development-and-training-at-scale.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-11-08T01:44:48.486Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"/>
+                        </contentblock_50f2>
+                    </column_2>
+                </columncontainercompo>
+            </body-par>
+            <side-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <buttonctaitemcompone
+                    jcr:created="{Date}2018-06-28T13:06:31.075-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:06:46.099-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 1"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_661124859
+                    jcr:created="{Date}2018-06-28T13:06:51.115-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:11.079-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 2"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_606970408
+                    jcr:created="{Date}2018-06-28T13:06:53.400-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:02.336-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 3"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+            </side-par>
+        </main-par>
+        <image
+            jcr:lastModified="{Date}2018-09-05T17:38:02.066Z"
+            jcr:lastModifiedBy="nagle@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/apps/settings/wcm/designs/hpeweb"
+        cq:lastModified="{Date}2022-10-19T20:14:56.403Z"
+        cq:lastModifiedBy="christine.seales@hpe.com"
+        cq:tags="[hpe-newsroom:categories/company---earnings]"
+        cq:template="/apps/hpeweb/templates/page-text-heavy"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Hewlett Packard Enterprise demonstrates strong momentum of edge-to-cloud strategy and presents FY23 outlook at HPE Securities Analyst Meeting 2022"
+        jcr:uuid="c7eb38a8-b12d-4258-9afa-547488eff77e"
+        sling:resourceType="hpeweb/components/pages/page-text-heavy"
+        browserTitle="Hewlett Packard Enterprise demonstrates strong momentum of edge-to-cloud strategy and presents FY23 outlook at HPE Securities Analyst Meeting 2022"
+        changefreq="daily"
+        contentType="Press Release"
+        displayDate="{Date}2022-10-19T17:15:00.000-04:00"
+        metaDescription="Hewlett Packard Enterprise today hosted its annual Securities Analyst Meeting at HPE’s headquarters in Houston, Texas"
+        metaKeywords="HPE Securities Analyst Meeting, HPE Investor day, Antonio Neri, Tarek Robbiati, SAM, HPE, 2022, Hewlett Packard Enterprise"
+        metaOgImage="/content/dam/hpe/newsroom/2022/10/image-norend/hpe-demonstrates-strong-momentum-of-edge-to-cloud-strategy-and-presents-fy23-outlook-at-hpe-securities-analyst-mtg2.jpg"
+        metaTwitterCardType="summary_large_image"
+        msmcomponent="/content/hpe/base/blueprint/newsroom/press-release/2022/10/hewlett-packard-enterprise-demonstrates-strong-momentum-of-edge-to-cloud-strategy-and-presents-fy23-outlook-at-hpe-securities-analyst-meeting-2022/jcr:content/main-par/body-par/textonlycomponent_97"
+        navTitle="Hewlett Packard Enterprise demonstrates strong momentum of edge-to-cloud strategy and presents FY23 outlook at HPE Securities Analyst Meeting 2022"
+        pageTitle="Hewlett Packard Enterprise demonstrates strong momentum of edge-to-cloud strategy and presents FY23 outlook at HPE Securities Analyst Meeting 2022"
+        priority="(None)"
+        socialDescription="Hewlett Packard Enterprise today hosted its annual Securities Analyst Meeting at HPE’s headquarters in Houston, Texas"
+        subtitle="Hewlett Packard Enterprise today hosted its annual Securities Analyst Meeting at HPE’s headquarters in Houston, Texas"
+        theme="dark"
+        UAID="ef24e211-17e5-4372-84cb-6526b5bff9b4"
+        UCID="7a78e1fa-3f03-49c4-b258-8181d793002a">
+        <main-par
+            jcr:lastModified="{Date}2018-06-28T13:09:39.402-07:00"
+            jcr:lastModifiedBy="velazquez@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="hpeweb/components/content/textHeavyComponent"
+            siderail="none">
+            <subtitle
+                jcr:lastModified="{Date}2022-10-19T18:21:37.724Z"
+                jcr:lastModifiedBy="christine.seales@hpe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="hpeweb/components/content/newsroom/newsroomSubtitleComponent"
+                textOnly="OCTOBER 19, 2022 • PRESS RELEASE"/>
+            <body-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <imageonlycomponent_c
+                    jcr:created="{Date}2018-06-18T09:06:27.827-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-10-19T20:14:40.741Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/imageOnlyComponent"
+                    fileReference="/content/dam/hpe/newsroom/2022/10/image-norend/hpe-demonstrates-strong-momentum-of-edge-to-cloud-strategy-and-presents-fy23-outlook-at-hpe-securities-analyst-mtg2.jpg"
+                    imageAlignment="hpe-image-center"
+                    imageAltText="HPE Guarantees"
+                    topMargin="60"
+                    videoSource="video"
+                    videoType="youtube"/>
+                <textonlycomponent_cd
+                    jcr:created="{Date}2018-06-18T09:12:49.742-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-10-19T18:23:12.056Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    leftPadding="30"
+                    rightPadding="30"
+                    textIsRich="true"
+                    textOnly="&lt;h3>IN THIS ARTICLE&lt;/h3>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>HPE illustrated that the edge-to-cloud strategy directly addresses IT industry megatrends that have emerged over the last several years&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>HPE emphasized that it has delivered strong results for shareholders and is in solid position to add even greater value&lt;br>&#xd;&#xa;&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>HPE provided updates on the maturity of the unique HPE GreenLake platform&lt;br>&#xd;&#xa;&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>HPE provided a financial update including the company’s outlook for fiscal year 2023&lt;/span>&lt;br>&#xd;&#xa;&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli
+                    jcr:created="{Date}2018-06-18T09:16:54.243-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-18T09:18:45.987-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <textonlycomponent
+                    jcr:created="{Date}2022-10-19T18:23:19.655Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2022-10-19T18:23:34.530Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;h2>Hewlett Packard Enterprise today hosted its annual Securities Analyst Meeting at HPE’s headquarters in Houston, Texas&lt;/h2>&#xd;&#xa;"/>
+                <textonlycomponent_e9
+                    jcr:created="{Date}2018-06-22T11:24:07.263-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-10-19T18:24:32.234Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>HOUSTON, Texas – October 19, 2022 &lt;/b>– Hewlett Packard Enterprise (NYSE: HPE) today hosted its annual Securities Analyst Meeting (“SAM”) at HPE’s headquarters in Houston, where Antonio Neri, president and chief executive officer, and Tarek Robbiati, executive vice president and chief financial officer, provided the financial outlook for fiscal year 2023 as well as details on the company’s strategy, customer trends, accelerating market opportunity, and long-term growth initiatives.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;Neri emphasized in his SAM remarks how HPE’s edge-to-cloud strategy directly addresses IT industry megatrends that have emerged over the last several years. He noted that HPE has delivered strong results for shareholders and is in solid position to add even greater value.&amp;nbsp;&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <pullquote_349b
+                    jcr:created="{Date}2018-06-18T09:23:47.197-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-10-19T18:25:28.230Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution="Antonio Neri, President and Chief Executive Officer"
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>“We have taken decisive and important actions to transform HPE. Our evolution to a platform-based model, fueled by a software- and services-rich portfolio, is already delivering very strong results that translate to value for our shareholders.” &lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2022-10-19T18:25:28.230Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote_349b>
+                <textonlycomponent_97
+                    jcr:created="{Date}2018-06-22T11:22:31.557-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-10-19T18:45:16.312Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>“We have taken decisive and important actions to transform HPE. Our evolution to a platform-based model, fueled by a software- and services-rich portfolio, is already delivering very strong results that translate to value for our shareholders,” Neri said. “Our distinct innovation and strong execution continue to drive customer demand across our portfolio, which we expect to result in higher recurring revenues, expanded gross and operating margins, and increased free cash flow in future years.”&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; Neri illustrated additional market drivers that can accelerate greater success of HPE’s strategy, including the opportunity embedded in customers’ growing preference for hybrid multi-cloud models. “Hybrid multi-cloud adoption for the most demanding workloads is accelerating across industry verticals,” Neri said during the SAM webcast. “And while the world is already hybrid and getting more so, we know the cloud experience is not yet everywhere. Customers are looking for a way to unify their multi-generation IT strategy with a consistent cloud experience across all their applications and data.”&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; Neri pointed to HPE’s leadership in hybrid multi-cloud, as the company that offers the broadest set of workloads of any hybrid cloud vendor in the market. “From the time we first predicted the future would be hybrid, we made sure we were first to bring to market differentiated services and solutions for our customers,” Neri said.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; Neri also provided updates on the maturity of the unique HPE GreenLake platform. HPE has distinguished the HPE GreenLake platform by providing a unified, automated, and secure cloud experience that is integrated across the edge, data centers, co-locations, and public clouds&lt;i>.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/i>With more than 120,000 users across two million connected devices and $7.7 billion in total contract value, HPE GreenLake has driven traction across HPE’s overall portfolio. Total HPE orders, including&amp;nbsp;as-a service bookings, are at their highest ever in the fiscal year 2022.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; “We are relentlessly focused on delivering customer-centric technology breakthroughs,” said Neri. “With the competitive advantages that our leadership position brings, HPE is poised to deliver on the commitments we have made.”&lt;br>&#xd;&#xa; &lt;b>&lt;br>&#xd;&#xa;Financial Update&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/b>Tarek Robbiati provided more insight into how HPE’s vision is expected to translate into an attractive long-term financial profile.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; “We have the right edge-to-cloud strategy, aligned with dominant market trends and supported by a sound financial architecture to win customers, drive sustainable, profitable growth, and create shareholder value,” Robbiati said. “Our transition to as a service has helped us create resilient recurring revenue, higher gross margin, and sustainable free cash flow, enabling consistently strong top and bottom-line results, even in light of a complex macro environment.”&amp;nbsp;&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; Robbiati also provided a financial update including the company’s outlook for fiscal year 2023, highlighting how HPE expects to capitalize on enduring market demand and detailing how various macroeconomic aspects factor into the outlook.&lt;br>&#xd;&#xa; &lt;b>&lt;br>&#xd;&#xa;FY22 Expectations&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/b>HPE confirmed its previous fiscal year 2022 outlook. Revenue is expected to grow 3% to 4%, now adjusted 300 bps for currency versus 50 bps at the beginning of the fiscal year. Fiscal year 2022 GAAP diluted net earnings per share (EPS) to be in the range of $1.20 to $1.28 and non-GAAP diluted net EPS to be in the range of $1.96 and $2.04. Fiscal 2022 non-GAAP diluted net EPS excludes after-tax costs of approximately $0.76 per share reflecting changes related to exiting Russia and Belarus, transformation costs, stock-based compensation, and amortization of intangible assets. Fiscal year 2022 free cash flow is expected to be between $1.7 billion and $1.9 billion.&lt;br>&#xd;&#xa; &lt;b>&lt;br>&#xd;&#xa;FY23 Outlook&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/b>HPE expects fiscal year 2023 financial results to continue the momentum from fiscal year 2022. The company expects its revenue growth to be 2% to 4%, when adjusted for currency, and non-GAAP operating profit growth of approximately 4% to 5% year-over-year. This excludes costs of approximately $0.86 billion primarily related to stock-based compensation expense, amortization of intangible assets and transformation costs. The company expects non-GAAP other income &amp;amp; expense of approximately $20 million to $40 million to be a net expense for the full year, excluding adjustments of approximately $40 million primarily related to non-service net&amp;nbsp;periodic benefits. The company expects a non-GAAP tax rate of 14% based on current tax laws.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; HPE expects GAAP diluted net EPS of $1.38 to $1.46 and non-GAAP diluted net EPS of between $1.96 and $2.04. The non-GAAP diluted net EPS outlook excludes after-tax costs of approximately $0.58 per share related primarily to stock-based compensation expense, amortization of intangible assets and transformation costs. HPE expects fiscal year 2023 free cash flow to be $1.9 billion to $2.1 billion.&lt;br>&#xd;&#xa; &lt;b>&lt;br>&#xd;&#xa;Long-Term Financial Profile&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/b>HPE provided its long-term financial model for fiscal year 2022 through fiscal year 2025. The company expects its unique HPE GreenLake edge-to-cloud platform will drive robust growth. HPE projects revenue growth of 2% to 4% adjusted for currency, led by healthy growth in Aruba and High Performance Computing &amp;amp; AI, and a compounded annual growth rate for annualized revenue run-rate&lt;sup>1&lt;/sup> of 35% to 45%.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; Additionally, it expects greater than $6.5 billion of cumulative free cash flow between fiscal year 2022 and fiscal year 2024, powered by sustained revenue growth, rising operating profits, and underpinned by strategic investments.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; The company will also prioritize a disciplined, returns-based capital allocation framework, which balances capital returns to shareholders and share repurchases with balanced investments for growth.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;sup>1&lt;/sup> Annualized Revenue Run-Rate (ARR) is a financial metric used to assess the growth of the Consumption Services (CS) offerings. ARR represents the annualized revenue of all net HPE GreenLake services revenue, related financial services revenue (which includes rental income from operating leases and interest income for capital leases), and software-as-a-Service, software consumption revenue, and other as-a-Service offerings recognized during a quarter and multiplied by four. We use ARR as a performance metric. ARR should be viewed independently of net revenue and is not intended to be combined with it.&lt;br>&#xd;&#xa; &lt;b>&lt;br>&#xd;&#xa;Webcast Details&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/b>A recording of today’s webcast event, along with management presentations and related materials, will be available on the HPE Investor Relations website at &lt;a href=&quot;http://www.hpe.com/investor/SAM2022&quot; target=&quot;_blank&quot;>www.hpe.com/investor/SAM2022&lt;/a>.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; This press release contains only a summary of some of the information presented at today’s event and should be read in conjunction with the management presentations and related materials made available on that website.&lt;/span>&lt;/p>&#xd;&#xa;"/>
+                <textonlycomponent_fe
+                    jcr:created="{Date}2018-06-18T09:28:54.456-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-10-19T18:33:17.902Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>About Hewlett Packard Enterprise&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>Hewlett Packard Enterprise (NYSE: HPE) is the global edge-to-cloud company that helps organizations accelerate outcomes by unlocking value from all of their data, everywhere. Built on decades of reimagining the future and innovating to advance the way people live and work, HPE delivers unique, open and intelligent technology solutions as a service. With offerings spanning Cloud Services, Compute, High Performance Computing &amp;amp; AI, Intelligent Edge, Software, and Storage, HPE provides a consistent experience across all clouds and edges, helping customers develop new business models, engage in new ways, and increase operational performance. For more information, visit: &lt;a href=&quot;http://www.hpe.com/&quot; target=&quot;_blank&quot;>www.hpe.com&lt;/a>.&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;Editorial Contact(s):&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;Editorial contact&lt;br />&#xd;&#xa;&lt;b style=&quot;&quot;>Laura Keller&lt;br />&#xd;&#xa;&lt;/b>&lt;a href=&quot;mailto:Laura.keller@hpe.com&quot; target=&quot;_blank&quot;>Laura.Keller@hpe.com&lt;/a>&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;Investor contact&lt;br />&#xd;&#xa;&lt;b style=&quot;&quot;>Jeff Kvaal&lt;br />&#xd;&#xa;&lt;/b>&lt;a href=&quot;mailto:investor.relations@hpe.com&quot; target=&quot;_blank&quot;>investor.relations@hpe.com&lt;/a>&lt;br />&#xd;&#xa;&lt;b style=&quot;&quot;>&lt;br />&#xd;&#xa;Use of non-GAAP financial information and key performance metrics &lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;&lt;/b>To supplement Hewlett Packard Enterprise’s condensed consolidated financial statement information presented on a generally accepted accounting principles (“GAAP”) basis, Hewlett Packard Enterprise provides forecasts of certain financial measures, including revenue adjusted for currency, non-GAAP gross profit, non-GAAP gross profit margin, non-GAAP operating profit, non-GAAP operating profit growth, non-GAAP measure of other income and expenses, non-GAAP income tax rate, non-GAAP diluted net earnings per share and free cash flow. Reconciliations of these non-GAAP financial measures to the most directly comparable GAAP financial measures, where available, are included in this release and the slides presented at the 2022 Securities Analyst Meeting, which will be available for a period of one year thereafter at www.hpe.com/investor/SAM2022. Hewlett Packard Enterprise provides certain guidance on a non-GAAP basis only, as the company cannot reasonably predict some elements that are included in reported GAAP results. Refer to the discussion of non-GAAP financial measures below for more information. In addition, an explanation of the ways in which Hewlett Packard Enterprise’s management uses these non-GAAP measures to evaluate its business, the substance behind Hewlett Packard Enterprise’s decision to use these non-GAAP measures, the material limitations associated with the use of these non-GAAP measures, the manner in which Hewlett Packard Enterprise’s management compensates for those limitations, and the substantive reasons why Hewlett Packard Enterprise’s management believes that these non-GAAP measures provide useful information to investors is included under “Use and economic substance of non-GAAP financial measures used by Hewlett Packard Enterprise” below. This additional non-GAAP financial information is not meant to be considered in isolation or as a substitute for revenue, operating profit growth, diluted net earnings per share, other income and expenses, and cash flow from operations in accordance with GAAP.&lt;br />&#xd;&#xa;&lt;b style=&quot;&quot;>&lt;br />&#xd;&#xa;Use and economic substance of non-GAAP financial measures used by Hewlett Packard Enterprise&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;&lt;/b>Hewlett Packard Enterprise’s management uses these non-GAAP financial measures for purposes of evaluating Hewlett Packard Enterprise’s historical and prospective financial performance, as well as Hewlett Packard Enterprise’s performance relative to its competitors. Hewlett Packard Enterprise’s management also uses these non-GAAP measures to further its own understanding of Hewlett Packard Enterprise’s segment operating performance. Hewlett Packard Enterprise believes that excluding the items mentioned above from these non-GAAP financial measures allows Hewlett Packard Enterprise’s management to better understand Hewlett Packard Enterprise’s consolidated financial performance in relation to the operating results of Hewlett Packard Enterprise’s segments, as Hewlett Packard Enterprise’s management does not believe that the excluded items are reflective of ongoing operating results.&lt;br />&#xd;&#xa;&lt;b style=&quot;&quot;>&lt;br />&#xd;&#xa;Material limitations associated with use of non-GAAP financial measures&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;&lt;/b>These non-GAAP financial measures may have limitations as analytical tools, and these measures should not be considered in isolation or as a substitute for analysis of Hewlett Packard Enterprise’s results as reported under GAAP.&lt;br />&#xd;&#xa;&lt;b style=&quot;&quot;>&lt;br />&#xd;&#xa;Compensation for limitations associated with use of non-GAAP financial measures&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;&lt;/b>Hewlett Packard Enterprise compensates for the limitations on its use of non-GAAP financial measures by relying primarily on its GAAP results and using non-GAAP financial measures only as supplement. Hewlett Packard Enterprise also provides a reconciliation of each non-GAAP financial measures to its most directly comparable GAAP measure in this release and in other written materials that include these non-GAAP financial measures, and Hewlett Packard Enterprise encourages investors to review carefully those reconciliations carefully.&lt;br />&#xd;&#xa;&lt;b style=&quot;&quot;>&lt;br />&#xd;&#xa;Usefulness of non-GAAP financial measures to investors&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;&lt;/b>Hewlett Packard Enterprise believes that providing forecasts of revenue adjusted for currency, non-GAAP gross profit, non-GAAP gross profit margin, non-GAAP operating profit, non-GAAP operating profit growth, non-GAAP measure of other income and expenses, non-GAAP income tax rate, non-GAAP diluted net earnings per share, and free cash flow financial measures to investors, in addition to certain related GAAP measures, provides investors with greater transparency to the information used by Hewlett Packard Enterprise’s management in its financial and operational decision making and allows investors to see Hewlett Packard Enterprise’s results “through the eyes” of management. Hewlett Packard Enterprise further believes that providing this information better enables Hewlett Packard Enterprise’s investors to understand Hewlett Packard Enterprise’s operating performance and financial condition and to evaluate the efficacy of the methodology and information used by Hewlett Packard Enterprise’s management to evaluate and measure such performance and financial condition. Disclosure of these non-GAAP financial measures also facilitates comparisons of Hewlett Packard Enterprise’s operating performance with the performance of other companies in Hewlett Packard Enterprise’s industry that supplement their GAAP results with non-GAAP financial measures that may be calculated in a similar manner.&lt;br />&#xd;&#xa;&lt;b style=&quot;&quot;>&lt;br />&#xd;&#xa;Forward-looking statements&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;&lt;/b>This press release contains forward-looking statements that involve risks, uncertainties and assumptions. If the risks or uncertainties ever materialize or the assumptions prove incorrect, the results of Hewlett Packard Enterprise may differ materially from those expressed or implied by such forward-looking statements and assumptions. All statements other than statements of historical fact are statements that could be deemed forward-looking statements, including but not limited to the scope and duration of the novel coronavirus pandemic (&amp;quot;COVID-19&amp;quot;) and the ongoing conflict between Russia and Ukraine, our actions in response thereto, and their impacts on our business, operations, liquidity and capital resources, employees, customers, partners, supply chain, financial results, and the world economy; any projections of revenue, margins, expenses, investments, effective tax rates, interest rates, the impact of tax law changes and related guidance and regulations, net earnings, net earnings per share, cash flows, order backlog, deferred tax assets, share repurchases, currency exchange rates, repayments of debts including our asset-backed debt securities, or other financial items; any projections of the amount, execution, timing, and results of any transformation or impact of cost savings or restructuring plans; any statements of the plans, strategies, and objectives of management for future operations, as well as the execution of corporate transactions or contemplated acquisitions, research and development expenditures, and any resulting benefit, cost savings, charges, or revenue or profitability improvements; any statements concerning the expected development, performance, market share, or competitive performance relating to products or services; any statements regarding current or future macroeconomic trends or events and the impact of those trends and events on Hewlett Packard Enterprise and its financial performance; any statements regarding pending investigations, claims, or disputes; any statements of expectation or belief; and any statements of assumptions underlying any of the foregoing.&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;Risks, uncertainties and assumptions include the need to address the many challenges facing Hewlett Packard Enterprise's businesses; the competitive pressures faced by Hewlett Packard Enterprise's businesses; risks associated with executing Hewlett Packard Enterprise's strategy; the impact of macroeconomic and geopolitical trends and events, including but not limited to supply chain constraints, the inflationary environment, and the ongoing conflict between Russia and Ukraine; the need to effectively manage third-party suppliers and distribute Hewlett Packard Enterprise's products and services; the protection of Hewlett Packard Enterprise's intellectual property assets, including intellectual property licensed from third parties and intellectual property shared with its former parent; risks associated with Hewlett Packard Enterprise's international operations (including pandemics and public health problems, such as the outbreak of COVID-19, and geopolitical events, such as the ongoing conflict between Russia and Ukraine); the development of and transition to new products and services and the enhancement of existing products and services to meet customer needs and respond to emerging technological trends; the execution and performance of contracts by Hewlett Packard Enterprise and its suppliers, customers, clients, and partners, including any impact thereon resulting from events such as the COVID-19 pandemic; the hiring and retention of key employees; the execution, integration, and other risks associated with business combination and investment transactions; the impact of changes to environmental, global trade, and other governmental regulations; changes in our product, lease, intellectual property, or real estate portfolio; the payment or non-payment of a dividend for any period; the efficacy of using non-GAAP, rather than GAAP, financial measures in business projections and planning; the judgments required in connection with determining revenue recognition; impact of company policies and related compliance; utility of segment realignments; allowances for recovery of receivables and warranty obligations; provisions for, and resolution of, pending investigations, claims, and disputes; the impacts of the Inflation Reduction Act of 2022 and related guidance or regulations; and other risks that are described herein, including but not limited to the risks described in Hewlett Packard Enterprise’s Annual Report on Form 10-K for the fiscal year ended October 31, 2021, Quarterly Reports on Form 10-Q, Current Reports on Form 8-K, and in other filings made by Hewlett Packard Enterprise from time to time with the Securities and Exchange Commission.&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;As in prior periods, the financial information set forth in this press release, including tax-related items, reflects estimates based on information available at this time. While Hewlett Packard Enterprise believes these estimates to be reasonable, these amounts could differ materially from reported amounts in the Hewlett Packard Enterprise Annual Report on Form 10-K for the fiscal year ended October 31, 2022. Hewlett Packard Enterprise assumes no obligation and does not intend to update these forward-looking statements, except as required by applicable law.&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <textonlycomponent_bf
+                    jcr:created="{Date}2018-07-02T13:12:59.755-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-10-12T16:10:50.633Z"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    textOnly="&lt;h2>RELATED NEWS&lt;/h2>&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli_540225213
+                    jcr:created="{Date}2018-06-18T10:12:48.909-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:22:53.902-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <columncontainercompo
+                    jcr:created="{Date}2018-07-02T13:14:23.594-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:15:08.106-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/columnContainerComponent"
+                    columns="column-content-3">
+                    <column_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_7c25
+                            jcr:created="{Date}2018-07-02T13:15:28.984-07:00"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-10-19T18:40:29.925Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/blog-post/2022/10/hpe-securities-analyst-meeting-2022-leading-the-worlds-digital-transformation-and-delivering-sustainable-growth"
+                            description="&lt;p>Blog Post&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="HPE Securities Analyst Meeting 2022: Leading the world’s digital transformation and delivering sustainable growth"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="HPE Securities Analyst Meeting 2022: Leading the world’s digital transformation and delivering sustainable growth"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-10-19T18:40:29.925Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2022/10/image-norend/hpe-securities-analyst-meeting-2022-leading-the-worlds-digital-transformation-and-delivering-sustainable-growth.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-10-19T18:40:29.925Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_7c25>
+                    </column_0>
+                    <column_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_4dff
+                            jcr:created="{Date}2018-09-21T21:01:47.387Z"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-10-19T18:40:36.944Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/08/hewlett-packard-enterprise-reports-fiscal-2022-third-quarter-results"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="Hewlett Packard Enterprise reports fiscal 2022 third quarter results"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Hewlett Packard Enterprise reports fiscal 2022 third quarter results"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-10-19T18:40:36.944Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2022/08/image-norend/hewlett-packard-enterprise-reports-fiscal-2022-third-quarter-results.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-10-19T18:40:36.944Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_4dff>
+                    </column_1>
+                    <column_2
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_50f2
+                            jcr:created="{Date}2018-09-05T17:41:27.359Z"
+                            jcr:createdBy="nagle@hpe.com"
+                            jcr:lastModified="{Date}2022-10-19T18:40:44.150Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/08/hewlett-packard-enterprise-to-present-live-audio-webcast-of-third-quarter-earnings-conference-call"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="UPDATED TIME: Hewlett Packard Enterprise to Present Live Audio Webcast of Fiscal 2022 Third Quarter Earnings Conference Call"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="UPDATED TIME: Hewlett Packard Enterprise to Present Live Audio Webcast of Fiscal 2022 Third Quarter Earnings Conference Call"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-10-19T18:40:44.150Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                fileReference="/content/dam/hpe/newsroom/2022/08/image-norend/hewlett-packard-enterprise-to-present-live-audio-webcast-of-third-quarter-earnings-conference-call.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-10-19T18:40:44.150Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"/>
+                        </contentblock_50f2>
+                    </column_2>
+                </columncontainercompo>
+            </body-par>
+            <side-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <buttonctaitemcompone
+                    jcr:created="{Date}2018-06-28T13:06:31.075-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:06:46.099-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 1"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_661124859
+                    jcr:created="{Date}2018-06-28T13:06:51.115-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:11.079-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 2"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_606970408
+                    jcr:created="{Date}2018-06-28T13:06:53.400-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:02.336-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 3"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+            </side-par>
+        </main-par>
+        <image
+            jcr:lastModified="{Date}2018-09-05T17:38:02.066Z"
+            jcr:lastModifiedBy="nagle@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+    </jcr:content>
+</jcr:root>
