@@ -7,43 +7,57 @@
   },
   "description": "Detects changed files into a repository and triggers a retraining on that dataset",
   "input": {
-    "pfs": {
-      "name": "data",
-      "repo": "hf-download-stack-exchange",
-      "branch": "master",
-      "project": "starcoder",
-      "glob": "/",
-      "empty_files": true
-    }
+    "cross": [
+      {
+        "pfs": {
+          "name": "data",
+          "repo": "hf-python-data",
+          "branch": "master",
+          "project": "starcoder",
+          "glob": "/",
+          "emptyFiles": true
+        }
+      },
+      {
+        "pfs": {
+          "name": "model",
+          "repo": "hf-download-starcoder-model",
+          "branch": "master",
+          "project": "starcoder",
+          "glob": "/",
+          "emptyFiles": true
+        }
+      }
+    ]
   },
   "transform": {
     "cmd": [
       "/bin/sh"
     ],
     "stdin": [
-      "python train.py --git-url https://git@github.com:/determined-ai/pdk.git --git-ref starcoder --sub-dir examples/llm-starcoder/experiment --config distrib.yaml --repo hf-download-stack-exchange --model starcoder --project starcoder"
+      "python train.py --git-url https://git@github.com:/determined-ai/pdk.git --git-ref starcoder --sub-dir examples/llm-starcoder/experiment --config distrib.yaml --repo hf-python-data --model starcoder-python --project starcoder"
     ],
     "image": "pachyderm/pdk:train-v0.0.4",
     "secrets": [
       {
         "name": "pipeline-secret",
         "key": "det_master",
-        "env_var": "DET_MASTER"
+        "envVar": "DET_MASTER"
       },
       {
         "name": "pipeline-secret",
         "key": "det_user",
-        "env_var": "DET_USER"
+        "envVar": "DET_USER"
       },
       {
         "name": "pipeline-secret",
         "key": "det_password",
-        "env_var": "DET_PASSWORD"
+        "envVar": "DET_PASSWORD"
       },
       {
         "name": "pipeline-secret",
         "key": "pac_token",
-        "env_var": "PAC_TOKEN"
+        "envVar": "PAC_TOKEN"
       }
     ]
   },

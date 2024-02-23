@@ -1,0 +1,69 @@
+name: starcoder-fine-tune-java
+workspace: PDK Demos
+project: starcoder
+debug: true
+data:
+  pachyderm:
+    branch: 
+    host: 
+    port: 
+    previous_commit: 
+    project: 
+    repo: 
+    token: null
+environment:
+  environment_variables:
+    - NCCL_DEBUG=WARN
+    - https_proxy=
+    - http_proxy=
+  image:
+    cuda: vmtyler/llm-codegen-ft:1.0
+resources:
+  slots_per_trial: 8
+  resource_pool: A100
+searcher:
+  name: single
+  max_length:
+    batches: 400
+  metric: eval_loss
+hyperparameters:
+  training_arguments:
+    learning_rate: .00001
+entrypoint: >-
+  python -m determined.launch.torch_distributed
+  python finetune-mlde.py
+  --model_path "/tmp/model"
+  --dataset_name
+  "/tmp"
+  --split
+  "train"
+  --size_valid_set
+  "10000"
+  --streaming
+  --seq_length
+  "2048"
+  --max_steps
+  "400"
+  --batch_size
+  "1"
+  --input_column_name
+  "content"
+  --output_column_name
+  ""
+  --gradient_accumulation_steps
+  "16"
+  --lr_scheduler_type
+  "cosine"
+  --num_warmup_steps
+  1
+  --weight_decay
+  0.05
+  --output_dir
+  "./outputdir"
+  --log_freq
+  20
+  --save_freq
+  50
+  --eval_freq
+  50
+max_restarts: 3
