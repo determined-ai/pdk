@@ -47,9 +47,9 @@ entrypoint: >-
   --batch_size
   "1"
   --input_column_name
-  "question"
+  "content"
   --output_column_name
-  "response"
+  ""
   --gradient_accumulation_steps
   "16"
   --lr_scheduler_type
