@@ -19,7 +19,7 @@ environment:
   image:
     cuda: vmtyler/llm-codegen-ft:1.0
 resources:
-  slots_per_trial: 8
+  slots_per_trial: 1
   resource_pool: A100
 searcher:
   name: single
