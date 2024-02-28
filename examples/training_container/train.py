@@ -86,6 +86,11 @@ def parse_args():
         action=argparse.BooleanOptionalAction,
         help="Send previous commit to download only the diff",
     )
+    parser.add_argument(
+        "--mlde-workspace",
+        type=str,
+        help="MLDE workspace to be used",
+    )
     return parser.parse_args()
 
 
@@ -217,18 +222,20 @@ def get_checkpoint(exp):
 # =====================================================================================
 
 
-def get_or_create_model(client, model_name, pipeline, repo):
-    models = client.list_models(name=model_name)
+def get_or_create_model(client, model_name, pipeline, repo, workspace_name=None):
+    workspace_names = [workspace_name] if workspace_name else None
+    models = client.list_models(name=model_name, workspace_names=workspace_names)
 
     if len(models) > 0:
         print(f"Model already present. Updating it : {model_name}")
-        model = client.list_models(name=model_name)[0]
+        model = client.list_models(name=model_name, workspace_names=workspace_names)[0]
     else:
         print(f"Creating a new model : {model_name}")
         model = client.create_model(
             name=model_name,
             labels=[pipeline, repo],
             metadata={"pipeline": pipeline, "repository": repo},
+            workspace_name=workspace_name,
         )
 
     return model
@@ -299,7 +306,7 @@ def main():
         config_file, args.repo, pipeline, job_id, args.project
     )
     client = create_client()
-    model = get_or_create_model(client, args.model, pipeline, args.repo)
+    model = get_or_create_model(client, args.model, pipeline, args.repo, args.mlde_workspace)
     exp = run_experiment(client, config, workdir, model, args.incremental)
 
     if exp is None:
