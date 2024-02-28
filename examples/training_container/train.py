@@ -87,9 +87,9 @@ def parse_args():
         help="Send previous commit to download only the diff",
     )
     parser.add_argument(
-        "--mlde-workspace",
+        "--det-workspace",
         type=str,
-        help="MLDE workspace to be used",
+        help="Determined AI workspace to be used",
         default=None,
     )
     return parser.parse_args()
@@ -307,7 +307,7 @@ def main():
         config_file, args.repo, pipeline, job_id, args.project
     )
     client = create_client()
-    model = get_or_create_model(client, args.model, pipeline, args.repo, args.mlde_workspace)
+    model = get_or_create_model(client, args.model, pipeline, args.repo, args.det_workspace)
     exp = run_experiment(client, config, workdir, model, args.incremental)
 
     if exp is None:
