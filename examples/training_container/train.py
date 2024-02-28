@@ -90,6 +90,7 @@ def parse_args():
         "--mlde-workspace",
         type=str,
         help="MLDE workspace to be used",
+        default=None,
     )
     return parser.parse_args()
 
