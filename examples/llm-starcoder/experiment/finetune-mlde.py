@@ -97,7 +97,7 @@ def get_args():
     return parser.parse_args()
 
 
-def chars_token_ratio(dataset, tokenizer, input_column_name="prompt", output_column_name="completion", nb_examples=400):
+def chars_token_ratio(dataset, tokenizer, input_column_name="prompt", output_column_name="completion", nb_examples):
     """
     Estimate the average number of characters per token in the dataset.
     """
@@ -226,7 +226,11 @@ def create_datasets(tokenizer, args):
         valid_data = dataset["test"]
         print(f"Size of the train set: {len(train_data)}. Size of the validation set: {len(valid_data)}")
 
-    chars_per_token = chars_token_ratio(train_data, tokenizer, args.input_column_name, args.output_column_name)
+    if args.valid_size < 400:
+        token_test = args.valid_size
+    else:
+        token_test = 400
+    chars_per_token = chars_token_ratio(train_data, tokenizer, args.input_column_name, args.output_column_name, token_test)
     print(f"The character to token ratio of the dataset is: {chars_per_token:.2f}")
 
     train_dataset = ConstantLengthDataset(
@@ -345,10 +349,9 @@ if __name__ == "__main__":
         os.makedirs(args.dataset_name, exist_ok=True)
         model_repo, data_repo = data_config["pachyderm"]["repo"].split(",")
         data_config["pachyderm"]["repo"] = model_repo
-        model = download_data(data_config, args.model_path)
+        download_data(data_config, args.model_path)
         data_config["pachyderm"]["repo"] = data_repo
-
-        model = download_data(data_config, args.dataset_name)
+        download_data(data_config, args.dataset_name)
     # dbg- tmp logging
     log_level = logging.INFO
     logger.setLevel(log_level)
