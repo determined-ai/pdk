@@ -1,17 +1,15 @@
 import os
 import shutil
-
-import numpy as np
 import pachyderm_sdk
+import numpy as np
 import pandas as pd
 import nibabel as nib
-
+from model_code import utils
 from torchvision import transforms
 from pachyderm_sdk.api.pfs import File, FileType
 from pathlib import Path
-from sklearn.model_selection import train_test_split
 from torch.utils.data import Dataset
-from utils import PairedToTensor, PairedCrop, PairedNormalize, PairedRandomAffine, PairedRandomHorizontalFlip
+from sklearn.model_selection import train_test_split
 
 
 class MRI_Dataset(Dataset):
@@ -73,18 +71,18 @@ def get_train_val_datasets(download_dir, data_dir, trial_context):
                                      test_size = trial_context.get_hparam("validation_ratio"))
     
     train_transforms = transforms.Compose([                       
-        PairedToTensor(),
-        PairedCrop(),
-        PairedNormalize(trial_context.get_hparam("normalization")),
-        PairedRandomAffine(degrees=(trial_context.get_hparam("affine_degrees_min"), trial_context.get_hparam("affine_degrees_max")),
+        utils.PairedToTensor(),
+        utils.PairedCrop(),
+        utils.PairedNormalize(trial_context.get_hparam("normalization")),
+        utils.PairedRandomAffine(degrees=(trial_context.get_hparam("affine_degrees_min"), trial_context.get_hparam("affine_degrees_max")),
                            translate=(trial_context.get_hparam("affine_translate_min"), trial_context.get_hparam("affine_translate_max")),
                            scale_ranges=(trial_context.get_hparam("affine_scale_min"), trial_context.get_hparam("affine_scale_max"))),
-        PairedRandomHorizontalFlip(trial_context.get_hparam("hflip_pct")),
+        utils.PairedRandomHorizontalFlip(trial_context.get_hparam("hflip_pct")),
     ])
     eval_transforms = transforms.Compose([
-        PairedToTensor(),
-        PairedCrop(),
-        PairedNormalize(trial_context.get_hparam("normalization"))
+        utils.PairedToTensor(),
+        utils.PairedCrop(),
+        utils.PairedNormalize(trial_context.get_hparam("normalization"))
     ])
 
 

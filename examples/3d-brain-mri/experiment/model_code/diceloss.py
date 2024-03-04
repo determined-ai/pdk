@@ -1,5 +1,5 @@
 import torch
-from torch import nn as nn
+from torch import nn
 # Code was adapted and modified from the following files:
 # https://github.com/black0017/MedicalZooPytorch/blob/master/lib/losses3D/basic.py
 # https://github.com/black0017/MedicalZooPytorch/blob/master/lib/losses3D/BaseClass.py

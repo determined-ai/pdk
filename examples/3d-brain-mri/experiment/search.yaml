@@ -54,7 +54,7 @@ min_validation_period:
   epochs: 1
 perform_initial_validation: True
 max_restarts: 0
-entrypoint: model_def:MRIVnetTrial
+entrypoint: model_code.model_def:MRIVnetTrial
 profiling:
   enabled: True
 resources:

@@ -1,15 +1,10 @@
 import os
-from typing import Any, Dict, Sequence, Tuple, Union, cast
-
-from vnet import VNet
-from diceloss import GeneralizedDiceLoss
-
-import data
-import filelock
 import torch
-from data import download_pach_repo
+import filelock
+from model_code import vnet, diceloss, data, utils
 from determined.pytorch import DataLoader, PyTorchTrial, PyTorchTrialContext
-from utils import weights_init, tb_write_video
+
+from typing import Any, Dict, Sequence, Tuple, Union, cast
 
 TorchData = Union[Dict[str, torch.Tensor], Sequence[torch.Tensor], torch.Tensor]
 
@@ -47,13 +42,13 @@ class MRIVnetTrial(PyTorchTrial):
         
         if training:
             try:
-                self.model = VNet(
+                self.model = vnet.VNet(
                             in_channels=self.context.get_hparam("input_channels"),
                             classes=self.context.get_hparam("num_classes"),
                             dropout=self.context.get_hparam("dropout"),
                             elu=self.context.get_hparam("elu")
                 )
-                self.model.apply(weights_init)
+                self.model.apply(utils.weights_init)
                 self.model = self.context.wrap_model(self.model)
                 self.optimizer = self.context.wrap_optimizer(
                     torch.optim.Adam(
@@ -62,19 +57,19 @@ class MRIVnetTrial(PyTorchTrial):
                         weight_decay=self.context.get_hparam("weight_decay")
                     )
                 )
-                self.loss = GeneralizedDiceLoss(classes=self.context.get_hparam("num_classes"))
+                self.loss = diceloss.GeneralizedDiceLoss(classes=self.context.get_hparam("num_classes"))
             except:
                 pass
         else:
-            self.model = VNet(
+            self.model = vnet.VNet(
                         in_channels=self.context.get_hparam("input_channels"),
                         classes=self.context.get_hparam("num_classes"),
                         dropout=self.context.get_hparam("dropout"),
                         elu=self.context.get_hparam("elu")
             )
-            self.model.apply(weights_init)
+            self.model.apply(utils.weights_init)
             self.model = self.context.wrap_model(self.model)
-            self.loss = GeneralizedDiceLoss(classes=self.context.get_hparam("num_classes"))
+            self.loss = diceloss.GeneralizedDiceLoss(classes=self.context.get_hparam("num_classes"))
     
 
     def train_batch(self, batch: TorchData, epoch_idx: int, batch_idx: int):
@@ -87,7 +82,7 @@ class MRIVnetTrial(PyTorchTrial):
         # Write 3D slice video to Tensorboard every n epochs
         tb_epochs = 2
         if ((batch_idx/self.num_batches % tb_epochs) == 0) and self.context.distributed.get_rank() == 0:
-            tb_write_video(self.writer, 'train_collage', imgs, masks, output, epoch_idx)
+            utils.tb_write_video(self.writer, 'train_collage', imgs, masks, output, epoch_idx)
         return {"loss": loss, "Dice": dice_scores[-1]}
 
     def evaluate_batch(self, batch: TorchData):
@@ -104,7 +99,7 @@ class MRIVnetTrial(PyTorchTrial):
 
     def download_data(self, data_config, data_dir):
 
-        files = download_pach_repo(
+        files = data.download_pach_repo(
             data_config["pachyderm"]["host"],
             data_config["pachyderm"]["port"],
             data_config["pachyderm"]["repo"],
