@@ -1,0 +1,47 @@
+{
+  "pipeline": {
+    "name": "3d-brain-mri-train"
+  },
+  "description": "Detects changed files into a repository and triggers a retraining on that dataset",
+  "input": {
+    "pfs": {
+      "name": "data",
+      "repo": "raw_brain_mri_data",
+      "branch": "main",
+      "glob": "/",
+      "empty_files": true
+    }
+  },
+  "transform": {
+    "cmd": [
+      "/bin/sh"
+    ],
+    "stdin": [
+      "python train.py --git-url https://git@github.com:/determined-ai/pdk.git --git-ref dev_3dmri --sub-dir examples/3d-brain-mri/experiment/model_code --config const.yaml --repo raw_brain_mri_data --model pdk-3d-brain-mri --project pdk-3d-brain-mri"
+    ],
+    "image": "pachyderm/pdk:train-v0.0.5",
+    "secrets": [
+      {
+        "name": "pipeline-secret",
+        "key": "det_master",
+        "env_var": "DET_MASTER"
+      },
+      {
+        "name": "pipeline-secret",
+        "key": "det_user",
+        "env_var": "DET_USER"
+      },
+      {
+        "name": "pipeline-secret",
+        "key": "det_password",
+        "env_var": "DET_PASSWORD"
+      },
+      {
+        "name": "pipeline-secret",
+        "key": "pac_token",
+        "env_var": "PAC_TOKEN"
+      }
+    ]
+  },
+  "autoscaling": true
+}

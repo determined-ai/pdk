@@ -1,0 +1,62 @@
+name: Pipeline-Run-3D-Brain-MRI-Search
+workspace: PDK Demos
+project: pdk-3d-brain-mri
+data:
+  data_dir: "/data"
+  download_directory: "/tmp"
+  pachyderm:
+    host:
+    port:
+    repo:
+    project:
+    branch:
+    token:
+hyperparameters:
+  global_batch_size: 4
+  input_channels: 4
+  learning_rate:
+    type: log
+    base: 10
+    maxval: -2
+    minval: -4
+  dropout:
+    type: double
+    minval: 0.0
+    maxval: 0.7
+  weight_decay: 0.0
+  split_seed: 1
+  validation_ratio: 0.15
+  hflip_pct: 0.5
+  normalization:
+    type: categorical
+    vals:
+      - 'percentile'
+      - 'min-max'
+      - 'zscore'
+  affine_degrees_min: -15
+  affine_degrees_max: 15
+  affine_scale_min: 0.8
+  affine_scale_max: 1.2
+  affine_translate_min: 0.1
+  affine_translate_max: 0.1
+  elu: False
+  num_classes: 1
+searcher:
+  max_length:
+    epochs: 15
+  max_trials: 80
+  mode: aggressive
+  max_concurrent_trials: 4
+  metric: val_Dice
+  name: adaptive_asha
+  smaller_is_better: false
+min_validation_period:
+  epochs: 1
+perform_initial_validation: True
+max_restarts: 0
+entrypoint: model_def:MRIVnetTrial
+profiling:
+  enabled: True
+resources:
+  slots_per_trial: 1
+  resource_pool: A100
