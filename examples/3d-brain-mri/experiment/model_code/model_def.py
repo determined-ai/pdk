@@ -45,7 +45,7 @@ class MRIVnetTrial(PyTorchTrial):
                 self.model = vnet.VNet(
                             in_channels=self.context.get_hparam("input_channels"),
                             classes=self.context.get_hparam("num_classes"),
-                            dropout=self.context.get_hparam("dropout"),
+                            dropout=float(self.context.get_hparam("dropout")),
                             elu=self.context.get_hparam("elu")
                 )
                 self.model.apply(utils.weights_init)
@@ -64,7 +64,7 @@ class MRIVnetTrial(PyTorchTrial):
             self.model = vnet.VNet(
                         in_channels=self.context.get_hparam("input_channels"),
                         classes=self.context.get_hparam("num_classes"),
-                        dropout=self.context.get_hparam("dropout"),
+                        dropout=float(self.context.get_hparam("dropout")),
                         elu=self.context.get_hparam("elu")
             )
             self.model.apply(utils.weights_init)
