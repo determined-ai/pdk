@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/apps/settings/wcm/designs/hpeweb"
+        cq:lastModified="{Date}2023-05-15T18:07:25.512Z"
+        cq:lastModifiedBy="christine.seales@hpe.com"
+        cq:tags="[hpe-newsroom:categories/big-data,hpe-newsroom:categories/cloud]"
+        cq:template="/apps/hpeweb/templates/page-text-heavy"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="HPE Ezmeral Software accelerates and simplifies analytics and AI/ML initiatives with significant advances to the hybrid multi-cloud data and analytics platform "
+        jcr:uuid="ae6fb9e3-5173-4c06-ba78-6975b25fafa6"
+        sling:resourceType="hpeweb/components/pages/page-text-heavy"
+        browserTitle="HPE Ezmeral Software accelerates and simplifies analytics and AI/ML initiatives with significant advances to the hybrid multi-cloud data and analytics platform "
+        changefreq="daily"
+        contentType="Press Release"
+        displayDate="{Date}2023-05-16T09:00:00.000-04:00"
+        metaDescription="HPE Ezmeral Software extends the capabilities of HPE GreenLake and provides the foundation for driving analytics and AI/ML insights across distributed enterprises"
+        metaKeywords="Data Fabric, Data Analytics, AI, ML,  hybrid cloud, multi-cloud, software, Kubeflow, MLOps, "
+        metaOgImage="/content/dam/hpe/newsroom/2023/05/image-norend/hpe-ezmeral-software-accelerates-and-simplifies-analytics-and-aiml-initiatives.jpg"
+        metaTwitterCardType="summary_large_image"
+        msmcomponent="/content/hpe/base/blueprint/newsroom/press-release/2023/05/hpe-ezmeral-software-accelerates-and-simplifies-analytics-and-aiml-initiatives-with-significant-advances-to-the-hybrid-multi-cloud-data-and-analytics-platform/jcr:content/main-par/body-par/textonlycomponent_fe"
+        navTitle="HPE Ezmeral Software accelerates and simplifies analytics and AI/ML initiatives with significant advances to the hybrid multi-cloud data and analytics platform "
+        pageTitle="HPE Ezmeral Software accelerates and simplifies analytics and AI/ML initiatives with significant advances to the hybrid multi-cloud data and analytics platform "
+        priority="(None)"
+        socialDescription="HPE Ezmeral Software extends the capabilities of HPE GreenLake and provides the foundation for driving analytics and AI/ML insights across distributed enterprises"
+        subtitle="HPE Ezmeral Software extends the capabilities of HPE GreenLake and provides the foundation for driving analytics and AI/ML insights across distributed enterprises"
+        theme="dark">
+        <main-par
+            jcr:lastModified="{Date}2018-06-28T13:09:39.402-07:00"
+            jcr:lastModifiedBy="velazquez@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="hpeweb/components/content/textHeavyComponent"
+            siderail="none">
+            <subtitle
+                jcr:lastModified="{Date}2023-05-09T17:09:50.633Z"
+                jcr:lastModifiedBy="christine.seales@hpe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="hpeweb/components/content/newsroom/newsroomSubtitleComponent"
+                textOnly="MAY 16, 2023 • PRESS RELEASE"/>
+            <body-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <imageonlycomponent_c
+                    jcr:created="{Date}2018-06-18T09:06:27.827-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-05-12T01:13:48.895Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/imageOnlyComponent"
+                    fileReference="/content/dam/hpe/newsroom/2023/05/image-norend/hpe-ezmeral-software-accelerates-and-simplifies-analytics-and-aiml-initiatives.jpg"
+                    imageAlignment="hpe-image-center"
+                    imageAltText="HPE Guarantees"
+                    topMargin="60"
+                    videoSource="video"
+                    videoType="youtube"/>
+                <textonlycomponent_cd
+                    jcr:created="{Date}2018-06-18T09:12:49.742-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-05-12T00:49:27.101Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    leftPadding="30"
+                    rightPadding="30"
+                    textIsRich="true"
+                    textOnly="&lt;h3>IN THIS ARTICLE&lt;/h3>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>Global data plane federates multi-format data across cloud and on-premises deployments for simple data access, analysis and governance &lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>Fully curated, enterprise-supported solution for open-source analytics tools improves productivity &lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>New SaaS approach provides predictable, transparent economics and precise controls to optimize cost and utilization across environments&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli
+                    jcr:created="{Date}2018-06-18T09:16:54.243-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-18T09:18:45.987-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <textonlycomponent
+                    jcr:created="{Date}2023-05-12T00:49:55.078Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2023-05-12T00:53:53.149Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;h2>HPE Ezmeral Software extends the capabilities of HPE GreenLake and provides the foundation for driving analytics and AI/ML insights across distributed enterprises&lt;/h2>&#xd;&#xa;"/>
+                <textonlycomponent_e9
+                    jcr:created="{Date}2018-06-22T11:24:07.263-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-05-12T00:54:56.613Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>HOUSTON, Texas – May 16, 2023 &lt;/b>– &lt;a href=&quot;https://www.hpe.com/us/en/home.html&quot; target=&quot;_blank&quot;>Hewlett Packard Enterprise&lt;/a> (NYSE: HPE) today introduced the next step in the HPE Ezmeral Software platform, designed to help organizations leverage data globally and deploy analytics at scale through a predictable, software-as-a-service (SaaS) solution for hybrid multi-cloud environments. &lt;a href=&quot;https://www.hpe.com/us/en/software.html&quot; target=&quot;_blank&quot;>HPE Ezmeral Software&lt;/a> extends the edge-to-cloud data and analytics capabilities of HPE GreenLake and provides the data and analytics foundation for machine learning (ML) and artificial intelligence (AI) projects. The simplified platform now features an all-new user interface, expanded selection of the most popular data sources and open-source tools, interoperability across the platform and its tools, and a consistent cloud operating experience.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;Despite growing demand to create new revenue streams and efficiencies from data, only 24 percent of enterprise data created in 2022 was leveraged for analytics or fed into AI/ML workloads&lt;sup>1&lt;/sup>. This is due to several challenges that organizations of all types and sizes face today. First, data is more siloed across multiple clouds and different data formats and sources. Second, enterprises grapple with analytics tools and workloads that struggle to meet performance, cost and compliance requirements. Finally, public cloud-based solutions bring limited data controls, unpredictable costs and risk of vendor and data lock-in, while do-it-yourself, open-source tools are not built for enterprise IT and security requirements.&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <pullquote
+                    jcr:created="{Date}2023-05-12T00:55:04.971Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2023-05-12T00:56:08.640Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution=" "
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>HPE Ezmeral Software provides a complete data and analytics platform with predictable and transparent economics, enabling organizations to confidently innovate with data everywhere&lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2023-05-12T00:56:08.640Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote>
+                <textonlycomponent_b4
+                    jcr:created="{Date}2018-06-18T09:18:06.257-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-05-12T00:59:15.555Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>HPE Ezmeral Software provides a complete data and analytics platform with predictable and transparent economics, enabling organizations to confidently innovate with data everywhere. The enhanced HPE Ezmeral Data Fabric Software provides the foundation with a single, federated view of data across hybrid and multi-cloud deployments, so organizations can easily access, analyze, and govern data globally. The new HPE Ezmeral Unified Analytics Software builds on this foundation and empowers developers and data analytics professionals with self-service access to fully managed and curated open-source tools for the complete lifecycle of analytics and AI/ML workloads. Together, the data fabric and analytics solutions from HPE enable organizations to harness data across their enterprise for analytics and AI/ML projects that improve decision-making and unlock new revenue streams.&lt;br>&#xd;&#xa;&amp;nbsp;&lt;/span>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;b>HPE Ezmeral Data Fabric Software &lt;/b>provides seamless access across multiple data sources and formats, including files, objects, tables and streams, as well as across hybrid cloud deployments. The software is available for the first time as a SaaS offering and with a new intuitive user interface. Customers now have precise controls and automated policy management for optimizing workload placement according to performance, data locality, sovereignty, costs and compliance.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;b>HPE Ezmeral Unified Analytics Software &lt;/b>is a comprehensive new offering for data engineering, data science and data analytics delivered as a SaaS and self-service experience. Customers can build data pipelines, develop, deploy and monitor models and visualize data with evergreen tools including Apache Airflow, Apache Spark, Apache Superset, Feast, Kubeflow, MLFlow, Presto SQL and Ray. New connectors and data sources include Snowflake, MySQL, DeltaLake, Teradata and Oracle. With the open and extensible software, teams can easily add applications, locations, and sources as needs evolve. &lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"/>
+                <pullquote_349b
+                    jcr:created="{Date}2018-06-18T09:23:47.197-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-05-12T01:00:13.143Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution=" "
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>HPE Ezmeral Data Fabric Software provides the foundation with a single, federated view of data across hybrid and multi-cloud deployments, so organizations can easily access, analyze, and govern data globally &lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2023-05-12T01:00:13.143Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote_349b>
+                <textonlycomponent_97
+                    jcr:created="{Date}2018-06-22T11:22:31.557-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-05-12T01:01:26.435Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>While competitive offerings often require customers to incur significant costs to move data to the cloud for analysis, HPE Ezmeral Software is hybrid by design and is deployable across the edge, colocation, on-premises, and public cloud environments. The location-agnostic deployment approach minimizes data ingress and egress costs by enabling customers to run analysis where the data and compute capabilities reside.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;“Despite the hype about AI and Generative AI applications transforming business, most companies still struggle to bring these technologies into their basic workflows,” said Mohan Rajagopalan, vice president and general manager, HPE Ezmeral Software. “Our solutions address where organizations are today, empowering them to leverage the tools they already use, so they can focus resources on accelerating their AI, analytics, and digital modernization journeys, instead of managing cumbersome data siloes or untested, disconnected open-source tools.”&lt;br>&#xd;&#xa;&lt;b>&lt;br>&#xd;&#xa;Enterprises Turn to HPE Ezmeral Software for AI/ML Outcomes&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;/b>The HPE Ezmeral Software value proposition and technology offerings have resonated with customers and the portfolio achieved double-digit year-over-year revenue growth in fiscal Q1. Customers are using the software for fraud and risk detection in financial services, medical research and patient healthcare, quality analysis in manufacturing, network monitoring in telecommunications and autonomous driving.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;The financial services market is a leading industry for HPE’s data and analytics platform. Nomura, a global financial services group, uses AI and ML software to digitally transform financial services and protect its assets. “Risk prediction and anomaly detection are critical capabilities to protect our global financial markets. These workloads require massive amounts of data to be ingested at scale. With HPE Ezmeral Data Fabric Software, we are able to deliver a strategic platform to ingest, store, secure petabytes of financial data and also use a subset of it for machine learning,” Arnab Chatterjee, vice president, global head database, middleware and web engineering, Nomura.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;Carestream Health, a global healthcare company, provides AI-driven software to help improve patient care by enhancing the medical images used for diagnosis.&amp;nbsp;“Our mission is to provide radiologists with as much insight as possible from medical imaging so they can make confident, effective patient diagnoses. Using the fully managed, open-source machine learning tools within the HPE Ezmeral Software, we have implemented an AI-as-a-service platform that has led to a 73% reduction in time to train our machine learning models,”&amp;nbsp;John Kopcienski, director, Rochester R&amp;amp;D Center, Carestream.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;Alliant provides consumer marketers across hundreds of major brands with audience data solutions that deliver insight and profitable outcomes. To keep pace with accelerated growth in programmatic digital and television advertising, Alliant wanted to further enhance processing and delivery capabilities, particularly related to AI and machine learning.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;“Alliant’s analytics tools are currently deployed on-premises and in the cloud. HPE Ezmeral Software enables us to scale audience creation and delivery, optimize where the data storage and analysis occurs and reduce capital expenses through a managed services and SaaS approach,” William Adam, chief technology officer, Alliant.&lt;/span>&lt;/p>&#xd;&#xa;"/>
+                <textonlycomponent_fe
+                    jcr:created="{Date}2018-06-18T09:28:54.456-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-05-15T18:07:25.499Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>HPE Extends Momentum in Open-Source Tools and Analytics&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/b>Building on the growing customer interest around managed open-source technologies, HPE established &lt;a href=&quot;https://www.hpe.com/us/en/newsroom/press-release/2023/05/hpe-opens-global-center-of-excellence-for-hpe-ezmeral-software-in-greece.html&quot; target=&quot;_blank&quot;>a new global center of excellence (CoE) for HPE Ezmeral Software&lt;/a> in Greece this April. HPE recently opened more than 30 new positions for software engineers and developers who have extensive skills and experience in open-source tools, including the MLOps platform, Kubeflow, to bolster this new CoE and has already successfully filled most roles.&lt;br>&#xd;&#xa; &lt;b>&lt;br>&#xd;&#xa;Availability and Additional Resources:&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/b>HPE Ezmeral Data Fabric Software and HPE Ezmeral Unified Analytics Software are available now as a SaaS offering to run on any infrastructure or public cloud.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; For more detailed information on the updated HPE Ezmeral Software portfolio, click on the links below:&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>&amp;nbsp;&lt;/span>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Expert Blog: &lt;/b>&lt;a href=&quot;https://community.hpe.com/t5/hpe-ezmeral-uncut/outperform-your-competition-with-hybrid-data-insights/ba-p/7187867&quot; target=&quot;_blank&quot;>&lt;b>Outperform your competition with hybrid data insights&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;/b>&lt;/a>&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Expert Blog: &lt;a href=&quot;https://community.hpe.com/t5/hpe-ezmeral-uncut/hpe-ezmeral-unified-analytics-software-end-to-end-solution-for/ba-p/7188159&quot; target=&quot;_blank&quot;>The end-to-end solution for AI and analytics&lt;/a> &lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa; &lt;/b>&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;a href=&quot;/content/dam/hpe/newsroom/2023/05/image-norend/analyst-and-customer-insights-quote-sheet.pdf&quot; target=&quot;_blank&quot;>&lt;b>Analyst and Customer Insights quote sheet&lt;/b>&lt;/a> &lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                    topPadding="20"/>
+                <textonlycomponent_46827824
+                    jcr:created="{Date}2023-05-12T20:35:27.020Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2023-05-12T20:37:18.310Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>About Hewlett Packard Enterprise&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>Hewlett Packard Enterprise (NYSE: HPE) is the global edge-to-cloud company that helps organizations accelerate outcomes by unlocking value from all of their data, everywhere. Built on decades of reimagining the future and innovating to advance the way people live and work, HPE delivers unique, open and intelligent technology solutions as a service.&amp;nbsp; With offerings spanning Cloud Services, Compute, High Performance Computing &amp;amp; AI, Intelligent Edge, Software, and Storage, HPE provides a consistent experience across all clouds and edges, helping customers develop new business models, engage in new ways, and increase operational performance. For more information, visit: &lt;a href=&quot;http://www.hpe.com&quot; target=&quot;_blank&quot;>www.hpe.com&lt;/a>.&lt;br>&#xd;&#xa;&lt;b>&lt;br>&#xd;&#xa;Media Contact:&lt;br>&#xd;&#xa;&lt;/b>Victor O’Brien&lt;br>&#xd;&#xa;&lt;a href=&quot;mailto:victor.obrien@HPE.com&quot;>victor.obrien@HPE.com&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-small&quot;>&lt;b>Sources&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-small&quot;>&lt;sup>1&lt;/sup> Worldwide Global DataSphere Volume of Data Analyzed and Fed into AI Forecast, 2023–2026: Are You Helping Your Clients Shine a Light on Dark Data? (IDC #US50447623, 2023)&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <textonlycomponent_bf
+                    jcr:created="{Date}2018-07-02T13:12:59.755-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-10-12T16:10:50.633Z"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    textOnly="&lt;h2>RELATED NEWS&lt;/h2>&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli_540225213
+                    jcr:created="{Date}2018-06-18T10:12:48.909-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:22:53.902-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <columncontainercompo
+                    jcr:created="{Date}2018-07-02T13:14:23.594-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:15:08.106-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/columnContainerComponent"
+                    columns="column-content-3">
+                    <column_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_7c25
+                            jcr:created="{Date}2018-07-02T13:15:28.984-07:00"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2023-05-12T01:10:13.835Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2023/05/hpe-opens-global-center-of-excellence-for-hpe-ezmeral-software-in-greece"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="HPE opens global Center of Excellence for HPE Ezmeral Software in Greece"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="HPE opens global Center of Excellence for HPE Ezmeral Software in Greece"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2023-05-12T01:10:13.835Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2023/05/image-norend/hpe-opens-global-center-of-excellence-for-hpe-ezmeral-software-in-greece.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2023-05-12T01:10:13.835Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_7c25>
+                    </column_0>
+                    <column_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_7c25_co
+                            jcr:created="{Date}2018-07-02T13:15:28.984-07:00"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2023-05-12T01:09:11.188Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/07/catharina-hospital-selects-hpe-ezmeral-to-power-data-first-modernization-and-improve-accuracy-and-speed-of-diagnosis"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="Catharina Hospital selects HPE Ezmeral to power data-first modernization and improve accuracy and speed of diagnosis"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Catharina Hospital selects HPE Ezmeral to power data-first modernization and improve accuracy and speed of diagnosis"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2023-05-12T01:09:11.188Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2022/07/image-norend/catharina-hospital-selects-hpe-ezmeral-to-power-data-first-modernization-and-improve-accuracy-and-speed-of-diagnosis.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2023-05-12T01:09:11.188Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_7c25_co>
+                    </column_1>
+                    <column_2
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_7c25_co
+                            jcr:created="{Date}2018-07-02T13:15:28.984-07:00"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2023-05-12T01:07:35.381Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/03/hpe-greenlake-selected-by-bmw-group-to-unify-data-management-across-global-locations-and-the-cloud"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="HPE GreenLake selected by BMW Group to unify data management across global locations and the cloud"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="HPE GreenLake selected by BMW Group to unify data management across global locations and the cloud"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2023-05-12T01:07:35.381Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2022/03/image-norend/hpe-greenlake-selected-by-bmw-group-to-unify-data-management-across-global-locations-and-the-cloud.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2023-05-12T01:07:35.381Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_7c25_co>
+                    </column_2>
+                </columncontainercompo>
+            </body-par>
+            <side-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <buttonctaitemcompone
+                    jcr:created="{Date}2018-06-28T13:06:31.075-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:06:46.099-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 1"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_661124859
+                    jcr:created="{Date}2018-06-28T13:06:51.115-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:11.079-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 2"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_606970408
+                    jcr:created="{Date}2018-06-28T13:06:53.400-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:02.336-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 3"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+            </side-par>
+        </main-par>
+        <image
+            jcr:lastModified="{Date}2018-09-05T17:38:02.066Z"
+            jcr:lastModifiedBy="nagle@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+    </jcr:content>
+</jcr:root>

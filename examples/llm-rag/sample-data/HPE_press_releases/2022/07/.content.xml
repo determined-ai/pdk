@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/apps/settings/wcm/designs/hpeweb"
+        cq:lastModified="{Date}2022-01-12T16:34:16.410Z"
+        cq:lastModifiedBy="christine.seales@hpe.com"
+        cq:template="/apps/hpeweb/templates/page-generic-template"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="07"
+        sling:resourceType="hpeweb/components/pages/page-generic-template"/>
+    <catharina-hospital-selects-hpe-ezmeral-to-power-data-first-modernization-and-improve-accuracy-and-speed-of-diagnosis/>
+    <french-cloud-service-provider-antemeta-selects-hpe-greenlake-to-introduce-new-automated-disaster-recovery-service/>
+    <mcmaster-university-cracks-genome-sequencing-to-fight-covid-19-and-other-infectious-diseases-with-hewlett-packard-enterprise/>
+</jcr:root>

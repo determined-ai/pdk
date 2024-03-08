@@ -1,0 +1,50 @@
+{
+  "pipeline": {
+    "name": "ui-client",
+    "project": {
+      "name": "pdk-llm-rag"
+    }
+  },
+  "description": "Client UI for End-Users",
+  "input": {
+    "pfs": {
+      "branch": "master",
+      "glob": "/",
+      "repo": "code",
+      "name": "code"
+    }
+  },
+  "transform": {
+    "cmd": [
+      "/bin/sh"
+    ],
+    "image": "mendeza/mistral-llm-rag-ui:0.0.7",
+    "secrets": [
+      {
+        "name": "clientui-secret",
+        "key": "API_HOST",
+        "env_var": "API_HOST"
+      },
+      {
+        "name": "clientui-secret",
+        "key": "API_PORT",
+        "env_var": "API_PORT"
+      },
+      {
+        "name": "clientui-secret",
+        "key": "DB_PATH",
+        "env_var": "DB_PATH"
+      }      
+    ],      
+    "stdin": [
+        "python3 -m chainlit run /pfs/code/src/py/app.py --host 0.0.0.0 --port 8080"
+    ]
+  },
+  "service": {
+    "type": "LoadBalancer",
+    "internalPort": 8080,
+    "externalPort": 8080
+  },
+  "parallelism_spec": { "constant" : 1 },
+  "podPatch": "[{\"op\": \"add\",\"path\": \"/volumes/-\",\"value\": {\"name\": \"task-pv-storage\",\"persistentVolumeClaim\": {\"claimName\": \"pdk-pvc\"}}}, {\"op\": \"add\",\"path\": \"/containers/0/volumeMounts/-\",\"value\": {\"mountPath\": \"/run/determined/workdir/shared_fs\",\"name\": \"task-pv-storage\"}}]"
+}

@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/apps/settings/wcm/designs/hpeweb"
+        cq:lastModified="{Date}2023-02-23T22:27:21.186Z"
+        cq:lastModifiedBy="christine.seales@hpe.com"
+        cq:tags="[hpe-newsroom:categories/services,hpe-newsroom:categories/industry---telcom-&amp;-5g]"
+        cq:template="/apps/hpeweb/templates/page-text-heavy"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Hewlett Packard Enterprise doubles down on private 5G, extends leadership in wireless connectivity with acquisition of Athonet "
+        jcr:uuid="428552aa-2ffc-431e-92ed-d1187b494c55"
+        sling:resourceType="hpeweb/components/pages/page-text-heavy"
+        browserTitle="Hewlett Packard Enterprise doubles down on private 5G, extends leadership in wireless connectivity with acquisition of Athonet "
+        changefreq="daily"
+        contentType="Press Release"
+        displayDate="{Date}2023-02-23T23:00:00.000-05:00"
+        metaDescription="Athonet acquisition strengthens HPE’s private networking capabilities to help enterprise customers accelerate 5G deployments and telco customers drive new revenue streams"
+        metaKeywords="4G, 5G, edge-to-cloud, private 5G, mobile core networks, network, networking, networks, HPE, Aruba, Athonet, IoT, acquisition, cellular, telco, telecom, telecommunications, Wi-Fi, WiFi, private networks, HPE GreenLake, B2B, CSP, communications service provider, wireless connectivity"
+        metaOgImage="/content/dam/hpe/newsroom/2022/11/image-norend/hewlett-packard-enterprise-reports-fiscal-2022-results-with-record-q4-performance.jpg"
+        metaTwitterCardType="summary_large_image"
+        msmcomponent="/content/hpe/base/blueprint/newsroom/press-release/2023/02/hewlett-packard-enterprise-doubles-down-on-private-5g-extends-leadership-in-wireless-connectivity-with-acquisition-of-athonet/jcr:content/main-par/body-par/imageonlycomponent_c"
+        navTitle="Hewlett Packard Enterprise doubles down on private 5G, extends leadership in wireless connectivity with acquisition of Athonet "
+        pageTitle="Hewlett Packard Enterprise doubles down on private 5G, extends leadership in wireless connectivity with acquisition of Athonet "
+        priority="(None)"
+        socialDescription="Athonet acquisition strengthens HPE’s private networking capabilities to help enterprise customers accelerate 5G deployments and telco customers drive new revenue streams"
+        subtitle="Athonet acquisition strengthens HPE’s private networking capabilities to help enterprise customers accelerate 5G deployments and telco customers drive new revenue streams"
+        theme="dark">
+        <main-par
+            jcr:lastModified="{Date}2018-06-28T13:09:39.402-07:00"
+            jcr:lastModifiedBy="velazquez@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="hpeweb/components/content/textHeavyComponent"
+            siderail="none">
+            <subtitle
+                jcr:lastModified="{Date}2023-02-23T14:27:54.965Z"
+                jcr:lastModifiedBy="christine.seales@hpe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="hpeweb/components/content/newsroom/newsroomSubtitleComponent"
+                textOnly="FEBRUARY 23, 2023 • PRESS RELEASE"/>
+            <body-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <imageonlycomponent_c
+                    jcr:created="{Date}2018-06-18T09:06:27.827-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-02-23T22:26:26.601Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/imageOnlyComponent"
+                    ctaNewWindow="false"
+                    disableCaptionUnderline="false"
+                    disableImageScaling="false"
+                    enableImageAccent="false"
+                    fileReference="/content/dam/hpe/newsroom/2022/11/image-norend/hewlett-packard-enterprise-reports-fiscal-2022-results-with-record-q4-performance.jpg"
+                    gradientPlacement="top-right"
+                    imageAlignment="hpe-image-center"
+                    imageAltText="HPE Guarantees"
+                    isVideo="false"
+                    isZoom="false"
+                    textIsRich="true"
+                    topMargin="60"
+                    useNativeAspectRatio="false"
+                    videoSource="video"
+                    videoType="youtube"
+                    zoomBackground="white"/>
+                <textonlycomponent_cd
+                    jcr:created="{Date}2018-06-18T09:12:49.742-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-02-23T22:03:51.991Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    leftPadding="30"
+                    rightPadding="30"
+                    textIsRich="true"
+                    textOnly="&lt;h3>IN THIS ARTICLE&lt;/h3>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>HPE is acquiring private cellular technology provider Athonet to expand our overall private 5G offerings to both enterprises and communication service providers&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>The combination of Aruba+Athonet now gives us the most complete private 5G and Wi-Fi portfolio in the market, and puts HPE at the forefront of a growing private 5G market that IDC predicts to grow to $1.6B annually by 2026&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli
+                    jcr:created="{Date}2018-06-18T09:16:54.243-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-18T09:18:45.987-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <textonlycomponent
+                    jcr:created="{Date}2023-02-23T14:27:22.804Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2023-02-23T14:27:34.910Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;h2>Athonet acquisition strengthens HPE’s private networking capabilities to help enterprise customers accelerate 5G deployments and telco customers drive new revenue streams&lt;i>&lt;/i>&lt;/h2>&#xd;&#xa;"/>
+                <textonlycomponent_e9
+                    jcr:created="{Date}2018-06-22T11:24:07.263-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-02-23T22:04:55.928Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>HOUSTON, Texas – February 23, 2023 &lt;/b>– &lt;a href=&quot;https://www.hpe.com/us/en/home.html&quot; target=&quot;_blank&quot;>Hewlett Packard Enterprise&lt;/a> (NYSE: HPE) today announced the expansion of its connected edge-to-cloud offering with the acquisition of Athonet, a private cellular network technology provider that delivers mobile core networks to enterprises and communication service providers. Combined with the HPE telco and Aruba networking portfolios, Athonet will put HPE at the forefront of a growing market that is predicted by IDC to increase to more than $1.6 billion&lt;sup>1&lt;/sup> by 2026.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;Based in Vicenza, Italy, Athonet has more than 15 years of experience delivering 4G and 5G mobile core solutions to customers and partners globally. Athonet is an award-winning technology pioneer with more than 450 successful customer deployments in various industries, including leading mobile operators, hospitals, airports, transportation ports, utilities, government and public safety organizations.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;With enterprises facing complex connectivity challenges across large and remote sites, private 5G offers high levels of coverage, reliability and mobility across campus and industrial environments. It also augments the cost-effective, high-capacity connectivity provided by Wi-Fi. The incorporation of Athonet’s technology will allow HPE to deliver private networking capabilities directly to enterprises as part of HPE’s Aruba networking portfolio, while also enabling communications service providers (CSPs) to quickly deploy private 5G networks for their customers.&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <pullquote
+                    jcr:created="{Date}2023-02-23T22:05:06.730Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2023-02-23T22:08:08.574Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution="Tom Craig, global vice president and general manager, Communications Technology Group at HPE"
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>&amp;quot;With the acquisition of Athonet, HPE now has one of the most complete private 5G and Wi-Fi portfolios for CSP and enterprise customers – and we will offer it as a service through HPE GreenLake.”&lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2023-02-23T22:08:08.574Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote>
+                <textonlycomponent_b4
+                    jcr:created="{Date}2018-06-18T09:18:06.257-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-02-23T22:10:56.700Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>“Telco customers are looking for simpler ways to deploy private 5G networks to meet growing customer expectations at the connected edge,” &lt;a name=&quot;_Hlk125545828&quot; id=&quot;_Hlk125545828&quot;>&lt;/a>said Tom Craig, global vice president and general manager, Communications Technology Group at HPE. “At the same time, enterprise customers are demanding a customized 5G experience with low-latency, segregated resources, extended range and security across campus and industrial environments that complement their existing wireless networks. With the acquisition of Athonet, HPE now has one of the most complete private 5G and Wi-Fi portfolios for CSP and enterprise customers – and we will offer it as a service through HPE GreenLake.”&lt;br />&#xd;&#xa;&lt;b style=&quot;&quot;>&lt;br />&#xd;&#xa;HPE expands private 5G solutions for both telcos and the enterprise&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;&lt;/b>HPE will integrate Athonet’s technology into its existing CSP and Aruba networking enterprise offerings to create a private networking portfolio that accelerates digital transformation from edge-to-cloud. The networking portfolio will provide the following benefits:&lt;br />&#xd;&#xa; &lt;/span>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Enhanced private networks&lt;/b> that combine the high capacity of Wi-Fi with the coverage and mobility of 5G&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Accelerated private 5G deployments &lt;/b>that improve agility and innovation to help telco B2B teams and enterprise customers&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;b>New enterprise revenue streams for telcos&lt;/b> with differentiated services leveraging 5G and Wi-Fi&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Alignment of costs to revenues&lt;/b> with consumption-based models for enterprises and telcos through HPE GreenLake, reducing the risk of entering new markets&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Management of operational complexity&lt;/b> &lt;b>and cost efficiency&lt;/b> with 5G orchestration and zero-touch automation to deliver new workloads from edge-to-cloud&lt;br />&#xd;&#xa; &lt;br />&#xd;&#xa;&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>With 5G investments running into the billions of dollars, CSPs are looking for simple ways to meet customer needs and drive new B2B revenue by deploying both edge compute and private 5G networks. The addition of Athonet’s software to HPE’s telco portfolio enhances one of the broadest communications portfolios in the market, which serves a base of more than &lt;a href=&quot;https://www.hpe.com/us/en/newsroom/blog-post/2021/02/introducing-the-hewlett-packard-enterprise-communications-technology-group.html&quot; target=&quot;_blank&quot;>300 customers across 160 countries&lt;/a> and connects more than one billion mobile devices worldwide. Building on its &lt;a href=&quot;https://www.hpe.com/us/en/newsroom/press-release/2022/02/hewlett-packard-enterprise-extends-leadership-in-enterprise-connectivity-with-private-5g-offering.html&quot; target=&quot;_blank&quot;>existing private 5G solutions&lt;/a>, HPE’s enhanced offering for CSPs will support private 4G and 5G networks and include telco-grade orchestration and automation capabilities. These capabilities will help launch new B2B services that meet growing customer expectations for the connected edge. &lt;/span>&lt;/p>&#xd;&#xa;"/>
+                <pullquote_349b
+                    jcr:created="{Date}2018-06-18T09:23:47.197-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-02-23T22:12:26.320Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution="Gianluca Verin, CEO and co-founder of Athonet"
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>“Athonet was founded to provide customers with private 4G and 5G solutions that deliver carrier-grade reliability and performance to suit their increasing and more challenging connectivity needs.”&amp;nbsp;&lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2023-02-23T22:12:26.320Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote_349b>
+                <textonlycomponent_97
+                    jcr:created="{Date}2018-06-22T11:22:31.557-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-02-23T22:13:23.535Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>“Athonet was founded to provide customers with private 4G and 5G solutions that deliver carrier-grade reliability and performance to suit their increasing and more challenging connectivity needs,” said Gianluca Verin, CEO and co-founder of Athonet. “We are excited to join HPE and combine our highly skilled teams as we expand our joint service provider offerings for the rapidly growing private 5G market and build on HPE’s strategy to be the leading edge-to-cloud solutions provider.”&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;Private 5G offers enterprises new capabilities that are ultra-secure, easy to deploy and manage, ready for highly specialized applications such as robotics and industrial IoT, data networks and pipelines, and security systems facilitation. The acquisition of Athonet strengthens Aruba’s connected edge portfolio, providing the unique and highly sought-after ability to deliver fully integrated Wi-Fi and private 5G networks. Integration with Aruba Central will enable network managers to administer Wi-Fi and private 5G through a single pane of glass and bring to bear the power of AI-powered insights, workflow automation, and robust security.&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;HPE GreenLake, HPE’s edge-to-cloud platform, will offer Athonet private 5G offerings, combining all costs for Wi-Fi and private 5G into one single monthly subscription with no capital expenditure. Flexible consumption options, including HPE’s networking as a service, mean private 5G networks can be deployed with reduced risk, little upfront investment and scaled according to demand.&lt;br />&#xd;&#xa;&lt;b style=&quot;&quot;>&lt;br />&#xd;&#xa;HPE portfolio integration and availability&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;&lt;/b>HPE will integrate Athonet’s solutions with its existing telco software assets and plans to make them available to customers some time following the close of the transaction. HPE will also integrate the solutions with the Aruba networking portfolio in the near future. The transaction is expected to close at the beginning of the third quarter of HPE’s 2023 fiscal year, subject to regulatory approvals and other customary closing conditions. &lt;/span>&lt;/p>&#xd;&#xa;"/>
+                <textonlycomponent_fe
+                    jcr:created="{Date}2018-06-18T09:28:54.456-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-02-23T22:14:18.435Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>About Hewlett Packard Enterprise&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>Hewlett Packard Enterprise (NYSE: HPE) is the global edge-to-cloud company that helps organizations accelerate outcomes by unlocking value from all of their data, everywhere. Built on decades of reimagining the future and innovating to advance the way people live and work, HPE delivers unique, open and intelligent technology solutions as a service.  With offerings spanning Cloud Services, Compute, High Performance Computing &amp;amp; AI, Intelligent Edge, Software, and Storage, HPE provides a consistent experience across all clouds and edges, helping customers develop new business models, engage in new ways, and increase operational performance. For more information, visit: &lt;a href=&quot;http://www.hpe.com/&quot; target=&quot;_blank&quot;>www.hpe.com&lt;/a>&lt;br />&#xd;&#xa; &lt;br />&#xd;&#xa; Media Contacts:&lt;br />&#xd;&#xa; U.S. &amp;amp; Canada:&lt;br />&#xd;&#xa; &lt;b>Ben Stricker&lt;br />&#xd;&#xa; &lt;/b>&lt;a href=&quot;mailto:Ben.Stricker@hpe.com&quot; target=&quot;_blank&quot;>Ben.Stricker@hpe.com&lt;/a>&lt;br />&#xd;&#xa; &lt;br />&#xd;&#xa; EMEA, APJ &amp;amp; LATAM:&lt;br />&#xd;&#xa; &lt;b>Alastair McCormick&lt;br />&#xd;&#xa; &lt;/b>&lt;a href=&quot;mailto:Alastair.McCormick@hpe.com&quot; target=&quot;_blank&quot;>Alastair.McCormick@hpe.com&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p> &lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-small&quot;>&lt;sup>1 &lt;/sup>Source: IDC, Worldwide Private LTE/5GWirelessInfrastructure Forecast, 2022–2026, doc #US48891622, March 2022. Predicting more than $1.6 billion in enterprise core (EPC/vEPC and 5G core) revenue. &lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <textonlycomponent_bf
+                    jcr:created="{Date}2018-07-02T13:12:59.755-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-10-12T16:10:50.633Z"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    textOnly="&lt;h2>RELATED NEWS&lt;/h2>&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli_540225213
+                    jcr:created="{Date}2018-06-18T10:12:48.909-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:22:53.902-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <columncontainercompo
+                    jcr:created="{Date}2018-07-02T13:14:23.594-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:15:08.106-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/columnContainerComponent"
+                    columns="column-content-3">
+                    <column_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_7c25
+                            jcr:created="{Date}2018-07-02T13:15:28.984-07:00"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2023-02-23T22:17:35.691Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/02/hewlett-packard-enterprise-extends-leadership-in-enterprise-connectivity-with-private-5g-offering"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="Hewlett Packard Enterprise extends leadership in enterprise connectivity with private 5G offering"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Hewlett Packard Enterprise extends leadership in enterprise connectivity with private 5G offering"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2023-02-23T22:17:35.691Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2022/02/image-norend/hewlett-packard-enterprise-extends-leadership-in-enterprise-connectivity-with-private-5g-offering2.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2023-02-23T22:17:35.691Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_7c25>
+                    </column_0>
+                    <column_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_4dff
+                            jcr:created="{Date}2018-09-21T21:01:47.387Z"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2023-02-23T22:21:36.212Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2020/07/hewlett-packard-enterprise-unveils-5g-lab-to-accelerate-adoption-of-open-multivendor-5g-solutions"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="Hewlett Packard Enterprise unveils 5G lab to accelerate adoption of open, multivendor 5G solutions"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Hewlett Packard Enterprise unveils 5G lab to accelerate adoption of open, multivendor 5G solutions"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2023-02-23T22:21:36.212Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2020/07/image-norend/hewlett-packard-enterprise-unveils-5g-lab-to-accelerate-adoption-of-open-multivendor-5g-solutions.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2023-02-23T22:21:36.212Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_4dff>
+                    </column_1>
+                    <column_2
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_7c25_co
+                            jcr:created="{Date}2018-07-02T13:15:28.984-07:00"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2023-02-23T22:23:39.764Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2021/06/hewlett-packard-enterprise-expands-5g-portfolio-with-automated-5g-management-solution"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="Hewlett Packard Enterprise expands 5G portfolio with automated 5G management solution"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Hewlett Packard Enterprise expands 5G portfolio with automated 5G management solution"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2023-02-23T22:23:39.764Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2021/06/image-norend/hewlett-packard-enterprise-expands-5g-portfolio-with-automated-5g-management-solution.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2023-02-23T22:23:39.764Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_7c25_co>
+                    </column_2>
+                </columncontainercompo>
+            </body-par>
+            <side-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <buttonctaitemcompone
+                    jcr:created="{Date}2018-06-28T13:06:31.075-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:06:46.099-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 1"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_661124859
+                    jcr:created="{Date}2018-06-28T13:06:51.115-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:11.079-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 2"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_606970408
+                    jcr:created="{Date}2018-06-28T13:06:53.400-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:02.336-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 3"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+            </side-par>
+        </main-par>
+        <image
+            jcr:lastModified="{Date}2018-09-05T17:38:02.066Z"
+            jcr:lastModifiedBy="nagle@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+    </jcr:content>
+</jcr:root>

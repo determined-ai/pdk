@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/apps/settings/wcm/designs/hpeweb"
+        cq:lastModified="{Date}2022-06-27T18:49:53.801Z"
+        cq:lastModifiedBy="christine.seales@hpe.com"
+        cq:tags="[hpe-newsroom:categories/mergers-and-acquisitions,hpe-newsroom:categories/networking]"
+        cq:template="/apps/hpeweb/templates/page-text-heavy"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Hewlett Packard Enterprise expands Compute portfolio with new servers based on cloud-native silicon"
+        jcr:uuid="0e8f9cc3-feb9-4605-a224-e680ce1299f6"
+        sling:resourceType="hpeweb/components/pages/page-text-heavy"
+        browserTitle="Hewlett Packard Enterprise expands Compute portfolio with new servers based on cloud-native silicon"
+        changefreq="daily"
+        contentType="Press Release"
+        displayDate="{Date}2022-06-28T19:30:00.000-04:00"
+        metaDescription="HPE becomes first tier-one server provider to offer compute with optimized cloud-native silicon for service providers and enterprises embracing cloud-native development"
+        metaKeywords="HPE, Hewlett Packard Enterprise, hpc, supercomputing, high performance computing, AI, machine learning, model development, training, AI, ai infrastructure, accelerators, artificial intelligence, networking, natural language processing, computer vision, exascale, doe, department of energy, cancer, science, physics, energy efficiency, Europe, eurohpc ju,"
+        metaOgImage="/content/dam/hpe/newsroom/2022/06/image-norend/hewlett-packard-enterprise-expands-compute-portfolio-with-new-servers-based-on-cloud-native-silicon.jpg"
+        metaTwitterCardType="summary_large_image"
+        msmcomponent="/content/hpe/base/blueprint/newsroom/press-release/2022/06/hewlett-packard-enterprise-expands-compute-portfolio-with-new-servers-based-on-cloud-native-silicon/jcr:content/main-par/body-par/imageonlycomponent"
+        navTitle="Hewlett Packard Enterprise expands Compute portfolio with new servers based on cloud-native silicon"
+        pageTitle="Hewlett Packard Enterprise expands Compute portfolio with new servers based on cloud-native silicon"
+        priority="(None)"
+        socialDescription="HPE becomes first tier-one server provider to offer compute with optimized cloud-native silicon for service providers and enterprises embracing cloud-native development"
+        subtitle="HPE becomes first tier-one server provider to offer compute with optimized cloud-native silicon for service providers and enterprises embracing cloud-native development"
+        theme="dark"
+        UAID="589bb1b4-9a0d-4bb3-9e2e-8cd69155a782"
+        UCID="f3cdee98-8bac-4e4b-a39a-d20bb0a10522">
+        <main-par
+            jcr:lastModified="{Date}2018-06-28T13:09:39.402-07:00"
+            jcr:lastModifiedBy="velazquez@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="hpeweb/components/content/textHeavyComponent"
+            siderail="none">
+            <subtitle
+                jcr:lastModified="{Date}2022-06-24T20:42:11.402Z"
+                jcr:lastModifiedBy="christine.seales@hpe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="hpeweb/components/content/newsroom/newsroomSubtitleComponent"
+                textOnly="JUNE 28, 2022 • PRESS RELEASE"/>
+            <body-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <imageonlycomponent_c
+                    jcr:created="{Date}2018-06-18T09:06:27.827-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-06-24T22:30:14.851Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/imageOnlyComponent"
+                    fileReference="/content/dam/hpe/newsroom/2022/06/image-norend/hewlett-packard-enterprise-expands-compute-portfolio-with-new-servers-based-on-cloud-native-silicon.jpg"
+                    imageAlignment="hpe-image-center"
+                    imageAltText="HPE Guarantees"
+                    topMargin="60"
+                    videoSource="video"
+                    videoType="youtube"/>
+                <textonlycomponent_cd
+                    jcr:created="{Date}2018-06-18T09:12:49.742-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-06-24T20:51:40.098Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    leftPadding="30"
+                    rightPadding="30"
+                    textIsRich="true"
+                    textOnly="&lt;h3>IN THIS ARTICLE&lt;/h3>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>HPE becomes first tier-one server provider to offer compute with optimized cloud-native silicon for service providers and enterprises embracing cloud-native development&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>New line of HPE ProLiant RL Gen11 servers, using Ampere® Altra® and Ampere® Altra® Max processors, delivering high performance and power efficiency&amp;nbsp;&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli
+                    jcr:created="{Date}2018-06-18T09:16:54.243-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-18T09:18:45.987-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <textonlycomponent_e9
+                    jcr:created="{Date}2018-06-22T11:24:07.263-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-06-24T21:18:11.562Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>LAS VEGAS – June 28, 2022 – HPE Discover 2022 &lt;/b>– &lt;a href=&quot;http://www.hpe.com/&quot; target=&quot;_blank&quot;>Hewlett Packard Enterprise&lt;/a> (NYSE: HPE) today announced that it is the first major server provider to deliver a new line of cloud-native compute solutions using processors from Ampere. The new HPE solutions provide service providers and enterprises embracing cloud-native development with an agile, extensible, and trusted compute foundation to drive innovation.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; Available in Q3 2022, the new HPE ProLiant RL300 Gen11 server is the first in a series of HPE ProLiant RL Gen11 servers that deliver next-generation compute performance with higher power efficiency using &lt;a href=&quot;https://amperecomputing.com/processors/ampere-altra/&quot; target=&quot;_blank&quot;>Ampere®&amp;nbsp;Altra®and Ampere Altra® Max&lt;/a> cloud-native processors.&amp;nbsp;&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <imageonlycomponent
+                    jcr:created="{Date}2022-06-24T20:52:36.590Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2022-06-27T18:49:53.786Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/imageOnlyComponent"
+                    disableCaptionUnderline="false"
+                    disableImageScaling="false"
+                    fileReference="/content/dam/hpe/newsroom/2022/06/image-norend/hewlett-packard-enterprise-expands-compute-portfolio-with-new-servers-based-on-cloud-native-silicon3.png"
+                    imageAlignment="hpe-image-left"
+                    isVideo="false"
+                    isZoom="false"
+                    textIsRich="true"
+                    useNativeAspectRatio="false"
+                    videoSource="video"
+                    videoType="youtube"
+                    zoomBackground="white"
+                    zoomLevel="1"/>
+                <textonlycomponent_b4
+                    jcr:created="{Date}2018-06-18T09:18:06.257-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-06-24T23:16:28.687Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p style=&quot;text-align: center;&quot;>&lt;i>New HPE ProLiant RL300 Gen11 server&lt;/i>&lt;/p>&#xd;&#xa;"/>
+                <pullquote_349b
+                    jcr:created="{Date}2018-06-18T09:23:47.197-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-06-24T20:58:28.161Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution=" "
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>Traditional ODM boxes simply won’t cut it in a market that demands depth of IP, performance, reliability, security, and control. This is where HPE steps in and why we chose Ampere&lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2022-06-24T20:58:28.161Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote_349b>
+                <textonlycomponent_97
+                    jcr:created="{Date}2018-06-22T11:22:31.557-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-06-27T17:17:38.584Z"
+                    jcr:lastModifiedBy="rakhee.sharma@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>“Service providers and digital-first enterprises are at the forefront of the next major compute infrastructure build-out. These organizations understand that agility, flexibility, and innovation start with compute,” said Neil MacDonald, executive vice president and general manager, Compute, HPE. “They also realize that traditional ODM boxes simply won’t cut it in a market that demands depth of IP, performance, reliability, security, and control. This is where HPE steps in and why we chose Ampere.”&lt;br>&#xd;&#xa; &lt;i>&lt;br>&#xd;&#xa;“&lt;/i>Ampere is excited to be the first cloud native and newest member of the HPE ProLiant family,” said Renee J. James, Founder and CEO, Ampere. “The cloud is the growth engine of our industry but demands a modern processor that is both high performance and very power efficient to meet the global ESG demands. HPE is taking a leadership position in delivering cloud native Ampere Altra and Altra Max based ProLiant systems to Enterprise customers and Service Providers deploying cloud technologies.”&lt;br>&#xd;&#xa; &lt;b>&lt;br>&#xd;&#xa;HPE expands leadership in compute to fuel emerging markets in cloud-native workloads&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/b>Building on 30 years of leadership in delivering compute innovation, HPE is now extending its automated, secure, and versatile compute solutions to the rapidly growing service provider market, as well as digital-first enterprises embracing cloud-native development.&amp;nbsp;&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; The new offerings from HPE deliver high performance and power efficiency to support a wide range of evolving applications and use cases. The new HPE ProLiant RL Gen 11 servers provide a single socket that delivers up to 128 cores per socket for scale-out compute. These servers are ideally suited for customers that offer digital services, media streaming, social platforms, e-commerce, financial, or online services, and cloud-based services such as IaaS, PaaS and SaaS.&lt;br>&#xd;&#xa; &lt;b>&lt;br>&#xd;&#xa;CloudSigma becomes early adopter of the HPE ProLiant RL servers&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/b>&lt;a href=&quot;https://www.cloudsigma.com/&quot; target=&quot;_blank&quot;>CloudSigma&lt;/a>, a pure-cloud IaaS and PaaS provider with advanced hybrid hosting solutions enabling the digital industrial economy, offers highly-available, flexible, enterprise-class cloud servers and cloud hosting solutions in Europe, The US, APAC, and the Middle East in over 20 locations. CloudSigma is one of the most customizable cloud providers on the market, giving customers full control over their cloud and eliminating restrictions on how users deploy their computing resources.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; As a provider of customized clouds, CloudSigma required an agile and open platform that delivered predictable cost and high-performance, and selected the HPE ProLiant RL300 server to meet its needs.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&amp;quot;Based on our benchmarking, the HPE ProLiant RL300 Gen11 server with Ampere processors is delivering a significantly higher power efficiency,” said Robert Jenkin, CEO, CloudSigma. “This is allowing us to both meet our improved sustainability goals and provide a lower cost of delivery to our end customers.&amp;quot;&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;> &lt;b>&lt;br>&#xd;&#xa;Availability&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/b>The HPE ProLiant RL300 Gen11 server will be available worldwide for purchase or as-a-service through HPE GreenLake in calendar year Q3 2022, through HPE and HPE’s Channel partners.&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;b>&amp;nbsp;&lt;/b>&lt;/p>&#xd;&#xa;"/>
+                <textonlycomponent_fe
+                    jcr:created="{Date}2018-06-18T09:28:54.456-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-06-24T21:01:39.917Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>About Hewlett Packard Enterprise&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>Hewlett Packard Enterprise (NYSE: HPE) is the global edge-to-cloud company that helps organizations accelerate outcomes by unlocking value from all of their data, everywhere. Built on decades of reimagining the future and innovating to advance the way people live and work, HPE delivers unique, open and intelligent technology solutions as a service.  With offerings spanning Cloud Services, Compute, High Performance Computing &amp;amp; AI, Intelligent Edge, Software, and Storage, HPE provides a consistent experience across all clouds and edges, helping customers develop new business models, engage in new ways, and increase operational performance. For more information, visit: &lt;a href=&quot;http://www.hpe.com/&quot; target=&quot;_blank&quot;>www.hpe.com&lt;/a>&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;Media Contact&lt;br />&#xd;&#xa;&lt;b style=&quot;&quot;>Nahren Khizeran&lt;br />&#xd;&#xa;&lt;/b>&lt;a href=&quot;mailto:Nahren.Khizeran@hpe.com&quot;>Nahren.Khizeran@hpe.com&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <textonlycomponent_bf
+                    jcr:created="{Date}2018-07-02T13:12:59.755-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-10-12T16:10:50.633Z"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    textOnly="&lt;h2>RELATED NEWS&lt;/h2>&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli_540225213
+                    jcr:created="{Date}2018-06-18T10:12:48.909-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:22:53.902-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <columncontainercompo
+                    jcr:created="{Date}2018-07-02T13:14:23.594-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:15:08.106-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/columnContainerComponent"
+                    columns="column-content-3">
+                    <column_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_7c25
+                            jcr:created="{Date}2018-07-02T13:15:28.984-07:00"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-06-24T21:08:56.606Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="arrow-link"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2021/03/hewlett-packard-enterprise-unveils-industrys-broadest-portfolio-of-amd-epyc-processor-based-solutions-to-power-the-edge-to-exascale"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            header="Hewlett Packard Enterprise unveils industry’s broadest portfolio of AMD EPYC™ processor-based solutions to power the edge to exascale"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Hewlett Packard Enterprise unveils industry’s broadest portfolio of AMD EPYC™ processor-based solutions to power the edge to exascale"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-06-24T21:08:56.606Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2021/03/image-norend/hpe-unveils-industrys-broadest-portfolio-of-amd-epyc-processor-based-solutions-to-power-the-edge-to-exascale.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-06-24T21:08:56.606Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_7c25>
+                    </column_0>
+                    <column_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_4dff
+                            jcr:created="{Date}2018-09-21T21:01:47.387Z"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-06-24T21:10:30.846Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="arrow-link"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2020/10/hewlett-packard-enterprise-becomes-the-only-major-server-manufacturer-to-ship-worlds-most-secure-industry-standard-made-in-usa-servers"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            header="Hewlett Packard Enterprise becomes the only major server manufacturer to ship the world’s most secure industry-standard servers with U.S. Country of Origin"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Hewlett Packard Enterprise becomes the only major server manufacturer to ship the world’s most secure industry-standard servers with U.S. Country of Origin"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-06-24T21:10:30.846Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2020/10/image-norend/hpe-becomes-the-only-major-server-manufacturer-to-ship-worlds-most-secure-industry-standard-made-in-usa-servers.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-06-24T21:10:30.846Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_4dff>
+                    </column_1>
+                    <column_2
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_50f2
+                            jcr:created="{Date}2018-09-05T17:41:27.359Z"
+                            jcr:createdBy="nagle@hpe.com"
+                            jcr:lastModified="{Date}2022-06-24T21:11:56.218Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="arrow-link"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2020/12/hewlett-packard-enterprise-accelerates-mainstream-enterprise-adoption-for-high-performance-computing-with-worlds-most-powerful-solutions-delivered-as-a-service-through-hpe-greenlake"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            header="Hewlett Packard Enterprise accelerates mainstream enterprise adoption for high performance computing with world’s most powerful solutions delivered as a service through HPE GreenLake"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Hewlett Packard Enterprise accelerates mainstream enterprise adoption for high performance computing with world’s most powerful solutions delivered as a service through HPE GreenLake"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-06-24T21:11:56.218Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                fileReference="/content/dam/hpe/newsroom/2020/12/image-norend/hpe-accelerates-mainstream-enterprise-adoption-for-hpc-with-worlds-most-powerful-solutions-delivered-as-a-service-through-hpe-greenlake.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-06-24T21:11:56.218Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"/>
+                        </contentblock_50f2>
+                    </column_2>
+                </columncontainercompo>
+            </body-par>
+            <side-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <buttonctaitemcompone
+                    jcr:created="{Date}2018-06-28T13:06:31.075-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:06:46.099-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 1"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_661124859
+                    jcr:created="{Date}2018-06-28T13:06:51.115-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:11.079-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 2"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_606970408
+                    jcr:created="{Date}2018-06-28T13:06:53.400-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:02.336-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 3"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+            </side-par>
+        </main-par>
+        <image
+            jcr:lastModified="{Date}2018-09-05T17:38:02.066Z"
+            jcr:lastModifiedBy="nagle@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+    </jcr:content>
+</jcr:root>

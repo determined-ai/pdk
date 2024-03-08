@@ -1,0 +1,50 @@
+{
+  "description": "Downloads model from Hugginface",
+  "input": {
+    "pfs": {
+      "branch": "master",
+      "glob": "/*",
+      "name": "model",
+      "repo": "model"
+    }
+  },
+  "pipeline": {
+    "name": "model-download",
+    "project": {
+      "name": "pdk-llm-rag"
+    }
+  },
+  "transform": {
+    "cmd": [
+      "/bin/sh"
+    ],
+    "image": "us-central1-docker.pkg.dev/dai-dev-554/pdk-registry/pdk_hf_utils:1.11",
+    "secrets": [
+      {
+        "env_var": "HF_TOKEN",
+        "key": "hf_token",
+        "name": "pipeline-secret"
+      }
+    ],
+    "stdin": [
+      "python ds_download.py --output /run/determined/workdir/shared_fs/ --model /pfs/model/"
+    ]
+  },
+  "resourceRequests": {
+    "memory": "24G"
+  },
+  "resourceLimits": {
+    "gpu": {
+      "type": "nvidia.com/gpu",
+      "number": 1
+    }
+  },
+  "tolerations": [
+    {
+      "effect": "NO_SCHEDULE",
+      "key": "nvidia.com/gpu",
+      "operator": "EXISTS"
+    }
+  ],  
+  "podPatch": "[{\"op\": \"add\",\"path\": \"/volumes/-\",\"value\": {\"name\": \"task-pv-storage\",\"persistentVolumeClaim\": {\"claimName\": \"pdk-pvc\"}}}, {\"op\": \"add\",\"path\": \"/containers/0/volumeMounts/-\",\"value\": {\"mountPath\": \"/run/determined/workdir/shared_fs\",\"name\": \"task-pv-storage\"}}]"
+}

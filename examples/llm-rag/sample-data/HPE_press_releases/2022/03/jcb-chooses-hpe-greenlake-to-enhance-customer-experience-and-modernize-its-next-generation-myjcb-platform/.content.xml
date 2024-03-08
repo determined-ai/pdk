@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/apps/settings/wcm/designs/hpeweb"
+        cq:lastModified="{Date}2022-03-22T17:06:52.352Z"
+        cq:lastModifiedBy="christine.seales@hpe.com"
+        cq:tags="[hpe-newsroom:categories/big-data,hpe-newsroom:categories/customers-and-partners,hpe-newsroom:categories/company---customers,hpe-newsroom:categories/other]"
+        cq:template="/apps/hpeweb/templates/page-text-heavy"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="JCB chooses HPE GreenLake to enhance customer experience and modernize its next generation MyJCB platform"
+        jcr:uuid="e4f61874-759e-46b2-b2d9-5d334e0195c8"
+        sling:resourceType="hpeweb/components/pages/page-text-heavy"
+        browserTitle="JCB chooses HPE GreenLake to enhance customer experience and modernize its next generation MyJCB platform"
+        changefreq="daily"
+        contentType="Press Release"
+        displayDate="{Date}2022-03-22T11:00:00.000-04:00"
+        metaDescription="Global payment brand and credit card company moves to a resilient, robust hybrid cloud environment to significantly advance new service innovation and customer engagement"
+        metaKeywords="HPE, HPE GreenLake, HPE Japan, edge to cloud, JCB, MyJCB, payments platform, financial services, HPE Pointnext Services, Kubernetes,"
+        metaOgImage="/content/dam/hpe/newsroom/2022/03/image-norend/jcb-chooses-hpe-greenlake-to-enhance-customer-experience-and-modernize-its-next-generation-myjcb-platform.jpg"
+        metaTwitterCardType="summary_large_image"
+        msmcomponent="/content/hpe/base/blueprint/newsroom/press-release/2022/03/jcb-chooses-hpe-greenlake-to-enhance-customer-experience-and-modernize-its-next-generation-myjcb-platform/jcr:content/main-par/body-par/textonlycomponent_97"
+        navTitle="JCB chooses HPE GreenLake to enhance customer experience and modernize its next generation MyJCB platform"
+        pageTitle="JCB chooses HPE GreenLake to enhance customer experience and modernize its next generation MyJCB platform"
+        priority="(None)"
+        socialDescription="Global payment brand and credit card company moves to a resilient, robust hybrid cloud environment to significantly advance new service innovation and customer engagement"
+        subtitle="Global payment brand and credit card company moves to a resilient, robust hybrid cloud environment to significantly advance new service innovation and customer engagement"
+        theme="dark"
+        UAID="a0d0def0-e959-4354-8469-c58eac30cd14"
+        UCID="8f702b7b-8a28-4829-904f-b2ee1c1eb457">
+        <main-par
+            jcr:lastModified="{Date}2018-06-28T13:09:39.402-07:00"
+            jcr:lastModifiedBy="velazquez@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="hpeweb/components/content/textHeavyComponent"
+            siderail="none">
+            <subtitle
+                jcr:lastModified="{Date}2022-03-18T15:10:50.656Z"
+                jcr:lastModifiedBy="christine.seales@hpe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="hpeweb/components/content/newsroom/newsroomSubtitleComponent"
+                textOnly="MARCH 22, 2022 • PRESS RELEASE"/>
+            <body-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <imageonlycomponent_c
+                    jcr:created="{Date}2018-06-18T09:06:27.827-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-03-18T15:11:53.219Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/imageOnlyComponent"
+                    fileReference="/content/dam/hpe/newsroom/2022/03/image-norend/jcb-chooses-hpe-greenlake-to-enhance-customer-experience-and-modernize-its-next-generation-myjcb-platform.jpg"
+                    imageAlignment="hpe-image-center"
+                    imageAltText="HPE Guarantees"
+                    topMargin="60"
+                    videoSource="video"
+                    videoType="youtube"/>
+                <textonlycomponent_cd
+                    jcr:created="{Date}2018-06-18T09:12:49.742-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-03-18T15:12:31.182Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    leftPadding="30"
+                    rightPadding="30"
+                    textIsRich="true"
+                    textOnly="&lt;h3>IN THIS ARTICLE&lt;/h3>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>JCB is the only Japan-based international credit card brand and currently boasts over 142 million card holders&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>The new MyJCB platform, powered by HPE GreenLake, offers enhanced reliability and allows for agile application development, enabling roll out of new services and experiences, quickly and easily&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>HPE Pointnext Services acted as consultants, making sure that the new MyJCB platform delivers everything that it needed to be, whilst finding and addressing critical concerns and solving challenges&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli
+                    jcr:created="{Date}2018-06-18T09:16:54.243-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-18T09:18:45.987-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <textonlycomponent
+                    jcr:created="{Date}2022-03-18T15:12:38.248Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2022-03-18T15:12:54.844Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;h2>Global payment brand and credit card company moves to a resilient, robust hybrid cloud environment to significantly advance new service innovation and customer engagement&lt;/h2>&#xd;&#xa;"/>
+                <textonlycomponent_e9
+                    jcr:created="{Date}2018-06-22T11:24:07.263-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-03-18T15:17:42.504Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>TOKYO, Japan - March 22, 2022&lt;/b> – &lt;a href=&quot;http://www.hpe.com/&quot; target=&quot;_blank&quot;>Hewlett Packard Enterprise&lt;/a> (NYSE: HPE) today announced that JCB Co., Ltd.,&amp;nbsp; the international payment brand from Japan, has selected the &lt;a href=&quot;https://www.hpe.com/us/en/greenlake.html&quot; target=&quot;_blank&quot;>HPE GreenLake edge-to-cloud platform&lt;/a>&lt;u> &lt;/u>to build the next generation of its MyJCB platform to improve customer engagement with the launch of new customer experiences and services.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; The MyJCB platform is a critical online portal used by JCB’s credit card customers to make payments, check statements, register for additional services and check both financial and loyalty balances.&amp;nbsp; The platform is mission-critical, needs to be available 24x7, and adhere to the strict governance and compliance requirements of a financial services organization.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; Formed in 1961, JCB is the only Japan-based international credit card brand and currently boasts over 142 million card holders. JCB has expanded into a wide range of service offerings, including mobile phone payment solutions and its QUICPay contactless infrastructure, serving customers in Japan and 150 countries around the world. Since 2019, JCB has been modernizing its payment network, reflecting the exponential growth in cashless payments, which has accelerated even faster in the wake of the global pandemic.&amp;nbsp;&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <pullquote
+                    jcr:created="{Date}2022-03-18T15:17:48.259Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2022-03-18T15:18:11.469Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution=" "
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>JCB selected HPE GreenLake to deliver mission critical systems and cloud-native technology&lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2022-03-18T15:18:11.469Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote>
+                <textonlycomponent_b4
+                    jcr:created="{Date}2018-06-18T09:18:06.257-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-03-18T15:18:40.106Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>As well as moving to a new data center, JCB wanted to move to a modern and flexible platform running modernized container applications to allow it to react more quickly to customer needs and develop an increasing number of new, personalized services.&amp;nbsp; JCB selected the HPE GreenLake platform to deliver mission critical systems and cloud-native technology and therefore provide a hybrid cloud environment optimized for MyJCB.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;“JCB is delighted to be working with HPE on the creation of its next generation of customer experiences,” said Akira Matsuoka, Senior Vice President, Digital Solutions Development Department, JCB Co., Ltd. “New technologies are accelerating the development of innovative payment solutions which create brand new experiences for consumers. As we continue to grow, HPE GreenLake gives us the foundation to move to a cloud-native mission-critical platform, allowing us to react more quickly to the rapidly evolving needs of our customers and offer groundbreaking new services with personalized, easy-to-follow experiences.”&lt;/span>&lt;/p>&#xd;&#xa;"/>
+                <pullquote_349b
+                    jcr:created="{Date}2018-06-18T09:23:47.197-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-03-18T15:19:12.077Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution="Akira Matsuoka, Senior Vice President, Digital Solutions Development Department at JCB"
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>“JCB is delighted to be working with HPE on the creation of its next generation of customer experiences”&lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2022-03-18T15:19:12.077Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote_349b>
+                <textonlycomponent_97
+                    jcr:created="{Date}2018-06-22T11:22:31.557-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-03-22T17:06:52.331Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>At the heart of the new platform is a series of applications to orchestrate a smooth customer journey through personalized experiences and seamless interactions. The new MyJCB platform, powered by HPE GreenLake, offers enhanced reliability and allows for agile application development, enabling the business to roll out new customer services and experiences, quickly and easily.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; “HPE is thrilled to be continuing its relationship with JCB,” said Hirokazu Mochizuki, managing director, HPE Japan. “As the world continues to move increasingly towards digital payments, the choice of HPE GreenLake will allow a seamless transition to scalable, cloud services which will support the continued growth of the business. HPE is pleased to be supporting the success of the next-generation MyJCB customer portal based on the flexibility and agility of container orchestration, whilst ensuring the continuing availability of mission critical systems.”&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; HPE is working hand-in-glove with JCB throughout the development. HPE Pointnext Services acted as consultants, making sure that the new MyJCB platform delivers everything that it needed to be, whilst finding and addressing critical concerns and solving challenges. HPE Pointnext Services took the lead on designing the new modernized system, working alongside JCB’s existing partners at Software Consultant Corporation (SCC) for a Kubernetes based automation and full-scale agile development environment.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; The solution, delivered as a cloud service on a pay-per-use payment model through the HPE GreenLake platform, uses&amp;nbsp;the &lt;a href=&quot;https://www.hpe.com/us/en/servers/superdome.html&quot; target=&quot;_blank&quot;>HPE Superdome Flex 280 Server&lt;/a> for in-memory processing and mission-critical capabilities to ensure always-on performance. It also leverages &lt;a href=&quot;https://www.hpe.com/us/en/storage/hpe-primera.html&quot; target=&quot;_blank&quot;>HPE Primera Storage&lt;/a> for 100% mission-critical availability.&lt;br>&#xd;&#xa; &lt;b>&lt;br>&#xd;&#xa;About HPE GreenLake&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;/b>The HPE GreenLake edge-to-cloud platform enables customers to accelerate data-first modernization and provides over 50 cloud services that can run on-premises, at the edge, in a colocation facility, and in the public cloud. In Q1 2022, HPE reported Annual Recurring Revenue of $798 million and as-a-service orders growth of 136 percent year-over-year. In April 2022, with the onboarding of Aruba customers, HPE will add over 120,000 customers to the HPE GreenLake platform. The scalable, pay-as-you go HPE GreenLake platform also delivers robust security, compliance, and control, and supports a broad partner ecosystem – including channel partners, distributors, independent software vendors, service providers, system integrators, and public cloud providers. For more information on HPE GreenLake, please visit: &lt;a href=&quot;https://www.hpe.com/us/en/greenlake.html&quot; target=&quot;_blank&quot;>https://www.hpe.com/us/en/greenlake.html&lt;/a>.&lt;br>&#xd;&#xa;&lt;b>&lt;br>&#xd;&#xa;About JCB&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;/b>JCB, also known as Samurai Cards, is the first and only Japanese issuer of international credit cards, with over 142 million in circulation as of&amp;nbsp;September 2021. The company, which has an annual transaction volume of more than $305 billion, works with banks primarily in Japan and the Asian subcontinent, but also offers global acceptance through strategic alliances with other major issuers. As well as credit cards, its growth has been accelerated through initiatives including smartphone payment services and QUICPay, the company’s contactless payment solution. For more information, visit: &lt;a href=&quot;https://www.global.jcb/en/&quot; target=&quot;_blank&quot;>https://www.global.jcb/en/&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;"/>
+                <textonlycomponent_fe
+                    jcr:created="{Date}2018-06-18T09:28:54.456-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-03-18T15:23:05.998Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>About Hewlett Packard Enterprise&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>Hewlett Packard Enterprise (NYSE: HPE) is the global edge-to-cloud company that helps organizations accelerate outcomes by unlocking value from all of their data, everywhere. Built on decades of reimagining the future and innovating to advance the way people live and work, HPE delivers unique, open and intelligent technology solutions as a service.&amp;nbsp; With offerings spanning Cloud Services, Compute, High Performance Computing &amp;amp; AI, Intelligent Edge, Software, and Storage, HPE provides a consistent experience across all clouds and edges, helping customers develop new business models, engage in new ways, and increase operational performance. For more information, visit: &lt;a href=&quot;http://www.hpe.com/&quot; target=&quot;_blank&quot;>www.hpe.com&lt;/a>&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; Editorial Contact:&lt;br>&#xd;&#xa; &lt;b>Eri Yagihashi&lt;br>&#xd;&#xa; &lt;/b>&lt;a href=&quot;mailto:eri.yagihashi@hpe.com&quot; target=&quot;_blank&quot;>eri.yagihashi@hpe.com&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <textonlycomponent_bf
+                    jcr:created="{Date}2018-07-02T13:12:59.755-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-10-12T16:10:50.633Z"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    textOnly="&lt;h2>RELATED NEWS&lt;/h2>&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli_540225213
+                    jcr:created="{Date}2018-06-18T10:12:48.909-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:22:53.902-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <columncontainercompo
+                    jcr:created="{Date}2018-07-02T13:14:23.594-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:15:08.106-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/columnContainerComponent"
+                    columns="column-content-3">
+                    <column_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_7c25
+                            jcr:created="{Date}2018-07-02T13:15:28.984-07:00"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-03-18T15:24:19.848Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="arrow-link"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2021/10/cardnet-selects-hpe-greenlake-to-provide-a-secure-scalable-platform-for-digital-payments-and-support-progression-to-cashless-society"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            header="CARDNET selects HPE GreenLake to provide a secure, scalable platform for digital payments and support progression to cashless society"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Gartner Names HPE a Leader in Magic Quadrant for Operations Support Systems"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-03-18T15:24:19.848Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2021/10/image-norend/cardnet-selects-hpe-greenlake-to-provide-a-secure-scalable-platform-for-digital-payments-and-support-progression-to-cashless-society.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-03-18T15:24:19.848Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_7c25>
+                    </column_0>
+                    <column_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_4dff
+                            jcr:created="{Date}2018-09-21T21:01:47.387Z"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-03-18T15:25:40.715Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="arrow-link"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2021/07/hpe-greenlake-powers-woolworths-new-payments-platform-for-wpay-venture"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            header="HPE GreenLake powers Woolworths’ new payments platform for Wpay venture"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="test"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-03-18T15:25:40.715Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2021/07/image-norend/hpe-greenlake-powers-woolworths-new-payments-platform-for-wpay-venture.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-03-18T15:25:40.715Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_4dff>
+                    </column_1>
+                    <column_2
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_50f2
+                            jcr:created="{Date}2018-09-05T17:41:27.359Z"
+                            jcr:createdBy="nagle@hpe.com"
+                            jcr:lastModified="{Date}2022-03-18T15:26:47.954Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="arrow-link"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2021/12/barclays-selects-hpe-greenlake-for-private-cloud-platform"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            header="Barclays selects HPE GreenLake for private cloud platform"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-03-18T15:26:47.954Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                fileReference="/content/dam/hpe/newsroom/2021/12/image-norend/barclays-selects-hpe-greenlake-for-private-cloud-platform.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-03-18T15:26:47.954Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"/>
+                        </contentblock_50f2>
+                    </column_2>
+                </columncontainercompo>
+            </body-par>
+            <side-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <buttonctaitemcompone
+                    jcr:created="{Date}2018-06-28T13:06:31.075-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:06:46.099-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 1"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_661124859
+                    jcr:created="{Date}2018-06-28T13:06:51.115-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:11.079-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 2"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_606970408
+                    jcr:created="{Date}2018-06-28T13:06:53.400-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:02.336-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 3"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+            </side-par>
+        </main-par>
+        <image
+            jcr:lastModified="{Date}2018-09-05T17:38:02.066Z"
+            jcr:lastModifiedBy="nagle@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+    </jcr:content>
+</jcr:root>

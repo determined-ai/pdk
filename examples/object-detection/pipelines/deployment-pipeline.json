@@ -18,7 +18,7 @@
     "stdin": [
       "python deploy.py --deployment-name detection-deploy --cloud-model-host gcp --cloud-model-bucket pdk-repo-models --resource-requests cpu=2,memory=4Gi --resource-limits cpu=10,memory=8Gi"
     ],
-    "image": "pachyderm/pdk:object-detection-deploy-v0.0.4",
+    "image": "pachyderm/pdk:object-detection-deploy-v0.0.6",
     "secrets": [
       {
         "name": "pipeline-secret",

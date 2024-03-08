@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/apps/settings/wcm/designs/hpeweb"
+        cq:lastModified="{Date}2023-03-30T23:44:30.843Z"
+        cq:lastModifiedBy="christine.seales@hpe.com"
+        cq:tags="[hpe-newsroom:categories/big-data,hpe-newsroom:categories/company---customers]"
+        cq:template="/apps/hpeweb/templates/page-text-heavy"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="OL Groupe selects HPE GreenLake to support its energy efficiency plan and improve the visitor and fan experience"
+        jcr:uuid="20926be2-4352-4dba-a6e0-2fa8f34d703b"
+        sling:resourceType="hpeweb/components/pages/page-text-heavy"
+        browserTitle="OL Groupe selects HPE GreenLake to support its energy efficiency plan and improve the visitor and fan experience"
+        changefreq="daily"
+        contentType="Press Release"
+        displayDate="{Date}2023-02-21T04:00:00.000-05:00"
+        metaDescription="HPE and CHEOPS TECHNOLOGY provide Olympique Lyonnais soccer club's holding company with a next-generation IT environment to support the development of its new entertainment offerings"
+        metaKeywords="HPE, HPE GreenLake, as-a-service, HPE Alletra, HPE ProLiant. HPE France, football, Olympique Lyonnais, OL Groupe, Groupama Stadium, Cheops Technology"
+        metaOgImage="/content/dam/hpe/newsroom/2023/02/image-norend/ol-groupe-selects-hpe-greenlake-to-support-its-energy-efficiency-plan-and-improve-the-visitor-and-fan-experience.jpg"
+        metaTwitterCardType="summary_large_image"
+        msmcomponent="/content/hpe/base/blueprint/newsroom/press-release/2023/02/ol-groupe-selects-hpe-greenlake-to-support-its-energy-efficiency-plan-and-improve-the-visitor-and-fan-experience/jcr:content/main-par/body-par/textonlycomponent_97"
+        navTitle="OL Groupe selects HPE GreenLake to support its energy efficiency plan and improve the visitor and fan experience"
+        pageTitle="OL Groupe selects HPE GreenLake to support its energy efficiency plan and improve the visitor and fan experience"
+        priority="(None)"
+        socialDescription="HPE and CHEOPS TECHNOLOGY provide Olympique Lyonnais soccer club's holding company with a next-generation IT environment to support the development of its new entertainment offerings"
+        subtitle="HPE and CHEOPS TECHNOLOGY provide Olympique Lyonnais soccer club's holding company with a next-generation IT environment to support the development of its new entertainment offerings"
+        theme="dark">
+        <main-par
+            jcr:lastModified="{Date}2018-06-28T13:09:39.402-07:00"
+            jcr:lastModifiedBy="velazquez@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="hpeweb/components/content/textHeavyComponent"
+            siderail="none">
+            <subtitle
+                jcr:lastModified="{Date}2023-02-20T23:58:57.302Z"
+                jcr:lastModifiedBy="christine.seales@hpe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="hpeweb/components/content/newsroom/newsroomSubtitleComponent"
+                textOnly="FEBRUARY 21, 2023 • PRESS RELEASE"/>
+            <body-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <imageonlycomponent_c
+                    jcr:created="{Date}2018-06-18T09:06:27.827-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-02-20T23:59:19.783Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/imageOnlyComponent"
+                    fileReference="/content/dam/hpe/newsroom/2023/02/image-norend/ol-groupe-selects-hpe-greenlake-to-support-its-energy-efficiency-plan-and-improve-the-visitor-and-fan-experience.jpg"
+                    imageAlignment="hpe-image-center"
+                    imageAltText="HPE Guarantees"
+                    topMargin="60"
+                    videoSource="video"
+                    videoType="youtube"/>
+                <textonlycomponent_cd
+                    jcr:created="{Date}2018-06-18T09:12:49.742-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-02-21T00:00:27.090Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    leftPadding="30"
+                    rightPadding="30"
+                    textIsRich="true"
+                    textOnly="&lt;h3>IN THIS ARTICLE&lt;/h3>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>HPE's solution cuts the energy footprint of OL Groupe's data centers in half and helps it meet its energy efficiency commitments to reduce its power consumption by 20% each year&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>HPE's solution based on HPE ProLiant and HPE Alletra multiplies by four the performance of the data center hosted in the Groupama Stadium, owned by OL Groupe&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli
+                    jcr:created="{Date}2018-06-18T09:16:54.243-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-18T09:18:45.987-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <textonlycomponent
+                    jcr:created="{Date}2023-02-21T00:00:40.143Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2023-02-21T00:00:50.538Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;h2>HPE and CHEOPS TECHNOLOGY provide Olympique Lyonnais soccer club's holding company with a next-generation IT environment to support the development of its new entertainment offerings&lt;/h2>&#xd;&#xa;"/>
+                <textonlycomponent_e9
+                    jcr:created="{Date}2018-06-22T11:24:07.263-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-02-21T00:04:45.343Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>PUTEAUX – February 21, 2023 - &lt;/b>&lt;a href=&quot;http://www.hpe.com&quot; target=&quot;_blank&quot;>Hewlett Packard Enterprise&lt;/a> (NYSE: HPE) today announced that OL Groupe has selected the &lt;a href=&quot;https://www.hpe.com/us/en/greenlake.html&quot; target=&quot;_blank&quot;>HPE GreenLake edge-to-cloud platform&lt;/a> to modernize its entire on-premises infrastructure. The HPE solution enables OL Groupe to increase its agility to deploy IT resources, reduce its environmental footprint and accelerate the development of its new entertainment offerings to its millions of fans worldwide.&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;The OL Group owns the Olympique Lyonnais professional soccer club and operates its own stadium, the Groupama Stadium, located in Décines-Charpieu, 365 days a year. The group operates in many domains such as soccer and other major sports events and entertainment. The group needed to evolve its technology environment and meet the very strong requirements of these activities in terms of availability, agility, security, resilience, and profitability.&lt;br />&#xd;&#xa;&lt;b style=&quot;&quot;>&lt;br />&#xd;&#xa;A flexible architecture to meet the group's new offers&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;&lt;/b>As part of the renewal of its equipment, OL Groupe called on HPE and its partner Cheops Technology to design and deploy a modern and resilient on-premises technology platform, distributed over two data centers hosted within the Groupama Stadium, in order to respond to the rapid development of new services, while allowing better cost management.&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;This new platform, delivered on a pay-per-use basis with HPE GreenLake and managed from a single cloud interface, leverages &lt;u style=&quot;&quot;>&lt;a href=&quot;https://www.hpe.com/us/en/hpe-alletra.html&quot; target=&quot;_blank&quot;>HPE Alletra&lt;/a> &lt;/u>cloud-native data infrastructure and &lt;a href=&quot;https://www.hpe.com/fr/fr/servers/proliant-servers.html&quot; target=&quot;_blank&quot;>HPE ProLiant&lt;/a> high-performance general-purpose servers.&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;The main missions of this new software-defined platform are to:&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;> &lt;/span>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Ensure business continuity 365 days a year, 24 hours a day&lt;/b>, via a rapid disaster recovery solution running on two separate data centers and capable of providing greater resiliency, including &lt;a href=&quot;https://www.hpe.com/fr/fr/storage/data-protection-solutions.html&quot; target=&quot;_blank&quot;>HPE data protection solutions&lt;/a> and &lt;a href=&quot;https://www.hpe.com/fr/fr/storage/storeonce.html&quot; target=&quot;_blank&quot;>HPE StoreOnce backup appliances&lt;/a> that support all stadium data streams.&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Improve visitor safety in the stadium&lt;/b>, with expanded computing and storage capabilities for better management of video surveillance devices and higher image definition.&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Improve performance&lt;/b>, to support the development of OL Groupe activities and the multiplication of public events, concerts, sports and esports competitions, especially during the operation phase of the future LDLC Arena, owned by OL Group, by the end of 2023.&lt;br />&#xd;&#xa;&lt;b>&lt;br />&#xd;&#xa;&lt;/b>&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Control its environmental impact &lt;/b>by using an efficient and flexible on-premises technology platform to avoid over-provisioning while cutting energy costs in half.&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                    topPadding="30"/>
+                <pullquote
+                    jcr:created="{Date}2023-02-21T00:04:57.296Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2023-02-21T00:05:56.345Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution=" "
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>OL Groupe called on HPE and its partner Cheops Technology to design and deploy a modern and resilient on-premises technology platform&lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2023-02-21T00:05:56.345Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote>
+                <textonlycomponent_b4
+                    jcr:created="{Date}2018-06-18T09:18:06.257-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-02-21T00:07:55.038Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Addressing environmental issues through technology&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;&lt;/b>As the first French League 1 soccer club to be awarded a label certifying its action for the preservation of the environment&lt;sup>1&lt;/sup> , Olympique Lyonnais reaffirms its commitment to the environmental cause by choosing the HPE GreenLake solution. This solution has enabled OL Groupe to reduce the energy cost of its IT structure by nearly 50% and is helping it to achieve its bold objective of reducing its energy footprint by 20% each year.&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;Specifically, the new HPE infrastructure and services delivered by CHEOPS TECHNOLOGY have enabled the group to increase its computing capacity fourfold and improve its storage, all while reducing the demand on resources to power and cool it and ensuring that additional capacity is always available.&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;&amp;quot;The continuation of our collaboration with HPE allows us to fully enter the concrete phase of our energy efficiency plan, with the objective of reducing our energy consumption by 20% while guaranteeing the continuation of our sports and entertainment activities,&amp;quot;&lt;i style=&quot;&quot;> &lt;/i>said Emmanuelle Sarrabay, Deputy Director General for Finance and Information Systems and Corporate Legal Affairs.&lt;b style=&quot;&quot;> &amp;quot;&lt;/b>The challenge is to deliver the best service and an optimized fan experience and we have full confidence in HPE's teams to help us achieve our goals with their expertise.”&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;&amp;quot;We are very proud of the choice made by Olympique Lyonnais to modernize its technology environment and commit to the environment with HPE technologies,&amp;quot; said Alain Melon, general manager of Hewlett Packard Enterprise in France. “Our HPE GreenLake platform provides Olympique Lyonnais with a scalable and flexible infrastructure capable of meeting the group's future technology needs to continue to deliver an exceptional experience to its fans and visitors.&amp;quot;&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;CHEOPS TECHNOLOGY, a long-time Platinum Partner of HPE and Olympique Lyonnais, brought its expertise and experience to enable a seamless installation of the infrastructure and continues its collaboration with future projects, such as the LDCL Arena, a 16,000-seat event venue owned by OL Groupe that will open in the last quarter of 2023.&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;“We are delighted to continue the adventure with Olympique Lyonnais alongside HPE,” said Claude Fournier, Regional Director of CHEOPS TECHNOLOGY. “In 2015, when we implemented the previous infrastructure, the qualities sought were mainly performance, resilience and security. During this renewal, we added a strong criterion on the environmental impact. The gains obtained are in line with the objectives of our service centers which continue to ensure the daily remote operation of this new architecture.”&lt;/span>&lt;/p>&#xd;&#xa;"/>
+                <pullquote_349b
+                    jcr:created="{Date}2018-06-18T09:23:47.197-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-02-21T00:08:56.166Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution="Emmanuelle Sarrabay, Deputy Director General for Finance and Information Systems and Corporate Legal Affairs"
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>&amp;quot;The continuation of our collaboration with HPE allows us to fully enter the concrete phase of our energy efficiency plan, with the objective of reducing our energy consumption by 20% while guaranteeing the continuation of our sports and entertainment activities”&lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2023-02-21T00:08:56.166Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote_349b>
+                <textonlycomponent_97
+                    jcr:created="{Date}2018-06-22T11:22:31.557-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-03-30T23:44:30.835Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Additional Resources:&lt;br>&#xd;&#xa; &amp;nbsp;&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>To learn more about HPE GreenLake, visit &lt;a href=&quot;https://www.hpe.com/us/en/greenlake.html&quot; target=&quot;_blank&quot;>hpe.com/greenlake&lt;/a>.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>To learn more about OL Groupe, visit &lt;a href=&quot;https://www.ol.fr/fr/ol-groupe&quot; target=&quot;_blank&quot;>ol.fr&lt;/a>.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>To learn more about CHEOPS TECHNOLOGY, visit &lt;a href=&quot;https://www.cheops.fr/fr&quot; target=&quot;_blank&quot;>cheops.fr&lt;/a> &lt;br>&#xd;&#xa;&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>&lt;br>&#xd;&#xa;About HPE GreenLake&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/b>The HPE GreenLake edge-to-cloud platform enables customers to accelerate data-first modernization and provides cloud services that can run on-premises, at the edge, in a colocation facility, and in the public cloud. In &lt;a href=&quot;https://www.hpe.com/us/en/newsroom/press-release/2022/11/hewlett-packard-enterprise-reports-fiscal-2022-results-with-record-q4-performance.html&quot; target=&quot;_blank&quot;>its final fiscal quarter of 2022&lt;/a>, HPE reported Annualized Revenue&amp;nbsp;Run-Rate (ARR) of&amp;nbsp;$936&amp;nbsp;million with total as-a-service orders growth of 33% compared to the prior-year period.&amp;nbsp;HPE GreenLake has 65,000 customers, powers more than two million connected devices and manages more than one exabyte of data under management with customers worldwide. These organizations benefit from one control plane from which to automate, orchestrate, and run their hybrid cloud strategy. The scalable, pay-as-you go HPE GreenLake platform also delivers robust security, compliance, and control, and supports a broad partner ecosystem – including channel partners, distributors, independent software vendors, public cloud providers, service providers, and system integrators. For more information on HPE GreenLake, please visit: &lt;a href=&quot;https://www.hpe.com/us/en/greenlake.html&quot; target=&quot;_blank&quot;>https://www.hpe.com/us/en/greenlake.html&lt;/a>&lt;br>&#xd;&#xa; &lt;b>&lt;br>&#xd;&#xa;About Olympique Lyonnais Groupe&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/b>Organized around Olympique Lyonnais, a soccer club founded in 1950 and chaired by Jean-Michel Aulas since 1987, OL Groupe is a leading player in the entertainment and sports sector in France, listed since 2007 (Euronext Paris).&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; Olympique Lyonnais has won 53 titles, including 32 with the women's team (15 French championships, 9 French cups and 8 UEFA Women's Champions League) and 21 (including a record 7 consecutive L1 titles) with the men's team, which participated in its 24&lt;sup>ème&lt;/sup> European cups this season.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; This approach to parity is also reflected in the creation of its mixed Academy, whose U19 team won the Gambardella Cup 2022.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; Since the inauguration of its new stadium in January 2016, Olympique Lyonnais, like the biggest European clubs, has had a 100% private, ultra-modern and multifunctional stadium, open 365 days a year, which is part of a global strategy, offering entertainment activities in the sports, artistic, cultural and corporate fields. In addition to the stadium, a project to build a new 16,000-seat arena on the OL Vallée site, which will host concerts and sports activities, is currently underway for delivery in late 2023.&lt;/span>&lt;/p>&#xd;&#xa;"/>
+                <textonlycomponent_fe
+                    jcr:created="{Date}2018-06-18T09:28:54.456-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-02-23T16:42:40.699Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>About Hewlett Packard Enterprise&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;/b>Hewlett Packard Enterprise (NYSE: HPE) is the global edge-to-cloud company that helps organizations accelerate outcomes by unlocking value from all of their data, everywhere. Built on decades of reimagining the future and innovating to advance the way people live and work, HPE delivers unique, open and intelligent technology solutions as a service.&amp;nbsp; With offerings spanning Cloud Services, Compute, High Performance Computing &amp;amp; AI, Intelligent Edge, Software, and Storage, HPE provides a consistent experience across all clouds and edges, helping customers develop new business models, engage in new ways, and increase operational performance. For more information, visit: &lt;a href=&quot;http://www.hpe.com&quot;>www.hpe.com&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;b data-rte-class=&quot;rte-temp&quot;>&lt;b data-rte-class=&quot;rte-temp&quot;>&lt;span class=&quot;body-copy-large&quot;> &lt;/span>&lt;/b>&lt;span class=&quot;body-copy-large&quot;>Editorial Contact:&lt;u>&lt;br>&#xd;&#xa; &lt;/u>&lt;/span>&lt;/b>&lt;span class=&quot;body-copy-large&quot;>Benjamin Lesueur&lt;br>&#xd;&#xa; &lt;a href=&quot;mailto:Benjamin.Lesueur@hpe.com&quot; target=&quot;_blank&quot;>benjamin.Lesueur@hpe.com&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-small&quot;>&lt;sup>1&lt;/sup> According to a study published by the English association Sport Positive, &lt;a href=&quot;https://www.sportpositiveleagues.com/ligue-1-2022-francais/&quot; target=&quot;_blank&quot;>https://www.sportpositiveleagues.com/ligue-1-2022-francais/&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <textonlycomponent_bf
+                    jcr:created="{Date}2018-07-02T13:12:59.755-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-10-12T16:10:50.633Z"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    textOnly="&lt;h2>RELATED NEWS&lt;/h2>&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli_540225213
+                    jcr:created="{Date}2018-06-18T10:12:48.909-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:22:53.902-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <columncontainercompo
+                    jcr:created="{Date}2018-07-02T13:14:23.594-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:15:08.106-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/columnContainerComponent"
+                    columns="column-content-3">
+                    <column_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_7c25
+                            jcr:created="{Date}2018-07-02T13:15:28.984-07:00"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2023-02-21T00:19:52.832Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/12/hpe-greenlake-adds-application-analytics-and-developer-services-to-modernize-workloads-across-the-hybrid-cloud"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="HPE GreenLake adds application, analytics, and developer services to modernize workloads across the hybrid cloud"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="HPE GreenLake adds application, analytics, and developer services to modernize workloads across the hybrid cloud"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2023-02-21T00:19:52.832Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2022/12/image-norend/hpe-greenlake-adds-application-analytics-and-developer-services-to-modernize-workloads-across-the-hybrid-cloud.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2023-02-21T00:19:52.832Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_7c25>
+                    </column_0>
+                    <column_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_4dff
+                            jcr:created="{Date}2018-09-21T21:01:47.387Z"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2023-02-21T00:22:59.131Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2023/01/city-electrical-factors-selects-hpe-greenlake-to-modernize-its-customer-and-data-experience"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="City Electrical Factors selects HPE GreenLake to modernize its customer and data experience"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="City Electrical Factors selects HPE GreenLake to modernize its customer and data experience"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2023-02-21T00:22:59.131Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2023/01/image-norend/city-electrical-factors-selects-hpe-greenlake-to-modernize-its-customer-and-data-experience.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2023-02-21T00:22:59.131Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_4dff>
+                    </column_1>
+                    <column_2
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_50f2
+                            jcr:created="{Date}2018-09-05T17:41:27.359Z"
+                            jcr:createdBy="nagle@hpe.com"
+                            jcr:lastModified="{Date}2023-02-21T00:26:53.445Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/07/french-cloud-service-provider-antemeta-selects-hpe-greenlake-to-introduce-new-automated-disaster-recovery-service"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="French cloud service provider AntemetA selects HPE GreenLake to introduce new automated disaster recovery service"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="French cloud service provider AntemetA selects HPE GreenLake to introduce new automated disaster recovery service"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2023-02-21T00:26:53.445Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                fileReference="/content/dam/hpe/newsroom/2022/07/image-norend/french-cloud-service-provider-antemeta-selects-hpe-greenlake-to-introduce-new-automated-disaster-recovery-service.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2023-02-21T00:26:53.445Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"/>
+                        </contentblock_50f2>
+                    </column_2>
+                </columncontainercompo>
+            </body-par>
+            <side-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <buttonctaitemcompone
+                    jcr:created="{Date}2018-06-28T13:06:31.075-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:06:46.099-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 1"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_661124859
+                    jcr:created="{Date}2018-06-28T13:06:51.115-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:11.079-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 2"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_606970408
+                    jcr:created="{Date}2018-06-28T13:06:53.400-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:02.336-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 3"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+            </side-par>
+        </main-par>
+        <image
+            jcr:lastModified="{Date}2018-09-05T17:38:02.066Z"
+            jcr:lastModifiedBy="nagle@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+    </jcr:content>
+</jcr:root>

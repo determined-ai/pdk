@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/apps/settings/wcm/designs/hpeweb"
+        cq:lastModified="{Date}2023-04-25T15:07:31.857Z"
+        cq:lastModifiedBy="christine.seales@hpe.com"
+        cq:tags="[hpe-newsroom:categories/big-data,hpe-newsroom:categories/servers]"
+        cq:template="/apps/hpeweb/templates/page-text-heavy"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="HPE Aruba Networking simplifies IT operations with AIOps-driven cloud management and new network-as-a-service capabilities available on HPE GreenLake"
+        jcr:uuid="5b41c212-9017-405e-a32a-1ae2adc35d52"
+        sling:resourceType="hpeweb/components/pages/page-text-heavy"
+        browserTitle="HPE Aruba Networking simplifies IT operations with AIOps-driven cloud management and new network-as-a-service capabilities available on HPE GreenLake"
+        changefreq="daily"
+        contentType="Press Release"
+        displayDate="{Date}2023-04-25T08:00:00.000-04:00"
+        metaDescription="Next generation of HPE Aruba Networking Central paves the way for the era of AI-powered network management; ‘Agile NaaS’ strategy simplifies delivery of critical network services via HPE GreenLake "
+        metaKeywords="Aruba, edge-to-cloud, network, networking, networks, HPE, Axis Security, Athonet, IoT, Wi-Fi, WiFi, HPE GreenLake, wireless connectivity, wireless, Aruba Central, Agile NaaS, HPE Aruba Networking Central, AI, AIOps, Network Policy NaaS service pack, HPE GreenLake for Aruba networking"
+        metaOgImage="/content/dam/hpe/newsroom/2023/04/image-norend/hpe-aruba-networking-simplifies-it-operations-with-aiops-driven-cloud-management-and-new-network-as-a-service-capabilities.jpg"
+        metaTwitterCardType="summary_large_image"
+        msmcomponent="/content/hpe/base/blueprint/newsroom/press-release/2023/04/hpe-aruba-networking-simplifies-it-operations-with-aiops-driven-cloud-management-and-new-network-as-a-service-capabilities-available-on-hpe-greenlake/jcr:content/main-par/body-par/textonlycomponent_1270341408"
+        navTitle="HPE Aruba Networking simplifies IT operations with AIOps-driven cloud management and new network-as-a-service capabilities available on HPE GreenLake"
+        pageTitle="HPE Aruba Networking simplifies IT operations with AIOps-driven cloud management and new network-as-a-service capabilities available on HPE GreenLake"
+        priority="(None)"
+        socialDescription="Next generation of HPE Aruba Networking Central paves the way for the era of AI-powered network management; ‘Agile NaaS’ strategy simplifies delivery of critical network services via HPE GreenLake "
+        subtitle="Next generation of HPE Aruba Networking Central paves the way for the era of AI-powered network management; ‘Agile NaaS’ strategy simplifies delivery of critical network services via HPE GreenLake "
+        theme="dark">
+        <main-par
+            jcr:lastModified="{Date}2018-06-28T13:09:39.402-07:00"
+            jcr:lastModifiedBy="velazquez@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="hpeweb/components/content/textHeavyComponent"
+            siderail="none">
+            <subtitle
+                jcr:lastModified="{Date}2023-04-13T18:44:29.201Z"
+                jcr:lastModifiedBy="christine.seales@hpe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="hpeweb/components/content/newsroom/newsroomSubtitleComponent"
+                textOnly="APRIL 25, 2023 • PRESS RELEASE"/>
+            <body-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <imageonlycomponent_c
+                    jcr:created="{Date}2018-06-18T09:06:27.827-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-04-13T18:32:36.191Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/imageOnlyComponent"
+                    fileReference="/content/dam/hpe/newsroom/2023/04/image-norend/hpe-aruba-networking-simplifies-it-operations-with-aiops-driven-cloud-management-and-new-network-as-a-service-capabilities.jpg"
+                    imageAlignment="hpe-image-center"
+                    imageAltText="HPE Guarantees"
+                    topMargin="60"
+                    videoSource="video"
+                    videoType="youtube"/>
+                <textonlycomponent_cd
+                    jcr:created="{Date}2018-06-18T09:12:49.742-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-04-13T18:47:28.756Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    leftPadding="30"
+                    rightPadding="30"
+                    textIsRich="true"
+                    textOnly="&lt;h3>IN THIS ARTICLE&lt;/h3>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>HPE Aruba Networking is announcing new products to help enterprise IT teams simplify operations with AIOps-driven cloud management, as well as new HPE GreenLake network-as-a-service capabilities&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>The next generation of HPE Aruba Networking Central has been re-designed to simplify network management operations and improve productivity by leveraging AI for IT operations&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>New NaaS capabilities are available for customers and channel partners to acquire, deploy, and manage on-demand networking on the HPE GreenLake platform with a monthly subscription&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>Both align with Aruba’s edge-to-cloud strategy, providing customers and partners with simpler ways to deliver and consume NaaS, as well as improving and simplifying management of IT operations via intelligent automation&lt;/span>&lt;br>&#xd;&#xa;&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli
+                    jcr:created="{Date}2018-06-18T09:16:54.243-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-18T09:18:45.987-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <textonlycomponent
+                    jcr:created="{Date}2023-04-13T18:47:38.324Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2023-04-13T18:48:33.956Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;h2>Next generation of HPE Aruba Networking Central paves the way for the era of AI-powered network management; ‘Agile NaaS’ strategy simplifies delivery of critical network services via HPE GreenLake &lt;br>&#xd;&#xa;&lt;/h2>&#xd;&#xa;"/>
+                <textonlycomponent_e9
+                    jcr:created="{Date}2018-06-22T11:24:07.263-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-04-13T18:49:33.699Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>LAS VEGAS – April 25, 2023 &lt;/b>– &lt;a href=&quot;https://www.hpe.com/us/en/home.html&quot; target=&quot;_blank&quot;>Hewlett Packard Enterprise&lt;/a> (NYSE: HPE) today introduced product innovations to help enterprise IT teams simplify network management processes and improve operational agility with the next generation of HPE Aruba Networking Central, a cloud-native network management solution. HPE Aruba Networking also announced Network-as-a-service (NaaS) capabilities for customers and channel partners to acquire, deploy, and manage on the HPE GreenLake platform with a monthly subscription.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;As IT teams remain understaffed and overtaxed, many enterprises lack the personnel required to manage multiple networking products and capabilities from multiple vendors. To alleviate time spent on network troubleshooting and optimization, the HPE Aruba Networking Central cloud network management platform has been re-designed to simplify operations and improve productivity by leveraging artificial intelligence for IT operations (AIOps) to reduce manual tasks, so stretched networking teams can focus on more strategic and higher-value projects.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;HPE Aruba Networking is also introducing its Agile NaaS framework, designed to make on-demand networking easier for partners to sell and end-user customers to consume. New service pack capabilities added to &lt;a href=&quot;https://www.arubanetworks.com/solutions/naas/&quot; target=&quot;_blank&quot;>HPE GreenLake for Aruba networking&lt;/a> enable partners to bundle their design and delivery services for their customers with a monthly NaaS technology subscription. &amp;nbsp;&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <pullquote
+                    jcr:created="{Date}2023-04-13T18:49:53.132Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2023-04-13T18:52:54.740Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution="Phil Mottram, executive vice president and general manager, HPE Aruba Networking"
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>“A modernized network is the backbone for powering next-generation digital experiences and enabling new business models. The evolution of our AIOps represents the next step toward more effectively managing operational complexity.” &amp;nbsp;&lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2023-04-13T18:52:54.740Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote>
+                <textonlycomponent_b4
+                    jcr:created="{Date}2018-06-18T09:18:06.257-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-04-13T18:55:51.811Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>“A modernized network is the backbone for powering next-generation digital experiences and enabling new business models,” said Phil Mottram, executive vice president and general manager, HPE Aruba Networking. “The evolution of our AIOps in HPE Aruba Networking Central and Agile NaaS represents the next step toward more effectively managing operational complexity, while connecting with ever-expanding workloads&amp;nbsp;from edge to cloud for a seamless hybrid work experience.” &lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;The next generation of HPE Aruba Networking Central delivers a wide range of business outcomes such as automated factory operations, customized customer experiences, a reduced carbon footprint, and omnichannel retail operations for a seamless shopping experience whether in-store, mobile, or online. Its new design leapfrogs legacy network management tools with new features that include:&lt;br>&#xd;&#xa;&amp;nbsp;&lt;/span>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>Operator-centric design with a simplified user experience to enable more people across all skill levels, featuring entity-centric “solar system” views to promote intuitive navigation and reduce cognitive loads&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>The industry’s first “time-travel” feature for a contextually correlated ‘point-in-time’ view of the network that allows recovery in minutes to a specific point&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>Multi-layer physical and logical “sunburst” topology views to transform visualization of large, complex networks&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>Intelligent assurance indicators for device health and client experience, enabling rapid first-level triage&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>AI-powered full-stack insights for enhanced root cause analysis (RCA), impact assessment, and precise recommendationsDevice-agnostic Day 0 and Day 1 workflows with 100% API support to automate network configurations at scale&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>&amp;nbsp;&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>“To manage the modern network, tools need to sufficiently empower IT teams in a rapidly changing landscape, but unfortunately, too many network operations professionals feel their management tools aren’t reducing network problems to the degree they should,” said Maribel Lopez, founder and principal analyst, Lopez Research. “Companies need a new generation of management tools that are built for an AIOps environment, with unified workflows from Day 0 planning to Day 1 deployment and Day 2 troubleshooting and optimization, ultimately allowing the needs of the business to drive timelines for technology and the network – not the other way around.”&lt;/span>&lt;/p>&#xd;&#xa;"/>
+                <textonlycomponent_5d
+                    jcr:created="{Date}2018-06-18T09:21:51.280-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-04-13T19:29:17.388Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>Agile NaaS is Aruba’s framework for helping customers successfully navigate and implement new consumption choices with network-as-a-service to deliver business outcomes faster:&lt;br>&#xd;&#xa; &amp;nbsp;&lt;/span>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>Tools to enable networking teams to partner with the business to develop a NaaS strategy that meets their individual requirements&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>Support for a range of acquisition, deployment, and management models&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>The ability to incrementally introduce Network-as-a-Service without an entire network refresh&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>World class Zero Trust and SASE security, cloud performance and scale, and AI-powered automation so customers start with the best network foundation&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>&amp;nbsp;&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>New Service Pack enhancements on HPE GreenLake for Aruba networking include:&lt;br>&#xd;&#xa; &amp;nbsp;&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>A new Network Policy NaaS service pack, based on Aruba’s award winning ClearPass network access control solution. This adds a new standardized NaaS network policy offering to complement &lt;a href=&quot;https://news.arubanetworks.com/news-release-details/2022/HPE-GreenLake-Edge-to-Cloud-Platform-Delivers-Greater-Choice-and-Simplicity-with-Unified-Experience-New-Cloud-Services-and-Expanded-Partner-Ecosystem/default.aspx&quot; target=&quot;_blank&quot;>eight previously introduced wired, wireless, and SD-Branch NaaS service packs&lt;/a> from 2022.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>HPE GreenLake for Aruba networking service packs are available for order by channel partners across 15 countries including Australia, Canada, Finland, France, Germany, Italy, Japan, Korea, Netherlands, New Zealand, Norway, Spain, Sweden, United Kingdom and United States. The new Network Policy service pack will be available for order starting in Q3 of HPE’s 2023 fiscal year.&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                    topPadding="20"/>
+                <pullquote_349b
+                    jcr:created="{Date}2018-06-18T09:23:47.197-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-04-13T18:59:25.687Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution="Brandon Butler, IDC Research Manager, Enterprise Networks"
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>“HPE Aruba Networking has recognized that each organization has unique needs and is at the forefront of reinventing how customers and partners can consume or deliver more business-outcome focused networking.”&lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2023-04-13T18:59:25.687Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote_349b>
+                <textonlycomponent_97
+                    jcr:created="{Date}2018-06-22T11:22:31.557-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-04-13T19:00:27.916Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>“As organizations across the globe build a future connectivity strategy, they’re increasingly focusing on modern enterprise networks that are agile, responsive to business needs and simple to operate - while being powerful drivers of transformation,” said Brandon Butler, IDC Research Manager, Enterprise Networks. “HPE Aruba Networking has recognized that each organization has unique needs and is at the forefront of reinventing how customers and partners can consume or deliver more business-outcome focused networking. With the enhancements announced today, HPE Aruba Networking continues to advance its mature portfolio in the areas of AI, security, automation, and Network as a Service.”&lt;/span>&lt;/p>&#xd;&#xa;"/>
+                <pullquote_810005669
+                    jcr:created="{Date}2023-04-13T19:00:35.964Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2023-04-13T19:01:51.023Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution="Joel Grace, senior vice president of client services, Sayers"
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>“HPE GreenLake for Aruba networking service packs are exactly what our customers need to build and run an edge-to-cloud infrastructure in one place and pay for it all as a service.”&lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2023-04-13T19:01:51.023Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote_810005669>
+                <textonlycomponent_fe
+                    jcr:created="{Date}2018-06-18T09:28:54.456-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-04-25T15:06:21.764Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>“With network operations under pressure from a combination of the IT skills shortage, data complexity and fragmented network operations requirements, many enterprise customers are looking to automate more of their network management operations – and at the same time use AIOps to streamline delivery of network as a service,” said Joel Grace, senior vice president of client services, Sayers. “HPE GreenLake for Aruba networking service packs are exactly what our customers need to build and run an edge-to-cloud infrastructure in one place and pay for it all as a service.”&lt;br />&#xd;&#xa; &lt;b>&lt;br />&#xd;&#xa;Integration of Axis Security and Athonet&lt;br />&#xd;&#xa; &lt;br />&#xd;&#xa; &lt;/b>HPE recently announced two acquisitions to expand the HPE Aruba Networking portfolio: &lt;a href=&quot;https://www.hpe.com/us/en/newsroom/press-release/2023/02/hewlett-packard-enterprise-doubles-down-on-private-5g-extends-leadership-in-wireless-connectivity-with-acquisition-of-athonet.html&quot; target=&quot;_blank&quot;>Athonet&lt;/a> for Private 5G connectivity and &lt;a href=&quot;https://www.hpe.com/us/en/newsroom/press-release/2023/03/hewlett-packard-enterprise-fortifies-network-security-with-acquisition-of-security-service-edge-provider-axis-security.html&quot; target=&quot;_blank&quot;>Axis Security&lt;/a> for comprehensive SASE security solutions. The Axis Security acquisition closed in March, and its edge-to-cloud security solutions are now integrated with HPE Aruba Networking’s technology and will be on display at the innovation zone at Atmosphere. The Athonet transaction is expected to close during the fourth quarter of HPE’s 2023 fiscal year, and HPE will integrate the solutions with the HPE Aruba Networking portfolio and existing telco software following the close of the transaction.&lt;br />&#xd;&#xa; &lt;br />&#xd;&#xa; &lt;br />&#xd;&#xa; &lt;b>Read more about each of the product innovations announced today&lt;/b>, as well as an overview from HPE Aruba Networking’s executive vice president and general manager Phil Mottram on today’s announcement:&lt;br />&#xd;&#xa;  &lt;/span>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>“Welcome to Next” announcement &lt;a href=&quot;https://cts.businesswire.com/ct/CT?id=smartlink&amp;amp;url=https%3A%2F%2Fblogs.arubanetworks.com%2Fcorporate%2Fwelcome-to-next&amp;amp;esheet=53385140&amp;amp;newsitemid=20230425005031&amp;amp;lan=en-US&amp;amp;anchor=overview&amp;amp;index=6&amp;amp;md5=f44fe6749e6bf8a14aa3fdd080a5143d&quot; target=&quot;_blank&quot;>overview&lt;/a> blog by Phil Mottram, executive vice president and general manager, HPE Aruba Networking&lt;br />&#xd;&#xa; &lt;br />&#xd;&#xa; &lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>Blog for overview of HPE Aruba Networking Central announcement: &lt;a href=&quot;https://cts.businesswire.com/ct/CT?id=smartlink&amp;amp;url=https%3A%2F%2Fblogs.arubanetworks.com%2Fcorporate%2Fintroducing-the-next-generation-of-hpe-aruba-networking-central&amp;amp;esheet=53385140&amp;amp;newsitemid=20230425005031&amp;amp;lan=en-US&amp;amp;anchor=%26%238220%3BIntroducing+the+next+generation+of+HPE+Aruba+Networking+Central%26%238221%3B&amp;amp;index=7&amp;amp;md5=a35f613e4388f0712342428ebd2e4823&quot; target=&quot;_blank&quot;>“Introducing the next generation of HPE Aruba Networking Central”&lt;/a>&lt;br />&#xd;&#xa; &lt;br />&#xd;&#xa; &lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>Blog for overview of HPE GreenLake for Aruba networking announcement: &lt;a href=&quot;https://cts.businesswire.com/ct/CT?id=smartlink&amp;amp;url=https%3A%2F%2Fblogs.arubanetworks.com%2Fcorporate%2Fthe-future-is-flexible-the-future-is-agile-naas&amp;amp;esheet=53385140&amp;amp;newsitemid=20230425005031&amp;amp;lan=en-US&amp;amp;anchor=%26%238220%3BThe+Future+is+Flexible.+The+Future+is+Agile+NaaS.%26%238221%3B&amp;amp;index=8&amp;amp;md5=aaef5f771f892104447b534f4ed1540b&quot; target=&quot;_blank&quot;>“The Future is Flexible. The Future is Agile NaaS.”&lt;/a>&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;br />&#xd;&#xa;Both new innovations will be announced onstage during Atmosphere, the organization’s flagship event, taking place April 23-28 at the Venetian Resort in Las Vegas. &lt;a href=&quot;https://www.arubanetworks.com/atmosphere/ams/&quot; target=&quot;_blank&quot;>Register here to watch the keynotes live online&lt;/a> and learn how HPE Aruba Networking provides the necessary network infrastructure, security, and automation to ensure networks deliver the right business outcomes. &lt;/span>&lt;/p>&#xd;&#xa;"/>
+                <textonlycomponent_1270341408
+                    jcr:created="{Date}2023-04-25T15:06:32.050Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2023-04-25T15:07:31.848Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>About Hewlett Packard Enterprise&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;/b>Hewlett Packard Enterprise (NYSE: HPE) is the global edge-to-cloud company that helps organizations accelerate outcomes by unlocking value from all of their data, everywhere. Built on decades of reimagining the future and innovating to advance the way people live and work, HPE delivers unique, open, and intelligent technology solutions as a service. With offerings spanning Cloud Services, Compute, High Performance Computing &amp;amp; AI, Intelligent Edge, Software, and Storage, HPE provides a consistent experience across all clouds and edges, helping customers develop new business models, engage in new ways, and increase operational performance. For more information, visit:&amp;nbsp;&lt;a href=&quot;http://www.hpe.com&quot; target=&quot;_blank&quot;>www.hpe.com&lt;/a>.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;b>Contacts&lt;/b>&lt;br>&#xd;&#xa;Ben Stricker&lt;br>&#xd;&#xa;&lt;a href=&quot;mailto:Ben.Stricker@hpe.com&quot; target=&quot;_blank&quot;>Ben.Stricker@hpe.com&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <textonlycomponent_bf
+                    jcr:created="{Date}2018-07-02T13:12:59.755-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-10-12T16:10:50.633Z"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    textOnly="&lt;h2>RELATED NEWS&lt;/h2>&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli_540225213
+                    jcr:created="{Date}2018-06-18T10:12:48.909-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:22:53.902-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <columncontainercompo
+                    jcr:created="{Date}2018-07-02T13:14:23.594-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:15:08.106-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/columnContainerComponent"
+                    columns="column-content-3">
+                    <column_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_7c25
+                            jcr:created="{Date}2018-07-02T13:15:28.984-07:00"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2023-04-13T19:10:23.615Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2023/02/hewlett-packard-enterprise-doubles-down-on-private-5g-extends-leadership-in-wireless-connectivity-with-acquisition-of-athonet"
+                            description="&lt;p>Press Release&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="Hewlett Packard Enterprise doubles down on private 5G, extends leadership in wireless connectivity with acquisition of Athonet"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Hewlett Packard Enterprise doubles down on private 5G, extends leadership in wireless connectivity with acquisition of Athonet"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2023-04-13T19:10:23.615Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2023/03/image-norend/hpe-fortifies-network-security-with-acquisition-of-security-service-edge-provider-axis-security.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2023-04-13T19:10:23.615Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_7c25>
+                    </column_0>
+                    <column_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_4dff
+                            jcr:created="{Date}2018-09-21T21:01:47.387Z"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2023-04-13T19:13:25.765Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2023/03/hewlett-packard-enterprise-fortifies-network-security-with-acquisition-of-security-service-edge-provider-axis-security"
+                            description="&lt;p>Press Release&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="Hewlett Packard Enterprise fortifies network security with acquisition of Security Service Edge provider Axis Security"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Hewlett Packard Enterprise fortifies network security with acquisition of Security Service Edge provider Axis Security"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2023-04-13T19:13:25.765Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2023/03/image-norend/hpe-fortifies-network-security-with-acquisition-of-security-service-edge-provider-axis-security.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2023-04-13T19:13:25.765Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_4dff>
+                    </column_1>
+                    <column_2
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_50f2
+                            jcr:created="{Date}2018-09-05T17:41:27.359Z"
+                            jcr:createdBy="nagle@hpe.com"
+                            jcr:lastModified="{Date}2023-04-13T19:22:37.301Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="https://news.arubanetworks.com/news-release-details/2023/Aruba-Collaborates-with-Microsoft-and-reelyActive-to-Speed-the-Migration-of-IoT-Workloads-to-Microsoft-Azure-without-Custom-Engineering/default.aspx"
+                            description="&lt;p>Press Release&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="Aruba Collaborates with Microsoft and reelyActive to Speed the Migration of IoT Workloads to Microsoft Azure without Custom Engineering"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Aruba Collaborates with Microsoft and reelyActive to Speed the Migration of IoT Workloads to Microsoft Azure without Custom Engineering"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2023-04-13T19:22:37.301Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                fileReference="/content/dam/hpe/newsroom/2023/04/image-norend/aruba-collaborates-with-microsoft.JPG"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2023-04-13T19:22:37.301Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"/>
+                        </contentblock_50f2>
+                    </column_2>
+                </columncontainercompo>
+            </body-par>
+            <side-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <buttonctaitemcompone
+                    jcr:created="{Date}2018-06-28T13:06:31.075-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:06:46.099-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 1"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_661124859
+                    jcr:created="{Date}2018-06-28T13:06:51.115-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:11.079-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 2"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_606970408
+                    jcr:created="{Date}2018-06-28T13:06:53.400-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:02.336-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 3"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+            </side-par>
+        </main-par>
+        <image
+            jcr:lastModified="{Date}2018-09-05T17:38:02.066Z"
+            jcr:lastModifiedBy="nagle@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+    </jcr:content>
+</jcr:root>

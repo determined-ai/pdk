@@ -59,7 +59,12 @@ def create_mar_file(model_name, model_version):
 # =====================================================================================
 
 
-def create_properties_file(model_name, model_version):
+def create_properties_file(model_name, model_version, cloud_model_host):
+    print(f"--> Cloud Model Host: {cloud_model_host}")
+    model_store = "/mnt/models/model-store"
+    if cloud_model_host == "aws":
+        print("--> Changing Model Store to match AWS")
+        model_store = "/mnt/models"
     config_properties = """inference_address=http://0.0.0.0:8085
 management_address=http://0.0.0.0:8083
 metrics_address=http://0.0.0.0:8082
@@ -72,8 +77,9 @@ metrics_format=prometheus
 NUM_WORKERS=1
 number_of_netty_threads=4
 job_queue_size=10
-model_store=/mnt/models/model-store
+model_store=%s
 model_snapshot={"name":"startup.cfg","modelCount":1,"models":{"%s":{"%s":{"defaultVersion":true,"marName":"%s.mar","minWorkers":1,"maxWorkers":5,"batchSize":1,"maxBatchDelay":5000,"responseTimeout":120}}}}""" % (
+        model_store,
         model_name,
         model_version,
         model_name,
@@ -115,7 +121,7 @@ def main():
     create_mar_file(model.name, model.version)
 
     # Create config.properties for .mar file, return files to upload to GCS bucket
-    model_files = create_properties_file(model.name, model.version)
+    model_files = create_properties_file(model.name, model.version, args.cloud_model_host)
 
     # Upload model artifacts to Cloud  bucket in the format for TorchServe
     upload_model(

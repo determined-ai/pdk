@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2023-01-10T00:36:57.614Z"
+        cq:lastModifiedBy="christine.seales@hpe.com"
+        cq:template="/conf/hpeweb/settings/wcm/templates/hpe-generic-page-v3"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="02"
+        sling:resourceType="hpeweb-touchui/components/pages/page-hpe-generic-polaris">
+        <polaris-body-zone
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys"/>
+    </jcr:content>
+    <hewlett-packard-enterprise-and-alfanar-announce-intent-to-invest-in-high-tech-production-in-saudi-arabia/>
+    <hewlett-packard-enterprise-to-present-live-audio-webcast-of-fiscal-2023-first-quarter-earnings-conference-call/>
+    <ol-groupe-selects-hpe-greenlake-to-support-its-energy-efficiency-plan-and-improve-the-visitor-and-fan-experience/>
+    <hewlett-packard-enterprise-doubles-down-on-private-5g-extends-leadership-in-wireless-connectivity-with-acquisition-of-athonet/>
+    <hewlett-packard-enterprise-and-nokia-to-collaborate-on-cloud-ran-solution-for-csps-and-enterprises/>
+</jcr:root>

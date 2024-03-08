@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/apps/settings/wcm/designs/hpeweb"
+        cq:lastModified="{Date}2022-01-12T16:32:37.802Z"
+        cq:lastModifiedBy="christine.seales@hpe.com"
+        cq:template="/apps/hpeweb/templates/page-generic-template"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="01"
+        sling:resourceType="hpeweb/components/pages/page-generic-template"/>
+    <leading-japanese-telecommunications-provider-optage-trialling-local-5g-services-powered-by-hpe-5g-core-stack/>
+    <j-j-keller-chooses-hpe-greenlake-to-optimize-operations-and-accelerate-innovation-for-safety-and-compliance/>
+    <hewlett-packard-enterprise-signs-agreement-with-uae-cyber-security-council-to-accelerate-youth-education/>
+    <werder-bremen-partners-with-hewlett-packard-enterprise-to-advance-fan-experience-and-data-intelligence/>
+    <hpe-greenlake-selected-to-expand-core-cloud-offering-and-enhance-desktop-as-a-service-for-cdw-serviceworks/>
+    <steel-authority-of-indias-central-marketing-organization-selects-hpe-greenlake-to-modernize-critical-sap-environment-and-data-management/>
+    <hewlett-packard-enterprise-unveils-supercomputing-research-that-raises-the-bar-for-achieving-quantum-advantage/>
+    <hpe-statement-on-uk-high-court-decision-in-autonomy-proceedings/>
+</jcr:root>

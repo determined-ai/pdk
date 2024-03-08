@@ -4,7 +4,7 @@
 
 # PDK - Pachyderm | Determined | KServe
 ## Deployment and Setup Guide
-**Date/Revision:** January 02, 2024
+**Date/Revision:** February 23, 2024
 
 This page contains step-by-step guides for installing the infrastructure and all necessary components for the PDK environment, covering different Kubernetes plaforms.
 

@@ -4,7 +4,7 @@
 
 # PDK - Pachyderm | Determined | KServe
 ## Deployment Guide for Google Cloud
-<b>Date/Revision:</b> January 02, 2024
+<b>Date/Revision:</b> February 23, 2024
 
 This guide will walk you through the steps of deploying the PDK components to Google Cloud.
 
@@ -12,7 +12,7 @@ This guide will walk you through the steps of deploying the PDK components to Go
 The installation will be performed on the following hardware:
 
 - 3x e2-standard-16 CPU-based nodes (16 vCPUs, 64GB RAM, 1000GB SSD)
-- 2x n1-standard-8 GPU-based nodes (4 NVIDIA-T4, 8 vCPUs, 30GB RAM, 1000GB SSD)
+- 2x n1-standard-8 GPU-based nodes (4 NVIDIA-T4, 16 vCPUs, 64GB RAM, 1000GB SSD)
 
 The 3 CPU-based nodes will be used to run the services for all 3 products, and the MLDM pipelines. The GPU-based nodes will be used to run MLDE experiments.
 
@@ -21,8 +21,8 @@ The following software versions will be used for this installation:
 - Python: 3.8 and 3.9
 - Kubernetes (K8s): latest supported *(currently 1.27)*
 - Postgres: 13
-- MLDE (Determined.AI): latest *(currently 0.26.7)*
-- MLDM (Pachyderm): latest *(currently 2.8.2)*
+- MLDE (Determined.AI): latest *(currently 0.28.1)*
+- MLDM (Pachyderm): latest *(currently 2.8.4)*
 - KServe: 0.12.0-rc0 (Quickstart Environment)
 
 PS: some of the commands used here are sensitive to the version of the product(s) listed above.
@@ -160,7 +160,7 @@ export GCP_ZONE="us-central1-c"
 export K8S_VERSION="1.27.3-gke.100"
 export KSERVE_MODELS_NAMESPACE="models"
 export CLUSTER_MACHINE_TYPE="e2-standard-16"
-export GPU_MACHINE_TYPE="n1-standard-8"
+export GPU_MACHINE_TYPE="n1-standard-16"
 export SQL_CPU="2"
 export SQL_MEM="7680MB"
 
@@ -320,7 +320,8 @@ gcloud container clusters create ${CLUSTER_NAME} \
   --enable-dataplane-v2 \
  	--workload-pool=${PROJECT_ID}.svc.id.goog \
  	--workload-metadata="GKE_METADATA" \
- 	--node-locations ${GCP_ZONE}
+ 	--node-locations ${GCP_ZONE} \
+  --tags pdk
 ```
 
 This process will take several minutes. The output  message will show the cluster configuration. You can also check the status of the provisioning in the Google Cloud Console.
@@ -357,7 +358,8 @@ gcloud container node-pools create "gpu-pool" \
 	--max-surge-upgrade 1 \
 	--max-unavailable-upgrade 0 \
   --scopes=storage-full,cloud-platform \
-	--node-locations ${GCP_ZONE}
+	--node-locations ${GCP_ZONE} \
+  --tags pdk
 ```
 
 This can take several minutes to complete. If it takes more than 1 hour, it will timeout the client. If that happens, track the progress of the provisioning process through the Google Cloud web console.
@@ -715,7 +717,7 @@ spec:
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: nfs
+  name: pdk-pvc
 spec:
   accessModes:
     - ReadWriteMany
@@ -747,7 +749,7 @@ spec:
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: nfs
+  name: pdk-pvc
 spec:
   accessModes:
     - ReadWriteMany
@@ -856,7 +858,7 @@ proxy:
   
 determined:
   enabled: true
-  detVersion: "0.26.7"
+  detVersion: "0.28.1"
   imageRegistry: determinedai
   enterpriseEdition: false
   imagePullSecretName:
@@ -894,7 +896,7 @@ determined:
         volumes:
           - name: pdk-pvc-nfs
             persistentVolumeClaim:
-              claimName: nfs
+              claimName: pdk-pvc
     gpuPodSpec:
       apiVersion: v1
       kind: Pod
@@ -907,7 +909,7 @@ determined:
         volumes:
           - name: pdk-pvc-nfs
             persistentVolumeClaim:
-              claimName: nfs
+              claimName: pdk-pvc
       metadata:
         labels:
           nodegroup-role: gpu-worker
@@ -930,7 +932,7 @@ determined:
             volumes:
               - name: pdk-pvc-nfs
                 persistentVolumeClaim:
-                  claimName: nfs
+                  claimName: pdk-pvc
     - pool_name: gpu-pool
       max_aux_containers_per_agent: 1
       kubernetes_namespace: gpu-pool
@@ -947,7 +949,7 @@ determined:
             volumes:
               - name: pdk-pvc-nfs
                 persistentVolumeClaim:
-                  claimName: nfs
+                  claimName: pdk-pvc
             tolerations:
               - key: "nvidia.com/gpu"
                 operator: "Equal"

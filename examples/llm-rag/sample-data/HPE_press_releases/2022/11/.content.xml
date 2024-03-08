@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/apps/settings/wcm/designs/hpeweb"
+        cq:lastModified="{Date}2022-01-12T16:35:24.583Z"
+        cq:lastModifiedBy="christine.seales@hpe.com"
+        cq:template="/apps/hpeweb/templates/page-generic-template"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="11"
+        sling:resourceType="hpeweb/components/pages/page-generic-template"/>
+    <hewlett-packard-enterprise-introduces-next-generation-compute-engineered-for-a-hybrid-world/>
+    <hpe-and-vmware-advance-partnership-to-drive-digital-transformation-with-integrated-hybrid-cloud-experience/>
+    <hewlett-packard-enterprise-extends-supercomputing-to-the-enterprise-with-new-hpe-cray-portfolio/>
+    <hewlett-packard-enterprise-to-present-live-audio-webcast-of-fiscal-2022-fourth-quarter-earnings-conference-call/>
+    <hpe-asset-upcycling-services-chosen-by-yahoo-japan-for-sustainable-reuse-of-it-assets/>
+    <hewlett-packard-enterprise-reports-fiscal-2022-results-with-record-q4-performance/>
+</jcr:root>

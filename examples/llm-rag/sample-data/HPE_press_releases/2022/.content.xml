@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/apps/settings/wcm/designs/hpeweb"
+        cq:lastModified="{Date}2022-01-12T16:32:13.814Z"
+        cq:lastModifiedBy="christine.seales@hpe.com"
+        cq:template="/apps/hpeweb/templates/page-generic-template"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="2022"
+        sling:resourceType="hpeweb/components/pages/page-generic-template"/>
+    <_x0030_1/>
+    <_x0030_2/>
+    <_x0030_3/>
+    <_x0030_4/>
+    <_x0030_5/>
+    <_x0030_6/>
+    <_x0030_7/>
+    <_x0030_8/>
+    <_x0030_9/>
+    <_x0031_0/>
+    <_x0031_1/>
+    <_x0031_2/>
+</jcr:root>

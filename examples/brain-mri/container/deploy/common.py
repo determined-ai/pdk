@@ -237,6 +237,7 @@ def create_inference_service(
             tolerations=tol,
             pytorch=(
                 V1beta1TorchServeSpec(
+                    args=["--model-store=/mnt/models"],
                     protocol_version="v2",
                     storage_uri=f"s3://{bucket_name}/{model_name}",
                     resources=(

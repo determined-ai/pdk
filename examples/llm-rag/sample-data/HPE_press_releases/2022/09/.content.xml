@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/apps/settings/wcm/designs/hpeweb"
+        cq:lastModified="{Date}2022-01-12T16:34:48.140Z"
+        cq:lastModifiedBy="christine.seales@hpe.com"
+        cq:template="/apps/hpeweb/templates/page-generic-template"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="09"
+        sling:resourceType="hpeweb/components/pages/page-generic-template"/>
+    <hewlett-packard-enterprise-names-regina-e-dugan-technology-leader-and-former-darpa-director-to-board-of-directors/>
+    <kaust-selects-hpe-to-build-the-middle-easts-most-powerful-supercomputer/>
+    <french-healthcare-software-provider-maincare-selects-hpe-greenlake-to-accelerate-deployment-of-secure-health-cloud-services/>
+    <du-selects-hewlett-packard-enterprise-for-digital-transformation-journey-to-5g/>
+</jcr:root>

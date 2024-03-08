@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/apps/settings/wcm/designs/hpeweb"
+        cq:lastModified="{Date}2022-04-27T12:35:13.705Z"
+        cq:lastModifiedBy="christine.seales@hpe.com"
+        cq:tags="[hpe-newsroom:categories/networking]"
+        cq:template="/apps/hpeweb/templates/page-text-heavy"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Hewlett Packard Enterprise ushers in next era in AI innovation with Swarm Learning solution built for the edge and distributed sites"
+        jcr:uuid="011e5332-7e92-4ca9-a501-97864563eb0d"
+        sling:resourceType="hpeweb/components/pages/page-text-heavy"
+        browserTitle="Hewlett Packard Enterprise ushers in next era in AI innovation with Swarm Learning solution built for the edge and distributed sites"
+        changefreq="daily"
+        contentType="Press Release"
+        displayDate="{Date}2022-04-27T08:00:00.000-04:00"
+        metaDescription="New solution delivers AI for greater good by fostering collaboration across organizations, worldwide"
+        metaKeywords="HPE, Hewlett Packard Enterprise, hpc, supercomputing, high performance computing, AI, swarm learning, data privacy, edge learning, edge computing, ai model, machine learning, machine learning model, ai training, cancer, fraud analytics, fraud detection"
+        metaOgImage="/content/dam/hpe/newsroom/2022/04/image-norend/hpe-ushers-in-next-era-in-ai-innovation-with-swarm-learning-solution-built-for-the-edge-and-distributed-sites.jpg"
+        metaTwitterCardType="summary_large_image"
+        msmcomponent="/content/hpe/base/blueprint/newsroom/press-release/2022/04/hewlett-packard-enterprise-ushers-in-next-era-in-ai-innovation-with-swarm-learning-solution-built-for-the-edge-and-distributed-sites/jcr:content/main-par/body-par/textonlycomponent_97"
+        navTitle="Hewlett Packard Enterprise ushers in next era in AI innovation with Swarm Learning solution built for the edge and distributed sites"
+        pageTitle="Hewlett Packard Enterprise ushers in next era in AI innovation with Swarm Learning solution built for the edge and distributed sites"
+        priority="(None)"
+        socialDescription="New solution delivers AI for greater good by fostering collaboration across organizations, worldwide"
+        subtitle="New solution delivers AI for greater good by fostering collaboration across organizations, worldwide"
+        theme="dark"
+        UAID="34656e4a-9a75-470f-9795-ab3f7871a949"
+        UCID="5b811125-7ae0-4736-b3c1-1ee74aaa4dbe">
+        <main-par
+            jcr:lastModified="{Date}2018-06-28T13:09:39.402-07:00"
+            jcr:lastModifiedBy="velazquez@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="hpeweb/components/content/textHeavyComponent"
+            siderail="none">
+            <subtitle
+                jcr:lastModified="{Date}2022-04-27T02:38:42.289Z"
+                jcr:lastModifiedBy="christine.seales@hpe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="hpeweb/components/content/newsroom/newsroomSubtitleComponent"
+                textOnly="APRIL 27, 2022 • PRESS RELEASE"/>
+            <body-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <imageonlycomponent_c
+                    jcr:created="{Date}2018-06-18T09:06:27.827-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-04-27T02:39:47.887Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/imageOnlyComponent"
+                    fileReference="/content/dam/hpe/newsroom/2022/04/image-norend/hpe-ushers-in-next-era-in-ai-innovation-with-swarm-learning-solution-built-for-the-edge-and-distributed-sites.jpg"
+                    imageAlignment="hpe-image-center"
+                    imageAltText="HPE Guarantees"
+                    topMargin="60"
+                    videoSource="video"
+                    videoType="youtube"/>
+                <textonlycomponent_cd
+                    jcr:created="{Date}2018-06-18T09:12:49.742-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-04-27T02:40:21.437Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    leftPadding="30"
+                    rightPadding="30"
+                    textIsRich="true"
+                    textOnly="&lt;h3>IN THIS ARTICLE&lt;/h3>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>HPE Swarm Learning, a privacy-preserving, decentralized machine learning solution, allows users to share learnings at the edge, or distributed sites, without compromising data privacy&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>The solution increases accuracy and reduces biases in AI model training by enabling access to larger datasets&amp;nbsp;&lt;/span>&lt;i>&lt;/i>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli
+                    jcr:created="{Date}2018-06-18T09:16:54.243-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-18T09:18:45.987-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <textonlycomponent
+                    jcr:created="{Date}2022-04-27T02:40:28.915Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2022-04-27T02:41:07.723Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;h2>New solution delivers AI for greater good by fostering collaboration across organizations, worldwide&lt;/h2>&#xd;&#xa;"/>
+                <textonlycomponent_e9
+                    jcr:created="{Date}2018-06-22T11:24:07.263-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-04-27T12:33:08.658Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>HOUSTON, Texas – April 27, 2022 &lt;/b>– &lt;a href=&quot;http://www.hpe.com/&quot; target=&quot;_blank&quot;>Hewlett Packard Enterprise&lt;/a> (NYSE: HPE) today announced the launch of &lt;a href=&quot;https://www.hpe.com/us/en/solutions/artificial-intelligence/swarm-learning.html&quot; target=&quot;_blank&quot;>HPE Swarm Learning&lt;/a>, a breakthrough AI solution to accelerate insights at the edge, from diagnosing diseases to detecting credit card fraud, by sharing and unifying AI model learnings without compromising data privacy.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; HPE Swarm Learning, which was developed by Hewlett Packard Labs, HPE’s R&amp;amp;D organization, is the industry’s first privacy-preserving, decentralized machine learning framework for the edge or distributed sites.&lt;sup>1&lt;/sup> The solution provides customers with containers that are easily integrated with AI models using the HPE swarm API. Users can then immediately share AI model learnings within their organization and outside with industry peers to improve training, without sharing actual data.&amp;nbsp;&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <pullquote_349b
+                    jcr:created="{Date}2018-06-18T09:23:47.197-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-04-27T02:43:01.551Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution=" "
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>Swarm learning is a new, powerful approach to AI that helps blend local and global insights while preserving data privacy and data ownership&lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2022-04-27T02:43:01.551Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote_349b>
+                <textonlycomponent_97
+                    jcr:created="{Date}2018-06-22T11:22:31.557-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-04-27T12:35:13.694Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>“Swarm learning is a new, powerful approach to AI that has already made progress in addressing global challenges such as advancing patient healthcare and improving anomaly detection that aid efforts in fraud detection and predictive maintenance,” said Justin Hotard, executive vice president and general manager, HPC &amp;amp; AI, at HPE. “HPE is contributing to the swarm learning movement in a meaningful way by delivering an enterprise-class solution that uniquely enables organizations to collaborate, innovate, and accelerate the power of AI models, while preserving each organization’s ethics, data privacy, and governance standards.”&lt;br>&#xd;&#xa; &lt;b>&lt;br>&#xd;&#xa;VIDEO:&lt;/b> &lt;a href=&quot;https://www.hpe.com/h22228/video-gallery/us/en/c8885cdb-ff75-4171-b6cc-4ea0a5ff01af/the-big-shift--what-is-swarm-learning-/video/&quot; target=&quot;_blank&quot;>The Big Shift: What is Swarm Learning?&lt;/a>&lt;br>&#xd;&#xa; &lt;b>&lt;br>&#xd;&#xa;Introducing a new AI approach to securely harness insights at the edge&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/b>Today, the majority of AI model training occurs at a central location, which relies on centralized merged datasets. However, this approach can be inefficient and costly due to having to move large volumes of data back to the same source. It can also be constrained by data privacy and data ownership rules and regulations that limit data sharing and movement, which can potentially lead to inaccurate and biased models. By training models and harnessing insights at the edge, businesses can make decisions faster, at the point of impact, leading to better experiences and outcomes. Additionally, by sharing learnings from one organization to another at the data source, various industries across the world can unite and further improve intelligence that can lead to tremendous business and societal outcomes.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; However, sharing data externally may raise a challenge for organizations that are required to meet data governance, regulatory or compliance requirements, mandating that data stay at its location. HPE Swarm Learning uniquely enables organizations to use distributed data at its source, which increases the dataset size for training, to build machine learning models to learn in an equitable way, while preserving data governance and privacy. To ensure that only learnings captured from the edge are shared, and not the data itself, HPE Swarm Learning uses blockchain technology to securely onboard members, dynamically elect a leader, and merge model parameters to provide resilience and security to the swarm network. Additionally, by only sharing the learnings, HPE Swarm Learning allows users to leverage large training datasets, without compromising privacy, and helps remove biases to increase accuracy in models.&lt;br>&#xd;&#xa; &lt;b>&lt;br>&#xd;&#xa;“Swarmifying” data to empower AI for the greater good&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/b>HPE Swarm Learning can help a range of organizations to collaborate and improve insights:&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>&amp;nbsp;&lt;/span>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Hospitals &lt;/b>can derive learnings from imaging records, CT and MRI scans, and gene expression data to be shared from one hospital to another to improve diagnostics of diseases and other ailments, while protecting patient information.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Banking and financial services&lt;/b> can fight the expected global loss of more than $400 billion in credit card fraud over the next decade&lt;sup>2&lt;/sup>, by sharing fraud-related learnings with more than one financial institution at a time.&lt;br>&#xd;&#xa; &lt;b>&lt;br>&#xd;&#xa;&lt;/b>&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Manufacturing sites &lt;/b>can benefit from predictive maintenance to gain insight into equipment repairing needs and address them before they fail and cause unwanted downtime. By leveraging swarm learning, maintenance managers can gain better insight by collecting learnings from sensor data across multiple manufacturing sites.&lt;b>&lt;/b>&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>&amp;nbsp;&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>Example use cases of early HPE Swarm Learning adopters include:&lt;br>&#xd;&#xa; &lt;b>&lt;br>&#xd;&#xa;University of Aachen studies histopathology to accelerate diagnosis of colon cancer&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/b>A team of cancer researchers at University Hospital of RWTH University Aachen in Germany conducted a &lt;a href=&quot;https://www.nature.com/articles/s41591-022-01768-5&quot; target=&quot;_blank&quot;>study&lt;/a> to advance diagnosis of colon cancer by applying AI on image processing to predict genetic alterations, which can cause cells to become cancerous.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; The researchers trained AI models using HPE Swarm Learning on three groups of patients from Ireland, Germany and the U.S. and validated the prediction performance in two independent datasets from the United Kingdom using the same, swarm learning-based AI models. The results demonstrated that the original AI models, training only on local data, were outperformed using swarm learning due to sharing learnings, but not the patient data, with other entities to improve predictions.&lt;br>&#xd;&#xa; &lt;b>&lt;br>&#xd;&#xa;TigerGraph advances anomaly detection to help banks fight credit card fraud&amp;nbsp;&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/b>&lt;a href=&quot;https://www.tigergraph.com/&quot; target=&quot;_blank&quot;>TigerGraph&lt;/a>, provider of a leading graph analytics platform, combines HPE Swarm Learning with its data analytics offering running on HPE ProLiant servers using AMD EPYC™ processors to augment efforts in quickly detecting unusual activity in credit card transactions. The combined solution increases accuracy when training machine learning models from vast quantities of financial data from multiple banks and branches, across geological locations.&amp;nbsp;&lt;br>&#xd;&#xa; &lt;b>&lt;br>&#xd;&#xa;Blog: &lt;/b>&lt;a href=&quot;https://community.hpe.com/t5/Tech-Insights/Fight-fraud-with-precision-and-security-using-HPE-Swarm-Learning/ba-p/7164988&quot; target=&quot;_blank&quot;>Fight fraud with precision and security using HPE Swarm Learning&lt;/a>&lt;br>&#xd;&#xa; &lt;b>&lt;br>&#xd;&#xa;Availability&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/b>HPE Swarm Learning is available now in most countries. For more information, please visit:&amp;nbsp;&lt;a href=&quot;https://www.hpe.com/us/en/solutions/artificial-intelligence/swarm-learning.html&quot; target=&quot;_blank&quot;>https://www.hpe.com/us/en/solutions/artificial-intelligence/swarm-learning.html&lt;/a>&lt;br>&#xd;&#xa; &lt;b>&lt;br>&#xd;&#xa;HPE delivers a complete, ready-to-use machine learning development solution&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/b>HPE also &lt;a href=&quot;https://www.hpe.com/us/en/newsroom/press-release/2022/04/hewlett-packard-enterprise-accelerates-ai-journey-from-poc-to-production-with-new-solution-for-ai-development-and-training-at-scale.html&quot; target=&quot;_blank&quot;>announced&lt;/a> today that it is removing barriers for enterprises to easily build and train machine learning models at scale, to realize value faster, with the new HPE Machine Learning Development System. The new system, which is purpose-built for AI, is an end-to-end solution that integrates a machine learning software platform, compute, accelerators, and networking to develop and train more accurate AI models faster, and at scale.&amp;nbsp;&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; To learn more about HPE’s AI solutions, please visit: &lt;a href=&quot;https://www.hpe.com/us/en/solutions/artificial-intelligence.html&quot; target=&quot;_blank&quot;>https://www.hpe.com/us/en/solutions/artificial-intelligence.html&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;"/>
+                <textonlycomponent_fe
+                    jcr:created="{Date}2018-06-18T09:28:54.456-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-04-27T02:49:11.051Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>About Hewlett Packard Enterprise&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>Hewlett Packard Enterprise (NYSE: HPE) is the global edge-to-cloud company that helps organizations accelerate outcomes by unlocking value from all of their data, everywhere. Built on decades of reimagining the future and innovating to advance the way people live and work, HPE delivers unique, open and intelligent technology solutions as a service.&amp;nbsp; With offerings spanning Cloud Services, Compute, High Performance Computing &amp;amp; AI, Intelligent Edge, Software, and Storage, HPE provides a consistent experience across all clouds and edges, helping customers develop new business models, engage in new ways, and increase operational performance. For more information, visit: &lt;a href=&quot;http://www.hpe.com/&quot; target=&quot;_blank&quot;>www.hpe.com&lt;/a>&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; Media contact&lt;br>&#xd;&#xa; &lt;b>Nahren Khizeran&lt;br>&#xd;&#xa; &lt;/b>&lt;a href=&quot;mailto:Nahren.Khizeran@hpe.com&quot; target=&quot;_blank&quot;>Nahren.Khizeran@hpe.com&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-small&quot;>&lt;sup>1&lt;/sup> An analysis as of April 13, 2022 of competing offerings that claim privacy preservation found that they either (i) use a federated architecture reliant on a central server, or (ii) if they utilize blockchain, are not enterprise supported solutions.&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-small&quot;>&lt;sup>2&lt;/sup> Expected global loss of $408.50 billion in credit card fraud over the next decade. Source: &lt;a href=&quot;https://nilsonreport.com/upload/content_promo/NilsonReport_Issue1209.pdf&quot; target=&quot;_blank&quot;>Nilson Report, December 2021&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-small&quot;>AMD, the AMD Arrow logo, EPYC, and combinations thereof are trademarks of Advanced Micro Devices, Inc.&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <textonlycomponent_bf
+                    jcr:created="{Date}2018-07-02T13:12:59.755-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-10-12T16:10:50.633Z"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    textOnly="&lt;h2>RELATED NEWS&lt;/h2>&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli_540225213
+                    jcr:created="{Date}2018-06-18T10:12:48.909-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:22:53.902-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <columncontainercompo
+                    jcr:created="{Date}2018-07-02T13:14:23.594-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:15:08.106-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/columnContainerComponent"
+                    columns="column-content-3">
+                    <column_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_7c25
+                            jcr:created="{Date}2018-07-02T13:15:28.984-07:00"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-04-27T02:50:38.007Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="arrow-link"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/04/hpe-opens-global-center-of-excellence-in-artificial-intelligence-and-data-in-spain-to-help-customers-harness-the-power-of-their-data"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            header="HPE opens Global Center of Excellence in Artificial Intelligence and Data in Spain to help customers harness the power of their data"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="HPE opens Global Center of Excellence in Artificial Intelligence and Data in Spain to help customers harness the power of their data"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-04-27T02:50:38.007Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2022/04/image-norend/hpe-opens-global-center-of-excellence-in-ai-and-data-in-spain-to-help-customers-harness-the-power-of-their-data.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-04-27T02:50:38.007Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_7c25>
+                    </column_0>
+                    <column_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_4dff
+                            jcr:created="{Date}2018-09-21T21:01:47.387Z"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-04-27T02:52:08.560Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="arrow-link"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2021/06/hewlett-packard-enterprise-acquires-determined-ai-to-accelerate-artificial-intelligence-innovation-with-fast-and-simple-machine-learning-modeling"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            header="Hewlett Packard Enterprise acquires Determined AI to accelerate artificial intelligence innovation with fast and simple machine learning modeling"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Hewlett Packard Enterprise acquires Determined AI to accelerate artificial intelligence innovation with fast and simple machine learning modeling"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-04-27T02:52:08.560Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2021/06/image-norend/hpe-acquires-determined-ai-to-accelerate-artificial-intelligence-innovation-with-fast-and-simple-machine-learning-modeling.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-04-27T02:52:08.560Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_4dff>
+                    </column_1>
+                    <column_2
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_50f2
+                            jcr:created="{Date}2018-09-05T17:41:27.359Z"
+                            jcr:createdBy="nagle@hpe.com"
+                            jcr:lastModified="{Date}2022-04-27T03:05:29.321Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="arrow-link"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/04/hewlett-packard-enterprise-accelerates-ai-journey-from-poc-to-production-with-new-solution-for-ai-development-and-training-at-scale"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            header="Hewlett Packard Enterprise accelerates AI journey from POC to production with new solution for AI development and training at scale"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Hewlett Packard Enterprise accelerates AI journey from POC to production with new solution for AI development and training at scale"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-04-27T03:05:29.321Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                fileReference="/content/dam/hpe/newsroom/2022/04/image-norend/hpe-accelerates-ai-journey-from-poc-to-production-with-new-solution-for-ai-development-and-training-at-scale.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-04-27T03:05:29.321Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"/>
+                        </contentblock_50f2>
+                    </column_2>
+                </columncontainercompo>
+            </body-par>
+            <side-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <buttonctaitemcompone
+                    jcr:created="{Date}2018-06-28T13:06:31.075-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:06:46.099-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 1"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_661124859
+                    jcr:created="{Date}2018-06-28T13:06:51.115-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:11.079-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 2"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_606970408
+                    jcr:created="{Date}2018-06-28T13:06:53.400-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:02.336-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 3"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+            </side-par>
+        </main-par>
+        <image
+            jcr:lastModified="{Date}2018-09-05T17:38:02.066Z"
+            jcr:lastModifiedBy="nagle@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+    </jcr:content>
+</jcr:root>
