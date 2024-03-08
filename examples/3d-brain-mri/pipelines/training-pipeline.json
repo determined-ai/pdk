@@ -6,8 +6,7 @@
   "input": {
     "pfs": {
       "project": "pdk-3d-brain-mri",
-      "repo": "raw_brain_mri_data",
-      "branch": "main",
+      "repo": "3d-brain-mri-data",
       "glob": "/",
       "emptyFiles": true
     }
@@ -17,7 +16,7 @@
       "/bin/sh"
     ],
     "stdin": [
-      "python train.py --git-url https://git@github.com:/determined-ai/pdk.git --git-ref dev_3dmri --sub-dir examples/3d-brain-mri/experiment --config const.yaml --repo raw_brain_mri_data --model pdk-3d-brain-mri --project pdk-3d-brain-mri"
+      "python train.py --git-url https://git@github.com:/determined-ai/pdk.git --git-ref dev_3dmri --sub-dir examples/3d-brain-mri/experiment --config const.yaml --repo 3d-brain-mri-data --model pdk-3d-brain-mri --project pdk-3d-brain-mri"
     ],
     "image": "pachyderm/pdk:train-v0.0.5",
     "secrets": [

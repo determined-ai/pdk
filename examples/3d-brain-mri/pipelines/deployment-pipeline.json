@@ -5,9 +5,8 @@
   "description": "Deploys a model into production via the KServe Python SDK.",
   "input": {
     "pfs": {
-      "name": "data",
+      "project": "pdk-3d-brain-mri",
       "repo": "3d-brain-mri-train",
-      "branch": "main",
       "glob": "/"
     }
   },
@@ -16,9 +15,9 @@
       "/bin/sh"
     ],
     "stdin": [
-      "python deploy.py --deployment-name 3d-brain-mri-deploy --cloud-model-host aws --cloud-model-bucket pdk-repo-models --resource-requests cpu=2,memory=8Gi --resource-limits cpu=10,memory=8Gi"
+      "python deploy.py --deployment-name 3d-brain-mri-deploy --cloud-model-host gcp --cloud-model-bucket pdk-repo-models --resource-requests cpu=2,memory=8Gi --resource-limits cpu=10,memory=8Gi"
     ],
-    "image": "pachyderm/pdk:brain-deploy-v0.0.4",
+    "image": "alemor/pdk:3d-brain-deploy-v0.0.1",
     "secrets": [
       {
         "name": "pipeline-secret",

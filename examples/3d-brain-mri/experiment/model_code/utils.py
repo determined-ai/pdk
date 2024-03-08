@@ -8,8 +8,6 @@ from torchvision import transforms
 # Get the color map by name:
 cmap_conv = plt.get_cmap('viridis')
 
-# Sigmoid function
-sigmoid = torch.nn.Sigmoid()
 
 def weights_init(m):
     classname = m.__class__.__name__
@@ -32,6 +30,30 @@ def tb_write_video(writer, name, imgs, masks, output, batch_idx):
     writer.add_video(name, img_collage, global_step=batch_idx)
     writer.flush()
 
+
+def get_transforms(trial_context):
+    train_transforms = transforms.Compose([                       
+        PairedToTensor(),
+        PairedCrop(height=trial_context.get_hparam("volume_height"),
+                   width=trial_context.get_hparam("volume_width"),
+                   depth=trial_context.get_hparam("volume_depth")),
+        PairedNormalize(trial_context.get_hparam("normalization")),
+        PairedRandomAffine(degrees=(trial_context.get_hparam("affine_degrees_min"), trial_context.get_hparam("affine_degrees_max")),
+                           translate=(trial_context.get_hparam("affine_translate_min"), trial_context.get_hparam("affine_translate_max")),
+                           scale_ranges=(trial_context.get_hparam("affine_scale_min"), trial_context.get_hparam("affine_scale_max"))),
+        PairedRandomHorizontalFlip(trial_context.get_hparam("hflip_pct")),
+    ])
+    eval_transforms = transforms.Compose([
+        PairedToTensor(),
+        PairedCrop(height=trial_context.get_hparam("volume_height"),
+                   width=trial_context.get_hparam("volume_width"),
+                   depth=trial_context.get_hparam("volume_depth")),
+        PairedNormalize(trial_context.get_hparam("normalization"))
+    ])
+
+    return train_transforms, eval_transforms
+
+# Transforms
 class PairedRandomHorizontalFlip():
     """Custom transform for horizontal flipping"""
     def __init__(self, prob=0.5):
@@ -97,17 +119,33 @@ class PairedCrop():
     """
     Crop Tensors to correct dimension without interpolating.
     """
+    def __init__(self, height=None, width=None, depth=None):
+        self.height = height
+        self.width = width
+        self.depth = depth
+    
     def __call__(self, sample):
         imgs, masks = sample
-        # Depth should be divisible by 16 due to VNet architecture
-        depth = imgs.shape[-3]
-        factor = 16
-        residual = depth%factor
-        if residual != 0:
-            crop_left = (residual)//2
-            crop_right = depth - ((residual)-crop_left)
-            imgs = imgs[...,crop_left:crop_right,:,:]
-            masks = masks[...,crop_left:crop_right,:,:]
+        
+        if not self.height or self.height > imgs.shape[-1]:
+            self.height = imgs.shape[-1]
+        if not self.width or self.width > imgs.shape[-2]:
+            self.width = imgs.shape[-2]
+        if not self.depth or self.depth > imgs.shape[-3]:
+            self.depth = imgs.shape[-3]
+            
+        # Dimensions should be divisible by 8 due to VNet architecture
+        factor = 8
+        old_sizes = torch.tensor(imgs.shape[-3:])
+        new_sizes = torch.tensor([self.depth,self.height,self.width])
+        residual = new_sizes%8
+        delta = (old_sizes - new_sizes + residual)
+        crop_left = torch.div(delta, 2, rounding_mode='trunc')
+        crop_right = old_sizes - (delta - crop_left)
+        
+        new_dims = [slice(None),*map(lambda x,y: slice(x,y), crop_left, crop_right)]
+        imgs = imgs[new_dims]
+        masks = masks[new_dims]
 
         return imgs, masks
 
@@ -132,7 +170,7 @@ class PairedNormalize():
         else:
             if self.normalization != 'percentile':
                 print('Defaulting to 1st and 99th percentile normalization')
-            imgs_min, imgs_max = torch.quantile(imgs.view(4,-1), torch.tensor([0.1,0.99]), dim=-1)
+            imgs_min, imgs_max = torch.quantile(imgs.reshape(4,-1), torch.tensor([0.1,0.99]), dim=-1)
             imgs_min, imgs_max = imgs_min.reshape(4,1,1,1), imgs_max.reshape(4,1,1,1)
             imgs_norm = ((imgs - imgs_min)/(imgs_max - imgs_min)).clip(min=0, max=1)
         

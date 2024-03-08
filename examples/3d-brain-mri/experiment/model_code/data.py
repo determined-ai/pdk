@@ -4,8 +4,7 @@ import pachyderm_sdk
 import numpy as np
 import pandas as pd
 import nibabel as nib
-from model_code import utils
-from torchvision import transforms
+from model_code.utils import get_transforms
 from pachyderm_sdk.api.pfs import File, FileType
 from pathlib import Path
 from torch.utils.data import Dataset
@@ -69,22 +68,8 @@ def get_train_val_datasets(download_dir, data_dir, trial_context):
     
     train_patients, val_patients = train_test_split(PathDF.index.unique(), random_state = trial_context.get_hparam("split_seed"),
                                      test_size = trial_context.get_hparam("validation_ratio"))
-    
-    train_transforms = transforms.Compose([                       
-        utils.PairedToTensor(),
-        utils.PairedCrop(),
-        utils.PairedNormalize(trial_context.get_hparam("normalization")),
-        utils.PairedRandomAffine(degrees=(trial_context.get_hparam("affine_degrees_min"), trial_context.get_hparam("affine_degrees_max")),
-                           translate=(trial_context.get_hparam("affine_translate_min"), trial_context.get_hparam("affine_translate_max")),
-                           scale_ranges=(trial_context.get_hparam("affine_scale_min"), trial_context.get_hparam("affine_scale_max"))),
-        utils.PairedRandomHorizontalFlip(trial_context.get_hparam("hflip_pct")),
-    ])
-    eval_transforms = transforms.Compose([
-        utils.PairedToTensor(),
-        utils.PairedCrop(),
-        utils.PairedNormalize(trial_context.get_hparam("normalization"))
-    ])
 
+    train_transforms, eval_transforms = utils.get_transforms(trial_context)
 
     train_data = MRI_Dataset(PathDF.loc[train_patients], full_dir, transform=train_transforms)
     valid_data = MRI_Dataset(PathDF.loc[val_patients], full_dir, transform=eval_transforms)
