@@ -7,6 +7,7 @@
     "pfs": {
       "project": "pdk-3d-brain-mri",
       "repo": "3d-brain-mri-data",
+      "name": "data",
       "glob": "/",
       "emptyFiles": true
     }
