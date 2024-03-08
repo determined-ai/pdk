@@ -69,7 +69,7 @@ def get_train_val_datasets(download_dir, data_dir, trial_context):
     train_patients, val_patients = train_test_split(PathDF.index.unique(), random_state = trial_context.get_hparam("split_seed"),
                                      test_size = trial_context.get_hparam("validation_ratio"))
 
-    train_transforms, eval_transforms = utils.get_transforms(trial_context)
+    train_transforms, eval_transforms = get_transforms(trial_context)
 
     train_data = MRI_Dataset(PathDF.loc[train_patients], full_dir, transform=train_transforms)
     valid_data = MRI_Dataset(PathDF.loc[val_patients], full_dir, transform=eval_transforms)
