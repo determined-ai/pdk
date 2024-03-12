@@ -19,11 +19,7 @@
     "stdin": [
       "python train.py --git-url https://git@github.com:/determined-ai/pdk.git --git-ref main --sub-dir bring-your-own-model/PDK_implementation/experiment --config const.yaml --repo customer-churn-data --model customer-churn --project pdk-customer-churn"
     ],
-<<<<<<< Updated upstream
-    "image": "pachyderm/pdk:train-v0.0.5",
-=======
     "image": "pachyderm/pdk:train-v0.0.6",
->>>>>>> Stashed changes
     "secrets": [
       {
         "name": "pipeline-secret",
