@@ -12,7 +12,7 @@ data:
     branch:
     token:
 hyperparameters:
-  global_batch_size: 8
+  global_batch_size: 6
   input_channels: 4
   learning_rate:
     type: log
@@ -39,6 +39,9 @@ hyperparameters:
   affine_scale_max: 1.1
   affine_translate_min: 0.1
   affine_translate_max: 0.1
+  volume_height: 224
+  volume_width: 224
+  volume_depth: 144
   elu: False
   num_classes: 1
 searcher:
