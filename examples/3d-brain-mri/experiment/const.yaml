@@ -46,5 +46,5 @@ entrypoint: model_code.model_def:MRIVnetTrial
 profiling:
   enabled: True
 resources:
-  slots_per_trial: 1
+  slots_per_trial: 4
   # resource_pool: A100

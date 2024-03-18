@@ -16,9 +16,9 @@
       "/bin/sh"
     ],
     "stdin": [
-      "python deploy.py --deployment-name 3d-brain-mri-deploy --resource-requests cpu=2,memory=8Gi --resource-limits cpu=10,memory=8Gi"
+      "python deploy.py --deployment-name pdk-3d-brain-mri-deploy --cloud-model-host gcp --cloud-model-bucket alemor-pdk-gcp-repo-models --resource-requests cpu=2,memory=8Gi --resource-limits cpu=10,memory=8Gi"
     ],
-    "image": "alemor/pdk:3d-brain-deploy-v0.0.2",
+    "image": "alemor/pdk:3d-brain-deploy-v0.0.3",
     "secrets": [
       {
         "name": "pipeline-secret",

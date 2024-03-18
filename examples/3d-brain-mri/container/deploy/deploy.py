@@ -75,6 +75,8 @@ NUM_WORKERS=1
 number_of_netty_threads=4
 job_queue_size=10
 model_store=/mnt/models/model-store
+max_request_size=200553500
+max_response_size=200553500
 model_snapshot={"name":"startup.cfg","modelCount":1,"models":{"%s":{"%s":{"defaultVersion":true,"marName":"%s.mar","minWorkers":1,"maxWorkers":5,"batchSize":1,"maxBatchDelay":5000,"responseTimeout":120}}}}""" % (
         model_name,
         model_version,

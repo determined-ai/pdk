@@ -1,12 +1,13 @@
 {
   "pipeline": {
-    "name": "brain-mri-deploy"
+    "name": "3d-brain-mri-deploy"
   },
   "description": "Deploys a model into production via the KServe Python SDK.",
   "input": {
     "pfs": {
+      "project": "pdk-3d-brain-mri",
       "name": "data",
-      "repo": "brain-mri-train",
+      "repo": "3d-brain-mri-train",
       "branch": "master",
       "glob": "/"
     }
@@ -16,9 +17,9 @@
       "/bin/sh"
     ],
     "stdin": [
-      "python deploy.py --deployment-name brain-mri-deploy --service-account-name pach-deploy --resource-requests cpu=2,memory=4Gi --resource-limits cpu=4,memory=4Gi"
+      "python deploy.py --deployment-name pdk-3d-brain-mri-deploy --service-account-name pach-deploy --tolerations accelerator=Tesla-T4 -resource-requests cpu=10,memory=8Gi --resource-limits cpu=10,memory=8Gi"
     ],
-    "image": "pachyderm/pdk:brain-deploy-v0.0.4",
+    "image": "alemor/pdk:3d-brain-deploy-v0.0.3",
     "secrets": [
       {
         "name": "pipeline-secret",
@@ -39,6 +40,16 @@
         "name": "pipeline-secret",
         "key": "kserve_namespace",
         "env_var": "KSERVE_NAMESPACE"
+      },
+      {
+        "name": "pach-kserve-creds",
+        "key": "AWS_ACCESS_KEY_ID",
+        "env_var": "AWS_ACCESS_KEY_ID"
+      },
+      {
+        "name": "pach-kserve-creds",
+        "key": "AWS_SECRET_ACCESS_KEY",
+        "env_var": "AWS_SECRET_ACCESS_KEY"
       }
     ]
   },
