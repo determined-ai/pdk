@@ -15,10 +15,6 @@ class BrainHandler(ImageClassifier):
     Based on: https://github.dev/pytorch/serve/blob/master/examples/image_classifier/mnist/mnist_handler.py#L1 
     """
 
-    #image_processing = transforms.Compose([
-    #    transforms.ToTensor(),
-    #])
-
     def __init__(self):
         super(BrainHandler, self).__init__()
         self.profiler_args = {

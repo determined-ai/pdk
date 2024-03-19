@@ -57,6 +57,62 @@ def parse_args():
         default=None,
     )
     parser.add_argument(
+        "--handler",
+        type=str,
+        help="Name of the custom TorchServe handler python file",
+    )
+    parser.add_argument(
+        "--git-url",
+        type=str,
+        help="Git URL of the repository containing the model code",
+    )
+    parser.add_argument(
+        "--git-ref",
+        type=str,
+        help="Git Commit/Tag/Branch to use",
+    )
+    parser.add_argument(
+        "--sub-dir",
+        type=str,
+        help="Subfolder to handler file",
+    )
+    parser.add_argument(
+        "--max-request-size",
+        type=str,
+        help="TorchServe max allowable REST request size in bytes",
+        default=6553500,
+    )
+    parser.add_argument(
+        "--max-response-size",
+        type=str,
+        help="TorchServe max allowable REST response size in bytes",
+        default=6553500,
+    )
+    parser.add_argument(
+        "--min-workers",
+        type=str,
+        help="TorchServe minimum number of worker threads",
+        default=1,
+    )
+    parser.add_argument(
+        "--max-workers",
+        type=str,
+        help="TorchServe maximum number of worker threads",
+        default=5,
+    )
+    parser.add_argument(
+        "--batch-size",
+        type=str,
+        help="TorchServe batch size for inference",
+        default=1,
+    )
+    parser.add_argument(
+        "--batch-delay",
+        type=str,
+        help="TorchServe maximum delay in ms for batch aggregation",
+        default=5000,
+    )
+    parser.add_argument(
         "--k8s-config-file",
         type=str,
         help="The path to the k8s config file",
@@ -310,6 +366,24 @@ def check_existence(kclient, deployment_name, k8s_namespace):
         )
 
     return exists
+
+
+# =====================================================================================
+
+
+def clone_code(repo_url, ref, dir):
+    if os.path.isdir(dir):
+        print(f"Directory {dir} already exists. Fetching latest code...")
+        repo = git.Repo(dir)
+        ret = repo.remotes.origin.fetch()
+        if ret[0].flags == 4:
+            print("No new code to fetch.")
+        else:
+            print("New code fetched.")
+    else:
+        print(f"Cloning code from: {repo_url}@{ref} --> {dir}")
+        repo = git.Repo.clone_from(repo_url, dir)
+    repo.git.checkout(ref)
 
 
 # =====================================================================================

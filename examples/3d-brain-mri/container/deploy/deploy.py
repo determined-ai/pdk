@@ -4,7 +4,7 @@ import time
 import torch
 from common import (DeterminedInfo, KServeInfo, ModelInfo, check_existence,
                     create_inference_service, get_version, parse_args,
-                    upload_model, wait_for_deployment)
+                    upload_model, wait_for_deployment, clone_code)
 from determined.common.experimental import ModelVersion
 from determined.experimental import Determined
 from determined.pytorch import load_trial_from_checkpoint_path
@@ -49,11 +49,11 @@ def create_scriptmodule(det_master, det_user, det_pw, model_name, pach_id):
 # =====================================================================================
 
 
-def create_mar_file(model_name, model_version):
+def create_mar_file(model_name, model_version, handler_file):
     print(f"Creating .mar file for model '{model_name}'...")
     os.system(
-        "torch-model-archiver --model-name %s --version %s --serialized-file ./scriptmodule.pt --handler ./brain_mri_handler.py --force"
-        % (model_name, model_version)
+        "torch-model-archiver --model-name %s --version %s --serialized-file ./scriptmodule.pt --handler %s --force"
+        % (model_name, model_version, handler_file)
     )
     print(f"Created .mar file successfully.")
 
@@ -61,7 +61,7 @@ def create_mar_file(model_name, model_version):
 # =====================================================================================
 
 
-def create_properties_file(model_name, model_version):
+def create_properties_file(model_name, model_version, args):
     config_properties = """inference_address=http://0.0.0.0:8085
 management_address=http://0.0.0.0:8083
 metrics_address=http://0.0.0.0:8082
@@ -71,16 +71,21 @@ enable_envvars_config=true
 install_py_dep_per_model=true
 enable_metrics_api=true
 metrics_format=prometheus
-NUM_WORKERS=1
 number_of_netty_threads=4
 job_queue_size=10
 model_store=/mnt/models/model-store
-max_request_size=200553500
-max_response_size=200553500
-model_snapshot={"name":"startup.cfg","modelCount":1,"models":{"%s":{"%s":{"defaultVersion":true,"marName":"%s.mar","minWorkers":1,"maxWorkers":5,"batchSize":1,"maxBatchDelay":5000,"responseTimeout":120}}}}""" % (
+max_request_size=%s
+max_response_size=%s
+model_snapshot={"name":"startup.cfg","modelCount":1,"models":{"%s":{"%s":{"defaultVersion":true,"marName":"%s.mar","minWorkers":%s,"maxWorkers":%s,"batchSize":%s,"maxBatchDelay":%s,"responseTimeout":120}}}}""" % (
+        args.max_request_size,
+        args.max_response_size,
         model_name,
         model_version,
         model_name,
+        args.min_workers,
+        args.max_workers,
+        args.batch_size,
+        args.batch_delay
     )
 
     conf_prop = open("config.properties", "w")
@@ -112,11 +117,25 @@ def main():
         det.master, det.username, det.password, model.name, model.version
     )
 
+    # --- Download code repository
+
+    local_repo = os.path.join(os.getcwd(), "code-repository")
+    clone_code(args.git_url, args.git_ref, local_repo)
+
+    # --- Points to the correct subfolder inside the cloned repo
+
+    if args.sub_dir:
+        workdir = os.path.join(local_repo, args.sub_dir)
+    else:
+        workdir = local_repo
+
+    handler_file = os.path.join(workdir, args.handler)
+
     # Create .mar file from ScriptModule
-    create_mar_file(model.name, model.version)
+    create_mar_file(model.name, model.version, handler_file)
 
     # Create config.properties for .mar file, return files to upload to GCS bucket
-    model_files = create_properties_file(model.name, model.version)
+    model_files = create_properties_file(model.name, model.version, args)
 
     # Upload model artifacts to Cloud  bucket in the format for TorchServe
     upload_model(
