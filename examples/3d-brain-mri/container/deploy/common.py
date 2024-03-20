@@ -1,5 +1,6 @@
 import argparse
 import os
+import git
 import shutil
 import time
 from functools import partial
