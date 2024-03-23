@@ -122,19 +122,19 @@ def parse_args():
     parser.add_argument(
         "--tolerations",
         type=csv_,
-        help="a comma separated list of tolerations to apply to the deployment in the format of key=value",
+        help="A comma separated list of tolerations to apply to the deployment in the format of key=value",
         default=None,
     )
     parser.add_argument(
         "--resource-requests",
         type=csv_,
-        help="",
+        help="A comma separated list of resource requests to apply to the deployment in the format of key=value",
         default=None,
     )
     parser.add_argument(
         "--resource-limits",
         type=csv_,
-        help="",
+        help="A comma separated list of resource limits to apply to the deployment in the format of key=value",
         default=None,
     )
     return parser.parse_args()

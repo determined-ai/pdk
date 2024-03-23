@@ -47,4 +47,3 @@ profiling:
   enabled: True
 resources:
   slots_per_trial: 4
-  # resource_pool: A100
