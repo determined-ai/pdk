@@ -1,0 +1,21 @@
+pipeline:
+  name: create_dataset
+transform:
+  image: 'vmtyler/pdk:create-datasetv1'
+  cmd:
+    - python
+    - create_dataset.py
+    - '--extension'
+    - .py
+parallelismSpec:
+  constant: '1'
+outputBranch: master
+input:
+    pfs:
+        project: starcoder
+        name: data
+        repo: code-for-finetuning
+        repoType: user
+        branch: master
+        glob: /
+

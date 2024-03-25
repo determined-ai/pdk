@@ -35,7 +35,7 @@
       "/bin/sh"
     ],
     "stdin": [
-      "python train.py --git-url https://git@github.com:/determined-ai/pdk.git --git-ref starcoder --sub-dir examples/llm-starcoder/experiment --config distrib.yaml --repo hf-python-data --model starcoder-python --project starcoder"
+      "python train.py --git-url https://git@github.com:/determined-ai/pdk.git --git-ref starcoder --sub-dir examples/llm-starcoder/experiment --config distrib.yaml --repo hf-download-starcoder-model,hf-python-data --model starcoder-python --project starcoder"
     ],
     "image": "pachyderm/pdk:train-v0.0.4",
     "secrets": [

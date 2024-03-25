@@ -97,7 +97,7 @@ def get_args():
     return parser.parse_args()
 
 
-def chars_token_ratio(dataset, tokenizer, input_column_name="prompt", output_column_name="completion", nb_examples):
+def chars_token_ratio(dataset, tokenizer, input_column_name="prompt", output_column_name="completion", nb_examples=400):
     """
     Estimate the average number of characters per token in the dataset.
     """
