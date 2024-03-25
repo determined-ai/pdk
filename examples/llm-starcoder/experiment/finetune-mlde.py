@@ -341,8 +341,12 @@ if __name__ == "__main__":
     set_seed(args.seed)
     os.makedirs(args.output_dir, exist_ok=True)
     
+    distributed = det.core.DistributedContext.from_torch_distributed()
     # download from pachyderm
-    if data_config["pachyderm"]["host"] is not None:
+    if (
+        data_config["pachyderm"]["host"] is not None
+        and distributed.get_local_rank() == 0
+    ):
         if "," not in data_config["pachyderm"]["repo"]:
             raise ValueError("need two comma separated repos for model and dataset (mnodelrepo,datasetrepo)")
         os.makedirs(args.model_path, exist_ok=True)
@@ -360,7 +364,7 @@ if __name__ == "__main__":
     transformers.utils.logging.enable_default_handler()
     transformers.utils.logging.enable_explicit_format()
 
-    distributed = det.core.DistributedContext.from_torch_distributed()
+
 
     with det.core.init(distributed=distributed) as core_context:
         user_data = {
