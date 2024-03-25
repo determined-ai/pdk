@@ -356,6 +356,7 @@ if __name__ == "__main__":
         download_data(data_config, args.model_path)
         data_config["pachyderm"]["repo"] = data_repo
         download_data(data_config, args.dataset_name)
+    _ = distributed.broadcast_local(None)
     # dbg- tmp logging
     log_level = logging.INFO
     logger.setLevel(log_level)
