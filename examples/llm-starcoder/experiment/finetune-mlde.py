@@ -226,8 +226,8 @@ def create_datasets(tokenizer, args):
         valid_data = dataset["test"]
         print(f"Size of the train set: {len(train_data)}. Size of the validation set: {len(valid_data)}")
 
-    if args.size_valid_set) < 400:
-        token_test = args.size_valid_set)
+    if args.size_valid_set < 400:
+        token_test = args.size_valid_set
     else:
         token_test = 400
     chars_per_token = chars_token_ratio(train_data, tokenizer, args.input_column_name, args.output_column_name, token_test)
