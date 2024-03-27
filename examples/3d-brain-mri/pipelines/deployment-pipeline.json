@@ -16,7 +16,7 @@
       "/bin/sh"
     ],
     "stdin": [
-      "python deploy.py --deployment-name pdk-3d-brain-mri-deploy --cloud-model-host aws --cloud-model-bucket alemor-pdk-gcp-repo-models --git-url https://git@github.com:/determined-ai/pdk.git  --handler brain_mri_handler.py --git-ref dev_3dmri --sub-dir examples/3d-brain-mri/container/deploy --max-request-size 400553500 --max-response-size 400553500 --resource-requests nvidia.com/gpu=1,memory=16Gi --resource-limits nvidia.com/gpu=4,memory=16Gi --tolerations nvidia.com/gpu=present"
+      "python deploy.py --deployment-name pdk-3d-brain-mri-deploy --cloud-model-host gcp --cloud-model-bucket alemor-pdk-gcp-repo-models --git-url https://git@github.com:/determined-ai/pdk.git  --handler brain_mri_handler.py --git-ref dev_3dmri --sub-dir examples/3d-brain-mri/container/deploy --max-request-size 400553500 --max-response-size 400553500 --resource-requests nvidia.com/gpu=1,memory=16Gi --resource-limits nvidia.com/gpu=4,memory=16Gi --tolerations nvidia.com/gpu=present"
     ],
     "image": "alemor/pdk:3d-brain-deploy-v0.0.6",
     "secrets": [

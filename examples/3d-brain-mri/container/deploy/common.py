@@ -282,34 +282,42 @@ def create_inference_service(
     if cloud_provider == "gcp":
         predictor_spec = V1beta1PredictorSpec(
             tolerations=tol,
-            pytorch=(
-                V1beta1TorchServeSpec(
-                    protocol_version="v2",
-                    storage_uri=f"gs://{bucket_name}/{model_name}",
+            containers=[
+                V1Container(
+                    name='kserve-container',
+                    args=[ 'torchserve', '--start', '--model-store=/mnt/models/model-store', '--ts-config=/mnt/models/config/config.properties'],
+                    image='pytorch/torchserve-kfs:0.9.0-gpu',
+                    env=[V1EnvVar(name='STORAGE_URI',value=f"gs://{bucket_name}/{model_name}"),
+                         V1EnvVar(name='TS_SERVICE_ENVELOPE',value='kservev2'),
+                         V1EnvVar(name='PROTOCOL_VERSION',value='v2')],
                     resources=(
                         V1ResourceRequirements(
                             requests=resource_requirements["requests"],
                             limits=resource_requirements["limits"],
                         )
-                    ),
+                    )
                 )
-            ),
+            ]
         )
     elif cloud_provider == "aws":
         predictor_spec = V1beta1PredictorSpec(
             tolerations=tol,
-            pytorch=(
-                V1beta1TorchServeSpec(
-                    protocol_version="v2",
-                    storage_uri=f"s3://{bucket_name}/{model_name}",
+            containers=[
+                V1Container(
+                    name='kserve-container',
+                    args=[ 'torchserve', '--start', '--model-store=/mnt/models/model-store', '--ts-config=/mnt/models/config/config.properties'],
+                    image='pytorch/torchserve-kfs:0.9.0-gpu',
+                    env=[V1EnvVar(name='STORAGE_URI',value=f"aws://{bucket_name}/{model_name}"),
+                         V1EnvVar(name='TS_SERVICE_ENVELOPE',value='kservev2'),
+                         V1EnvVar(name='PROTOCOL_VERSION',value='v2')],
                     resources=(
                         V1ResourceRequirements(
                             requests=resource_requirements["requests"],
                             limits=resource_requirements["limits"],
                         )
-                    ),
+                    )
                 )
-            ),
+            ]
         )
     else:
         predictor_spec = V1beta1PredictorSpec(
