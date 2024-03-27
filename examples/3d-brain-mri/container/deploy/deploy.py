@@ -76,7 +76,7 @@ job_queue_size=10
 model_store=/mnt/models/model-store
 max_request_size=%s
 max_response_size=%s
-model_snapshot={"name":"startup.cfg","modelCount":1,"models":{"%s":{"%s":{"defaultVersion":true,"marName":"%s.mar","minWorkers":%s,"maxWorkers":%s,"batchSize":%s,"maxBatchDelay":%s,"responseTimeout":120}}}}""" % (
+model_snapshot={"name":"startup.cfg","modelCount":1,"models":{"%s":{"%s":{"defaultVersion":true,"marName":"%s.mar","minWorkers":%s,"maxWorkers":%s,"batchSize":%s,"maxBatchDelay":%s,"responseTimeout":%s}}}}""" % (
         args.max_request_size,
         args.max_response_size,
         model_name,
@@ -85,7 +85,8 @@ model_snapshot={"name":"startup.cfg","modelCount":1,"models":{"%s":{"%s":{"defau
         args.min_workers,
         args.max_workers,
         args.batch_size,
-        args.batch_delay
+        args.batch_delay,
+        args.response_timeout
     )
 
     conf_prop = open("config.properties", "w")

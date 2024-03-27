@@ -11,7 +11,7 @@ from google.cloud import storage
 from kserve import (V1beta1InferenceService, V1beta1InferenceServiceSpec,
                     V1beta1PredictorSpec, V1beta1TorchServeSpec, constants)
 from kubernetes import client
-from kubernetes.client import V1ResourceRequirements, V1Toleration
+from kubernetes.client import V1ResourceRequirements, V1Toleration, V1Container, V1EnvVar
 
 # =====================================================================================
 
@@ -112,6 +112,12 @@ def parse_args():
         type=str,
         help="TorchServe maximum delay in ms for batch aggregation",
         default=5000,
+    )
+    parser.add_argument(
+        "--response-timeout",
+        type=str,
+        help="TorchServe maximum response timeout in s for inference",
+        default=240,
     )
     parser.add_argument(
         "--k8s-config-file",
@@ -308,19 +314,23 @@ def create_inference_service(
     else:
         predictor_spec = V1beta1PredictorSpec(
             tolerations=tol,
-            pytorch=(
-                V1beta1TorchServeSpec(
-                    protocol_version="v2",
-                    storage_uri=f"s3://{commit}.master.{repo}.{project}/{model_name}",
+            containers=[
+                V1Container(
+                    name='kserve-container',
+                    args=[ 'torchserve', '--start', '--model-store=/mnt/models/model-store', '--ts-config=/mnt/models/config/config.properties'],
+                    image='pytorch/torchserve-kfs:0.9.0-gpu',
+                    env=[V1EnvVar(name='STORAGE_URI',value=f"s3://{commit}.master.{repo}.{project}/{model_name}"),
+                         V1EnvVar(name='TS_SERVICE_ENVELOPE',value='kservev2'),
+                         V1EnvVar(name='PROTOCOL_VERSION',value='v2')],
                     resources=(
                         V1ResourceRequirements(
                             requests=resource_requirements["requests"],
                             limits=resource_requirements["limits"],
                         )
-                    ),
+                    )
                 )
-            ),
-            service_account_name=sa,
+            ],
+            service_account_name=sa
         )
     isvc = V1beta1InferenceService(
         api_version=api_version,

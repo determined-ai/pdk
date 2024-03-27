@@ -17,9 +17,9 @@
       "/bin/sh"
     ],
     "stdin": [
-      "python deploy.py --deployment-name pdk-3d-brain-mri-deploy --service-account-name pach-deploy --max-request-size 400553500 --max-response-size 400553500 --resource-requests nvidia.com/gpu=1,memory=8Gi --resource-limits nvidia.com/gpu=1,memory=8Gi --tolerations accelerator=Tesla-T4"
+      "python deploy.py --deployment-name pdk-3d-brain-mri-deploy --git-url https://git@github.com:/determined-ai/pdk.git  --handler brain_mri_handler.py --git-ref dev_3dmri --sub-dir examples/3d-brain-mri/container/deploy --service-account-name pach-deploy --max-request-size 400553500 --max-response-size 400553500 --resource-requests nvidia.com/gpu=1,memory=16Gi --resource-limits nvidia.com/gpu=1,memory=16Gi --tolerations accelerator=Tesla-T4"
     ],
-    "image": "alemor/pdk:3d-brain-deploy-v0.0.5",
+    "image": "alemor/pdk:3d-brain-deploy-v0.0.6",
     "secrets": [
       {
         "name": "pipeline-secret",
@@ -40,19 +40,8 @@
         "name": "pipeline-secret",
         "key": "kserve_namespace",
         "env_var": "KSERVE_NAMESPACE"
-      },
-      {
-        "name": "pach-kserve-creds",
-        "key": "AWS_ACCESS_KEY_ID",
-        "env_var": "AWS_ACCESS_KEY_ID"
-      },
-      {
-        "name": "pach-kserve-creds",
-        "key": "AWS_SECRET_ACCESS_KEY",
-        "env_var": "AWS_SECRET_ACCESS_KEY"
       }
     ]
   },
-  "autoscaling": true,
-  "pod_patch": "[{\"op\": \"add\",\"path\": \"/volumes/-\",\"value\": {\"name\": \"det-checkpoints\",\"hostpath\": {\"path\": \"/mnt/efs/shared_fs/determined\",\"type\": \"Directory\"}}}, {\"op\": \"add\",\"path\": \"/containers/0/volumeMounts/-\",\"value\": {\"mountPath\": \"/determined_shared_fs\",\"name\": \"det-checkpoints\"}}]"
+  "autoscaling": true
 }
