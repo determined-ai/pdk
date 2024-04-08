@@ -44,7 +44,7 @@ checkpoint_storage:
   save_trial_best: 1
   save_trial_latest: 1
 bind_mounts:
-  container_path: /run/determined/workdir/shared_fs
-  host_path: /nvmefs1/shared_nb
-  propagation: rprivate
-  read_only: false
+  - container_path: /run/determined/workdir/shared_fs
+    host_path: /nvmefs1/shared_nb
+    propagation: rprivate
+    read_only: false
