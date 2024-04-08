@@ -14,7 +14,7 @@ data:
     branch:
     token:
 hyperparameters:
-  global_batch_size: 32
+  global_batch_size: 64
   init_features: 32
   input_channels: 3
   output_channels: 1
@@ -32,7 +32,14 @@ searcher:
     epochs: 4
 min_validation_period:
   epochs: 1
+resources:
+  resource_pool: A100
+  slots_per_trial: 1
 max_restarts: 0
 entrypoint: model_def:MRIUnetTrial
 profiling:
   enabled: True
+checkpoint_storage:
+  save_experiment_best: 5
+  save_trial_best: 1
+  save_trial_latest: 1
