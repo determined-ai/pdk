@@ -14,7 +14,7 @@ data:
     branch:
     token:
 hyperparameters:
-  global_batch_size: 64
+  global_batch_size: 96
   init_features: 32
   input_channels: 3
   output_channels: 1
@@ -29,7 +29,7 @@ searcher:
   metric: val_IoU
   smaller_is_better: False
   max_length:
-    epochs: 4
+    epochs: 10
 min_validation_period:
   epochs: 1
 resources:
