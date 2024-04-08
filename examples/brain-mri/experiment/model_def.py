@@ -1,7 +1,7 @@
 import os
 from typing import Any, Dict, Sequence, Tuple, Union, cast
 
-from model_code import data
+import data
 import filelock
 import torch
 import torch.nn as nn
