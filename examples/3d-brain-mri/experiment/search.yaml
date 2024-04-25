@@ -12,7 +12,7 @@ data:
     branch:
     token:
 hyperparameters:
-  global_batch_size: 6
+  global_batch_size: 5
   input_channels: 4
   learning_rate:
     type: log
