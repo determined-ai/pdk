@@ -36,8 +36,8 @@ def get_transforms(trial_context):
         PairedToTensor(),
         PairedCrop(height=trial_context.get_hparam("volume_height"),
                    width=trial_context.get_hparam("volume_width"),
-                   depth=trial_context.get_hparam("volume_depth")),
-        PairedNormalize(trial_context.get_hparam("normalization")),
+                   depth=trial_context.get_hparam("volume_depth")),,
+        PairedNormalize(trial_context.get_hparam("normalization"))
         PairedRandomAffine(degrees=(trial_context.get_hparam("affine_degrees_min"), trial_context.get_hparam("affine_degrees_max")),
                            translate=(trial_context.get_hparam("affine_translate_min"), trial_context.get_hparam("affine_translate_max")),
                            scale_ranges=(trial_context.get_hparam("affine_scale_min"), trial_context.get_hparam("affine_scale_max"))),
@@ -158,20 +158,21 @@ class PairedNormalize():
 
     def __call__(self, sample):
         imgs, masks = sample
+        n_channels = imgs.shape[0]
 
         if self.normalization == 'zscore':
-            mean_vals = imgs.mean(axis=(1,2,3)).reshape(4,1,1,1)
-            std_vals = imgs.std(axis=(1,2,3)).reshape(4,1,1,1)
+            mean_vals = imgs.mean(axis=(1,2,3)).reshape(n_channels,1,1,1)
+            std_vals = imgs.std(axis=(1,2,3)).reshape(n_channels,1,1,1)
             imgs_norm = (imgs - mean_vals)/std_vals
         elif self.normalization == 'min-max':
-            min_vals = imgs.amin(axis=(1,2,3)).reshape(4,1,1,1)
-            max_vals = imgs.amax(axis=(1,2,3)).reshape(4,1,1,1)
+            min_vals = imgs.amin(axis=(1,2,3)).reshape(n_channels,1,1,1)
+            max_vals = imgs.amax(axis=(1,2,3)).reshape(n_channels,1,1,1)
             imgs_norm = (imgs - min_vals)/(max_vals-min_vals)
         else:
             if self.normalization != 'percentile':
                 print('Defaulting to 1st and 99th percentile normalization')
-            imgs_min, imgs_max = torch.quantile(imgs.reshape(4,-1), torch.tensor([0.1,0.99]), dim=-1)
-            imgs_min, imgs_max = imgs_min.reshape(4,1,1,1), imgs_max.reshape(4,1,1,1)
+            imgs_min, imgs_max = torch.quantile(imgs.reshape(n_channels,-1), torch.tensor([0.1,0.99]), dim=-1)
+            imgs_min, imgs_max = imgs_min.reshape(n_channels,1,1,1), imgs_max.reshape(n_channels,1,1,1)
             imgs_norm = ((imgs - imgs_min)/(imgs_max - imgs_min)).clip(min=0, max=1)
         
         return imgs_norm, masks
