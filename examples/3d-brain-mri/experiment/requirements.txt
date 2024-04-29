@@ -1,0 +1,7 @@
+# Requirements for the IDE
+
+scikit-learn==1.3.2
+scipy==1.9.1
+numpy==1.24.3
+nibabel==5.2.0
+moviepy==1.0.3

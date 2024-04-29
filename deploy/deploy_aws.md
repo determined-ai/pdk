@@ -124,6 +124,7 @@ All commands listed throghout this document must be executed in the same termina
 # MODIFY THESE VARIABLES
 export NAME="your-name-pdk"
 export AWS_ACCOUNT_ID="555555555555"
+export EKS_SSH_PUBLIC_KEY="~/.ssh/id_rsa.pub"
 
 # VPC SETTINGS
 export AWS_VPC_ID="vpc-0000000000000000x"
@@ -402,6 +403,7 @@ managedNodeGroups:
         efs: true
     ssh:
       allow: true
+      publicKeyPath: ${EKS_SSH_PUBLIC_KEY}
     labels:
       nodegroup-type: cpu-${AWS_AVAILABILITY_ZONE_1}
       nodegroup-role: cpu-worker
@@ -429,6 +431,7 @@ managedNodeGroups:
         efs: true
     ssh:
       allow: true
+      publicKeyPath: ${EKS_SSH_PUBLIC_KEY}
     labels:
       nodegroup-type: gpu-${AWS_AVAILABILITY_ZONE_1}
       nodegroup-role: gpu-worker

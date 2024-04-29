@@ -1,0 +1,47 @@
+{
+  "pipeline": {
+    "name": "3d-brain-mri-deploy"
+  },
+  "description": "Deploys a model into production via the KServe Python SDK.",
+  "input": {
+    "pfs": {
+      "project": "pdk-3d-brain-mri",
+      "name": "data",
+      "repo": "3d-brain-mri-train",
+      "branch": "master",
+      "glob": "/"
+    }
+  },
+  "transform": {
+    "cmd": [
+      "/bin/sh"
+    ],
+    "stdin": [
+      "python deploy.py --deployment-name pdk-3d-brain-mri-deploy --git-url https://git@github.com:/determined-ai/pdk.git  --handler brain_mri_handler.py --git-ref dev_3dmri --sub-dir examples/3d-brain-mri/container/deploy --service-account-name pach-deploy --max-request-size 400553500 --max-response-size 400553500 --resource-requests nvidia.com/gpu=1,memory=16Gi --resource-limits nvidia.com/gpu=1,memory=16Gi --tolerations accelerator=Tesla-T4"
+    ],
+    "image": "alemor/pdk:3d-brain-deploy-v0.0.7",
+    "secrets": [
+      {
+        "name": "pipeline-secret",
+        "key": "det_master",
+        "env_var": "DET_MASTER"
+      },
+      {
+        "name": "pipeline-secret",
+        "key": "det_user",
+        "env_var": "DET_USER"
+      },
+      {
+        "name": "pipeline-secret",
+        "key": "det_password",
+        "env_var": "DET_PASSWORD"
+      },
+      {
+        "name": "pipeline-secret",
+        "key": "kserve_namespace",
+        "env_var": "KSERVE_NAMESPACE"
+      }
+    ]
+  },
+  "autoscaling": true
+}

@@ -1,0 +1,50 @@
+name: Pipeline-Run-3D-Brain-MRI-1GPU
+workspace: PDK Demos
+project: pdk-3d-brain-mri
+data:
+  data_dir: "/data"
+  download_directory: "/tmp"
+  pachyderm:
+    host:
+    port:
+    repo:
+    project:
+    branch:
+    token:
+hyperparameters:
+  global_batch_size: 5
+  input_channels: 4
+  learning_rate: 1.e-3
+  dropout: 0.0
+  weight_decay: 0.0
+  split_seed: 1
+  validation_ratio: 0.15
+  hflip_pct: 0.5
+  normalization: 'percentile'
+  affine_degrees_min: -5
+  affine_degrees_max: 5
+  affine_scale_min: 0.9
+  affine_scale_max: 1.1
+  affine_translate_min: 0.1
+  affine_translate_max: 0.1
+  volume_height: 224
+  volume_width: 224
+  volume_depth: 144
+  elu: False
+  num_classes: 1
+searcher:
+  name: single
+  metric: val_Dice
+  smaller_is_better: False
+  max_length:
+    epochs: 20
+min_validation_period:
+  epochs: 1
+perform_initial_validation: False
+max_restarts: 0
+entrypoint: model_code.model_def:MRIVnetTrial
+profiling:
+  enabled: True
+resources:
+  slots_per_trial: 1
+  resource_pool: A100

@@ -1,17 +1,14 @@
 import os
 import shutil
-
-import cv2
-import numpy as np
 import pachyderm_sdk
+import numpy as np
 import pandas as pd
-import torch
+import nibabel as nib
+from model_code.utils import get_transforms
 from pachyderm_sdk.api.pfs import File, FileType
-from PIL import Image
-from skimage import io
+from pathlib import Path
+from torch.utils.data import Dataset
 from sklearn.model_selection import train_test_split
-from torch.utils.data import DataLoader, Dataset
-from torchvision import transforms
 
 
 class MRI_Dataset(Dataset):
@@ -21,66 +18,61 @@ class MRI_Dataset(Dataset):
         self.data_dir = data_dir
         
     def __len__(self):
-        return self.path_df.shape[0]
+        return self.path_df.index.unique().shape[0]
     
     def __getitem__(self, idx):
+        patient = self.path_df.index[idx]
+        mask = self.path_df.loc[patient, 'masks'].strip('/')
+        volumes = self.path_df.loc[patient, 'volumes']
+        vol_paths = [os.path.join(self.data_dir, patient, volume.strip('/')) for volume in volumes]
+        mask_path = os.path.join(self.data_dir, patient, mask)
+        vol_FLAIR = nib.load(vol_paths[0]).get_fdata(dtype=np.float32).T
+        vol_T1c = nib.load(vol_paths[1]).get_fdata(dtype=np.float32).T
+        vol_T2 = nib.load(vol_paths[2]).get_fdata(dtype=np.float32).T
+        vol_SWI = nib.load(vol_paths[3]).get_fdata(dtype=np.float32).T
+        vol_mask = nib.load(mask_path).get_fdata(dtype=np.float32).T.astype(bool).astype(int)
+        multimodal_vol = np.stack([vol_FLAIR,vol_T1c,vol_T2,vol_SWI])
         
-        base_path = os.path.join(self.data_dir, self.path_df.iloc[idx]['directory'].strip("/"))
-        img_path = os.path.join(base_path, self.path_df.iloc[idx]['images'])
-        mask_path = os.path.join(base_path, self.path_df.iloc[idx]['masks'])
-        
-        image = Image.open(img_path)
-        mask = Image.open(mask_path)
-        
-        sample = (image, mask)
-        
+        sample = (multimodal_vol, vol_mask)
+              
         if self.transform:
             sample = self.transform(sample)
-            
+        
         return sample
     
-class PairedToTensor():
-    def __call__(self, sample):
-        img, mask = sample
-        img = np.array(img)
-        mask = np.expand_dims(mask, -1)
-        img = np.moveaxis(img, -1, 0)
-        mask = np.moveaxis(mask, -1, 0)
-        img, mask = torch.FloatTensor(img), torch.FloatTensor(mask)
-        img = img/255
-        mask = mask/255
-        return img, mask
+   
+def get_train_val_datasets(download_dir, data_dir, trial_context):
     
-def get_train_val_datasets(download_dir, data_dir, seed, validation_ratio=0.2):
-    
-    dirs, images, masks = [], [], []
-
+    patients, volumes, masks = [], [], []
 
     full_dir = "/"
     full_dir = os.path.join(full_dir, download_dir.strip("/"), data_dir.strip("/"))
-    full_dir = '/run/determined/workdir/shared_fs/01 - Users/alejandro.morales/3DBrainMRI/brain-data/data'
+    
     print("full_dir = " + full_dir)
 
-    for root, folders, files in  os.walk(full_dir):
-        for file in files:
-            if 'mask' in file:
-                dirs.append(root.replace(full_dir, ''))
-                masks.append(file)
-                images.append(file.replace("_mask", ""))
+    all_patients = set(nifti_file.parent for nifti_file in Path(full_dir).rglob('*.nii*'))
+    for patient_dir in all_patients:
+        patients.append(patient_dir.name)
+        volumes.append((next(patient_dir.rglob('*FLAIR.nii*')).name,
+                        next(patient_dir.rglob('*T1c.nii*')).name,
+                        next(patient_dir.rglob('*T2.nii*')).name,
+                        next(patient_dir.rglob('*SWI.nii*')).name))
+        masks.append(next(patient_dir.rglob('*tumor*.nii*')).name)
 
-    
-    PathDF = pd.DataFrame({'directory': dirs,
-                          'images': images,
-                          'masks': masks})
+    PathDF = pd.DataFrame({'patients': patients,
+                        'volumes': volumes,
+                        'masks': masks})
 
+    PathDF = PathDF.set_index('patients')
+    PathDF
     
-    train_df, valid_df = train_test_split(PathDF, random_state=seed,
-                                     test_size = validation_ratio)
-    
+    train_patients, val_patients = train_test_split(PathDF.index.unique(), random_state = trial_context.get_hparam("split_seed"),
+                                     test_size = trial_context.get_hparam("validation_ratio"))
 
-    
-    train_data = MRI_Dataset(train_df, full_dir, transform=PairedToTensor())
-    valid_data = MRI_Dataset(valid_df, full_dir, transform=PairedToTensor())
+    train_transforms, eval_transforms = get_transforms(trial_context)
+
+    train_data = MRI_Dataset(PathDF.loc[train_patients], full_dir, transform=train_transforms)
+    valid_data = MRI_Dataset(PathDF.loc[val_patients], full_dir, transform=eval_transforms)
     
     return train_data, valid_data
 
@@ -108,6 +100,19 @@ def download_pach_repo(
     previous_commit=None,
 ):
     print(f"Starting to download dataset: {repo}@{branch} --> {root}")
+
+    print(f'pachyderm_host = {pachyderm_host}')
+    print(f'pachyderm_port = {pachyderm_port}')
+    print(f'repo = {repo}')
+    print(f'branch = {branch}')
+    print(f'root = {root}')
+    print(f'token = {token}')
+    print(f'project = {project}')
+    print(f'previous_commit = {previous_commit}')
+    
+    print(f'DIR: {os.path.realpath("./")}')
+    print(f'CWD: {os.getcwd()}')
+    print(f'{root} -> {os.path.exists(root)}')
 
     if not os.path.exists(root):
         os.makedirs(root)
