@@ -9,7 +9,13 @@
 This example is based on the **UCSF-PDGM: The University of California San Francisco Preoperative Diffuse Glioma MRI** research dataset, which can be found here:<br/>
 https://www.cancerimagingarchive.net/collection/ucsf-pdgm/
 
-The original dataset contains data from 495 unique subjects. The dataset is formed by taking several MRI scans for each patient, “skull stripping” the scan (leaving just the brain image), and de-identifying the patient. The result is 4 MRI volumes per subject, as well as a target segmentation mask. In the [sample-data](./sample-data/) folder, you will find a small subset of the data from 87 subjects ([dataset-3d-brain.zip](./sample-data/dataset-3d-brain.zip)), which will be used to train the model. Given the size of the subset data being 1.1 GiB, the data is stored in a separate location. To download the required data, [access the following google drive folder  for the dataset (`dataset-3d-brain.zip`) and sample json (`3d-brain.json`) payload](https://drive.google.com/drive/folders/1du5eHMRE6VOzUkYRmLdfCdmHRaoBryyy?usp=drive_link)
+The original dataset contains data from 495 unique subjects. The dataset is formed by taking several MRI scans for each patient, “skull stripping” the scan (leaving just the brain image), and de-identifying the patient. The result is 4 MRI volumes per subject, as well as a target segmentation mask. In the [sample-data](./sample-data/) folder, you will find a small subset of the data from 87 subjects ([dataset-3d-brain.zip](./sample-data/dataset-3d-brain.zip)), which will be used to train the model. Given the size of the subset data being 1.1 GiB, the data is stored in a separate location. The data is stored in a Hugging Face dataset (https://huggingface.co/datasets/determined-ai/3d-brain-mri). To download the data, navigate to the [`sample-data`](sample-data) directory and run the following commands:
+
+```bash
+wget https://huggingface.co/datasets/determined-ai/3d-brain-mri/resolve/main/dataset-3d-brain.zip
+wget https://huggingface.co/datasets/determined-ai/3d-brain-mri/resolve/main/sample-payload/3d-brain.json
+```
+
 
 To setup this PDK flow, please follow the instructions in the [Deployment](../../deploy/README.md#setup) page. Since that page is referring to the [Dogs vs Cats](../dog-cat/readme.md) example, you should make the following changes:
 
