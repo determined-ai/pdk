@@ -36,12 +36,12 @@ def get_transforms(trial_context):
         PairedToTensor(),
         PairedCrop(height=trial_context.get_hparam("volume_height"),
                    width=trial_context.get_hparam("volume_width"),
-                   depth=trial_context.get_hparam("volume_depth")),,
-        PairedNormalize(trial_context.get_hparam("normalization"))
+                   depth=trial_context.get_hparam("volume_depth")),
+        PairedNormalize(trial_context.get_hparam("normalization")),
         PairedRandomAffine(degrees=(trial_context.get_hparam("affine_degrees_min"), trial_context.get_hparam("affine_degrees_max")),
                            translate=(trial_context.get_hparam("affine_translate_min"), trial_context.get_hparam("affine_translate_max")),
                            scale_ranges=(trial_context.get_hparam("affine_scale_min"), trial_context.get_hparam("affine_scale_max"))),
-        PairedRandomHorizontalFlip(trial_context.get_hparam("hflip_pct")),
+        PairedRandomHorizontalFlip(trial_context.get_hparam("hflip_pct"))
     ])
     eval_transforms = transforms.Compose([
         PairedToTensor(),

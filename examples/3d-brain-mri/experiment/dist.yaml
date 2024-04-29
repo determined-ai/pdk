@@ -12,7 +12,7 @@ data:
     branch:
     token:
 hyperparameters:
-  global_batch_size: 8
+  global_batch_size: 10
   input_channels: 4
   learning_rate: 1.e-4
   dropout: 0.0
@@ -34,7 +34,7 @@ searcher:
   metric: val_Dice
   smaller_is_better: False
   max_length:
-    epochs: 10
+    epochs: 20
 min_validation_period:
   epochs: 1
 perform_initial_validation: True
