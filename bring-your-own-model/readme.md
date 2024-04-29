@@ -4,7 +4,7 @@
 
 # PDK - Pachyderm | Determined | KServe
 ## Bringing Your Model to PDK
-**Date/Revision:** January 02, 2024
+**Date/Revision:** February 23, 2024
 
 In this section, we will train and deploy a simple customer churn model on PDK.
 

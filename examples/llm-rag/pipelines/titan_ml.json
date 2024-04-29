@@ -1,0 +1,67 @@
+{
+  "pipeline": {
+    "name": "titan-ml",
+    "project": {
+      "name": "pdk-llm-rag"
+    }
+  },
+  "description": "Runs Titan ML Service to serve LLM",
+  "input": {
+    "pfs": {
+      "branch": "master",
+      "glob": "/",
+      "repo": "model-download",
+      "name": "model",
+      "empty_files" : true
+    }
+  },
+  "transform": {
+    "cmd": [
+      "/bin/sh"
+    ],
+    "image": "mendeza/takeoff-mistral:0.5",
+    "secrets": [
+      {
+        "name": "titanml-secret",
+        "key": "TAKEOFF_MODEL_NAME",
+        "env_var": "TAKEOFF_MODEL_NAME"
+      },
+      {
+        "name": "titanml-secret",
+        "key": "TAKEOFF_DEVICE",
+        "env_var": "TAKEOFF_DEVICE"
+      },
+      {
+        "name": "titanml-secret",
+        "key": "API_PORT",
+        "env_var": "API_PORT"
+      }
+    ],     
+    "stdin": [
+        "chmod +x /code/run.sh && /code/run.sh --host '0.0.0.0' --port '80'"
+    ]
+  },
+  "resourceRequests": {
+    "memory": "32G"
+  },  
+  "resourceLimits": {
+    "gpu": {
+      "type": "nvidia.com/gpu",
+      "number": 1
+    }
+  },
+  "tolerations": [
+    {
+      "effect": "NO_SCHEDULE",
+      "key": "nvidia.com/gpu",
+      "operator": "EXISTS"
+    }
+  ],
+  "service": {
+    "type": "LoadBalancer",
+    "internalPort": 8080,
+    "externalPort": 8080
+  },
+  "parallelism_spec": { "constant" : 1 },
+  "podPatch": "[{\"op\": \"add\",\"path\": \"/volumes/-\",\"value\": {\"name\": \"task-pv-storage\",\"persistentVolumeClaim\": {\"claimName\": \"pdk-pvc\"}}}, {\"op\": \"add\",\"path\": \"/containers/0/volumeMounts/-\",\"value\": {\"mountPath\": \"/run/determined/workdir/shared_fs\",\"name\": \"task-pv-storage\"}}]"
+}

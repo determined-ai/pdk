@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/apps/settings/wcm/designs/hpeweb"
+        cq:lastModified="{Date}2022-09-27T08:00:16.021Z"
+        cq:lastModifiedBy="christine.seales@hpe.com"
+        cq:tags="[hpe-newsroom:categories/big-data,hpe-newsroom:categories/industry--healthcare,hpe-newsroom:categories/company---customers]"
+        cq:template="/apps/hpeweb/templates/page-text-heavy"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="French healthcare software provider, Maincare, selects HPE GreenLake to accelerate deployment of secure health cloud services"
+        jcr:uuid="78c66a51-e316-4976-9abf-8640e445a707"
+        sling:resourceType="hpeweb/components/pages/page-text-heavy"
+        browserTitle="French healthcare software provider, Maincare, selects HPE GreenLake to accelerate deployment of secure health cloud services"
+        changefreq="daily"
+        contentType="Press Release"
+        displayDate="{Date}2022-09-29T04:00:00.000-04:00"
+        metaDescription="France's leading healthcare provider chooses HPE GreenLake edge-to-cloud platform for its Certified Cloud Offering"
+        metaKeywords="HPE, HPE GreenLake, HPE Synergy,  HPE France, Healthcare technology, Edge to cloud, Maincare Solutions, HPE service provider"
+        metaOgImage="/content/dam/hpe/newsroom/2022/09/image-norend/french-healthcare-software-provider-maincare-selects-hpe-greenlake-to-accelerate-deployment-of-secure-health-cloud-services.jpg"
+        metaTwitterCardType="summary_large_image"
+        msmcomponent="/content/hpe/base/blueprint/newsroom/press-release/2022/09/french-healthcare-software-provider-maincare-selects-hpe-greenlake-to-accelerate-deployment-of-secure-health-cloud-services/jcr:content/main-par/body-par/textonlycomponent_e9"
+        navTitle="French healthcare software provider, Maincare, selects HPE GreenLake to accelerate deployment of secure health cloud services"
+        pageTitle="French healthcare software provider, Maincare, selects HPE GreenLake to accelerate deployment of secure health cloud services"
+        priority="(None)"
+        socialDescription="France's leading healthcare provider chooses HPE GreenLake edge-to-cloud platform for its Certified Cloud Offering"
+        subtitle="France's leading healthcare provider chooses HPE GreenLake edge-to-cloud platform for its Certified Cloud Offering"
+        theme="dark"
+        UAID="9613a338-a0da-4d75-bf01-081c1a2360dd"
+        UCID="2871f149-6d74-49c6-a418-c897aea3ce44">
+        <main-par
+            jcr:lastModified="{Date}2018-06-28T13:09:39.402-07:00"
+            jcr:lastModifiedBy="velazquez@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="hpeweb/components/content/textHeavyComponent"
+            siderail="none">
+            <subtitle
+                jcr:lastModified="{Date}2022-09-27T07:59:18.958Z"
+                jcr:lastModifiedBy="christine.seales@hpe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="hpeweb/components/content/newsroom/newsroomSubtitleComponent"
+                textOnly="SEPTEMBER 29, 2022 • PRESS RELEASE"/>
+            <body-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <imageonlycomponent_c
+                    jcr:created="{Date}2018-06-18T09:06:27.827-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-09-26T16:40:52.643Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/imageOnlyComponent"
+                    fileReference="/content/dam/hpe/newsroom/2022/09/image-norend/french-healthcare-software-provider-maincare-selects-hpe-greenlake-to-accelerate-deployment-of-secure-health-cloud-services.jpg"
+                    imageAlignment="hpe-image-center"
+                    imageAltText="HPE Guarantees"
+                    topMargin="60"
+                    videoSource="video"
+                    videoType="youtube"/>
+                <textonlycomponent_cd
+                    jcr:created="{Date}2018-06-18T09:12:49.742-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-09-26T16:41:46.951Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    leftPadding="30"
+                    rightPadding="30"
+                    textIsRich="true"
+                    textOnly="&lt;h3>IN THIS ARTICLE&lt;/h3>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>Maincare selected HPE GreenLake to provide a flexible, cost efficient and resilient technology environment to support growing business demands&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>Maincare will use &lt;a href=&quot;https://www.hpe.com/us/en/integrated-systems/synergy.html&quot; target=&quot;_blank&quot;>HPE Synergy&lt;/a>, HPE’s software-defined composable infrastructure, in an as-a-service model, to provide an easy-to-manage platform for healthcare-certified, secure cloud services&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli
+                    jcr:created="{Date}2018-06-18T09:16:54.243-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-18T09:18:45.987-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <textonlycomponent
+                    jcr:created="{Date}2022-09-26T16:41:53.465Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2022-09-26T16:42:14.332Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;h2>France's leading healthcare provider chooses HPE GreenLake edge-to-cloud platform for its Certified Cloud Offering&lt;/h2>&#xd;&#xa;"/>
+                <textonlycomponent_e9
+                    jcr:created="{Date}2018-06-22T11:24:07.263-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-09-27T08:00:16.010Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>PARIS, France – September 29, 2022 –&lt;/b> &lt;a href=&quot;http://www.hpe.com/&quot; target=&quot;_blank&quot;>Hewlett Packard Enterprise&lt;/a> (NYSE: HPE) today announced that leading French healthcare software provider, Maincare has adopted the &lt;a href=&quot;https://www.hpe.com/us/en/greenlake.html&quot; target=&quot;_blank&quot;>HPE GreenLake&lt;/a> to power its highly secure cloud offering, Maincare Hosting Services. Maincare will use &lt;a href=&quot;https://www.hpe.com/us/en/integrated-systems/synergy.html&quot; target=&quot;_blank&quot;>HPE Synergy&lt;/a>, HPE’s software-defined composable infrastructure, in an as-a-service model, to provide an easy-to-manage platform that responds to growing business demands for healthcare-certified, secure cloud services.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; Maincare has supported the digital transformation of the healthcare industry for over 20 years and has gained extensive experience on how to comply with the stringent European healthcare record-keeping regulations. These incremental demands for sovereignty, security and availability present additional challenges for healthcare organizations looking to accelerate their digital transformation because all sensitive data, such as patient medical records, must be stored in highly secure and resilient environments in order to meet the demands of the fast-paced healthcare market, Maincare selected HPE GreenLake to provide a flexible, cost efficient and resilient technology environment to support growing business demands for SaaS healthcare solutions while meeting the necessary regulations. HPE GreenLake edge-to-cloud platform gives Maincare the appropriate solution to ensure additional capacity is still available to support increased business demand when required, thereby improving utilization levels and avoiding the waste of overprovisioning and minimizing the resources required for power and cooling&lt;sup>1&lt;/sup>.&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <pullquote
+                    jcr:created="{Date}2022-09-26T16:46:17.440Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2022-09-26T16:47:29.385Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution=" "
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>HPE GreenLake gives Maincare the appropriate solution to ensure additional capacity is still available to support increased business demand&lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2022-09-26T16:47:29.385Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote>
+                <textonlycomponent_b4
+                    jcr:created="{Date}2018-06-18T09:18:06.257-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-09-26T16:48:16.126Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>“Technology offers immense possibilities to the healthcare industry to improve patient care and save lives, but that comes with additional responsibilities,” said Eric Machabert, CTO and CISO - Maincare Solutions. “HPE fully embraced that responsibility and we have worked alongside HPE as a trusted partner to create a platform, Maincare Hosting Services, that gives our users the agility of a cloud-based service, coupled with the data security we need. The result caters exactly to our current needs, but can grow as we do, making it both an environmentally and economically solution.”&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;The combined benefits of HPE GreenLake's flexibility and reliability with &lt;a href=&quot;https://www.hpe.com/us/en/storage/data-services-cloud-console.html&quot; target=&quot;_blank&quot;>Data Services on HPE GreenLake&lt;/a> manageability and a state-of-the-art data center on French soil allow Maincare to deliver the sovereign cloud experience their customers are looking for, while ensuring compliance with the most stringent standards and certifications, including ISO27001 and HDS certification.&lt;/span>&lt;/p>&#xd;&#xa;"/>
+                <pullquote_349b
+                    jcr:created="{Date}2018-06-18T09:23:47.197-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-09-26T16:48:39.608Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution="Eric Machabert, CTO and CISO – Maincare Solutions"
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>“We have worked alongside HPE as a trusted partner to create a platform, that gives our users the agility of a cloud-based service, coupled with the data security we need.”&amp;nbsp;&lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2022-09-26T16:48:39.608Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote_349b>
+                <textonlycomponent_97
+                    jcr:created="{Date}2018-06-22T11:22:31.557-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-09-27T07:52:50.176Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>“HPE GreenLake is a perfect platform for customers such as Maincare who operate in fast-paced, sensitive sectors like healthcare where sensitive data are at play,” said Charles Henry, Transformation, Solutions and Cloud Services Growth Leader at Hewlett Packard Enterprise. “We’re delighted to see our solution matching market demands for smarter healthcare, whilst simultaneously reducing overheads and environmental impact by creating&amp;nbsp;a scalable system that can be turned up or down to exactly meet the current need.”&lt;br>&#xd;&#xa; &lt;b>&lt;br>&#xd;&#xa;About HPE GreenLake&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;/b>The HPE GreenLake edge-to-cloud platform enables customers to accelerate data-first modernization and provides over 70 cloud services that can run on-premises, at the edge, in a colocation facility, and in the public cloud. In &lt;a href=&quot;https://www.hpe.com/us/en/newsroom/press-release/2022/08/hewlett-packard-enterprise-reports-fiscal-2022-third-quarter-results.html&quot; target=&quot;_blank&quot;>Q3 2022&lt;/a>, HPE reported Annualized Revenue Run-Rate (ARR) of $858 million with total as-a-service orders growth up 86% year-to-date. Today, HPE GreenLake has 65,000 customers and over one exabyte of data under management with customers worldwide. These organizations benefit from one control plane from which to automate, orchestrate, and run their hybrid cloud strategy. The scalable, pay-as-you go HPE GreenLake platform also delivers robust security, compliance, and control, and supports a broad partner ecosystem – including channel partners, distributors, independent software vendors, public cloud providers, service providers, and system integrators. For more information on HPE GreenLake, please visit: &lt;a href=&quot;https://www.hpe.com/us/en/greenlake.html&quot; target=&quot;_blank&quot;>https://www.hpe.com/us/en/greenlake.html&lt;/a>&lt;br>&#xd;&#xa;&lt;b>&lt;br>&#xd;&#xa;About Maincare&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/b>More than a publisher in the healthcare industry, Maincare is a trusted partner that has been supporting all healthcare actors - hospitals and healthcare groups, regional agencies, insurers and mutual insurance companies - in their digital transformation for over 20 years, with a comprehensive range of digital solutions (healthcare production, telemedicine, healthcare coordination, administrative management, economic and financial management, logistics, human resources, etc.) and services (strategic consulting, communication). Today, Maincare employs 650 collaborators at the service of caregivers, physicians and other healthcare professionals with a single objective: design innovative and practical digital solutions to enable them to focus on their core business, the patients. Nearly 1,000 institutions and GRADeS, including 80% of French university hospitals, already trust Maincare. For more information: &lt;a href=&quot;http://www.maincare.com/&quot; target=&quot;_blank&quot;>www.maincare.com&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;"/>
+                <textonlycomponent_fe
+                    jcr:created="{Date}2018-06-18T09:28:54.456-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-09-26T16:54:16.592Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>About Hewlett Packard Enterprise&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>Hewlett Packard Enterprise (NYSE: HPE) is the global edge-to-cloud company that helps organizations accelerate outcomes by unlocking value from all of their data, everywhere. Built on decades of reimagining the future and innovating to advance the way people live and work, HPE delivers unique, open and intelligent technology solutions as a service.  With offerings spanning Cloud Services, Compute, High Performance Computing &amp;amp; AI, Intelligent Edge, Software, and Storage, HPE provides a consistent experience across all clouds and edges, helping customers develop new business models, engage in new ways, and increase operational performance. For more information, visit: &lt;a href=&quot;http://www.hpe.com/&quot; target=&quot;_blank&quot;>www.hpe.com&lt;/a>&lt;br />&#xd;&#xa; &lt;br />&#xd;&#xa; Editorial Contact:&lt;br />&#xd;&#xa; &lt;b>Benjamin Lesueur&lt;br />&#xd;&#xa; &lt;/b>&lt;a href=&quot;mailto:benjamin.lesueur@hpe.com&quot; target=&quot;_blank&quot;>benjamin.lesueur@hpe.com&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p> &lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-small&quot;>&lt;sup>1&lt;/sup> HPE has found that customers transitioning to HPE GreenLake from traditional CapEx models can achieve a greater than 30% reduction in energy costs and total cost of ownership over 5 years. &lt;a href=&quot;https://www.hpe.com/psnow/doc/a00111230enw&quot; target=&quot;_blank&quot;>https://www.hpe.com/psnow/doc/a00111230enw&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <textonlycomponent_bf
+                    jcr:created="{Date}2018-07-02T13:12:59.755-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-10-12T16:10:50.633Z"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    textOnly="&lt;h2>RELATED NEWS&lt;/h2>&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli_540225213
+                    jcr:created="{Date}2018-06-18T10:12:48.909-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:22:53.902-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <columncontainercompo
+                    jcr:created="{Date}2018-07-02T13:14:23.594-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:15:08.106-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/columnContainerComponent"
+                    columns="column-content-3">
+                    <column_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_7c25
+                            jcr:created="{Date}2018-07-02T13:15:28.984-07:00"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-09-26T16:58:47.594Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/07/french-cloud-service-provider-antemeta-selects-hpe-greenlake-to-introduce-new-automated-disaster-recovery-service"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="French cloud service provider AntemetA selects HPE GreenLake to introduce new automated disaster recovery service"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="French cloud service provider AntemetA selects HPE GreenLake to introduce new automated disaster recovery service"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-09-26T16:58:47.594Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2022/07/image-norend/french-cloud-service-provider-antemeta-selects-hpe-greenlake-to-introduce-new-automated-disaster-recovery-service.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-09-26T16:58:47.594Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_7c25>
+                    </column_0>
+                    <column_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_4dff
+                            jcr:created="{Date}2018-09-21T21:01:47.387Z"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-09-26T16:58:39.994Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2021/05/carestream-selects-hpe-greenlake-to-transform-healthcare-platform-using-artificial-intelligence-as-a-service"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="Carestream selects HPE GreenLake to transform healthcare platform using artificial intelligence as a Service"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Carestream selects HPE GreenLake to transform healthcare platform using artificial intelligence as a Service"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-09-26T16:58:39.994Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2021/05/image-norend/carestream-selects-hpe-greenlake-to-transform-healthcare-platform-using-artificial-intelligence-as-a-service.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-09-26T16:58:39.994Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_4dff>
+                    </column_1>
+                    <column_2
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_50f2
+                            jcr:created="{Date}2018-09-05T17:41:27.359Z"
+                            jcr:createdBy="nagle@hpe.com"
+                            jcr:lastModified="{Date}2022-09-26T16:58:31.333Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/03/cheops-technology-selects-hpe-greenlake-to-expand-and-enhance-cloud-services-portfolio-for-its-customers"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="Cheops Technology selects HPE GreenLake to expand and enhance cloud services portfolio for its customers"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Cheops Technology selects HPE GreenLake to expand and enhance cloud services portfolio for its customers"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-09-26T16:58:31.333Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                fileReference="/content/dam/hpe/newsroom/2022/03/image-norend/cheops-technology-selects-hpe-greenlake-to-expand-and-enhance-cloud-services-portfolio-for-its-customers.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-09-26T16:58:31.333Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"/>
+                        </contentblock_50f2>
+                    </column_2>
+                </columncontainercompo>
+            </body-par>
+            <side-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <buttonctaitemcompone
+                    jcr:created="{Date}2018-06-28T13:06:31.075-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:06:46.099-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 1"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_661124859
+                    jcr:created="{Date}2018-06-28T13:06:51.115-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:11.079-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 2"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_606970408
+                    jcr:created="{Date}2018-06-28T13:06:53.400-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:02.336-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 3"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+            </side-par>
+        </main-par>
+        <image
+            jcr:lastModified="{Date}2018-09-05T17:38:02.066Z"
+            jcr:lastModifiedBy="nagle@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+    </jcr:content>
+</jcr:root>

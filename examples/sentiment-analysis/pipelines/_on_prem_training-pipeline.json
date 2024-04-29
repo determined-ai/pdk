@@ -19,7 +19,7 @@
     "stdin": [
       "python train.py --git-url https://git@github.com:/determined-ai/pdk.git --git-ref main --sub-dir examples/sentiment-analysis/experiment --config const.yaml --repo finbert-prep --model finbert --project pdk-finbert"
     ],
-    "image": "pachyderm/pdk:train-v0.0.5",
+    "image": "pachyderm/pdk:train-v0.0.6",
     "secrets": [
       {
         "name": "pipeline-secret",

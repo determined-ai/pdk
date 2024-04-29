@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/apps/settings/wcm/designs/hpeweb"
+        cq:lastModified="{Date}2023-03-20T00:41:20.937Z"
+        cq:lastModifiedBy="christine.seales@hpe.com"
+        cq:tags="[hpe-newsroom:categories/big-data,hpe-newsroom:categories/services]"
+        cq:template="/apps/hpeweb/templates/page-text-heavy"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Hewlett Packard Enterprise to acquire OpsRamp, advancing hybrid cloud leadership and expanding HPE GreenLake into IT Operations Management"
+        jcr:uuid="3e85a1b0-56a0-4247-8e3b-7b7a32521559"
+        sling:resourceType="hpeweb/components/pages/page-text-heavy"
+        browserTitle="Hewlett Packard Enterprise to acquire OpsRamp, advancing hybrid cloud leadership and expanding HPE GreenLake into IT Operations Management"
+        changefreq="daily"
+        contentType="Press Release"
+        displayDate="{Date}2023-03-20T06:00:00.000-04:00"
+        metaDescription="OpsRamp and the HPE GreenLake edge-to-cloud platform will provide a unified approach to manage multi-vendor computing, networking, storage, and application resources in hybrid and multi-cloud IT environments"
+        metaKeywords="HPE GreenLake, OpsRamp, Fidelma Russo, HPE GreenLAke edge-to-cloud platform,  ITOM, IT operations management, Hewlett Packard Pathfinder"
+        metaOgImage="/content/dam/hpe/newsroom/2023/03/image-norend/hpe-fortifies-network-security-with-acquisition-of-security-service-edge-provider-axis-security.jpg"
+        metaTwitterCardType="summary_large_image"
+        msmcomponent="/content/hpe/base/blueprint/newsroom/press-release/2023/03/hewlett-packard-enterprise-to-acquire-opsramp-advancing-hybrid-cloud-leadership-and-expanding-hpe-greenlake-into-it-operations-management/jcr:content/main-par/body-par/textonlycomponent_5d"
+        navTitle="Hewlett Packard Enterprise to acquire OpsRamp, advancing hybrid cloud leadership and expanding HPE GreenLake into IT Operations Management"
+        pageTitle="Hewlett Packard Enterprise to acquire OpsRamp, advancing hybrid cloud leadership and expanding HPE GreenLake into IT Operations Management"
+        priority="(None)"
+        socialDescription="OpsRamp and the HPE GreenLake edge-to-cloud platform will provide a unified approach to manage multi-vendor computing, networking, storage, and application resources in hybrid and multi-cloud IT environments"
+        subtitle="OpsRamp and the HPE GreenLake edge-to-cloud platform will provide a unified approach to manage multi-vendor computing, networking, storage, and application resources in hybrid and multi-cloud IT environments"
+        theme="dark">
+        <main-par
+            jcr:lastModified="{Date}2018-06-28T13:09:39.402-07:00"
+            jcr:lastModifiedBy="velazquez@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="hpeweb/components/content/textHeavyComponent"
+            siderail="none">
+            <subtitle
+                jcr:lastModified="{Date}2023-03-17T01:10:00.564Z"
+                jcr:lastModifiedBy="christine.seales@hpe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="hpeweb/components/content/newsroom/newsroomSubtitleComponent"
+                textOnly="MARCH 20, 2023 • PRESS RELEASE"/>
+            <body-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <imageonlycomponent_c
+                    jcr:created="{Date}2018-06-18T09:06:27.827-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-03-17T18:34:17.737Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/imageOnlyComponent"
+                    ctaNewWindow="false"
+                    disableCaptionUnderline="false"
+                    disableImageScaling="false"
+                    enableImageAccent="false"
+                    fileReference="/content/dam/hpe/newsroom/2023/03/image-norend/hpe-fortifies-network-security-with-acquisition-of-security-service-edge-provider-axis-security.jpg"
+                    gradientPlacement="top-right"
+                    imageAlignment="hpe-image-center"
+                    imageAltText="HPE Guarantees"
+                    isVideo="false"
+                    isZoom="false"
+                    textIsRich="true"
+                    topMargin="60"
+                    useNativeAspectRatio="false"
+                    videoSource="video"
+                    videoType="youtube"
+                    zoomBackground="white"/>
+                <textonlycomponent_cd
+                    jcr:created="{Date}2018-06-18T09:12:49.742-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-03-19T22:34:22.622Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    leftPadding="30"
+                    rightPadding="30"
+                    textIsRich="true"
+                    textOnly="&lt;h3>IN THIS ARTICLE&lt;/h3>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>Gartner estimates ITOM to be an approximately $39 billion&lt;sup>1&lt;/sup> market&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>OpsRamp with HPE GreenLake delivers an integrated hybrid cloud platform to manage and transform multi-vendor and multi-cloud IT estates, including the leading hyperscalers&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>The addition of OpsRamp, will help customers facing complex multi-vendor IT systems and workloads more efficiently manage IT investments and remediate incidents faster&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli
+                    jcr:created="{Date}2018-06-18T09:16:54.243-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-18T09:18:45.987-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <textonlycomponent
+                    jcr:created="{Date}2023-03-17T18:34:49.645Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2023-03-17T18:35:11.362Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;h2>OpsRamp and the HPE GreenLake edge-to-cloud platform will provide a unified approach to manage multi-vendor computing, networking, storage, and application resources in hybrid and multi-cloud IT environments&lt;/h2>&#xd;&#xa;"/>
+                <textonlycomponent_e9
+                    jcr:created="{Date}2018-06-22T11:24:07.263-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-03-19T22:35:24.254Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>HOUSTON, Texas – March 20, 2023 –&lt;/b> &lt;a href=&quot;http://www.hpe.com&quot; target=&quot;_blank&quot;>Hewlett Packard Enterprise&lt;/a> (NYSE: HPE) today announced that it has entered into a definitive agreement to acquire OpsRamp, an IT operations management (ITOM) company that monitors, observes, automates and manages IT infrastructure, cloud resources, workloads and applications for hybrid and multi-cloud environments, including the leading hyperscalers.&amp;nbsp; Gartner estimates ITOM to be an approximately $39 billion&lt;sup>1&lt;/sup> market.&lt;br>&#xd;&#xa;&lt;/span>&lt;br>&#xd;&#xa;&lt;span class=&quot;body-copy-large&quot;>Integrating OpsRamp’s hybrid digital operations management solution with the HPE GreenLake edge-to-cloud platform – and supporting it with HPE services – will reduce the operational complexity of multi-vendor and multi-cloud IT environments that are in the public cloud, colocations, and on-premises. OpsRamp’s technology – which delivers discovery, monitoring, automation, and event resolution with artificial intelligence for IT operations (AIOps) – provides end-to-end visibility, observability, and control across hybrid and multi-cloud IT environments. These capabilities span multi-vendor computing, networking, and storage, along with cloud resources, containers, virtual machines, and applications. According to IDC, 64%&lt;sup>2 &lt;/sup>of enterprises use multiple cloud providers; the ability to manage the IT operations sprawl across heterogeneous cloud environments is becoming increasingly more important. &lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <pullquote
+                    jcr:created="{Date}2023-03-17T18:36:07.689Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2023-03-19T22:35:58.296Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution=" "
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>HPE to acquire OpsRamp to advance hybrid cloud leadership and expand HPE GreenLake into IT Operations Management&lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2023-03-19T22:35:58.296Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote>
+                <textonlycomponent_5d
+                    jcr:created="{Date}2018-06-18T09:21:51.280-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-03-20T00:41:20.911Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>“Customers today are managing several different cloud environments, with different IT operational models and tools, which dramatically increases the cost and complexity of digital operations management,” said Fidelma Russo, Chief Technology Officer of Hewlett Packard Enterprise. “The combination of OpsRamp and HPE will remove these barriers by providing customers with an integrated edge-to-cloud platform that can more effectively manage and transform multi-vendor and multi-cloud IT estates. This acquisition advances HPE hybrid cloud leadership and expands the reach of the HPE GreenLake platform into IT Operations Management.”&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;b>The HPE GreenLake edge-to-cloud platform – the foundation of the hybrid cloud experience&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/b>HPE GreenLake platform provides customers and partners with a unified hybrid cloud experience and easy access to cloud services. With the addition of OpsRamp’s services, new and existing HPE customers facing increasingly complex multi-vendor IT systems and workloads will be able to more efficiently manage IT investments and remediate incidents faster. Organizations benefit from one platform from which to automate, orchestrate, and operate their hybrid cloud estate.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; The OpsRamp capabilities extend the HPE services portfolio – across Advisory, Operational and HPE GreenLake managed services – into delivering end-to-end support for hybrid and multi-cloud IT environments. With this offering, customers can more effectively manage their heterogeneous cloud environments, dramatically reduce their operating expenses and enhance the overall IT experience for users. Capabilities include the consolidation of multi-vendor tools; automating and streamlining manual processes with AIOps; and significantly improving incident remediation with monitoring and observability.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; Headquartered in San Jose, California, OpsRamp was part of &lt;a href=&quot;https://pathfinder.hpe.com/&quot; target=&quot;_blank&quot;>Hewlett Packard Pathfinder’s&lt;/a> venture capital investment in 2020. OpsRamp delivers a hybrid digital operations management platform that supports thousands of customers worldwide to modernize and reduce the cost of their digital operations management. &lt;/span>&lt;/p>&#xd;&#xa;"/>
+                <pullquote_349b
+                    jcr:created="{Date}2018-06-18T09:23:47.197-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-03-19T22:38:34.463Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution=" "
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>OpsRamp with HPE GreenLake delivers an integrated hybrid cloud platform to manage and transform multi-vendor and multi-cloud IT estates&lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2023-03-19T22:38:34.463Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote_349b>
+                <textonlycomponent_97
+                    jcr:created="{Date}2018-06-22T11:22:31.557-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-03-19T22:40:53.642Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>“The integration of OpsRamp’s hybrid digital operations management solution with the HPE GreenLake platform will provide an unmatched offering for organizations seeking to innovate and thrive in a complex, multi-cloud world. Partners and the channel will also play a pivotal role to advance their as-a-service offerings, as enterprises look for a unified approach to better manage their operations from the edge to the cloud,”&amp;nbsp;said Varma Kunaparaju, CEO of OpsRamp. “We look forward to leveraging the scale and reach of HPE’s global go-to-market engine to deliver our unique offering and are excited for this journey ahead as part of HPE.”&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; Today, HPE GreenLake supports more than 65,000 customers, powers more than two million connected devices and manages more than one exabyte of data with customers worldwide.&lt;/span>&lt;br>&#xd;&#xa;&lt;span class=&quot;body-copy-large&quot;>&lt;br>&#xd;&#xa;&lt;b>HPE portfolio integration and availability&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;/b>The transaction is expected to close in the third quarter of the HPE 2023 fiscal year, subject to regulatory approvals and other customary closing conditions. OpsRamp’s technology will be integrated with HPE GreenLake platform, available standalone as-a-service, and embedded within HPE’s compute, storage, and networking solutions. &lt;br>&#xd;&#xa;&lt;b>&lt;br>&#xd;&#xa;About HPE GreenLake&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;/b>The HPE GreenLake edge-to-cloud platform enables customers to accelerate data-first modernization and provides cloud services that can run on-premises, at the edge, in a colocation facility, and in the public cloud. In its &lt;a href=&quot;https://www.hpe.com/us/en/newsroom/press-release/2023/03/hewlett-packard-enterprise-reports-fiscal-2023-first-quarter-results.html&quot; target=&quot;_blank&quot;>first fiscal quarter of 2023&lt;/a>, HPE reported Annualized Revenue Run-Rate (ARR) of&amp;nbsp;over $1 billion, a growth of 31% from the prior-year period in constant currency. &amp;nbsp;HPE GreenLake has 65,000 customers, powers more than two million connected devices and manages more than one exabyte of data under management with customers worldwide. These organizations benefit from one control plane from which to automate, orchestrate, and run their hybrid cloud strategy. The scalable, pay-as-you go HPE GreenLake platform also delivers robust security, compliance, and control, and supports a broad partner ecosystem – including channel partners, distributors, independent software vendors, public cloud providers, service providers, and system integrators. For more information on HPE GreenLake, please visit: &lt;a href=&quot;https://www.hpe.com/us/en/greenlake.html&quot; target=&quot;_blank&quot;>https://www.hpe.com/us/en/greenlake.html&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;"/>
+                <textonlycomponent_fe
+                    jcr:created="{Date}2018-06-18T09:28:54.456-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-03-19T22:42:25.724Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>About Hewlett Packard Enterprise&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>Hewlett Packard Enterprise (NYSE: HPE) is the global edge-to-cloud company that helps organizations accelerate outcomes by unlocking value from all of their data, everywhere. Built on decades of reimagining the future and innovating to advance the way people live and work, HPE delivers unique, open and intelligent technology solutions as a service.&amp;nbsp; With offerings spanning Cloud Services, Compute, High Performance Computing &amp;amp; AI, Intelligent Edge, Software, and Storage, HPE provides a consistent experience across all clouds and edges, helping customers develop new business models, engage in new ways, and increase operational performance. For more information, visit: &lt;a href=&quot;http://www.hpe.com&quot; target=&quot;_blank&quot;>www.hpe.com&lt;/a>&lt;br>&#xd;&#xa;&lt;b>&lt;br>&#xd;&#xa;Forward-looking statements&lt;/b>&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;This document contains forward-looking statements within the meaning of the safe harbor provisions of the Private Securities Litigation Reform Act of 1995. Such statements involve risks, uncertainties, and assumptions. If such risks or uncertainties materialize or such assumptions prove incorrect, the results of HPE and its consolidated subsidiaries could differ materially from those expressed or implied by such forward-looking statements and assumptions. All statements other than statements of historical fact are statements that could be deemed forward-looking statements, including, but not limited to, any statements regarding the expected benefits and costs of the transaction contemplated by this document, including enhanced opportunities for growth, the delivery and timing of customer benefits and additional offerings, the timing of closing the transaction, and the realization and timing of synergies and other economic benefits; projections of operational or financial performance; any statements concerning the expected development, performance, market share, or competitive performance relating to products or services; any statements regarding current or future macroeconomic or industry trends or events and the impact of those trends and events on HPE and its financial performance; any statements of expectation or belief; and any statements of assumptions underlying any of the foregoing. Risks, uncertainties, and assumptions include the possibility that expected benefits may not materialize as expected; that the parties are unable to successfully implement integration strategies; and other risks that are described in HPE’s reports with the Securities and Exchange Commission, including but not limited to the risks described in HPE’s Annual Report on Form 10-K for its fiscal year ended October 31, 2022, HPE’s Quarterly Report on Form 10-Q for its fiscal quarter ended January 31, 2023, and that are otherwise described or updated from time to time in Hewlett Packard Enterprise’s Quarterly Reports on Form 10-Q, Current Reports on Form 8-K, and in other filings made with the Securities and Exchange Commission. HPE assumes no obligation and does not intend to update these forward-looking statements. &lt;br>&#xd;&#xa;&lt;b>&lt;br>&#xd;&#xa;Media Contact:&lt;br>&#xd;&#xa;&lt;/b>John Choi&lt;br>&#xd;&#xa;&lt;a href=&quot;mailto:corpmediarelations@hpe.com&quot; target=&quot;_blank&quot;>corpmediarelations@hpe.com&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-small&quot;>&lt;sup>1&lt;/sup> Shailendra Upadhyay, Laurie Wurster (February 2023), Gartner Forecast Analysis: IT Operations Management Software, Worldwide&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-small&quot;>&lt;sup>2&lt;/sup> IDC, What Are Enterprise &amp;quot;Multicloud&amp;quot; Adoption Trends When It Comes to Infrastructure Deployment?, doc # US48902122, March 2022&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <textonlycomponent_bf
+                    jcr:created="{Date}2018-07-02T13:12:59.755-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-10-12T16:10:50.633Z"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    textOnly="&lt;h2>RELATED NEWS&lt;/h2>&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli_540225213
+                    jcr:created="{Date}2018-06-18T10:12:48.909-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:22:53.902-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <columncontainercompo
+                    jcr:created="{Date}2018-07-02T13:14:23.594-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:15:08.106-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/columnContainerComponent"
+                    columns="column-content-3">
+                    <column_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_7c25
+                            jcr:created="{Date}2018-07-02T13:15:28.984-07:00"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2023-03-17T18:44:38.115Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2023/03/hewlett-packard-enterprise-fortifies-network-security-with-acquisition-of-security-service-edge-provider-axis-security"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="Hewlett Packard Enterprise fortifies network security with acquisition of Security Service Edge provider Axis Security"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Hewlett Packard Enterprise fortifies network security with acquisition of Security Service Edge provider Axis Security"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2023-03-17T18:44:38.115Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2023/03/image-norend/hpe-fortifies-network-security-with-acquisition-of-security-service-edge-provider-axis-security.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2023-03-17T18:44:38.115Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_7c25>
+                    </column_0>
+                    <column_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_4dff
+                            jcr:created="{Date}2018-09-21T21:01:47.387Z"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2023-03-17T18:45:57.151Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2023/02/hewlett-packard-enterprise-doubles-down-on-private-5g-extends-leadership-in-wireless-connectivity-with-acquisition-of-athonet"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="Hewlett Packard Enterprise doubles down on private 5G, extends leadership in wireless connectivity with acquisition of Athonet"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Hewlett Packard Enterprise doubles down on private 5G, extends leadership in wireless connectivity with acquisition of Athonet"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2023-03-17T18:45:57.151Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2023/03/image-norend/hpe-fortifies-network-security-with-acquisition-of-security-service-edge-provider-axis-security.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2023-03-17T18:45:57.151Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_4dff>
+                    </column_1>
+                    <column_2
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_50f2
+                            jcr:created="{Date}2018-09-05T17:41:27.359Z"
+                            jcr:createdBy="nagle@hpe.com"
+                            jcr:lastModified="{Date}2023-03-17T18:47:21.728Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2023/01/hewlett-packard-enterprise-acquires-pachyderm-to-expand-ai-at-scale-capabilities-with-reproducible-ai"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="Hewlett Packard Enterprise acquires Pachyderm to expand AI-at-scale capabilities with reproducible AI"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Hewlett Packard Enterprise acquires Pachyderm to expand AI-at-scale capabilities with reproducible AI"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2023-03-17T18:47:21.728Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                fileReference="/content/dam/hpe/newsroom/2023/01/image-norend/hewlett-packard-enterprise-acquires-pachyderm-to-expand-ai-at-scale-capabilities-with-reproducible-ai.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2023-03-17T18:47:21.728Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"/>
+                        </contentblock_50f2>
+                    </column_2>
+                </columncontainercompo>
+            </body-par>
+            <side-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <buttonctaitemcompone
+                    jcr:created="{Date}2018-06-28T13:06:31.075-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:06:46.099-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 1"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_661124859
+                    jcr:created="{Date}2018-06-28T13:06:51.115-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:11.079-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 2"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_606970408
+                    jcr:created="{Date}2018-06-28T13:06:53.400-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:02.336-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 3"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+            </side-par>
+        </main-par>
+        <image
+            jcr:lastModified="{Date}2018-09-05T17:38:02.066Z"
+            jcr:lastModifiedBy="nagle@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+    </jcr:content>
+</jcr:root>

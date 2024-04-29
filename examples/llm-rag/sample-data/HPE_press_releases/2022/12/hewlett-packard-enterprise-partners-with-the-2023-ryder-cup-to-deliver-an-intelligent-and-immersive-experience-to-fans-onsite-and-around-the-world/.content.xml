@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/apps/settings/wcm/designs/hpeweb"
+        cq:lastModified="{Date}2022-12-05T23:03:53.737Z"
+        cq:lastModifiedBy="christine.seales@hpe.com"
+        cq:tags="[hpe-newsroom:categories/big-data,hpe-newsroom:categories/servers,hpe-newsroom:categories/company---partners]"
+        cq:template="/apps/hpeweb/templates/page-text-heavy"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Hewlett Packard Enterprise partners with the 2023 Ryder Cup to deliver an intelligent and immersive experience to fans onsite and around the world"
+        jcr:uuid="fd21a769-0c85-45d3-afb8-ac1a2b664814"
+        sling:resourceType="hpeweb/components/pages/page-text-heavy"
+        browserTitle="Hewlett Packard Enterprise partners with the 2023 Ryder Cup to deliver an intelligent and immersive experience to fans onsite and around the world"
+        changefreq="daily"
+        contentType="Press Release"
+        displayDate="{Date}2022-12-07T07:30:00.000-05:00"
+        metaDescription="HPE will deploy solutions that provide ubiquitous connectivity and real-time data processing and insights to optimize the experience for fans, sponsors and organizers"
+        metaKeywords="HPE, HPE GreenLake, as-a-service, Aruba, networks, connectivity, Ryder Cup, Ryder Cup 2023, sponsorship, sports, golf, technology in sports"
+        metaOgImage="/content/dam/hpe/newsroom/2022/12/image-norend/hpe-partners-with-the-2023-ryder-cup-to-deliver-an-intelligent-and-immersive-experience-to-fans-onsite-and-around-the-world.jpg"
+        metaTwitterCardType="summary_large_image"
+        msmcomponent="/content/hpe/base/blueprint/newsroom/press-release/2022/12/hewlett-packard-enterprise-partners-with-the-2023-ryder-cup-to-deliver-an-intelligent-and-immersive-experience-to-fans-onsite-and-around-the-world/jcr:content/main-par/body-par/columncontainercompo/column_0/contentblock_7c25"
+        navTitle="Hewlett Packard Enterprise partners with the 2023 Ryder Cup to deliver an intelligent and immersive experience to fans onsite and around the world"
+        pageTitle="Hewlett Packard Enterprise partners with the 2023 Ryder Cup to deliver an intelligent and immersive experience to fans onsite and around the world"
+        priority="(None)"
+        socialDescription="HPE will deploy solutions that provide ubiquitous connectivity and real-time data processing and insights to optimize the experience for fans, sponsors and organizers"
+        subtitle="HPE will deploy solutions that provide ubiquitous connectivity and real-time data processing and insights to optimize the experience for fans, sponsors and organizers"
+        theme="dark"
+        UAID="3483bb4d-d854-4c74-99cf-084b9b0dbb0f"
+        UCID="3270562a-42ec-4043-8651-c0a903f6b6ce">
+        <main-par
+            jcr:lastModified="{Date}2018-06-28T13:09:39.402-07:00"
+            jcr:lastModifiedBy="velazquez@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="hpeweb/components/content/textHeavyComponent"
+            siderail="none">
+            <subtitle
+                jcr:lastModified="{Date}2022-12-01T19:22:27.082Z"
+                jcr:lastModifiedBy="christine.seales@hpe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="hpeweb/components/content/newsroom/newsroomSubtitleComponent"
+                textOnly="DECEMBER 7, 2022 • PRESS RELEASE"/>
+            <body-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <imageonlycomponent_c
+                    jcr:created="{Date}2018-06-18T09:06:27.827-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-12-05T17:41:48.924Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/imageOnlyComponent"
+                    fileReference="/content/dam/hpe/newsroom/2022/12/image-norend/hpe-partners-with-the-2023-ryder-cup-to-deliver-an-intelligent-and-immersive-experience-to-fans-onsite-and-around-the-world.jpg"
+                    imageAlignment="hpe-image-center"
+                    imageAltText="HPE Guarantees"
+                    topMargin="60"
+                    videoSource="video"
+                    videoType="youtube"/>
+                <textonlycomponent_cd
+                    jcr:created="{Date}2018-06-18T09:12:49.742-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-12-05T18:15:24.444Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    leftPadding="30"
+                    rightPadding="30"
+                    textIsRich="true"
+                    textOnly="&lt;h3>IN THIS ARTICLE&lt;/h3>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>As an official supplier to the 2023 Ryder Cup, HPE will deliver an intelligent, secure and high-performance wired and wireless network platform&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>As-a-service solutions, through the HPE GreenLake edge-to-cloud platform, will reduce the time and cost of setting up the venue, while delivering an automated and secure cloud-based connectivity experience&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli
+                    jcr:created="{Date}2018-06-18T09:16:54.243-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-18T09:18:45.987-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <textonlycomponent
+                    jcr:created="{Date}2022-12-05T17:42:40.543Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2022-12-05T17:42:55.853Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;h2>HPE will deploy solutions that provide ubiquitous connectivity and real-time data processing and insights to optimize the experience for fans, sponsors and organizers&lt;/h2>&#xd;&#xa;"/>
+                <textonlycomponent_e9
+                    jcr:created="{Date}2018-06-22T11:24:07.263-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-12-05T17:44:16.694Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Frankfurt, Germany – December 7, 2022 – &lt;/b>&lt;a href=&quot;http://www.hpe.com&quot; target=&quot;_blank&quot;>Hewlett Packard Enterprise&lt;/a> (NYSE: HPE) today announced a partnership with the 2023 Ryder Cup to deliver its cutting-edge technologies at one of the world’s largest sporting events. As an Official Supplier to the 2023 Ryder Cup, HPE will deliver an intelligent, secure and high-performance wired and wireless network platform at the prestigious golf event being held at Marco Simone Golf &amp;amp; Country Club in Rome, Italy, in September 2023.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;Held biannually since 1927 featuring teams from Europe and the USA, the event attracts more than 250,000 onsite spectators and more than 600 million global television viewers. With each installment of the Ryder Cup taking place at a different venue covering hundreds of acres, typically in rural locations, staging the event introduces unique technological challenges. A golf course that normally caters for dozens of visitors at any one time will become one of the largest temporary sports stadiums in the world. As-a-service solutions, through the HPE GreenLake edge-to-cloud platform, will reduce the time and cost of setting up the venue, while delivering an automated and secure cloud-based connectivity experience.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;“We have a bold ambition to create one of the most intelligent, immersive and sustainable temporary-constructed sporting venues in the world,” said Michael Cole, chief technology officer of the European Tour group. “We look forward to working together with HPE to unlock the value of data to provide a level of spectator engagement never before witnessed at a sporting event. The HPE GreenLake platform will enable us to deliver the tournament as a service in a sustainable and cost-efficient way.”&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <pullquote
+                    jcr:created="{Date}2022-12-05T17:44:24.788Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2022-12-05T17:44:53.151Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution="Michael Cole, Chief Technology Officer of the European Tour group."
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>“The HPE GreenLake platform will enable us to deliver the tournament as a service in a sustainable and cost-efficient way.”&amp;nbsp;&lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2022-12-05T17:44:53.151Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote>
+                <textonlycomponent_b4
+                    jcr:created="{Date}2018-06-18T09:18:06.257-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-12-05T17:46:49.624Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>“Capturing, analyzing and extracting value from data in real-time is fundamental to delivering the immersive experience that sports fans today demand,” said Jim Jackson, executive vice president &amp;amp; chief marketing officer, Hewlett Packard Enterprise. “Our partnership with the 2023 Ryder Cup will be a great showcase for our edge-to-cloud portfolio and our ability to deliver best-in-class data services and connectivity as a service, with the HPE GreenLake platform. We’ll be providing a new level of intelligent connectivity for fans, opening up new ways to follow the matches in play, navigate the golf course, and access hospitality and retail offerings with the shortest queues.”&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;The HPE solution, including the HPE GreenLake edge-to-cloud platform and Aruba network architecture, provide a foundation to drive data-first digital experiences. Simple and modern infrastructure will drive efficiencies and optimization for multiple Ryder Cup stakeholders across many areas:&lt;br />&#xd;&#xa; &lt;/span>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Fan experience:&lt;/b> The Ryder Cup app will provide a fully personalized experience, including frictionless access to e-ticketing, travel and weather information, scoring, content-rich services, player locations and venue wayfinding.&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Sponsorship:&lt;/b> The HPE solution will secure and enhance data-driven, context-based marketing and merchandising activation, providing key data sources on guest behaviors and an ability to act on operational intelligence.&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Operations:&lt;/b> The technology will monitor spectator foot traffic, crowds, and entry and exit to ensure the appropriate staffing levels, minimum queueing times, enable operational effectiveness and streamline travel.&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Sustainability:&lt;/b> As the venue is in an area of special archeological interest, underground ducting for cabling is restricted so wireless technologies are particularly important. In addition, HPE GreenLake helps cut down the need for single-use technology, which is important at temporary stadia. &lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"/>
+                <textonlycomponent_5d
+                    jcr:created="{Date}2018-06-18T09:21:51.280-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-12-05T17:47:18.203Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>HPE was an &lt;a href=&quot;https://www.hpe.com/us/en/newsroom/blog-post/2018/04/hpe-partners-with-ryder-cup-to-put-data-at-the-heart-of-golf-for-the-first-time.html&quot; target=&quot;_blank&quot;>Official Supplier&lt;/a> to the last Ryder Cup held in Europe in Paris in 2018, delivering a truly connected course for the first time.&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="20"/>
+                <pullquote_349b
+                    jcr:created="{Date}2018-06-18T09:23:47.197-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-12-05T17:47:34.861Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution=" "
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>The HPE solution, including the HPE GreenLake edge-to-cloud platform and Aruba network architecture, provide a foundation to drive data-first digital experiences&lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2022-12-05T17:47:34.861Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote_349b>
+                <textonlycomponent_fe
+                    jcr:created="{Date}2018-06-18T09:28:54.456-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-12-05T17:48:44.828Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>About Hewlett Packard Enterprise&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>Hewlett Packard Enterprise (NYSE: HPE) is the global edge-to-cloud company that helps organizations accelerate outcomes by unlocking value from all their data, everywhere. Built on decades of reimagining the future and innovating to advance the way people live and work, HPE delivers unique, open and intelligent technology solutions as a service. With offerings spanning Cloud Services, Compute, High Performance Computing &amp;amp; AI, Intelligent Edge, Software, and Storage, HPE provides a consistent experience across all clouds and edges, helping customers develop new business models, engage in new ways, and increase operational performance. For more information, visit: &lt;a href=&quot;http://www.hpe.com/&quot; target=&quot;_blank&quot;>www.hpe.com&lt;/a>&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;Editorial Contact:&lt;br />&#xd;&#xa;&lt;b style=&quot;&quot;>Alastair McCormick&lt;br />&#xd;&#xa;&lt;/b>&lt;a href=&quot;mailto:Alastair.mccormick@hpe.com&quot; target=&quot;_blank&quot;>Alastair.mccormick@hpe.com&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <textonlycomponent_bf
+                    jcr:created="{Date}2018-07-02T13:12:59.755-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-10-12T16:10:50.633Z"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    textOnly="&lt;h2>RELATED NEWS&lt;/h2>&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli_540225213
+                    jcr:created="{Date}2018-06-18T10:12:48.909-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:22:53.902-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <columncontainercompo
+                    jcr:created="{Date}2018-07-02T13:14:23.594-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:15:08.106-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/columnContainerComponent"
+                    columns="column-content-3">
+                    <column_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_7c25
+                            jcr:created="{Date}2018-07-02T13:15:28.984-07:00"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-12-05T23:03:53.711Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/12/hpe-greenlake-adds-application-analytics-and-developer-services-to-modernize-workloads-across-the-hybrid-cloud"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="HPE GreenLake adds application, analytics, and developer services to modernize workloads across the hybrid cloud"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="HPE GreenLake adds application, analytics, and developer services to modernize workloads across the hybrid cloud"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-12-05T23:03:53.711Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2022/12/image-norend/hpe-greenlake-adds-application-analytics-and-developer-services-to-modernize-workloads-across-the-hybrid-cloud.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-12-05T23:03:53.711Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_7c25>
+                    </column_0>
+                    <column_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_4dff
+                            jcr:created="{Date}2018-09-21T21:01:47.387Z"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-12-05T17:52:47.989Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2021/10/hewlett-packard-enterprise-to-bring-ultra-connected-event-experience-to-the-birmingham-2022-commonwealth-games-with-venue-network-infrastructure-partnership"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="Hewlett Packard Enterprise to bring ultra-connected event experience to the Birmingham 2022 Commonwealth Games with Venue Network Infrastructure partnership"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Hewlett Packard Enterprise to bring ultra-connected event experience to the Birmingham 2022 Commonwealth Games with Venue Network Infrastructure partnership"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-12-05T17:52:47.989Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2021/10/image-norend/hpe-to-bring-ultra-connected-event-experience-to-the-birmingham-2022-commonwealth-games-with-venue-network-infrastructure-partnership.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-12-05T17:52:47.989Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_4dff>
+                    </column_1>
+                    <column_2
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_50f2
+                            jcr:created="{Date}2018-09-05T17:41:27.359Z"
+                            jcr:createdBy="nagle@hpe.com"
+                            jcr:lastModified="{Date}2022-12-05T17:55:26.093Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/blog-post/2018/04/hpe-partners-with-ryder-cup-to-put-data-at-the-heart-of-golf-for-the-first-time"
+                            description="&lt;p>Blog Post&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="HPE Partners with Ryder Cup To Put Data at the Heart of Golf For The First Time"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="HPE Partners with Ryder Cup To Put Data at the Heart of Golf For The First Time"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-12-05T17:55:26.093Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                fileReference="/content/dam/hpe/newsroom/2018/04/image-norend/Newsroom-HPE_RC-Announcement_Blog.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-12-05T17:55:26.093Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"/>
+                        </contentblock_50f2>
+                    </column_2>
+                </columncontainercompo>
+            </body-par>
+            <side-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <buttonctaitemcompone
+                    jcr:created="{Date}2018-06-28T13:06:31.075-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:06:46.099-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 1"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_661124859
+                    jcr:created="{Date}2018-06-28T13:06:51.115-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:11.079-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 2"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_606970408
+                    jcr:created="{Date}2018-06-28T13:06:53.400-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:02.336-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 3"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+            </side-par>
+        </main-par>
+        <image
+            jcr:lastModified="{Date}2018-09-05T17:38:02.066Z"
+            jcr:lastModifiedBy="nagle@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+    </jcr:content>
+</jcr:root>

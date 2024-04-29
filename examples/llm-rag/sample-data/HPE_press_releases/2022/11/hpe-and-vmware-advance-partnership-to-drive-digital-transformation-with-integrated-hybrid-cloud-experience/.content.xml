@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/apps/settings/wcm/designs/hpeweb"
+        cq:lastModified="{Date}2022-11-08T02:02:10.055Z"
+        cq:lastModifiedBy="christine.seales@hpe.com"
+        cq:tags="[hpe-newsroom:categories/big-data,hpe-newsroom:categories/company---partners]"
+        cq:template="/apps/hpeweb/templates/page-text-heavy"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="HPE and VMware advance partnership to drive digital transformation with integrated hybrid cloud experience"
+        jcr:uuid="03cea521-c385-4124-afdb-cd3541c2ff2d"
+        sling:resourceType="hpeweb/components/pages/page-text-heavy"
+        browserTitle="HPE and VMware advance partnership to drive digital transformation with integrated hybrid cloud experience"
+        changefreq="daily"
+        contentType="Press Release"
+        displayDate="{Date}2022-11-08T03:30:00.000-05:00"
+        metaDescription="HPE GreenLake for VMware delivers unified, modern hybrid cloud solution"
+        metaKeywords="HPE, HPE GreenLake, VMware, partner ecosystem, digital transformation, edge-to-cloud solution"
+        metaOgImage="/content/dam/hpe/newsroom/2022/11/image-norend/hpe-and-vmware-advance-partnership-to-drive-digital-transformation-with-integrated-hybrid-cloud-experience.JPG"
+        metaTwitterCardType="summary_large_image"
+        msmcomponent="/content/hpe/base/blueprint/newsroom/press-release/2022/11/hpe-and-vmware-advance-partnership-to-drive-digital-transformation-with-integrated-hybrid-cloud-experience/jcr:content/main-par/body-par/textonlycomponent_fe"
+        navTitle="HPE and VMware advance partnership to drive digital transformation with integrated hybrid cloud experience"
+        pageTitle="HPE and VMware advance partnership to drive digital transformation with integrated hybrid cloud experience"
+        priority="(None)"
+        socialDescription="HPE GreenLake for VMware delivers unified, modern hybrid cloud solution"
+        subtitle="HPE GreenLake for VMware delivers unified, modern hybrid cloud solution"
+        theme="dark"
+        UAID="f70e4eff-225d-44cd-83e0-d996b0e41a1d"
+        UCID="fcbc4257-7bce-4583-ac64-de1d498f9dde">
+        <main-par
+            jcr:lastModified="{Date}2018-06-28T13:09:39.402-07:00"
+            jcr:lastModifiedBy="velazquez@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="hpeweb/components/content/textHeavyComponent"
+            siderail="none">
+            <subtitle
+                jcr:lastModified="{Date}2022-11-07T18:38:32.590Z"
+                jcr:lastModifiedBy="christine.seales@hpe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="hpeweb/components/content/newsroom/newsroomSubtitleComponent"
+                textOnly="NOVEMBER 8, 2022 • PRESS RELEASE"/>
+            <body-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <imageonlycomponent_c
+                    jcr:created="{Date}2018-06-18T09:06:27.827-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-11-08T00:51:36.147Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/imageOnlyComponent"
+                    fileReference="/content/dam/hpe/newsroom/2022/11/image-norend/hpe-and-vmware-advance-partnership-to-drive-digital-transformation-with-integrated-hybrid-cloud-experience.JPG"
+                    imageAlignment="hpe-image-center"
+                    imageAltText="HPE Guarantees"
+                    topMargin="60"
+                    videoSource="video"
+                    videoType="youtube"/>
+                <textonlycomponent_cd
+                    jcr:created="{Date}2018-06-18T09:12:49.742-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-11-08T00:52:20.485Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    leftPadding="30"
+                    rightPadding="30"
+                    textIsRich="true"
+                    textOnly="&lt;h3>IN THIS ARTICLE&lt;/h3>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>Today’s announcement with VMware represents the next step in the expanding partner ecosystem of HPE GreenLake&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>HPE GreenLake and VMware Cloud delivers a fully integrated solution with a simple pay-as-you-go hybrid cloud consumption model&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli
+                    jcr:created="{Date}2018-06-18T09:16:54.243-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-18T09:18:45.987-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <textonlycomponent
+                    jcr:created="{Date}2022-11-08T00:52:32.895Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2022-11-08T00:53:20.602Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;h2>HPE GreenLake for VMware delivers unified, modern hybrid cloud solution&lt;/h2>&#xd;&#xa;"/>
+                <textonlycomponent_e9
+                    jcr:created="{Date}2018-06-22T11:24:07.263-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-11-08T00:54:16.689Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>HOUSTON – November 8, 2022 &lt;/b>– For more than two decades, &lt;a href=&quot;https://www.hpe.com/us/en/home.html&quot; target=&quot;_blank&quot;>Hewlett Packard Enterprise&lt;/a> (NYSE: HPE) and VMware, Inc. (NYSE: VMW) have been at the leading-edge of driving digital transformations, working with more than 200,000 mutual customers. Today at &lt;a href=&quot;https://www.vmware.com/explore/eu.html&quot; target=&quot;_blank&quot;>VMware Explore 2022 Europe&lt;/a>&lt;u>,&lt;/u> the companies announced the next phase of this&amp;nbsp; partnership with HPE GreenLake for VMware , bringing together HPE GreenLake and VMware Cloud to deliver a fully integrated solution with a simple pay-as-you-go hybrid cloud consumption model.&amp;nbsp;&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <pullquote
+                    jcr:created="{Date}2022-11-08T00:54:39.615Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2022-11-08T00:55:17.139Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution="Antonio Neri, president and chief executive officer, HPE"
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>“Together, HPE and VMware will give organizations greater choice and flexibility with a fully integrated hybrid cloud offering designed to accelerate innovation and data first modernization.”&lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2022-11-08T00:55:17.139Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote>
+                <textonlycomponent_b4
+                    jcr:created="{Date}2018-06-18T09:18:06.257-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-11-08T00:56:19.149Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>“Today’s announcement with VMware represents the next step in the expanding partner ecosystem of HPE GreenLake, which offers a differentiated edge-to-cloud solution that resonates with customers and partners,” said Antonio Neri, president and chief executive officer, HPE. “Together, HPE and VMware will give organizations greater choice and flexibility with a fully integrated hybrid cloud offering designed to accelerate innovation and data first modernization.”&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;“Organizations are looking to evolve from a state of cloud chaos where cost and complexity reign, to a more cloud smart approach,” said Raghu Raghuram,&amp;nbsp;chief executive officer at VMware. “VMware Cloud is the trusted platform for enterprise workloads on private and public clouds that gives customers the flexibility and choice to become cloud smart. VMware and HPE will enable customers to combine VMware’s state-of-the-art multi-cloud software with HPE GreenLake’s cloud operating model and consumption economics to support any workload on a modern hybrid cloud.”&lt;/span>&lt;/p>&#xd;&#xa;"/>
+                <pullquote_349b
+                    jcr:created="{Date}2018-06-18T09:23:47.197-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-11-08T02:02:10.041Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution="Raghu Raghuram, chief executive officer, VMware"
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>“VMware and HPE will enable customers to combine VMware’s state-of-the-art multi-cloud software with HPE GreenLake’s cloud operating model and consumption economics to support any workload on a modern hybrid cloud.”&lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2022-11-08T02:02:10.041Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote_349b>
+                <textonlycomponent_97
+                    jcr:created="{Date}2018-06-22T11:22:31.557-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-11-08T00:59:41.931Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Modern Hybrid Cloud Made Fast and Simple&lt;/b>&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; Many organizations today seek the simplicity of a turnkey hybrid cloud that integrates leading software, infrastructure, and services from the vendors of their choice, all delivered from a single strategic partner as a cloud service. This approach accelerates deployment and simplifies operational complexity to enable customers to quickly deploy their hybrid cloud.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; HPE GreenLake for VMware will provide customers with a fully integrated and modern hybrid cloud experience. Customers will benefit from a true cloud experience coupled with the benefit of purchasing only the amount of infrastructure they require through a pay-as-you-go cloud consumption model. Customers will also have the flexibility to determine the best environment for operating their hybrid cloud. VMware Cloud can be fully integrated across the HPE GreenLake portfolio including &lt;a href=&quot;https://www.hpe.com/us/en/newsroom/press-release/2022/06/hpe-greenlake-advances-hybrid-cloud-experience-with-modern-private-cloud-and-new-cloud-services.html&quot; target=&quot;_blank&quot;>HPE GreenLake for Private Cloud Enterprise&lt;/a>&lt;u> &lt;/u>and customers will be able to deploy on-premises, in colocation facilities or at the edge, all managed by HPE GreenLake.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; The HPE GreenLake edge-to-cloud platform provides customers and partners with a unified experience, and easy access to more than 70 cloud services. Today, HPE GreenLake supports more than 120,000 users, powers more than two million connected devices, and manages more than one exabyte of data with customers worldwide. Among the top 100 HPE customers, nearly 80 percent have already adopted the HPE GreenLake platform. Organizations benefit from one platform from which to automate, orchestrate, and run their hybrid cloud strategy.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; VMware Cloud delivers a modern multi-cloud infrastructure on any cloud, with built-in Kubernetes, integrated security and the best possible TCO. VMware Cloud makes modern application development and deployment faster, easier, and less expensive by making Kubernetes part of the core infrastructure platform. VMware Cloud is more secure by design, enabling micro-segmentation to stop modern lateral threats that move within and across cloud and data center environments. HPE GreenLake customers will be able to extend VMware Cloud environments to a variety of colocation and edge environments, bringing cloud capacity to the places where distributed applications need it most.&lt;br>&#xd;&#xa; &lt;b>&lt;br>&#xd;&#xa;Hybrid Cloud Delivered by Trusted Leaders in Enterprise Innovation&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/b>With a history of co-engineered solutions, customers can be confident deploying an enterprise hybrid cloud designed, managed, and supported by HPE and VMware. HPE and VMware share the industry’s largest virtualized server footprint, and collectively have more than 100,000+ global partners and 25,000+ solution experts. As joint collaboration partners within the expanding HPE GreenLake ecosystem, HPE and VMware will continue to accelerate the pace of co-innovation, such as industry-first support for VMware vSphere on DPUs.&lt;br>&#xd;&#xa; &lt;b>&lt;br>&#xd;&#xa;Availability&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/b>HPE GreenLake for VMware is expected to be available in the first half of calendar year 2023.&lt;/span>&lt;/p>&#xd;&#xa;"/>
+                <textonlycomponent_fe
+                    jcr:created="{Date}2018-06-18T09:28:54.456-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-11-08T01:17:37.121Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>About Hewlett Packard Enterprise&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>Hewlett Packard Enterprise (NYSE: HPE) is the global edge-to-cloud company that helps organizations accelerate outcomes by unlocking value from all of their data, everywhere. Built on decades of reimagining the future and innovating to advance the way people live and work, HPE delivers unique, open, and intelligent technology solutions as a service. With offerings spanning Cloud Services, Compute, High Performance Computing &amp;amp; AI, Intelligent Edge, Software, and Storage, HPE provides a consistent experience across all clouds and edges, helping customers develop new business models, engage in new ways, and increase operational performance. For more information, visit: &lt;a href=&quot;http://www.hpe.com&quot; target=&quot;_blank&quot;>www.hpe.com&lt;/a>.&lt;br />&#xd;&#xa; &lt;b>&lt;br />&#xd;&#xa;About VMware&lt;br />&#xd;&#xa; &lt;br />&#xd;&#xa; &lt;/b>VMware is a leading provider of multi-cloud services for all apps, enabling digital innovation with enterprise control. As a trusted foundation to accelerate innovation, VMware software gives businesses the flexibility and choice they need to build the future. Headquartered in Palo Alto, California, VMware is committed to building a better future through the company’s 2030 Agenda. For more information, please visit &lt;a href=&quot;http://www.vmware.com/company&quot; target=&quot;_blank&quot;>www.vmware.com/company&lt;/a>.&lt;br />&#xd;&#xa; &lt;i>&lt;br />&#xd;&#xa;&lt;/i>&lt;span class=&quot;body-copy-small&quot;>&lt;i>VMware, Explore, and VMware Cloud are trademarks or registered trademarks of VMware, Inc. or its subsidiaries in the United States and other jurisdictions. This article may contain hyperlinks to non-VMware websites that are created and maintained by third parties who are solely responsible for the content on such websites.&lt;/i>&lt;/span>&lt;i>&lt;br />&#xd;&#xa; &lt;br />&#xd;&#xa; &lt;/i>&lt;b>HPE Media Contact&lt;br />&#xd;&#xa; &lt;/b>John Choi&lt;br />&#xd;&#xa; +1 408.386.5512&lt;br />&#xd;&#xa; &lt;a href=&quot;mailto:john.choi@hpe.com&quot; target=&quot;_blank&quot;>john.choi@hpe.com&lt;/a>&lt;br />&#xd;&#xa; &lt;b>&lt;br />&#xd;&#xa;VMware Media Contact&lt;br />&#xd;&#xa; &lt;/b>Roger T. Fortier&lt;br />&#xd;&#xa; +1.408.348.1569&lt;br />&#xd;&#xa; &lt;a href=&quot;mailto:rfortier@vmware.com&quot; target=&quot;_blank&quot;>rfortier@vmware.com&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <textonlycomponent_bf
+                    jcr:created="{Date}2018-07-02T13:12:59.755-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-10-12T16:10:50.633Z"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    textOnly="&lt;h2>RELATED NEWS&lt;/h2>&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli_540225213
+                    jcr:created="{Date}2018-06-18T10:12:48.909-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:22:53.902-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <columncontainercompo
+                    jcr:created="{Date}2018-07-02T13:14:23.594-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:15:08.106-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/columnContainerComponent"
+                    columns="column-content-3">
+                    <column_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_7c25
+                            jcr:created="{Date}2018-07-02T13:15:28.984-07:00"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-11-08T01:03:47.724Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/11/hewlett-packard-enterprise-introduces-next-generation-compute-engineered-for-a-hybrid-world"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="Hewlett Packard Enterprise introduces next-generation compute engineered for a hybrid world"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Hewlett Packard Enterprise introduces next-generation compute engineered for a hybrid world"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-11-08T01:03:47.724Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2022/11/image-norend/hewlett-packard-enterprise-introduces-next-generation-compute-engineered-for-a-hybrid-world.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-11-08T01:03:47.724Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_7c25>
+                    </column_0>
+                    <column_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_4dff
+                            jcr:created="{Date}2018-09-21T21:01:47.387Z"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-11-08T01:05:47.374Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/06/hpe-greenlake-advances-hybrid-cloud-experience-with-modern-private-cloud-and-new-cloud-services"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="HPE GreenLake advances hybrid cloud experience with modern private cloud and new cloud services"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="HPE GreenLake advances hybrid cloud experience with modern private cloud and new cloud services"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-11-08T01:05:47.374Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2022/06/image-norend/hpe-greenlake-advances-hybrid-cloud-experience-with-modern-private-cloud-and-new-cloud-services.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-11-08T01:05:47.374Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_4dff>
+                    </column_1>
+                    <column_2
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_50f2
+                            jcr:created="{Date}2018-09-05T17:41:27.359Z"
+                            jcr:createdBy="nagle@hpe.com"
+                            jcr:lastModified="{Date}2022-11-08T01:08:15.835Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/06/hpe-greenlake-adds-open-source-leader-red-hat-to-expanding-ecosystem"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="HPE GreenLake adds open source leader Red Hat to expanding ecosystem"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="HPE GreenLake adds open source leader Red Hat to expanding ecosystem"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-11-08T01:08:15.835Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                fileReference="/content/dam/hpe/newsroom/2022/06/image-norend/hpe-greenlake-adds-open-source-leader-red-hat-to-expanding-ecosystem.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-11-08T01:08:15.835Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"/>
+                        </contentblock_50f2>
+                    </column_2>
+                </columncontainercompo>
+            </body-par>
+            <side-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <buttonctaitemcompone
+                    jcr:created="{Date}2018-06-28T13:06:31.075-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:06:46.099-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 1"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_661124859
+                    jcr:created="{Date}2018-06-28T13:06:51.115-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:11.079-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 2"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_606970408
+                    jcr:created="{Date}2018-06-28T13:06:53.400-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:02.336-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 3"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+            </side-par>
+        </main-par>
+        <image
+            jcr:lastModified="{Date}2018-09-05T17:38:02.066Z"
+            jcr:lastModifiedBy="nagle@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+    </jcr:content>
+</jcr:root>
