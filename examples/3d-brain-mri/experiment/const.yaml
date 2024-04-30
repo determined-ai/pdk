@@ -12,7 +12,7 @@ data:
     branch:
     token:
 hyperparameters:
-  global_batch_size: 5
+  global_batch_size: 1
   input_channels: 4
   learning_rate: 1.e-3
   dropout: 0.0
@@ -47,4 +47,4 @@ profiling:
   enabled: True
 resources:
   slots_per_trial: 1
-  resource_pool: A100
+  resource_pool: T4

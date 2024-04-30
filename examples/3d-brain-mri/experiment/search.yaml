@@ -5,14 +5,14 @@ data:
   data_dir: "/data"
   download_directory: "/tmp"
   pachyderm:
-    host:
-    port:
-    repo:
-    project:
-    branch:
+    host: 'mldm-pachyderm.us.rdlabs.hpecorp.net'
+    port: '80'
+    repo: '3d-brain-mri-data'
+    project: 'pdk-3d-brain-mri'
+    branch: 'master'
     token:
 hyperparameters:
-  global_batch_size: 5
+  global_batch_size: 1
   input_channels: 4
   learning_rate:
     type: log
@@ -26,7 +26,10 @@ hyperparameters:
   weight_decay: 0.0
   split_seed: 1
   validation_ratio: 0.15
-  hflip_pct: 0.5
+  hflip_pct:
+    type: double
+    minval: 0.0
+    maxval: 0.5
   normalization:
     type: categorical
     vals:
@@ -47,7 +50,7 @@ hyperparameters:
 searcher:
   max_length:
     epochs: 20
-  max_trials: 80
+  max_trials: 100
   mode: standard
   max_concurrent_trials: 4
   metric: val_Dice
@@ -55,6 +58,10 @@ searcher:
   smaller_is_better: false
 min_validation_period:
   epochs: 1
+checkpoint_storage:
+  save_experiment_best: 1
+  save_trial_best: 1
+  save_trial_latest: 0
 perform_initial_validation: False
 max_restarts: 0
 entrypoint: model_code.model_def:MRIVnetTrial
@@ -62,4 +69,4 @@ profiling:
   enabled: True
 resources:
   slots_per_trial: 1
-  resource_pool: A100
+  resource_pool: T4
