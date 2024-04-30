@@ -4,7 +4,7 @@
 
 # PDK - Pachyderm | Determined | KServe
 ## Dogs and Cats Example
-**Date/Revision:** January 02, 2024
+**Date/Revision:** February 23, 2024
 
 This example is based on the **Dogs vs Cats** Kaggle dataset, which can be found here:<br/>
 https://www.kaggle.com/c/dogs-vs-cats/data?select=train.zip

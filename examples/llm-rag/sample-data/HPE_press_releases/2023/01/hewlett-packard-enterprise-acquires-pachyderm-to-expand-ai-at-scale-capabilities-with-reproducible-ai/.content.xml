@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/apps/settings/wcm/designs/hpeweb"
+        cq:lastModified="{Date}2023-01-12T16:38:31.831Z"
+        cq:lastModifiedBy="christine.seales@hpe.com"
+        cq:tags="[hpe-newsroom:categories/networking,hpe-newsroom:categories/services]"
+        cq:template="/apps/hpeweb/templates/page-text-heavy"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Hewlett Packard Enterprise acquires Pachyderm to expand AI-at-scale capabilities with reproducible AI "
+        jcr:uuid="842d7108-fed5-42c5-8b74-c99c6325a880"
+        sling:resourceType="hpeweb/components/pages/page-text-heavy"
+        browserTitle="Hewlett Packard Enterprise acquires Pachyderm to expand AI-at-scale capabilities with reproducible AI "
+        changefreq="daily"
+        contentType="Press Release"
+        displayDate="{Date}2023-01-12T08:00:00.000-05:00"
+        metaDescription="The combined HPE and Pachyderm solution will deliver an integrated machine learning pipeline and platform to accelerate a customer’s AI journey from POC to production with higher efficiency and lower costs "
+        metaKeywords="HPE, Hewlett Packard Enterprise, hpc, supercomputing, high performance computing, AI, machine learning, model development, training, AI, ai infrastructure, accelerators, artificial intelligence, networking, natural language processing, computer visions "
+        metaOgImage="/content/dam/hpe/newsroom/2023/01/image-norend/hewlett-packard-enterprise-acquires-pachyderm-to-expand-ai-at-scale-capabilities-with-reproducible-ai.jpg"
+        metaTwitterCardType="summary_large_image"
+        msmcomponent="/content/hpe/base/blueprint/newsroom/press-release/2023/01/hewlett-packard-enterprise-acquires-pachyderm-to-expand-ai-at-scale-capabilities-with-reproducible-ai/jcr:content/main-par/body-par/textonlycomponent_b4"
+        navTitle="Hewlett Packard Enterprise acquires Pachyderm to expand AI-at-scale capabilities with reproducible AI "
+        pageTitle="Hewlett Packard Enterprise acquires Pachyderm to expand AI-at-scale capabilities with reproducible AI "
+        priority="(None)"
+        socialDescription="The combined HPE and Pachyderm solution will deliver an integrated machine learning pipeline and platform to accelerate a customer’s AI journey from POC to production with higher efficiency and lower costs "
+        subtitle="The combined HPE and Pachyderm solution will deliver an integrated machine learning pipeline and platform to accelerate a customer’s AI journey from POC to production with higher efficiency and lower costs "
+        theme="dark"
+        UAID="671c20df-a2cd-4d6e-87b1-ecb7a13219c8"
+        UCID="c707b6c3-6b53-4a0a-b561-87d828cf7cc2">
+        <main-par
+            jcr:lastModified="{Date}2018-06-28T13:09:39.402-07:00"
+            jcr:lastModifiedBy="velazquez@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="hpeweb/components/content/textHeavyComponent"
+            siderail="none">
+            <subtitle
+                jcr:lastModified="{Date}2023-01-11T23:07:30.140Z"
+                jcr:lastModifiedBy="christine.seales@hpe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="hpeweb/components/content/newsroom/newsroomSubtitleComponent"
+                textOnly="JANUARY 12, 2023 • PRESS RELEASE"/>
+            <body-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <imageonlycomponent_c
+                    jcr:created="{Date}2018-06-18T09:06:27.827-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-01-11T23:36:19.199Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/imageOnlyComponent"
+                    fileReference="/content/dam/hpe/newsroom/2023/01/image-norend/hewlett-packard-enterprise-acquires-pachyderm-to-expand-ai-at-scale-capabilities-with-reproducible-ai.jpg"
+                    imageAlignment="hpe-image-center"
+                    imageAltText="HPE Guarantees"
+                    topMargin="60"
+                    videoSource="video"
+                    videoType="youtube"/>
+                <textonlycomponent_cd
+                    jcr:created="{Date}2018-06-18T09:12:49.742-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-01-11T23:07:52.680Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    leftPadding="30"
+                    rightPadding="30"
+                    textIsRich="true"
+                    textOnly="&lt;h3>IN THIS ARTICLE&lt;/h3>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>HPE will integrate Pachyderm’s software with its existing supercomputing and AI solutions to automate reproducible machine learning pipelines for large-scale AI applications&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>Lockheed Martin demonstrates AI at-scale for mission-critical security and aerospace applications using combined HPE and Pachyderm solution&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli
+                    jcr:created="{Date}2018-06-18T09:16:54.243-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-18T09:18:45.987-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <textonlycomponent
+                    jcr:created="{Date}2023-01-11T23:08:10.999Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2023-01-11T23:08:37.813Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;h2>The combined HPE and Pachyderm solution will deliver an integrated machine learning pipeline and platform to accelerate a customer’s AI journey from POC to production with higher efficiency and lower costs&amp;nbsp;&lt;/h2>&#xd;&#xa;"/>
+                <textonlycomponent_e9
+                    jcr:created="{Date}2018-06-22T11:24:07.263-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-01-12T16:37:50.666Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>HOUSTON – January 12, 2023 &lt;/b>– &lt;a href=&quot;http://www.hpe.com/&quot; target=&quot;_blank&quot;>Hewlett Packard Enterprise&lt;/a> (NYSE: HPE) today announced an expansion to its AI-at-scale offerings with the acquisition of &lt;a href=&quot;https://www.pachyderm.com/&quot; target=&quot;_blank&quot;>Pachyderm&lt;/a>, a startup that delivers software, based on open-source technology, to automate reproducible machine learning pipelines that target large-scale AI applications.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; Reproducing a machine learning pipeline enables use of the same dataset to achieve the same results each time to increase transparency, trustworthiness, and accuracy in predictions while optimizing time and resources.&amp;nbsp; It is critical to successful AI-at-scale initiatives, which represent the next revolutionary step in realizing AI’s potential to increase the accuracy of predictions and achieve results faster. To attain these outcomes, organizations need to adopt technologies to efficiently build and train larger machine learning models that require a high volume of complex data.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; “As AI projects become larger and increasingly involve complex data sets, data scientists will need reproducible AI solutions to efficiently maximize their machine learning initiatives, optimize their infrastructure cost, and ensure data is reliable and safe no matter where they are in their AI journey,” said Justin Hotard, executive vice president and general manager, HPC and AI, at HPE. “Pachyderm’s unique reproducible AI software augments HPE’s existing AI-at-scale offerings to automate and accelerate AI and unlock greater opportunities in image, video, and text analysis, generative AI, and other emerging large-language-model needs to realize transformative outcomes.”&lt;br>&#xd;&#xa; &lt;b>&lt;br>&#xd;&#xa;HPE expands AI at-scale portfolio with addition of Pachyderm&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/b>HPE unlocks AI-at-scale opportunities for its customers by bringing together its leading supercomputing technologies that are foundational for optimized AI infrastructure, and the &lt;a href=&quot;https://www.hpe.com/us/en/solutions/artificial-intelligence/machine-learning-development-environment.html&quot; target=&quot;_blank&quot;>HPE Machine Learning Development Environment&lt;/a>, a machine-learning software that enables users to rapidly develop, iterate, and scale high-quality models from proof-of-concept to production. The combined solution already helps users train more accurate AI models faster, and at scale, on several of the world’s fastest supercomputers that have been purpose-built for demanding AI workloads.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; Building on to these solutions, HPE will integrate Pachyderm’s reproducible AI capabilities in one integrated platform to deliver an advanced data-driven pipeline that automatically refines, prepares, tracks, and manages repeatable machine learning processes used throughout the development and training environment.&amp;nbsp;&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <textonlycomponent_b4
+                    jcr:created="{Date}2018-06-18T09:18:06.257-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-01-12T16:38:31.821Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Delivering an end-to-end machine learning software platform to enable production AI at-scale&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/b>AI-at-scale capabilities advance popular use cases involving natural language processing, computer vision, and video and image processing that are growing across industries such as&amp;nbsp;transportation, life sciences, defense, financial services, and manufacturing.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; By integrating Pachyderm’s machine learning pipeline capabilities with its existing AI offerings, HPE will enable faster development and deployment of more accurate and performant large-scale AI applications with the following benefits:&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>&amp;nbsp;&lt;/span>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Data lineage&lt;/b> – Visibility on the origin of the data and where it moves over time during the machine learning lifecycle and analytics process to easily trace errors back to the root cause.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Data versioning&lt;/b> – Ability to track different versions of data to understand when data was created or changed at any point in time, to increase efficiency in making any changes.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Efficient incremental data processing&lt;/b> – As data changes over time, only incremental data needs to be processed to update AI applications. Pachyderm makes incremental data processing automatic and efficient.&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>&amp;nbsp;&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Lockheed Martin deploys HPE’s AI at-scale solutions for mission-critical applications&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/b>Lockheed Martin’s&amp;nbsp;&lt;a href=&quot;https://youtu.be/BggNXYSfLm8&quot; target=&quot;_blank&quot;>AI Factory&lt;/a>, an open architecture approach to AI-at-scale, integrates Pachyderm’s software, the HPE Machine Learning Development Environment, and other modular solutions as part of their foundational AI ecosystem. Leveraging these capabilities allows Lockheed Martin to increase trust, maximize performance, and standardize AI technologies across a broad range of contested environments in support of national security missions.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; This acquisition builds on HPE’s February 2022 investment in Pachyderm through its venture capital arm, Hewlett Packard Pathfinder, to speed time-to-market for AI innovation at lower data processing and operating costs. The transaction is not subject to any regulatory approvals and is expected to close this month.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;b>Product integration and availability&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/b>Pachyderm’s software is available today to integrate with HPE’s existing supercomputing and AI software solutions. Additionally, HPE plans to integrate Pachyderm with upcoming versions of the HPE Machine Learning Development System, which eliminates the complexity and cost to build and train models with a complete, ready-to-use solution.&amp;nbsp;&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="20"/>
+                <textonlycomponent_fe
+                    jcr:created="{Date}2018-06-18T09:28:54.456-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-01-11T23:13:49.669Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>About Hewlett Packard Enterprise&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>Hewlett Packard Enterprise (NYSE: HPE) is the global edge-to-cloud company that helps organizations accelerate outcomes by unlocking value from all of their data, everywhere. Built on decades of reimagining the future and innovating to advance the way people live and work, HPE delivers unique, open and intelligent technology solutions as a service.  With offerings spanning Cloud Services, Compute, High Performance Computing &amp;amp; AI, Intelligent Edge, Software, and Storage, HPE provides a consistent experience across all clouds and edges, helping customers develop new business models, engage in new ways, and increase operational performance. For more information, visit: &lt;a href=&quot;http://www.hpe.com/&quot; target=&quot;_blank&quot;>www.hpe.com&lt;/a>&lt;br />&#xd;&#xa;&lt;b style=&quot;&quot;>&lt;br />&#xd;&#xa;About Lockheed Martin&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;&lt;/b>Headquartered in Bethesda, Maryland, Lockheed Martin (NYSE: LMT) is a global security and aerospace company that employs approximately 114,000 people worldwide and is principally engaged in the research, design, development, manufacture, integration and sustainment of advanced technology systems, products and services. Please follow @LMNews on Twitter for the latest announcements and news across the corporation.&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;Media Contact&lt;br />&#xd;&#xa;&lt;b style=&quot;&quot;>Nahren Khizeran&lt;br />&#xd;&#xa;&lt;/b>&lt;a href=&quot;mailto:Nahren.Khizeran@hpe.com&quot;>Nahren.Khizeran@hpe.com&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <textonlycomponent_bf
+                    jcr:created="{Date}2018-07-02T13:12:59.755-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-10-12T16:10:50.633Z"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    textOnly="&lt;h2>RELATED NEWS&lt;/h2>&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli_540225213
+                    jcr:created="{Date}2018-06-18T10:12:48.909-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:22:53.902-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <columncontainercompo
+                    jcr:created="{Date}2018-07-02T13:14:23.594-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:15:08.106-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/columnContainerComponent"
+                    columns="column-content-3">
+                    <column_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_7c25
+                            jcr:created="{Date}2018-07-02T13:15:28.984-07:00"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2023-01-11T23:15:32.587Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/04/hewlett-packard-enterprise-accelerates-ai-journey-from-poc-to-production-with-new-solution-for-ai-development-and-training-at-scale"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="Hewlett Packard Enterprise accelerates AI journey from POC to production with new solution for AI development and training at scale"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Hewlett Packard Enterprise accelerates AI journey from POC to production with new solution for AI development and training at scale"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2023-01-11T23:15:32.587Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2022/04/image-norend/hpe-accelerates-ai-journey-from-poc-to-production-with-new-solution-for-ai-development-and-training-at-scale.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2023-01-11T23:15:32.587Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_7c25>
+                    </column_0>
+                    <column_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_4dff
+                            jcr:created="{Date}2018-09-21T21:01:47.387Z"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2023-01-11T23:17:00.639Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/04/hewlett-packard-enterprise-ushers-in-next-era-in-ai-innovation-with-swarm-learning-solution-built-for-the-edge-and-distributed-sites"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="Hewlett Packard Enterprise ushers in next era in AI innovation with Swarm Learning solution built for the edge and distributed sites"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Hewlett Packard Enterprise ushers in next era in AI innovation with Swarm Learning solution built for the edge and distributed sites"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2023-01-11T23:17:00.639Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2022/04/image-norend/hpe-ushers-in-next-era-in-ai-innovation-with-swarm-learning-solution-built-for-the-edge-and-distributed-sites.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2023-01-11T23:17:00.639Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_4dff>
+                    </column_1>
+                    <column_2
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_50f2
+                            jcr:created="{Date}2018-09-05T17:41:27.359Z"
+                            jcr:createdBy="nagle@hpe.com"
+                            jcr:lastModified="{Date}2023-01-11T23:18:30.721Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/10/mohamed-bin-zayed-university-of-artificial-intelligence-advances-the-uaes-national-strategy-for-ai-with-new-supercomputer-built-by-hewlett-packard-enterprise"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="Mohamed bin Zayed University of Artificial Intelligence advances the UAE’s National Strategy for AI with new supercomputer built by Hewlett Packard Enterprise"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Mohamed bin Zayed University of Artificial Intelligence advances the UAE’s National Strategy for AI with new supercomputer built by Hewlett Packard Enterprise"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2023-01-11T23:18:30.721Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                fileReference="/content/dam/hpe/newsroom/2022/10/image-norend/mohamed-bin-zayed-university-of-ai-advances-the-uaes-national-strategy-for-ai-with-new-supercomputer-built-by-hpe3.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2023-01-11T23:18:30.721Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"/>
+                        </contentblock_50f2>
+                    </column_2>
+                </columncontainercompo>
+            </body-par>
+            <side-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <buttonctaitemcompone
+                    jcr:created="{Date}2018-06-28T13:06:31.075-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:06:46.099-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 1"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_661124859
+                    jcr:created="{Date}2018-06-28T13:06:51.115-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:11.079-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 2"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_606970408
+                    jcr:created="{Date}2018-06-28T13:06:53.400-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:02.336-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 3"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+            </side-par>
+        </main-par>
+        <image
+            jcr:lastModified="{Date}2018-09-05T17:38:02.066Z"
+            jcr:lastModifiedBy="nagle@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+    </jcr:content>
+</jcr:root>

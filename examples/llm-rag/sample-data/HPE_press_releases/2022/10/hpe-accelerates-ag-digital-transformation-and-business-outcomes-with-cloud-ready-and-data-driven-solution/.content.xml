@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/apps/settings/wcm/designs/hpeweb"
+        cq:lastModified="{Date}2022-10-07T15:58:01.898Z"
+        cq:lastModifiedBy="christine.seales@hpe.com"
+        cq:tags="[hpe-newsroom:categories/mergers-and-acquisitions,hpe-newsroom:categories/company---customers]"
+        cq:template="/apps/hpeweb/templates/page-text-heavy"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="HPE accelerates AG digital transformation and business outcomes with cloud-ready and data-driven solution"
+        jcr:uuid="b342387a-7eba-4e48-b8e0-f4def7e20cf7"
+        sling:resourceType="hpeweb/components/pages/page-text-heavy"
+        browserTitle="HPE accelerates AG digital transformation and business outcomes with cloud-ready and data-driven solution"
+        changefreq="daily"
+        contentType="Press Release"
+        displayDate="{Date}2022-10-11T04:00:00.000-04:00"
+        metaDescription="AG Belgium life and non-life insurer selects HPE to support its move toward becoming a data-driven organization to accelerate business outcomes, acquire new talents and reduce TCO"
+        metaKeywords="HPE, HPE Belgium, HPE Synergy, HPE Primera, Insurance, data analysis"
+        metaTwitterCardType="summary_large_image"
+        msmcomponent="/content/hpe/base/blueprint/newsroom/press-release/2022/10/hpe-accelerates-ag-digital-transformation-and-business-outcomes-with-cloud-ready-and-data-driven-solution/jcr:content/main-par/body-par/columncontainercompo/column_2/contentblock_50f2"
+        navTitle="HPE accelerates AG digital transformation and business outcomes with cloud-ready and data-driven solution"
+        pageTitle="HPE accelerates AG digital transformation and business outcomes with cloud-ready and data-driven solution"
+        priority="(None)"
+        socialDescription="AG Belgium life and non-life insurer selects HPE to support its move toward becoming a data-driven organization to accelerate business outcomes, acquire new talents and reduce TCO"
+        subtitle="AG Belgium life and non-life insurer selects HPE to support its move toward becoming a data-driven organization to accelerate business outcomes, acquire new talents and reduce TCO"
+        theme="dark"
+        UAID="2f13bd7d-dfa0-4b53-a072-53e9017dbd35"
+        UCID="a3e88053-a6f6-42e2-9342-760360967d15">
+        <main-par
+            jcr:lastModified="{Date}2018-06-28T13:09:39.402-07:00"
+            jcr:lastModifiedBy="velazquez@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="hpeweb/components/content/textHeavyComponent"
+            siderail="none">
+            <subtitle
+                jcr:lastModified="{Date}2022-10-07T15:44:22.117Z"
+                jcr:lastModifiedBy="christine.seales@hpe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="hpeweb/components/content/newsroom/newsroomSubtitleComponent"
+                textOnly="OCTOBER 11, 2022 • PRESS RELEASE"/>
+            <body-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <imageonlycomponent_c
+                    jcr:created="{Date}2018-06-18T09:06:27.827-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-10-07T15:44:29.619Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/imageOnlyComponent"
+                    fileReference="/content/dam/hpe/newsroom/2022/10/image-norend/hpe-accelerates-ag-digital-transformation-and-business-outcomes-with-cloud-ready-and-data-driven-solution.jpg"
+                    imageAlignment="hpe-image-center"
+                    imageAltText="HPE Guarantees"
+                    topMargin="60"
+                    videoSource="video"
+                    videoType="youtube"/>
+                <textonlycomponent_cd
+                    jcr:created="{Date}2018-06-18T09:12:49.742-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-10-07T15:44:58.278Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    leftPadding="30"
+                    rightPadding="30"
+                    textIsRich="true"
+                    textOnly="&lt;h3>IN THIS ARTICLE&lt;/h3>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>AG has selected HPE to design, develop, implement and migrate all of AG’s applications onto a more cost-efficient and flexible open systems solution&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>HPE’s application migration services allowed AG to maintain high level performances, reduce operating cost by 75% and increase agility to support emerging API-based developments&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli
+                    jcr:created="{Date}2018-06-18T09:16:54.243-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-18T09:18:45.987-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <textonlycomponent
+                    jcr:created="{Date}2022-10-07T15:45:56.144Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2022-10-07T15:46:20.616Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;h2>AG Belgium life and non-life insurer selects HPE to support its move toward becoming a data-driven organization to accelerate business outcomes, acquire new talents and reduce TCO&lt;/h2>&#xd;&#xa;"/>
+                <textonlycomponent_e9
+                    jcr:created="{Date}2018-06-22T11:24:07.263-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-10-07T15:47:25.670Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>BRUXELLES, Belgium – October 11, 2022 –&lt;/b> &lt;a href=&quot;http://www.hpe.com/&quot; target=&quot;_blank&quot;>Hewlett Packard Enterprise&lt;/a> (NYSE: HPE) today announced that leading Belgium insurance provider AG has selected HPE to design, develop, implement and migrate all of AG’s applications onto a more cost-efficient and flexible open systems solution to replace its historical and aging mainframe. The new standardized infrastructure, built on &lt;a href=&quot;https://www.hpe.com/us/en/integrated-systems/synergy.html&quot; target=&quot;_blank&quot;>HPE Synergy&lt;/a> and &lt;a href=&quot;https://www.hpe.com/us/en/storage/hpe-primera.html&quot; target=&quot;_blank&quot;>HPE Primera&lt;/a>, combined with HPE’s application migration services allowed AG to maintain high level performances, reduce operating cost by 75% and increase agility to support emerging API-based developments.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;AG is the largest Belgian insurance company that insures about three million policy holders, individuals, companies and self-employed persons. The insurance industry relies heavily on back-end infrastructure and critical data to ensure the offered services are resilient, highly available and always on. Latency and downtime on insurance transactions have an immediate impact on the customer experience.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;Until recently, AG operated on mainframe technology. This large central computer was used by applications requiring high volumes of data&amp;nbsp;processing and critical availability at the cost of less flexibility and expensive maintenance from specially qualified profiles. AG needed a flexible and efficient solution to support its digital transformation into a better-optimized, automated and data-driven insurance.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;“Working with HPE has enabled us to move away from a traditional centralized IT to a modern de-centralized and cloud-ready architecture for a fraction of the cost,” said Philippe Van Belle, Chief Information &amp;amp; Technology Officer at AG. “We feel confident that this modern solution will help attract new talent and put AG in a more competitive position in the long term to develop competitive, data-driven and API-based solutions while reducing time to market.”&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <pullquote_349b
+                    jcr:created="{Date}2018-06-18T09:23:47.197-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-10-07T15:48:13.273Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution="Philippe Van Belle, Chief Information &amp; Technology Officer at AG"
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>“Working with HPE has enabled us to move away from a traditional centralized IT to a modern de-centralized and cloud-ready architecture for a fraction of the cost”&amp;nbsp;&lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2022-10-07T15:48:13.273Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote_349b>
+                <textonlycomponent_97
+                    jcr:created="{Date}2018-06-22T11:22:31.557-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-10-07T15:49:16.338Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>More than 25 employees from &lt;a href=&quot;https://www.hpe.com/us/en/services/pointnext.html&quot; target=&quot;_blank&quot;>HPE Advisory &amp;amp; Professional Services&lt;/a> together with AG and their partners MicroFocus, the technology provider and Capgemini, the test services provider, worked together for three years to deliver the seamless migration of customized insurance applications that cover life, health, auto and homeowners spread across more than 80 million lines of code and 100 TB of data running on Cobol&lt;sup>1&lt;/sup> programming language.&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;“I am thrilled to know the HPE solution will allow AG to achieve significant cost savings and power platform modernization,” said Stephane Lahaye, Managing Director, HPE Belgium. “Moving from a mainframe-centric to a cloud-ready decentralized approach is a leap that will unleash AG flexibility while accelerating digital transformation.”&lt;br />&#xd;&#xa;&lt;b style=&quot;&quot;>&lt;br />&#xd;&#xa;About AG&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;&lt;/b>With a share (end 2021) of 29,5% in the Life insurance market and 16.7% in Non-life, AG is the undisputed leader in the Belgian insurance market. To better tailor its offer to fulfil different customer needs, AG has a multi-channel distribution strategy that includes independent brokers and Fintro agents, bank branches (BNP Paribas Fortis, bpost bank) and collaboration with large corporate clients and sectors for their group insurance. AG employs over 4,000 specialised staff members. More information on &lt;a href=&quot;http://www.ag.be/&quot; target=&quot;_blank&quot;>www.ag.be&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;"/>
+                <textonlycomponent_fe
+                    jcr:created="{Date}2018-06-18T09:28:54.456-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-10-07T15:51:18.771Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>About Hewlett Packard Enterprise&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>Hewlett Packard Enterprise (NYSE: HPE) is the global edge-to-cloud company that helps organizations accelerate outcomes by unlocking value from all of their data, everywhere. Built on decades of reimagining the future and innovating to advance the way people live and work, HPE delivers unique, open and intelligent technology solutions as a service.  With offerings spanning Cloud Services, Workload Migration, Compute, High Performance Computing &amp;amp; AI, Intelligent Edge, Software, and Storage, HPE provides a consistent experience across all clouds and edges, helping customers&amp;nbsp;develop&amp;nbsp;new business models, engage in new ways, and increase operational performance. For more information, visit:&amp;nbsp;&lt;a href=&quot;http://www.hpe.com/&quot; target=&quot;_blank&quot;>www.hpe.com&lt;/a>&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; Editorial Contact:&lt;br>&#xd;&#xa; &lt;b>Benjamin Lesueur&lt;br>&#xd;&#xa; &lt;/b>&lt;a href=&quot;mailto:benjamin.lesueur@hpe.com&quot; target=&quot;_blank&quot;>benjamin.lesueur@hpe.com&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-small&quot;>&lt;sup>1&lt;/sup> COBOL (common business-oriented language) is a compiled English-like computer programming language designed for business use in 1959 by CODASYL and was partly based on the programming language FLOW-MATIC designed by Grace Hopper. &lt;a href=&quot;https://en.wikipedia.org/wiki/COBOL&quot; target=&quot;_blank&quot;>https://en.wikipedia.org/wiki/COBOL&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <textonlycomponent_bf
+                    jcr:created="{Date}2018-07-02T13:12:59.755-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-10-12T16:10:50.633Z"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    textOnly="&lt;h2>RELATED NEWS&lt;/h2>&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli_540225213
+                    jcr:created="{Date}2018-06-18T10:12:48.909-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:22:53.902-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <columncontainercompo
+                    jcr:created="{Date}2018-07-02T13:14:23.594-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:15:08.106-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/columnContainerComponent"
+                    columns="column-content-3">
+                    <column_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_7c25
+                            jcr:created="{Date}2018-07-02T13:15:28.984-07:00"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-10-07T15:53:14.445Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/06/turk-nippon-insurance-embarks-on-technology-modernization-with-hpe-greenlake-to-boost-performance"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="Turk Nippon Insurance embarks on technology modernization with HPE GreenLake to boost performance"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Turk Nippon Insurance embarks on technology modernization with HPE GreenLake to boost performance"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-10-07T15:53:14.445Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2022/06/image-norend/turk-nippon-insurance-embarks-on-technology-modernization-with-hpe-greenlake-to-boost-performance.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-10-07T15:53:14.445Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_7c25>
+                    </column_0>
+                    <column_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_4dff
+                            jcr:created="{Date}2018-09-21T21:01:47.387Z"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-10-07T15:54:31.217Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2021/02/lineas-chooses-hewlett-packard-enterprise-to-transform-freight-operations-and-support-business-growth"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="Lineas chooses Hewlett Packard Enterprise to transform freight operations and support business growth"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Lineas chooses Hewlett Packard Enterprise to transform freight operations and support business growth"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-10-07T15:54:31.217Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2021/02/image-norend/lineas-chooses-hewlett-packard-enterprise-to-transform-freight-operations-and-support-business-growth.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-10-07T15:54:31.217Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_4dff>
+                    </column_1>
+                    <column_2
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_50f2
+                            jcr:created="{Date}2018-09-05T17:41:27.359Z"
+                            jcr:createdBy="nagle@hpe.com"
+                            jcr:lastModified="{Date}2022-10-07T15:56:12.868Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/09/french-healthcare-software-provider-maincare-selects-hpe-greenlake-to-accelerate-deployment-of-secure-health-cloud-services"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="French healthcare software provider, Maincare, selects HPE GreenLake to accelerate deployment of secure health cloud services"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="French healthcare software provider, Maincare, selects HPE GreenLake to accelerate deployment of secure health cloud services"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-10-07T15:56:12.868Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                fileReference="/content/dam/hpe/newsroom/2022/09/image-norend/french-healthcare-software-provider-maincare-selects-hpe-greenlake-to-accelerate-deployment-of-secure-health-cloud-services.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-10-07T15:56:12.868Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"/>
+                        </contentblock_50f2>
+                    </column_2>
+                </columncontainercompo>
+            </body-par>
+            <side-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <buttonctaitemcompone
+                    jcr:created="{Date}2018-06-28T13:06:31.075-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:06:46.099-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 1"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_661124859
+                    jcr:created="{Date}2018-06-28T13:06:51.115-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:11.079-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 2"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_606970408
+                    jcr:created="{Date}2018-06-28T13:06:53.400-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:02.336-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 3"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+            </side-par>
+        </main-par>
+        <image
+            jcr:lastModified="{Date}2018-09-05T17:38:02.066Z"
+            jcr:lastModifiedBy="nagle@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+    </jcr:content>
+</jcr:root>

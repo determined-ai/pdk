@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/apps/settings/wcm/designs/hpeweb"
+        cq:lastModified="{Date}2022-05-29T23:22:40.582Z"
+        cq:lastModifiedBy="christine.seales@hpe.com"
+        cq:tags="[hpe-newsroom:categories/networking,hpe-newsroom:categories/industry---energy-&amp;-climate]"
+        cq:template="/apps/hpeweb/templates/page-text-heavy"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Hewlett Packard Enterprise and SiPearl partner to develop HPC solutions with European processors and accelerate Europe’s adoption of exascale supercomputers"
+        jcr:uuid="27e89ed5-50df-475e-b166-f23c1733efa4"
+        sling:resourceType="hpeweb/components/pages/page-text-heavy"
+        browserTitle="Hewlett Packard Enterprise and SiPearl partner to develop HPC solutions with European processors and accelerate Europe’s adoption of exascale supercomputers"
+        changefreq="daily"
+        contentType="Press Release"
+        displayDate="{Date}2022-05-30T03:00:00.000-04:00"
+        metaDescription="New collaboration involves HPE’s industry-leading, end-to-end HPC systems and SiPearl’s Rhea CPU to develop and deliver exascale-era technologies in Europe and strengthen the continent’s digital sovereignty"
+        metaKeywords="HPE, Hewlett Packard Enterprise, hpc, supercomputing, high performance computing, AI, machine learning, model development, training, AI, ai infrastructure, accelerators, artificial intelligence, networking, natural language processing, computer vision, exascale, doe, department of energy, cancer, science, physics, energy efficiency, Europe, eurohpc ju"
+        metaOgImage="/content/dam/hpe/newsroom/2022/05/image-norend/hpe-and-sipearl-partner-to-develop-hpc-solutions-with-european-processors-and-accelerate-europes-adoption-of-exascale-supercomputers.png"
+        metaTwitterCardType="summary_large_image"
+        msmcomponent="/content/hpe/base/blueprint/newsroom/press-release/2022/05/hewlett-packard-enterprise-and-sipearl-partner-to-develop-hpc-solutions-with-european-processors-and-accelerate-europes-adoption-of-exascale-supercomputers/jcr:content/main-par/body-par/textonlycomponent_cd"
+        navTitle="Hewlett Packard Enterprise and SiPearl partner to develop HPC solutions with European processors and accelerate Europe’s adoption of exascale supercomputers"
+        pageTitle="Hewlett Packard Enterprise and SiPearl partner to develop HPC solutions with European processors and accelerate Europe’s adoption of exascale supercomputers"
+        priority="(None)"
+        socialDescription="New collaboration involves HPE’s industry-leading, end-to-end HPC systems and SiPearl’s Rhea CPU to develop and deliver exascale-era technologies in Europe and strengthen the continent’s digital sovereignty"
+        subtitle="New collaboration involves HPE’s industry-leading, end-to-end HPC systems and SiPearl’s Rhea CPU to develop and deliver exascale-era technologies in Europe and strengthen the continent’s digital sovereignty"
+        theme="dark"
+        UAID="9d005648-3ad8-4b61-8afd-1dd9b6ac1a07"
+        UCID="6e7f105b-0d1f-436a-b493-86336cab0f78">
+        <main-par
+            jcr:lastModified="{Date}2018-06-28T13:09:39.402-07:00"
+            jcr:lastModifiedBy="velazquez@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="hpeweb/components/content/textHeavyComponent"
+            siderail="none">
+            <subtitle
+                jcr:lastModified="{Date}2022-05-29T23:01:19.236Z"
+                jcr:lastModifiedBy="christine.seales@hpe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="hpeweb/components/content/newsroom/newsroomSubtitleComponent"
+                textOnly="MAY 30, 2022 • PRESS RELEASE"/>
+            <body-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <imageonlycomponent_c
+                    jcr:created="{Date}2018-06-18T09:06:27.827-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-05-29T23:19:34.597Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/imageOnlyComponent"
+                    fileReference="/content/dam/hpe/newsroom/2022/05/image-norend/hpe-and-sipearl-partner-to-develop-hpc-solutions-with-european-processors-and-accelerate-europes-adoption-of-exascale-supercomputers.png"
+                    imageAlignment="hpe-image-center"
+                    imageAltText="HPE Guarantees"
+                    topMargin="60"
+                    videoSource="video"
+                    videoType="youtube"/>
+                <textonlycomponent_cd
+                    jcr:created="{Date}2018-06-18T09:12:49.742-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-05-29T23:22:40.570Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    leftPadding="30"
+                    rightPadding="30"
+                    textIsRich="true"
+                    textOnly="&lt;h3>IN THIS ARTICLE&lt;/h3>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>HPE and SiPearl will jointly develop an end-to-end supercomputing offering using SiPearl’s Arm-based CPU&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>The partnership will also deliver joint HPE and SiPearl solutions to HPE’s Center of Excellence (CoE) in Grenoble, France for users to test and optimize their products for market&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli
+                    jcr:created="{Date}2018-06-18T09:16:54.243-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-18T09:18:45.987-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <textonlycomponent
+                    jcr:created="{Date}2022-05-29T23:02:21.150Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2022-05-29T23:02:36.259Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;h2>New collaboration involves HPE’s industry-leading, end-to-end HPC systems and SiPearl’s Rhea CPU to develop and deliver exascale-era technologies in Europe and strengthen the continent’s digital sovereignty&lt;/h2>&#xd;&#xa;"/>
+                <textonlycomponent_e9
+                    jcr:created="{Date}2018-06-22T11:24:07.263-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-05-29T23:03:18.248Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>HOUSTON, Texas and Maisons-Laffitte, France – May 30, 2022 &lt;/b>– &lt;a href=&quot;http://www.hpe.com/&quot; target=&quot;_blank&quot;>Hewlett Packard Enterprise&lt;/a> (NYSE: HPE) and &lt;a href=&quot;https://sipearl.com/en&quot; target=&quot;_blank&quot;>SiPearl&lt;/a>, the company designing a high-performance and low-power microprocessor for European exascale supercomputers, today announced a strategic partnership to jointly develop HPC solutions. The partnership, which expands heterogenous computing options for supercomputing and leverages European architectures, will support and accelerate adoption of exascale systems in Europe.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;HPE and SiPearl will jointly develop an end-to-end supercomputing offering that combines HPE's supercomputing solutions designed to meet next-generation requirements in performance and scale, and SiPearl’s upcoming Rhea processor, an Arm-based CPU, targeted to power exascale performance for European systems.&amp;nbsp;&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <pullquote_349b
+                    jcr:created="{Date}2018-06-18T09:23:47.197-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-05-29T23:03:44.742Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution=" "
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>Our partnership with SiPearl is another demonstration of HPE’s ongoing commitment to support Europe’s mission to deliver world-class supercomputing&lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2022-05-29T23:03:44.742Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote_349b>
+                <textonlycomponent_97
+                    jcr:created="{Date}2018-06-22T11:22:31.557-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-05-29T23:05:52.622Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>The collaboration supports a larger effort and strategy set by the &lt;a href=&quot;https://eurohpc-ju.europa.eu/index_en&quot; target=&quot;_blank&quot;>EuroHPC&lt;/a>, an initiative that began in late 2018 between the EU, European countries and industry technology partners to coordinate and combine resources to develop pre-exascale and exascale supercomputers in Europe, and position the continent as a leader in supercomputing. Additionally, by adopting state-of-the-art supercomputing solutions, European organizations can fuel national open science efforts that will have a broader impact on humankind across areas such as drug discovery, climate modeling and sustainability.&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;“The exascale era will enable us to achieve new breakthroughs in science and engineering by taking advantage of performance and the integration of new processors.  SiPearl’s technology represents a leap forward in compute performance, while increasing power efficiency, which is critical for many of our customers,” said, Justin Hotard, executive vice president and general manager, HPC &amp;amp; AI, HPE. “In addition to our recent investments in a new HPC factory in Czech Republic and an AI cluster, dedicated to research, in Grenoble, France, our partnership with SiPearl is another demonstration of HPE’s ongoing commitment to support Europe’s mission to deliver world-class supercomputing that extends its sovereignty and competitiveness on the global stage.”&lt;br />&#xd;&#xa;&lt;b style=&quot;&quot;>&lt;br />&#xd;&#xa;Accelerating Europe’s roadmap and leadership in exascale with European-based architectures&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;&lt;/b>By combining SiPearl’s Rhea with HPE’s supercomputing solutions, HPE and SiPearl will deliver a broad set of advanced HPC and AI technologies, leveraging the upcoming European processor. These technologies span capabilities in high-performance networking, using HPE Slingshot, and a robust software complier and programming stack leveraging the HPE Cray Programming Environment.&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;The collaboration also demonstrates the increased value of developing heterogenous computing solutions, which includes a growing ecosystem of Arm-based processors, such as SiPearl’s Rhea, to provide supercomputing options that deliver improved cost and power consumption.&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;“We are excited about this business and technology partnership with the HPC industry leader, HPE, which has just announced plans to build its first HPC factory in Europe,” Philippe Notton, CEO and founder, SiPearl. “With the integration of our Rhea HPC microprocessor into the HPE portfolio and the creation of a joint center of excellence in Europe to enable the adoption of our combined solution by supercomputer end-users, we will drive innovation in the exascale era.”&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;Additionally, the partnership will deliver joint HPE and SiPearl solutions to HPE’s Center of Excellence (CoE) in Grenoble, France, which is home to France’s semiconductor research, to enable local access to users to test and optimize their products for market. The CoE staffs more than 300 engineers, and has a lab presence with specialists in areas such as energy, medicine, biotechnology, semiconductor, micro and nanotechnology, and nanoscience.&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;To learn more about HPE’s HPC and AI solutions, please visit: &lt;a href=&quot;https://www.hpe.com/us/en/compute/hpc.html&quot; target=&quot;_blank&quot;>https://www.hpe.com/us/en/compute/hpc.html&lt;/a>&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;To learn more about SiPearl’s European microprocessor for supercomputing, please visit: &lt;a href=&quot;https://sipearl.com/en&quot; target=&quot;_blank&quot;>https://sipearl.com/en&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;"/>
+                <textonlycomponent_fe
+                    jcr:created="{Date}2018-06-18T09:28:54.456-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-05-29T23:08:34.404Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>About Hewlett Packard Enterprise&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>Hewlett Packard Enterprise (NYSE: HPE) is the global edge-to-cloud company that helps organizations accelerate outcomes by unlocking value from all of their data, everywhere. Built on decades of reimagining the future and innovating to advance the way people live and work, HPE delivers unique, open and intelligent technology solutions as a service.  With offerings spanning Cloud Services, Compute, High Performance Computing &amp;amp; AI, Intelligent Edge, Software, and Storage, HPE provides a consistent experience across all clouds and edges, helping customers develop new business models, engage in new ways, and increase operational performance. For more information, visit: &lt;a href=&quot;http://www.hpe.com/&quot; target=&quot;_blank&quot;>www.hpe.com&lt;/a>&lt;br />&#xd;&#xa;&lt;b style=&quot;&quot;>&lt;br />&#xd;&#xa;About SiPearl&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;&lt;/b>SiPearl is designing the high-performance, low-power microprocessor for European exascale supercomputers. This new generation of microprocessors will enable Europe to set out its technological sovereignty in strategic high performance computing (HPC) markets such as artificial intelligence, medical research or climate modelling. The company is working in close collaboration with its 27 partners from the European Processor Initiative (EPI) consortium - leading names from the scientific community, supercomputing centres and industry - which are its stakeholders, future clients and end-users. SiPearl is supported by the European Union. For more information, visit: &lt;a href=&quot;https://sipearl.com/&quot; target=&quot;_blank&quot;>https://sipearl.com/&lt;/a>&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;Media Contacts&lt;br />&#xd;&#xa;&lt;b style=&quot;&quot;>&lt;br />&#xd;&#xa;Hewlett Packard Enterprise&lt;br />&#xd;&#xa;&lt;/b>Nahren Khizeran&lt;br />&#xd;&#xa;&lt;a href=&quot;mailto:Nahren.Khizeran@hpe.com&quot; target=&quot;_blank&quot;>Nahren.Khizeran@hpe.com&lt;/a>&lt;br />&#xd;&#xa;&lt;b style=&quot;&quot;>&lt;br />&#xd;&#xa;SiPearl&lt;br />&#xd;&#xa;&lt;/b>Marie-Anne Garigue&lt;br />&#xd;&#xa;&lt;a href=&quot;mailto:marie-anne.garigue@sipearl.com&quot; target=&quot;_blank&quot;>marie-anne.garigue@sipearl.com&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <textonlycomponent_bf
+                    jcr:created="{Date}2018-07-02T13:12:59.755-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-10-12T16:10:50.633Z"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    textOnly="&lt;h2>RELATED NEWS&lt;/h2>&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli_540225213
+                    jcr:created="{Date}2018-06-18T10:12:48.909-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:22:53.902-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <columncontainercompo
+                    jcr:created="{Date}2018-07-02T13:14:23.594-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:15:08.106-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/columnContainerComponent"
+                    columns="column-content-3">
+                    <column_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_7c25
+                            jcr:created="{Date}2018-07-02T13:15:28.984-07:00"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-05-29T23:13:33.344Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="arrow-link"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/05/hewlett-packard-enterprise-ushers-in-new-era-with-worlds-first-and-fastest-exascale-supercomputer-frontier-for-the-us-department-of-energys-oak-ridge-national-laboratory"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            header="Hewlett Packard Enterprise ushers in new era with world’s first and fastest exascale supercomputer “Frontier” for the U.S. Department of Energy’s Oak Ridge National Laboratory"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Hewlett Packard Enterprise ushers in new era with world’s first and fastest exascale supercomputer “Frontier” for the U.S. Department of Energy’s Oak Ridge National Laboratory"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-05-29T23:13:33.344Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2022/05/image-norend/hpe-ushers-in-new-era-with-worlds-first-and-fastest-exascale-supercomputer-frontier-for-the-us-doe-oak-ridge-national-laboratory.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-05-29T23:13:33.344Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_7c25>
+                    </column_0>
+                    <column_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_4dff
+                            jcr:created="{Date}2018-09-21T21:01:47.387Z"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-05-29T23:11:40.358Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="arrow-link"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2020/10/hewlett-packard-enterprise-wins-160m-contract-to-power-one-of-the-worlds-fastest-supercomputers-based-in-finland-to-bolster-europes-research-in-science-and-unlock-economic-growth"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            header="Hewlett Packard Enterprise wins $160M+ contract to power one of the world’s fastest supercomputers based in Finland to bolster Europe’s research in science and unlock economic growth"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Hewlett Packard Enterprise wins $160M+ contract to power one of the world’s fastest supercomputers based in Finland to bolster Europe’s research in science and unlock economic growth"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-05-29T23:11:40.358Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2020/10/image-norend/hpe-wins-160m-contract-to-power-one-of-the-worlds-fastest-supercomputers-based-in-finland-16-9.png"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-05-29T23:11:40.358Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_4dff>
+                    </column_1>
+                    <column_2
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_50f2
+                            jcr:created="{Date}2018-09-05T17:41:27.359Z"
+                            jcr:createdBy="nagle@hpe.com"
+                            jcr:lastModified="{Date}2022-05-29T23:10:17.719Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="arrow-link"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2021/11/hewlett-packard-enterprise-builds-new-supercomputer-for-frances-genci-cines-to-advance-nations-open-science-and-rd"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            header="Hewlett Packard Enterprise builds new supercomputer for France’s GENCI-CINES to advance nation’s open science and R&amp;D"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Hewlett Packard Enterprise builds new supercomputer for France’s GENCI-CINES to advance nation’s open science and R&amp;D"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-05-29T23:10:17.719Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                fileReference="/content/dam/hpe/newsroom/2021/11/image-norend/hpe-builds-new-supercomputer-for-frances-genci-cines-to-advance-nations-open-science-and-rd.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-05-29T23:10:17.719Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"/>
+                        </contentblock_50f2>
+                    </column_2>
+                </columncontainercompo>
+            </body-par>
+            <side-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <buttonctaitemcompone
+                    jcr:created="{Date}2018-06-28T13:06:31.075-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:06:46.099-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 1"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_661124859
+                    jcr:created="{Date}2018-06-28T13:06:51.115-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:11.079-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 2"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_606970408
+                    jcr:created="{Date}2018-06-28T13:06:53.400-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:02.336-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 3"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+            </side-par>
+        </main-par>
+        <image
+            jcr:lastModified="{Date}2018-09-05T17:38:02.066Z"
+            jcr:lastModifiedBy="nagle@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+    </jcr:content>
+</jcr:root>

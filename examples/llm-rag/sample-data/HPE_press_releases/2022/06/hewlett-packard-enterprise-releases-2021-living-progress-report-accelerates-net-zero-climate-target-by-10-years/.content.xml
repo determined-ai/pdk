@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/apps/settings/wcm/designs/hpeweb"
+        cq:lastModified="{Date}2022-06-22T23:39:48.740Z"
+        cq:lastModifiedBy="christine.seales@hpe.com"
+        cq:tags="[hpe-newsroom:categories/company---esg]"
+        cq:template="/apps/hpeweb/templates/page-text-heavy"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Hewlett Packard Enterprise Releases 2021 Living Progress Report; Accelerates Net-zero Climate Target by 10 Years"
+        jcr:uuid="5b3e1b9a-65cb-4fd1-a149-c3ca97cf5317"
+        sling:resourceType="hpeweb/components/pages/page-text-heavy"
+        browserTitle="Hewlett Packard Enterprise Releases 2021 Living Progress Report; Accelerates Net-zero Climate Target by 10 Years"
+        changefreq="daily"
+        contentType="Press Release"
+        displayDate="{Date}2022-06-22T09:00:00.000-04:00"
+        metaDescription="Seventh annual report demonstrates progress made towards ESG goals and details new initiatives to accelerate climate targets"
+        metaKeywords="ESG, carbon emissions, sustainability, governance, ethics, inclusion, diversity, energy efficient, circulary economy, environment, social impact"
+        metaOgImage="/content/dam/hpe/newsroom/2022/06/image-norend/hpe-releases-2021-living-progress-report-accelerates-net-zero-climate-target-by-10-years.jpg"
+        metaTwitterCardType="summary_large_image"
+        msmcomponent="/content/hpe/base/blueprint/newsroom/press-release/2022/06/hewlett-packard-enterprise-releases-2021-living-progress-report-accelerates-net-zero-climate-target-by-10-years/jcr:content/main-par/body-par/textonlycomponent_e9"
+        navTitle="Hewlett Packard Enterprise Releases 2021 Living Progress Report; Accelerates Net-zero Climate Target by 10 Years"
+        pageTitle="Hewlett Packard Enterprise Releases 2021 Living Progress Report; Accelerates Net-zero Climate Target by 10 Years"
+        priority="(None)"
+        socialDescription="Seventh annual report demonstrates progress made towards ESG goals and details new initiatives to accelerate climate targets"
+        subtitle="Seventh annual report demonstrates progress made towards ESG goals and details new initiatives to accelerate climate targets"
+        theme="dark"
+        UAID="4f4c1584-d383-468a-971b-6f3a2db80659"
+        UCID="98517669-5605-48f9-af17-41e38bb21aa2">
+        <main-par
+            jcr:lastModified="{Date}2018-06-28T13:09:39.402-07:00"
+            jcr:lastModifiedBy="velazquez@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="hpeweb/components/content/textHeavyComponent"
+            siderail="none">
+            <subtitle
+                jcr:lastModified="{Date}2022-06-21T20:13:10.050Z"
+                jcr:lastModifiedBy="christine.seales@hpe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="hpeweb/components/content/newsroom/newsroomSubtitleComponent"
+                textOnly="JUNE 22, 2022 • PRESS RELEASE"/>
+            <body-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <imageonlycomponent_c
+                    jcr:created="{Date}2018-06-18T09:06:27.827-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-06-21T20:13:24.401Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/imageOnlyComponent"
+                    fileReference="/content/dam/hpe/newsroom/2022/06/image-norend/hpe-releases-2021-living-progress-report-accelerates-net-zero-climate-target-by-10-years.jpg"
+                    imageAlignment="hpe-image-center"
+                    imageAltText="HPE Guarantees"
+                    topMargin="60"
+                    videoSource="video"
+                    videoType="youtube"/>
+                <textonlycomponent_cd
+                    jcr:created="{Date}2018-06-18T09:12:49.742-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-06-21T20:14:01.865Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    leftPadding="30"
+                    rightPadding="30"
+                    textIsRich="true"
+                    textOnly="&lt;h3>IN THIS ARTICLE&lt;/h3>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>HPE has released its annual Living Progress Report for Fiscal Year 2021, demonstrating the company’s ongoing commitment to creating a more equitable, sustainable world&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>In the report, HPE shares it’s progress toward, and plans for, driving a low-carbon economy, investing in a diverse and inclusive workforce and operating with the highest ethical standards&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli
+                    jcr:created="{Date}2018-06-18T09:16:54.243-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-18T09:18:45.987-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <textonlycomponent
+                    jcr:created="{Date}2022-06-21T20:14:17.352Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2022-06-21T20:14:32.408Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;h2>Seventh annual report demonstrates progress made towards ESG goals and details new initiatives to accelerate climate targets&lt;/h2>&#xd;&#xa;"/>
+                <textonlycomponent_e9
+                    jcr:created="{Date}2018-06-22T11:24:07.263-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-06-22T23:39:48.730Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>HOUSTON – June 22, 2022&lt;/b> – &lt;a href=&quot;http://www.hpe.com&quot; target=&quot;_blank&quot;>Hewlett Packard Enterprise&lt;/a> (NYSE: HPE) today unveiled its annual &lt;a href=&quot;https://www.hpe.com/us/en/collaterals/collateral.a50006144.html?rpv=cpf&amp;amp;parentPage=/us/en/living-progress/report&quot; target=&quot;_blank&quot;>Living Progress Report&lt;/a> for fiscal year 2021, demonstrating the company’s ongoing commitment to creating a more equitable and sustainable world by accelerating targets for net-zero emissions, developing technology solutions that drive a low-carbon economy, investing in a diverse and inclusive workforce and operating its business with and insisting on the highest ethical standards.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; “We don’t just help our customers meet their ESG goals, we continue to push ourselves and our entire industry forward by improving upon our own,” said Antonio Neri, President and CEO. “At HPE, we have a significant responsibility and an intentional, focused plan to help our customers, suppliers and communities successfully transition to a zero-carbon future.”&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <pullquote
+                    jcr:created="{Date}2022-06-21T20:15:32.565Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2022-06-21T20:17:23.091Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution=" "
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>HPE’s seventh annual report reaffirms HPE’s promise to become a net-zero enterprise across its entire value chain, accelerating its target date by 10 years from 2050 to 2040&lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2022-06-21T20:17:23.091Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote>
+                <textonlycomponent_b4
+                    jcr:created="{Date}2018-06-18T09:18:06.257-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-06-22T23:37:32.377Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Charting a course towards net-zero emissions&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/b>HPE’s seventh annual report reaffirms HPE’s promise to become a net-zero enterprise across its entire value chain, accelerating its target date by 10 years from 2050 to 2040. This commitment is backed by a new suite of targets that are consistent with a 1.5-degree Centigrade climate pathway and approved by the &lt;a href=&quot;https://sciencebasedtargets.org/&quot; target=&quot;_blank&quot;>Science-based Target Initiative&lt;/a>. By 2030, HPE pledges to reduce emissions within its own operations by 70% from 2020 levels, building on the 62% reduction already achieved over the five prior years. HPE will also reduce Scope 3 emissions by 42%, focusing on the use of sold products, upstream transportation and distribution, and direct supply chain emissions. By 2040, the company plans to reduce its entire global footprint by 90%.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; To advance accountability to reach these new goals, HPE has introduced two new initiatives that will drive ESG progress at the leadership level:&lt;br>&#xd;&#xa; &amp;nbsp;&lt;/span>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>In 2022, all Vice President and above leaders will complete a mandatory climate training program with the aim of empowering leaders to create action plans within their organizations that mitigate climate impact.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>Additionally, HPE has introduced a new compensation metric for members of its Executive Committee that ties a portion of variable pay to HPE’s management of carbon emissions across its value chain.&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>&amp;nbsp;&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>As-a-service transition empowers customers to operate sustainably and efficiently&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/b>HPE’s transition to a consumption-based, as-a-service company is driving sustainable transformation efforts for its customers. With the HPE GreenLake edge-to-cloud platform, customers can flexibly scale their IT to meet their needs, thereby improving utilization levels and avoiding the waste of overprovisioning. Customers transitioning to&amp;nbsp;HPE GreenLake from traditional CapEx models can achieve a greater than 30% reduction in energy costs and total cost of ownership. For example, Auckland Transport (AT), which records traffic across New Zealand, transitioned its video management system to the HPE GreenLake edge-to-cloud platform. In doing so, AT was able to pay for only the cloud services they used, add 60% more cameras to their system, and reduce their energy consumption 37%.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; In addition to helping customers transition to as a service models, HPE is committed to technology reuse: 85% of the three million technology assets taken in from customers is reused. To help customers measure and manage their impact, HPEFS customers, and now selected partners’ customers&lt;sup>1&lt;/sup>,can receive an HPE Circular Economy report that details how their IT assets were processed and the associated environmental savings from those services, which can be used for Scope 3 carbon disclosure reporting.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; Across its entire business, HPE works directly with customers to help them improve the efficiency and sustainability of their technology operations to meet their business needs. These uniquely customized engagements contributed to approximately $891 million in new net revenue for 2021, an increase of more than 185% in the last three years. In addition, in 2021, approximately 50% of HPE solutions had sustainability and efficiency attributes.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;b>Building a diverse, engaged and inclusive culture&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/b>HPE continues to advance principles of diversity, equity and inclusion both within its workforce and beyond. In 2021, HPE met its annual target of increasing representation of both women and ethnically diverse talent. Representation of women in the workforce increased by 1% year-over-year, with increased representation at every level worldwide, exceeding goals in both technical and executive roles. HPE also increased representation of all underrepresented minorities in the U.S. by 1.6% overall.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; In 2022 HPE continued to make progress in its efforts to identify and address pay disparities that may impact women and underrepresented minorities. As a result, HPE is proud that women in the U.S., U.K. and India – representing a majority of our workforce footprint – earn $1.00 for every $1.00 earned by their male counterparts when accounting for legitimate business factors such as job title, time in role, experience and location. The same is true of underrepresented minorities in the U.S., and to the company intends to ensure the same level of progress throughout the rest of the world as it moves forward with future pay reviews.&lt;br>&#xd;&#xa; &lt;b>&lt;br>&#xd;&#xa;Operating with the highest ethical standards&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/b>HPE’s commitment to winning the right way in the marketplace extends beyond our operations into the development, deployment and use of its products and solutions. One example is product security. HPE remains the only company offering Commercial National Security Algorithm Suite (CNSA), the most advanced encryption for server&amp;nbsp;platforms. In 2021, HPE introduced Project Aurora, which extends its secure root of trust and verification processes to deliver cloud-native, zero trust security to its edge-to-cloud architecture.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; Additionally, in 2021, HPE launched its Artificial Intelligence (AI) Ethics Principles to support the responsible development, deployment and use of artificial intelligence. These principles inform product development, partnerships, and the internal use of third-party AI to support business operations.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; HPE has also created more stringent supply chain responsibility targets in the last year to ensure its products are ethically sourced. By 2030, HPE aims for:&lt;br>&#xd;&#xa; &amp;nbsp;&lt;/span>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>100% of HPE suppliers being committed to the employer pays principle in recruitment (98% of supplier spend)&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>100% of major HPE suppliers training their workers on human rights (95% of supplier spend)&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>100% of HPE tier 1 and 2 supplier sites having effective grievance processes for employees&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"/>
+                <textonlycomponent_fe
+                    jcr:created="{Date}2018-06-18T09:28:54.456-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-06-21T20:30:48.729Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>About Hewlett Packard Enterprise&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>Hewlett Packard Enterprise (NYSE: HPE) is the global edge-to-cloud company that helps organizations accelerate outcomes by unlocking value from all of their data, everywhere. Built on decades of reimagining the future and innovating to advance the way people live and work, HPE delivers unique, open and intelligent technology solutions as a service.&amp;nbsp; With offerings spanning Cloud Services, Compute, High Performance Computing &amp;amp; AI, Intelligent Edge, Software, and Storage, HPE provides a consistent experience across all clouds and edges, helping customers develop new business models, engage in new ways, and increase operational performance. For more information, visit: &lt;a href=&quot;http://www.hpe.com&quot; target=&quot;_blank&quot;>www.hpe.com&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-small&quot;>&lt;sup>1&lt;/sup> HPEFS Platinum, Gold, and Silver partners’ HPEFS customers, eligibility restrictions may apply.&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <textonlycomponent_bf
+                    jcr:created="{Date}2018-07-02T13:12:59.755-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-10-12T16:10:50.633Z"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    textOnly="&lt;h2>RELATED NEWS&lt;/h2>&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli_540225213
+                    jcr:created="{Date}2018-06-18T10:12:48.909-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:22:53.902-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <columncontainercompo
+                    jcr:created="{Date}2018-07-02T13:14:23.594-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:15:08.106-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/columnContainerComponent"
+                    columns="column-content-3">
+                    <column_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_7c25
+                            jcr:created="{Date}2018-07-02T13:15:28.984-07:00"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-06-21T20:23:23.795Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="arrow-link"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/blog-post/2022/06/driving-net-zero-transformation-through-accountability"
+                            description="&lt;p>Blog Post&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            header="Driving net-zero transformation through accountability"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Driving net-zero transformation through accountability"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-06-21T20:23:23.795Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2022/06/image-norend/driving-net-zero-transformation-through-accountability.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-06-21T20:23:23.795Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_7c25>
+                    </column_0>
+                    <column_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_4dff
+                            jcr:created="{Date}2018-09-21T21:01:47.387Z"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-06-21T20:24:48.607Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="arrow-link"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/blog-post/2022/04/this-earth-day-consider-new-routes-to-sustainability-with-hpe-greenlake"
+                            description="&lt;p>Blog Post&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            header="This Earth Day, consider new routes to sustainability with HPE GreenLake"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="This Earth Day, consider new routes to sustainability with HPE GreenLake"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-06-21T20:24:48.607Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2022/04/image-norend/this-earth-day-consider-new-routes-to-sustainability-with-hpe-greenlake.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-06-21T20:24:48.607Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_4dff>
+                    </column_1>
+                    <column_2
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_50f2
+                            jcr:created="{Date}2018-09-05T17:41:27.359Z"
+                            jcr:createdBy="nagle@hpe.com"
+                            jcr:lastModified="{Date}2022-06-21T20:26:59.851Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="arrow-link"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2021/06/hewlett-packard-enterprise-releases-living-progress-report"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            header="Hewlett Packard Enterprise releases Living Progress Report"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Hewlett Packard Enterprise releases Living Progress Report"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-06-21T20:26:59.851Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                fileReference="/content/dam/hpe/newsroom/2021/06/image-norend/hewlett-packard-enterprise-releases-living-progress-report.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-06-21T20:26:59.851Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"/>
+                        </contentblock_50f2>
+                    </column_2>
+                </columncontainercompo>
+            </body-par>
+            <side-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <buttonctaitemcompone
+                    jcr:created="{Date}2018-06-28T13:06:31.075-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:06:46.099-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 1"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_661124859
+                    jcr:created="{Date}2018-06-28T13:06:51.115-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:11.079-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 2"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_606970408
+                    jcr:created="{Date}2018-06-28T13:06:53.400-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:02.336-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 3"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+            </side-par>
+        </main-par>
+        <image
+            jcr:lastModified="{Date}2018-09-05T17:38:02.066Z"
+            jcr:lastModifiedBy="nagle@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+    </jcr:content>
+</jcr:root>

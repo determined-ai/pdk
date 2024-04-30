@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/apps/settings/wcm/designs/hpeweb"
+        cq:lastModified="{Date}2022-03-21T14:14:00.213Z"
+        cq:lastModifiedBy="benjamin.lesueur@hpe.com"
+        cq:tags="[hpe-newsroom:categories/big-data,hpe-newsroom:categories/customers-and-partners,hpe-newsroom:categories/company---customers]"
+        cq:template="/apps/hpeweb/templates/page-text-heavy"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="HPE GreenLake selected by Worldline to modernize mission-critical payments"
+        jcr:uuid="555a6712-93d4-4d3b-8301-3f57e777dd6a"
+        sling:resourceType="hpeweb/components/pages/page-text-heavy"
+        browserTitle="HPE GreenLake selected by Worldline to modernize mission-critical payments"
+        changefreq="daily"
+        contentType="Press Release"
+        displayDate="{Date}2022-03-22T11:00:00.000-04:00"
+        metaDescription="Largest European digital payments provider selects HPE GreenLake edge-to-cloud platform to accelerate digital transactions and deliver exceptional customer experience"
+        metaKeywords="HPE, HPE GreenLake, HPE Europe, Hewlett Packard Enterprise, Edge to cloud, Worldline, cashless economy, HPE Pointnext, HPE NonStop, Finance"
+        metaOgImage="/content/dam/hpe/newsroom/2022/03/image-norend/hpe-greenlake-selected-by-worldline-to-modernize-mission-critical-payments.jpg"
+        metaTwitterCardType="summary_large_image"
+        msmcomponent="/content/hpe/base/blueprint/newsroom/press-release/2022/03/hpe-greenlake-selected-by-worldline-to-modernize-mission-critical-payments/jcr:content/main-par/body-par/textonlycomponent_cd"
+        navTitle="HPE GreenLake selected by Worldline to modernize mission-critical payments"
+        pageTitle="HPE GreenLake selected by Worldline to modernize mission-critical payments"
+        priority="(None)"
+        socialDescription="Largest European digital payments provider selects HPE GreenLake edge-to-cloud platform to accelerate digital transactions and deliver exceptional customer experience"
+        subtitle="Largest European digital payments provider selects HPE GreenLake edge-to-cloud platform to accelerate digital transactions and deliver exceptional customer experience"
+        theme="dark"
+        UAID="74ab12db-6349-4977-90ba-d0cbdf082744"
+        UCID="68892565-f8ce-4c04-933b-c3d8a5ef41cc">
+        <main-par
+            jcr:lastModified="{Date}2018-06-28T13:09:39.402-07:00"
+            jcr:lastModifiedBy="velazquez@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="hpeweb/components/content/textHeavyComponent"
+            siderail="none">
+            <subtitle
+                jcr:lastModified="{Date}2022-03-17T18:18:14.232Z"
+                jcr:lastModifiedBy="christine.seales@hpe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="hpeweb/components/content/newsroom/newsroomSubtitleComponent"
+                textOnly="MARCH 22, 2022 • PRESS RELEASE"/>
+            <body-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <imageonlycomponent_c
+                    jcr:created="{Date}2018-06-18T09:06:27.827-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-03-17T18:18:23.557Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/imageOnlyComponent"
+                    fileReference="/content/dam/hpe/newsroom/2022/03/image-norend/hpe-greenlake-selected-by-worldline-to-modernize-mission-critical-payments.jpg"
+                    imageAlignment="hpe-image-center"
+                    imageAltText="HPE Guarantees"
+                    topMargin="60"
+                    videoSource="video"
+                    videoType="youtube"/>
+                <textonlycomponent_cd
+                    jcr:created="{Date}2018-06-18T09:12:49.742-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-03-21T14:12:58.770Z"
+                    jcr:lastModifiedBy="benjamin.lesueur@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    leftPadding="30"
+                    rightPadding="30"
+                    textIsRich="true"
+                    textOnly="&lt;h3>IN THIS ARTICLE&lt;/h3>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>HPE GreenLake can scale up and down as business demand fluctuates and will significantly improve the performance of Wordline's payment platform&lt;/span>&lt;br>&#xd;&#xa;&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>The old data center IT infrastructure will be decommissioned after a transition in a safe and sustainable manner in HPE's Technology Renewal Center to minimize electronic waste&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>By leveraging HPE Financial Services' asset renewal program, funding approximately 25% of the platform refresh, Worldline achieved this significant upgrade with no upfront investment&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli
+                    jcr:created="{Date}2018-06-18T09:16:54.243-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-18T09:18:45.987-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <textonlycomponent
+                    jcr:created="{Date}2022-03-17T18:19:36.104Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2022-03-17T18:19:44.574Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;h2>Largest European digital payments provider selects HPE GreenLake edge-to-cloud platform to accelerate digital transactions and deliver exceptional customer experience&lt;/h2>&#xd;&#xa;"/>
+                <textonlycomponent_e9
+                    jcr:created="{Date}2018-06-22T11:24:07.263-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-03-17T18:21:17.359Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>BRUSSELS, Belgium – March 22, 2022&amp;nbsp;&lt;/b>– &lt;a href=&quot;http://www.hpe.com/&quot; target=&quot;_blank&quot;>Hewlett Packard Enterprise&lt;/a> (NYSE: HPE) today announced that &lt;a href=&quot;https://worldline.com/&quot; target=&quot;_blank&quot;>Worldline&lt;/a>, a European-based global payments provider, has selected the &lt;a href=&quot;https://www.hpe.com/us/en/greenlake.html&quot; target=&quot;_blank&quot;>HPE GreenLake edge-to-cloud platform&lt;/a> to implement a major performance upgrade to its mission-critical payments platform to meet the accelerated growth of online transactions. By leveraging HPE GreenLake's flexible as-a-service model and HPE Financial Services' asset renewal program, funding approximately 25% of the platform refresh, Worldline achieved this significant upgrade with no upfront investment.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; Worldline is the largest European and the world’s fourth largest payment provider, with operations in over 50 countries. The company provides payments and transactional services to the full supply chain – from seller to buyer -- and has been delivering on a vision of a cashless economy by developing agile, customer-centric solutions that are rooted in strong technology. The industry relies heavily on back-end infrastructure to ensure the payment value chain is resilient, highly available and always on.&amp;nbsp; Latency and downtime on card transactions have an immediate impact on the customer experience.&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <pullquote
+                    jcr:created="{Date}2022-03-17T18:21:22.363Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2022-03-21T14:14:00.194Z"
+                    jcr:lastModifiedBy="benjamin.lesueur@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution=" "
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>HPE GreenLake can scale up and down as market fluctuates so that Worldline can manage the growth in demand&lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2022-03-21T14:14:00.194Z"
+                        jcr:lastModifiedBy="benjamin.lesueur@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote>
+                <textonlycomponent_b4
+                    jcr:created="{Date}2018-06-18T09:18:06.257-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-03-17T18:22:41.767Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>The COVID-19 pandemic has had an enormous impact on the finance and banking sector with significant fluctuations in demand and revenue. Over the same period there has been a massive growth in online purchasing as more countries transform into cashless societies resulting in an even greater reliance on secure global payment transactions. Worldline, like many payment providers, needed to quickly and efficiently scale-up its offering to support its vendors and customers with the growing volume of digital payments, further improving its existing reliable estate of servers and storage that needed to meet the current and future demand and reduce ongoing operational costs.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;The HPE GreenLake platform can scale up and down as business demand fluctuates so that Worldline can manage the growth in demand.&amp;nbsp; The platform delivers the cloud experience through a pay-per-use model while also meeting compliance and regulatory requirements.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;“Working with HPE has enabled us to navigate the turbulent market caused by COVID-19 via a combination of legacy asset buy-back and a flexible as-a-service approach,” said Frédéric Papillon, Managing Director Production Systems at Worldline. “We feel confident that these solutions will enable us to offer our customers a highly secure and efficient platform for digital transactions that keeps the supply chain moving, and also provide a cost-competitive solution that delivers value for money.”&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;The HPE GreenLake platform solution leverages HPE NonStop systems, which are ideally suited to support payment transactions with trusted, reliable, 100% fault-tolerant capabilities required for mission critical environments. HPE NonStop meets the stringent demands of a secure financial transaction workload, with the always-on, resilient design ensuring operational excellence and exceptionally high levels of availability. The solution was identified as the best cloud service to support Worldline’s mission critical business with the agility and flexibility to deliver an accelerated time-to-market for new applications and services.&lt;/span>&lt;/p>&#xd;&#xa;"/>
+                <pullquote_349b
+                    jcr:created="{Date}2018-06-18T09:23:47.197-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-03-17T18:23:01.533Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution=" "
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>The old data center IT infrastructure will be decommissioned after a transition in a safe and sustainable manner in HPE's Technology Renewal Center to minimize electronic waste&lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2022-03-17T18:23:01.533Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote_349b>
+                <textonlycomponent_97
+                    jcr:created="{Date}2018-06-22T11:22:31.557-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-03-17T18:24:58.924Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>The old data center IT infrastructure will be decommissioned after a transition in a safe and sustainable manner in HPE's Technology Renewal Center to minimize electronic waste. The transformation to the new platform will be managed by HPE Pointnext Services in close collaboration with Worldline, without any disruption to the existing workflows.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; “Together, the HPE GreenLake platform and HPE Financial Services capabilities will allow Worldline to achieve significant cost savings, and also power a significant refresh and modernization of their mission-critical payments platform,” said Gilles Thiebaut, Managing Director, SVP Global Sales for Northern Western Europe. “This upgrade, delivering improved performance and extending the operational life, was achieved without any upfront investment and is delivered on a pay-per-use model so the solution meets both their technical and financial requirements.”&lt;br>&#xd;&#xa; &lt;b>&lt;br>&#xd;&#xa;About HPE GreenLake&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/b>The HPE GreenLake edge-to-cloud platform enables customers to accelerate data-first modernization and provides over 50 cloud services that can run on-premises, at the edge, in a colocation facility, and in the public cloud. In Q1 2022, HPE reported Annual Recurring Revenue of $798 million and as-a-service orders growth of 136 percent year-over-year. In April 2022, with the onboarding of Aruba customers, HPE will add over 120,000 customers to the HPE GreenLake platform. The scalable, pay-as-you go HPE GreenLake platform also delivers robust security, compliance, and control, and supports a broad partner ecosystem – including channel partners, distributors, independent software vendors, service providers, system integrators, and public cloud providers. For more information on HPE GreenLake, please visit: &lt;a href=&quot;https://www.hpe.com/us/en/greenlake.html&quot; target=&quot;_blank&quot;>https://www.hpe.com/us/en/greenlake.html&lt;/a>&lt;br>&#xd;&#xa; &lt;b>&lt;br>&#xd;&#xa;About Worldline&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/b>Worldline [Euronext: WLN] is the European leader in the payments and transactional services industry and #4 player worldwide. With its global reach and its commitment to innovation, Worldline is the technology partner of choice for merchants, banks and third-party acquirers as well as&amp;nbsp;public transport operators, government agencies and industrial companies in all sectors. Powered by over 20,000 employees in more than 50 countries, Worldline provides its clients with sustainable, trusted and secure solutions across the payment value chain, fostering their business growth wherever they are. Services offered by Worldline in the areas of Merchant Services; Terminals, Solutions &amp;amp; Services; Financial Services and Mobility &amp;amp; e-Transactional Services include domestic and cross-border commercial acquiring, both in-store and online, highly secure payment transaction processing, a broad portfolio of payment terminals as well as e-ticketing and digital services in the industrial environment. In 2020 Worldline generated a proforma revenue of 4.8 billion euros. Please visit: &lt;a href=&quot;http://worldline.com/&quot; target=&quot;_blank&quot;>worldline.com&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;"/>
+                <textonlycomponent_fe
+                    jcr:created="{Date}2018-06-18T09:28:54.456-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-03-17T18:26:18.979Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>About Hewlett Packard Enterprise&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>Hewlett Packard Enterprise (NYSE: HPE) is the global edge-to-cloud company that helps organizations accelerate outcomes by unlocking value from all of their data, everywhere. Built on decades of reimagining the future and innovating to advance the way people live and work, HPE delivers unique, open and intelligent technology solutions delivered as a service – spanning Compute, Storage, Software, Intelligent Edge, High Performance Computing and Mission Critical Solutions – with a consistent experience across all clouds and edges, designed to help customers develop new business models, engage in new ways, and increase operational performance. For more information, visit: &lt;a href=&quot;http://www.hpe.com&quot; target=&quot;_blank&quot;>www.hpe.com&lt;/a>&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; Editorial Contact:&lt;br>&#xd;&#xa; &lt;b>Benjamin Lesueur&lt;br>&#xd;&#xa; &lt;/b>&lt;a href=&quot;mailto:benjamin.lesueur@hpe.com&quot; target=&quot;_blank&quot;>benjamin.lesueur@hpe.com&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <textonlycomponent_bf
+                    jcr:created="{Date}2018-07-02T13:12:59.755-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-10-12T16:10:50.633Z"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    textOnly="&lt;h2>RELATED NEWS&lt;/h2>&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli_540225213
+                    jcr:created="{Date}2018-06-18T10:12:48.909-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:22:53.902-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <columncontainercompo
+                    jcr:created="{Date}2018-07-02T13:14:23.594-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:15:08.106-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/columnContainerComponent"
+                    columns="column-content-3">
+                    <column_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_7c25
+                            jcr:created="{Date}2018-07-02T13:15:28.984-07:00"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-03-17T18:28:07.791Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="arrow-link"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2021/12/barclays-selects-hpe-greenlake-for-private-cloud-platform"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            header="Barclays selects HPE GreenLake for private cloud platform"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Gartner Names HPE a Leader in Magic Quadrant for Operations Support Systems"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-03-17T18:28:07.791Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2021/12/image-norend/barclays-selects-hpe-greenlake-for-private-cloud-platform.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-03-17T18:28:07.791Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_7c25>
+                    </column_0>
+                    <column_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_4dff
+                            jcr:created="{Date}2018-09-21T21:01:47.387Z"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-03-17T18:30:55.443Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="arrow-link"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2021/10/cardnet-selects-hpe-greenlake-to-provide-a-secure-scalable-platform-for-digital-payments-and-support-progression-to-cashless-society"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            header="CARDNET selects HPE GreenLake to provide a secure, scalable platform for digital payments and support progression to cashless society"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="test"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-03-17T18:30:55.443Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2021/10/image-norend/cardnet-selects-hpe-greenlake-to-provide-a-secure-scalable-platform-for-digital-payments-and-support-progression-to-cashless-society.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-03-17T18:30:55.443Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_4dff>
+                    </column_1>
+                    <column_2
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_50f2
+                            jcr:created="{Date}2018-09-05T17:41:27.359Z"
+                            jcr:createdBy="nagle@hpe.com"
+                            jcr:lastModified="{Date}2022-03-17T18:33:11.051Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="arrow-link"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2021/07/hpe-greenlake-powers-woolworths-new-payments-platform-for-wpay-venture"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            header="HPE GreenLake powers Woolworths’ new payments platform for Wpay venture"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-03-17T18:33:11.051Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                fileReference="/content/dam/hpe/newsroom/2021/07/image-norend/hpe-greenlake-powers-woolworths-new-payments-platform-for-wpay-venture.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-03-17T18:33:11.051Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"/>
+                        </contentblock_50f2>
+                    </column_2>
+                </columncontainercompo>
+            </body-par>
+            <side-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <buttonctaitemcompone
+                    jcr:created="{Date}2018-06-28T13:06:31.075-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:06:46.099-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 1"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_661124859
+                    jcr:created="{Date}2018-06-28T13:06:51.115-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:11.079-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 2"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_606970408
+                    jcr:created="{Date}2018-06-28T13:06:53.400-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:02.336-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 3"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+            </side-par>
+        </main-par>
+        <image
+            jcr:lastModified="{Date}2018-09-05T17:38:02.066Z"
+            jcr:lastModifiedBy="nagle@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+    </jcr:content>
+</jcr:root>

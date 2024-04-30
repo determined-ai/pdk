@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/apps/settings/wcm/designs/hpeweb"
+        cq:lastModified="{Date}2022-01-21T13:45:35.122Z"
+        cq:lastModifiedBy="christine.seales@hpe.com"
+        cq:tags="[hpe-newsroom:categories/big-data,hpe-newsroom:categories/cloud,hpe-newsroom:categories/company---customers]"
+        cq:template="/apps/hpeweb/templates/page-text-heavy"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Werder Bremen partners with Hewlett Packard Enterprise to advance fan experience and data intelligence"
+        jcr:uuid="ed4d3093-9038-4731-b5f3-0ce1385de46e"
+        sling:resourceType="hpeweb/components/pages/page-text-heavy"
+        browserTitle="Werder Bremen partners with Hewlett Packard Enterprise to advance fan experience and data intelligence"
+        changefreq="daily"
+        contentType="Press Release"
+        displayDate="{Date}2022-01-24T09:00:00.000-05:00"
+        metaDescription="German soccer club to leverage an edge-to-cloud infrastructure and the analytics platform HPE Ezmeral to provide digital services to fans and business partners, and promote data-driven decision making"
+        metaKeywords="soccer, analytics, cloud, HPE, HPE Ezmeral, edge-to-cloud, digital transformation, Germany, soccer, data"
+        metaOgImage="/content/dam/hpe/newsroom/2022/01/image-norend/werder-bremen-partners-with-hewlett-packard-enterprise-to-advance-fan-experience-and-data-intelligence2.jpg"
+        metaTwitterCardType="summary_large_image"
+        msmcomponent="/content/hpe/base/blueprint/newsroom/press-release/2022/01/werder-bremen-partners-with-hewlett-packard-enterprise-to-advance-fan-experience-and-data-intelligence/jcr:content/main-par/body-par/textonlycomponent_e9"
+        navTitle="Werder Bremen partners with Hewlett Packard Enterprise to advance fan experience and data intelligence"
+        pageTitle="Werder Bremen partners with Hewlett Packard Enterprise to advance fan experience and data intelligence"
+        priority="(None)"
+        socialDescription="German soccer club to leverage an edge-to-cloud infrastructure and the analytics platform HPE Ezmeral to provide digital services to fans and business partners, and promote data-driven decision making"
+        subtitle="German soccer club to leverage an edge-to-cloud infrastructure and the analytics platform HPE Ezmeral to provide digital services to fans and business partners, and promote data-driven decision making"
+        theme="dark"
+        UAID="a394b75b-2ac6-4c25-b675-cf2aeb63a9d6"
+        UCID="74d38fcc-219c-4988-a555-7376d3963717">
+        <main-par
+            jcr:lastModified="{Date}2018-06-28T13:09:39.402-07:00"
+            jcr:lastModifiedBy="velazquez@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="hpeweb/components/content/textHeavyComponent"
+            siderail="none">
+            <subtitle
+                jcr:lastModified="{Date}2022-01-20T20:56:22.743Z"
+                jcr:lastModifiedBy="christine.seales@hpe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="hpeweb/components/content/newsroom/newsroomSubtitleComponent"
+                textOnly="JANUARY 24, 2022 • PRESS RELEASE"/>
+            <body-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <imageonlycomponent_c
+                    jcr:created="{Date}2018-06-18T09:06:27.827-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-01-21T13:45:19.568Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/imageOnlyComponent"
+                    fileReference="/content/dam/hpe/newsroom/2022/01/image-norend/werder-bremen-partners-with-hewlett-packard-enterprise-to-advance-fan-experience-and-data-intelligence2.jpg"
+                    imageAlignment="hpe-image-center"
+                    imageAltText="HPE Guarantees"
+                    topMargin="60"
+                    videoSource="video"
+                    videoType="youtube"/>
+                <textonlycomponent_cd
+                    jcr:created="{Date}2018-06-18T09:12:49.742-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-01-20T20:28:06.086Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    leftPadding="30"
+                    rightPadding="30"
+                    textIsRich="true"
+                    textOnly="&lt;h3>IN THIS ARTICLE&lt;/h3>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>HPE will help German soccer club SV Werder Bremen to drive a comprehensive digital transformation initiative aimed at advancing fan experience and data intelligence&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>As part of the project, HPE will deploy and manage an edge-to-cloud infrastructure and the analytics and data lakehouse platform HPE Ezmeral&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli
+                    jcr:created="{Date}2018-06-18T09:16:54.243-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-18T09:18:45.987-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <textonlycomponent
+                    jcr:created="{Date}2022-01-20T20:28:13.394Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2022-01-20T20:28:27.057Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;h2>German soccer club to leverage an edge-to-cloud infrastructure and the analytics platform HPE Ezmeral to provide digital services to fans and business partners, and promote data-driven decision making&lt;/h2>&#xd;&#xa;"/>
+                <textonlycomponent_e9
+                    jcr:created="{Date}2018-06-22T11:24:07.263-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-01-20T20:51:10.223Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>HOUSTON, Texas – January 24, 2022&lt;/b> – &lt;a href=&quot;http://www.hpe.com&quot; target=&quot;_blank&quot;>Hewlett Packard Enterprise&lt;/a> (NYSE: HPE) today announced that it has been selected by German soccer club &lt;a href=&quot;https://www.werder.de/en/&quot; target=&quot;_blank&quot;>SV Werder Bremen&lt;/a> to jointly drive a comprehensive digital transformation initiative aimed at advancing fan experience and data intelligence. As part of the project, HPE will deploy and manage an edge-to-cloud infrastructure and the analytics and data lakehouse platform &lt;a href=&quot;https://www.hpe.com/us/en/software.html&quot; target=&quot;_blank&quot;>HPE Ezmeral&lt;/a>. This will be the foundation for launching a range of digital services in the coming months and years, including the new official Werder app and data analytics to support the club’s decision making.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; “Digitization offers enormous potential in all areas of our company,” said Klaus Filbry, Chairman of the Board of Management of SV Werder Bremen. “We are therefore very pleased that we will be able to utilize the opportunities of digital transformation even better in the future together with such an internationally renowned company as HPE. This long-term partnership is an important component of our strategy.”&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; As Werder Bremen’s official digital transformation partner, HPE will help the club achieve its goals through a holistic transformation approach across architecture, infrastructure, analytics platform and digital services. This includes the implementation and management of an edge-to-cloud infrastructure, ranging from networks and sensors in Werder’s stadium “wohninvest WESERSTADION” and the club’s data center to the public cloud.&amp;nbsp;&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <pullquote_349b
+                    jcr:created="{Date}2018-06-18T09:23:47.197-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-01-20T20:33:18.218Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution=" "
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>HPE will help Werder Bremen achieve its goals through a holistic transformation approach&lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2022-01-20T20:33:18.218Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote_349b>
+                <textonlycomponent_97
+                    jcr:created="{Date}2018-06-22T11:22:31.557-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-01-20T20:34:55.474Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>The cloud-native HPE Ezmeral platform will be the foundation for the continuous analysis of data from various sources inside and outside Werder’s stadium. The platform provides a unified access to distributed data, to analytics tools and data-operations processes.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; “Together with HPE, we are striving to further develop our data analytics capabilities into a data intelligence platform,” said Nico Hruby, Chief Digital Officer of SV Werder Bremen. “This will enable us to even better analyze existing data in order to incorporate it into decisions and offer services for fans and partners.”&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; One of the first digital services developed by HPE will be the new Werder app which supports fans and business partners on matchdays and between. This can include buying tickets, navigating through the stadium, business networking, buying fan merchandise, or real-time access to game statistics.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; HPE delivers the entire solution to Werder Bremen based on a flexible financing model where the club pays monthly fees and can increase investments based on sporting success. The project is planned to be executed over the course of several years.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; “Werder Bremen is one of the most tradition-rich and respected soccer brands in Germany, and we are pleased to help the club take a decisive step in its digital transformation,” said Johannes Koch, Managing Director Germany, Senior Vice President Germany, Austria and Switzerland, HPE. “Data and data analytics are increasingly at the core of any sports business. This transformation project will help Werder Bremen effectively use this resource to provide superior value to fans, partners, athletes and club decision makers.”&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; HPE has a long track record of helping sports businesses transform their operations and upgrade fan experience based on connectivity, cloud and data. This includes projects in &lt;a href=&quot;https://news.arubanetworks.com/news-release-details/2021/MLBs-Texas-Rangers-Standardize-on-Aruba-at-Globe-Life-Field-to-Deliver-Premier-Immersive-Fan-and-Event-Experiences/default.aspx&quot; target=&quot;_blank&quot;>baseball&lt;/a>, &lt;a href=&quot;https://www.hpe.com/us/en/newsroom/press-release/2018/11/golden-state-warriors-partner-with-hewlett-packard-enterprise-to-drive-connected-experiences-for-chase-center.html&quot; target=&quot;_blank&quot;>basketball&lt;/a>, &lt;a href=&quot;https://www.hpe.com/us/en/newsroom/blog-post/2018/04/hpe-partners-with-ryder-cup-to-put-data-at-the-heart-of-golf-for-the-first-time.html&quot; target=&quot;_blank&quot;>golf&lt;/a> and &lt;a href=&quot;https://www.hpe.com/us/en/newsroom/press-release/2017/06/tottenham-hotspur-football-club-partners-with-hewlett-packard-enterprise-to-support-technology-vision-for-new-stadium.html&quot; target=&quot;_blank&quot;>soccer&lt;/a>, among others.&lt;/span>&lt;/p>&#xd;&#xa;"/>
+                <textonlycomponent_fe
+                    jcr:created="{Date}2018-06-18T09:28:54.456-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-01-20T20:36:07.205Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>About Hewlett Packard Enterprise&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>Hewlett Packard Enterprise (NYSE: HPE) is the global edge-to-cloud company that helps organizations accelerate outcomes by unlocking value from all of their data, everywhere. Built on decades of reimagining the future and innovating to advance the way people live and work, HPE delivers unique, open and intelligent technology solutions as a service.&amp;nbsp; With offerings spanning Cloud Services, Compute, High Performance Computing &amp;amp; AI, Intelligent Edge, Software, and Storage, HPE provides a consistent experience across all clouds and edges, helping customers develop new business models, engage in new ways, and increase operational performance. For more information, visit: &lt;a href=&quot;http://www.hpe.com&quot; target=&quot;_blank&quot;>www.hpe.com&lt;/a>&lt;br>&#xd;&#xa; &lt;b>&lt;br>&#xd;&#xa;Editorial Contact:&lt;br>&#xd;&#xa; &lt;/b>Patrik Edlund&lt;br>&#xd;&#xa; &lt;a href=&quot;mailto:patrik.edlund@hpe.com&quot; target=&quot;_blank&quot;>patrik.edlund@hpe.com&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <textonlycomponent_bf
+                    jcr:created="{Date}2018-07-02T13:12:59.755-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-10-12T16:10:50.633Z"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    textOnly="&lt;h2>RELATED NEWS&lt;/h2>&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli_540225213
+                    jcr:created="{Date}2018-06-18T10:12:48.909-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:22:53.902-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <columncontainercompo
+                    jcr:created="{Date}2018-07-02T13:14:23.594-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:15:08.106-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/columnContainerComponent"
+                    columns="column-content-3">
+                    <column_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_7c25
+                            jcr:created="{Date}2018-07-02T13:15:28.984-07:00"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-01-20T20:38:25.207Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="arrow-link"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2021/09/hpe-greenlake-edge-to-cloud-platform-powers-data-modernization-with-breakthrough-analytics-and-data-protection-cloud-services"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            header="HPE GreenLake edge-to-cloud platform powers data modernization with breakthrough analytics and data protection cloud services"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Gartner Names HPE a Leader in Magic Quadrant for Operations Support Systems"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-01-20T20:38:25.207Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2021/09/image-norend/hpe-greenlake-edge-to-cloud-platform-powers-data-modernization-with-breakthrough-analytics-and-data-protection-cloud-services.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-01-20T20:38:25.207Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_7c25>
+                    </column_0>
+                    <column_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_4dff
+                            jcr:created="{Date}2018-09-21T21:01:47.387Z"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-01-20T20:41:02.156Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="arrow-link"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/blog-post/2018/04/hpe-partners-with-ryder-cup-to-put-data-at-the-heart-of-golf-for-the-first-time"
+                            description="&lt;p>Blog Post&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            header="HPE Partners with Ryder Cup To Put Data at the Heart of Golf For The First Time"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="test"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-01-20T20:41:02.156Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2018/04/image-norend/Newsroom-HPE_RC-Announcement_Blog.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-01-20T20:41:02.156Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_4dff>
+                    </column_1>
+                    <column_2
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_50f2
+                            jcr:created="{Date}2018-09-05T17:41:27.359Z"
+                            jcr:createdBy="nagle@hpe.com"
+                            jcr:lastModified="{Date}2022-01-20T20:43:57.806Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="arrow-link"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2018/11/golden-state-warriors-partner-with-hewlett-packard-enterprise-to-drive-connected-experiences-for-chase-center"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            header="Golden State Warriors partner with Hewlett Packard Enterprise to drive connected experiences for Chase Center"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-01-20T20:43:57.806Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                fileReference="/content/dam/hpe/newsroom/2018/11/image-norend/Golden-State-Warriors-partner-with-Hewlett-Packard-Enterprise-to-drive-connected-experiences-for-Chase-Center.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-01-20T20:43:57.806Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"/>
+                        </contentblock_50f2>
+                    </column_2>
+                </columncontainercompo>
+            </body-par>
+            <side-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <buttonctaitemcompone
+                    jcr:created="{Date}2018-06-28T13:06:31.075-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:06:46.099-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 1"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_661124859
+                    jcr:created="{Date}2018-06-28T13:06:51.115-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:11.079-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 2"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_606970408
+                    jcr:created="{Date}2018-06-28T13:06:53.400-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:02.336-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 3"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+            </side-par>
+        </main-par>
+        <image
+            jcr:lastModified="{Date}2018-09-05T17:38:02.066Z"
+            jcr:lastModifiedBy="nagle@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/apps/settings/wcm/designs/hpeweb"
+        cq:lastModified="{Date}2022-09-27T08:07:23.932Z"
+        cq:lastModifiedBy="christine.seales@hpe.com"
+        cq:tags="[hpe-newsroom:categories/networking,hpe-newsroom:categories/company---customers]"
+        cq:template="/apps/hpeweb/templates/page-text-heavy"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="KAUST selects HPE to build the Middle East’s most powerful supercomputer"
+        jcr:uuid="91a874b1-9778-41ce-8664-ae571175149d"
+        sling:resourceType="hpeweb/components/pages/page-text-heavy"
+        browserTitle="KAUST selects HPE to build the Middle East’s most powerful supercomputer"
+        changefreq="daily"
+        contentType="Press Release"
+        displayDate="{Date}2022-09-26T10:48:00.000-04:00"
+        metaDescription="King Abdullah University of Science and Technology’s Shaheen III will accelerate scientific discovery and enable AI-at-scale through advanced modeling, simulation, analytics and neural network training capabilities"
+        metaKeywords="HPE, HPE Cray EX, Supercomputer, HPE Saudi Arabia, Artificial Intelligence, King Abdullah University of Science and Technology, KAUST, Data Analysis, HPC, HPE Machine Learning Development Environment"
+        metaOgImage="/content/dam/hpe/newsroom/2022/09/image-norend/kaust-selects-hpe-to-build-the-middle-easts-most-powerful-supercomputer.JPG"
+        metaTwitterCardType="summary_large_image"
+        msmcomponent="/content/hpe/base/blueprint/newsroom/press-release/2022/09/kaust-selects-hpe-to-build-the-middle-easts-most-powerful-supercomputer/jcr:content/main-par/body-par/textonlycomponent_97"
+        navTitle="KAUST selects HPE to build the Middle East’s most powerful supercomputer"
+        pageTitle="KAUST selects HPE to build the Middle East’s most powerful supercomputer"
+        priority="(None)"
+        socialDescription="King Abdullah University of Science and Technology’s Shaheen III will accelerate scientific discovery and enable AI-at-scale through advanced modeling, simulation, analytics and neural network training capabilities"
+        subtitle="King Abdullah University of Science and Technology’s Shaheen III will accelerate scientific discovery and enable AI-at-scale through advanced modeling, simulation, analytics and neural network training capabilities"
+        theme="dark"
+        UAID="ee1c6189-a9e1-44e1-98d6-2173fc50235d"
+        UCID="4765e2d6-6022-4918-8939-779a5a9f37e6">
+        <main-par
+            jcr:lastModified="{Date}2018-06-28T13:09:39.402-07:00"
+            jcr:lastModifiedBy="velazquez@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="hpeweb/components/content/textHeavyComponent"
+            siderail="none">
+            <subtitle
+                jcr:lastModified="{Date}2022-09-26T14:32:35.850Z"
+                jcr:lastModifiedBy="christine.seales@hpe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="hpeweb/components/content/newsroom/newsroomSubtitleComponent"
+                textOnly="SEPTEMBER 26, 2022 • PRESS RELEASE"/>
+            <body-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <imageonlycomponent_c
+                    jcr:created="{Date}2018-06-18T09:06:27.827-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-09-26T14:32:54.410Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/imageOnlyComponent"
+                    fileReference="/content/dam/hpe/newsroom/2022/09/image-norend/kaust-selects-hpe-to-build-the-middle-easts-most-powerful-supercomputer.JPG"
+                    imageAlignment="hpe-image-center"
+                    imageAltText="HPE Guarantees"
+                    topMargin="60"
+                    videoSource="video"
+                    videoType="youtube"/>
+                <textonlycomponent_cd
+                    jcr:created="{Date}2018-06-18T09:12:49.742-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-09-26T14:33:23.574Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    leftPadding="30"
+                    rightPadding="30"
+                    textIsRich="true"
+                    textOnly="&lt;h3>IN THIS ARTICLE&lt;/h3>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>Shaheen III will help advance insights in areas including clean combustion, Red Sea ecosystems, climate events and the Arabian tectonic plate&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>It will be built using the HPE Cray EX supercomputer, a next-generation platform architected to support unprecedented performance and scale, including achieving exaflop speed&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>By combining the HPE Machine Learning Development Environment with key supercomputing technologies, KAUST’s users can easily develop and train AI models faster, and bigger, for increased accuracy&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli
+                    jcr:created="{Date}2018-06-18T09:16:54.243-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-18T09:18:45.987-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <textonlycomponent
+                    jcr:created="{Date}2022-09-26T14:33:29.846Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2022-09-26T14:33:48.371Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;h2>King Abdullah University of Science and Technology’s Shaheen III will accelerate scientific discovery and enable AI-at-scale through advanced modeling, simulation, analytics and neural network training capabilities&lt;/h2>&#xd;&#xa;"/>
+                <textonlycomponent_e9
+                    jcr:created="{Date}2018-06-22T11:24:07.263-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-09-26T14:34:46.326Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Riyadh, Saudi Arabia – September 26, 2022 &lt;/b>– &lt;a href=&quot;http://www.hpe.com/&quot; target=&quot;_blank&quot;>Hewlett Packard Enterprise&lt;/a> (NYSE: HPE) today announced that &lt;a href=&quot;https://www.kaust.edu.sa/en&quot; target=&quot;_blank&quot;>King Abdullah University of Science and Technology&lt;/a> (KAUST) selected HPE to build its next-generation supercomputer, Shaheen III, to deliver state-of-the-art supercomputing and artificial intelligence (AI) capabilities for advancing research in fields such as food, water, energy and the environment.&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;Supercomputing capacity has become increasingly vital to global innovation, industry competitiveness and economic growth. From accelerating vaccine discovery to fight a pandemic, advancing clean energy systems to increase sustainability, to enabling new possibilities in AI, supercomputing is a core technology to solving the world’s most challenging scientific and engineering problems.&lt;br />&#xd;&#xa;&lt;b style=&quot;&quot;>&lt;br />&#xd;&#xa;Shaheen III ushers in a new era of scientific discovery and AI innovation for the Middle East&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;&lt;/b>Shaheen III, set to be 20 times faster than KAUST’s existing system, will be the most powerful supercomputer in the Middle East to address critical areas that have a societal and environmental impact. Built by HPE, the world’s leading supercomputer provider, the new Shaheen III system will revolutionize KAUST’s ability to process vast amounts of data at immense speed and scale, enabling its users to unlock discoveries that it could not have before, and realize new potentials for AI. &lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;Shaheen III will be built using the HPE Cray EX supercomputer, a next-generation platform architected to support unprecedented performance and scale, including achieving exaflop speed. The HPE Cray EX supercomputer, which delivers advanced end-to-end capabilities in compute and accelerated compute, networking, storage and software solutions, allows KAUST to apply significant computational power toward modeling and simulating scientific problems faster and with higher accuracy. &lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <pullquote
+                    jcr:created="{Date}2022-09-26T14:35:01.301Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2022-09-26T14:35:32.584Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution=" "
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>Shaheen III will revolutionize KAUST’s ability to process vast amounts of data at immense speed and scale&lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2022-09-26T14:35:32.584Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote>
+                <textonlycomponent_5d
+                    jcr:created="{Date}2018-06-18T09:21:51.280-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-09-26T14:37:12.460Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>HPE’s supercomputing capabilities also enable AI-at-scale by combining its massive computing power and specialized capabilities that are required to build machine learning models and train large amounts of data. With the Shaheen III design, HPE is further fueling KAUST’s AI-at-scale mission by integrating the HPE Machine Learning Development Environment, an optimized software stack for model training and development. By combining the machine learning software platform with key supercomputing technologies, KAUST’s users can easily develop and train AI models faster, and bigger, for increased accuracy.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; “At HPE, our purpose is to advance the way people live and work, and we are honored to help fuel Saudi Arabia’s Vision 2030 for a new era of innovation by empowering KAUST with a state-of-the-art supercomputer,” said Antonio Neri, president and CEO of Hewlett Packard Enterprise. “Shaheen III will significantly accelerate research at KAUST by applying world-leading supercomputing and AI-at-scale capabilities to increase accuracy in analyses and solve complex scientific questions.”&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; “The new HPE Cray EX system will allow us to conduct research on a larger scale, resulting in significant scientific, economic and social advances,” said Dr. Tony F. Chan, President of KAUST. “In line with &lt;a href=&quot;https://vision2030.gov.sa/en&quot; target=&quot;_blank&quot;>Vision 2030&lt;/a>, we strive to meet the ever-increasing demands of our active and solutions-driven faculty, and also those of external partners, for faster and more efficient computing resources. KAUST supercomputing resources are used by more than half of our faculty, students, postdoctoral students and researchers, and researchers from more than 20 external organizations in the Kingdom.”&lt;br>&#xd;&#xa; &lt;b>&lt;br>&#xd;&#xa;Accelerating research and developments in energy, environment, healthcare and bioengineering&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/b>Shaheen III will be fully operational in 2023. The new supercomputer will process unique data sets in focus areas such as clean combustion, Red Sea ecosystems, climate modelling and the Arabian tectonic plate, while delivering analyses, models and simulations at a superior level of resolution. KAUST’s users plan to target a range of applications, including the design of new materials for low-cost/high-performing solar photovoltaics; new industrial catalytic processes to increase energy efficiency while reducing waste; personalized preventative health care and the discovery of new medicines; increased hydrocarbon recovery with reduced environmental and economic costs; and the use of genetic, genomic and epigenetic approaches to enhance plants’ drought tolerance and resiliency in desert environments.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; Equipped with more than 2,800 NVIDIA Grace Hopper Superchips, tightly coupled CPU/GPU accelerators, the Shaheen supercomputer will enable the development of novel and scalable techniques in core AI fields such as deep learning, reinforcement learning, federated learning, visual computing, and natural language processing, and also provide unique opportunities to further scale traditional HPC workloads. This GPU-accelerated partition will also facilitate the broad use of applied AI in science and engineering applications, including computational chemistry, biology and material science, which previously were unfeasible given the large-scale nature of data sets produced and used at KAUST. Applications will increase in coming years as Shaheen III is expected to deliver 100 petaflop/s of performance and outstanding AI modelling capabilities.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; “A supercomputer like Shaheen III is a universal scientific instrument employed by scientists and engineers in every discipline for tasks such as simulation, analysis of experimental data, learning from observed data, and efficient data storage and retrieval,” said KAUST Extreme Research Computing Center (ECRC) Director Dr. David Keyes, professor of applied mathematics and computational science. “It is the ultimate scientific ‘watering hole’ at which researchers of different disciplines exchange techniques and software tools. An advance in one field spurs advances in several.”&lt;/span>&lt;/p>&#xd;&#xa;"/>
+                <pullquote_349b
+                    jcr:created="{Date}2018-06-18T09:23:47.197-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-09-26T14:37:31.515Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution=" "
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>Applications will increase in coming years as Shaheen III is expected to deliver 100 petaflop/s of performance&lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2022-09-26T14:37:31.515Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote_349b>
+                <textonlycomponent_97
+                    jcr:created="{Date}2018-06-22T11:22:31.557-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-09-27T08:07:23.919Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>As one of the world’s leading supercomputing centers, KAUST is building on the success of its first supercomputer, Shaheen I, launched in 2009, followed by &lt;a href=&quot;https://www.hpc.kaust.edu.sa/content/shaheen-ii&quot; target=&quot;_blank&quot;>Shaheen II&lt;/a>, a Cray-based supercomputer 25 times faster than its predecessor at 5.54 petaflop/s.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; “Shaheen II has delivered 6.8 billion computing core-hours to more than 1,467 users, resulting in data used in about 1,030 publications to date,” said KAUST Research Computing Core Labs Director Dr. Jysoo Lee. “Shaheen III will ensure that the KAUST community will maintain its edge as a world-class university in computational sciences.”&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; “AMD is committed to the advancement of scientific research and development in high-performance computing, driving the technology behind computational modeling, simulation and AI,” said Forrest Norrod, Senior Vice President and General Manager, Data Center Solutions Business Group, AMD. “Powered by AMD EPYC processors, Shaheen III will enable new discoveries that will have regional and global impacts across climate, clean energy and tectonic plate modeling, all made possible by the collaboration between KAUST scientists and HPE.”&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; “As we push deeper into the era of Exascale AI, supercomputers like Shaheen III are increasingly central to transforming society,” said Ian Buck, vice president of hyperscale and HPC at NVIDIA. “Enabled by our deep collaboration with KAUST and HPE, and the adoption of our new Grace Hopper Superchip, Shaheen III will be a key scientific instrument that offers unrivaled performance to help tackle the world’s toughest challenges.”&amp;nbsp;&lt;br>&#xd;&#xa; &lt;b>&lt;br>&#xd;&#xa;About Shaheen III&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/b>The Shaheen III supercomputer is designed with 25 HPE Cray EX supercomputer cabinets, which deliver end-to-end, cutting-edge technologies for the exascale era to efficiently harness insights from vast, ever-increasing amounts of complex data, while delivering a substantial increase in performance, accuracy and speed. When fully deployed, the system will comprise:&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa;&lt;/span>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>HPE Slingshot, delivering a high-performance Ethernet fabric design for next-generation HPC and AI solutions. HPE Slingshot provides high bandwidth, low latency and industry-leading congestion management to larger and more data-intensive HPC and AI workloads.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>Sophisticated closed-loop liquid cooling technology built in to the HPE Cray EX cabinets to efficiently remove heat from high-power devices, including CPUs, GPUs, memory and switches.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>Advanced support for computational modeling and simulation with next-generation AMD EPYC™ processors, code-named “Genoa.” Each HPE Cray EX cabinet is equipped with 4608 CPU compute nodes, with two AMD EPYC™ processors, amounting to 884,736 cores in the entire system.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>Advanced support for AI, analytics and other compute-intensive workloads using NVIDIA HPC and AI platforms. Seven HPE Cray EX4000 cabinets will include 704 GPU compute nodes, and each node will be equipped with 4 NVIDIA Grace Hopper Superchips, CPU/GPU modules.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>Expansion of Shaheen II’s existing storage to support complex workloads&amp;nbsp;in modelling, simulation and AI using HPE’s&amp;nbsp;&lt;a href=&quot;https://buy.hpe.com/us/en/enterprise-solutions/storage-solutions/cray-clusterstor-storage-systems/cray-clusterstor-e1000-storage-systems/cray-clusterstor-e1000-storage-systems/p/1012842049&quot; target=&quot;_blank&quot;>Cray ClusterStor E1000 storage&lt;/a> system by adding 50 petabytes of storage capacity.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;a href=&quot;https://www.hpe.com/us/en/solutions/artificial-intelligence/machine-learning-development-environment.html&quot; target=&quot;_blank&quot;>HPE Machine Learning Development Environment&lt;/a>, an enterprise-grade machine learning training platform built on the open-source foundation laid by Determined AI to help research teams focus on innovation by removing complexity and making it easy to set up, manage, secure and share AI compute clusters. These new capabilities will allow users to train models faster, build more accurate models, and track and reproduce experiments.&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"/>
+                <textonlycomponent_fe
+                    jcr:created="{Date}2018-06-18T09:28:54.456-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-09-26T14:43:14.331Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>About Hewlett Packard Enterprise&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>Hewlett Packard Enterprise (NYSE: HPE) is the global edge-to-cloud company that helps organizations accelerate outcomes by unlocking value from all their data, everywhere. Built on decades of reimagining the future and innovating to advance the way people live and work, HPE delivers unique, open and intelligent technology solutions as a service. With offerings spanning Cloud Services, Compute, High Performance Computing &amp;amp; AI, Intelligent Edge, Software, and Storage, HPE provides a consistent experience across all clouds and edges, helping customers develop new business models, engage in new ways, and increase operational performance. For more information, visit: &lt;a href=&quot;http://www.hpe.com/&quot; target=&quot;_blank&quot;>www.hpe.com&lt;/a>&lt;br />&#xd;&#xa;&lt;b>&lt;br />&#xd;&#xa;About KAUST&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;&lt;/b>Established in 2009, KAUST is a graduate research university devoted to finding solutions for some of the world’s most pressing scientific and technological challenges in the areas of food and health, water, energy, environment, and the digital domain. The University brings together the best minds and ideas from around the world with the goal of advancing science and technology through distinctive, collaborative research. KAUST is a catalyst for innovation, economic development and social prosperity in Saudi Arabia and the world. Visit &lt;a href=&quot;http://www.kaust.edu.sa/&quot; target=&quot;_blank&quot;>www.kaust.edu.sa&lt;/a> to learn more.&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;Editorial Contact:&lt;br />&#xd;&#xa;&lt;b style=&quot;&quot;>Alastair McCormick&lt;br />&#xd;&#xa;&lt;/b>&lt;a href=&quot;mailto:Alastair.mccormick@hpe.com&quot; target=&quot;_blank&quot;>Alastair.mccormick@hpe.com&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <textonlycomponent_bf
+                    jcr:created="{Date}2018-07-02T13:12:59.755-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-10-12T16:10:50.633Z"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    textOnly="&lt;h2>RELATED NEWS&lt;/h2>&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli_540225213
+                    jcr:created="{Date}2018-06-18T10:12:48.909-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:22:53.902-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <columncontainercompo
+                    jcr:created="{Date}2018-07-02T13:14:23.594-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:15:08.106-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/columnContainerComponent"
+                    columns="column-content-3">
+                    <column_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_7c25
+                            jcr:created="{Date}2018-07-02T13:15:28.984-07:00"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-09-26T14:44:42.914Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/05/hewlett-packard-enterprise-ushers-in-new-era-with-worlds-first-and-fastest-exascale-supercomputer-frontier-for-the-us-department-of-energys-oak-ridge-national-laboratory"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="Hewlett Packard Enterprise ushers in new era with world’s first and fastest exascale supercomputer “Frontier” for the U.S. Department of Energy’s Oak Ridge National Laboratory"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Hewlett Packard Enterprise ushers in new era with world’s first and fastest exascale supercomputer “Frontier” for the U.S. Department of Energy’s Oak Ridge National Laboratory"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-09-26T14:44:42.914Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2022/05/image-norend/hpe-ushers-in-new-era-with-worlds-first-and-fastest-exascale-supercomputer-frontier-for-the-us-doe-oak-ridge-national-laboratory.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-09-26T14:44:42.914Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_7c25>
+                    </column_0>
+                    <column_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_4dff
+                            jcr:created="{Date}2018-09-21T21:01:47.387Z"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-09-26T14:46:12.803Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/07/mcmaster-university-cracks-genome-sequencing-to-fight-covid-19-and-other-infectious-diseases-with-hewlett-packard-enterprise"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="McMaster University cracks genome sequencing to fight COVID-19 and other infectious diseases with Hewlett Packard Enterprise"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="McMaster University cracks genome sequencing to fight COVID-19 and other infectious diseases with Hewlett Packard Enterprise"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-09-26T14:46:12.803Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2022/07/image-norend/mcmaster-university-cracks-genome-sequencing-to-fight-covid-19-and-other-infectious-diseases-with-hpe.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-09-26T14:46:12.803Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_4dff>
+                    </column_1>
+                    <column_2
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_50f2
+                            jcr:created="{Date}2018-09-05T17:41:27.359Z"
+                            jcr:createdBy="nagle@hpe.com"
+                            jcr:lastModified="{Date}2022-09-26T14:51:21.917Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/04/city-university-of-hong-kong-advances-scientific-research-with-up-to-10x-faster-high-performance-computing-cluster-from-hewlett-packard-enterprise"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="City University of Hong Kong advances scientific research with up to 10X faster high performance computing cluster from Hewlett Packard Enterprise"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="City University of Hong Kong advances scientific research with up to 10X faster high performance computing cluster from Hewlett Packard Enterprise"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-09-26T14:51:21.917Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                fileReference="/content/dam/hpe/newsroom/2022/04/image-norend/city-university-of-hong-kong-advances-scientific-research-with-up-to-10x-faster-high-performance-computing-cluster-from-hpe.JPG"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-09-26T14:51:21.917Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"/>
+                        </contentblock_50f2>
+                    </column_2>
+                </columncontainercompo>
+            </body-par>
+            <side-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <buttonctaitemcompone
+                    jcr:created="{Date}2018-06-28T13:06:31.075-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:06:46.099-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 1"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_661124859
+                    jcr:created="{Date}2018-06-28T13:06:51.115-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:11.079-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 2"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_606970408
+                    jcr:created="{Date}2018-06-28T13:06:53.400-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:02.336-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 3"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+            </side-par>
+        </main-par>
+        <image
+            jcr:lastModified="{Date}2018-09-05T17:38:02.066Z"
+            jcr:lastModifiedBy="nagle@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+    </jcr:content>
+</jcr:root>

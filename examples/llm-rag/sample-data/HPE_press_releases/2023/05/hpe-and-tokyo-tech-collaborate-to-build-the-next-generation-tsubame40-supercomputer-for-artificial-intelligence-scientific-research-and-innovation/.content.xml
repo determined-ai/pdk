@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/apps/settings/wcm/designs/hpeweb"
+        cq:lastModified="{Date}2023-05-19T15:21:50.426Z"
+        cq:lastModifiedBy="christine.seales@hpe.com"
+        cq:tags="[hpe-newsroom:categories/networking]"
+        cq:template="/apps/hpeweb/templates/page-text-heavy"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="HPE and Tokyo Tech collaborate to build the next generation TSUBAME4.0 supercomputer for artificial intelligence, scientific research, and innovation"
+        jcr:uuid="90d8e24a-fa16-462c-999a-05f5e5190e9b"
+        sling:resourceType="hpeweb/components/pages/page-text-heavy"
+        browserTitle="HPE and Tokyo Tech collaborate to build the next generation TSUBAME4.0 supercomputer for artificial intelligence, scientific research, and innovation"
+        changefreq="daily"
+        contentType="Press Release"
+        displayDate="{Date}2023-05-19T13:00:00.000-04:00"
+        metaDescription="TSUBAME4.0, which will be fully operational in spring of 2024, will deliver 20 times more accelerated compute performance than its predecessor to accelerate AI-driven cutting-edge research and convergence science"
+        metaKeywords="HPE, HPE Cray, HPE Cray XD6500, Tokyo Tech, Tokyo Institute of Technology, TSUBAME, TSUBAME4.0"
+        metaOgImage="/content/dam/hpe/newsroom/2023/05/image-norend/hpe-and-tokyo-tech-collaborate-to-build-the-next-generation-tsubame40-supercomputer-for-ai-scientific-research-and-innovation.png"
+        metaTwitterCardType="summary_large_image"
+        msmcomponent="/content/hpe/base/blueprint/newsroom/press-release/2023/05/hpe-and-tokyo-tech-collaborate-to-build-the-next-generation-tsubame40-supercomputer-for-artificial-intelligence-scientific-research-and-innovation/jcr:content/main-par/body-par/columncontainercompo/column_2/contentblock_7c25_co"
+        navTitle="HPE and Tokyo Tech collaborate to build the next generation TSUBAME4.0 supercomputer for artificial intelligence, scientific research, and innovation"
+        pageTitle="HPE and Tokyo Tech collaborate to build the next generation TSUBAME4.0 supercomputer for artificial intelligence, scientific research, and innovation"
+        priority="(None)"
+        socialDescription="TSUBAME4.0, which will be fully operational in spring of 2024, will deliver 20 times more accelerated compute performance than its predecessor to accelerate AI-driven cutting-edge research and convergence science"
+        subtitle="TSUBAME4.0, which will be fully operational in spring of 2024, will deliver 20 times more accelerated compute performance than its predecessor to accelerate AI-driven cutting-edge research and convergence science"
+        theme="dark">
+        <main-par
+            jcr:lastModified="{Date}2018-06-28T13:09:39.402-07:00"
+            jcr:lastModifiedBy="velazquez@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="hpeweb/components/content/textHeavyComponent"
+            siderail="none">
+            <subtitle
+                jcr:lastModified="{Date}2023-05-19T14:35:56.849Z"
+                jcr:lastModifiedBy="christine.seales@hpe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="hpeweb/components/content/newsroom/newsroomSubtitleComponent"
+                textOnly="MAY 19, 2023 • PRESS RELEASE"/>
+            <body-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <imageonlycomponent_c
+                    jcr:created="{Date}2018-06-18T09:06:27.827-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-05-19T14:37:25.927Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/imageOnlyComponent"
+                    fileReference="/content/dam/hpe/newsroom/2023/05/image-norend/hpe-and-tokyo-tech-collaborate-to-build-the-next-generation-tsubame40-supercomputer-for-ai-scientific-research-and-innovation.png"
+                    imageAlignment="hpe-image-center"
+                    imageAltText="HPE Guarantees"
+                    topMargin="60"
+                    videoSource="video"
+                    videoType="youtube"/>
+                <textonlycomponent_cd
+                    jcr:created="{Date}2018-06-18T09:12:49.742-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-05-19T14:48:00.494Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    leftPadding="30"
+                    rightPadding="30"
+                    textIsRich="true"
+                    textOnly="&lt;h3>IN THIS ARTICLE&lt;/h3>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>TSUBAME4.0, which was procured under the Japanese government procurement rules and was awarded to HPE Japan, will be fully operational in spring of 2024&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>TSUBAME4.0 will be built using HPE Cray XD6500 supercomputers to run modeling and simulation workloads required for complex scientific research&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>TSUBAME4.0 will provide significantly higher performance to address the computational demands of many users, serving as a &amp;quot;supercomputer for everyone”&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli
+                    jcr:created="{Date}2018-06-18T09:16:54.243-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-18T09:18:45.987-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <textonlycomponent
+                    jcr:created="{Date}2023-05-19T14:48:17.066Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2023-05-19T14:52:55.940Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;h2>TSUBAME4.0, which will be fully operational in spring of 2024, will deliver 20 times more accelerated compute performance than its predecessor to accelerate AI-driven cutting-edge research and convergence science&lt;/h2>&#xd;&#xa;"/>
+                <textonlycomponent_e9
+                    jcr:created="{Date}2018-06-22T11:24:07.263-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-05-19T14:56:41.965Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>TOKYO, Japan – May 19, 2023 –&lt;/b> &lt;a href=&quot;http://www.hpe.com&quot; target=&quot;_blank&quot;>Hewlett Packard Enterprise&lt;/a> (NYSE: HPE) today announced that it was selected by &lt;a href=&quot;https://www.titech.ac.jp/english&quot; target=&quot;_blank&quot;>Tokyo Institute of Technology&lt;/a> (Tokyo Tech) Global Scientific Information and Computing Center (GSIC) to build its next-generation supercomputer, TSUBAME4.0, to accelerate AI-driven scientific discovery in medicine, materials science, climate research, and turbulence in urban environments.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;Tokyo Tech is one of the world’s leading universities in science and technology. With the TSUBAME4.0 supercomputer, users will have the ability to train more AI models and run applications in computational science and analytics, simultaneously, to augment research efforts and improve productivity.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;TSUBAME4.0, which was procured under the Japanese government procurement rules and was awarded to HPE Japan, will be fully operational in spring of 2024. The system will be based in a newly constructed facility in Tokyo Tech’s Suzukakedai campus.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;TSUBAME4.0 will be built using HPE Cray XD6500 supercomputers, which provide maximum performance and specialized capabilities to run modeling and simulation workloads required for complex scientific research. The HPE Cray XD6500 supercomputers are also highly dense and purpose-built to support accelerated compute that is optimized to power AI, analytics, and image-intensive applications.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;“TSUBAME has been supporting our research on cyclic peptide drug discovery, which is anticipated to become the next-generation medicine,” said Professor Yutaka Akiyama, School of Computing, Tokyo Tech. “TSUBAME has always been our partner in the daring challenges of achieving world’s first. It has been supporting reproduction of biophysical phenomena with hundred-fold larger simulations, and through exhaustive calculation on hundreds of cases has generated quantitative proof of predictive ability. With the significantly accelerated TSUBAME4.0, we look forward to its support in realizing intelligent drug discovery through large-scale molecular simulation and fusing it with deep learning technology in generating predictive models.”&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <pullquote
+                    jcr:created="{Date}2023-05-19T14:57:22.156Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2023-05-19T14:58:23.700Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution="Professor Yutaka Akiyama, School of Computing, Tokyo Tech"
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>“TSUBAME has always been our partner in the daring challenges of achieving world’s first” &lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2023-05-19T14:58:23.700Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote>
+                <textonlycomponent_5d
+                    jcr:created="{Date}2018-06-18T09:21:51.280-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-05-19T14:59:52.308Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>TSUBAME4.0 will achieve a theoretical peak performance of 66.8 petaflops at 64-bit double precision. Additionally, the system will reach 952 petaflops at 16-bit half-precision, delivering 20 times more accelerated compute performance than TSUBAME3.0, its predecessor. TSUBAME4.0 will provide significantly higher performance to address the computational demands of many users, serving as a &amp;quot;supercomputer for everyone”.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;“National research centers across the globe rely on supercomputing to drive science, engineering, and AI initiatives to understand complex phenomena and accelerate innovation,” said Justin Hotard, executive vice president and general manager, HPC, AI &amp;amp; Labs, at HPE. “Tokyo Tech is a powerful example of an organization that continues to invest in supercomputing and opens it to a broader community to enable cutting-edge research and new capabilities in AI. We are proud to continue our collaboration with Tokyo Tech and NVIDIA to build TSUBAME4.0, which features HPE Cray supercomputing innovation to deliver the massive performance required to augment Tokyo Tech’s ongoing scientific and AI-driven missions.”&lt;/span>&lt;/p>&#xd;&#xa;"/>
+                <pullquote_349b
+                    jcr:created="{Date}2018-06-18T09:23:47.197-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-05-19T15:00:48.196Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution="Justin Hotard, executive vice president and general manager, HPC, AI &amp; Labs, at HPE"
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>“Tokyo Tech is a powerful example of an organization that continues to invest in supercomputing and opens it to a broader community to enable cutting-edge research and new capabilities in AI” &lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2023-05-19T15:00:48.196Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote_349b>
+                <textonlycomponent_97
+                    jcr:created="{Date}2018-06-22T11:22:31.557-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-05-19T15:02:36.488Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>Since the launch of TSUBAME1.0 in April 2006, the TSUBAME supercomputers have provided computing resources to global industry, academia, and government organizations as “everyone’s supercomputer”. GSIC of Tokyo Tech is the first university to adopt GPU-enabled supercomputers&lt;sup>1&lt;/sup>, has gained recognition for delivering one of the most advanced, cutting-edge supercomputer centers in the world. &lt;br>&#xd;&#xa;&lt;b>&lt;br>&#xd;&#xa;About TSUBAME4.0&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;/b>TSUBAME4.0 will be built with HPE Cray XD6500 supercomputers, consisting of 240 nodes, and equipped with two 4th Gen AMD EPYC™ processors, four NVIDIA H100 Tensor Core GPUs, and 768 GiB of main memory. TSUBAME4.0 hardware and software are designed to leverage and augment the current TSUBAME3.0 capabilities as a GPU-based supercomputer with enhanced usability through various software enhancements.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;“NVIDIA’s computing platform drives acceleration at every scale for AI and HPC,” said Ian Buck, vice president of HPC and Hyperscale Computing, NVIDIA. “Tokyo Tech’s TSUBAME4.0 supercomputer, which will be built by HPE and powered by NVIDIA H100 GPUs, NVIDIA Quantum-2 InfiniBand and our AI and HPC software, will empower researchers and scientists to tackle some of the world’s most complex challenges and drive breakthroughs that can benefit society as a whole.”&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;The TSUBAME4.0 configuration is similar to the existing TSUBAME series, which involves the x86_64 CPUs and CUDA compatible GPUs. This will enable the continued use of existing program assets and the fast-paced adoption of cutting-edge computational science and technology. &lt;br>&#xd;&#xa;&lt;b>&lt;br>&#xd;&#xa;About Tokyo Institute of Technology&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;/b>Tokyo Tech stands at the forefront of research and higher education as the leading university for science and technology in Japan. Tokyo Tech researchers excel in fields ranging from materials science to biology, computer science, and physics. Founded in 1881, Tokyo Tech hosts over 10,000 undergraduate and graduate students per year, who develop into scientific leaders and some of the most sought-after engineers in industry. Embodying the Japanese philosophy of “monotsukuri,” meaning “technical ingenuity and innovation,” the Tokyo Tech community strives to contribute to society through high-impact research. &lt;a href=&quot;https://www.titech.ac.jp/english/&quot; target=&quot;_blank&quot;>https://www.titech.ac.jp/english/&lt;/a>&lt;/span> &lt;/p>&#xd;&#xa;"/>
+                <textonlycomponent_fe
+                    jcr:created="{Date}2018-06-18T09:28:54.456-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-05-19T15:05:44.404Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>About Hewlett Packard Enterprise&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>Hewlett Packard Enterprise (NYSE: HPE) is the global edge-to-cloud company that helps organizations accelerate outcomes by unlocking value from all of their data, everywhere. Built on decades of reimagining the future and innovating to advance the way people live and work, HPE delivers unique, open and intelligent technology solutions as a service.  With offerings spanning Cloud Services, Compute, High Performance Computing &amp;amp; AI, Intelligent Edge, Software, and Storage, HPE provides a consistent experience across all clouds and edges, helping customers&amp;nbsp;develop&amp;nbsp;new business models, engage in new ways, and increase operational performance. For more information, visit:&amp;nbsp;&lt;a href=&quot;http://www.hpe.com/&quot; target=&quot;_blank&quot;>www.hpe.com&lt;/a>&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; Editorial Contact:&lt;br>&#xd;&#xa; &lt;b>eri.yagihashi@hpe.com&lt;br>&#xd;&#xa; &lt;/b>&lt;a href=&quot;mailto:eri.yagihashi@hpe.com&quot; target=&quot;_blank&quot;>eri.yagihashi@hpe.com&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-small&quot;>&lt;sup>1&lt;/sup> TSUBAME1.2 is the first supercomputer to adopt GPUs. Source: &lt;a href=&quot;https://www.nvidia.com/content/pdf/sc_2010/theater/matsuoka_sc10.pdf&quot; target=&quot;_blank&quot;>https://www.nvidia.com/content/pdf/sc_2010/theater/matsuoka_sc10.pdf&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <textonlycomponent_bf
+                    jcr:created="{Date}2018-07-02T13:12:59.755-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-10-12T16:10:50.633Z"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    textOnly="&lt;h2>RELATED NEWS&lt;/h2>&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli_540225213
+                    jcr:created="{Date}2018-06-18T10:12:48.909-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:22:53.902-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <columncontainercompo
+                    jcr:created="{Date}2018-07-02T13:14:23.594-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:15:08.106-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/columnContainerComponent"
+                    columns="column-content-3">
+                    <column_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_7c25
+                            jcr:created="{Date}2018-07-02T13:15:28.984-07:00"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2023-05-19T15:11:01.436Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/news-advisory/2023/03/4-ways-supercomputing-will-change-the-world"
+                            description="&lt;p>News Advisory&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="4 ways supercomputing will change the world"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="4 ways supercomputing will change the world"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2023-05-19T15:11:01.436Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2023/03/image-norend/delivering-a-new-era-of-insights-with-the-worlds-most-powerful-hpc-and-ai-solutions.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2023-05-19T15:11:01.436Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_7c25>
+                    </column_0>
+                    <column_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_7c25_co
+                            jcr:created="{Date}2018-07-02T13:15:28.984-07:00"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2023-05-19T15:17:42.297Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2023/01/hewlett-packard-enterprise-acquires-pachyderm-to-expand-ai-at-scale-capabilities-with-reproducible-ai"
+                            description="&lt;p>Press Release&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="Hewlett Packard Enterprise acquires Pachyderm to expand AI-at-scale capabilities with reproducible AI"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Hewlett Packard Enterprise acquires Pachyderm to expand AI-at-scale capabilities with reproducible AI"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2023-05-19T15:17:42.297Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2023/01/image-norend/hewlett-packard-enterprise-acquires-pachyderm-to-expand-ai-at-scale-capabilities-with-reproducible-ai.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2023-05-19T15:17:42.297Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_7c25_co>
+                    </column_1>
+                    <column_2
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_7c25_co
+                            jcr:created="{Date}2018-07-02T13:15:28.984-07:00"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2023-05-19T15:19:48.084Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/11/hewlett-packard-enterprise-extends-supercomputing-to-the-enterprise-with-new-hpe-cray-portfolio"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="Hewlett Packard Enterprise extends supercomputing to the enterprise with new HPE Cray portfolio"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Hewlett Packard Enterprise extends supercomputing to the enterprise with new HPE Cray portfolio"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2023-05-19T15:19:48.084Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2022/11/image-norend/hewlett-packard-enterprise-extends-supercomputing-to-the-enterprise-with-new-hpe-cray-portfolio.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2023-05-19T15:19:48.084Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_7c25_co>
+                    </column_2>
+                </columncontainercompo>
+            </body-par>
+            <side-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <buttonctaitemcompone
+                    jcr:created="{Date}2018-06-28T13:06:31.075-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:06:46.099-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 1"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_661124859
+                    jcr:created="{Date}2018-06-28T13:06:51.115-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:11.079-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 2"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_606970408
+                    jcr:created="{Date}2018-06-28T13:06:53.400-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:02.336-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 3"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+            </side-par>
+        </main-par>
+        <image
+            jcr:lastModified="{Date}2018-09-05T17:38:02.066Z"
+            jcr:lastModifiedBy="nagle@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+    </jcr:content>
+</jcr:root>

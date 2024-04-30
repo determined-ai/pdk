@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/apps/settings/wcm/designs/hpeweb"
+        cq:lastModified="{Date}2022-04-28T19:43:33.318Z"
+        cq:lastModifiedBy="christine.seales@hpe.com"
+        cq:tags="[hpe-newsroom:categories/cloud,hpe-newsroom:categories/company---customers]"
+        cq:template="/apps/hpeweb/templates/page-text-heavy"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Korea Customs Service selects HPE Ezmeral to advance smuggler crackdown and inform policy decisions"
+        jcr:uuid="e28415fe-42e7-488e-8b69-dec4c769bde8"
+        sling:resourceType="hpeweb/components/pages/page-text-heavy"
+        browserTitle="Korea Customs Service selects HPE Ezmeral to advance smuggler crackdown and inform policy decisions"
+        changefreq="daily"
+        contentType="Press Release"
+        displayDate="{Date}2022-04-28T15:42:00.000-04:00"
+        metaDescription="Hybrid analytics and data science platform enabled KCS to identify $34 million in new revenue and save $24 million in operational cost by leveraging insights from real-time unified data sources"
+        metaKeywords="HPE, HPE Korea, Korea Customs Office, HPE Ezmeral, Edge to cloud"
+        metaOgImage="/content/dam/hpe/newsroom/2022/04/image-norend/korea-customs-service-selects-hpe-ezmeral-to-advance-smuggler-crackdown-and-inform-policy-decisions.jpg"
+        metaTwitterCardType="summary_large_image"
+        msmcomponent="/content/hpe/base/blueprint/newsroom/press-release/2022/04/korea-customs-service-selects-hpe-ezmeral-to-advance-smuggler-crackdown-and-inform-policy-decisions/jcr:content/main-par/body-par/columncontainercompo/column_2/contentblock_50f2"
+        navTitle="Korea Customs Service selects HPE Ezmeral to advance smuggler crackdown and inform policy decisions"
+        pageTitle="Korea Customs Service selects HPE Ezmeral to advance smuggler crackdown and inform policy decisions"
+        priority="(None)"
+        socialDescription="Hybrid analytics and data science platform enabled KCS to identify $34 million in new revenue and save $24 million in operational cost by leveraging insights from real-time unified data sources"
+        subtitle="Hybrid analytics and data science platform enabled KCS to identify $34 million in new revenue and save $24 million in operational cost by leveraging insights from real-time unified data sources"
+        theme="dark"
+        UAID="d1ccaf30-18c9-4820-8ab3-2e2345893976"
+        UCID="773df462-b684-4f88-a52c-1f71815df5c8">
+        <main-par
+            jcr:lastModified="{Date}2018-06-28T13:09:39.402-07:00"
+            jcr:lastModifiedBy="velazquez@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="hpeweb/components/content/textHeavyComponent"
+            siderail="none">
+            <subtitle
+                jcr:lastModified="{Date}2022-04-28T19:32:56.831Z"
+                jcr:lastModifiedBy="christine.seales@hpe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="hpeweb/components/content/newsroom/newsroomSubtitleComponent"
+                textOnly="APRIL 28, 2022 • PRESS RELEASE"/>
+            <body-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <imageonlycomponent_c
+                    jcr:created="{Date}2018-06-18T09:06:27.827-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-04-28T19:33:01.407Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/imageOnlyComponent"
+                    fileReference="/content/dam/hpe/newsroom/2022/04/image-norend/korea-customs-service-selects-hpe-ezmeral-to-advance-smuggler-crackdown-and-inform-policy-decisions.jpg"
+                    imageAlignment="hpe-image-center"
+                    imageAltText="HPE Guarantees"
+                    topMargin="60"
+                    videoSource="video"
+                    videoType="youtube"/>
+                <textonlycomponent_cd
+                    jcr:created="{Date}2018-06-18T09:12:49.742-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-04-28T19:33:24.263Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    leftPadding="30"
+                    rightPadding="30"
+                    textIsRich="true"
+                    textOnly="&lt;h3>IN THIS ARTICLE&lt;/h3>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>KCS will use the HPE Ezmeral Data Fabric to capture and analyze data from a variety of sources to support customs use cases, including an initiative to reduce smuggling&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>The platform will enable KCS to support policy design across all of Korea’s government bodies by providing customized information on trade and industry trends or transaction patterns&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli
+                    jcr:created="{Date}2018-06-18T09:16:54.243-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-18T09:18:45.987-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <textonlycomponent
+                    jcr:created="{Date}2022-04-28T19:33:29.778Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2022-04-28T19:33:42.958Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;h2>Hybrid analytics and data science platform enabled KCS to identify $34 million in new revenue and save $24 million in operational cost by leveraging insights from real-time unified data sources&lt;/h2>&#xd;&#xa;"/>
+                <textonlycomponent_e9
+                    jcr:created="{Date}2018-06-22T11:24:07.263-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-04-28T19:35:21.400Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>SEOUL, South Korea – April 28, 2022&lt;/b> – &lt;a href=&quot;http://www.hpe.com&quot; target=&quot;_blank&quot;>Hewlett Packard Enterprise&lt;/a> (NYSE: HPE) today announced that the &lt;a href=&quot;https://www.customs.go.kr/english/main.do&quot; target=&quot;_blank&quot;>Korea Customs Service&lt;/a> (KCS) has selected the hybrid analytics and data science platform &lt;a href=&quot;https://www.hpe.com/us/en/software.html&quot; target=&quot;_blank&quot;>HPE Ezmeral&lt;/a> to accelerate decision making, increase tax revenues and reduce operational costs. KCS will use the &lt;a href=&quot;https://www.hpe.com/us/en/software/ezmeral-data-fabric.html&quot; target=&quot;_blank&quot;>HPE Ezmeral Data Fabric&lt;/a> to capture and analyze data from a variety of sources to support customs use cases, including an initiative to reduce smuggling, and pan-governmental responsibilities, such as policy design.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;KCS is the administrative agency of the Republic of Korea in charge of tariffs and customs clearance with the mission to protect national finance and economy, prevent the inflow of hazardous goods, and to promote legitimate international trade and travel. KCS’ goal was to increase its effectiveness and efficiency in executing on this mission by integrating and analyzing the growing volume of trade data – such as export and import transactions or trade agreements – as well as data from other government bodies, and external data.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;The &lt;a href=&quot;https://www.hpe.com/us/en/software/ezmeral-data-fabric.html&quot; target=&quot;_blank&quot;>HPE Ezmeral Data Fabric&lt;/a> gives the data analysts at KCS a unified real-time access to all relevant sources of internal and external, structured and&amp;nbsp;unstructured data – including, for example, customs and trade data bases, scanned documents, photos, or mass data such as system logs. Moreover, HPE Ezmeral provides a catalogue of pre-integrated analytics and AI tools which can be installed with a few clicks. As a result, data analysts can, within minutes, combine the relevant data sources and tools required to deploy a new use case.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;With help of HPE Ezmeral, KCS expects to increase smuggler crackdown by 5% every year, which corresponds to a tax revenue of roughly 42 billion Korean Republic wons (KRW), or $34 million US-dollars. The agency also expects to save about KRW 30 billion (USD 24 million) in operation costs by increasing the efficiency of data analytics and customs processes. Finally, the platform will enable KCS to support policy design across all of Korea’s government bodies by providing customized information on trade and industry trends or transaction patterns.&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <pullquote_349b
+                    jcr:created="{Date}2018-06-18T09:23:47.197-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-04-28T19:35:47.368Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution=" "
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>With the help of HPE Ezmeral, KCS expects to increase smuggler crackdown by 5% every year,saving roughly 42 billion Korean Republic wons, or $34 million US-dollars&lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2022-04-28T19:35:47.368Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote_349b>
+                <textonlycomponent_97
+                    jcr:created="{Date}2018-06-22T11:22:31.557-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-04-28T19:36:11.310Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>“We are pleased to help KCS advance their important mission by capitalizing on the value of data,” said Young-chae Kim, managing director, Hewlett Packard Enterprise, South Korea. “We believe this project can serve as a role model for government agencies across the country, and indeed globally, because it demonstrates the opportunities of data innovation to improve government services and ultimately the way our people live and work.”&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;The HPE Ezmeral software portfolio is a purpose-built, hybrid cloud platform for data science and analytics workloads for enterprises to build and accelerate their modern data analytics initiatives at scale. The portfolio includes the HPE Ezmeral Data Fabric, which operates as the persistent store facility, spanning multiple edge sites, multiple clouds, and hybrid environments, as well as a complete orchestrated Kubernetes container platform, HPE Ezmeral Runtime Enterprise, and cloud-native HPE Ezmeral Unified Analytics, which are now available to customers globally, providing frictionless access to data edge to cloud.&lt;/span>&lt;/p>&#xd;&#xa;"/>
+                <textonlycomponent_fe
+                    jcr:created="{Date}2018-06-18T09:28:54.456-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-04-28T19:37:17.774Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>About Hewlett Packard Enterprise&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>Hewlett Packard Enterprise (NYSE: HPE) is the global edge-to-cloud company that helps organizations accelerate outcomes by unlocking value from all of their data, everywhere. Built on decades of reimagining the future and innovating to advance the way people live and work, HPE delivers unique, open and intelligent technology solutions as a service.  With offerings spanning Cloud Services, Compute, High Performance Computing &amp;amp; AI, Intelligent Edge, Software, and Storage, HPE provides a consistent experience across all clouds and edges, helping customers develop new business models, engage in new ways, and increase operational performance. For more information, visit: &lt;a href=&quot;http://www.hpe.com/&quot; target=&quot;_blank&quot;>www.hpe.com&lt;/a>&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;Editorial Contact&lt;b style=&quot;&quot;>:&lt;br />&#xd;&#xa;Teljya Oka-Pregel&lt;br />&#xd;&#xa;&lt;/b>&lt;a href=&quot;mailto:teljya.oka-pregel@hpe.com&quot; target=&quot;_blank&quot;>teljya.oka-pregel@hpe.com&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <textonlycomponent_bf
+                    jcr:created="{Date}2018-07-02T13:12:59.755-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-10-12T16:10:50.633Z"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    textOnly="&lt;h2>RELATED NEWS&lt;/h2>&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli_540225213
+                    jcr:created="{Date}2018-06-18T10:12:48.909-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:22:53.902-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <columncontainercompo
+                    jcr:created="{Date}2018-07-02T13:14:23.594-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:15:08.106-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/columnContainerComponent"
+                    columns="column-content-3">
+                    <column_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_7c25
+                            jcr:created="{Date}2018-07-02T13:15:28.984-07:00"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-04-28T19:38:50.562Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="arrow-link"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/01/werder-bremen-partners-with-hewlett-packard-enterprise-to-advance-fan-experience-and-data-intelligence"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            header="Werder Bremen partners with Hewlett Packard Enterprise to advance fan experience and data intelligence"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Werder Bremen partners with Hewlett Packard Enterprise to advance fan experience and data intelligence"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-04-28T19:38:50.562Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2022/01/image-norend/werder-bremen-partners-with-hewlett-packard-enterprise-to-advance-fan-experience-and-data-intelligence2.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-04-28T19:38:50.562Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_7c25>
+                    </column_0>
+                    <column_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_4dff
+                            jcr:created="{Date}2018-09-21T21:01:47.387Z"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-04-28T19:40:22.530Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="arrow-link"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2021/09/hpe-greenlake-edge-to-cloud-platform-powers-data-modernization-with-breakthrough-analytics-and-data-protection-cloud-services"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            header="HPE GreenLake edge-to-cloud platform powers data modernization with breakthrough analytics and data protection cloud services"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="HPE GreenLake edge-to-cloud platform powers data modernization with breakthrough analytics and data protection cloud services"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-04-28T19:40:22.530Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2021/09/image-norend/hpe-greenlake-edge-to-cloud-platform-powers-data-modernization-with-breakthrough-analytics-and-data-protection-cloud-services.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-04-28T19:40:22.530Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_4dff>
+                    </column_1>
+                    <column_2
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_50f2
+                            jcr:created="{Date}2018-09-05T17:41:27.359Z"
+                            jcr:createdBy="nagle@hpe.com"
+                            jcr:lastModified="{Date}2022-04-28T19:41:36.920Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="arrow-link"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2021/09/sk-inc-cc-part-of-south-koreas-largest-conglomerate-sk-group-selects-hpe-greenlake-to-power-vdi-initiative-for-improved-employee-experience"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            header="SK Inc. C&amp;C, part of South Korea’s largest conglomerate SK Group, selects HPE GreenLake to power VDI initiative for improved employee experience"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="SK Inc. C&amp;C, part of South Korea’s largest conglomerate SK Group, selects HPE GreenLake to power VDI initiative for improved employee experience"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-04-28T19:41:36.920Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                fileReference="/content/dam/hpe/newsroom/2021/09/image-norend/sk-inc-cc-part-of-south-koreas-largest-conglomerate-sk-group-selects-hpe-greenlake-to-power-vdi-initiative.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-04-28T19:41:36.920Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"/>
+                        </contentblock_50f2>
+                    </column_2>
+                </columncontainercompo>
+            </body-par>
+            <side-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <buttonctaitemcompone
+                    jcr:created="{Date}2018-06-28T13:06:31.075-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:06:46.099-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 1"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_661124859
+                    jcr:created="{Date}2018-06-28T13:06:51.115-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:11.079-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 2"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_606970408
+                    jcr:created="{Date}2018-06-28T13:06:53.400-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:02.336-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 3"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+            </side-par>
+        </main-par>
+        <image
+            jcr:lastModified="{Date}2018-09-05T17:38:02.066Z"
+            jcr:lastModifiedBy="nagle@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+    </jcr:content>
+</jcr:root>

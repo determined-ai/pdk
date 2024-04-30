@@ -1,0 +1,32 @@
+{
+    "pipeline": { "name": "vector_db"},
+    "description": "Extract content in xml files to a csv file",
+    "input": {
+        "cross": [
+          {
+            "pfs": {
+              "repo": "process_xml",
+              "branch" : "master",
+              "glob": "/"
+            }
+          },
+          {
+            "pfs": {
+              "repo": "code",
+              "branch" : "master",
+              "glob": "/"
+            }
+          }
+        ]
+    },
+    "transform": {
+      "cmd": [
+        "/bin/sh"
+      ],
+      "image": "mendeza/python38_process:0.2",
+      "stdin": [
+        "python /pfs/code/src/py/seed.py --path_to_db /run/determined/workdir/shared_fs/rag_db/ --csv_path /pfs/process_xml/hpe_press_releases.csv --emb_model_path /run/determined/workdir/shared_fs/model/minilm && echo \"$(openssl rand -base64 12)\" > /pfs/out/vector_db.txt"
+      ]
+    },
+    "podPatch": "[{\"op\": \"add\",\"path\": \"/volumes/-\",\"value\": {\"name\": \"task-pv-storage\",\"persistentVolumeClaim\": {\"claimName\": \"pdk-pvc\"}}}, {\"op\": \"add\",\"path\": \"/containers/0/volumeMounts/-\",\"value\": {\"mountPath\": \"/run/determined/workdir/shared_fs\",\"name\": \"task-pv-storage\"}}]"
+}

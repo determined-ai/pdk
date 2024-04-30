@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/apps/settings/wcm/designs/hpeweb"
+        cq:lastModified="{Date}2022-10-18T19:56:09.745Z"
+        cq:lastModifiedBy="christine.seales@hpe.com"
+        cq:tags="[hpe-newsroom:categories/networking,hpe-newsroom:categories/compute,hpe-newsroom:categories/company---customers]"
+        cq:template="/apps/hpeweb/templates/page-text-heavy"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Mohamed bin Zayed University of Artificial Intelligence advances the UAE’s National Strategy for AI with new supercomputer built by Hewlett Packard Enterprise"
+        jcr:uuid="a953509c-cf7a-4d69-b39f-5dc593a7bc7d"
+        sling:resourceType="hpeweb/components/pages/page-text-heavy"
+        browserTitle="Mohamed bin Zayed University of Artificial Intelligence advances the UAE’s National Strategy for AI with new supercomputer built by Hewlett Packard Enterprise"
+        changefreq="daily"
+        contentType="Press Release"
+        displayDate="{Date}2022-10-11T03:00:00.000-04:00"
+        metaDescription="MBZUAI’s new supercomputer will pioneer AI technologies that contribute to scientific and research communities and advance the UAE’s global AI leadership"
+        metaKeywords="HPE, HPE United Arab Emirates, UAE, supercomputing, artificial intelligence, AI, MBZUAI, university, education, HPE Cray, research, data"
+        metaOgImage="/content/dam/hpe/newsroom/2022/10/image-norend/mohamed-bin-zayed-university-of-ai-advances-the-uaes-national-strategy-for-ai-with-new-supercomputer-built-by-hpe3.jpg"
+        metaTwitterCardType="summary_large_image"
+        msmcomponent="/content/hpe/base/blueprint/newsroom/press-release/2022/10/mohamed-bin-zayed-university-of-artificial-intelligence-advances-the-uaes-national-strategy-for-ai-with-new-supercomputer-built-by-hewlett-packard-enterprise/jcr:content/main-par/body-par/imageonlycomponent_c"
+        navTitle="Mohamed bin Zayed University of Artificial Intelligence advances the UAE’s National Strategy for AI with new supercomputer built by Hewlett Packard Enterprise"
+        pageTitle="Mohamed bin Zayed University of Artificial Intelligence advances the UAE’s National Strategy for AI with new supercomputer built by Hewlett Packard Enterprise"
+        priority="(None)"
+        socialDescription="MBZUAI’s new supercomputer will pioneer AI technologies that contribute to scientific and research communities and advance the UAE’s global AI leadership"
+        subtitle="MBZUAI’s new supercomputer will pioneer AI technologies that contribute to scientific and research communities and advance the UAE’s global AI leadership"
+        theme="dark"
+        UAID="2157775f-d41c-47f2-bf56-10dd25d1e621"
+        UCID="d046acba-64d6-49b8-8357-a9cff3a3033f">
+        <main-par
+            jcr:lastModified="{Date}2018-06-28T13:09:39.402-07:00"
+            jcr:lastModifiedBy="velazquez@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="hpeweb/components/content/textHeavyComponent"
+            siderail="none">
+            <subtitle
+                jcr:lastModified="{Date}2022-10-10T17:02:30.013Z"
+                jcr:lastModifiedBy="christine.seales@hpe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="hpeweb/components/content/newsroom/newsroomSubtitleComponent"
+                textOnly="OCTOBER 11, 2022 • PRESS RELEASE"/>
+            <body-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <imageonlycomponent_c
+                    jcr:created="{Date}2018-06-18T09:06:27.827-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-10-18T19:55:50.262Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/imageOnlyComponent"
+                    disableCaptionUnderline="false"
+                    disableImageScaling="false"
+                    fileReference="/content/dam/hpe/newsroom/2022/10/image-norend/mohamed-bin-zayed-university-of-ai-advances-the-uaes-national-strategy-for-ai-with-new-supercomputer-built-by-hpe3.jpg"
+                    imageAlignment="hpe-image-center"
+                    imageAltText="HPE Guarantees"
+                    isVideo="false"
+                    isZoom="false"
+                    textIsRich="true"
+                    topMargin="60"
+                    useNativeAspectRatio="false"
+                    videoSource="video"
+                    videoType="youtube"
+                    zoomBackground="white"
+                    zoomLevel="1"/>
+                <textonlycomponent_cd
+                    jcr:created="{Date}2018-06-18T09:12:49.742-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-10-10T17:03:16.230Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    leftPadding="30"
+                    rightPadding="30"
+                    textIsRich="true"
+                    textOnly="&lt;h3>IN THIS ARTICLE&lt;/h3>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>New Campus Super Computing Center will accelerate scientific discovery in many areas, including healthcare, structural engineering, law enforcement, supply chain, and sustainability&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>HPE is helping MBZUAI support the UAE’s National Strategy for AI, bringing together the power of academia, government, and industry to strengthen the country’s global competitiveness&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli
+                    jcr:created="{Date}2018-06-18T09:16:54.243-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-18T09:18:45.987-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <textonlycomponent
+                    jcr:created="{Date}2022-10-10T17:03:22.865Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2022-10-10T17:03:35.887Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;h2>MBZUAI’s new supercomputer will pioneer AI technologies that contribute to scientific and research communities and advance the UAE’s global AI leadership&lt;/h2>&#xd;&#xa;"/>
+                <textonlycomponent_e9
+                    jcr:created="{Date}2018-06-22T11:24:07.263-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-10-10T17:04:47.223Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Dubai, United Arab Emirates – October 11, 2022 &lt;/b>– &lt;a href=&quot;http://www.hpe.com/&quot; target=&quot;_blank&quot;>Hewlett Packard Enterprise&lt;/a> (NYSE: HPE) today announced it is building a new supercomputer for Mohamed bin Zayed University of Artificial Intelligence (MBZUAI), a university dedicated solely to AI, to accelerate AI-driven scientific discovery and advance the UAE’s goal to be a global AI leader. HPE’s robust supercomputing and AI technologies will significantly enhance the university’s ability to run complex AI models with extremely large data sets, and increase predictability in research analyses in fields including energy, transportation and the environment.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;Supercomputing is vital to delivering AI-at-scale, and driving global innovation, industry competitiveness, and economic growth. From accelerating vaccine discovery to fight a pandemic, and advancing clean energy systems to increase sustainability, to enabling new possibilities in AI, supercomputing is a core technology to solving the world’s most challenging scientific and engineering challenges.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;Established in 2019, MBZUAI has already &lt;a href=&quot;https://mbzuai.ac.ae/news/mbzuai-ranks-top-24-globally-in-ai-cv-ml-and-nlp/&quot; target=&quot;_blank&quot;>ranked 24&lt;sup>th&lt;/sup> in the world&lt;/a> for artificial intelligence, computer vision, machine learning, and natural language processing. The new supercomputer will help MBZUAI support&amp;nbsp;the UAE’s &lt;a href=&quot;https://ai.gov.ae/wp-content/uploads/2021/07/UAE-National-Strategy-for-Artificial-Intelligence-2031.pdf&quot; target=&quot;_blank&quot;>National Strategy for AI&lt;/a>, bringing together the power of academia, government, and industry to strengthen the country’s global competitiveness. The advanced supercomputing and AI technologies will also expand resources for larger projects to allow MBZUAI to attract global talent and create new economic and societal opportunities for the UAE.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;MBZUAI’s new Campus Super Computing Center (CSCC), where the new supercomputer will be housed, will enable faculty members, researchers, and students to accelerate scientific discovery in many areas, including healthcare, structural engineering, law enforcement, supply chain, and sustainability. In addition to meeting the research needs of the faculty and students, the new supercomputer will help MBZUAI fulfill its role as an AI talent developer and innovation hub that brings together the business community to drive entrepreneurship in the AI sector. MBZUAI already is contributing to significant initiatives such as the Emirati Genome Program, which uses AI-based tools to extract and interpret large amounts of complex data resulting from DNA sequencing, and the Abu Dhabi Health Services Company, SEHA, which uses AI algorithms to predict heart attacks.&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <pullquote_349b
+                    jcr:created="{Date}2018-06-18T09:23:47.197-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-10-10T17:05:24.573Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution=" "
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>The new supercomputer will help MBZUAI fulfill its role as an AI talent developer and innovation hub &lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2022-10-10T17:05:24.573Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote_349b>
+                <textonlycomponent_97
+                    jcr:created="{Date}2018-06-22T11:22:31.557-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-10-11T06:56:27.591Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>“Supercomputing plays an essential role in unleashing AI to achieve significant breakthroughs for organizations worldwide, across public and private sectors,” said Justin Hotard, executive vice president and general manager, HPC, AI &amp;amp; Labs, at HPE. “HPE is leading the market in this next frontier by combining supercomputing performance and capabilities with solutions that are purpose-built for AI, to build and train machine learning models at-scale. MBZUAI’s Campus Super Computing Center is demonstrating this capability to unlock new possibilities in AI and strengthen UAE’s position as an AI-driven nation to advance key initiatives in healthcare, sustainability, and engineering.”&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &amp;nbsp;“HPE has a longstanding commitment to advancing the way people live and work in the United Arab Emirates, through our &lt;a href=&quot;https://www.hpe.com/us/en/newsroom/news-advisory/2019/10/hpe-announces-new-emiratization-program-in-uae.html&quot; target=&quot;_blank&quot;>Emiratization program&lt;/a>, &lt;a href=&quot;https://www.hpe.com/uk/en/about/customer-centers/dubai.html&quot; target=&quot;_blank&quot;>Digital Life Garage&lt;/a>, and industry and &lt;a href=&quot;https://www.hpe.com/us/en/newsroom/press-release/2022/01/hewlett-packard-enterprise-signs-agreement-with-uae-cyber-security-council-to-accelerate-youth-education.html&quot; target=&quot;_blank&quot;>government partnerships&lt;/a>,” said Ahmad Alkhallafi, managing director for UAE, Hewlett Packard Enterprise. “We are proud to support the UAE’s national strategy for AI by helping MBZUAI grow its contribution to research and education. Supercomputing will play a crucial role in helping the UAE anticipate and take advantage of new AI technologies now and in the future. We look forward to helping the UAE meet its goal to be an AI leader by 2031.”&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; As a recently established institution, MBZUAI is still building its team of in-house supercomputing specialists. By collaborating with HPE, the&amp;nbsp;university is gaining access to a large local team for supercomputing and AI support, in addition to world-leading technologies.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;The new supercomputer will deliver end-to-end technologies, based on the HPE Apollo 6500 Gen10 Plus, which is purpose-built for AI and analytics workloads, in addition to modeling and simulation workloads that are critical to scientific research. As part of the design, HPE will feature 2&lt;sup>nd&lt;/sup> Gen AMD EPYC™ processors delivering advanced computational performance, and 384 NVIDIA A100 Tensor Core GPUs for accelerated compute to target AI model development, training, and inferencing.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;To support AI training needs that require processing and storing large quantities of data, HPE will also deliver four petabytes of storage using HPE’s Cray Clusterstor E1000 parallel storage system, which is built for large-scale systems, to enable expanded storage capacity. Additionally, with the new supercomputer’s design, MBZUAI will gain sophisticated liquid-cooling capabilities from HPE to efficiently remove heat from high-power devices, including CPUs, GPUs, memory, and switches.&amp;nbsp;&lt;/span>&lt;/p>&#xd;&#xa;"/>
+                <textonlycomponent_fe
+                    jcr:created="{Date}2018-06-18T09:28:54.456-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-10-10T23:51:47.578Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>About Hewlett Packard Enterprise&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>Hewlett Packard Enterprise (NYSE: HPE) is the global edge-to-cloud company that helps organizations accelerate outcomes by unlocking value from all their data, everywhere. Built on decades of reimagining the future and innovating to advance the way people live and work, HPE delivers unique, open and intelligent technology solutions as a service.&amp;nbsp;With offerings spanning Cloud Services, Compute, High Performance Computing &amp;amp; AI, Intelligent Edge, Software, and Storage, HPE provides a consistent experience across all clouds and edges, helping customers develop new business models, engage in new ways, and increase operational performance. For more information, visit: &lt;a href=&quot;http://www.hpe.com/&quot; target=&quot;_blank&quot;>www.hpe.com&lt;/a>&lt;br>&#xd;&#xa; &lt;b>&lt;br>&#xd;&#xa;About Mohamed bin Zayed University of Artificial Intelligence (MBZUAI)&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/b>MBZUAI is a graduate, research university focused on artificial intelligence, computer science, and digital technologies across industrial sectors. The university aims to empower students, businesses, and governments to advance artificial intelligence as a global force for positive progress. MBZUAI offers various graduate programs designed to pursue advanced, specialized knowledge and skills in artificial intelligence, including computer vision, machine learning, and natural language processing. For more information, please visit &lt;a href=&quot;http://www.mbzuai.ac.ae/&quot; target=&quot;_blank&quot;>www.mbzuai.ac.ae&lt;/a>&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; Editorial Contact:&lt;br>&#xd;&#xa; &lt;b>Alastair McCormick&lt;br>&#xd;&#xa; &lt;/b>&lt;a href=&quot;mailto:Alastair.mccormick@hpe.com&quot; target=&quot;_blank&quot;>Alastair.mccormick@hpe.com&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-small&quot;>&lt;i>AMD, the AMD Arrow logo, EPYC, and combinations thereof, are trademarks of Advanced Micro Devices, Inc. Other names are for informational purposes only and may be trademarks of their respective owners.&lt;/i>&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <textonlycomponent_bf
+                    jcr:created="{Date}2018-07-02T13:12:59.755-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-10-12T16:10:50.633Z"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    textOnly="&lt;h2>RELATED NEWS&lt;/h2>&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli_540225213
+                    jcr:created="{Date}2018-06-18T10:12:48.909-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:22:53.902-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <columncontainercompo
+                    jcr:created="{Date}2018-07-02T13:14:23.594-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:15:08.106-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/columnContainerComponent"
+                    columns="column-content-3">
+                    <column_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_7c25
+                            jcr:created="{Date}2018-07-02T13:15:28.984-07:00"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-10-10T17:10:48.059Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/09/kaust-selects-hpe-to-build-the-middle-easts-most-powerful-supercomputer"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="KAUST selects HPE to build the Middle East’s most powerful supercomputer"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="KAUST selects HPE to build the Middle East’s most powerful supercomputer"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-10-10T17:10:48.059Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2022/09/image-norend/kaust-selects-hpe-to-build-the-middle-easts-most-powerful-supercomputer.JPG"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-10-10T17:10:48.059Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_7c25>
+                    </column_0>
+                    <column_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_4dff
+                            jcr:created="{Date}2018-09-21T21:01:47.387Z"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-10-10T17:11:58.115Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/09/du-selects-hewlett-packard-enterprise-for-digital-transformation-journey-to-5g"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="du selects Hewlett Packard Enterprise for digital transformation journey to 5G"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="du selects Hewlett Packard Enterprise for digital transformation journey to 5G"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-10-10T17:11:58.115Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2022/09/image-norend/du-selects-hewlett-packard-enterprise-for-digital-transformation-journey-to-5g.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-10-10T17:11:58.115Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_4dff>
+                    </column_1>
+                    <column_2
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_50f2
+                            jcr:created="{Date}2018-09-05T17:41:27.359Z"
+                            jcr:createdBy="nagle@hpe.com"
+                            jcr:lastModified="{Date}2022-10-10T17:13:47.799Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/news-advisory/2019/10/hpe-announces-new-emiratization-program-in-uae"
+                            description="&lt;p>News Advisory&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="HPE announces new Emiratization program in UAE"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="HPE announces new Emiratization program in UAE"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-10-10T17:13:47.799Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                fileReference="/content/dam/hpe/newsroom/2019/10/image-norend/hpe-announces-new-emiratization-program-in-uae.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-10-10T17:13:47.799Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"/>
+                        </contentblock_50f2>
+                    </column_2>
+                </columncontainercompo>
+            </body-par>
+            <side-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <buttonctaitemcompone
+                    jcr:created="{Date}2018-06-28T13:06:31.075-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:06:46.099-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 1"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_661124859
+                    jcr:created="{Date}2018-06-28T13:06:51.115-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:11.079-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 2"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_606970408
+                    jcr:created="{Date}2018-06-28T13:06:53.400-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:02.336-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 3"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+            </side-par>
+        </main-par>
+        <image
+            jcr:lastModified="{Date}2018-09-05T17:38:02.066Z"
+            jcr:lastModifiedBy="nagle@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+    </jcr:content>
+</jcr:root>

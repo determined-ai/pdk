@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/apps/settings/wcm/designs/hpeweb"
+        cq:lastModified="{Date}2022-04-07T10:44:56.429Z"
+        cq:lastModifiedBy="christine.seales@hpe.com"
+        cq:template="/apps/hpeweb/templates/page-text-heavy"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="HPE opens Global Center of Excellence in Artificial Intelligence and Data in Spain to help customers harness the power of their data"
+        jcr:uuid="19fe2f19-6cfb-4b97-b77a-1b1024b4507f"
+        sling:resourceType="hpeweb/components/pages/page-text-heavy"
+        browserTitle="HPE opens Global Center of Excellence in Artificial Intelligence and Data in Spain to help customers harness the power of their data"
+        changefreq="daily"
+        contentType="Press Release"
+        displayDate="{Date}2022-04-05T15:17:00.000-04:00"
+        metaDescription="New CoE established at HPE Spanish headquarters in Madrid develops and invests in AI, data and analytics talent"
+        metaKeywords="HPE, HPE Spain, HPE GreenLake, COE, Centre of excellence, AI, Data, Data analytics, HPE Madrid, Talent"
+        metaOgImage="/content/dam/hpe/newsroom/2022/04/image-norend/hpe-opens-global-center-of-excellence-in-ai-and-data-in-spain-to-help-customers-harness-the-power-of-their-data.jpg"
+        metaTwitterCardType="summary_large_image"
+        msmcomponent="/content/hpe/base/blueprint/newsroom/press-release/2022/04/hpe-opens-global-center-of-excellence-in-artificial-intelligence-and-data-in-spain-to-help-customers-harness-the-power-of-their-data/jcr:content/main-par/body-par/textonlycomponent_b4"
+        navTitle="HPE opens Global Center of Excellence in Artificial Intelligence and Data in Spain to help customers harness the power of their data"
+        pageTitle="HPE opens Global Center of Excellence in Artificial Intelligence and Data in Spain to help customers harness the power of their data"
+        priority="(None)"
+        socialDescription="New CoE established at HPE Spanish headquarters in Madrid develops and invests in AI, data and analytics talent"
+        subtitle="New CoE established at HPE Spanish headquarters in Madrid develops and invests in AI, data and analytics talent"
+        theme="dark"
+        UAID="21caa3b5-fce2-426a-ad84-ddb0e34cfcc1"
+        UCID="a19065de-763c-42a8-8c26-9923e894a888">
+        <main-par
+            jcr:lastModified="{Date}2018-06-28T13:09:39.402-07:00"
+            jcr:lastModifiedBy="velazquez@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="hpeweb/components/content/textHeavyComponent"
+            siderail="none">
+            <subtitle
+                jcr:lastModified="{Date}2022-04-06T19:04:18.465Z"
+                jcr:lastModifiedBy="christine.seales@hpe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="hpeweb/components/content/newsroom/newsroomSubtitleComponent"
+                textOnly="APRIL 5, 2022 • PRESS RELEASE"/>
+            <body-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <imageonlycomponent_c
+                    jcr:created="{Date}2018-06-18T09:06:27.827-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-04-06T19:04:24.507Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/imageOnlyComponent"
+                    fileReference="/content/dam/hpe/newsroom/2022/04/image-norend/hpe-opens-global-center-of-excellence-in-ai-and-data-in-spain-to-help-customers-harness-the-power-of-their-data.jpg"
+                    imageAlignment="hpe-image-center"
+                    imageAltText="HPE Guarantees"
+                    topMargin="60"
+                    videoSource="video"
+                    videoType="youtube"/>
+                <textonlycomponent_cd
+                    jcr:created="{Date}2018-06-18T09:12:49.742-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-04-06T19:04:52.762Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    leftPadding="30"
+                    rightPadding="30"
+                    textIsRich="true"
+                    textOnly="&lt;h3>IN THIS ARTICLE&lt;/h3>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>The new Global CoE will develop and implement AI use cases and data platforms for customers in areas as diverse as public administration, finance and healthcare&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>HPE has started recruiting and is in discussions with local universities targeting graduates and post-graduates from a wide range of courses including AI, big data and analytics&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>The new CoE will be integrated into HPE's global AI and Data practice within its HPE Pointnext Services organization&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli
+                    jcr:created="{Date}2018-06-18T09:16:54.243-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-18T09:18:45.987-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <textonlycomponent
+                    jcr:created="{Date}2022-04-06T19:04:57.803Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2022-04-06T19:05:14.556Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;h2>New CoE established at HPE Spanish headquarters in Madrid develops and invests in AI, data and analytics talent&lt;/h2>&#xd;&#xa;"/>
+                <textonlycomponent_e9
+                    jcr:created="{Date}2018-06-22T11:24:07.263-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-04-06T19:06:42.523Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>MADRID, Spain – Apr. 5, 2022 &lt;/b>– &lt;a href=&quot;http://www.hpe.com&quot; target=&quot;_blank&quot;>Hewlett Packard Enterprise&lt;/a> (NYSE: HPE) today announced that it has established a new Global Center of Excellence (CoE) for Artificial Intelligence (AI) and Data at its Spanish headquarters in Las Rozas, Madrid.&amp;nbsp; Established to centralize talent and expertise focused on AI and data-first modernization services, the CoE will help HPE meet the globally growing demand for advisory and professional services in this field. The team of AI and data professionals will help organizations around the world apply artificial intelligence, data and advanced analytics to uncover insights, create trusted transactions, and employ intelligence in new, ethical, secure ways.&amp;nbsp; The new CoE will develop and implement AI use cases and data platforms for customers in areas as diverse as public administration, finance, healthcare, manufacturing, logistics, and IT services.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;“Our new Global Center of Excellence in Spain will help companies and institutions around the world extract more value from the growing volumes of data across their organizations,” said José María de la Torre, senior vice president and managing director HPE Southern Europe and president HPE Spain. “At Hewlett Packard Enterprise, we bring together&amp;nbsp;talent and technology, which allows us to foster entrepreneurship, agility, innovation, quality employment, sustainability, ethics, and all those elements that make up a virtuous circle in the local ecosystem, generating economic wealth, welfare and social commitment. The motivation of the team to bring this international center to Spain has been to contribute to society, and it is a clear commitment of Hewlett Packard Enterprise to Spain, a key country for the company, for more than 50 years.”&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <imageonlycomponent
+                    jcr:created="{Date}2022-04-06T19:06:49.426Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2022-04-07T10:44:20.965Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/imageOnlyComponent"
+                    disableCaptionUnderline="false"
+                    disableImageScaling="false"
+                    fileReference="/content/dam/hpe/newsroom/2022/04/image-norend/hpe-opens-global-center-of-excellence-in-ai-and-data-in-spain-to-help-customers-harness-the-power-of-their-data3.jpg"
+                    imageAlignment="hpe-image-left"
+                    isVideo="false"
+                    isZoom="false"
+                    textIsRich="true"
+                    topPadding="30"
+                    useNativeAspectRatio="false"
+                    videoSource="video"
+                    videoType="youtube"
+                    zoomBackground="white"
+                    zoomLevel="1"/>
+                <textonlycomponent_b4
+                    jcr:created="{Date}2018-06-18T09:18:06.257-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-04-07T10:44:56.417Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>Left to right: Luis Buezo, director, worldwide AI and data practice, HPE, Carme Artigas, Secretary of State for Digitalization and Artificial Intelligence, Jose María de la Torre, President of HPE Spain and Southern Europe, Isabel Díaz Ayuso, President of the Community of Madrid, José de la Uz, Mayor of Las Rozas and Carlos Izquierdo, Minister of Local Administration and Digitalization of the Community of Madrid.&lt;/p>&#xd;&#xa;"/>
+                <pullquote
+                    jcr:created="{Date}2022-04-06T19:08:20.266Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2022-04-06T19:08:48.468Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution="José María de la Torre"
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>“Our new Global Center of Excellence in Spain will help companies and institutions around the world extract more value from the growing volumes of data across their organizations.”&amp;nbsp;&lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2022-04-06T19:08:48.468Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote>
+                <textonlycomponent_5d
+                    jcr:created="{Date}2018-06-18T09:21:51.280-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-04-06T19:09:28.044Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Investing in HPE Center of Excellence&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;/b>The opening is expected to create new jobs in Spain, particularly roles targeted at early career professionals.&amp;nbsp; HPE has started recruiting and is in discussions with local universities targeting graduates and post-graduates from a wide range of courses including AI, big data, analytics, computer science, physics, mathematics, and engineering. In the coming years, HPE foresees the creation of approximately 100 new jobs to provide services from the CoE across the world, with an investment of approximately 15 million euros.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;“The growth of disruptive and high-impact technologies, such as AI and data, is an unstoppable global trend,” stated Carme Artigas, Secretary of State for Digitalization and Artificial Intelligence at the inauguration of the new CoE. “They are the key elements to advance sustainable development goals and the resilience of energy production processes which have been forced to digitally transform. Spain has an unprecedented opportunity to address the structural and universal reform of our model. &amp;nbsp;This is marked by an essential strategic challenge: the integration of AI and data into the value chains of our economy.”&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&amp;nbsp;“A center like this satisfies a growing global demand,” added Isabel Díaz Ayuso, President of the Community of Madrid at the opening event. “Both AI and advanced analytics help people and especially companies, to achieve their objectives and therefore more and more will require professional and consulting services in this field. It is therefore fundamental for economic development and allows both companies, citizens and administrations to be more effective when making decisions. We have an ecosystem conducive to being a digital node in southern Europe and we, the Community of Madrid, are working to attract new business projects to the region and to continue promoting the digital transformation of the entire business fabric.”&lt;/span>&lt;/p>&#xd;&#xa;"/>
+                <pullquote_349b
+                    jcr:created="{Date}2018-06-18T09:23:47.197-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-04-06T19:09:58.377Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution="Luis Buezo, director, worldwide AI and data practice, HPE Advisory &amp; Professional Services"
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>&amp;quot;We see increasing demand from our customers for expertise to help them use AI and data analytics to achieve their business objectives.”&amp;nbsp;&lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2022-04-06T19:09:58.377Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote_349b>
+                <textonlycomponent_97
+                    jcr:created="{Date}2018-06-22T11:22:31.557-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-04-06T19:11:30.342Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>The new CoE will be integrated into HPE's global AI and Data practice within its HPE Pointnext Services organization.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&amp;quot;We see increasing demand from our customers for expertise to help them use AI and data analytics to achieve their business objectives,” added Luis Buezo, director, worldwide AI and data practice, HPE Advisory &amp;amp; Professional Services. “We are building a team of people who can drive innovation with new AI and data use cases, can learn and collaborate with team members and HPE partners, and further develop their careers in an exciting and fast-growing area.”&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;One example of use cases the team can demonstrate is applying AI to digital pathology images of lymph nodes to improve lymphoma detection by enhancing the accuracy and efficiency of diagnostic processes.&amp;nbsp; Another example is the development of interactive demos using building blocks to simulate product manufacturing. By training, deploying and managing the recognition of different objects, AI models can be developed and applied to improve product quality with machine vision-based quality control instead of using traditional manual inspections.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;The AI and Data Global Center of Excellence will also work closely with the HPE AI Ethics Working Group. This is an international, multidisciplinary working group whose mission is to ensure the responsible use and development of AI to achieve goals that benefit individuals, businesses and governments while respecting fundamental ethical principles, such as privacy and the prevention of misuse that may violate human rights, as well as the inclusive and responsible use of technology.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;This new international CoE will leverage the &lt;a href=&quot;https://www.hpe.com/uk/en/about/customer-centers/madrid.html&quot; target=&quot;_blank&quot;>Customer Technology Center&lt;/a> HPE opened in Las Rozas in 2017 to provide a physical space to showcase the most innovative technologies that are key to the development of the digital society.&amp;nbsp;&amp;nbsp; HPE plans to create opportunities with the local technology ecosystem by involving a broad range of technology companies and HPE partners in projects and activities.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;With this new center, HPE reinforces its commitment to high value-added investment in Spain and seeks to boost and retain national talent with a high priority placed on recruiting for diversity, thus contributing to the objectives of the Spanish National Artificial Intelligence Strategy.&lt;br>&#xd;&#xa;&lt;b>&lt;br>&#xd;&#xa;HPE Employee-Focused Work Culture and Benefits&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;/b>HPE has been recognized as an employer of choice for its industry-leading workplace benefits, including six months of paid parental leave for both mothers and fathers, and has an active Wellness Program to encourage team members to focus on personal health and wellness.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;The company is committed to being unconditionally inclusive and believes that work should fit into people’s lives. HPE’s culture and programs encourage everyone’s unique voice to be heard regardless of seniority, or background, while offering team members the flexibility to fit work into their personal lives to support personal well-being.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;HPE’s team members also benefit from the company’s flexible and empowered work style. Under its ‘Edge to Office’ vision of work that was announced at the end 2020, the company reimagined its approach to the workplace, transforming its offices into innovation, culture and collaboration centers, where team members can work from home and come into the office when needed and connect with their colleagues. The new approach to work was fast-tracked by the pandemic and was informed by employee feedback that revealed that majority of HPE team members valued the flexibility and autonomy of working from outside the office.&lt;/span>&lt;/p>&#xd;&#xa;"/>
+                <textonlycomponent_fe
+                    jcr:created="{Date}2018-06-18T09:28:54.456-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-04-06T19:12:28.310Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>About Hewlett Packard Enterprise&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>Hewlett Packard Enterprise (NYSE: HPE) is the global edge-to-cloud company that helps organizations accelerate outcomes by unlocking value from all of their data, everywhere. Built on decades of reimagining the future and innovating to advance the way people live and work, HPE delivers unique, open and intelligent technology solutions as a service.&amp;nbsp; With offerings spanning Cloud Services, Compute, High Performance Computing &amp;amp; AI, Intelligent Edge, Software, and Storage, HPE provides a consistent experience across all clouds and edges, helping customers develop new business models, engage in new ways, and increase operational performance. For more information, visit: &lt;a href=&quot;http://www.hpe.com/&quot; target=&quot;_blank&quot;>www.hpe.com&lt;/a>&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; Editorial Contact:&lt;br>&#xd;&#xa; &lt;b>Clare Loxley&lt;br>&#xd;&#xa; &lt;/b>&lt;a href=&quot;mailto:clare.loxley@hpe.com&quot; target=&quot;_blank&quot;>clare.loxley@hpe.com&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <textonlycomponent_bf
+                    jcr:created="{Date}2018-07-02T13:12:59.755-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-10-12T16:10:50.633Z"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    textOnly="&lt;h2>RELATED NEWS&lt;/h2>&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli_540225213
+                    jcr:created="{Date}2018-06-18T10:12:48.909-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:22:53.902-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <columncontainercompo
+                    jcr:created="{Date}2018-07-02T13:14:23.594-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:15:08.106-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/columnContainerComponent"
+                    columns="column-content-3">
+                    <column_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_7c25
+                            jcr:created="{Date}2018-07-02T13:15:28.984-07:00"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-04-06T19:19:33.632Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="arrow-link"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2021/11/taiwan-becomes-a-global-strategic-hub-for-next-generation-technology-and-supply-chain-for-hewlett-packard-enterprise"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            header="Taiwan becomes a global strategic hub for next-generation technology and supply chain for Hewlett Packard Enterprise"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Taiwan becomes a global strategic hub for next-generation technology and supply chain for Hewlett Packard Enterprise"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-04-06T19:19:33.632Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2021/11/image-norend/taiwan-becomes-a-global-strategic-hub-for-next-generation-technology-and-supply-chain-for-hpe.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-04-06T19:19:33.632Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_7c25>
+                    </column_0>
+                    <column_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_4dff
+                            jcr:created="{Date}2018-09-21T21:01:47.387Z"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-04-06T19:19:40.326Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="arrow-link"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/01/hewlett-packard-enterprise-signs-agreement-with-uae-cyber-security-council-to-accelerate-youth-education"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            header="Hewlett Packard Enterprise signs agreement with UAE Cyber Security Council to accelerate youth education"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Hewlett Packard Enterprise signs agreement with UAE Cyber Security Council to accelerate youth education"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-04-06T19:19:40.326Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2022/01/image-norend/hewlett-packard-enterprise-signs-agreement-with-uae-cyber-security-council-to-accelerate-youth-education.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-04-06T19:19:40.326Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_4dff>
+                    </column_1>
+                    <column_2
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_50f2
+                            jcr:created="{Date}2018-09-05T17:41:27.359Z"
+                            jcr:createdBy="nagle@hpe.com"
+                            jcr:lastModified="{Date}2022-04-06T19:16:29.342Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="arrow-link"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/02/hewlett-packard-enterprise-and-ayar-labs-announce-strategic-collaboration-and-investment-to-develop-next-generation-data-center-architectures-and-networking-with-optical-io"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            header="Hewlett Packard Enterprise and Ayar Labs announce strategic collaboration and investment to develop next-generation data center architectures and networking with optical I/O"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Hewlett Packard Enterprise and Ayar Labs announce strategic collaboration and investment to develop next-generation data center architectures and networking with optical I/O"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-04-06T19:16:29.342Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                fileReference="/content/dam/hpe/newsroom/2022/02/image-norend/hpe-and-ayar-labs-announce-strategic-collaboration-and-investment.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-04-06T19:16:29.342Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"/>
+                        </contentblock_50f2>
+                    </column_2>
+                </columncontainercompo>
+            </body-par>
+            <side-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <buttonctaitemcompone
+                    jcr:created="{Date}2018-06-28T13:06:31.075-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:06:46.099-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 1"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_661124859
+                    jcr:created="{Date}2018-06-28T13:06:51.115-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:11.079-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 2"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_606970408
+                    jcr:created="{Date}2018-06-28T13:06:53.400-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:02.336-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 3"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+            </side-par>
+        </main-par>
+        <image
+            jcr:lastModified="{Date}2018-09-05T17:38:02.066Z"
+            jcr:lastModifiedBy="nagle@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+    </jcr:content>
+</jcr:root>

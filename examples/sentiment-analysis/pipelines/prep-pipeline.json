@@ -18,7 +18,7 @@
     "stdin": [
       "python datasets.py --input_dir /pfs/data --output_dir /pfs/out"
     ],
-    "image": "pachyderm/pdk:sentiment-analysis-prep-v0.0.4"
+    "image": "pachyderm/pdk:sentiment-analysis-prep-v0.0.6"
   },
   "autoscaling": true
 }

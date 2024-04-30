@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/apps/settings/wcm/designs/hpeweb"
+        cq:lastModified="{Date}2022-12-05T23:26:51.198Z"
+        cq:lastModifiedBy="christine.seales@hpe.com"
+        cq:tags="[hpe-newsroom:categories/big-data,hpe-newsroom:categories/cloud,hpe-newsroom:categories/infrastructure]"
+        cq:template="/apps/hpeweb/templates/page-text-heavy"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="HPE GreenLake adds application, analytics, and developer services to modernize workloads across the hybrid cloud"
+        jcr:uuid="71f91500-41fb-415c-82f7-c7b4dcd0032e"
+        sling:resourceType="hpeweb/components/pages/page-text-heavy"
+        browserTitle="HPE GreenLake adds application, analytics, and developer services to modernize workloads across the hybrid cloud"
+        changefreq="daily"
+        contentType="Press Release"
+        displayDate="{Date}2022-12-07T07:30:00.000-05:00"
+        metaDescription="HPE GreenLake bolsters hybrid cloud leadership with new cloud services, ecosystem growth, and expanded global availability of HPE GreenLake for Private Cloud Enterprise"
+        metaKeywords="HPE GreenLake, Discover Frankfurt, 2022, HPE, private cloud enterprise, hybrid cloud, cloud services"
+        metaOgImage="/content/dam/hpe/newsroom/2022/12/image-norend/hpe-greenlake-adds-application-analytics-and-developer-services-to-modernize-workloads-across-the-hybrid-cloud.jpg"
+        metaTwitterCardType="summary_large_image"
+        msmcomponent="/content/hpe/base/blueprint/newsroom/press-release/2022/12/hpe-greenlake-adds-application-analytics-and-developer-services-to-modernize-workloads-across-the-hybrid-cloud/jcr:content/main-par/body-par/columncontainercompo/column_0/contentblock_7c25"
+        navTitle="HPE GreenLake adds application, analytics, and developer services to modernize workloads across the hybrid cloud"
+        pageTitle="HPE GreenLake adds application, analytics, and developer services to modernize workloads across the hybrid cloud"
+        priority="(None)"
+        socialDescription="HPE GreenLake bolsters hybrid cloud leadership with new cloud services, ecosystem growth, and expanded global availability of HPE GreenLake for Private Cloud Enterprise"
+        subtitle="HPE GreenLake bolsters hybrid cloud leadership with new cloud services, ecosystem growth, and expanded global availability of HPE GreenLake for Private Cloud Enterprise"
+        theme="dark"
+        UAID="6c4e07d8-7577-420c-9227-22c619e1f96a"
+        UCID="5e998def-c60e-48bd-889b-f0fc324862af">
+        <main-par
+            jcr:lastModified="{Date}2018-06-28T13:09:39.402-07:00"
+            jcr:lastModifiedBy="velazquez@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="hpeweb/components/content/textHeavyComponent"
+            siderail="none">
+            <subtitle
+                jcr:lastModified="{Date}2022-11-30T17:44:01.383Z"
+                jcr:lastModifiedBy="christine.seales@hpe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="hpeweb/components/content/newsroom/newsroomSubtitleComponent"
+                textOnly="DECEMBER 7, 2022 • PRESS RELEASE"/>
+            <body-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <imageonlycomponent_c
+                    jcr:created="{Date}2018-06-18T09:06:27.827-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-12-05T23:00:33.517Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/imageOnlyComponent"
+                    fileReference="/content/dam/hpe/newsroom/2022/12/image-norend/hpe-greenlake-adds-application-analytics-and-developer-services-to-modernize-workloads-across-the-hybrid-cloud.jpg"
+                    imageAlignment="hpe-image-center"
+                    imageAltText="HPE Guarantees"
+                    topMargin="60"
+                    videoSource="video"
+                    videoType="youtube"/>
+                <textonlycomponent_cd
+                    jcr:created="{Date}2018-06-18T09:12:49.742-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-12-05T23:05:53.417Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    leftPadding="30"
+                    rightPadding="30"
+                    textIsRich="true"
+                    textOnly="&lt;h3>IN THIS ARTICLE&lt;/h3>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>With HPE GreenLake for Private Cloud Enterprise customers can run on-premises the same container run-times they use in the public cloud across their hybrid cloud&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>HPE GreenLake for Private Cloud Enterprise supports leading infrastructure-as-code and cloud-native toolchains to support customer’s DevOps and CI/CD environments&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>HPE GreenLake for Red Hat OpenShift Container Platform delivers self-service management of containers&amp;nbsp;across&amp;nbsp;edge, data center and hybrid cloud environments&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>HPE GreenLake for Data Fabric and HPE Ezmeral Unified Analytics are now available through new HPE Ezmeral early access program&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli
+                    jcr:created="{Date}2018-06-18T09:16:54.243-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-18T09:18:45.987-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <textonlycomponent
+                    jcr:created="{Date}2022-12-05T23:06:00.322Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2022-12-05T23:06:24.482Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;h2>HPE GreenLake bolsters hybrid cloud leadership with new cloud services, ecosystem growth, and expanded global availability of HPE GreenLake for Private Cloud Enterprise&lt;/h2>&#xd;&#xa;"/>
+                <textonlycomponent_e9
+                    jcr:created="{Date}2018-06-22T11:24:07.263-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-12-05T23:08:20.440Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>FRANKFURT, GERMANY – December 7, 2022 – HPE DISCOVER Frankfurt 2022 –&amp;nbsp;&lt;/b>&lt;a href=&quot;http://www.hpe.com/&quot; target=&quot;_blank&quot;>Hewlett Packard Enterprise&lt;/a>&amp;nbsp;(NYSE: HPE) announced new application, analytics, and developer services for HPE GreenLake, edge-to-cloud platform, that enable organizations to drive a data-first modernization strategy for production workloads across hybrid cloud environments. Updates include:&lt;br>&#xd;&#xa;&amp;nbsp;&lt;/span>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>HPE GreenLake for Private Cloud Enterprise now offers expanded container deployment options for Kubernetes with Amazon Elastic Kubernetes Service (Amazon EKS) Anywhere from Amazon Web Services (AWS), and infrastructure-as-code and cloud-native toolchains to support customer’s DevOps and continuous integration and continuous deployment (CI/CD) environments.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa; &lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>Six workload-optimized instances for general purpose, compute, memory, and storage are now available on HPE GreenLake for Private Cloud Enterprise with simple rate card pricing that delivers a straightforward pay-as-you-go consumption model.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa; &lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>Expanded partner ecosystem momentum that now includes HPE GreenLake for Red Hat&amp;nbsp;OpenShift&amp;nbsp;Container Platform, and the recently announced HPE GreenLake for VMware.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa; &lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>Enhancement to consumption analytics delivers improved usage and cost analytics of applications for the three hyperscaler public cloud vendors.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>HPE GreenLake for Data Fabric and HPE Ezmeral Unified Analytics are now available through new HPE Ezmeral early access program.&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                    topPadding="30"/>
+                <pullquote_349b
+                    jcr:created="{Date}2018-06-18T09:23:47.197-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-12-05T23:09:18.226Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution="Vishal Lall, senior vice president and general manager, HPE GreenLake Cloud Services Solutions"
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>“HPE GreenLake for Private Cloud Enterprise is a ready, out-of-the-box private cloud with a completely modern experience, delivering optimized performance, open choice and low and predictable TCO, which is resonating with organizations across every industry,”&amp;nbsp;&lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2022-12-05T23:09:18.226Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote_349b>
+                <textonlycomponent_97
+                    jcr:created="{Date}2018-06-22T11:22:31.557-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-12-05T23:10:33.672Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>“HPE GreenLake for Private Cloud Enterprise is a ready, out-of-the-box private cloud with a completely modern experience, delivering optimized performance, open choice and low and predictable TCO, which is resonating with organizations across every industry,” said Vishal Lall, senior vice president and general manager, HPE GreenLake Cloud Services Solutions. “Customers recognize the importance of a hybrid cloud operating model for their digital transformation, and HPE GreenLake for Private Cloud Enterprise is the only solution that brings the best hybrid cloud capabilities from edge to core and across multiple clouds, delivered as a cloud service.”&lt;br />&#xd;&#xa;&lt;b style=&quot;&quot;>&lt;br />&#xd;&#xa;Deploy and manage workloads across the hybrid cloud with HPE GreenLake for Private Cloud Enterprise&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;&lt;/b>HPE GreenLake for Private Cloud Enterprise reimagines the modern private cloud experience by providing an automated, flexible, scalable, and fully managed enterprise-grade private cloud. Built for both cloud-native and traditional applications, HPE GreenLake for Private Cloud Enterprise supports the self-service deployment of bare metal, virtual machines, and container workloads from a common pool of infrastructure, optimized for price and performance. Today, HPE unveiled several enhancements to HPE GreenLake for Private Cloud Enterprise:&lt;br />&#xd;&#xa; &lt;/span>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>HPE GreenLake for Private Cloud Enterprise offers expanded container deployment options for Kubernetes with Amazon EKS Anywhere. Customers can now run on-premises the same container run-times they use in the public cloud and obtain workload portability with a consistent cloud-native experience across their hybrid cloud.&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>Customers can easily self-serve the management of VMs, containers or bare metal using an intuitive user interface console, application programming interfaces (APIs), command line interface (CLI) or infrastructure-as-code (IaC) that will improve their time to value. These options provide developers immediate access to their workspace with the flexibility to choose from a variety of operating systems, containerized application stacks, and toolchain integration services for increased efficiency and visibility.&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa; &lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>To optimize performance across a variety of mission critical workloads, HPE GreenLake for Private Cloud Enterprise now offers six workload-optimized instances for general purpose, compute, memory, and storage with competitive rate card pricing that delivers a straightforward pay-as-you-go consumption model.&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa; &lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>Enhancement to consumption analytics delivers improved usage and cost analytics of applications for the three hyperscaler public cloud vendors. This includes easier showback reporting and dashboard insights to help customers improve capacity planning and budgeting across their hybrid environment.&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>HPE GreenLake for Private Cloud Enterprise is now generally available in 52 countries worldwide and available for partners to sell via the HPE GreenLake for Partners program.&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"/>
+                <textonlycomponent_314236691
+                    jcr:created="{Date}2022-12-05T23:10:49.969Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2022-12-05T23:14:38.051Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Expanding the HPE GreenLake ecosystem partners and marketplace offerings&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;&lt;/b>To give customers more choice and functionality, HPE continues to expand its partner ecosystem offerings on HPE GreenLake Marketplace for DevOps, AI/ML, analytics, data protection, security and more. Today, we highlight the new HPE GreenLake for Red Hat OpenShift Container Platform, and the recently announced HPE GreenLake for VMware.&lt;br />&#xd;&#xa; &lt;/span>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>HPE GreenLake for Red Hat OpenShift Container Platform is the result of the joint development &lt;a href=&quot;https://www.hpe.com/us/en/newsroom/press-release/2022/06/hpe-greenlake-adds-open-source-leader-red-hat-to-expanding-ecosystem.html&quot; target=&quot;_blank&quot;>announcement&lt;/a> made earlier this year at Discover 2022, to deliver new service offerings on HPE GreenLake with  Red Hat open source solutions. The combination of HPE GreenLake with Red Hat OpenShift provides customers with a consistent, powerful foundation for application development and hybrid cloud innovation. This helps customers to reduce costs and complexity, while enhancing stability and performance across multiple IT environments. HPE GreenLake for Red Hat OpenShift Container Platform delivers self-service management of containers across edge, data center and hybrid cloud environments, enabling customers with more flexibility, scalability, and optimized standardized container configurations.&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;a href=&quot;https://www.hpe.com/us/en/newsroom/press-release/2022/11/hpe-and-vmware-advance-partnership-to-drive-digital-transformation-with-integrated-hybrid-cloud-experience.html&quot; target=&quot;_blank&quot;>Announced&lt;/a> in November 2022, HPE GreenLake for VMware will bring together HPE GreenLake and VMware Cloud to deliver a fully integrated solution with a simple pay-as-you-go hybrid cloud consumption model. VMware Cloud will be fully integrated across the HPE GreenLake portfolio including HPE GreenLake for Private Cloud Enterprise&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;> &lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Early access program for HPE GreenLake for Data Fabric and HPE Ezmeral Unified Analytics&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;&lt;/b>At Discover Frankfurt, &lt;a href=&quot;https://community.hpe.com/t5/hpe-ezmeral-uncut/hpe-ezmeral-early-access-gives-developers-hands-on-experience/ba-p/7178675&quot; target=&quot;_blank&quot;>HPE introduced an early access program&lt;/a> for HPE GreenLake for Data Fabric and HPE Ezmeral Unified Analytics. With the early access program, developers can try the data fabric and analytics service prior to release, testing new features and capabilities for solving hybrid data and analytics challenges.&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;HPE GreenLake for Data Fabric modernizes analytics and data management, unifying different data types across on-premises, multi-cloud, and edge, to deliver seamless access to a trusted source of data. HPE Ezmeral Unified Analytics provides a cloud solution that supports best-of-breed, open source tools to address the full lifecycle of data engineering, analytics, and data science projects. &lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;Customers interested in joining the early access program should click &lt;a href=&quot;https://connect.hpe.com/HPEEzmeralEarlyAccess&quot; target=&quot;_blank&quot;>here&lt;/a> to apply.&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;&lt;b style=&quot;&quot;>The HPE GreenLake edge-to-cloud platform– the foundation of the HPE GreenLake experience&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;&lt;/b>The HPE GreenLake platform provides customers and partners with a unified hybrid experience and easy access to cloud services. Today, HPE GreenLake supports more than 65,000 customers, powers more than two million connected devices and manages more than one exabyte of data with customers worldwide&lt;sup>1&lt;/sup>. Organizations benefit from one platform from which to automate, orchestrate, and run their hybrid cloud strategy.&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;HPE continues to innovate and invest in the HPE GreenLake platform. In March 2022, HPE &lt;a href=&quot;https://www.hpe.com/us/en/newsroom/press-release/2022/03/hpe-greenlake-edge-to-cloud-platform-delivers-greater-choice-and-simplicity-with-unified-experience-new-cloud-services-and-expanded-partner-ecosystem.html&quot; target=&quot;_blank&quot;>announced&lt;/a> a new, unified operational experience that provides a simplified view and access to all cloud services, including capabilities at the edge. This included the convergence of the HPE GreenLake platform with Aruba Central.  At HPE Discover 2022 in June, HPE &lt;a href=&quot;https://www.hpe.com/us/en/newsroom/press-release/2022/06/hpe-greenlake-advances-hybrid-cloud-experience-with-modern-private-cloud-and-new-cloud-services.html&quot; target=&quot;_blank&quot;>announced&lt;/a> additional advancements, including enhanced security, a new developer portal and tools, and deeper capabilities to manage assets and workloads at scale.  Click &lt;a href=&quot;http://www.hpe.com/greenlake/testdrive&quot; target=&quot;_blank&quot;>here&lt;/a> to take a virtual test drive of the HPE GreenLake platform.&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;&lt;b style=&quot;&quot;>Availability&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;&lt;/b>HPE GreenLake for Red Hat OpenShift Container Platform will be available in calendar Q1.&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="20"/>
+                <textonlycomponent_fe
+                    jcr:created="{Date}2018-06-18T09:28:54.456-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-12-05T23:16:15.428Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>About Hewlett Packard Enterprise&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>Hewlett Packard Enterprise (NYSE: HPE) is the global edge-to-cloud company that helps organizations accelerate outcomes by unlocking value from all of their data, everywhere. Built on decades of reimagining the future and innovating to advance the way people live and work, HPE delivers unique, open and intelligent technology solutions as a service.&amp;nbsp; With offerings spanning cloud services, compute, high performance computing &amp;amp; AI, intelligent edge, software, and storage, HPE provides a consistent experience across all clouds and edges, helping customers develop new business models, engage in new ways, and increase operational performance. For more information, visit: &lt;a href=&quot;http://www.hpe.com/&quot; target=&quot;_blank&quot;>www.hpe.com&lt;/a>&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; Red Hat, the Red Hat logo and OpenShift are trademarks or registered trademarks of Red Hat, Inc. or its subsidiaries in the U.S. and other countries&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; Media Contact&lt;br>&#xd;&#xa; John Choi&lt;br>&#xd;&#xa; &lt;u>&lt;a href=&quot;mailto:john.choi@hpe.com&quot; target=&quot;_blank&quot;>john.choi@hpe.com&lt;/a>&lt;/u>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-small&quot;>&lt;sup>1&lt;/sup> HPE, (2022, October 19), &lt;a href=&quot;https://www.hpe.com/us/en/newsroom/press-release/2022/10/hewlett-packard-enterprise-demonstrates-strong-momentum-of-edge-to-cloud-strategy-and-presents-fy23-outlook-at-hpe-securities-analyst-meeting-2022.html&quot; target=&quot;_blank&quot;>Hewlett Packard Enterprise demonstrates strong momentum of edge-to-cloud strategy and presents FY23 outlook at HPE Securities Analyst Meeting 2022&lt;/a> [Press Release]&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <textonlycomponent_bf
+                    jcr:created="{Date}2018-07-02T13:12:59.755-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-10-12T16:10:50.633Z"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    textOnly="&lt;h2>RELATED NEWS&lt;/h2>&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli_540225213
+                    jcr:created="{Date}2018-06-18T10:12:48.909-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:22:53.902-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <columncontainercompo
+                    jcr:created="{Date}2018-07-02T13:14:23.594-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:15:08.106-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/columnContainerComponent"
+                    columns="column-content-3">
+                    <column_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_7c25
+                            jcr:created="{Date}2018-07-02T13:15:28.984-07:00"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-12-05T23:23:52.238Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/12/lack-of-data-capabilities-impedes-organizations-success-global-survey-finds"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="Lack of data capabilities impedes organizations’ success, global survey finds"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Lack of data capabilities impedes organizations’ success, global survey finds"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-12-05T23:23:52.238Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2022/12/image-norend/lack-of-data-capabilities-impedes-organizations-success-global-survey-finds.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-12-05T23:23:52.238Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_7c25>
+                    </column_0>
+                    <column_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_4dff
+                            jcr:created="{Date}2018-09-21T21:01:47.387Z"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-12-05T23:19:39.545Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/11/hpe-and-vmware-advance-partnership-to-drive-digital-transformation-with-integrated-hybrid-cloud-experience"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="HPE and VMware advance partnership to drive digital transformation with integrated hybrid cloud experience"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="HPE and VMware advance partnership to drive digital transformation with integrated hybrid cloud experience"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-12-05T23:19:39.545Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2022/11/image-norend/hpe-and-vmware-advance-partnership-to-drive-digital-transformation-with-integrated-hybrid-cloud-experience.JPG"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-12-05T23:19:39.545Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_4dff>
+                    </column_1>
+                    <column_2
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_50f2
+                            jcr:created="{Date}2018-09-05T17:41:27.359Z"
+                            jcr:createdBy="nagle@hpe.com"
+                            jcr:lastModified="{Date}2022-12-05T23:21:47.870Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/06/hpe-greenlake-adds-open-source-leader-red-hat-to-expanding-ecosystem"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="HPE GreenLake adds open source leader Red Hat to expanding ecosystem"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="HPE GreenLake adds open source leader Red Hat to expanding ecosystem"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-12-05T23:21:47.870Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                fileReference="/content/dam/hpe/newsroom/2022/06/image-norend/hpe-greenlake-adds-open-source-leader-red-hat-to-expanding-ecosystem.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-12-05T23:21:47.870Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"/>
+                        </contentblock_50f2>
+                    </column_2>
+                </columncontainercompo>
+            </body-par>
+            <side-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <buttonctaitemcompone
+                    jcr:created="{Date}2018-06-28T13:06:31.075-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:06:46.099-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 1"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_661124859
+                    jcr:created="{Date}2018-06-28T13:06:51.115-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:11.079-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 2"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_606970408
+                    jcr:created="{Date}2018-06-28T13:06:53.400-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:02.336-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 3"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+            </side-par>
+        </main-par>
+        <image
+            jcr:lastModified="{Date}2018-09-05T17:38:02.066Z"
+            jcr:lastModifiedBy="nagle@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+    </jcr:content>
+</jcr:root>

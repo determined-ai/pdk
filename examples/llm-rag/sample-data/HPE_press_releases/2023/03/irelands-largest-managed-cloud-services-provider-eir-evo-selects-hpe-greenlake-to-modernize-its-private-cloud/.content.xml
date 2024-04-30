@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/apps/settings/wcm/designs/hpeweb"
+        cq:lastModified="{Date}2023-03-24T02:48:18.555Z"
+        cq:lastModifiedBy="christine.seales@hpe.com"
+        cq:tags="[hpe-newsroom:categories/big-data,hpe-newsroom:categories/company---customers,hpe-newsroom:categories/company---partners]"
+        cq:template="/apps/hpeweb/templates/page-text-heavy"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Ireland’s largest managed cloud services provider, eir evo, selects HPE GreenLake to modernize its private cloud"
+        jcr:uuid="5a0e04ba-7c65-435b-bbcf-472a0586bdbf"
+        sling:resourceType="hpeweb/components/pages/page-text-heavy"
+        browserTitle="Ireland’s largest managed cloud services provider, eir evo, selects HPE GreenLake to modernize its private cloud"
+        changefreq="daily"
+        contentType="Press Release"
+        displayDate="{Date}2023-03-23T05:00:00.000-04:00"
+        metaDescription="HPE Platinum Partner to develop its private cloud offering on the HPE GreenLake edge-to-cloud platform"
+        metaKeywords="HPE, HPE Ireland, HPE GreenLake, edge-to-cloud, eir evo, cloud service provider, cloud, private cloud, digital transformation, channel partner"
+        metaOgImage="/content/dam/hpe/newsroom/2023/03/image-norend/irelands-largest-managed-cloud-services-provider-eir-evo-selects-hpe-greenlake-to-modernize-its-private-cloud.jpg"
+        metaTwitterCardType="summary_large_image"
+        msmcomponent="/content/hpe/base/blueprint/newsroom/press-release/2023/03/irelands-largest-managed-cloud-services-provider-eir-evo-selects-hpe-greenlake-to-modernize-its-private-cloud/jcr:content/main-par/body-par/textonlycomponent_cd"
+        navTitle="Ireland’s largest managed cloud services provider, eir evo, selects HPE GreenLake to modernize its private cloud"
+        pageTitle="Ireland’s largest managed cloud services provider, eir evo, selects HPE GreenLake to modernize its private cloud"
+        priority="(None)"
+        socialDescription="HPE Platinum Partner to develop its private cloud offering on the HPE GreenLake edge-to-cloud platform"
+        subtitle="HPE Platinum Partner to develop its private cloud offering on the HPE GreenLake edge-to-cloud platform"
+        theme="dark">
+        <main-par
+            jcr:lastModified="{Date}2018-06-28T13:09:39.402-07:00"
+            jcr:lastModifiedBy="velazquez@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="hpeweb/components/content/textHeavyComponent"
+            siderail="none">
+            <subtitle
+                jcr:lastModified="{Date}2023-03-22T16:13:44.652Z"
+                jcr:lastModifiedBy="christine.seales@hpe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="hpeweb/components/content/newsroom/newsroomSubtitleComponent"
+                textOnly="MARCH 23, 2023 • PRESS RELEASE"/>
+            <body-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <imageonlycomponent_c
+                    jcr:created="{Date}2018-06-18T09:06:27.827-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-03-22T17:52:32.189Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/imageOnlyComponent"
+                    ctaNewWindow="false"
+                    disableCaptionUnderline="false"
+                    disableImageScaling="false"
+                    enableImageAccent="false"
+                    fileReference="/content/dam/hpe/newsroom/2023/03/image-norend/irelands-largest-managed-cloud-services-provider-eir-evo-selects-hpe-greenlake-to-modernize-its-private-cloud.jpg"
+                    gradientPlacement="top-right"
+                    imageAlignment="hpe-image-center"
+                    imageAltText="HPE Guarantees"
+                    isVideo="false"
+                    isZoom="false"
+                    textIsRich="true"
+                    topMargin="60"
+                    useNativeAspectRatio="false"
+                    videoSource="video"
+                    videoType="youtube"
+                    zoomBackground="white"/>
+                <textonlycomponent_cd
+                    jcr:created="{Date}2018-06-18T09:12:49.742-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-03-24T02:48:18.543Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    leftPadding="30"
+                    rightPadding="30"
+                    textIsRich="true"
+                    textOnly="&lt;h3>IN THIS ARTICLE&lt;/h3>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>eir evo leverages the full range of HPE GreenLake cloud services, making it a leading HPE service provider partner&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>The upgrade to HPE GreenLake facilitates anticipated increase in workloads and and will help manage costs and carbon footprint&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli
+                    jcr:created="{Date}2018-06-18T09:16:54.243-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-18T09:18:45.987-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <textonlycomponent
+                    jcr:created="{Date}2023-03-22T16:15:57.873Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2023-03-22T16:16:33.547Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;h2>HPE Platinum Partner to develop its private cloud offering on the HPE GreenLake edge-to-cloud platform&lt;/h2>&#xd;&#xa;"/>
+                <textonlycomponent_e9
+                    jcr:created="{Date}2018-06-22T11:24:07.263-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-03-22T16:17:44.617Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Dublin – March 23, 2022 &lt;/b>– &lt;u>&lt;a href=&quot;http://www.hpe.com&quot; target=&quot;_blank&quot;>Hewlett Packard Enterprise&lt;/a>&lt;/u> (NYSE: HPE) today announced that &lt;a href=&quot;https://eirevo.ie/&quot; target=&quot;_blank&quot;>eir evo&lt;/a>, the largest managed cloud services provider in Ireland, has selected the &lt;a href=&quot;https://www.hpe.com/us/en/greenlake.html&quot; target=&quot;_blank&quot;>HPE GreenLake edge-to-cloud platform&lt;/a> to enhance the cloud services offering for its private cloud platform, Digital Planet. HPE GreenLake will enable Digital Planet to meet increasing demand, accelerate deployment of new services and improve overall customer experience for its private cloud offering.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;Eir evo has operations and data centers located in Dublin as well as the UK and US and is one of two &lt;a href=&quot;https://www.hpe.com/psnow/downloadDoc/HPE%20Partner%20Ready%20for%20Technology%20Partner%20Program-4aa6-5669enw.pdf?id=4aa6-5669enw.pdf&amp;amp;isFutureVersion=true&amp;amp;ver=&amp;amp;form=false&amp;amp;preview=false&amp;amp;print=&amp;amp;hf=regular&amp;amp;r=&amp;amp;section=&amp;amp;prelaunchSection=&amp;amp;softrollSection=&amp;amp;deepLink=&amp;amp;isLinearized=false#page=6&quot; target=&quot;_blank&quot;>HPE Platinum Partners&lt;/a> in Ireland. The managed services provider offers an extensive portfolio of services to help customers embrace new technologies across cloud, cybersecurity, networking, infrastructure, connectivity, and more. This portfolio leverages the full range of HPE GreenLake cloud services, making eir evo a leading HPE service provider partner.&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <pullquote
+                    jcr:created="{Date}2023-03-22T16:17:55.361Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2023-03-22T17:54:50.949Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution="Martin Wells, managing director, eir evo"
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>&amp;quot;A key advantage is the modern cloud experience of HPE GreenLake that delivers service flexibility and choice, and the pay-per-use as-a-service model. These features help us manage costs and carbon footprint as they prevent overprovisioning and provide insights into energy consumption, which, in times of soaring energy costs and the global climate crisis, is critical.”&lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2023-03-22T17:54:50.949Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote>
+                <textonlycomponent_b4
+                    jcr:created="{Date}2018-06-18T09:18:06.257-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-03-22T17:55:43.788Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>“As a HPE Platinum Partner we have a deep understanding of deploying a technology and business platform, therefore it was clear that HPE GreenLake would be the optimal fit to futureproof our Digital Planet solution,” said Martin Wells, managing director, eir evo. “In recent years sustainability has come into sharp focus for us and our customers. A key advantage is the modern cloud experience of HPE GreenLake that delivers service flexibility and choice, and the pay-per-use as-a-service model. These features help us manage costs and carbon footprint as they prevent overprovisioning and provide insights into energy consumption, which, in times of soaring energy costs and the global climate crisis, is critical.”&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; As a leader in the provision of cloud services, eir evo constantly strives to provide the highest levels of service quality while continuing to innovate. Its Digital Planet platform offers secure and compliant enterprise-class cloud hosting and IT managed services, and as more and more customers join the platform eir evo must modernize the infrastructure and software it is built upon. The system upgrade to HPE GreenLake facilitates the anticipated increase in workloads and data as well as performance growth, while allowing the team to implement changes more quickly to satisfy customer needs. &lt;/span>&lt;/p>&#xd;&#xa;"/>
+                <pullquote_349b
+                    jcr:created="{Date}2018-06-18T09:23:47.197-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-03-22T16:21:32.953Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution="Ray McGann, Ireland managing director, HPE"
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>“It is terrific to see one of our leading HPE partners include HPE GreenLake and deploy it in their own private cloud environment at the same time.” &lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2023-03-22T16:21:32.953Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote_349b>
+                <textonlycomponent_97
+                    jcr:created="{Date}2018-06-22T11:22:31.557-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-03-22T16:22:27.225Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>Providing a wide range of security solutions and complying with strict data privacy regulations, that are important in the European Union like GDPR, requires eir evo to prioritize developing its services on systems with the highest standards of security. HPE GreenLake is a zero-trust enabled architecture that delivers embedded security technologies and verifies the integrity of data infrastructures, more easily ensuring security and compliance. To guarantee minimum data loss and downtime for the platform, eir evo combines these capabilities with &lt;a href=&quot;https://www.hpe.com/us/en/storage/data-protection-solutions/disaster-recovery-zerto.html&quot; target=&quot;_blank&quot;>HPE Zerto&lt;/a>, a solution for journal-based continuous data protection and recovery, delivering high-end security orchestration for all its cloud services.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;“It is terrific to see one of our leading HPE partners include HPE GreenLake and deploy it in their own private cloud environment at the same time,” said Ray McGann, Ireland managing director, HPE. “With this modernization eir evo will have a highly flexible cloud platform that enables them to scale as they grow. This, together with a fixed pricing model, will allow the Digital Planet team to match their costs to revenue, providing improved predictability, visibility, and control, while investing more in the continued development of new solutions and services for their customers.”&lt;/span>&lt;/p>&#xd;&#xa;"/>
+                <textonlycomponent_fe
+                    jcr:created="{Date}2018-06-18T09:28:54.456-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-03-22T16:25:28.551Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>About Hewlett Packard Enterprise&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>Hewlett Packard Enterprise (NYSE: HPE) is the global edge-to-cloud company that helps organizations accelerate outcomes by unlocking value from all of their data, everywhere. Built on decades of reimagining the future and innovating to advance the way people live and work, HPE delivers unique, open and intelligent technology solutions as a service.&amp;nbsp; With offerings spanning Cloud Services, Compute, High Performance Computing &amp;amp; AI, Intelligent Edge, Software, and Storage, HPE provides a consistent experience across all clouds and edges, helping customers develop new business models, engage in new ways, and increase operational performance. For more information, visit: &lt;a href=&quot;http://www.hpe.com&quot; target=&quot;_blank&quot;>www.hpe.com&lt;/a>&lt;br>&#xd;&#xa;&lt;b>&lt;br>&#xd;&#xa;About HPE GreenLake&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;/b>The HPE GreenLake edge-to-cloud platform enables customers to accelerate data-first modernization and provides cloud services that can run on-premises, at the edge, in a colocation facility, and in the public cloud. In its &lt;a href=&quot;https://www.hpe.com/us/en/newsroom/press-release/2023/03/hewlett-packard-enterprise-reports-fiscal-2023-first-quarter-results.html&quot; target=&quot;_blank&quot;>first fiscal quarter of 2023&lt;/a>, HPE reported Annualized Revenue Run-Rate (ARR) of&amp;nbsp;over $1 billion, a growth of 31% from the prior-year period in constant currency. &amp;nbsp;HPE GreenLake has 65,000 customers, powers more than two million connected devices and manages more than one exabyte of data under management with customers worldwide. These organizations benefit from one control plane from which to automate, orchestrate, and run their hybrid cloud strategy. The scalable, pay-as-you go HPE GreenLake platform also delivers robust security, compliance, and control, and supports a broad partner ecosystem – including channel partners, distributors, independent software vendors, public cloud providers, service providers, and system integrators. For more information on HPE GreenLake, please visit: &lt;a href=&quot;https://www.hpe.com/us/en/greenlake.html&quot; target=&quot;_blank&quot;>https://www.hpe.com/us/en/greenlake.html&lt;/a>&lt;br>&#xd;&#xa;&lt;b>&lt;br>&#xd;&#xa;About Digital Planet&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;/b>Digital Planet is eir evo’s dedicated, enterprise-class Private Cloud offering. Through Digital Planet, Eir Evo gives businesses the power to build their very own bespoke cloud solution upon best of breed technologies with industry-leading security and unmatched support. Digital Planet delivers multi-tenant or dedicated compute, storage, monitoring, network, back up and disaster recovery protection, built to your specific workload needs.&amp;nbsp; &amp;nbsp;&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;a href=&quot;https://www.eirevo.ie/cloud-services/cloud-hosting-platforms/private-cloud/&quot; target=&quot;_blank&quot;>Find out more about Digital Planet&lt;/a>&lt;br>&#xd;&#xa;&lt;b>&lt;br>&#xd;&#xa;About eir evo&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;/b>eir evo is the largest scale technology partner in the Irish market, equipped with the expertise and foresight to securely design and engineer everything you need from one source, seamlessly. Our unrivalled portfolio of services leverages the latest technologies across cloud, cyber security, networking, infrastructure, connectivity and more. Through this, along with our people, innovation and expertise, we drive technical freedom so you can evolve and grow your business.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;With offices in Ireland and New Zealand, eir evo experts support your business 24x7x365 through our follow the sun model. No matter the challenge, we have the solution as well as the power to make your vision a reality.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;Visit: &lt;a href=&quot;https://eirevo.ie/&quot; target=&quot;_blank&quot;>https://eirevo.ie/&lt;/a>&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;Media Contact:&lt;br>&#xd;&#xa;Laura von Pentz&lt;br>&#xd;&#xa;&lt;a href=&quot;mailto:laura.von-pentz@hpe.com&quot; target=&quot;_blank&quot;>laura.von-pentz@hpe.com&lt;/a>&lt;/span> &lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <textonlycomponent_bf
+                    jcr:created="{Date}2018-07-02T13:12:59.755-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-10-12T16:10:50.633Z"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    textOnly="&lt;h2>RELATED NEWS&lt;/h2>&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli_540225213
+                    jcr:created="{Date}2018-06-18T10:12:48.909-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:22:53.902-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <columncontainercompo
+                    jcr:created="{Date}2018-07-02T13:14:23.594-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:15:08.106-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/columnContainerComponent"
+                    columns="column-content-3">
+                    <column_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_7c25
+                            jcr:created="{Date}2018-07-02T13:15:28.984-07:00"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2023-03-22T16:29:35.047Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/07/french-cloud-service-provider-antemeta-selects-hpe-greenlake-to-introduce-new-automated-disaster-recovery-service"
+                            description="&lt;p>Press Release&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="French cloud service provider AntemetA selects HPE GreenLake to introduce new automated disaster recovery service"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="French cloud service provider AntemetA selects HPE GreenLake to introduce new automated disaster recovery service"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2023-03-22T16:29:35.047Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2022/07/image-norend/french-cloud-service-provider-antemeta-selects-hpe-greenlake-to-introduce-new-automated-disaster-recovery-service.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2023-03-22T16:29:35.047Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_7c25>
+                    </column_0>
+                    <column_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_4dff
+                            jcr:created="{Date}2018-09-21T21:01:47.387Z"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2023-03-22T16:31:44.915Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/06/eclit-chooses-hpe-greenlake-to-launch-a-new-cloud-offering-and-expand-its-managed-services-portfolio"
+                            description="&lt;p>Press Release&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="Eclit chooses HPE GreenLake to launch a new cloud offering and expand its managed services portfolio"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Eclit chooses HPE GreenLake to launch a new cloud offering and expand its managed services portfolio"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2023-03-22T16:31:44.915Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2022/06/image-norend/eclit-chooses-hpe-greenlake-to-launch-a-new-cloud-offering-and-expand-its-managed-services-portfolio.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2023-03-22T16:31:44.915Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_4dff>
+                    </column_1>
+                    <column_2
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_50f2
+                            jcr:created="{Date}2018-09-05T17:41:27.359Z"
+                            jcr:createdBy="nagle@hpe.com"
+                            jcr:lastModified="{Date}2023-03-22T16:33:44.995Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/06/swedish-cloud-service-provider-datarewind-boosts-hybrid-office-productivity-with-hpe-cloud-native-storage-and-enhanced-compute-capacities"
+                            description="&lt;p>Press Release&lt;br>&#xd;&#xa;&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="Swedish cloud service provider, Datarewind, boosts hybrid office productivity with HPE cloud-native storage and enhanced compute capacities"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Swedish cloud service provider, Datarewind, boosts hybrid office productivity with HPE cloud-native storage and enhanced compute capacities"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2023-03-22T16:33:44.995Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                fileReference="/content/dam/hpe/newsroom/2022/06/image-norend/swedish-cloud-service-provider-datarewind-boosts-hybrid-office-productivity-with-hpe-cloud-native-storage-and-enhanced-compute-capacities.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2023-03-22T16:33:44.995Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"/>
+                        </contentblock_50f2>
+                    </column_2>
+                </columncontainercompo>
+            </body-par>
+            <side-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <buttonctaitemcompone
+                    jcr:created="{Date}2018-06-28T13:06:31.075-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:06:46.099-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 1"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_661124859
+                    jcr:created="{Date}2018-06-28T13:06:51.115-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:11.079-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 2"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_606970408
+                    jcr:created="{Date}2018-06-28T13:06:53.400-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:02.336-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 3"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+            </side-par>
+        </main-par>
+        <image
+            jcr:lastModified="{Date}2018-09-05T17:38:02.066Z"
+            jcr:lastModifiedBy="nagle@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+    </jcr:content>
+</jcr:root>

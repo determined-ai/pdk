@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/apps/settings/wcm/designs/hpeweb"
+        cq:lastModified="{Date}2023-03-02T18:59:20.496Z"
+        cq:lastModifiedBy="christine.seales@hpe.com"
+        cq:tags="[hpe-newsroom:categories/servers,hpe-newsroom:categories/services]"
+        cq:template="/apps/hpeweb/templates/page-text-heavy"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Hewlett Packard Enterprise fortifies network security with acquisition of Security Service Edge provider Axis Security "
+        jcr:uuid="0fef238c-5048-43f4-956d-6438c2542658"
+        sling:resourceType="hpeweb/components/pages/page-text-heavy"
+        browserTitle="Hewlett Packard Enterprise fortifies network security with acquisition of Security Service Edge provider Axis Security "
+        changefreq="daily"
+        contentType="Press Release"
+        displayDate="{Date}2023-03-02T16:05:00.000-05:00"
+        metaDescription="Axis Security acquisition strengthens Aruba’s SASE solutions with integrated cloud security and SD-WAN in a single offering"
+        metaKeywords="Network, SSE, SASE, SWG, CASB, DEM, networking, networks, HPE, Aruba Networking, Axis Security, acquisition, Wi-Fi, WiFi, private networks, HPE GreenLake, B2B, remote worker, SD-WAN, SaaS, 5G"
+        metaOgImage="/content/dam/hpe/newsroom/2023/03/image-norend/hpe-fortifies-network-security-with-acquisition-of-security-service-edge-provider-axis-security.jpg"
+        metaTwitterCardType="summary_large_image"
+        msmcomponent="/content/hpe/base/blueprint/newsroom/press-release/2023/03/hewlett-packard-enterprise-fortifies-network-security-with-acquisition-of-security-service-edge-provider-axis-security/jcr:content/main-par/body-par/textonlycomponent_fe"
+        navTitle="Hewlett Packard Enterprise fortifies network security with acquisition of Security Service Edge provider Axis Security "
+        pageTitle="Hewlett Packard Enterprise fortifies network security with acquisition of Security Service Edge provider Axis Security "
+        priority="(None)"
+        socialDescription="Axis Security acquisition strengthens Aruba’s SASE solutions with integrated cloud security and SD-WAN in a single offering"
+        subtitle="Axis Security acquisition strengthens Aruba’s SASE solutions with integrated cloud security and SD-WAN in a single offering"
+        theme="dark">
+        <main-par
+            jcr:lastModified="{Date}2018-06-28T13:09:39.402-07:00"
+            jcr:lastModifiedBy="velazquez@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="hpeweb/components/content/textHeavyComponent"
+            siderail="none">
+            <subtitle
+                jcr:lastModified="{Date}2023-03-01T16:02:53.444Z"
+                jcr:lastModifiedBy="christine.seales@hpe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="hpeweb/components/content/newsroom/newsroomSubtitleComponent"
+                textOnly="MARCH 2, 2023 • PRESS RELEASE"/>
+            <body-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <imageonlycomponent_c
+                    jcr:created="{Date}2018-06-18T09:06:27.827-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-03-01T16:13:10.589Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/imageOnlyComponent"
+                    fileReference="/content/dam/hpe/newsroom/2023/03/image-norend/hpe-fortifies-network-security-with-acquisition-of-security-service-edge-provider-axis-security.jpg"
+                    imageAlignment="hpe-image-center"
+                    imageAltText="HPE Guarantees"
+                    topMargin="60"
+                    videoSource="video"
+                    videoType="youtube"/>
+                <textonlycomponent_cd
+                    jcr:created="{Date}2018-06-18T09:12:49.742-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-03-02T17:33:35.694Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    leftPadding="30"
+                    rightPadding="30"
+                    textIsRich="true"
+                    textOnly="&lt;h3>IN THIS ARTICLE&lt;/h3>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>HPE&amp;nbsp;intends to acquire Axis Security, a cloud security provider, expanding its edge-to-cloud security capabilities by offering a unified Secure Access Services Edge (SASE) solution to meet the increasing demand for integrated networking and security solutions delivered as-a-service&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>Axis Security’s Security Services Edge (SSE) platform addresses the need for improved application performance and increased network security as the number of remote users increases and as enterprises continue to migrate applications to the cloud&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>The HPE GreenLake edge-to-cloud platform will integrate Axis Security’s cloud-native SSE platform, offering customers one single monthly subscription with no capital expenditure&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli
+                    jcr:created="{Date}2018-06-18T09:16:54.243-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-18T09:18:45.987-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <textonlycomponent
+                    jcr:created="{Date}2023-03-02T15:01:47.508Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2023-03-02T15:02:13.571Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;h2>Axis Security acquisition strengthens Aruba’s SASE solutions with integrated cloud security and SD-WAN in a single offering&lt;/h2>&#xd;&#xa;"/>
+                <textonlycomponent_e9
+                    jcr:created="{Date}2018-06-22T11:24:07.263-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-03-02T15:02:56.674Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>HOUSTON, Texas – March 2, 2023 &lt;/b>– &lt;a href=&quot;https://www.hpe.com/us/en/home.html&quot; target=&quot;_blank&quot;>Hewlett Packard Enterprise&lt;/a> (NYSE: HPE) today announced that it entered into a definitive agreement to acquire Axis Security, a cloud security provider. This acquisition will allow HPE to expand its edge-to-cloud security capabilities by offering a unified Secure Access Services Edge (SASE) solution to meet the increasing demand for integrated networking and security solutions delivered as-a-service. Axis Security’s Security Services Edge (SSE) platform addresses the need for improved application performance and increased network security as the number of remote users increases and as enterprises continue to migrate applications to the cloud.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;Axis Security’s SSE offerings enable access to corporate and public-cloud resources, and the company’s cloud-based platform will build on Aruba’s existing Software-defined Wide Area Network (SD-WAN) and network firewall offering. This combination will provide a complete edge-to-cloud SASE solution, ensuring that Zero Trust security controls can be applied to people and devices, no matter where they connect – on campus, branch, home, or on the road.&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <pullquote
+                    jcr:created="{Date}2023-03-02T15:03:09.110Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2023-03-02T15:03:56.389Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution="Phil Mottram, executive vice president and general manager, HPE Aruba Networking"
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>“As we transition from a post-pandemic world, and a hybrid work environment has become the new normal, a new approach is needed for network edge security to protect critical SaaS applications.&amp;quot;&lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2023-03-02T15:03:56.389Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote>
+                <textonlycomponent_b4
+                    jcr:created="{Date}2018-06-18T09:18:06.257-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-03-02T15:04:45.752Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>“As we transition from a post-pandemic world, and a hybrid work environment has become the new normal, a new approach is needed for network edge security to protect critical SaaS applications,” said Phil Mottram,&amp;nbsp;executive vice president and general manager, HPE Aruba Networking. “The convergence of Aruba and Axis Security solutions will transform edge-to-cloud connectivity with a comprehensive SASE solution that provides enterprises with the highest levels of security for both IoT devices and all users’ access across geographically distributed locations. Today, we also accelerate our vision to help our customers expand their secure connectivity needs with SASE and private 5G solutions, building on &lt;a href=&quot;https://www.hpe.com/us/en/newsroom/press-release/2023/02/hewlett-packard-enterprise-doubles-down-on-private-5g-extends-leadership-in-wireless-connectivity-with-acquisition-of-athonet.html&quot; target=&quot;_blank&quot;>our recently announced agreement to acquire private cellular technology provider, Athonet&lt;/a>.”&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;Based in Tel Aviv, Israel, Axis Security provides a cloud-native SSE platform, Atmos, which delivers authenticated user access to private applications at the network edge, a secure web gateway (SWG) to safeguard user access to the Internet, and a cloud access security broker (CASB) that provides secure in-line access to SaaS apps, and Digital Experience Monitoring (DEM) to provide insights into user experience.&amp;nbsp;&lt;/span>&lt;/p>&#xd;&#xa;"/>
+                <pullquote_349b
+                    jcr:created="{Date}2018-06-18T09:23:47.197-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-03-02T15:05:36.671Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution="Dor Knafo, CEO of Axis Security. "
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>“We developed Axis Security to enable a world where connectivity to every business resource, from anywhere, could always be simple, safe and reliable.&amp;quot;&lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2023-03-02T15:05:36.671Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote_349b>
+                <textonlycomponent_97
+                    jcr:created="{Date}2018-06-22T11:22:31.557-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-03-02T15:06:42.783Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>“We developed Axis Security to enable a world where connectivity to every business resource, from anywhere, could always be simple, safe and reliable,” said Dor Knafo, CEO of Axis Security. “Our SSE platform is a natural complement to Aruba’s SD-WAN, network firewall, and dynamic segmentation offerings. Together, we create a unified SASE platform, designed to extend connectivity to edge, and do so through a combination of modern access services – all working together in harmony.”&lt;br />&#xd;&#xa;&lt;b style=&quot;&quot;>&lt;br />&#xd;&#xa;HPE enhances SASE offering with cloud security through integrated Axis Security platform&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;&lt;/b>HPE will integrate Axis Security technology with its existing Aruba secure networking offerings to complete its SASE offering, which delivers WAN and cloud security controls directly to the application at the network edge, rather than routing data through the data center. This helps customers by flexibly delivering all of a provider’s networking components as a service with one point of control – instead of acquiring, maintaining, and licensing separate components individually.&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;In addition, the HPE GreenLake edge-to-cloud platform will integrate Axis Security’s cloud-native SSE platform, offering customers one single monthly subscription with no capital expenditure.  Customers can deploy these flexible as-a-service solutions with reduced risk and little upfront investment – and scale them according to demand.&lt;br />&#xd;&#xa;&lt;b style=&quot;&quot;>&lt;br />&#xd;&#xa;HPE portfolio integration and availability&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;&lt;/b>The transaction is expected to close by the end of the second quarter of the HPE 2023 fiscal year subject to customary closing conditions. HPE will integrate Axis Security’s solutions with its edge-to-cloud security solutions and plans to make them available to customers in the third quarter of the HPE 2023 fiscal year.&lt;/span>&lt;/p>&#xd;&#xa;"/>
+                <textonlycomponent_fe
+                    jcr:created="{Date}2018-06-18T09:28:54.456-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2023-03-02T18:59:20.487Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>About Hewlett Packard Enterprise&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>Hewlett Packard Enterprise (NYSE: HPE) is the global edge-to-cloud company that helps organizations accelerate outcomes by unlocking value from all of their data, everywhere. Built on decades of reimagining the future and innovating to advance the way people live and work, HPE delivers unique, open and intelligent technology solutions as a service.&amp;nbsp; With offerings spanning Cloud Services, Compute, High Performance Computing &amp;amp; AI, Intelligent Edge, Software, and Storage, HPE provides a consistent experience across all clouds and edges, helping customers develop new business models, engage in new ways, and increase operational performance. For more information, visit: &lt;a href=&quot;http://www.hpe.com/&quot; target=&quot;_blank&quot;>www.hpe.com&lt;/a>&lt;br>&#xd;&#xa; &lt;b>&lt;br>&#xd;&#xa;Media Contact:&lt;br>&#xd;&#xa; &lt;/b>Ben Stricker&lt;br>&#xd;&#xa; &lt;a href=&quot;mailto:Ben.Stricker@hpe.com&quot; target=&quot;_blank&quot;>Ben.Stricker@hpe.com&lt;/a>&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/span>&lt;b>Forward-looking statements&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/b>&lt;span class=&quot;body-copy-large&quot;>This document contains forward-looking statements within the meaning of the safe harbor provisions of the Private Securities Litigation Reform Act of 1995. Such statements involve risks, uncertainties, and assumptions. If such risks or uncertainties materialize or such assumptions prove incorrect, the results of HPE and its consolidated subsidiaries could differ materially from those expressed or implied by such forward-looking statements and assumptions. All statements other than statements of historical fact are statements that could be deemed forward-looking statements, including, but not limited to, any statements regarding the expected benefits and costs of the transaction contemplated by this document, including enhanced opportunities for growth, the delivery and timing of customer benefits and additional offerings, the timing of closing the transaction, and the realization and timing of synergies and other economic benefits; projections of operational or financial performance; any statements concerning the expected development, performance, market share, or competitive performance relating to products or services; any statements regarding current or future macroeconomic or industry trends or events and the impact of those trends and events on HPE and its financial performance; any statements of expectation or belief; and any statements of assumptions underlying any of the foregoing. Risks, uncertainties, and assumptions include the possibility that expected benefits may not materialize as expected; that the parties are unable to successfully implement integration strategies; and other risks that are described in HPE’s reports with the Securities and Exchange Commission, including but not limited to the risks described in HPE’s Annual Report on Form 10-K for its fiscal year ended October 31, 2022, and that are otherwise described or updated from time to time in Hewlett Packard Enterprise’s Quarterly Reports on Form 10-Q, Current Reports on Form 8-K, and in other filings made with the Securities and Exchange Commission. HPE assumes no obligation and does not intend to update these forward-looking statements.&amp;nbsp;&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <textonlycomponent_bf
+                    jcr:created="{Date}2018-07-02T13:12:59.755-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-10-12T16:10:50.633Z"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    textOnly="&lt;h2>RELATED NEWS&lt;/h2>&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli_540225213
+                    jcr:created="{Date}2018-06-18T10:12:48.909-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:22:53.902-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <columncontainercompo
+                    jcr:created="{Date}2018-07-02T13:14:23.594-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:15:08.106-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/columnContainerComponent"
+                    columns="column-content-3">
+                    <column_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_7c25
+                            jcr:created="{Date}2018-07-02T13:15:28.984-07:00"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2023-03-02T15:11:20.302Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2023/02/hewlett-packard-enterprise-doubles-down-on-private-5g-extends-leadership-in-wireless-connectivity-with-acquisition-of-athonet"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="Hewlett Packard Enterprise doubles down on private 5G, extends leadership in wireless connectivity with acquisition of Athonet"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Hewlett Packard Enterprise doubles down on private 5G, extends leadership in wireless connectivity with acquisition of Athonet"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2023-03-02T15:11:20.302Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2022/11/image-norend/hewlett-packard-enterprise-reports-fiscal-2022-results-with-record-q4-performance.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2023-03-02T15:11:20.302Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_7c25>
+                    </column_0>
+                    <column_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_4dff
+                            jcr:created="{Date}2018-09-21T21:01:47.387Z"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2023-03-02T15:13:57.807Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2023/03/hewlett-packard-enterprise-reports-fiscal-2023-first-quarter-results"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="Hewlett Packard Enterprise reports Fiscal 2023 first quarter results"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Hewlett Packard Enterprise reports Fiscal 2023 first quarter results"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2023-03-02T15:13:57.807Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2022/11/image-norend/hewlett-packard-enterprise-reports-fiscal-2022-results-with-record-q4-performance.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2023-03-02T15:13:57.807Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_4dff>
+                    </column_1>
+                    <column_2
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_50f2
+                            jcr:created="{Date}2018-09-05T17:41:27.359Z"
+                            jcr:createdBy="nagle@hpe.com"
+                            jcr:lastModified="{Date}2023-03-02T15:19:39.469Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="primary"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2023/02/hewlett-packard-enterprise-and-nokia-to-collaborate-on-cloud-ran-solution-for-csps-and-enterprises"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableImageAccent="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            gradientPlacement="top-right"
+                            header="Hewlett Packard Enterprise and Nokia to collaborate on Cloud RAN solution for CSPs and enterprises"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Hewlett Packard Enterprise and Nokia to collaborate on Cloud RAN solution for CSPs and enterprises"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2023-03-02T15:19:39.469Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                fileReference="/content/dam/hpe/newsroom/2023/02/image-norend/hewlett-packard-enterprise-and-nokia-to-collaborate-on-cloud-ran-solution-for-csps-and-enterprises.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2023-03-02T15:19:39.469Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"/>
+                        </contentblock_50f2>
+                    </column_2>
+                </columncontainercompo>
+            </body-par>
+            <side-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <buttonctaitemcompone
+                    jcr:created="{Date}2018-06-28T13:06:31.075-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:06:46.099-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 1"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_661124859
+                    jcr:created="{Date}2018-06-28T13:06:51.115-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:11.079-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 2"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_606970408
+                    jcr:created="{Date}2018-06-28T13:06:53.400-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:02.336-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 3"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+            </side-par>
+        </main-par>
+        <image
+            jcr:lastModified="{Date}2018-09-05T17:38:02.066Z"
+            jcr:lastModifiedBy="nagle@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+    </jcr:content>
+</jcr:root>

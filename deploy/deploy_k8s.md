@@ -5,7 +5,7 @@
 
 # PDK - Pachyderm | Determined | KServe
 ## Deployment Guide for Kubernetes
-<b>Date/Revision:</b> January 02, 2024
+<b>Date/Revision:</b> February 23, 2024
 
 
 This guide will walk you through the steps of deploying the PDK components to a vanilla Kubernetes environment.
@@ -23,8 +23,8 @@ The following software versions will be used for this installation:
 - Python: 3.8 and 3.9
 - Kubernetes (K8s): latest supported *(currently 1.27)*
 - Postgres: 13
-- MLDE (Determined.AI): latest *(currently 0.26.7)*
-- MLDM (Pachyderm): latest *(currently 2.8.2)*
+- MLDE (Determined.AI): latest *(currently 0.28.1)*
+- MLDM (Pachyderm): latest *(currently 2.8.4)*
 - KServe: 0.12.0-rc0 (Quickstart Environment)
 
 PS: some of the commands used here are sensitive to the version of the product(s) listed above.
@@ -610,7 +610,7 @@ spec:
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: mlde-pvc
+  name: pdk-pvc
 spec:
   accessModes:
     - ReadWriteMany
@@ -639,7 +639,7 @@ spec:
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: mlde-pvc
+  name: pdk-pvc
   namespace: gpu-pool
 spec:
   accessModes:
@@ -722,7 +722,7 @@ proxy:
 
 determined:
   enabled: true
-  detVersion: "0.26.7"
+  detVersion: "0.28.1"
   imageRegistry: determinedai
   enterpriseEdition: false
   imagePullSecretName:
@@ -779,7 +779,7 @@ determined:
             volumes:
               - name: shared-fs
                 persistentVolumeClaim:
-                  claimName: mlde-pvc
+                  claimName: pdk-pvc
     - pool_name: gpu-pool
       max_aux_containers_per_agent: 1
       kubernetes_namespace: gpu-pool
@@ -796,7 +796,7 @@ determined:
             volumes:
               - name: shared-fs
                 persistentVolumeClaim:
-                  claimName: mlde-pvc
+                  claimName: pdk-pvc
             tolerations:
               - key: "nvidia.com/gpu"
                 operator: "Equal"

@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/apps/settings/wcm/designs/hpeweb"
+        cq:lastModified="{Date}2022-07-04T16:25:31.959Z"
+        cq:lastModifiedBy="christine.seales@hpe.com"
+        cq:tags="[hpe-newsroom:categories/big-data,hpe-newsroom:categories/company---partners]"
+        cq:template="/apps/hpeweb/templates/page-text-heavy"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="New Hewlett Packard Enterprise partner program fuels as-a-service growth for global partner ecosystem"
+        jcr:uuid="0257ee6f-4d6a-42e2-a346-6e7bf4a109ef"
+        sling:resourceType="hpeweb/components/pages/page-text-heavy"
+        browserTitle="New Hewlett Packard Enterprise partner program fuels as-a-service growth for global partner ecosystem"
+        changefreq="daily"
+        contentType="Press Release"
+        displayDate="{Date}2022-06-27T16:00:00.000-04:00"
+        metaDescription="Combined with a refreshed Partner Portal and Partner Connect enhancements, the new, HPE Partner Ready Vantage program enables partners to grow and advance their as-a-service business journey"
+        metaKeywords="HPE, HPE GreenLake, HPE Partners, HPE Channel, HPE Partner Ready Vantage program, HPE Discover, Pro Series, Partner Connect, HPE Partner Portal"
+        metaOgImage="/content/dam/hpe/newsroom/2022/06/image-norend/channel-news-2022.jpg"
+        metaTwitterCardType="summary_large_image"
+        msmcomponent="/content/hpe/base/blueprint/newsroom/press-release/2022/06/channel-news-2022/jcr:content/main-par/body-par/textonlycomponent_e9"
+        navTitle="New Hewlett Packard Enterprise partner program fuels as-a-service growth for global partner ecosystem"
+        pageTitle="New Hewlett Packard Enterprise partner program fuels as-a-service growth for global partner ecosystem"
+        priority="(None)"
+        socialDescription="Combined with a refreshed Partner Portal and Partner Connect enhancements, the new, HPE Partner Ready Vantage program enables partners to grow and advance their as-a-service business journey"
+        subtitle="Combined with a refreshed Partner Portal and Partner Connect enhancements, the new, HPE Partner Ready Vantage program enables partners to grow and advance their as-a-service business journey"
+        theme="dark"
+        UAID="e419689f-95a4-4c08-b274-cbd840316467"
+        UCID="28bcb4f5-7e33-4ae2-9cf7-56ad2a281345">
+        <main-par
+            jcr:lastModified="{Date}2018-06-28T13:09:39.402-07:00"
+            jcr:lastModifiedBy="velazquez@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="hpeweb/components/content/textHeavyComponent"
+            siderail="none">
+            <subtitle
+                jcr:lastModified="{Date}2022-06-22T17:54:37.766Z"
+                jcr:lastModifiedBy="christine.seales@hpe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="hpeweb/components/content/newsroom/newsroomSubtitleComponent"
+                textOnly="JUNE 27, 2022 • PRESS RELEASE"/>
+            <body-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <imageonlycomponent_c
+                    jcr:created="{Date}2018-06-18T09:06:27.827-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-06-22T17:59:54.742Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/imageOnlyComponent"
+                    fileReference="/content/dam/hpe/newsroom/2022/06/image-norend/channel-news-2022.jpg"
+                    imageAlignment="hpe-image-center"
+                    imageAltText="HPE Guarantees"
+                    topMargin="60"
+                    videoSource="video"
+                    videoType="youtube"/>
+                <textonlycomponent_cd
+                    jcr:created="{Date}2018-06-18T09:12:49.742-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-06-22T18:00:32.072Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    leftPadding="30"
+                    rightPadding="30"
+                    textIsRich="true"
+                    textOnly="&lt;h3>IN THIS ARTICLE&lt;/h3>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>The new HPE Partner Ready Vantage program provides partners the flexibility to meet customer demands and accelerate their customers’ transformation journeys&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>HPE Partner Ready Vantage allows partners to deliver the solutions their customers want, in the ways that best meet their own business goals&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>The new HPE Partner Ready Vantage program and updates reinforce the commitment HPE has to partners and their experience as a valued part of the wider ecosystem and route to market&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli
+                    jcr:created="{Date}2018-06-18T09:16:54.243-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-18T09:18:45.987-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <textonlycomponent
+                    jcr:created="{Date}2022-06-22T18:00:38.805Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2022-06-24T17:49:59.017Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;h2>Combined with a refreshed Partner Portal and Partner Connect enhancements, the new, HPE Partner Ready Vantage program enables partners to grow and advance their as-a-service business journey&lt;/h2>&#xd;&#xa;"/>
+                <textonlycomponent_e9
+                    jcr:created="{Date}2018-06-22T11:24:07.263-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-07-04T16:25:31.951Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>LAS VEGAS – June 27, 2022 – HPE Partner Growth Summit 2022 – &lt;/b>&lt;a href=&quot;http://www.hpe.com/&quot; target=&quot;_blank&quot;>Hewlett Packard Enterprise&lt;/a> (NYSE: HPE) today announced a new partner program, HPE Partner Ready Vantage. Building upon the award winning HPE Partner Ready program, HPE Partner Ready Vantage is purpose-built to help partners adjust to and thrive in today’s changing market. The program focuses on partners with as-a-service practices and recognizes and develops partner expertise. The new HPE Partner Ready Vantage program provides partners the flexibility to meet customer demands and accelerate their customers’ business outcomes.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; Alongside the program, HPE also announced updates to the HPE Pro Series, new enhancements to Partner Connect, and a refresh to the HPE Partner Portal streamlining and improving the experience of HPE Partners and their customers.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; Today’s partners face major shifts in the market. Rather than simply supplying specific components of infrastructure, customers want partners that understand their business and deliver and manage full solutions that help them solve specific challenges and achieve key business outcomes with measurable results. Instead of capital expenditure (CapEx) focused approaches, customers now demand operating expenditure (OpEx) arrangements, where partners provide easy to use as-a-service solutions that allow them to pay for only what they need. And, more than ever, customers seek reliable, full-service partners that deliver comprehensive, ongoing support that is tailored to their unique needs and business objectives. In fact, according to IDC&lt;sup>1&lt;/sup>, 76% of business-to-business customers want partners to take more day-to-day administrative and operational responsibility for infrastructure so internal IT staff can focus more on their business.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; HPE Partner Ready Vantage addresses these market changes and gives partners the choices they need to meet their customers’ evolving requirements. The program provides flexibility for partners to identify and pursue new opportunities, strengthen customer relationships, expand their market reach, and provide comprehensive solutions that deliver quantifiable business outcomes for customers. In short, HPE Partner Ready Vantage allows partners to deliver the solutions their customers want, in the ways that best meet their own business goals.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; “We value our partner ecosystem and are committed to investing in their success. We believe in the power of collaboration to deliver the best solutions and services that help our partners unlock their full potential,” said George Hope, worldwide head of partner sales, HPE. “As partners evolve their business models to meet the demands of customers today, they need a flexible, program that is designed to help them deliver no matter how their customers are choosing to buy or what their priorities are. HPE Partner Ready Vantage enables partners to participate more fully across the entire customer lifecycle and is optimized for our partners’ evolving business needs to accelerate their growth and enable their success.”&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <pullquote
+                    jcr:created="{Date}2022-06-22T18:02:46.970Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2022-06-22T18:03:18.434Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution="George Hope, worldwide head of partner sales, HPE"
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>“HPE Partner Ready Vantage enables partners to participate more fully across the entire customer lifecycle and is optimized for our partners’ evolving business needs to accelerate their growth and enable their success.”&lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2022-06-22T18:03:18.434Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote>
+                <textonlycomponent_b4
+                    jcr:created="{Date}2018-06-18T09:18:06.257-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-06-24T17:55:37.636Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>HPE Partner Ready Vantage&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/b>Designed to create enhanced opportunities for partners to build repeatable profitability, and deepen longstanding customer relationships, HPE Partner Ready Vantage is:&lt;br>&#xd;&#xa; &amp;nbsp;&lt;/span>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;b>In tune with how partners want to do business.&lt;/b> The Centers of Expertise (COEs), focus on key business areas, and are structured to align to current or aspiring partner skillsets. Partners can reach new markets and unlock new revenue streams by choosing to deliver any way they need to,&amp;nbsp; whether on-prem, cloud or hybrid.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Streamlined with greater flexibility. &lt;/b>The unified partner program and refreshed portal encompass both HPE and Aruba portfolios, so partners can deliver solutions that fit their business. Partners can quickly and easily access the information they need, spending less time searching and more time delivering value to their customers.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Designed for as-a-service growth. &lt;/b>No matter where partners are on their as-a-service journey, they can develop or enhance their service expertise. Partners can position their business as a market leader by leveraging HPE edge-to-cloud solutions - powered by HPE GreenLake - to develop unique customer experiences to expand their business.&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>&amp;nbsp;&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>“In recognizing that our partners play many roles and want to be recognized for their various areas of expertise, HPE Partner Ready Vantage delivers a complete 360 approach, addressing partner business models while nurturing, promoting and elevating partners based on their capabilities and expertise,” added Jesse Chavez, worldwide vice president partner programs and operations, HPE.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;The new program is organized into three tracks: Build, Sell, and Service. Under these tracks are focused COEs, offering tailored enablement, training, go-to-market initiatives, and sales tools.&lt;br>&#xd;&#xa;&amp;nbsp;&lt;/span>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;b>The Build Track&lt;/b> is designed for partners to integrate with HPE technology, leverage tested and proven pre-packaged solutions from HPE and HPE technology partners. Partners can also develop their own applications using HPE’s open platforms to deliver the solutions that meet their customers’ needs.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;b>The Sell Track&lt;/b> is designed to help partners grow their as a service business by offering value-added solutions from across the HPE portfolio&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;b>The Service Track&lt;/b> is designed specifically for partners focused on delivering services across the customer lifecycle, including: consulting, assessment, design, integration, deployment, migration, support and management.&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>&amp;nbsp;&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>“We created the services COEs to help partners excel in an as-a-service world,” said Donna Grothjan, vice president of worldwide channels for Aruba, a Hewlett Packard Enterprise company. “We’ve taken a personal approach as we’ve developed all of the components of this new program.&amp;nbsp;&amp;nbsp;We were deliberate in including mentorship alongside a wealth of vital training and workshops for our partners. We’ve relied on global best practices as we’ve built out the program elements – all in an effort to help our partners extend and expand their practices, have faster time to activation, reduce churn, and achieve higher than average renewal rates for customers.”&amp;nbsp;&lt;/span>&lt;/p>&#xd;&#xa;"/>
+                <pullquote_349b
+                    jcr:created="{Date}2018-06-18T09:23:47.197-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-06-22T18:07:49.290Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution="Donna Grothjan, vice president of worldwide channels for Aruba, a Hewlett Packard Enterprise company"
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>“We created the services COEs to help partners excel in an as-a-service world,”&amp;nbsp;&lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2022-06-22T18:07:49.290Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote_349b>
+                <textonlycomponent_97
+                    jcr:created="{Date}2018-06-22T11:22:31.557-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-06-22T18:09:39.386Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>To date, the following Aruba Service COEs are available: Customer Success, Managed Services and Professional Services. The COEs for the Build and Sell Tracks, along with the Hybrid Cloud Service COEs, will become available to all partners over the next year.&lt;br>&#xd;&#xa; &lt;b>&lt;br>&#xd;&#xa;Latest Enhancements to HPE Pro Series&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/b>The HPE Pro Series enables HPE partners to stand out with their expertise by providing a personalized enablement experience for partners’ sales, technical and marketing professionals. Partners can leverage virtual forums to connect with experts and specialists, access outcome based and workload centric training, and advance their digital marketing effectiveness through a suite of marketing tools, content and resources.&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>&amp;nbsp;&lt;/span>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;b>HPE Tech Pro &lt;/b>has been updated to expand its enablement offerings in support of new technical job roles in alignment with HPE Partner Ready Vantage.&amp;nbsp;New offerings are aimed at partners who are pursuing as-a-service business models who require cloud and managed services skills along with customer success capabilities to achieve their goals.&amp;nbsp;&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;b>HPE Sales Pro&lt;/b> has been refreshed based on partner feedback to allow partners to quickly access the most relevant and up to date enablement to lead custom conversations confidently and grow sales. New features include a personalized portal with unique certification status and training modules, Portfolio Learning Curriculums with curated and interactive paths, and Top Recommended Training (TRT) to make it easier for partners to find and prioritize relevant and impactful training modules. Also added are new On-The-Go Learning features where training modules can be consumed as podcasts, videos or web-based seminars, Outcome Discussion Guides with quick access to engaging questions to be used in sales conversations, and an Industry Business Value Framework that allows partners to better prepare for industry focused conversations.&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;b>HPE Marketing Pro&lt;/b> has been reimagined to better serve partner needs and deliver an enhanced partner experience through easier access to HPE marketing tools and content. A new HPE Marketing&amp;nbsp;Pro gateway provides intuitive, simplified access to all HPE marketing tools while a redesigned HPE Social Media Center features an improved user interface with consolidated navigation, content filtering, updated guides and added functionality. Partners will also find new education content in the HPE Partner Learning Center, including modules on Marketing Analytics, Social Trends, Search/SEO updates and Social Media/Social Selling.&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"/>
+                <textonlycomponent_fe
+                    jcr:created="{Date}2018-06-18T09:28:54.456-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-06-24T17:57:54.226Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Partner Connect&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/b>&lt;a href=&quot;https://partnerconnect.hpe.com/partners&quot; target=&quot;_blank&quot;>Partner Connect&lt;/a> is a digital platform that empowers customer-to-partner, and partner-to-partner connections to accelerate the ability to find the right solutions and skills to meet business needs. Partner Connect provides locator capabilities connecting users to thousands of HPE partners with search functions based on expertise, partner type, location, key word and soon by solution too.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; Partner Connect is built on the foundations of Cloud28+, a digital business platform that grew over a decade to become the largest cloud services community. The historical success of this foundation allows Partner Connect to bring all partner categories, intellectual properties and capabilities to a larger scale and a framework to offer all HPE partners a platform to increase their visibility and showcase skills, solutions and thought leadership.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; Since launching in December 2021, enhancements have been rolled out continually to boost user experience and collaboration opportunities. Basic self-profiling has allowed partners to update their own information and categorization, and from today partners will see the roll out of enhanced self-profiling allowing partners to showcase their HPE products and services with greater control of how they highlight and promote their solutions.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;b>HPE Partner Ready Portal Provides Enhanced User Experience&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/b>HPE Partner Ready Portal has been refreshed with a design that focuses on simplified navigation and site integration. The redesigned homepage features a ‘what’s new’ section for news, events, promotions and webinars, and the consolidated menu links provide quick access to business tools and relevant content.&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>&amp;nbsp;&lt;/span>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Refreshed look and feel&lt;/b>: Improved tools dashboard tiles are optimized for containing business data like Partner Compensation or Deal Registration. All other tools can be added as a quick link using one -click access to view.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Simplified navigation&lt;/b>: In the refreshed HPE Partner Ready Portal, all related information is centralized under Partner Status &amp;amp; Benefits on the navigation menu. A centralized tools catalog enables partners with the ability to request tool access using a one-click “request access” button.&amp;nbsp;&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Site Integration&lt;/b>: The refreshed portal offers a new customizable view that integrates content into a streamlined, modern, single user interface for all partners, across all regions and countries.&lt;br>&#xd;&#xa; &amp;nbsp;&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>The new HPE Partner Ready Vantage program and updates announced today reinforce the commitment HPE has to partners and their experience as a valued part of the wider ecosystem and route to market. These milestone programmatic investments maximize the value of partnering with HPE for all partners, prioritizing partner future growth on their as-a-service journey.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;b>About Hewlett Packard Enterprise&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/b>Hewlett Packard Enterprise (NYSE: HPE) is the global edge-to-cloud company that helps organizations accelerate outcomes by unlocking value from all of their data, everywhere. Built on decades of reimagining the future and innovating to advance the way people live and work, HPE delivers unique, open and intelligent technology solutions as a service.  With offerings spanning Cloud Services, Compute, High Performance Computing &amp;amp; AI, Intelligent Edge, Software, and Storage, HPE provides a consistent experience across all clouds and edges, helping customers&amp;nbsp;develop&amp;nbsp;new business models, engage in new ways, and increase operational performance. For more information, visit:&amp;nbsp;&lt;a href=&quot;http://www.hpe.com/&quot; target=&quot;_blank&quot;>www.hpe.com&lt;/a>&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; Media Contact:&lt;br>&#xd;&#xa; &lt;b>Ella Hulbert&lt;br>&#xd;&#xa; &lt;/b>&lt;a href=&quot;mailto:ella.hulbert@hpe.com&quot; target=&quot;_blank&quot;>ella.hulbert@hpe.com&lt;/a>&lt;/span>&lt;br>&#xd;&#xa;&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-small&quot;>&lt;sup>1&lt;/sup> &lt;a href=&quot;https://blogs.idc.com/2022/01/24/enterprise-digital-infrastructure-buyers-transforming-strategic-vendor-relationships-in-2022&quot; target=&quot;_blank&quot;>https://blogs.idc.com/2022/01/24/enterprise-digital-infrastructure-buyers-transforming-strategic-vendor-relationships-in-202&lt;/a>2&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="20"/>
+                <textonlycomponent_bf
+                    jcr:created="{Date}2018-07-02T13:12:59.755-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-10-12T16:10:50.633Z"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    textOnly="&lt;h2>RELATED NEWS&lt;/h2>&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli_540225213
+                    jcr:created="{Date}2018-06-18T10:12:48.909-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:22:53.902-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <columncontainercompo
+                    jcr:created="{Date}2018-07-02T13:14:23.594-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:15:08.106-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/columnContainerComponent"
+                    columns="column-content-3">
+                    <column_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_7c25
+                            jcr:created="{Date}2018-07-02T13:15:28.984-07:00"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-06-22T18:46:21.365Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="arrow-link"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/blog-post/2022/06/the-digital-economy-and-the-era-of-the-hybrid-partner"
+                            description="&lt;p>Blog Post&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            header="The digital economy and the era of the hybrid partner "
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="The digital economy and the era of the hybrid partner "
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-06-22T18:46:21.365Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2022/06/image-norend/the-digital-economy-and-the-era-of-the-hybrid-partner.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-06-22T18:46:21.365Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_7c25>
+                    </column_0>
+                    <column_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_4dff
+                            jcr:created="{Date}2018-09-21T21:01:47.387Z"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-06-24T16:17:10.544Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="arrow-link"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/blog-post/2021/06/celebrating-the-2021-hpe-partner-of-the-year-award-winners"
+                            description="&lt;p>Blog Post&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            header="Celebrating the 2021 HPE Partner of the Year award winners"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Celebrating the 2021 HPE Partner of the Year award winners"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-06-24T16:17:10.544Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2021/06/image-norend/celebrating-the-2021-hpe-partner-of-the-year-award-winners.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-06-24T16:17:10.544Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_4dff>
+                    </column_1>
+                    <column_2
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_50f2
+                            jcr:created="{Date}2018-09-05T17:41:27.359Z"
+                            jcr:createdBy="nagle@hpe.com"
+                            jcr:lastModified="{Date}2022-06-24T16:20:12.220Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="arrow-link"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/03/hpe-greenlake-edge-to-cloud-platform-delivers-greater-choice-and-simplicity-with-unified-experience-new-cloud-services-and-expanded-partner-ecosystem"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            header="HPE GreenLake edge-to-cloud platform delivers greater choice and simplicity with unified experience, new cloud services, and expanded partner ecosystem"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="HPE GreenLake edge-to-cloud platform delivers greater choice and simplicity with unified experience, new cloud services, and expanded partner ecosystem"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-06-24T16:20:12.220Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                fileReference="/content/dam/hpe/newsroom/2022/03/image-norend/hpe-greenlake-edge-to-cloud-platform-delivers-greater-choice-and-simplicity-with-unified-experience-new-cloud-services.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-06-24T16:20:12.220Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"/>
+                        </contentblock_50f2>
+                    </column_2>
+                </columncontainercompo>
+            </body-par>
+            <side-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <buttonctaitemcompone
+                    jcr:created="{Date}2018-06-28T13:06:31.075-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:06:46.099-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 1"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_661124859
+                    jcr:created="{Date}2018-06-28T13:06:51.115-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:11.079-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 2"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_606970408
+                    jcr:created="{Date}2018-06-28T13:06:53.400-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:02.336-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 3"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+            </side-par>
+        </main-par>
+        <image
+            jcr:lastModified="{Date}2018-09-05T17:38:02.066Z"
+            jcr:lastModifiedBy="nagle@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+    </jcr:content>
+</jcr:root>

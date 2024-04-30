@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/apps/settings/wcm/designs/hpeweb"
+        cq:lastModified="{Date}2022-09-08T21:20:25.482Z"
+        cq:lastModifiedBy="christine.seales@hpe.com"
+        cq:tags="[hpe-newsroom:categories/networking]"
+        cq:template="/apps/hpeweb/templates/page-text-heavy"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:mixinTypes="[mix:versionable]"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Hewlett Packard Enterprise accelerates AI journey from POC to production with new solution for AI development and training at scale"
+        jcr:uuid="a7836080-2f19-4fce-8645-2ce1130a3148"
+        sling:resourceType="hpeweb/components/pages/page-text-heavy"
+        browserTitle="Hewlett Packard Enterprise accelerates AI journey from POC to production with new solution for AI development and training at scale"
+        changefreq="daily"
+        contentType="Press Release"
+        displayDate="{Date}2022-04-27T08:00:00.000-04:00"
+        metaDescription="New HPE Machine Learning Development System eliminates complexity and cost to build and train models with complete, ready-to-use solution accelerating time-to-insights from weeks to days"
+        metaKeywords="HPE, Hewlett Packard Enterprise, hpc, supercomputing, high performance computing, AI, machine learning, model development, training, AI, ai infrastructure, accelerators, artificial intelligence, networking, natural language processing, computer visions "
+        metaOgImage="/content/dam/hpe/newsroom/2022/04/image-norend/hpe-accelerates-ai-journey-from-poc-to-production-with-new-solution-for-ai-development-and-training-at-scale.jpg"
+        metaTwitterCardType="summary_large_image"
+        msmcomponent="/content/hpe/base/blueprint/newsroom/press-release/2022/04/hewlett-packard-enterprise-accelerates-ai-journey-from-poc-to-production-with-new-solution-for-ai-development-and-training-at-scale/jcr:content/main-par/body-par/textonlycomponent_97"
+        navTitle="Hewlett Packard Enterprise accelerates AI journey from POC to production with new solution for AI development and training at scale"
+        pageTitle="Hewlett Packard Enterprise accelerates AI journey from POC to production with new solution for AI development and training at scale"
+        priority="(None)"
+        socialDescription="New HPE Machine Learning Development System eliminates complexity and cost to build and train models with complete, ready-to-use solution accelerating time-to-insights from weeks to days"
+        subtitle="New HPE Machine Learning Development System eliminates complexity and cost to build and train models with complete, ready-to-use solution accelerating time-to-insights from weeks to days"
+        theme="dark"
+        UAID="8b8fedfc-5bfa-476a-98a5-1c60f0c2dfd9"
+        UCID="feb5e49a-4f77-4a67-a841-797565594fad">
+        <main-par
+            jcr:lastModified="{Date}2018-06-28T13:09:39.402-07:00"
+            jcr:lastModifiedBy="velazquez@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="hpeweb/components/content/textHeavyComponent"
+            siderail="none">
+            <subtitle
+                jcr:lastModified="{Date}2022-04-27T03:05:49.374Z"
+                jcr:lastModifiedBy="christine.seales@hpe.com"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="hpeweb/components/content/newsroom/newsroomSubtitleComponent"
+                textOnly="APRIL 27, 2022 • PRESS RELEASE"/>
+            <body-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <imageonlycomponent_c
+                    jcr:created="{Date}2018-06-18T09:06:27.827-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-04-27T03:05:56.894Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/imageOnlyComponent"
+                    fileReference="/content/dam/hpe/newsroom/2022/04/image-norend/hpe-accelerates-ai-journey-from-poc-to-production-with-new-solution-for-ai-development-and-training-at-scale.jpg"
+                    imageAlignment="hpe-image-center"
+                    imageAltText="HPE Guarantees"
+                    topMargin="60"
+                    videoSource="video"
+                    videoType="youtube"/>
+                <textonlycomponent_cd
+                    jcr:created="{Date}2018-06-18T09:12:49.742-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-04-27T03:06:56.940Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    leftPadding="30"
+                    rightPadding="30"
+                    textIsRich="true"
+                    textOnly="&lt;h3>IN THIS ARTICLE&lt;/h3>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>New ready-to-use solution is purpose-built for AI, integrating a machine learning software platform, compute, accelerators, and networking&lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>Users can speed up the typical time-to-value to start realizing results from weeks and months, to days&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli
+                    jcr:created="{Date}2018-06-18T09:16:54.243-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-18T09:18:45.987-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <textonlycomponent
+                    jcr:created="{Date}2022-04-27T03:07:05.407Z"
+                    jcr:createdBy="christine.seales@hpe.com"
+                    jcr:lastModified="{Date}2022-04-27T03:07:18.307Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;h2>New HPE Machine Learning Development System eliminates complexity and cost to build and train models with complete, ready-to-use solution accelerating time-to-insights from weeks to days&lt;/h2>&#xd;&#xa;"/>
+                <textonlycomponent_e9
+                    jcr:created="{Date}2018-06-22T11:24:07.263-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-04-27T03:09:50.798Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>HOUSTON, Texas – April 27, 2022 &lt;/b>– &lt;a href=&quot;http://www.hpe.com/&quot; target=&quot;_blank&quot;>Hewlett Packard Enterprise&lt;/a> (NYSE: HPE) today announced that it is removing barriers for enterprises to easily build and train machine learning models at scale, to realize value faster, with the new HPE Machine Learning Development System. The new system, which is purpose-built for AI, is an end-to-end solution that integrates a machine learning software platform, compute, accelerators, and networking to develop and train more accurate AI models faster, and at scale.&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;The HPE Machine Learning Development System builds on HPE’s &lt;a href=&quot;https://www.hpe.com/us/en/newsroom/press-release/2021/06/hewlett-packard-enterprise-acquires-determined-ai-to-accelerate-artificial-intelligence-innovation-with-fast-and-simple-machine-learning-modeling.html&quot; target=&quot;_blank&quot;>strategic investment&lt;/a> in acquiring Determined AI to combine its robust machine learning (ML) platform, now formally called the HPE Machine Learning Development Environment, with HPE’s world-leading AI and high performance computing (HPC) offerings. With the new HPE Machine Learning Development System, users can speed up the typical time-to-value to start realizing results from building and training machine models, from weeks and months, to days.&lt;br />&#xd;&#xa;&lt;b style=&quot;&quot;>&lt;br />&#xd;&#xa;Early adopter of HPE Machine Learning Development System launches training of giant multimodal AI model in record speed&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;&lt;/b>HPE also announced today that &lt;a href=&quot;https://www.aleph-alpha.com/&quot; target=&quot;_blank&quot;>Aleph Alpha&lt;/a>, a German AI startup, has adopted the HPE Machine Learning Development System to train their multimodal AI, which includes Natural Language Processing (NLP) and computer vision. By combining image and text processing in five languages with almost human-like context understanding, the models push the boundaries of modern AI for all kinds of language and image-based transformative use cases, such as AI-assistants for the creation of complex texts, higher level understanding summaries, searching for highly specific information in hundreds of documents, and leveraging of specialized knowledge in a conversational context.&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;By adopting the HPE Machine Learning Development System, Aleph Alpha had the system immediately up and began efficiently training in record time, combining and monitoring hundreds of GPUs.&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;“We are seeing astonishing efficiency and performance of more than 150 teraflops by using the HPE Machine Learning Development System. The system was quickly set up and we began training our models in hours instead of weeks. While running these massive workloads, combined with our ongoing research, being able to rely on an integrated solution for deployment and monitoring makes all the difference.” – Jonas Andrulis, Founder and CEO, Aleph Alpha&lt;br />&#xd;&#xa;&lt;br />&#xd;&#xa;“Enterprises seek to incorporate AI and machine learning to differentiate their products and services, but are often confronted with complexity in setting up the infrastructure required to build and train accurate AI models at scale,” said Justin Hotard, executive vice president and general manager, HPC and AI, at HPE. “The HPE Machine Learning Development System combines our proven end-to-end HPC solutions for deep learning with our innovative machine learning software platform into one system, to provide a performant out-of-the box solution to accelerate time to value and outcomes with AI.”&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <pullquote_349b
+                    jcr:created="{Date}2018-06-18T09:23:47.197-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-04-27T03:10:21.033Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/homepage/design2/pullQuote"
+                    attribution=" "
+                    bottomPadding="30"
+                    color="style-bg-slate"
+                    enableSocialSharing="true"
+                    quoteLayout="standard"
+                    quoteText="&lt;p>The HPE Machine Learning Development System speeds POC to production to accelerate time-to-value from weeks to days&lt;/p>&#xa;"
+                    topPadding="30">
+                    <image
+                        jcr:lastModified="{Date}2022-04-27T03:10:21.033Z"
+                        jcr:lastModifiedBy="christine.seales@hpe.com"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/image"/>
+                </pullquote_349b>
+                <textonlycomponent_97
+                    jcr:created="{Date}2018-06-22T11:22:31.557-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-09-08T21:20:25.474Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Removing barriers to realize full potential of AI with complete machine learning solution&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/b>Organizations have yet to reach maturity in their AI infrastructure, which according to &lt;a href=&quot;https://www.idc.com/getdoc.jsp?containerId=prUS48870422&quot; target=&quot;_blank&quot;>IDC&lt;/a>, is the most significant and costly investment required for enterprises that want to speed up their experimentation or prototyping phase, to develop AI products and services. Typically, adopting AI infrastructure to support model development and training at scale, requires a complex, multi-step process involving the purchase, setup and management of a highly parallel software ecosystem and infrastructure spanning specialized compute, storage, interconnect and accelerators.&amp;nbsp;&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; The HPE Machine Learning Development System helps enterprises bypass the high complexity associated with adopting AI infrastructure by offering the only solution that combines software, specialized computing such as accelerators, networking, and services, allowing enterprises to immediately begin efficiently building and training optimized machine learning models at scale.&lt;br>&#xd;&#xa; &lt;b>&lt;br>&#xd;&#xa;Gaining accurate models to unlock value faster with the HPE Machine Learning Development System&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/b>The system also helps improve accuracy in models faster with state-of-art distributed training, automated hyperparameter optimization and neural architecture search, which are key to machine learning algorithms.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; The HPE Machine Learning Development System delivers optimized compute, accelerated compute, and interconnect, which are key performance drivers to scale models efficiently for a mix of workloads, starting at a small configuration of 32&amp;nbsp;NVIDIA GPUs, all the way to a larger configuration of 256&amp;nbsp;NVIDIA GPUs. On a small configuration of 32&amp;nbsp;NVIDIA GPUs, the HPE Machine Learning Development System delivers approximately 90% scaling efficiency for workloads such as Natural Language Processing (NLP) and Computer Vision. Additionally, based on internal testing, the HPE Machine Learning Development System with 32 GPUs, delivers up to 5.7X faster throughout for an NLP workload compared to another offering containing 32 identical GPUs, but with a sub-optimal interconnect.&lt;sup>1&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/sup>&lt;b>Blog&lt;/b>: &lt;a href=&quot;https://community.hpe.com/t5/Tech-Insights/HPE-Machine-Learning-Development-System-Real-world-NLP-amp/ba-p/7164764&quot; target=&quot;_blank&quot;>HPE Machine Learning Development System: Real-world NLP &amp;amp; computer vision model benchmarks&lt;/a>, by Evan Sparks, vice president, HPC &amp;amp; AI, at HPE&lt;br>&#xd;&#xa; &lt;b>&lt;br>&#xd;&#xa;Speeding up POC to production with ready-to-use, AI model development and training solution&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/b>The HPE Machine Learning Development System is offered as one, integrated solution that provides preconfigured, fully installed AI infrastructure for turnkey model development and training at scale. As part of the offering, HPE Pointnext Services will provide onsite installation and software setup, allowing users to immediately implement and train machine learning models for faster and more accurate insights from their data.&amp;nbsp;&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; The HPE Machine Learning Development System is offered starting in a small building block, with options to scale up. The small configuration starts with the following:&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>&amp;nbsp;&lt;/span>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Innovative machine learning platform &lt;/b>with the &lt;a href=&quot;https://www.hpe.com/us/en/compute/hpc/cray-ai-development.html&quot; target=&quot;_blank&quot;>HPE Machine Learning Development Environment&lt;/a>&lt;b> &lt;/b>to enable enterprises to&lt;b> &lt;/b>rapidly develop, iterate, and scale high-quality models from POC to production&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Optimized AI infrastructure &lt;/b>using the&amp;nbsp;&lt;a href=&quot;https://buy.hpe.com/us/en/servers/apollo-systems/apollo-6500-system/apollo-6500-system/hpe-apollo-6500-gen10-plus-system/p/1013092236&quot; target=&quot;_blank&quot;>HPE Apollo 6500 Gen10 Plus system&lt;/a> to provide massive, specialized computing capabilities to train and optimize AI models,&amp;nbsp; with eight &lt;a href=&quot;https://www.nvidia.com/en-us/data-center/a100/&quot; target=&quot;_blank&quot;>NVIDIA A100 80GB GPUs&lt;/a> for accelerated compute&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Enabling fine-grained centralized monitoring and management for optimal performance&lt;/b>&amp;nbsp;with the&amp;nbsp;&lt;a href=&quot;https://buy.hpe.com/us/en/software/high-performance-computing-software/high-performance-computing-software/hpe-performance-cluster-manager/p/1010836945&quot; target=&quot;_blank&quot;>HPE Performance Cluster Management&lt;/a>, a system management software solution&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Management stack to control and manage system components &lt;/b>using HPE ProLiant DL325 servers and 1Gb Ethernet &lt;a href=&quot;https://www.arubanetworks.com/products/switches/6300-series/&quot; target=&quot;_self&quot;>Aruba CX 6300 switch&lt;/a>&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/span>&lt;/li>&#xd;&#xa;&lt;li>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Ensuring performance of compute and storage communications using &lt;/b>the &lt;a href=&quot;https://www.nvidia.com/en-us/networking/products/infiniband/&quot; target=&quot;_blank&quot;>NVIDIA Quantum InfiniBand&lt;/a> networking platform&lt;/span>&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>&amp;nbsp;&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>Availability&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/b>The HPE Machine Learning Development System is available now worldwide. For more information, please visit: &lt;a href=&quot;http://hpe.com/info/machine-learning-development-system&quot; target=&quot;_blank&quot;>hpe.com/info/machine-learning-development-system&lt;/a>&lt;br>&#xd;&#xa; &lt;b>&lt;br>&#xd;&#xa;HPE expands AI product portfolio to help customers improve insights and make better decisions&amp;nbsp;&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; &lt;/b>HPE is building on today’s news with additional AI offerings, including the launch of &lt;a href=&quot;https://www.hpe.com/us/en/newsroom/press-release/2022/04/hewlett-packard-enterprise-ushers-in-next-era-in-ai-innovation-with-swarm-learning-solution-built-for-the-edge-and-distributed-sites.html&quot; target=&quot;_blank&quot;>HPE Swarm Learning&lt;/a>, the industry’s first privacy-preserving, decentralized machine learning framework for the edge or distributed sites. With HPE Swarm Learning, a range of organizations such as healthcare, banking and financial services, and manufacturing, can share learnings from their AI models with other organizations to improve insights, without sharing the actual data.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; Additionally, HPE announced that it is building on its collaboration with Qualcomm Technologies, Inc. to deliver advanced inferencing offerings to support heterogenous system architectures that provide AI inferencing at scale. HPE will offer the HPE Edgeline EL8000 Converged Edge systems, which are compact, ruggedized edge computing solutions optimized for harsh environments outside the datacenter, with the Qualcomm® Cloud AI 100 accelerator to deliver inferencing for datacenters and at the edge. The combined solution delivers high-performance at low-power for demanding AI Inference workloads.&lt;sup>2 &lt;/sup>The offering will be generally available in August 2022.&lt;br>&#xd;&#xa; &lt;br>&#xd;&#xa; To learn more about HPE’s AI solutions, please visit: &lt;a href=&quot;https://www.hpe.com/us/en/solutions/artificial-intelligence.html&quot; target=&quot;_blank&quot;>https://www.hpe.com/us/en/solutions/artificial-intelligence.html&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;sup>&amp;nbsp;&lt;/sup>&lt;/p>&#xd;&#xa;"/>
+                <textonlycomponent_fe
+                    jcr:created="{Date}2018-06-18T09:28:54.456-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2022-04-27T03:19:21.794Z"
+                    jcr:lastModifiedBy="christine.seales@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    bottomPadding="30"
+                    designAccentColor="gray"
+                    textIsRich="true"
+                    textOnly="&lt;p>&lt;span class=&quot;body-copy-large&quot;>&lt;b>About Hewlett Packard Enterprise&lt;/b>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-large&quot;>Hewlett Packard Enterprise (NYSE: HPE) is the global edge-to-cloud company that helps organizations accelerate outcomes by unlocking&amp;nbsp;value from all of their data, everywhere. Built on decades of reimagining the future and innovating to advance the way people live and work, HPE delivers unique, open and intelligent technology solutions as a service.&amp;nbsp; With offerings spanning Cloud Services, Compute, High Performance Computing &amp;amp; AI, Intelligent Edge, Software, and Storage, HPE provides a consistent experience across all clouds and edges, helping customers develop new business models, engage in new ways, and increase operational performance. For more information, visit: &lt;a href=&quot;http://www.hpe.com/&quot; target=&quot;_blank&quot;>www.hpe.com&lt;/a>&lt;br>&#xd;&#xa;&lt;br>&#xd;&#xa;Media Contact&lt;br>&#xd;&#xa;&lt;b>Nahren Khizeran&lt;br>&#xd;&#xa; &lt;/b>&lt;a href=&quot;mailto:Nahren.Khizeran@hpe.com&quot; target=&quot;_blank&quot;>Nahren.Khizeran@hpe.com&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&amp;nbsp;&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-small&quot;>&lt;sup>1&lt;/sup> Claims based on internal benchmark testing that compares the HPE Machine Learning Development System with another offering using 32 GPUs&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-small&quot;>&lt;sup>2&lt;/sup> Delivers 350 TOPS peak performance at 75W TDP, according to &lt;a href=&quot;https://www.qualcomm.com/products/technology/processors/cloud-artificial-intelligence/cloud-ai-100&quot; target=&quot;_blank&quot;>https://www.qualcomm.com/products/technology/processors/cloud-artificial-intelligence/cloud-ai-100&lt;/a>&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-small&quot;>&amp;nbsp;&lt;/span>&lt;/p>&#xd;&#xa;&lt;p>&lt;span class=&quot;body-copy-small&quot;>Qualcomm is a trademark or registered trademark of Qualcomm Incorporated. Qualcomm Cloud AI 100 is a product of Qualcomm Technologies, Inc. and/or its subsidiaries.&lt;/span>&lt;/p>&#xd;&#xa;"
+                    topPadding="30"/>
+                <textonlycomponent_bf
+                    jcr:created="{Date}2018-07-02T13:12:59.755-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-10-12T16:10:50.633Z"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/textOnlyComponent"
+                    textOnly="&lt;h2>RELATED NEWS&lt;/h2>&#xa;"
+                    topPadding="30"/>
+                <horizontalgrayruleli_540225213
+                    jcr:created="{Date}2018-06-18T10:12:48.909-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:22:53.902-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/horizontalGrayRuleLineComponent"
+                    theme="transparent"/>
+                <columncontainercompo
+                    jcr:created="{Date}2018-07-02T13:14:23.594-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-07-02T13:15:08.106-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/columnContainerComponent"
+                    columns="column-content-3">
+                    <column_0
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_7c25
+                            jcr:created="{Date}2018-07-02T13:15:28.984-07:00"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-04-27T03:20:43.185Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="arrow-link"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/04/hewlett-packard-enterprise-ushers-in-next-era-in-ai-innovation-with-swarm-learning-solution-built-for-the-edge-and-distributed-sites"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            header="Hewlett Packard Enterprise ushers in next era in AI innovation with Swarm learning solution built for the edge and distributed sites"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Hewlett Packard Enterprise ushers in next era in AI innovation with Swarm learning solution built for the edge and distributed sites"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-04-27T03:20:43.185Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2022/04/image-norend/hpe-ushers-in-next-era-in-ai-innovation-with-swarm-learning-solution-built-for-the-edge-and-distributed-sites.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-04-27T03:20:43.185Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_7c25>
+                    </column_0>
+                    <column_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_4dff
+                            jcr:created="{Date}2018-09-21T21:01:47.387Z"
+                            jcr:createdBy="velazquez@hpe.com"
+                            jcr:lastModified="{Date}2022-04-27T03:21:52.055Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="arrow-link"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2022/04/hpe-opens-global-center-of-excellence-in-artificial-intelligence-and-data-in-spain-to-help-customers-harness-the-power-of-their-data"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            header="HPE opens Global Center of Excellence in Artificial Intelligence and Data in Spain to help customers harness the power of their data"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="HPE opens Global Center of Excellence in Artificial Intelligence and Data in Spain to help customers harness the power of their data"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-04-27T03:21:52.055Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"
+                                fileReference="/content/dam/hpe/newsroom/2022/04/image-norend/hpe-opens-global-center-of-excellence-in-ai-and-data-in-spain-to-help-customers-harness-the-power-of-their-data.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-04-27T03:21:52.055Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="foundation/components/image"/>
+                        </contentblock_4dff>
+                    </column_1>
+                    <column_2
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="foundation/components/parsys">
+                        <contentblock_50f2
+                            jcr:created="{Date}2018-09-05T17:41:27.359Z"
+                            jcr:createdBy="nagle@hpe.com"
+                            jcr:lastModified="{Date}2022-04-27T03:23:20.399Z"
+                            jcr:lastModifiedBy="christine.seales@hpe.com"
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="hpeweb/components/content/homepage/design2/contentBlock"
+                            anchorName="share"
+                            bottomPadding="30px|30px|30px|30px|30px"
+                            ctaNewWindow="true"
+                            ctaNewWindowMicroModule="false"
+                            ctaStyle="arrow-link"
+                            ctaText="Read More"
+                            ctaUrl="/content/hpe/base/blueprint/newsroom/press-release/2021/06/hewlett-packard-enterprise-acquires-determined-ai-to-accelerate-artificial-intelligence-innovation-with-fast-and-simple-machine-learning-modeling"
+                            description="&lt;p>Press Release&lt;/p>&#xd;&#xa;"
+                            designAccentColor="gray"
+                            enableAnimation="false"
+                            enableMicroModule="false"
+                            enablePrimaryCta="true"
+                            enableSecondaryCta="false"
+                            enableSocialSharing="true"
+                            enableStateQuote="false"
+                            enableText="false"
+                            header="Hewlett Packard Enterprise acquires Determined AI to accelerate artificial intelligence innovation with fast and simple machine learning modeling"
+                            headerFormat="h3"
+                            horizontalAlignment="left"
+                            horizontalLayout="cb-50-50-left"
+                            imageAltText="Hewlett Packard Enterprise acquires Determined AI to accelerate artificial intelligence innovation with fast and simple machine learning modeling"
+                            loopMedia="false"
+                            sqDesignElement="stat"
+                            textIsRich="[true,true]"
+                            topPadding="30px|30px|30px|30px|30px"
+                            verticalAlignment="top">
+                            <image
+                                jcr:lastModified="{Date}2022-04-27T03:23:20.399Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"
+                                fileReference="/content/dam/hpe/newsroom/2021/06/image-norend/hpe-acquires-determined-ai-to-accelerate-artificial-intelligence-innovation-with-fast-and-simple-machine-learning-modeling.jpg"/>
+                            <imageMicroModule
+                                jcr:lastModified="{Date}2022-04-27T03:23:20.399Z"
+                                jcr:lastModifiedBy="christine.seales@hpe.com"
+                                jcr:primaryType="nt:unstructured"/>
+                        </contentblock_50f2>
+                    </column_2>
+                </columncontainercompo>
+            </body-par>
+            <side-par
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="foundation/components/parsys">
+                <buttonctaitemcompone
+                    jcr:created="{Date}2018-06-28T13:06:31.075-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:06:46.099-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 1"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_661124859
+                    jcr:created="{Date}2018-06-28T13:06:51.115-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:11.079-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 2"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+                <buttonctaitemcompone_606970408
+                    jcr:created="{Date}2018-06-28T13:06:53.400-07:00"
+                    jcr:createdBy="velazquez@hpe.com"
+                    jcr:lastModified="{Date}2018-06-28T13:07:02.336-07:00"
+                    jcr:lastModifiedBy="velazquez@hpe.com"
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="hpeweb/components/content/buttonCTAItemComponent"
+                    ctaLinkStyle="default"
+                    ctaReferenceType="Link"
+                    ctaText="Cta Nav 3"
+                    ctaType="Link"
+                    ctaUrl="#"
+                    videoType="youtube"/>
+            </side-par>
+        </main-par>
+        <image
+            jcr:lastModified="{Date}2018-09-05T17:38:02.066Z"
+            jcr:lastModifiedBy="nagle@hpe.com"
+            jcr:primaryType="nt:unstructured"
+            imageRotate="0"/>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/apps/settings/wcm/designs/hpeweb"
+        cq:lastModified="{Date}2022-01-12T16:35:08.075Z"
+        cq:lastModifiedBy="christine.seales@hpe.com"
+        cq:template="/apps/hpeweb/templates/page-generic-template"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="10"
+        sling:resourceType="hpeweb/components/pages/page-generic-template"/>
+    <hewlett-packard-enterprise-to-webcast-hpe-securities-analyst-meeting-2022/>
+    <hpe-accelerates-ag-digital-transformation-and-business-outcomes-with-cloud-ready-and-data-driven-solution/>
+    <mohamed-bin-zayed-university-of-artificial-intelligence-advances-the-uaes-national-strategy-for-ai-with-new-supercomputer-built-by-hewlett-packard-enterprise/>
+    <hewlett-packard-enterprise-demonstrates-strong-momentum-of-edge-to-cloud-strategy-and-presents-fy23-outlook-at-hpe-securities-analyst-meeting-2022/>
+    <meteorological-service-singapore-advances-weather-forecasting-with-new-supercomputer-from-hewlett-packard-enterprise/>
+</jcr:root>
