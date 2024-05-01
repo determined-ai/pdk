@@ -109,4 +109,4 @@ The return response should be JSON block with a very long list of values.
 
 &nbsp;
 
-### In the [sample-data](./sample-data/) folder, you will also find a Jupyter Notebook example showing how to load images from a folder or from the sample .json file and generate predictions.
+### In the [sample-data](./sample-data/) folder, you will also find a [Jupyter Notebook demo walkthrough](sample-data/3DBrainMRIDemoWalkthrough.ipynb) with a [corresponding video demo](https://youtu.be/YkchRpVqHIE?si=22ogT5rq-ZFkz7Cy) showing how to load the volumes, run a distributed hyperparameter search and run a prediction from Kserve. Make sure to deploy the PDK environment before running the code.
