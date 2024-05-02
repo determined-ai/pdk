@@ -1,5 +1,6 @@
 name: Pipeline-Run-3D-Brain-MRI-MultiGPU
-workspace: PDK Demos
+workspace: PDK-Demos
+
 project: pdk-3d-brain-mri
 data:
   data_dir: "/data"
@@ -47,4 +48,4 @@ profiling:
   enabled: True
 resources:
   slots_per_trial: 2
-  resource_pool: T4
+  resource_pool: gpu-pool
