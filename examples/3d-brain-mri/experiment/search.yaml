@@ -5,11 +5,11 @@ data:
   data_dir: "/data"
   download_directory: "/tmp"
   pachyderm:
-    host: 'mldm-pachyderm.us.rdlabs.hpecorp.net'
-    port: '80'
-    repo: '3d-brain-mri-data'
-    project: 'pdk-3d-brain-mri'
-    branch: 'master'
+    host:
+    port:
+    repo:
+    project:
+    branch:
     token:
 hyperparameters:
   global_batch_size: 1
