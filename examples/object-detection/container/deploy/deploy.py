@@ -67,13 +67,12 @@ def create_mar_file(model_name, model_version):
 
 # =====================================================================================
 
-
 def create_properties_file(model_name, model_version, cloud_model_host):
     print(f"--> Cloud Model Host: {cloud_model_host}")
-    model_store = "/mnt/models/model-store"
-    if cloud_model_host == "aws":
-        print("--> Changing Model Store to match AWS")
-        model_store = "/mnt/models"       
+    model_store = "/mnt/models"
+    if cloud_model_host == "gcp":
+        print("--> Changing Model Store to match GCP/Minio")
+        model_store = "/mnt/models/model-store"    
     config_properties = """inference_address=http://0.0.0.0:8085
 management_address=http://0.0.0.0:8083
 metrics_address=http://0.0.0.0:8082
