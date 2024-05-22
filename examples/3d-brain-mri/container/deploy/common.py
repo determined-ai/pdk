@@ -285,7 +285,7 @@ def create_inference_service(
             containers=[
                 V1Container(
                     name='kserve-container',
-                    args=[ 'torchserve', '--start', '--model-store=/mnt/models/model-store', '--ts-config=/mnt/models/config/config.properties'],
+                    args=[ 'torchserve', '--start', '--model-store=/mnt/models', '--ts-config=/mnt/models/config/config.properties'],
                     image='pytorch/torchserve-kfs:0.9.0-gpu',
                     env=[V1EnvVar(name='STORAGE_URI',value=f"gs://{bucket_name}/{model_name}"),
                          V1EnvVar(name='TS_SERVICE_ENVELOPE',value='kservev2'),
@@ -305,7 +305,7 @@ def create_inference_service(
             containers=[
                 V1Container(
                     name='kserve-container',
-                    args=[ 'torchserve', '--start', '--model-store=/mnt/models/model-store', '--ts-config=/mnt/models/config/config.properties'],
+                    args=[ 'torchserve', '--start', '--model-store=/mnt/models', '--ts-config=/mnt/models/config/config.properties'],
                     image='pytorch/torchserve-kfs:0.9.0-gpu',
                     env=[V1EnvVar(name='STORAGE_URI',value=f"aws://{bucket_name}/{model_name}"),
                          V1EnvVar(name='TS_SERVICE_ENVELOPE',value='kservev2'),
@@ -325,7 +325,7 @@ def create_inference_service(
             containers=[
                 V1Container(
                     name='kserve-container',
-                    args=[ 'torchserve', '--start', '--model-store=/mnt/models/model-store', '--ts-config=/mnt/models/config/config.properties'],
+                    args=[ 'torchserve', '--start', '--model-store=/mnt/models', '--ts-config=/mnt/models/config/config.properties'],
                     image='pytorch/torchserve-kfs:0.9.0-gpu',
                     env=[V1EnvVar(name='STORAGE_URI',value=f"s3://{commit}.master.{repo}.{project}/{model_name}"),
                          V1EnvVar(name='TS_SERVICE_ENVELOPE',value='kservev2'),
