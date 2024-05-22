@@ -9,7 +9,7 @@
 This example is based on the **UCSF-PDGM: The University of California San Francisco Preoperative Diffuse Glioma MRI** research dataset, which can be found here:<br/>
 https://www.cancerimagingarchive.net/collection/ucsf-pdgm/
 
-The original dataset contains data from 495 unique subjects. The dataset is formed by taking several MRI scans for each patient, “skull stripping” the scan (leaving just the brain image), and de-identifying the patient. The result is 4 MRI volumes per subject, as well as a target segmentation mask. In the [sample-data](./sample-data/) folder, you will find a small subset of the data from 87 subjects ([dataset-3d-brain.zip](./sample-data/dataset-3d-brain.zip)), which will be used to train the model. Given the size of the subset data being 1.1 GiB, the data is stored in a separate location. The data is stored in a Hugging Face dataset (https://huggingface.co/datasets/determined-ai/3d-brain-mri). To download the data, navigate to the [`sample-data`](sample-data) directory and run the following commands:
+The original dataset contains data from 495 unique subjects. The dataset is formed by taking several MRI scans for each patient, “skull stripping” the scan (leaving just the brain image), and de-identifying the patient. The result is 4 MRI volumes per subject, as well as a target segmentation mask. In the [sample-data](./sample-data/) folder, you will download a small subset of the data from 87 subjects ([dataset-3d-brain.zip](./sample-data/dataset-3d-brain.zip)), which will be used to train the model. Given the size of the subset data being 1.1 GiB, the data is stored in a Hugging Face dataset (https://huggingface.co/datasets/determined-ai/3d-brain-mri). To download the data, navigate to the [`sample-data`](sample-data) directory and run the following commands:
 
 ```bash
 wget https://huggingface.co/datasets/determined-ai/3d-brain-mri/resolve/main/dataset-3d-brain.zip
@@ -109,4 +109,4 @@ The return response should be JSON block with a very long list of values.
 
 &nbsp;
 
-### In the [sample-data](./sample-data/) folder, you will also find a Jupyter Notebook example showing how to load images from a folder or from the sample .json file and generate predictions.
+### In the [sample-data](./sample-data/) folder, you will also find a [Jupyter Notebook demo walkthrough](sample-data/3DBrainMRIDemoWalkthrough.ipynb) with a [corresponding video demo](https://youtu.be/YkchRpVqHIE?si=22ogT5rq-ZFkz7Cy) showing how to load the volumes, run a distributed hyperparameter search and run a prediction from Kserve. Make sure to deploy the PDK environment before running the code. You can also read the blog post written on this demo: https://www.determined.ai/blog/brain-mri-demo

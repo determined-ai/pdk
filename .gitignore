@@ -5,3 +5,4 @@
 *.nii.gz
 examples/3d-brain-mri/sample-data/3d-brain.json
 examples/3d-brain-mri/sample-data/dataset-3d-brain.zip
+.ipynb_checkpoints/
