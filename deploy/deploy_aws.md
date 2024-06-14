@@ -1351,7 +1351,7 @@ det u login admin
 
 Once logged in, you can run `det e list`, which should return an empty list. If you get an error message, check the MLDE pod and service for errors.
 
-You should also be able to access the MLDE UI using the URL printed on the terminal. Login as user **admin** (leave password field empty). Once logged in, check the **Cluster** page. The 'No connected agents' message means that the cluster was downscaled to 0 GPU nodes:
+You should also be able to access the MLDE UI using the URL printed on the terminal. Login as user **admin** (using the ADMIN_PASSWORD from above). Once logged in, check the **Cluster** page. The 'No connected agents' message means that the cluster was downscaled to 0 GPU nodes:
 
 
 ![alt text][aws_mlde_01_ui]
