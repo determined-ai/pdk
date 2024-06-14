@@ -1102,7 +1102,7 @@ det u login admin
 
 Once logged in, you can run `det e list`, which should return an empty list. If you get an error message, check the MLDE pod and service for errors.
 
-You should also be able to access the MLDE UI using the URL printed on the terminal. Login as user <b>admin</b> (leave password field empty). Once logged in, check the <b>Cluster</b> page and make sure the GPU resources are showing up:
+You should also be able to access the MLDE UI using the URL printed on the terminal. Login as user <b>admin</b> (use ${ADMIN_PASSWORD} printed above). Once logged in, check the <b>Cluster</b> page and make sure the GPU resources are showing up:
 
 ![alt text][gcp_mlde_02_dashboard]
 
